@@ -1,0 +1,17 @@
+<script type="text/javascript">
+var PICK_URL = 'admin.php?{PICK_GO}';
+var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]';
+</script>
+<script language="javascript"  charset="gbk" type="text/javascript" src="{PICK_URL}static/jquery-1.6.2.min.js?v={PICK_VERSION}"></script>
+<script language="javascript" charset="gbk" type="text/javascript" src="{PICK_URL}static/phprpc_client.js?v={PICK_VERSION}"></script>
+<script language="javascript"  charset="gbk" type="text/javascript" src="{PICK_URL}static/inc.js?v={PICK_VERSION}"></script>
+<link href="{PICK_URL}static/style.css?v={PICK_VERSION}" rel="stylesheet" type="text/css" />
+<div class="itemtitle"><ul class="tab1" style="margin-top:8px;">
+	<li {if $myac == 'rules_list' }class="current" {/if}><a href="?{PICK_GO}system_rules&myac=rules_list"><span>{lang milu_pick:rules_manage}</span></a></li>
+	
+	<li {if $myac == 'rules_edit' }class="current" {/if}><a href="?{PICK_GO}system_rules&myac=rules_edit"><span>{if $info['rid'] && !$info['copy']}{eval echo milu_lang('modify');}{else}{eval echo milu_lang('add');}{/if}{lang milu_pick:rules}</span></a></li>
+	
+	<li {if $myac == 'rules_import' }class="current" {/if}><a href="?{PICK_GO}system_rules&myac=rules_import"><span>{lang milu_pick:import_rules}</span></a></li>
+	<li {if $myac == 'rules_share' }class="current" {/if}><a href="?{PICK_GO}system_rules&myac=rules_share"><span>{lang milu_pick:share_rules}</span></a></li>
+</ul>
+</div>

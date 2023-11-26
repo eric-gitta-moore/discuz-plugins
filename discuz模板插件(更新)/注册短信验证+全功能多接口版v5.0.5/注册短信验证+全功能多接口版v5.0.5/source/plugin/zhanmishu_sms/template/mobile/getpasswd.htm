@@ -1,0 +1,254 @@
+<!--{template common/header}-->
+
+<!--{if !$_GET['infloat']}-->
+
+<!-- header start -->
+<header class="header">
+    <div class="nav">
+        <a href="javascript:;" onclick="history.go(-1)" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png" /></a>
+		<span>{lang zhanmishu_sms:getpasswd_bymobile}</span>
+    </div>
+</header>
+<!-- header end -->
+
+<!--{/if}-->
+
+{eval $loginhash = 'L'.random(4);}
+
+<!-- userinfo start -->
+<div class="">
+		<form id="submitchangepwd" method="post" action="plugin.php?id=zhanmishu_sms:getpassword&amp;mod=mobilegetpasswd&amp;act=getpwd" onsubmit="return false;">
+		<input type="hidden" name="formhash" id="formhash" value='{FORMHASH}' />
+		<input type="hidden" name="code" id="code" value="">
+	<div class="login_from">
+		<ul id="newpasswd">
+			<li class="bl_none answerli"><input type="text" name="lostpw_mobileusername" id="lostpw_mobileusername" class="px p_fre" size="30" placeholder="{lang zhanmishu_sms:username}"></li>
+			<li>
+				<input id="lostpw_mobile" type="text" value="" tabindex="1" class="px p_fre" size="30" autocomplete="off" value="" name="mobile" placeholder="{lang zhanmishu_sms:mobile_lable}" fwin="">
+				<input id="zmspwdsend" type="button" name="getsms" value="{lang zhanmishu_sms:getverifycode}"  onclick="javascript:pwdsendMessage();return false;"></li>
+			<li class="bl_none answerli"><input type="text" name="sms_verify" id="sms_verify" class="px p_fre" size="30" placeholder="{lang zhanmishu_sms:mobile_verify}" onblur="pwdverifysms();"></li>
+		</ul>
+			<li class="bl_none answerli"><input type="password" name="lostpw_passwd" id="lostpw_passwd" class="px p_fre" size="30" placeholder="{lang zhanmishu_sms:newpasswd}"></li>
+			<li class="bl_none answerli"><input type="password" name="lostpw_passwd1" id="lostpw_passwd1" class="px p_fre" size="30" placeholder="{lang zhanmishu_sms:renewpasswd}"></li>
+		<!--{if $seccodecheck}-->
+		<!--{subtemplate common/seccheck}-->
+		<!--{/if}-->
+	</div>
+	<div class="btn_login"><button tabindex="3" value="true" name="get_pwdsubmit" onclick="return false;" class="formdialog pn pnc"><span>{lang zhanmishu_sms:submit_getpwd}</span></button></div>
+	</form>
+	<!--{hook/logging_bottom_mobile}-->
+</div>
+
+
+			<script type="text/javascript">
+				/*-------------------------------------------*/  
+				var InterValObj; 
+				var count =60;
+				var curCount;
+				var code = "";
+				var codeLength = 6;
+				function pwdcheckmobile(mobile){
+					myreg = {$config['mobilerule']};
+					if(myreg.test(mobile))
+					{ 
+					    return true; 
+					}else{
+						return false;
+					}
+				}
+
+				function checkpwd(){
+					pwd = jQuery("#lostpw_passwd").val();
+					if (pwd.length < 6) {
+						popup.open('{lang zhanmishu_sms:passwd_not_right}', 'alert');
+						return false;
+					}
+
+					return pwd;
+				}
+				function checkpwd1(){
+					pwd1 = jQuery("#lostpw_passwd1").val();
+					if (checkpwd() == false) {
+						return false;
+					}else if (pwd1.length < 6) {
+						popup.open('{lang zhanmishu_sms:newpasswd_not_right}', 'alert');
+						
+						return false;
+					}else if (pwd1 !== checkpwd()) {
+						popup.open('{lang zhanmishu_sms:newandold_passwd_not_same}', 'alert');
+					}
+					return true;
+				}
+
+
+				function checksend(){
+					username = jQuery("#lostpw_mobileusername").val();
+					if (username.length < 3) {
+						popup.open('{lang zhanmishu_sms:please_input_username}', 'alert');
+						return false;
+					}else if (pwdcheckmobile(jQuery("#lostpw_mobile").val()) == false) {
+						popup.open('{lang zhanmishu_sms:please_input_passwd}', 'alert');
+						return false;
+					}
+					return username;
+				}
+				
+				function pwdSetRemainTime() {  
+				    if (curCount == 0) {                  
+				        window.clearInterval(InterValObj);
+				        jQuery("#zmspwdsend").removeAttr("disabled");
+				        jQuery("#zmspwdsend").val("{lang zhanmishu_sms:resend}");  
+				        code = ""; // 
+				    }  
+				    else {  
+				        curCount--;  
+				        jQuery("#zmspwdsend").val("{lang zhanmishu_sms:input_tips_sec}");  
+				    }  
+				}
+
+				function pwdsendMessage() {
+					username = checksend();
+					if (username == false) {
+						return false;
+					}
+				    curCount = count;  
+				    phone = jQuery("#lostpw_mobile").val();
+				    if(phone != ""){  
+				        code = 0;
+				        for (var i = 0; i < codeLength; i++) {  
+				            code += parseInt(Math.random() * 10).toString();
+				        }
+				        jQuery("#code").val(code);
+				        jQuery("#zmspwdsend").attr("disabled", "true");  
+				        jQuery("#zmspwdsend").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+
+				        InterValObj = window.setInterval(pwdSetRemainTime, 1000); 
+				        jQuery.ajax({  
+				            type: "POST", 
+				            dataType: "json", 
+				            url: 'plugin.php?id=zhanmishu_sms:getpassword&no_submit=sendverifysms&method=getpasswordsend',   
+				            data: "username="+username+"&phone=" + phone + "&code=" + code +"&formhash={FORMHASH}",  
+				            error: function (XMLHttpRequest, textStatus, errorThrown) {
+				            	window.clearInterval(InterValObj);
+				            	jQuery("#zmspwdsend").removeAttr("disabled");
+				            },  
+				            success: function (msg){
+				            	if (msg.code < 0) {
+				                    popup.open(msg.msg, 'alert');
+				                    window.clearInterval(InterValObj);
+				                    jQuery("#zmspwdsend").removeAttr("disabled");
+				                }else{
+				                	jQuery("#sms_verify_tip").removeClass("p_right");
+				                    jQuery("#zmspwdsend").removeAttr("disabled");
+				                }
+				            }  
+				        });
+				    }
+				}  
+
+				function submitchangepwd(){
+					if (!checksend() || !checkpwd1()) {
+						return false;
+					}
+					jQuery.ajax({  
+				        type: "POST", 
+				        dataType: "json", 
+				        url: 'plugin.php?id=zhanmishu_sms:getpassword',
+				        data: jQuery("#submitchangepwd").serialize(),  
+				        error: function (XMLHttpRequest, textStatus, errorThrown) {
+				        	
+				        },  
+				        success: function (msg){
+				        	if (msg.code < 0) {
+				                if (msg.code=='-5') {
+				                   popup.open(msg.msg, 'alert');
+				                };
+				                jQuery("#sms_verify_tip_wrong").css('display', 'block');
+				                jQuery("#sms_verify_tip").removeClass("p_right");
+				                return false;
+				        	}
+
+				        	if (msg.code == 1) {
+
+				                return true;
+				        	}
+
+				        }  
+				    }); 
+					return false;					
+				}
+				function pwdverifysms(){
+					username = jQuery("#lostpw_mobileusername").val();
+					phone = jQuery("#lostpw_mobile").val();
+					verify = jQuery("#sms_verify").val();
+					code = jQuery("#code").val();
+					jQuery.ajax({  
+				        type: "POST", 
+				        dataType: "json", 
+				        url: 'plugin.php?id=zhanmishu_sms:getpassword&no_submit=sendverifysms&method=getpasswordverify',
+				        data: "phone="+phone+"&username="+username+"&verify=" + verify + "&code="+code+"&formhash={FORMHASH}",  
+				        error: function (XMLHttpRequest, textStatus, errorThrown) {
+				        	
+				        },  
+				        success: function (msg){
+				        	if (msg.code < 0) {
+				                if (msg.code=='-5') {
+				                   popup.open(msg.msg, 'alert');
+				                };
+				                jQuery("#sms_verify_tip_wrong").css('display', 'block');
+				                jQuery("#sms_verify_tip").removeClass("p_right");
+				                return false;
+				        	}
+
+				        	if (msg.code == 1) {
+				        		jQuery("#sms_verify_tip").addClass("p_right");
+				        		jQuery("#sms_verify_tip_wrong").css('display', 'none');
+				        		display('newpasswd');
+				        		display('zmsaccount');
+				                return true;
+				        	}
+
+				        }  
+				    }); 
+					return false;
+				}
+				jQuery(function(){
+					jQuery("#lostmobilepwform_$loginhash").submit(function(){
+						 if (checksend() && checkpwd1()) {
+						 	username = jQuery("#lostpw_mobileusername").val();
+							phone = jQuery("#lostpw_mobile").val();
+							verify = jQuery("#sms_verify").val();
+							code = jQuery("#code").val();
+						 	pwd = jQuery("#lostpw_passwd").val();
+							jq.ajax({  
+						        type: "POST", 
+						        dataType: "json", 
+						        url: 'plugin.php?id=zhanmishu_sms:getpassword&no_submit=sendverifysms&method=getpasswordsubmit',
+						        data: "pwd="+pwd+"&phone="+phone+"&username="+username+"&verify=" + verify + "&code="+code+"&formhash={FORMHASH}",  
+						        error: function (XMLHttpRequest, textStatus, errorThrown) {
+						        	
+						        },  
+						        success: function (msg){
+						        	if (msg.code < 0) {
+						                if (msg.code=='-5') {
+						                   popup.open(msg.msg, 'alert');
+						                };
+						                return false;
+						        	}
+
+						        	if (msg.code == 1) {
+						        		hideWindow('login');
+						        		popup.open('{lang zhanmishu_sms:passwd_edit_success}', 'alert');
+						        		self.location.reload();
+						                return true;
+						        	}
+
+						        }  
+						    });
+						 }
+						return false;
+					});
+				})
+			</script>
+
+<!--{template common/footer}-->

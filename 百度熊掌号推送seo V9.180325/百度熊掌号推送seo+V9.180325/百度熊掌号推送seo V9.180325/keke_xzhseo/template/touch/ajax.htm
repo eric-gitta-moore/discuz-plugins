@@ -1,0 +1,11 @@
+<!--{block ajax}-->
+<script type="text/javascript" src="source/plugin/keke_xzhseo/js/jquery.js"></script>
+<script>kekexzjq=jQuery.noConflict();</script>
+<script>
+postdata();
+function postdata() {
+	kekexzjq.get('plugin.php?id=keke_xzhseo:postdata', {formhash:'{FORMHASH}',type:'{$type}',mods:'{$mod}',atid:'{$atid}'},function (data){		
+});
+}
+</script>
+<!--{/block}-->

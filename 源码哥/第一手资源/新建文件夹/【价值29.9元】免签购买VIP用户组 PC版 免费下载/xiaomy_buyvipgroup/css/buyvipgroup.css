@@ -1,0 +1,121 @@
+ .jqsl{ 
+		  	display: inline-block;
+		    height: 30px;
+		    text-align: center;
+		    line-height: 30px;
+		    border-radius: 3px;
+		    font-size: 14px;
+		    color: white;
+		    background: #fe710f;
+		    padding-left:8px;
+    		padding-right:8px;
+ }
+ .grouptips{
+    height: 25px;
+    width:94%;
+    line-height: 23px;
+    text-align: left;
+    border: 1px dotted #FC0;
+    background: #FFC;
+    position: relative;
+    font-size: 12px;
+    padding-left:8px;
+    padding-right:8px;
+    color:red;
+ }
+ 
+  .jqslgroup{ 
+		  	display: inline-block;
+		    height: 30px;
+		    text-align: center;
+		    line-height: 30px;
+		    border-radius: 3px;
+		    font-size: 14px;
+		    color: #608908;
+		    background: #ffffff;
+		   border: 1px solid #a5c85b;
+		   padding-left:5px;
+		   padding-right:5px;
+		   margin-right:5px;
+ }
+.xiaomy_buyvipgroup .right{
+	float:right;
+	width:25%;
+}
+
+.xiaomy_buyvipgroup .left{
+	float:left;
+	width:74%;
+}
+
+.xiaomy_buyvipgroup .right_cq{
+	float:right;
+	width:50%;
+}
+
+.xiaomy_buyvipgroup .left_cq{
+	float:left;
+	width:50%;
+}
+
+.xiaomy_buyvipgroup .high_cq{
+	height:60px;
+}
+
+.xiaomy_buyvipgroup .high_dh{
+	height:26px;
+}
+
+.xiaomy_buyvipgroup .pdleft{
+	padding-left:10px;
+}
+
+.xiaomy_buyvipgroup .txtstyle{
+	padding-top:10px;
+	padding-bottom:10px;
+	line-height:22px;
+}
+
+.xiaomy_buyvipgroup .txtstyle2{
+	line-height:30px;
+}
+
+.xiaomy_buyvipgroup .dashed{
+	border-bottom:1px dotted  #CCC;
+}
+
+.xiaomy_buyvipgroup .solid{
+	border-bottom:1px solid #CCC;
+}
+
+.xiaomy_buyvipgroup .text-align_right{
+	text-align:right;
+}
+
+.xiaomy_buyvipgroup_clear{
+	clear:both;
+}
+.trfont{
+	font-size: 15px;
+	font-weight:bold;
+}
+.trfontcontet{
+	font-size: 14px;
+}
+.notestyle{
+	font-size: 15px;
+}
+.pricestyle{
+	font-size: 15px;
+	color:red;
+	font-weight:bold;
+}
+.paytypediv{
+	width:450px;
+	height:310px;
+}
+.btn-ok {
+    background-position: 0 0;
+    border: 1px solid #D74C00;
+
+}

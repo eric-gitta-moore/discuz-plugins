@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Threadtypes]]></item>
+	<item id="Version"><![CDATA[X3.3]]></item>
+	<item id="Time"><![CDATA[2017-08-12 18:51]]></item>
+	<item id="From"><![CDATA[ÊÖ»úÕ¾ (http://app.dzzsk.com/)]]></item>
+	<item id="Data">
+		<item id="0">
+			<item id="optionid"><![CDATA[154]]></item>
+			<item id="classid"><![CDATA[5]]></item>
+			<item id="displayorder"><![CDATA[1]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[Î¢ÐÅÃû³Æ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_wx_wxmc]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[9]]></item>
+			<item id="name"><![CDATA[Î¢ÐÅ¹«ÖÚºÅ·ÖÏí]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_vtitle,.ainuo_avatar{ display:none;}
+</style>
+<div class="ainuo_sort_wxview cl">
+	<div class="erweima cl">
+    	<img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <img class="ainuolazyload" data-original="template/qu_app/touch/style/css/images/zhiwen.png"  />
+    </div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_wxlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+        <img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <p>{ainuo_wx_wxmc_value}</p>
+        </a>
+    </li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[9]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[1]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="1">
+			<item id="optionid"><![CDATA[155]]></item>
+			<item id="classid"><![CDATA[5]]></item>
+			<item id="displayorder"><![CDATA[2]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[Î¢ÐÅºÅ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_wx_wxh]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[9]]></item>
+			<item id="name"><![CDATA[Î¢ÐÅ¹«ÖÚºÅ·ÖÏí]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_vtitle,.ainuo_avatar{ display:none;}
+</style>
+<div class="ainuo_sort_wxview cl">
+	<div class="erweima cl">
+    	<img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <img class="ainuolazyload" data-original="template/qu_app/touch/style/css/images/zhiwen.png"  />
+    </div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_wxlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+        <img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <p>{ainuo_wx_wxmc_value}</p>
+        </a>
+    </li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[9]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[1]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="2">
+			<item id="optionid"><![CDATA[156]]></item>
+			<item id="classid"><![CDATA[5]]></item>
+			<item id="displayorder"><![CDATA[3]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[Î¢ÐÅ¶þÎ¬Âë]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_wx_wxewm]]></item>
+			<item id="type"><![CDATA[image]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[9]]></item>
+			<item id="name"><![CDATA[Î¢ÐÅ¹«ÖÚºÅ·ÖÏí]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_vtitle,.ainuo_avatar{ display:none;}
+</style>
+<div class="ainuo_sort_wxview cl">
+	<div class="erweima cl">
+    	<img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <img class="ainuolazyload" data-original="template/qu_app/touch/style/css/images/zhiwen.png"  />
+    </div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_wxlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+        <img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <p>{ainuo_wx_wxmc_value}</p>
+        </a>
+    </li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[9]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="3">
+			<item id="optionid"><![CDATA[157]]></item>
+			<item id="classid"><![CDATA[5]]></item>
+			<item id="displayorder"><![CDATA[4]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[Î¢ÐÅ½éÉÜ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_wx_wxjs]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[9]]></item>
+			<item id="name"><![CDATA[Î¢ÐÅ¹«ÖÚºÅ·ÖÏí]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_vtitle,.ainuo_avatar{ display:none;}
+</style>
+<div class="ainuo_sort_wxview cl">
+	<div class="erweima cl">
+    	<img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <img class="ainuolazyload" data-original="template/qu_app/touch/style/css/images/zhiwen.png"  />
+    </div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_wxlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+        <img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <p>{ainuo_wx_wxmc_value}</p>
+        </a>
+    </li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[9]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="4">
+			<item id="optionid"><![CDATA[158]]></item>
+			<item id="classid"><![CDATA[5]]></item>
+			<item id="displayorder"><![CDATA[0]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ËùÊô·ÖÀà]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_wx_ssfl]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[9]]></item>
+			<item id="name"><![CDATA[Î¢ÐÅ¹«ÖÚºÅ·ÖÏí]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_vtitle,.ainuo_avatar{ display:none;}
+</style>
+<div class="ainuo_sort_wxview cl">
+	<div class="erweima cl">
+    	<img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <img class="ainuolazyload" data-original="template/qu_app/touch/style/css/images/zhiwen.png"  />
+    </div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_wxlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+        <img class="ainuolazyload" data-original="{ainuo_wx_wxewm_value}" />
+        <p>{ainuo_wx_wxmc_value}</p>
+        </a>
+    </li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[9]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = Ã÷ÐÇÃûÈË
+2 = Ó°ÒôÓéÀÖ
+3 = ÐÂÎÅ×ÛºÏ
+4 = ¸ãÐ¦ÓïÂ¼
+5 = Éú»î°Ù¿Æ
+6 = ÉçÇø½»ÓÑ
+7 = ÎÄ»¯½ÌÓý
+8 = Æ·ÅÆ¹ºÎï
+9 = ×ÛºÏÆäËû]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

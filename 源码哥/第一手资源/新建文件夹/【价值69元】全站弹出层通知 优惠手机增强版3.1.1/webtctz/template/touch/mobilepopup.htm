@@ -1,0 +1,261 @@
+<!--{block return}-->
+
+
+<style>
+<!--{if $m_isopenborder == "1"}--> 
+*{padding:0;margin:0;}
+.PopupLayerBg{display:none;position:fixed;width:100%;height:100%;background:#000;z-index:{$m_zindex};top:0;left:0;opacity:0.7;}
+.PopupLayer img{border:none;}
+.PopupLayer a{text-decoration:none;}	
+.PopupLayer{z-index:{$m_zindex};width:{$m_width};height:{$m_height};padding:10px;
+<!--{if $m_isfloat == "1"}--> 
+position:fixed;
+<!--{/if}-->
+<!--{if $m_isfloat != "1"}--> 
+position:absolute;
+<!--{/if}-->
+left:30%;
+<!--{if $m_contentbg != ""}-->
+background:{$m_contentbg};
+<!--{/if}-->
+background-clip:padding-box;border-radius:10px;border:10px solid #666;border:15px solid rgba(0,0,0,0.2);}
+.PopupLayer a.close{position:absolute;top:-10px;right:-10px;display:block;
+<!--{if $m_closewidth == "" || $m_closewidth == 0}-->
+width:30px;
+<!--{/if}-->
+<!--{if $m_closewidth != "" && $m_closewidth != 0}-->
+width:{$m_closewidth}px;
+<!--{/if}-->
+<!--{if $m_closeheight == "" || $m_closeheight == 0}-->
+height:30px;
+<!--{/if}-->
+<!--{if $m_closeheight != "" && $m_closeheight != 0}-->
+height:{$m_closeheight}px;
+<!--{/if}-->
+float:right;
+<!--{if $m_ccloseimg == ""}-->
+background:url(source/plugin/webtctz/template/image/close.png) no-repeat;
+<!--{/if}-->
+<!--{if $m_ccloseimg != ""}-->
+background:url({$m_ccloseimg}) no-repeat;
+<!--{/if}-->
+overflow:hidden;}
+.PopupLayer .closetimespan{position:absolute;top:-18px;right:15px;display:block;width:120px;height:30px;float:right;overflow:hidden;}
+<!--{if $m_ccloseimg == ""}-->
+.PopupLayer a.close:hover{background-position:-30px;}
+<!--{/if}-->
+<!--{/if}-->
+<!--{if $m_isopenborder != "1" || $m_isopenborder == "0" }--> 
+*{padding:0;margin:0;}
+.PopupLayerBg{display:none;position:fixed;width:100%;height:100%;background:#000;z-index:{$m_zindex};top:0;left:0;opacity:0.7;}
+.PopupLayer img{border:none;}
+.PopupLayer a{text-decoration:none;}	
+.PopupLayer{z-index:{$m_zindex};width:{$m_width};height:{$m_height};
+<!--{if $m_isfloat == "1"}--> 
+position:fixed;
+<!--{/if}-->
+<!--{if $m_isfloat != "1"}--> 
+position:absolute;
+<!--{/if}-->
+left:30%;
+<!--{if $m_contentbg != ""}-->
+background:{$m_contentbg};
+<!--{/if}-->
+background-clip:padding-box;}
+.PopupLayer a.close{position:absolute;top:0px;right:0px;display:block;
+<!--{if $m_closewidth == "" || $m_closewidth == 0}-->
+width:30px;
+<!--{/if}-->
+<!--{if $m_closewidth != "" && $m_closewidth != 0}-->
+width:{$m_closewidth}px;
+<!--{/if}-->
+<!--{if $m_closeheight == "" || $m_closeheight == 0}-->
+height:40px;
+<!--{/if}-->
+<!--{if $m_closeheight != "" && $m_closeheight != 0}-->
+height:{$m_closeheight}px;
+<!--{/if}-->
+float:right;
+<!--{if $m_ccloseimg == ""}-->
+background:url(source/plugin/webtctz/template/image/close4.png) no-repeat;
+<!--{/if}-->
+<!--{if $m_ccloseimg != ""}-->
+background:url({$m_ccloseimg}) no-repeat;
+<!--{/if}-->
+overflow:hidden;}
+.PopupLayer .closetimespan{position:absolute;top:-18px;right:0px;display:block;width:120px;height:30px;float:right;overflow:hidden;}
+<!--{/if}-->
+</style>
+<!--{if $m_isbg == "1"}-->
+<div class="PopupLayerBg"></div>
+<!--{/if}-->
+
+<div class="PopupLayer" id="PopupLayer"> 
+     
+     <!--{if $m_iscloseshow == "1"}-->
+	 <a id="webtctzclose" class="close"></a>
+	 <!--{/if}-->
+	 <!--{if $m_isclosetime == "1"}-->
+	 <span class="closetimespan" id="closetimespan"><span style="color:red;"><strong id="closetime">{$m_closetime}</strong></span> {lang webtctz:tzclosetime} </span>
+	 <!--{/if}-->
+	 <!--{if $m_type == 0 && $m_curl != ""}--> 
+		<a href="{$m_curl}" target="_blank"><img src="{$m_cimg}" width="{$m_width}" height="{$m_height}"/></a>
+	 <!--{/if}-->
+	 <!--{if $m_type == 0 && $m_curl == ""}--> 
+		<img src="{$m_cimg}" width="{$m_width}" height="{$m_height}"/>
+	 <!--{/if}-->
+	 <!--{if $m_type == 1 && $m_curl != ""}--> 
+		<a href="{$m_curl}" target="_blank"><span style="width:{$m_width};height:{$m_height};">{$m_ctext}</span> </a>
+	 <!--{/if}-->
+	 <!--{if $m_type == 1 && $m_curl == ""}--> 
+		<span style="width:{$m_width};height:{$m_height};">{$m_ctext}</span>
+	 <!--{/if}-->
+	 <!--{if $m_type == 2}--> 
+		<iframe runat="server" src="{$m_ciframe}" width="{$m_width}" height="{$m_height}" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+     <!--{/if}-->
+     <!--{if $m_type == 3}--> 
+		<div style="width:{$m_width};height:{$m_height};">{$m_chtml}</div> 
+	 <!--{/if}-->
+</div>
+
+<script src="source/plugin/webtctz/template/js/jquery.js"></script>
+<script type="text/javascript">var JQpopup=$.noConflict();</script>
+<script type="text/javascript">
+    var leftSeconds = {$m_closetime};
+    var isanimatestart = {$m_isanimatestart};
+    var isbg = {$m_isbg};
+    var zindex = {$m_zindex};
+    var delay = {$m_delay};
+    var intervalId;
+    var position = {$m_position};
+    var pyright = {$m_pyright};
+    var pybottom = {$m_pybottom};
+    var closepyright = {$m_closepyright};
+    var closepybottom = {$m_closepybottom};
+    var transparency = {$m_transparency};
+    var element_show_top;
+    var element_show_left;
+
+    JQpopup(document).ready(function() {
+    	 
+
+		    if(JQpopup.browser.msie && JQpopup.browser.version<=6)
+			{
+		    	JQpopup(".PopupLayer").css("position","absolute");
+			}
+		   
+		    JQpopup(".PopupLayer").css({"top":JQpopup(".PopupLayer").outerHeight()*-1+"px","opacity":0});//载入页面时将元素置于页面可见区域的顶部达到自上而下显示效果（PS：还有隐藏效果）
+		    
+		    
+		    function notice_show()//显示
+			{
+				var browser_visible_region_height=document.documentElement.clientHeight;//获取浏览器可见区域高度
+				var element_height=JQpopup(".PopupLayer").outerHeight();//获取元素高度:height+paelement_heighting+margin
+				//计算元素显示时的top值
+				if(position == 0){
+					element_show_top=(browser_visible_region_height-element_height)/2+pybottom;
+					element_show_left=JQpopup(document).width()/2-JQpopup("#PopupLayer").outerWidth()/2+pyright;
+				}else if(position == 1){
+					element_show_top=0+pybottom;
+					element_show_left=JQpopup(document).width()/2-JQpopup("#PopupLayer").outerWidth()/2+pyright;
+				}else if(position == 2){
+					element_show_top=(browser_visible_region_height-element_height)+pybottom;
+					element_show_left=JQpopup(document).width()/2-JQpopup("#PopupLayer").outerWidth()/2+pyright;
+				}else if(position == 3){
+					element_show_top=(browser_visible_region_height-element_height)/2+pybottom;
+					element_show_left=0+pyright;
+				}else if(position == 4){
+					element_show_top=(browser_visible_region_height-element_height)/2+pybottom;
+					element_show_left=JQpopup(document).width()-JQpopup("#PopupLayer").outerWidth()+pyright;
+				}else if(position == 5){
+					element_show_top=0+pybottom;
+					element_show_left=0+pyright;
+				}else if(position == 6){
+					element_show_top=(browser_visible_region_height-element_height)+pybottom;
+					element_show_left=0+pyright;
+				}else if(position == 7){
+					element_show_top=0+pybottom;
+					element_show_left=JQpopup(document).width()-JQpopup("#PopupLayer").outerWidth()+pyright;
+				}else if(position == 8){
+					element_show_top=(browser_visible_region_height-element_height)+pybottom;
+					element_show_left=JQpopup(document).width()-JQpopup("#PopupLayer").outerWidth()+pyright;
+				}else{
+					element_show_top=(browser_visible_region_height-element_height)/2+pybottom;
+					element_show_left=JQpopup(document).width()/2-JQpopup("#PopupLayer").outerWidth()/2+pyright;
+				}
+			
+				if(isbg == 1){
+					JQpopup('.PopupLayerBg').css({'display':'block'});
+					zindex = zindex-1;
+					JQpopup('.PopupLayerBg').css({'z-index':zindex});
+					JQpopup('.closetimespan').css({'color':'white'});
+				}else{
+					JQpopup('.PopupLayerBg').css({'display':'none'});
+				}
+				
+				if(isanimatestart == 1){
+					JQpopup('.PopupLayer').stop(true).animate({top:element_show_top+"px",opacity:transparency},1800);
+				}else{
+					JQpopup('.PopupLayer').stop(true).animate({top:element_show_top+"px",opacity:transparency},18);
+				}
+				
+				var webtctzclosetop = parseInt(JQpopup("#webtctzclose").css("top"));
+				var webtctzcloseright = parseInt(JQpopup("#webtctzclose").css("right"));
+				
+				JQpopup('#webtctzclose').css({'top':(webtctzclosetop+closepybottom)+"px"});
+				JQpopup('#webtctzclose').css({'right':(webtctzcloseright-closepyright)+"px"});
+				
+				JQpopup('.PopupLayer').css("left",element_show_left+"px");
+			}
+			
+			
+		    JQpopup("#webtctzclose").click(function(){
+				var element_height=JQpopup(".PopupLayer").outerHeight();//获取元素高度:height+paelement_heighting+margin
+				var ee=-element_height;//元素隐藏时的top值
+				JQpopup(".PopupLayer").animate({opacity:0},1000).animate({top:ee},0);
+				JQpopup('.PopupLayerBg').css({'display':'none'});
+				
+			})
+	
+			if(delay > 0){
+				intervalIddelay = setInterval(function(){
+			
+					if(delay <= 0){
+			            notice_show();
+			      	    clearInterval(intervalIddelay);//取消由setInterval()设置的timeout
+			      	    
+			      	    if(leftSeconds != 0){
+							intervalId = setInterval("countDown()",1000);
+						}else{
+							JQpopup('#closetimespan').hide();
+							
+						}
+			      	 }
+					delay--;
+				},1000);
+			}else{
+				notice_show();
+			
+				if(leftSeconds != 0){
+					intervalId = setInterval("countDown()",1000);
+				}else{
+					JQpopup('#closetimespan').hide();
+					
+				}
+			}
+		});
+        function countDown(){//定义一个倒计时函数，在文档加载后执行，并且每隔1秒执行一次
+          if(leftSeconds <=0){
+    		  var element_height=JQpopup(".PopupLayer").outerHeight();//获取元素高度:height+paelement_heighting+margin
+			  var ee=-element_height;//元素隐藏时的top值
+			  JQpopup(".PopupLayer").animate({opacity:0},1000).animate({top:ee},0);
+			  JQpopup('.PopupLayerBg').css({'display':'none'});
+    	      clearInterval(intervalId);//取消由setInterval()设置的timeout
+    	      return;
+    	  }
+    	  leftSeconds--;
+    	  JQpopup("#closetime").html(leftSeconds);
+    	 }
+  
+</script>
+<!--{/block}-->

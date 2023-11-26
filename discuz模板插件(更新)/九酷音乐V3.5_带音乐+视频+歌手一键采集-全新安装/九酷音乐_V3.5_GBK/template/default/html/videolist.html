@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[video:classname] - [qianwei:webname]</title>
+<meta name="Keywords" content="[video:classname]" />
+<meta name="Description" content="[video:classname],[qianwei:webname]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/mvnew.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.step01 .search-box{padding:30px 12px 0 170px; }
+.step01 .search-box strong{ float:left; width:80px; text-align:right; height:32px; line-height:32px; color:#999; font-size:14px;}
+.step01 .search-box .search-input{ width:350px; float:left;background:url([qianwei:tempurl]css/form-line.png) 0 0 repeat-x;line-height:20px; height:20px; border:1px solid #d2d2d2; padding:5px; width:300px; font-size:12px;word-break:break-all;word-wrap:break-word;color:#666;}
+.step01 .search-box .search-btn{ width:116px; height:32px; float:left; overflow:hidden;background:url([qianwei:tempurl]css/diangePub.png) 0 -112px no-repeat; border:0 none; cursor:pointer; text-indent:-9999px;}
+</style>
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:tempurl]js/topcommon.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+[qianwei:head]
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a class="active" href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box musicBus mt bgWrite">
+   <ul class="clearfix directNew">
+   {qianwei:class sort=turn order=asc}<li><a class="directName" target="_blank" href="[class:link]">[class:name]</a><a class="directPlay" target="_blank" href="[class:link]"></a></li>{/qianwei:class}
+  </ul>
+</div>
+<div class="box">
+ <h2 class="crumb">当前位置 &gt; [video:classname]</h2>
+</div>
+<div style="border-top:2px solid #7DC03A;" class="box mb10 filter bgWrite">
+<div class="filterBox">
+  <div class="diangeBd step01 clearfix">
+   <div class="search-box clearfix">
+<script type="text/javascript">
+function diange(){
+var k=document.getElementById("wdiange").value;
+if(k==""){asyncbox.tips("请输入视频或者用户名称！", "wait", 1000);document.getElementById("wdiange").focus();return false;}else{document.diangeform.submit();}
+}
+</script>
+    <form name="diangeform" method="get" action="[qianwei:path]search.php" target="_blank">
+    <div class="clearfix"> <strong>选择视频：</strong>
+     <input type="hidden" name="action" value="video">
+     <input type="text" name="key" value="" id="wdiange" class="input-value input search-input">
+     <input type="button" class="search-btn" value="搜索" onclick="javascript:diange();">
+    </div>
+	</form>
+   </div>
+  </div>
+    <dl class="clearfix">
+      <dt>所有视频分类</dt>
+      <dd>
+{qianwei:videoclass sort=turn order=asc}<a href="[videoclass:link]" class="video[videoclass:id]">[videoclass:name]</a>{/qianwei:videoclass}
+<style type="text/css">
+.filterBox dd a.video[video:classid]{background:#55a642; color:#FFF; padding:2px 5px; text-align:center;}
+</style>
+	</dd>
+    </dl>
+</div>
+</div>
+<div class="box mb10 clearfix">
+ <div class="mdBox bgWrite">
+  <div class="mdBoxHd">
+   <a class="fr" style="margin-top:10px">{qianwei:pagelist}</a>
+   <h2 class="mdBoxHdTit">[video:classname]</h2>
+  </div>
+  <div class="mdBoxBd">
+   <div class="mvList">
+    <ul class="mvListUl clearfix" id="body">
+{qianwei:video pagesize=35 classid=auto}
+<li><a href="[video:link]" class="t-i" target="_blank"><img src="[video:pic]" title="[video:name]"></a><a href="[video:link]" class="t-t" target="_blank"><font color="[video:color]">[video:name]</font></a><div class="i-t"><p class="mvSinger"><a href="[video:singerlink]" target="_blank">[video:singername]</a></p><p>{if:'[video:isbest]'=='1'}<a class="videoMv"></a>{else}{end if}播放：[video:hits]</p><p>更新时间：[video:time style=y-m-d]</p></div></li>
+{/qianwei:video}
+    </ul>
+   </div>
+   <div class="loadMore clearfix" id="mypage"><a href="{qianwei:pagedown}" class="loadMoreBtn">---------加载更多高清MV---------</a></div> 
+  </div>
+ </div>
+</div>
+<div class="footer clearfix">
+  <div class="box">
+    <p><font style="color:000;"><a href="mailto:[qianwei:mail]">本站所有音乐均来自互联网搜集，版权为原作者所有，如有侵犯权益，请联系我们删除！</a></font> -- <a href="http://www.miitbeian.gov.cn/" target="_blank">[qianwei:icp]</a> [qianwei:webstat]<br></p>
+    <p>Copyright &copy; [qianwei:copytime] <a href="http://[qianwei:weburl]" target="_blank">[qianwei:weburl]</a> .All Rights Reserved. <a href="http://[qianwei:httphost][qianwei:path]" target="_blank">[qianwei:webname]</a> 版权所有</p>
+  </div>
+</div>
+</body>
+</html>

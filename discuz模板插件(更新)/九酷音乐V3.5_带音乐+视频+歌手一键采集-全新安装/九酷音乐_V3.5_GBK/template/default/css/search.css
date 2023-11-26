@@ -1,0 +1,49 @@
+.crumb{ font-size:12px; font-weight:normal; line-height:36px; height:36px; color:#000;}
+.crumb a{ color:#000;}
+.crumb b{ font-weight:400; color:#666;}
+.mb10{ margin-bottom:10px;}
+
+.mdBox{ border:1px solid #e5e5e5;}
+.mdBoxHd{background:#fbfbfb; line-height:33px; height:33px; overflow:hidden; padding:0 12px;}
+.mdBoxHdTit{ font-size:14px;}
+.soBox .mdBoxHd{ height:40px; line-height:40px;}
+.soBox .mdBoxHdTit{ font-weight:400; font-size:14px;}
+.soBox .mdBoxHdTit span{ font-weight:800; color:#f34f34;}
+.soBox .mdBoxBd{ padding:20px 20px;}
+
+.soTopBox{ background:#eefaeb; border:1px solid #b8e0ae; padding:15px;}
+.soTopBox .fl{ width:88px; height:88px;}
+.soTopBox .fl .t-i img{ width:80px; height:80px; padding:3px; border:1px solid #ccc; background:#fff;}
+.soTopBox .fr{ width:785px;}
+.soTopBox .fr h2{font:400 22px/30px Microsoft YaHei; height:30px; overflow:hidden;}
+.soTopBox .fr h2 a{ color:#390;}
+.soBtn{ padding:6px 0 5px;}
+.soBtn a{ width:83px; height:25px; float:left; margin-right:6px; background:url(so.png) -999em -999em no-repeat;}
+.soBtn a.soBtn1{ width:144px; background-position:0 0;}
+.soBtn a.soBtn2{background-position:0 -25px;}
+.soBtn a.soBtn3{background-position:0 -50px;}
+.soBtn a.soBtn4{background-position:0 -75px;}
+.soInfo span{ padding-right:20px;}
+.soInfo span a{ color:#5ba91c; font-weight:800;padding:0 3px;}
+.soInfo span a:hover{ color:#f34f34;}
+.soTopBoxAlbum{ background:#fef8f7; border:1px solid #ff9d8d;}
+
+.songList{ padding:10px 0; width:900px; margin:0 auto;}
+.songList ul{ width:900px; display:inline;float:left; overflow:hidden;zoom:1;}
+.songList li{ width:900px; line-height:30px; height:30px; overflow:hidden;margin-bottom:5px; display:block; float:left; border-bottom:1px solid #f5f5f5; padding:2px 0 6px;}
+.songList li .songNum{ width:30px; height:30px;color:#b1b1b1; float:left; overflow:hidden;}
+.songList li .topRed{ font-weight:bold; color:#F00;}
+.songList li .songName{ float:left; font-size:14px; width:250px; overflow:hidden;height:30px; }
+.songList li .singerName{ float:left; font-size:12px; width:110px; overflow:hidden;height:30px;}
+.songList li .albumName{ float:left; font-size:12px; width:160px; overflow:hidden;height:30px;}
+.songList li .check{ float:left; margin:10px 4px 0 0;*margin:5px 2px 0 0; display:inline;}
+.songList li .add{background-position:0 -71px; float:right;height:30px;width: 20px; margin:0 0 0 4px; display:inline;}
+.songList li .play{background-position:0 -38px; float:left;height:30px;width:23px;}
+.songList li .down{background-position:0 -104px; float:right;height:30px;width: 20px;margin:0 0 0 4px; display:inline;}
+.songList li .oset{ float:left; font-size:12px; width:250px; overflow:hidden;height:30px;}
+.songList li .oset a{ padding: 0 5px; color:#60a22a;}
+.songList li .oset span{ padding:0 10px 0 5px; color:#f34f34; display:inline-block; width:85px;}
+
+.soBottom{ padding:0 0 10px;}
+.soBox .setPlay{border:0 none; text-align:left; padding:5px 0 10px; margin:0;}
+.soBox .turn-page{text-align:left; padding:5px 0 10px; margin:0 0 0 5px;}

@@ -1,0 +1,72 @@
+<link href="{HEJIN_PATH}public/admin/css/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.validation.min.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/admincp.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.cookie.js"></script>
+<link href="{HEJIN_PATH}public/admin/css/skin_0.css" rel="stylesheet" type="text/css" id="cssfile2" />
+
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+      <div class="h3" style="width:auto;">{lang hejin_box:qxusers}</div>
+      <ul class="tab-base">
+        <li><a href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=users"><span>{lang hejin_box:gzusers}</span></a></li>
+      </ul>
+    </div>
+  </div>
+ 
+<table class="table tb-type2" id="prompt">
+    <tbody>
+      <tr style="background: none repeat scroll 0% 0% rgb(255, 255, 255);" class="space odd">
+        <th colspan="12" class="nobg"><div class="title">
+            <h5>{lang hejin_box:cztishi}</h5>
+            <span class="arrow"></span></div></th>
+      </tr>
+      <tr style="background: none repeat scroll 0% 0% rgb(255, 255, 255);" class="odd">
+        <td><ul>
+            <li>{lang hejin_box:replytsd}</li>
+          </ul></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <form id="list_form" method='post'>
+    <input id="class_id" name="class_id" type="hidden" />
+    <table class="table tb-type2">
+      <thead>
+        
+        <tr class="thead">
+         <th style="width:10%">ID</th>
+          <th style="width:30%">OPENID</th>
+		  <th style="width:20%">{lang hejin_box:nickname}</th>
+		  <th style="width:20%">{lang hejin_box:telphone}</th>
+		  <th style="width:20%; text-align:center">{lang hejin_box:gztime}</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <!--{loop $stlists $user}-->
+                        <tr class="hover edit">
+		  <td>$user['id']</td>
+		  <td><!--{eval echo stripslashes($user['openid']);}--></td>
+		  <td><!--{eval echo stripslashes($user['nickname']);}--></td>
+		  <td><!--{eval echo stripslashes($user['telphone']);}--></td>
+		  <td class='align-center'>
+		  	<!--{eval echo date('Y-m-d',$user['gztime']);}-->
+		  </td>
+        </tr>
+         <!--{/loop}-->                   
+                
+                      </tbody>
+            <tfoot>
+        <tr class="tfoot">
+          <td>
+          </td>
+          <td id="batchAction" colspan="15">
+            <div class="pagination"><ul>$page_string</ul></div></td>
+        </tr>
+      </tfoot>
+          </table>
+  </form>
+</div>

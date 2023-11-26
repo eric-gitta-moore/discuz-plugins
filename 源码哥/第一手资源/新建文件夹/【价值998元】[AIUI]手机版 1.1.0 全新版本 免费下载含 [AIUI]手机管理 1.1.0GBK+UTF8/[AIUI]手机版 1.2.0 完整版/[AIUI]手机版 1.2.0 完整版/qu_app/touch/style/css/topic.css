@@ -1,0 +1,109 @@
+.ainuotopic_header {width: 100%;background: #f60;height: 44px;z-index: 99;position: relative;}
+.ainuotopic_header .nav {text-align: center;line-height: 44px;height: 44px;}
+.ainuotopic_header .nav .z {height: 44px;position: absolute;left: 0;top: 0;display: block;color: #FFF;font-size: 14px;line-height: 44px;padding: 0 8px;}
+.ainuotopic_header .nav .y {height: 44px;position: absolute;right: 0;top: 0;display: block;color: #FFF;font-size: 14px;line-height: 44px;padding: 0 8px;}
+.ainuotopic_header .nav .z i {font-size: 18px;}
+.ainuotopic_header .nav .name {font-size: 16px;text-align: center;display: block;left: 0;width: 100%;position: absolute; color:#fff; z-index:-1;}
+.ainuo_qinzipindao_bottom{ position:fixed; bottom:0; width:100%; z-index:19999; border:none; padding-bottom:10px !important;}
+
+/*baby ainuo QQÈº£º550494646*/
+.qinzi_header{ background:url(topic/qinzi_nav.png) repeat;}
+.ainuo_qinzi_focus{ position:relative; height:210px;}
+.ainuo_qinzi_focus .acover{ height:60px; width:100%; position:absolute; bottom:0; left:0;background: -webkit-linear-gradient(bottom,rgba(45,45,45,.6),rgba(45,45,45,0));background: linear-gradient(to top,rgba(45,45,45,.6),rgba(45,45,45,0));filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#00000000',endColorstr='#ff000000'); z-index:8;}
+.ainuo_qinzi_focus a img{ width:100%; height:auto; float:left;}
+.ainuo_qinzi_focus a p{position:absolute; bottom:8px; color:#fff; width:100%; padding:0 20% 0 3%; text-align:left; z-index:10; font-size:14px;}
+.ainuo_qinzi_focus .swiper-pagination-bullet{width:10px;height:10px; background:#fff;border-radius:0;opacity: .3; margin:0 5px 0 0 !important;}
+.ainuo_qinzi_focus .swiper-pagination-bullet-active{background:#fff;opacity: 1;}
+.ainuo_qinzi_focus .swiper-container-horizontal>.swiper-pagination-bullets{ bottom:10px; text-align:right;}
+.ainuo_qinzi_focus .swiper-slide{ height:210px;}
+.ainuo_qinzi_focus .swiper-slide a{ display:block; width:100%; height:100%;}
+.ainuo_qinzi_ban{background:#feaeaf url(topic/qinzi_ban.png) no-repeat right bottom;}
+.ainuo_qinzi_ban ul{ padding:20px 50px 20px 15px;}
+.ainuo_qinzi_ban ul li{ width:90px; float:left; margin-bottom:15px;}
+.ainuo_qinzi_ban ul li a{ background:#e78686; color:#fff; font-size:14px; padding:6px 12px; border-radius:20px;}
+.ainuo_qinzi_section{ background:url(topic/qinzi_bg.png) repeat; padding:10px 10px 0 10px;}
+.ainuo_qinzi_section .section_con{ background:#fff url(topic/qinzi_tit.png) repeat-x left top; border-radius:3px;}
+.ainuo_qinzi_section .atit{color:#FF7676; font-size:18px; padding:15px 10px 10px 10px;}
+.ainuo_qinzi_section .lz_acon{ padding-bottom:6px;}
+.ainuo_qinzi_section .lz_acon li{ width:50%; float:left; padding-bottom:4px;}
+.ainuo_qinzi_section .lz_acon li a{ margin:0 2px 0 10px; display:block; position:relative;}
+.ainuo_qinzi_section .lz_acon li:nth-child(2n) a{ margin:0 10px 0 2px;}
+.ainuo_qinzi_section .lz_acon li a img{ width:100%; height:auto;}
+.ainuo_qinzi_section .lz_acon li a p{ font-size:12px; color:#fff; background:rgba(0,0,0,0.4); line-height:30px; overflow:hidden; height:30px; position:absolute; bottom:0; width:100%; padding:0 3%;}
+.ainuo_qinzi_section .hot_acon{ padding:0 10px 10px 10px;}
+.ainuo_qinzi_section .hot_acon li{ background:url(topic/qinzi_fav.png) no-repeat left 13px; padding:5px 0 5px 20px; border-bottom:1px dashed #eee;}
+.ainuo_qinzi_section .hot_acon li a{ display:inline-block; width:100%; color:#222; font-size:16px;}
+.ainuo_qinzi_section .hot_acon li a span{ display:block; height:30px; overflow:hidden; line-height:30px;}
+.ainuo_qinzi_section .hot_acon li a p{ font-size:12px; color:#999;}
+.ainuo_qinzi_section .hot_acon li:last-child{ border:none;}
+
+.ainuo_qinzi_section .fengmian_acon img{ width:100%; height:auto;}
+.ainuo_qinzi_section .fengmian_acon a h2{ font-size:15px; font-weight:400; line-height:36px; color:#111; padding:0 10px;}
+.ainuo_qinzi_section .fengmian_acon a p{ font-size:12px; color:#777; padding:0 10px 10px 10px;}
+.ainuo_qinzi_section .fengmian_acon a p em{ color:#E56768;}
+
+.ainuo_qinzi_section .luntan_acon{}
+.ainuo_qinzi_section .luntan_acon li{ padding:10px 10px 10px 64px; border-bottom:1px dotted #e2e2e2; position:relative;}
+.ainuo_qinzi_section .luntan_acon li .aleft{ position:absolute; left:10px; top:10px;}
+.ainuo_qinzi_section .luntan_acon li .aleft img{ width:44px; height:44px; border-radius:50%;}
+.ainuo_qinzi_section .luntan_acon li .aright{ font-size:16px;}
+.ainuo_qinzi_section .luntan_acon li .aright .auth{ color:#FF7676;}
+.ainuo_qinzi_section .luntan_acon li .aright p{ font-size:12px; margin-top:6px;}
+.ainuo_qinzi_section .luntan_acon li .aright p span{ margin-right:15px; color:#777;}
+
+.ainuo_qinzi_ad{ padding:10px 10px 0 10px;background:url(topic/qinzi_bg.png) repeat; display:block;}
+.ainuo_qinzi_ad img{ width:100%;border-radius:3px;}
+
+.ainuo_qinzi_section .more{ text-align:center; font-size:15px; padding:6px; }
+.ainuo_qinzi_section .more a{color:#FF7676;}
+
+
+/*food ainuo QQÈº£º550494646*/
+.food_header{background: #ec7309;}
+.ainuo_food_nav{ padding:0 0 20px 20px;}
+.ainuo_food_nav li{ width:33.333%; float:left;}
+.ainuo_food_nav li a{ margin:20px 20px 0 0; display:block; position:relative;text-align:center;}
+.ainuo_food_nav li a img{ width:100%; height:auto; margin:0 auto;}
+.ainuo_food_nav li a p{ position:absolute; bottom:10px; color:#fff; width:100%;}
+
+.ainuo_food_hot{ background:#fff;}
+.ainuo_food_hot .atit{ color:#f4a100; line-height:22px; padding:10px;}
+.ainuo_food_hot .atit i{ margin-right:5px; font-size:18px;}
+.ainuo_food_hot .acon{ padding:0 15px 15px 15px;}
+.ainuo_food_hot .acon a{ display:block; position:relative;}
+.ainuo_food_hot .acon a img{ width:100%; height:auto;}
+.ainuo_food_hot .acon a p{ position:absolute; bottom:0; width:100%; padding:0 3%; height:32px; line-height:32px; overflow:hidden; color:#fff; font-size:14px; background:rgba(0,0,0,0.4)}
+
+.ainuo_food_hot2{ padding:0 10px 10px 10px; background:#fff;}
+.ainuo_food_hot2 li{background: url(topic/default.png) no-repeat 50% 50%;background-size: 100%;}
+.ainuo_food_hot2 li{float: left;width: 48.25%;height:80px;margin-top:10px;position: relative;overflow: hidden;}
+.ainuo_food_hot2 li:first-child {clear: left;float: right;height:170px;}
+.ainuo_food_hot2 li img{ width:100%;position: absolute;left: 0;top: 50%;-webkit-transform: translateY(-50%);transform: translateY(-50%);min-height:80px;}
+.ainuo_food_hot2 li:first-child img {min-height:170px;}
+.ainuo_food_hot2 li .ahot {position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: inline-block;}
+.ainuo_food_hot2 li .aname {position: absolute;left: 0;top: 0;width:22px;height:80px;padding-top:10px;background: rgba(124,182,69,.8);text-align: center;font-size: 14px;line-height: 1.2;color: white;}
+
+.ainuo_food_jingpin{ background:#fff;}
+.ainuo_food_jingpin .atit{ color:#f4a100; line-height:22px; padding:10px;}
+.ainuo_food_jingpin .atit i{ margin-right:5px; font-size:18px;}
+.ainuo_food_jingpin .acon{}
+.ainuo_food_jingpin .acon li{}
+.ainuo_food_jingpin .acon li a{ display:block; position:relative;padding:10px 10px 10px 130px;}
+.ainuo_food_jingpin .acon li .aleft{ position:absolute; width:110px; height:80px; left:10px; top:10px;}
+.ainuo_food_jingpin .acon li .aleft img{ width:100%; height:100%;}
+.ainuo_food_jingpin .acon li .aright{height:80px; overflow:hidden;}
+.ainuo_food_jingpin .acon li .aright h2{ margin-bottom:5px; font-weight:400; color:#121212; height:22px; overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+.ainuo_food_jingpin .acon li .aright p{ color:#888; font-size:14px; line-height:24px;}
+
+.ainuo_food_daren{ background:#fff;}
+.ainuo_food_daren .atit{ color:#f4a100; line-height:22px; padding:10px;}
+.ainuo_food_daren .atit i{ margin-right:5px; font-size:18px;}
+.ainuo_food_daren .acon li a{ display:block; position:relative;padding:10px 10px 10px 80px;}
+.ainuo_food_daren .acon li .aleft{ position:absolute; width:60px; height:60px; left:10px; top:10px;}
+.ainuo_food_daren .acon li .aleft img{ width:100%; height:100%; border-radius:50%;}
+.ainuo_food_daren .acon li .aright{height:70px; overflow:hidden;}
+.ainuo_food_daren .acon li .aright h2{ margin-bottom:5px; margin-top:5px; font-weight:400; color:#121212; height:22px; overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+.ainuo_food_daren .acon li .aright p{ color:#888; font-size:14px; line-height:24px;}
+
+.ainuo_food_bottom{  position:fixed; bottom:0; width:100%; text-align:center; background:#fff; padding:10px; border-top:1px solid #e2e2e2;}
+.ainuo_food_bottom a{ color:#fff; font-size:14px;background:#92c264;padding:6px 0; display:block;}

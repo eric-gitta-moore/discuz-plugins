@@ -1,0 +1,16 @@
+在数据调用页面的模块分类处选择【静态模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-广告模块
+
+数据来源：自定义HTML
+
+HTML代码：
+
+<div class="n5jj_ggmk" style="margin:15px 0 0 0">
+<a href="#"><img src="template/zhikai_n5app/images/admk.png"></a>
+</div>
+
+
+修改后选择确定，这个模块添加完成。

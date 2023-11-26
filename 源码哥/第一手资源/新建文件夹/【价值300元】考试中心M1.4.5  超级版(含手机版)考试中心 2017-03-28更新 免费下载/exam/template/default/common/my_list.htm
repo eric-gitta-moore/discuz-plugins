@@ -1,0 +1,40 @@
+<div id="threadlist" class="tl bm bmw">
+	<div class="th">
+		<table cellspacing="0" cellpadding="0" class="log"><tr>
+			<th class="title">试卷名称(我发布的试卷)</th>
+			<td class="score">提交/浏览</td>
+			<td class="edit_bar"><center>操作</center></td>
+		</tr></table>
+	</div>
+
+	<div class="bm_c">
+		<table cellspacing="0" cellpadding="0" class="log"  id="paper_log">
+		<!--{loop $list $v}-->
+		<tbody>
+			<tr pid="$v[pid]">
+				<th class="title">[<!--{if $v[status]==0}--><i class="xi2">未审核</i><!--{elseif $v[status]==1}-->已审核<!--{else}--><i class="xi1">已屏蔽</i><!--{/if}-->&nbsp;<!--{if $v[public]==1}-->已发布<!--{else}--><i class="xi2">未发布</i><!--{/if}-->]&nbsp;<a href="$paperurl$v[pid].html" target="_blank">$v[title]</a></th>
+				<th class="score">$v[submit]/$v[pv]</th>			
+				<th class="edit_bar">
+				<a href="plugin.php?id=exam:my&tab=paper&pid=$v[pid]" target="_blank">参与记录</a>&nbsp;
+				<a href="plugin.php?id=exam:manage&pid=$v[pid]" target="_blank">管理试卷</a>&nbsp;
+				<a href="javascript:;" location="plugin.php?id=exam:my&tab=list&action=cp_paper_delete&pid=$v[pid]&formhash=$_G[formhash]" onclick="return delete_paper_submit(this);">删除试卷</a>&nbsp;
+				</th>
+			</tr>
+		</tbody>
+		<!--{/loop}-->
+		</table>
+	</div>
+	<div class="pg mtm mbm">$multipage</div>
+
+</div>
+<div class="xi1">注意: 删除后不可恢复</div>
+
+<script type="text/javascript">
+	function delete_paper_submit(a){
+		showDialog('<div style="line-height:39px">删除试卷将删除该试卷下所有试题, 且不可恢复</div>','confirm','删除试卷',
+		function(){
+			 window.location.href= a.getAttribute('location');
+		},0,0,0,"继续","取消")
+		return false;
+	}
+</script>

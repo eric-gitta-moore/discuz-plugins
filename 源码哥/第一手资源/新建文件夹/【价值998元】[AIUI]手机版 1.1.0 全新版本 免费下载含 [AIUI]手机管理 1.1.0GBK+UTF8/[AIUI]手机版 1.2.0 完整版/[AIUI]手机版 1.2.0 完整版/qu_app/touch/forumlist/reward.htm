@@ -1,0 +1,92 @@
+<style>
+.bar-header-secondary{ display:none;}
+.ainuo_piclist{}
+.ainuo_piclist li{background:#fff;}
+.ainuo_piclist li a{ display:block;}
+.ainuo_piclist li .authorinfo{}
+.ainuo_piclist li .author{ height:26px; line-height:26px; font-size:12px; color:#999; }
+.ainuo_piclist li .author .aleft{ float:left;}
+.ainuo_piclist li .author .aleft .ava{ float:left; margin-right:5px;}
+.ainuo_piclist li .author .aleft .ava img{ width:26px; height:26px;border-radius:50%;}
+.ainuo_piclist li .author .aright{ float:right;}
+.ainuo_piclist li .author .aright .pip{ margin:0 3px;}
+.ainuo_piclist li .author .aleft .abadge{color: white;background-color: #fe7c51;font-size:12px;padding: 2px 5px; border-radius:2px;}
+.ainuo_piclist li .author .aleft .leixing{background-color:#A8C500;}
+.ainuo_piclist li .apic img{ width:100%; height:auto;}
+.ainuo_piclist li .atitle{  position:relative; padding:0 10px; color:#111;}
+.ainuo_piclist li .actcon{ position:relative; padding:10px;}
+.ainuo_piclist li .actconli{ font-size:14px;}
+.ainuo_piclist li .actconli span{ color:#7a7a7a;}
+.ainuo_piclist li .actconlix{ margin-top:5px;}
+
+
+.ainuo_xs_rwd {height:132px; overflow:hidden; display:block; padding:10px;  position:relative;}
+.ainuo_xs_rwld {}
+.ainuo_xs_rwd .rusld { width: 100px; height: 130px; background: url(template/qu_app/touch/style/css/images/weijiejue.png) no-repeat 10px 10px; text-align: center; color: #F30; position:absolute;left:0; top:0; font-size:12px;}
+.ainuo_xs_rwd .rsld { width: 100px; height: 130px; background: url(template/qu_app/touch/style/css/images/yijiejue.png) no-repeat 10px 10px; text-align: center; color: #F30; position:absolute;left:0; top:0;font-size:12px;}
+.ainuo_xs_rwd .rsld cite, .ainuo_xs_rwd .rusld cite { font-family: Georgia;display: block; margin: 40px 0 0 0;height: 30px; font-weight:700; font-size: 28px; }
+.ainuo_xs_rwd .rwdn { margin-left: 95px; }
+.ainuo_xs_rwd .rwdbst {}
+.ainuo_xs_rwd .rwt .tit{ font-size:16px; color:#111; margin-bottom:10px;}
+.ainuo_xs_rwd .rwt .info{ margin-bottom:5px; font-size:12px;}
+.ainuo_xs_rwd .rwt .info span { border-radius:2px; color:#999; margin-right:5px;}
+.ainuo_xs_rwd .rwt .info span i{ margin-right:3px;}
+.ainuo_xs_rwd .rwt .info .y{ float:right; margin-right:0; font-size:10px; padding:2px 4px;color:#999; border:1px solid #ddd; line-height:12px;}
+.ainuo_xs_rwd .rwt .info .recommend{font-size:10px; padding:2px 4px;color:#b5651d; border:1px solid #b5651d;}
+.ainuo_xs_rwd .rwt .info .heats{font-size:10px; padding:2px 4px;color:#ff0000; border:1px solid #ff0000;}
+.ainuo_xs_rwd .rwt .info .closed{font-size:10px; padding:2px 4px;color:#999; border:1px solid #999;}
+.ainuo_xs_rwd .rwt .info .displayorder{font-size:10px; padding:2px 4px;color:#108fa6; border:1px solid #108fa6;}
+.ainuo_xs_rwd .rwt .info .xi1{ font-size:10px; padding:2px 4px;color:#1d8b2a; border:1px solid #1d8b2a;}
+.ainuo_xs_rwd .rwdn .anwbtn{ border-radius:2px; background:#f60; color:#fff; font-size:12px; padding:5px 15px;}
+.ainuo_anwbtn{ display:block; background:#72d337; color:#fff !important; text-align:center; height:36px; line-height:36px; margin-top:10px; border-radius:2px; font-size:14px;}
+
+.ainuo_xs_rwdbst{ background:#f6eeee; margin-bottom:15px; border-radius:2px; overflow:hidden; }
+.ainuo_xs_rwdbst .psth {padding:8px 10px; background: #d43d3d; color: #fff; font-size: 14px;font-weight:400;}
+.ainuo_xs_rwdbst .tpst .psth { margin-left: -15px; }
+.ainuo_xs_rwdbst .pstl {}
+.ainuo_xs_rwdbst .psta { font-size:14px; padding:10px 10px 0;line-height:30px; overflow:hidden; }
+.ainuo_xs_rwdbst .psth .full{ float:right; color:#fff;}
+.ainuo_xs_rwdbst .psta img { width:30px; height:30px; border-radius:50%; vertical-align:middle;}
+.ainuo_xs_rwdbst .psti { padding:10px; }
+.ainuo_xs_rwdbst .psti .con { font-size:14px;line-height:24px;}
+</style>
+
+<header class="header" id="page-header">
+	<div class="nav">
+        <a class="back z" href="#"><i class="iconfont icon-back"></i></a>		
+        <span class="name">$_G['forum'][name]</span>
+        <a href="javascript:;" class="ashare y"><i class="iconfont icon-fenxiang"></i></a>
+    </div>
+</header>
+<!--{template common/top_fix}-->
+
+<!--{hook/forumdisplay_top_mobile}-->
+<!--{if $quicksearchlist && !$_GET['archiveid']}-->
+	<!--{subtemplate forum/search_sortoption}-->
+<!--{else}-->
+	<!--{subtemplate forum/type_ts}-->
+<!--{/if}-->
+<!--{subtemplate forum/zd}-->
+
+
+<!--{if empty($_G['forum']['sortmode'])}-->
+    
+    <!--{if $_G['forum_threadcount']}-->
+    <div class="ainuo_piclist cl">
+        <ul id="ainuoloadmore" class="ainuoloadmore">
+			<!--{subtemplate forumlist/reward_list}-->
+        </ul>
+    </div>
+    <!--{else}-->
+    <div class="ainuoemp">{lang forum_nothreads}</div>
+    <!--{/if}-->
+
+<!--{else}-->
+    <!--{subtemplate forum/forumdisplay_sort}-->
+<!--{/if}-->
+<div id="ainuoloadempty"></div>
+<!--{if $_G[forum][threads] && ($_G[forum][threads] > $_G[tpp])}-->
+<div id="loading" class="loading G-animate-load-wrap">
+	<div class="load-loading"><span class="loading02"></span> <span class="load-word">$alang_loading</span></div>
+</div>
+<!--{/if}-->

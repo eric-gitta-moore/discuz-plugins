@@ -1,0 +1,81 @@
+/* 
+NVBING5 www.nvbing5.net
+QQ 2474414433
+ */
+ 
+/* 114 */
+.n5_flmkkz li {overflow: hidden;font-size: 12px;padding: 10px;position: relative;margin-bottom: 15px;background: #ffffff;border-top: 0;border-bottom:0;}
+.n5_flmkkz .hypic {width: 60px;height: 60px;overflow: hidden;float: left;border: 1px solid #eeeeee;}
+.n5_flmkkz .hypic img {width: 60px;height: 60px;}
+.n5_flmkkz .hyjtxx {height: 50px;padding-left: 75px;font-size: 12px;}
+.n5_flmkkz .hyjtxx h3 {font-size: 16px;line-height: 20px;color: #000;font-weight: normal;overflow: hidden;}
+.n5_flmkkz .hyjtxx h3 i {margin-right:5px;color: #ff6600;}
+.n5_flmkkz .hyjtxx p {margin-top: 4px;color: #999999;line-height: 17px;}
+.n5_flmkkz .hyjtxx .n5_kdtjx {width: 87px;height: 18px;background: url(n5_kdtx.png) no-repeat 0 0;}
+.n5_flmkkz .hyjtxx .n5_kdtjx .n5_kdtjs {display: inline-block;height: 18px;background: url(n5_kdtj.png) no-repeat 0 0;}
+.n5_flmkkz .hytel {background: url(114.png) no-repeat;}
+.n5_flmkkz .hytel {width: 25px;height: 23px;top: 50%;right: 10px;margin-top: -11px;background-position: 0;position: absolute;background-size: 25px auto;text-indent: -999px;overflow: hidden;}
+
+/* 分类整体 */
+.n5_flmkkz li .flxxpic {float: left;width: 90px;margin-right: 10px;}
+.n5_flmkkz li img {width: 90px;height: 90px;vertical-align: top;}
+.n5_flmkkz li .flxxnrj {width: 100%;font-size: 14px;position: relative;z-index: 1;}
+.n5_flmkkz li .flxxnrl p {height: 23px;line-height: 30px;color: #888;font-size: 12px;}
+.n5_flmkkz li .flxxnrl p a {color: #ff6600;font-size: 14px;}
+.n5_flmkkz li .flxxnrl .loupanmb {background: url(114.png) no-repeat;}
+.n5_flmkkz li .flxxnrl .loupanmb {padding-left: 22px;background-position: 0 7px;background-size: 18px auto;}
+.n5_flmkkz li .xnrjbt {height: 40px;line-height: 20px;overflow: hidden;}
+.n5_flmkkz li .xnrjbtl {height: 20px;line-height: 20px;overflow: hidden;}
+.n5_flmkkz li .xnrjbt a {color: #369;font-size: 14px;margin-right: 10px;display: inline-block;}
+.n5_flmkkz li .xnrjbtl a {font-size: 16px;}
+.n5_flmkkz li p {height: 28px;line-height: 30px;color: #999;overflow: hidden;font-size: 12px;}
+.n5_flmkkz li .xxfbhy {margin-right:30px;padding-left:20px;background: url(xxfbhy.png) 0 no-repeat;}
+.n5_flmkkz li .xxfbhy a {color: #369;}
+.n5_flmkkz li .xxfbsj {padding-left:20px;background: url(xxfbsj.png) 0 no-repeat;}
+.n5_flmkkz li ul {height: 20px;line-height: 20px;overflow: hidden;}
+.n5_flmkkz li li {float: left;margin: 0 7px 0 0;padding: 0 0 0 7px;border: 0;background: url(n5_fljg.png) 0 no-repeat;}
+.n5_flmkkz li .fwczhx,.n5_flmkkz li .fwczmj,.n5_flmkkz li .fwczzx {padding: 0 3px;background: #9dc907;color: #fff;-webkit-border-radius: 2px;border-radius: 2px;}
+.n5_flmkkz li .fwczmj {background: #ff6c6f;}
+.n5_flmkkz li .fwczzx {background: #4fa2ff;}
+.n5_flmkkz li .xnrjjg {position: absolute!important;right: 10px;top: 40px;color: #999999;font-size: 14px;line-height: 20px;}
+.n5_flmkkz li .xnrjjg span {float: right;font-size: 12px;}
+.n5_flmkkz li .xnrjjg span em {color: #ff6600;font-size: 18px;font-weight: 700;}
+.n5_flmkkz li .xnrjjgs span em {color: #ff6600;font-size: 28px;font-weight: 400;}
+
+.n5_flmkkz li .n5_zpxxzt,.n5_flmkkz li .n5_ycpczt {position: absolute;right: 0;top: 0;background: #ff6363;color: #fff;padding: 2px 5px 2px 10px;border-radius: 0 0 0 10px;}
+.n5_flmkkz li .n5_zpxxlbnr {}
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt {text-decoration: none;color: #666;}
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt h3 {line-height: 21px;font-size: 16px;font-weight: 400;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt h3 a {color: #369;}
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt .n5_zpxxjtyq {font-size: 14px;}
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt .n5_zpxxjtyq span {padding: 0 10px;border-left: 1px solid #ccc;}
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt .n5_zpxxjtyq .n5_xxjtyqxz {padding-left: 0;border-left: 0;color: #ff6600;}
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxgs .n5_zpxxgsmc {font-size: 14px;color: #333;line-height: 28px;height: 28px;}
+
+.n5_flmkkz li .qzjllbtp {float: left;margin-right:10px;}
+.n5_flmkkz li .qzjllbxx .lbxxdy {height: 20px;line-height: 20px;padding: 6px 0 8px 0;}
+.n5_flmkkz li .qzjllbxx .lbxxdy a {font-size: 16px;color: #369;}
+.n5_flmkkz li .qzjllbxx .lbxxdy i {margin-left:10px;font-size: 14px;color: #888;}
+.n5_flmkkz li .qzjllbxx .lbxxde,.n5_flmkkz li .qzjllbxx .lbxxds {line-height: 25px;height: 25px;font-size: 14px;color: #777;}
+.n5_flmkkz li .qzjllbxx .lbxxde .pipe,.n5_flmkkz li .qzjllbxx .lbxxds .pipe {margin: 0 5px;color: #CCC;}
+.n5_flmkkz li .qzjllbxx .lbxxds i {color: #ff6600;}
+
+.n5_flmkkz li .flxxnrs .n5_kdtjx {width: 87px;height: 18px;margin-top: 4px;line-height: 0;background: url(n5_kdtx.png) no-repeat 0 0;}
+.n5_flmkkz li .flxxnrs .n5_kdtjx .n5_kdtjs {display: inline-block;height: 18px;background: url(n5_kdtj.png) no-repeat 0 0;}
+
+.n5_flmkkz li .n5_yqpcnr .n5_pccfd,.n5_flmkkz li .n5_yqpcnr .n5_pcmdd {background: url(pccf.png) 0 no-repeat;background-size: 25px auto;padding-left: 30px;font-size: 14px;color: #333;}
+.n5_flmkkz li .n5_yqpcnr .n5_pcmdd {background: url(pcmd.png) 0 no-repeat;background-size: 25px auto;}
+.n5_flmkkz li .n5_yqpcnr .n5_pccfd i,.n5_flmkkz li .n5_yqpcnr .n5_pcmdd i {color: #999;}
+.n5_flmkkz li .n5_yqpcnr span {padding: 2px 5px;margin-right:3px;background: #9dc907;color: #fff;-webkit-border-radius: 2px;border-radius: 2px;}
+.n5_flmkkz li .n5_yqpcnr .n5_pcpcsj {background: #ff6c6f;}
+.n5_flmkkz li .n5_yqpcnr .n5_pcpcwj {background: #4fa2ff;}
+
+.n5_flmkkz li .kdlbtp {float: left;margin-right:10px;}
+.n5_flmkkz li .kdlbxx {font-size: 18px;}
+.n5_flmkkz li .kdlbxx .tckddz {padding-left: 20px;background: url(n5_sjdz.png) no-repeat 0 9px;font-size: 14px;}
+.n5_flmkkz li .kdlbxx .tckdsj {padding-left: 20px;background: url(n5_yysj.png) no-repeat 0 10px;font-size: 14px;}
+.n5_flmkkz li .kdlbxx .tckdsj i {padding:0 5px;font-size: 18px;color: #ff6600;}
+
+/* 屏蔽 */
+.n5_flmkkz input,.n5_flmkkz li .fwczlc,.n5_flmkkz li .fwczcz,.n5_flmkkz li .xnrjbt .grfy,.n5_flmkkz li .flxxhysj,.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt .n5_zpxxjtyq .n5_xxjtyqqy,.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxjt .n5_zpxxjtsj,
+.n5_flmkkz li .n5_zpxxlbnr .n5_zpxxgs .n5_zpxxgsdz,.n5_flmkkz li .flxxnrj .lpkfs,.flxxnrl .loupante,.flxxnrl .loupangs,.flxxnrl .loupansj,.flxxnrl .loupantes,.n5_flmkkz li .xnrjbtl .grfyf,.n5_flmkkz li .n5_yqpcnr .n5_pcpcfc {display:none;}

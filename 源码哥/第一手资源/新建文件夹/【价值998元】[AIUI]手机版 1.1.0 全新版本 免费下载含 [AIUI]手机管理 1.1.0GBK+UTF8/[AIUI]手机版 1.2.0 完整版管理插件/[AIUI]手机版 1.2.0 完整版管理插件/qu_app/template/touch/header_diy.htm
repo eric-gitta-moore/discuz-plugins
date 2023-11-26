@@ -1,0 +1,219 @@
+<!--{eval
+function qu_tpl_diy($type) {
+global $_G,$topic;
+}-->
+
+<!--{block return}-->
+<link rel="stylesheet" type="text/css" href="template/qu_app/touch/style/css/diy.css?{VERHASH}" />
+
+<!--{if empty($_GET['diy'])}--><!--{eval $_GET['diy'] = '';}--><!--{/if}-->
+<!--{if !isset($topic)}--><!--{eval $topic = array();}--><!--{/if}-->
+
+<div id="DiyBar">
+  <div id="controlpanel" class=" hide">
+    <div id="controlheader" class="">
+      <p class="y">
+      <span id="navcancel"><a href="javascript:;" id="diycancel" onclick="spaceDiy.cancel();return false;">{lang close}</a></span>
+      <span id="navsave"><a href="javascript:;" onclick="javascript:spaceDiy.save();return false;">{lang save}</a></span>
+
+      </p>
+      <ul id="controlnav">
+        <li id="navstart" class="current"><a href="javascript:" onclick="spaceDiy.getdiy('start');this.blur();return false;">{lang header_start}</a></li>
+        <li id="navframe"><a href="javascript:;" onclick="spaceDiy.getdiy('frame');this.blur();return false;">{lang header_frame}</a></li>
+        <li id="navblockclass"><a href="javascript:;" onclick="spaceDiy.getdiy('blockclass');this.blur();return false;" id="hd_mod">{lang header_module}</a></li>
+      </ul>
+      
+    </div>
+    <div id="controlcontent" class="">
+      <div id="diy_backup_tip" class="tip tip_2" style="display: none; padding-bottom:5px; text-align:center;">
+        <div class="tip_horn"></div>
+        <div class="tip_c">{lang header_diy_backup_tip} &nbsp; <a href="javascript:;" class="xi2" onclick="drag.saveViewTip('diy_backup_tip');return false;">{lang header_diy_i_know}</a></div>
+      </div>
+      <ul id="contentstart" class="content">
+        <li><a href="javascript:;" onclick="spaceDiy.recover();return false;" title="{lang header_restore_backup_desc}">{lang header_restore_backup}</a></li>
+        <li><a href="javascript:;" onclick="drag.frameExport();return false;" title="{lang header_export_desc}">{lang header_export}</a></li>
+        <li><a href="javascript:;" onclick="drag.openFrameImport(1);return false;" title="{lang header_import_desc}">{lang header_import}</a></li>
+        <li><a href="javascript:;" onclick="drag.blockForceUpdateBatch();return false;" title="{lang header_update_desc}">{lang header_update}</a></li>
+        <li><a href="javascript:;" onclick="drag.clearAll();return false;" title="{lang header_clearall_desc}">{lang header_clearall}</a></li>
+      </ul>
+      <ul id="contentframe" class="content hide">
+        <li><a href="javascript:;" id="frame_1" onclick="drag.createObj(event,'frame','1');" onfocus="this.blur();" data="$widthstr"><img src="{STATICURL}image/diy/layout-1.png" />100%</a></li>
+        <li><a href="javascript:;" id="frame_1_1" onclick="drag.createObj(event,'frame','1-1');" onfocus="this.blur();"><img src="{STATICURL}image/diy/layout-1-1.png" />1:1</a></li>
+        <li><a href="javascript:;" id="frame_1_2" onclick="drag.createObj(event,'frame','1-2');" onfocus="this.blur();"><img src="{STATICURL}image/diy/layout-1-2.png" />1:2</a></li>
+        <li><a href="javascript:;" id="frame_2_1" onclick="drag.createObj(event,'frame','2-1');" onfocus="this.blur();"><img src="{STATICURL}image/diy/layout-2-1.png" />2:1</a></li>
+        <li><a href="javascript:;" id="frame_1_3" onclick="drag.createObj(event,'frame','1-3');" onfocus="this.blur();"><img src="{STATICURL}image/diy/layout-1-3.png" />1:3</a></li>
+        <li><a href="javascript:;" id="frame_3_1" onclick="drag.createObj(event,'frame','3-1');" onfocus="this.blur();"><img src="{STATICURL}image/diy/layout-3-1.png" />3:1</a></li>
+     
+      </ul>
+      <div id="contentblockclass" class="content"></div>
+    </div>
+    <div id="cpfooter">
+    </div>
+  </div>
+  <!--{eval ($_GET['mod'] == 'topic' && $_GET['topicid']) && $_G['style']['tplfile'] = 'portal/portal_topic_content:'.$_GET['topicid'];$_G['style']['tplsavemod']=1;}-->
+  
+  <!--{eval $_GET['mod'] == 'guide' && $_G['style']['tplfile'] = 'forum/guide';$_G['style']['tplsavemod']=1;}-->
+  
+  <!--{eval $_G['sign'] = dsign($_G['style']['directory'].'/touch'.$_G['style']['tplfile']);}-->
+  <form method="post" autocomplete="off" name="diyform" id="diyform" action="$_G[siteurl]plugin.php?id=qu_app:diy">
+    <input type="hidden" name="template" value="$_G['style']['tplfile']" />
+    <input type="hidden" name="tpldirectory" value="$_G['style']['directory']/touch" />
+    <input type="hidden" name="diysign" value="$_G['sign']" />
+    <input type="hidden" name="prefile" id="prefile" value="$_G['style']['prefile']" />
+    <input type="hidden" name="savemod" value="$_G['style']['tplsavemod']" />
+    <input type="hidden" name="spacecss" value="" />
+    <input type="hidden" name="style" value="" />
+    <input type="hidden" name="rejs" value="" />
+    <input type="hidden" name="handlekey" value="" />
+    <input type="hidden" name="layoutdata" value="" />
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="gobackurl" id="gobackurl" value=""/>
+    <input type="hidden" name="recover" value=""/>
+    <input type="hidden" name="optype" value=""/>
+    <input type="hidden" name="diysubmit" value="true"/>
+  </form>
+</div>
+<script src="source/plugin/qu_app/static/js/common_diy.js?{VERHASH}" charset="{CHARSET}"></script> 
+<script src="source/plugin/qu_app/static/js/portal_diy.js?{VERHASH}" charset="{CHARSET}"></script> 
+<script>
+
+spaceDiy.init();
+var SlideDistance = [];
+var JSLOADED = [];
+
+function checkblockname(form) {
+	if(!(form.name.value) > '') {
+		alert('name');
+		return false;
+	}
+	if(form.summary && form.summary.value) {
+		var tag = blockCheckTag(form.summary.value, true);
+		if(tag) {
+			showBlockSummary();
+			form.summary.focus();
+			alert('\u6807\u7b7e\u4e0d\u5339\u914d');
+			return false;
+		}
+	}
+
+	return true;
+}
+function block_delete_item(bid, itemid, itemtype, itemfrom, from) {
+	var msg = '\u60a8\u786e\u5b9a\u8981\u5220\u9664\u8be5\u6570\u636e\u5417\uff1f';
+	if(confirm(msg)) {
+		var url = 'portal.php?mod=portalcp&ac=block&op=remove&bid='+bid+'&itemid='+itemid;
+		popup.open('<div class="ainuooverlay"><div class="preloader-indicator-overlay"></div><div class="preloader-indicator-modal"><span class="preloader preloader-white"></span></div></div>');
+		$.ajax({
+			type : 'GET',
+			url : url + '&inajax=1',
+			dataType : 'xml'
+		}).success(function(s) {
+			popup.open(s.lastChild.firstChild.nodeValue);
+			//evalscript(s.lastChild.firstChild.nodeValue);
+		});
+		return false;
+	}
+
+}
+
+
+function tabnav(obj) {
+	var obj = $(obj);
+	event.preventDefault();
+	popup.open('<div class="ainuooverlay"><div class="preloader-indicator-overlay"></div><div class="preloader-indicator-modal"><span class="preloader preloader-white"></span></div></div>');
+	$.ajax({
+		type : 'GET',
+		url : SITEURL+obj.attr('href') + '&inajax=1',
+		dataType : 'xml'
+	}).success(function(s) {
+		popup.open(s.lastChild.firstChild.nodeValue);
+		evalscript(s.lastChild.firstChild.nodeValue);
+	});
+	return false;
+}
+
+$(document).on('click', '.frameimportbutton', function() {
+	var obj = $(this);
+	var formobj = $(this.form);
+	popup.open('<div class="ainuooverlay"><div class="preloader-indicator-overlay"></div><div class="preloader-indicator-modal"><span class="preloader preloader-white"></span></div></div>');
+	$.ajax({
+		type:'POST',
+		url:formobj.attr('action') + '&handlekey='+ formobj.attr('id') +'&inajax=1',
+		data:formobj.serialize(),
+		dataType:'xml'
+	})
+	.success(function(s) {
+		popup.open(s.lastChild.firstChild.nodeValue);
+		//evalscript(s.lastChild.firstChild.nodeValue);
+	})
+	.error(function() {
+		popup.close();
+	});
+	return false;
+});
+function showWindow(id, href){
+	var obj = window.event.srcElement || window.event.target;
+	$(document).on('click', '#'+obj.id, function() {
+		return false;
+	});
+	popup.open('<div class="ainuooverlay"><div class="preloader-indicator-overlay"></div><div class="preloader-indicator-modal"><span class="preloader preloader-white"></span></div></div>');
+	$.ajax({
+		type : 'GET',
+		url : href + '&inajax=1',
+		dataType : 'xml'
+	})
+	.success(function(s) {
+		popup.open(s.lastChild.firstChild.nodeValue);
+		evalscript(s.lastChild.firstChild.nodeValue);
+	});
+	return false;
+}
+
+$(document).on('click', '.diyformdialog', function() {
+	popup.open('<div class="ainuooverlay"><div class="preloader-indicator-overlay"></div><div class="preloader-indicator-modal"><span class="preloader preloader-white"></span></div></div>');
+	var obj = $(this);
+	var formobj = $(this.form);
+	$.ajax({
+		type:'POST',
+		url:formobj.attr('action') + '&handlekey='+ formobj.attr('id') +'&inajax=1',
+		data:formobj.serialize(),
+		dataType:'xml'
+	})
+	.success(function(s) {
+		popup.open(s.lastChild.firstChild.nodeValue);
+		//evalscript(s.lastChild.firstChild.nodeValue);
+		
+	})
+	return false;
+});
+function strLenCalc(obj, checklen, maxlen) {
+	var v = obj.value, charlen = 0, maxlen = !maxlen ? 200 : maxlen, curlen = maxlen, len = v.length;
+	if(maxlen < len) {
+		obj.value = mb_cutstr(v, maxlen, 0);
+		$('#'+checklen).html(maxlen);
+	} else {
+		$('#'+checklen).html(len);
+	}
+}
+
+function mb_cutstr(str, maxlen, dot) {
+	var len = 0;
+	var ret = '';
+	var dot = !dot ? '...' : dot;
+	maxlen = maxlen - dot.length;
+	for(var i = 0; i < str.length; i++) {
+		len += str.charCodeAt(i) < 0 || str.charCodeAt(i) > 255 ? (charset == 'utf-8' ? 3 : 2) : 1;
+		if(len > maxlen) {
+			ret += dot;
+			break;
+		}
+		ret += str.substr(i, 1);
+	}
+	return ret;
+}
+
+</script>
+<!--{/block}--> 
+
+<!--{eval return $return;}-->
+<!--{eval }}-->

@@ -1,0 +1,391 @@
+{template xiaomy_buyvipgroup:top}
+
+<script>
+	function selectgroup1(grouptips,sgroupprice,yj){
+		 	if(yj == "noyj"){
+				 $("grouptips").innerHTML=grouptips;
+				 $("sgroupprice").value=sgroupprice;
+				 var sumpaymoney = $("icount").value*sgroupprice;
+				 $("paymoney").innerHTML=sumpaymoney;
+				 $("payrmb").value=sumpaymoney;
+				 $("monthcount").innerHTML=sgroupprice;
+				 $("yjhtml").style.display="none";
+			 	$("quickhtml").style.display="";
+			 	
+				$("yjprice").style.display="none";
+		 		$("noyjprice").style.display="";
+		 		$("isyj").value=1;
+		 	}
+		 	if(yj == "yj"){
+		 		$("yjhtml").style.display="";
+		 		$("quickhtml").style.display="none";
+		 		
+		 		$("yjprice").style.display="";
+		 		$("noyjprice").style.display="none";
+		 		
+		 		$("yjprice").innerHTML=sgroupprice+'{lang xiaomy_buyvipgroup:bcstr07}';
+		 		$("isyj").value=2;
+		 		 $("grouptips").innerHTML=grouptips;
+		 		
+		 	}
+	}
+	function paygrouptime(icount){
+		$("icount").value=icount;
+		var sumpaymoney = icount*$("sgroupprice").value;
+		$("paymoney").innerHTML=sumpaymoney;
+		$("payrmb").value=sumpaymoney;
+	}
+
+	function onkeyuppi(inputobj){
+			inputobj.value=inputobj.value.replace(/\D/g,'');
+			var sumpaymoney =inputobj.value*$("sgroupprice").value;
+			$("paymoney").innerHTML=sumpaymoney;
+			$("payrmb").value=sumpaymoney;
+	}	
+	
+/* 	function qrcode(payment){
+		if(payment == "alipay"){
+			$("alipayqrcodeimg").style.display="";
+			$("weixinqrcodeimg").style.display="none";
+		}
+		if(payment == "weixin"){
+				$("alipayqrcodeimg").style.display="none";
+				$("weixinqrcodeimg").style.display="";
+		}
+	}
+	 */
+	
+	function setqrcode(qrcodeurl,payaccount){
+		
+		$("qrcodeshow").innerHTML="<img src="+qrcodeurl+">";
+		$("payaccount").innerHTML=payaccount;
+	}
+	function nextcheck(){
+		
+		if($("isyj").value==1){
+			var groupskey=document.getElementsByName('groupskey');
+			var groupradio = false;
+			var icount=0;
+			for(var i=0;i<groupskey.length;i++){
+				if(groupskey[i].checked == true){
+					groupradio = true;
+				}
+			} 
+			if(groupradio == false){
+				alert("{lang xiaomy_buyvipgroup:jsstr01}");
+				return false
+			}
+			if($("icount").value == "" ||  $("icount").value ==0){
+				alert("{lang xiaomy_buyvipgroup:jsstr02}");
+				$("icount").focus();
+				return false
+			}
+		}
+	}
+	function check(){
+		if($("payaccount").value == ""){
+				alert("{lang xiaomy_buyvipgroup:bcstr01}");
+				$("payaccount").focus();
+	    		return false;
+		}
+		
+		/* if($("tnumber").value == ""){
+				alert("{lang xiaomy_buyvipgroup:bcstr02}");
+				$("tnumber").focus();
+	    		return false;
+		} */
+	}
+
+</script>
+<div class="xiaomy_buyvipgroup">
+	<div class="bm bw0">
+		<div class="left">
+			<div class="bm bmw fl xiaomy_buyvipgroup_clear">
+				<div class="bm_h cl">
+					<h2>
+						<a>{lang xiaomy_buyvipgroup:bcstr03}</a>&nbsp;&nbsp;&nbsp;
+					</h2>
+				</div>
+				<div class="bm_c txtstyle">
+
+			<div class="bm_c" style='font-size:14px;'>
+				<div class="rfm" style="width:660px;">
+						<table cellspacing="0" cellpadding="0">
+							<tbody>
+							<tr><th>{lang xiaomy_buyvipgroup:bcstr04}</th>
+								<td>
+									<span style='color:#999 !important;font-size:16px;'>$_G['username']  
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+						
+				<div class="rfm" style="width:660px;">
+				
+						<table cellspacing="0" cellpadding="0">
+							<tbody>
+										<!--{if $_GET['step'] != 'next'}-->
+										<form action='plugin.php?id=xiaomy_buyvipgroup:buyvipgroup&step=next' method='post'>
+							<tr><th>{lang xiaomy_buyvipgroup:bcstr004}</th>
+								<td>
+								<div>
+								<ul>
+										<!--{eval}-->$ym_copyright = DB::fetch_first("select name,copyright from ".DB::table('common_plugin')." where identifier='xiaomy_buyvipgroup'");
+if(!strstr($ym_copyright['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8526'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;';exit;}<!--{/eval}--><!--{loop  $groupinfo $gpk $gpv}-->
+											<li class="z">
+													<input onclick="selectgroup1('{$gpv[2]}',{$gpv[1]},'{$gpv[3]}')"  name="groupskey"   value="{$gpk}"  id="selectgroup_{$gpk}" type="radio">
+													<label onclick="selectgroup1('{$gpv[2]}',{$gpv[1]},'{$gpv[3]}')"  for="selectgroup_{$gpk}">
+															<span class='jqslgroup'>$_G['cache']['usergroups'][$gpv[0]]['grouptitle']</span>
+												 	</label>
+												</li>
+										<!--{/loop}-->
+								</ul>
+								</div>
+									
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td height=10 valign='top'>
+									<div class="grouptips" id='grouptips'>
+   												{lang xiaomy_buyvipgroup:htmlstr01}
+   				
+									</div>
+																	<input  type='hidden'  id='sgroupprice'>
+								</td>
+							<tr>
+							<!--{else}-->
+							<tr><th>{lang xiaomy_buyvipgroup:bcstr004}</th>
+								<td>
+								<div>
+								<ul>
+											<li class="z">
+													<input     type="radio" checked>
+													<label >
+															<span class='jqslgroup'>$_G['cache']['usergroups'][$buygroupid]['grouptitle']</span>
+												 	</label>
+												</li>
+								</ul>
+								</div>
+									
+								</td>
+							</tr>
+							<!--{/if}-->
+						</tbody>
+					</table>
+				</div>
+				<!--{if $_GET['step'] != 'next'}-->
+		
+					<input type="hidden"  id="formhash"  name="formhash" value="{FORMHASH}">
+					<div class="rfm"  style="width:660px;">
+						<table cellspacing="0" cellpadding="0">
+							<tbody>
+								<tr>
+									<th>{lang xiaomy_buyvipgroup:bcstr05}</th>
+									<td id='quick'>
+									<div  id='quickhtml'>
+												<!--{eval}-->$ym_copyright = DB::fetch_first("select name,copyright from ".DB::table('common_plugin')." where identifier='xiaomy_buyvipgroup'");
+if(!strstr($ym_copyright['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8526'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;';exit;}<!--{/eval}--><!--{loop $quickpcount $qv}-->
+													<a href='javascript:void(0);' onclick='paygrouptime({$qv})'><span class='jqslgroup'>{$qv}{lang xiaomy_buyvipgroup:htmlstr02}</span></a>
+												<!--{/loop}-->
+											<span style='color:#999 !important;'>
+											<input  value="{$xmlcfg['imincount']}"  onkeyup="onkeyuppi(this)" name="icount"  id="icount"  class="px vm"  style="width:60px;height:23px;"type="text">&nbsp; {lang xiaomy_buyvipgroup:htmlstr02}
+											</span>
+									</div>
+									<div  id='yjhtml'  style='display:none'>
+											<font style='color:red;font-weight:700;'>{lang xiaomy_buyvipgroup:shstr2}</font>
+									</div>
+									</td>
+								</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="rfm" style="width:660px;">
+		<table cellspacing="0" cellpadding="0">
+				<tbody>
+						<tr>
+							<th>{lang xiaomy_buyvipgroup:bcstr06}</th>
+							<td>
+								<div id='noyjprice'>
+									<span style='font-family:Arial;color:#999 !important;'>&yen;</span>
+									<span id='paymoney' style='color:#fe710f;font-size:17px;'>0</span>
+									<input type='hidden' value="{eval echo $xmlcfg['rmbnumber']*$xmlcfg['imincount']; }" name='payrmb' id='payrmb'>
+									<span style='color:#999 !important;'> {lang xiaomy_buyvipgroup:bcstr07} (<span id='monthcount'>0</span>{lang xiaomy_buyvipgroup:bcstr07}/{lang xiaomy_buyvipgroup:htmlstr02})</span>
+								</div>
+								
+								<div id='yjprice'  style='display:none;color:#fe710f;font-size:17px;'>
+										0 
+								</div>
+								
+								<input type='hidden'  id='isyj' name='isyj' value='1'>
+								
+							</td>
+						</tr>
+				</tbody>
+		</table>
+</div>
+
+<div class="rfm" style="width:660px;">
+		<table cellspacing="0" cellpadding="0">
+				<tbody>
+							
+							<tr>
+									<th>{lang xiaomy_buyvipgroup:bcstr08}</th>
+									<td>
+											<div class="long-logo mbw">
+														<ul>
+																<!--{eval}-->$ym_copyright = DB::fetch_first("select name,copyright from ".DB::table('common_plugin')." where identifier='xiaomy_buyvipgroup'");
+if(!strstr($ym_copyright['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8526'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;';exit;}<!--{/eval}--><!--{loop $payinfo $pk $pv}-->
+																<li class="z" style='margin:3px;'>
+																	<input onclick="setqrcode('{$pv[1]}','{$pv[0]}')" name="payment"   value="{$pk}"     id="apitype_{$pk}" type="radio" {if $deaultpay[0]==$pv[0]}checked{/if}>
+																	<label onclick="setqrcode('{$pv[1]}','{$pv[0]}')"  style="width:135px;height:39px;background: #FFF url({$pv[2]}) no-repeat;border: 1px solid #DDD;vertical-align: middle;position: relative;display: inline-block;background-color: white;" for="apitype_{$pk}">
+																	</label>
+																</li>
+																<!--{/loop}-->
+														</ul>
+											</div>
+									</td>
+							</tr>
+							
+							
+							
+							<tr>
+									<th>{lang xiaomy_buyvipgroup:bcstr09}</th>
+									<td >
+											<div style='color:red;font-size:12px;font-weight:700;'>
+											&nbsp;&nbsp;&nbsp;{lang xiaomy_buyvipgroup:shstr3}<span id='payaccount'>{$deaultpay[0]}</span><br/>
+											&nbsp;&nbsp;&nbsp;{lang xiaomy_buyvipgroup:bcstr10} </div>
+											<div  id='qrcodeshow'>
+												<img src="$deaultpay[1]">
+											</div>
+									</td>
+									
+							</tr>
+				</tbody>
+		</table>
+</div>
+
+<div class="rfm bw0">
+<table cellspacing="0" cellpadding="0">
+		<tbody>
+				<tr>
+				<th>&nbsp;</th>
+				<td><button onclick='return nextcheck()'  type="submit"  name="buysubmit" class="pn pnc" value="true"><strong>{lang xiaomy_buyvipgroup:bcstr15}</strong></button></td>
+				</tr>
+		</tbody>
+</table>
+</div>
+		</form>
+
+		<!--{else}-->
+		<form action='plugin.php?id=xiaomy_buyvipgroup:buyvipgroup&step=submityes' method='post'>
+
+			<div class="rfm"  style="width:660px;">
+						<table cellspacing="0" cellpadding="0">
+							<tbody>
+								<tr>
+									<th>{lang xiaomy_buyvipgroup:bcstr05}</th>
+									<td>
+											<span style='color:#999 !important;'>
+												{$stepdata[icount]} 
+												<!--{if $flag!=2}-->
+												{lang xiaomy_buyvipgroup:htmlstr02}
+												<!--{/if}-->
+											</span>
+											<input type='hidden' name='sjicount' value='{$stepdata[icount]}'>
+									</td>
+								</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="rfm" style="width:660px;">
+		<table cellspacing="0" cellpadding="0">
+				<tbody>
+						<tr>
+							<th>{lang xiaomy_buyvipgroup:bcstr06}</th>
+							<td>
+								<span style='font-family:Arial;color:#999 !important;'>&yen;</span>
+								<span style='color:#fe710f;font-size:17px;'>{$stepdata[payrmb]} </span>
+							</td>
+						</tr>
+				</tbody>
+		</table>
+</div>
+
+
+<div class="rfm" style="width:660px;">
+		<table cellspacing="0" cellpadding="0">
+				<tbody>
+							<tr>
+									<th>{lang xiaomy_buyvipgroup:bcstr08} </th>
+									<td>
+											<div class="long-logo mbw">
+														<ul>
+																<li class="z" style='margin:3px;'>
+																	<input name="paymentnext" type="radio" checked>
+																	<label style="width:135px;height:39px;background: #FFF url({$payinfo[$stepdata[payment]][2]}) no-repeat;border: 1px solid #DDD;vertical-align: middle;position: relative;display: inline-block;background-color: white;">
+																	</label>
+																</li>
+														</ul>
+											</div>
+									</td>
+							</tr>
+				</tbody>
+		</table>
+</div>
+
+<div class="rfm" style="width:660px;">
+		<table cellspacing="0" cellpadding="0">
+				<tbody>
+							<tr>
+									<th>{lang xiaomy_buyvipgroup:bcstr11}</th>
+									<td>
+										<input style="width:200px;height:23px;" name="payaccount"  id="payaccount"  class="px vm" type="text">&nbsp;<span style='color:red;font-size:16px;font-weight:700;'>*</span>
+									</td>
+							</tr>
+				</tbody>
+		</table>
+</div>
+
+<div class="rfm" style="width:660px;">
+		<table cellspacing="0" cellpadding="0">
+				<tbody>
+							<tr>
+									<th>{lang xiaomy_buyvipgroup:bcstr12}</th>
+									<td>
+										<input  style="width:200px;height:23px;"  name="tnumber"  id="tnumber" class="px vm" type="text">&nbsp;
+									</td>
+							</tr>
+				</tbody>
+		</table>
+</div>
+
+<div class="rfm bw0">
+<table cellspacing="0" cellpadding="0">
+		<tbody>
+				<tr>
+				<th>&nbsp;</th>
+				<td><button type="submit" onclick='return check()' name="buysubmit" class="pn pnc" value="true"><strong>{lang xiaomy_buyvipgroup:bcstr13}</strong></button></td>
+				</tr>
+		</tbody>
+</table>
+</div>
+		<input type='hidden' name='sjicount' value='{$stepdata[icount]}'>
+		<input type='hidden' name='groupskey' value='$stepdata[groupskey]'>
+		<input type='hidden' name='payment' value='$stepdata[payment]'>
+		<input type="hidden"  id="formhash"  name="formhash" value="{FORMHASH}">
+</form>
+		<!--{/if}-->
+</div>
+	</div>
+			</div>
+		</div>
+		<div class="right">
+				{template xiaomy_buyvipgroup:right}
+		</div>
+</div>
+<div class="xiaomy_buyvipgroup_clear"></div>
+{template common/footer}

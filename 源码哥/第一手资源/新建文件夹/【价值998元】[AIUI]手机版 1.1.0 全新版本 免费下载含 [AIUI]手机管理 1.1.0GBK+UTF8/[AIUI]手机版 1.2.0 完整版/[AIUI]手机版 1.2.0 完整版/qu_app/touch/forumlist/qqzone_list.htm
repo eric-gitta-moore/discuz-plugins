@@ -1,0 +1,63 @@
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $_G['forum_threadlist'] $key $thread}-->
+				<li>
+					<a href="{if $_G[uid] == $thread[authorid]}home.php?mod=space&uid={$thread[authorid]}&do=profile&mycenter=1{else}home.php?mod=space&uid={$thread[authorid]}&do=profile{/if}" class="lione cl" {if $groupcolor[$thread[authorid]]} style="color: $groupcolor[$thread[authorid]];"{/if}>
+						<div class="author">
+                            <div class="aleft">
+                                <div class="ava"><!--{avatar($thread[authorid], 'middle')}--></div>
+                                <span class="t">$thread[author]</span> 
+                                <!--{eval $thread[agroupid] = DB::result_first('SELECT groupid FROM '.DB::table('common_member').' WHERE uid='.$thread[authorid].'')}-->
+                                {if $thread[agroupid]}
+    							<!--{eval $thread[astars] = DB::result_first('SELECT stars FROM '.DB::table('common_usergroup').' WHERE groupid='.$thread[agroupid].'')}-->
+                                {else}
+                                <!--{eval $thread[astars] = 0}-->
+                                {/if}
+                                {if $thread[astars]}
+                                <div class="mod-lv user-level">
+                                    <span class="mod-lv-icon"><i class="iconfont icon-evaluate_fill"></i></span>
+                                    <span>$thread['astars']</span>
+                                </div>
+                                {/if}
+                            </div>
+                            <div class="aright">
+                                $thread[dateline]
+                            </div>
+                        </div>
+					</a>
+                    
+                    <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="litwo cl">
+                        <div class="asub">
+                            <div class="atitle" $thread[highlight]>$thread[subject]</div>
+                        </div>
+                            <!--{hook/forumdisplay_littlepic_mobile $key}-->
+					</a>
+                    <div class="abot cl">
+                        <div class="ar">
+                        	<!--{subtemplate forum/iszan}-->
+                            <a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$thread[tid]" class="ainuo_nologin rp">
+                            	<i class="iconfont icon-comment_light"></i>
+                            </a>
+                            <a id="dianzan_{$thread[tid]}" onclick="zanbuzan('dianzan_{$thread[tid]}','red_{$thread[tid]}','$thread[tid]')" href="javascript:;" class="dianzan {if $iszan}yidianzan{/if}"><i id="i_{$thread[tid]}" class="iconfont icon-appreciate_light {if $iszan}icon-appreciate_fill_light{/if}"></i></a>
+                        </div>
+                    </div>
+                    
+                    {if $thread[recommend_add]}
+                    	<div class="henzan cl">
+                    		<i class="iconfont icon-appreciate_fill_light"></i><span id="red_{$thread[tid]}">&nbsp;</span>$thread[recommend_add] $alang_rjdhz
+                        </div>
+                    {/if}
+                    
+                    {if $thread[allreplies]}
+                    	<div class="zxhuifu cl">
+                            <div class="lookmore cl"><a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra">{$alang_lookmore}{$thread[allreplies]}{$alang_lookmore2}</a></div>
+                            <!--{eval include(DISCUZ_ROOT."./template/qu_app/touch/ainuo/list/reply.php");}-->
+                            $ainuo_reply
+                        </div>
+                    {/if}
+                    <div class="woysyj cl">
+                    	<a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="">$alang_xpinglun</a>
+                    </div>
+                    <div class="grey_line cl"></div>
+				</li>
+                <!--{/loop}-->

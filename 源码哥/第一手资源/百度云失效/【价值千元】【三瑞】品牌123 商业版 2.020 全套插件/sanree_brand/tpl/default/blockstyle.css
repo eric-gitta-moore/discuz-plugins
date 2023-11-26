@@ -1,0 +1,14 @@
+.blockbrand ul li{
+float:left;
+word-wrap:break-word;
+word-break:break-all; 
+overflow:hidden;
+height:180px;
+list-style-image:none;
+list-style:none;
+padding-left:10px;
+}
+.blockbrand ul li img{
+height:150px;
+width:220px;
+}

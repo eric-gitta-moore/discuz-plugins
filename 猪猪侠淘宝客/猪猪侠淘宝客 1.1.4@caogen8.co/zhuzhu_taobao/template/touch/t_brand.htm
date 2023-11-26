@@ -1,0 +1,110 @@
+<!--{if $_GET[loadmore]}-->
+	<!--{loop $list $v}-->
+		<li>
+			<i class="q_new"></i>
+			<a href="{$jump_url}$v[num_iid]&e=$v[e]&zk_final_price=$v[zk_final_price]&q_price=$v[q_price]">
+				<img data-original="$v[pict_url]" src="{$img}nopic.png" class="lazy" />
+			</a>
+			<div class="cl">
+				<p class="wrap">$v[title]</p>
+				<span class="f14"><cite>&yen;</cite> <i>$v[q_price]</i><img src="{$img}quanhoujia.png"></span>
+				<span class="y"><em>{lang zhuzhu_taobao:1t_index_htm_6}{eval echo $v[zk_final_price]-$v[q_price]}{lang zhuzhu_taobao:1jump_url_htm_2}</em></span>
+			</div>
+			<!--{if $_G['adminid'] == 1 }--><span class="fan">{lang zhuzhu_taobao:jump_url_htm_31} $v[commission_rate]%</span><!--{/if}-->
+		</li>
+	<!--{/loop}-->
+<!--{else}-->
+	<!--{template zhuzhu_taobao:header}-->
+	<link type="text/css" rel="stylesheet" href="./source/plugin/zhuzhu_taobao/static/css/style_touch.css">
+	<!--{if $_GET[op] == 'view'}-->
+	<style type="text/css">		
+	.index_quan>ul {margin-top: 0;}
+	.index_brand>.t_brand>ul>li {margin-top: 0;position: relative;}
+	.index_brand>.t_brand>ul>li>a.go_back {position: absolute;top: 10px;left: 10px;}
+	.index_brand>.t_brand>ul>li>a.go_back>i {width: 30px;height: 30px;display: block;background: rgba(255, 255, 255, 0.6);text-align: center;line-height: 30px;border-radius: 50%;font-weight: 700;}
+	</style>
+		<script src="source/plugin/zhuzhu_taobao/static/js/amazeui.lazyload.js"></script>
+
+		<div class="index_brand cl">
+			<div class="t_brand cl">
+				<ul>
+					<li class="cl">
+						<a href="javascript:;">
+							<img src="{echo pic_get($brand[$brand_id]['banner'], 'portal', '', '', '', '')}" title="$brand[$brand_id][name]">
+							<div class="brand_info">
+								<i style="background: #FFF url('{echo pic_get($brand[$brand_id][logo], 'portal', '', '', '', '')}') center no-repeat;background-size: 80px auto;"></i>
+								<h2>$brand[$brand_id][name]</h2>
+							</div>
+						</a>
+						<a href="javascript:history.back(-1)" class="go_back"><i class="iconfont">&#xe64d;</i></a>
+						<div class="index_quan">
+							<ul id="brand_list"></ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				load_more();
+			}
+
+			function load_more() {
+				popup.open('<img src="' + IMGDIR + '/imageloading.gif">');
+				theurl = 'plugin.php?id=zhuzhu_taobao&mod=tbrand&op=view&loadmore=1&page=' + page + '&brand_id=$brand_id';
+				ajax({ 
+					type:'get',
+					url: theurl,
+					dataType:'text',
+					success:function(msg){
+						$('#brand_list').append(msg);
+						popup.close();
+						page ++;
+						$("img.lazy").lazyload({effect: "fadeIn"});
+					}
+				});	
+			}
+		</script>
+	<!--{else}-->
+		<!--{subtemplate zhuzhu_taobao:t_header}-->
+		<div class="index_brand mt_20 cl">
+			<h2><a href="plugin.php?id=zhuzhu_taobao&mod=tbrand"><img src="{$img}index_brand.png"></a></h2>
+			<div class="t_brand cl">
+				<ul>
+					<!--{loop $brandlist $v}-->
+					<li class="cl">
+						<div class="brand_view cl">
+							<div class="brand_view_logo"><img src="{echo pic_get($v['logo'], 'portal', '', '', '', '')}" title="$v[name]"></div>
+							<div class="brand_view_info">
+								<h2 class="wrap">$v[name]</h2>
+								<p class="wrap">
+									<!--{eval $tag = explode(' ', $v[keyword])}-->
+									<!--{loop $tag $vv}-->
+									<i>$vv</i>
+									<!--{/loop}-->
+								</p>
+							</div>
+								<a href="plugin.php?id=zhuzhu_taobao&mod=tbrand&op=view&brand_id=$v[brand_id]">{lang zhuzhu_taobao:enter}</a>
+						</div>
+						<ul>
+							<!--{loop $v[list] $vv}-->
+							<li>
+								<a href="{$jump_url}$vv[num_iid]&e=$vv[e]&zk_final_price=$vv[zk_final_price]&q_price=$vv[q_price]"><img data-original="$vv[pict_url]" src="{$img}nopic.png" class="lazy" /></a>
+								<h2 class="wrap"><i>&yen;</i> $vv[q_price]</h2>
+								<div class="coupon_tip cl">{lang zhuzhu_taobao:1jump_url_htm_1} {eval echo $vv[zk_final_price]-$vv[q_price]} {lang zhuzhu_taobao:1jump_url_htm_2}<i></i></div>
+							</li>
+							<!--{/loop}-->
+						</ul>
+					</li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+		function load_more(){}
+		</script>
+	<!--{/if}-->
+
+	<!--{subtemplate zhuzhu_taobao:t_footer}-->
+	<!--{subtemplate zhuzhu_taobao:footer}-->
+<!--{/if}-->

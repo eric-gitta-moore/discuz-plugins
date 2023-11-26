@@ -1,0 +1,103 @@
+.albumlist .albumleft .newslist {
+	width:720px;
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+.albumlist .albumleft .newslist .ahd {
+	height:48px;
+	border-bottom:1px dashed #CDCDCD;
+	background:#F6F6F6 url(images/hd21.jpg) 17px;
+	background-repeat:no-repeat;
+	line-height:54px;
+	padding-left:63px;
+}
+.albumlist .albumleft .newslist .ahd h1 {
+	color:#333333;
+}
+.albumlist .albumleft .newslist .ahd h1 span {
+	color:#BFBFBF;
+	margin-right:6px;
+}
+.albumlist .albumleft .newslist .abd {
+	padding:10px;
+}
+.albumlist .albumleft .newslist .abd .newsdata {
+	zoom:1;
+}
+.albumlist .albumleft .newslist .abd .newsdata li {
+	width:695px;
+	height:72px;
+	line-height:25px;
+	overflow:hidden;
+	margin-right:4px;
+	padding-left:5px;
+	border:1px solid #FFFFFF;
+	border-bottom:1px dotted #E6E6E6;
+}
+.albumlist .albumleft .newslist .abd .newsdata li:hover {
+	background-color:#FAFAFA;
+}
+.albumlist .albumleft .newslist .abd .newsdata li:hover h1 a {
+	color:#0262DF;
+}
+.albumlist .albumleft .newslist .abd .newsdata li .tiline {
+	height:25px;
+	overflow:hidden;
+	padding-top:10px;
+}
+.albumlist .albumleft .newslist .abd .newsdata li .tiline h1 {
+	font-weight:200;
+	line-height:18px;
+	overflow:hidden;
+	width:530px;
+	margin-top:5px;
+	float:left;
+	font-size:14px;
+	height:18px;
+}
+.albumlist .albumleft .newslist .abd .newsdata li .tiline h1 a {
+	color:#434343;
+}
+.albumlist .albumleft .newslist .abd .newsdata li .tiline .tdateline {
+	float:right;
+	color:#BD7E01;
+	margin-right:10px;
+}
+.albumlist .albumleft .newslist .abd .newsdata li .inline {
+	clear:both;
+	color:#B5B5B5;
+	margin-top:5px;
+}
+.albumlist .albumleft .newslist .abd .newsdata li .inline span {
+	color:#BC7F01;
+}
+.albumlist .albumleft .newslist .abd .newsdata li .inline .catenames {
+width:180px;
+float:left;
+}
+.newslist .ubar{
+	float:right;
+	width:165px;
+	text-align:right;	
+}
+.newslist .ubar .creatalbum {
+	width:88px;
+	height:18px;
+	background:url('images/creatnews.jpg');
+	background-repeat:no-repeat;
+	text-indent:50px;
+	display:block;
+	float:left;
+	margin-right:10px;
+	margin-top:14px;
+	float:left;	
+}
+.newslist .ubar .creatalbum:hover {
+	width:88px;
+	height:18px;
+	background:url('images/creatnews1.jpg');
+	background-repeat:no-repeat;
+	text-indent:50px;
+	display:block;
+	float:left;
+}

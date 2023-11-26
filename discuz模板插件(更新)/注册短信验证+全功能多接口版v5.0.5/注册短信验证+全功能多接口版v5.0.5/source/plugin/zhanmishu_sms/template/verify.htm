@@ -1,0 +1,123 @@
+<!--{template common/header}-->
+<style>
+    #new_mobileverify_mobile,#mobileverify_mobile,#verifycode,#new_verifycode {    border: 1px solid;border-color: #848484 #E0E0E0 #E0E0E0 #848484;}
+
+</style>
+  <div id="mobileverify" fwin="mobileverify">	
+	<div id="mobileverify_box" fwin="mobileverify">
+		<h3 class="flb"> <em id="mobileverify_show" fwin="mobileverify">{if $_GET['act']=='edit'}{lang zhanmishu_sms:changemobile}{else}{lang zhanmishu_sms:mobileverify}{/if}</em>
+			<span>
+				<a href="javascript:;" class="flbc" onclick="hideWindow('mobileverify');top.location.reload()" title="{lang zhanmishu_sms:close}">{lang zhanmishu_sms:close}</a>
+			</span>
+		</h3>
+		<form method="post" autocomplete="off" id="mobileverify_form" class="cl" onsubmit="ajaxpost('mobileverify_form', 'mobileverify_show', 'mobileverify_show', 'onerror');return false;" action="plugin.php?id=zhanmishu_sms:verify&amp;{if $_GET['act']=='edit'}method=edit{else}method=submit{/if}" fwin="mobileverify">
+			<div class="c cl">
+				<input type="hidden" name="formhash" value="{FORMHASH}">
+				<input type="hidden" name="referer" value="{eval echo dreferer();}">
+				<div class="rfm">
+					<table>
+						<tbody>
+							<tr>
+								<th>
+									<span class="rq">*</span>
+									<label for="lostpw_email">{if $_GET['act']=='edit'}{lang zhanmishu_sms:oldmobile}{else}{lang zhanmishu_sms:mobile}{/if}</label>
+								</th>
+								<td>
+									<input type="text" class="intel_mobile" name="mobile" id="mobileverify_mobile" size="30" value="{$mobile}" tabindex="1" class=" p_fre" fwin="mobileverify" onblur="javascript:mobileblur();" onfocus="javascript:mobilefocus();"{if $_GET['act']=='edit'} readonly="readonly" {/if}></td>
+								<td><input class="pn pnc" style="height:20px;padding:0 5px;" type="button" id="send" value="{lang zhanmishu_sms:send}" onclick="javascript:verify_sendMessage();">
+							        <input type="hidden" name="code" id="code" value="" required>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="height: 20px;padding-left: 124px;">
+						<i class="" id="zhanmishu_sms_tip" style="display:none;">{lang zhanmishu_sms:mobile_tips}</i>
+						<kbd id="zhanmishu_sms_err" class="p_chk" style="display: none;"></kbd>
+						<i style="display:none;" id="zhanmishu_showid"></i>
+					</div>
+				</div>			
+
+				<div class="rfm">
+					<table>
+						<tbody>
+							<tr>
+								<th><span class="rq">*</span>
+									<label for="lostpw_username">{lang zhanmishu_sms:verifycode}</label>
+								</th>
+								<td>
+									<input type="text" id="verifycode" name="verifycode" id="mobileverify_verifycode" size="30" value="" tabindex="1" class="p_fre" fwin="mobileverify" onblur="verifysms();">
+								</td>
+								<td class="tipcol" id="sms_verify_tip">
+						            <span id="sms_verify_tip_wrong" style="display:none;"><img src="static/image/common/check_error.gif" width="16" height="16" class="vm"></span>
+						            <kbd id="chk_papo8p" class="p_chk"></kbd>
+						        </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				{if $_GET['act']=='edit'}
+				<div class="rfm">
+					<table>
+						<tbody>
+							<tr>
+								<th>
+									<span class="rq">*</span>
+									<label for="lostpw_email">{lang zhanmishu_sms:newmobile}</label>
+								</th>
+								<td>
+									<input type="text" name="new_mobile" id="new_mobileverify_mobile" size="30" value="" tabindex="1" class="intel_mobile p_fre" fwin="mobileverify" onblur="javascript:new_mobileblur();" onfocus="javascript:new_mobilefocus();" disabled="disabled"></td>
+								<td><input style="background: #cdcdcd;padding:0 5px;height: 20px;border: 0" class="pn pnc" style="height:20px;padding:0 5px;" type="button" id="new_send" value="{lang zhanmishu_sms:send}" onclick="javascript:new_sendMessage();" disabled="disabled">
+							        <input type="hidden" name="new_code" id="new_code" value="" required>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="height: 20px;padding-left: 124px;">
+						<i class="" id="new_zhanmishu_sms_tip" style="display:none;">{lang zhanmishu_sms:mobile_tips}</i>
+						<kbd id="new_zhanmishu_sms_err" class="p_chk" style="display: none;"></kbd>
+						<i style="display:none;" id="new_zhanmishu_showid"></i>
+					</div>
+				</div>	
+				<div class="rfm">
+					<table>
+						<tbody>
+							<tr>
+								<th><span class="rq">*</span>
+									<label for="lostpw_username">{lang zhanmishu_sms:verifycode}</label>
+								</th>
+								<td>
+									<input type="text" id="new_verifycode" name="new_verifycode" id="new_mobileverify_verifycode" size="30" value="" tabindex="1" class="p_fre" onblur="new_verifysms();" disabled="disabled">
+								</td>
+								<td class="tipcol" id="new_sms_verify_tip">
+						            <span id="new_sms_verify_tip_wrong" style="display:none;"><img src="static/image/common/check_error.gif" width="16" height="16" class="vm"></span>
+						            <kbd id="chk_papo8p" class="p_chk"></kbd>
+						        </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				{/if}
+
+				<div class="rfm mbw bw0">
+					<table>
+						<tbody>
+							<tr>
+								<th></th>
+								<td>
+									<input type="hidden" name="send_verify_Button" value="yes">
+									<button class="pn pnc" type="submit" id="send_verify_Button" name="send_verify_Button" value="true" tabindex="100">
+										<span>{lang zhanmishu_sms:submit}</span>
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<!--{template common/footer}-->

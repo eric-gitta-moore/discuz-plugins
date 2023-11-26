@@ -1,0 +1,2296 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-01-06 16:52]]></item>
+	<item id="From"><![CDATA[源码哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源码哥_【三瑞】品牌123【商】]]></item>
+			<item id="identifier"><![CDATA[sanree_brand]]></item>
+			<item id="description"><![CDATA[本插件将简约展示本地品牌商家、店铺，打造良好的商家品牌，提升品牌形象。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[sanree_brand/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[2.020]]></item>
+			<item id="__modules">
+				<item id="108">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>资源中心</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[sanree_brand]]></item>
+					<item id="menu"><![CDATA[品牌123]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[品牌123-三瑞出品]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="menu"><![CDATA[品牌管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否开启]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[登记商家是否需要审核]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isshen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否开启购买积分功能]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isbuy]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[绑定版块]]></item>
+				<item id="description"><![CDATA[必须设置，设置后请勿修改。
+选择以后，需要设置“绑定版块标题标志”]]></item>
+				<item id="variable"><![CDATA[bindingforum]]></item>
+				<item id="type"><![CDATA[forum]]></item>
+				<item id="value"><![CDATA[45]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[绑定版块标题标志]]></item>
+				<item id="description"><![CDATA[防止帖子版块绑定错误设置的版块标志。
+绑定的版块标题中要包含的字符。
+不能为空。例如：
+版块标题为“淮南品牌123”，这里设置“品牌123”]]></item>
+				<item id="variable"><![CDATA[haveforumtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[品牌123]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[交易积分单位]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[creditunit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[是否启用伪静态]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[is_rewrite]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[品牌123首页]]></item>
+				<item id="description"><![CDATA[默认为：brand.html]]></item>
+				<item id="variable"><![CDATA[urlhomemode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[brand.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[商家列表页格式]]></item>
+				<item id="description"><![CDATA[商家列表页伪静态规则
+{tid}：分类ID
+{did}：地区ID
+{filter}：排序
+{listmode}：显示模式
+{tag}：标签ID
+{attestation}:认证选择
+默认：
+brand-index-{tid}-{did}-{filter}-{listmode}-{tag}-{attestation}.html]]></item>
+				<item id="variable"><![CDATA[urllistmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[brand-index-{tid}-{did}-{filter}-{listmode}-{tag}-{attestation}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[商家详情页规则]]></item>
+				<item id="description"><![CDATA[伪静态规则
+{tid}：商家ID
+默认：
+brand-detail-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urldetailmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[brand-detail-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[商家内容页规则]]></item>
+				<item id="description"><![CDATA[伪静态规则
+{tid}：商家ID
+默认：
+brand-item-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlitemmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[brand-item-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[商家相册内容页]]></item>
+				<item id="description"><![CDATA[伪静态规则:
+{tid}:设置的商家相册ID
+默认：
+brand-albumshow-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlalbumitemmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[brand-albumshow-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[商家相册列表页]]></item>
+				<item id="description"><![CDATA[伪静态规则:
+{tid}:设置的商检编号
+默认：
+brand-albumlist-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlalbummode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[brand-albumlist-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[商家内容页编号规则]]></item>
+				<item id="description"><![CDATA[伪静态规则:
+{tid}:设置的商检编号
+默认：
+b/{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlbrandnomode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[b/{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[会员管理页标题]]></item>
+				<item id="description"><![CDATA[显示在“品牌管理”页面内，导航及左侧标题]]></item>
+				<item id="variable"><![CDATA[mantitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[品牌123]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[页面标题]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[品牌123 - 三瑞出品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[keywords]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[品牌商家,同城好网店,好商家,名优品牌]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[description]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[品牌商家,相信品牌的力量，提升企业品牌形象，就选择【三瑞品牌123】.请记住我们的网址:http://www.fx8.cc。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[允许浏览用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[viewgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+					<item id="13"><![CDATA[7]]></item>
+				</item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[禁止浏览提醒]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[stopviewtip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[您所在的用户组禁止浏览本页，请返回。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[允许登记用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[addgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[禁止登记提醒]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[stopaddtip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[您所在的用户组禁止登记品牌，请返回。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[列表显示个数]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[shownum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[12]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[刊登广告网址]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[adminadurl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://www.fx8.cc/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[登记价格]]></item>
+				<item id="description"><![CDATA[登记品牌的费用，大于等于0的整数。
+0为免费]]></item>
+				<item id="variable"><![CDATA[regprice]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[首页推荐品牌个数]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[Recommendnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[4]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[帖子标题模版]]></item>
+				<item id="description"><![CDATA[可以到官网http://www.fx8.cc/forum-69-1.html
+获取更多模版样式。
+或者把您的模版样式分享给大家。]]></item>
+				<item id="variable"><![CDATA[forumtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[[{catename}]{name}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[咨询电话]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[admintel]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[0554-3630883]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[站长QQ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[adminqq]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[436101]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[联系我们网址]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[adminabouturl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://www.fx8.cc/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[帖子内容模版]]></item>
+				<item id="description"><![CDATA[可以到官网http://www.fx8.cc/forum-69-1.html
+获取更多模版样式。
+或者把您的模版样式分享给大家。]]></item>
+				<item id="variable"><![CDATA[forumbody]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[[table=80%]
+[tr][td][align=center][color=red][poster][/color][/align][/td][/tr]
+[tr][td][color=red][b]:kiss:商家口号[/b]： [hr][/color][quote]{propaganda}
+[/quote]
+[/td][/tr]
+[tr][td][color=red][b][color=red]:victory:商家简介[/color][/b]： 
+[hr][/color][quote]{introduction}[/quote]
+[/td][/tr]
+[tr][td][b][color=red]:call:联系方式[/color][/b]： [hr][quote]{contact}
+[/quote]
+[/td][/tr]
+[tr][td]:handshake商家网站： [hr][quote]{weburl}[/quote][/td][/tr]
+[tr][td]:handshake联系QQ： [hr][quote][qq]{qq}[/qq][/quote][/td][/tr]
+[tr][td]:handshake联系电话： [hr][quote]{tel}[/quote][/td][/tr]
+[tr][td]:handshake联系地址： [hr][quote]{address}[/quote][/td][/tr]
+[/table]
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[帖子提醒]]></item>
+				<item id="description"><![CDATA[显示在绑定版块，帖内，帖子标题下方。提醒不能编辑操作。]]></item>
+				<item id="variable"><![CDATA[forumwarning]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<br /><strong><font color=red>此帖子由【<a href="http://www.fx8.cc/" target="_blank">三瑞品牌123</a>】自动生成,请勿手动编辑。</font></strong>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[品牌模版]]></item>
+				<item id="description"><![CDATA[默认为default
+模版存放目录：source\plugin\sanree_brand\tpl]]></item>
+				<item id="variable"><![CDATA[template]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[good]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[首页广告图片地址]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[adimage]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/sanree_brand/tpl/good/images/ad.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[首页广告图片链接]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[adlink]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://www.fx8.cc/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[工作时间]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[admintime]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[8:00 - 22:00]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[首页默认显示模式]]></item>
+				<item id="description"><![CDATA[大图，小图为老版首页使用。
+中图为HELLO首页专用。]]></item>
+				<item id="variable"><![CDATA[isindexlist]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0=大图模式
+3=中图模式
+1=小图模式]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[地图API]]></item>
+				<item id="description"><![CDATA[设置地图使用的API，默认为百度地图。
+此设置只能修改一次，否则会造成用户标注的数据和实际不符。]]></item>
+				<item id="variable"><![CDATA[mapapi]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[baidu]]></item>
+				<item id="extra"><![CDATA[baidu=百度地图
+google=谷歌地图]]></item>
+			</item>
+			<item id="38">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[百度默认地图坐标]]></item>
+				<item id="description"><![CDATA[百度设置默认地图坐标点。
+未标注的情况下默认显示]]></item>
+				<item id="variable"><![CDATA[defaultmappos]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[116.404,39.915]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="39">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[默认城市]]></item>
+				<item id="description"><![CDATA[使用百度地图API显示时
+修改百度地图默认坐标，请修改此项设置为对应城市。]]></item>
+				<item id="variable"><![CDATA[defaultcity]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[北京]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="40">
+				<item id="displayorder"><![CDATA[38]]></item>
+				<item id="title"><![CDATA[谷歌默认地图坐标]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[googlemappos]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[39.91293336712716,116.39724969863891]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="41">
+				<item id="displayorder"><![CDATA[39]]></item>
+				<item id="title"><![CDATA[推荐商家网址模式]]></item>
+				<item id="description"><![CDATA[选择是，推荐位置的商家点击将跳转到商家自己的网站。]]></item>
+				<item id="variable"><![CDATA[reurlmode]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="42">
+				<item id="displayorder"><![CDATA[40]]></item>
+				<item id="title"><![CDATA[打折选项]]></item>
+				<item id="description"><![CDATA[用于设定选项值。等号前面为选项索引(建议用数字)，后面为内容，例如: 
+0 = 不打折
+1 = 9折
+2 = 8折]]></item>
+				<item id="variable"><![CDATA[selectdiscount]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[0=
+1=9
+2=8
+3=7
+4=6
+5=5
+6=4
+7=3
+8=2
+9=1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="43">
+				<item id="displayorder"><![CDATA[41]]></item>
+				<item id="title"><![CDATA[是否使用自定地区]]></item>
+				<item id="description"><![CDATA[启用此项设置，商家将使用自定义的地区分类。
+是否启用将影响到商家登记的地区，建议只更改一次。]]></item>
+				<item id="variable"><![CDATA[isselfdistrict]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="44">
+				<item id="displayorder"><![CDATA[42]]></item>
+				<item id="title"><![CDATA[开启品牌相册]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isalbum]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="45">
+				<item id="displayorder"><![CDATA[43]]></item>
+				<item id="title"><![CDATA[允许使用品牌相册用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[albumgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[11]]></item>
+					<item id="1"><![CDATA[12]]></item>
+					<item id="2"><![CDATA[13]]></item>
+					<item id="3"><![CDATA[14]]></item>
+					<item id="4"><![CDATA[15]]></item>
+					<item id="5"><![CDATA[16]]></item>
+					<item id="6"><![CDATA[17]]></item>
+					<item id="7"><![CDATA[18]]></item>
+					<item id="8"><![CDATA[19]]></item>
+					<item id="9"><![CDATA[1]]></item>
+					<item id="10"><![CDATA[2]]></item>
+					<item id="11"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="46">
+				<item id="displayorder"><![CDATA[44]]></item>
+				<item id="title"><![CDATA[相册列表每页图片数]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[albumshowperpage]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[16]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="47">
+				<item id="displayorder"><![CDATA[45]]></item>
+				<item id="title"><![CDATA[开启信息反馈]]></item>
+				<item id="description"><![CDATA[管理员开启是否允许用户反馈信息]]></item>
+				<item id="variable"><![CDATA[allowmsg]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="48">
+				<item id="displayorder"><![CDATA[46]]></item>
+				<item id="title"><![CDATA[品牌过期提示内容]]></item>
+				<item id="description"><![CDATA[设置品牌的过期时间，如过期，将不显示该品牌的详细页，但帖子和列表将继续显示该品牌.]]></item>
+				<item id="variable"><![CDATA[enddatetip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[此品牌已经过期]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="49">
+				<item id="displayorder"><![CDATA[47]]></item>
+				<item id="title"><![CDATA[开启品牌评论]]></item>
+				<item id="description"><![CDATA[是否开启品牌评论功能，默认开启。]]></item>
+				<item id="variable"><![CDATA[allowfastpost]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="50">
+				<item id="displayorder"><![CDATA[48]]></item>
+				<item id="title"><![CDATA[分享代码]]></item>
+				<item id="description"><![CDATA[默认为百度分享代码]]></item>
+				<item id="variable"><![CDATA[sharecode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <span class="bds_more">更多</span>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="51">
+				<item id="displayorder"><![CDATA[49]]></item>
+				<item id="title"><![CDATA[是否显示地图]]></item>
+				<item id="description"><![CDATA[VIP单页是否显示地图。]]></item>
+				<item id="variable"><![CDATA[isshowmap]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="52">
+				<item id="displayorder"><![CDATA[50]]></item>
+				<item id="title"><![CDATA[上传LOGO大小提醒]]></item>
+				<item id="description"><![CDATA[此信息显示在用户登记品牌，上传LOGO页。]]></item>
+				<item id="variable"><![CDATA[logowh]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[品牌LOGO图片的尺寸建议为：<br />180 * 128（宽*高）或等比例图片]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="53">
+				<item id="displayorder"><![CDATA[51]]></item>
+				<item id="title"><![CDATA[允许上传LOGO的最大次数]]></item>
+				<item id="description"><![CDATA[设置每个用户允许上传LOGO最大次数
+0为无限制，
+更多设置可以在：
+系统后台=》用户=》用户组=》编辑某个用户组。
+论坛相关=》附件相关，进行相关设置]]></item>
+				<item id="variable"><![CDATA[maxpiccount]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="54">
+				<item id="displayorder"><![CDATA[52]]></item>
+				<item id="title"><![CDATA[注册地区项是否必填]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ischkdistrict]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="55">
+				<item id="displayorder"><![CDATA[53]]></item>
+				<item id="title"><![CDATA[显示品牌页普通版]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isshowordinary]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="56">
+				<item id="displayorder"><![CDATA[54]]></item>
+				<item id="title"><![CDATA[品牌推荐页显示图片数量]]></item>
+				<item id="description"><![CDATA[默认4个，
+如需更改，建议填写4、8、12、16。。。4的倍数]]></item>
+				<item id="variable"><![CDATA[maxishomepic]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[4]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="57">
+				<item id="displayorder"><![CDATA[55]]></item>
+				<item id="title"><![CDATA[显示顶部管理]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isshowtopnav]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="58">
+				<item id="displayorder"><![CDATA[56]]></item>
+				<item id="title"><![CDATA[默认品牌单页模式]]></item>
+				<item id="description"><![CDATA[用于统一“单页”显示模式]]></item>
+				<item id="variable"><![CDATA[isonepage]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="59">
+				<item id="displayorder"><![CDATA[57]]></item>
+				<item id="title"><![CDATA[绑定二级域名]]></item>
+				<item id="description"><![CDATA[绑定的域名不能和系统设置的域名相同，域名不需要添加“http://”，也不要以“/”结尾，例如：brand.ymg6.Com]]></item>
+				<item id="variable"><![CDATA[domain]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="60">
+				<item id="displayorder"><![CDATA[58]]></item>
+				<item id="title"><![CDATA[默认推荐指数]]></item>
+				<item id="description"><![CDATA[默认为：99.9
+推荐指数只能是0.0 - 99.9]]></item>
+				<item id="variable"><![CDATA[defaultzhishu]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[99.9]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="61">
+				<item id="displayorder"><![CDATA[59]]></item>
+				<item id="title"><![CDATA[开启多号段支持]]></item>
+				<item id="description"><![CDATA[请在各模块都支持多号段的情况下开启。]]></item>
+				<item id="variable"><![CDATA[ismultiple]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="62">
+				<item id="displayorder"><![CDATA[60]]></item>
+				<item id="title"><![CDATA[ICQ调用]]></item>
+				<item id="description"><![CDATA[请选择用于在线客服的ICQ。]]></item>
+				<item id="variable"><![CDATA[icq]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[qq]]></item>
+				<item id="extra"><![CDATA[qq=腾讯QQ
+msn=MSN
+wangwang=阿里旺旺
+baiduhi=百度HI
+skype=skype]]></item>
+			</item>
+			<item id="63">
+				<item id="displayorder"><![CDATA[61]]></item>
+				<item id="title"><![CDATA[QQ调用代码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qqcode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={icqnumber}&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:{icqnumber}:41" alt="点此给我发消息" title="点此给我发消息"></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="64">
+				<item id="displayorder"><![CDATA[62]]></item>
+				<item id="title"><![CDATA[MSN调用代码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[msncode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a target="_blank" href="msnim:chat?contact={icqnumber}"><img src="source/plugin/sanree_brand/tpl/good/images/button-custom-msn.gif" alt="click call me" title="click call me" /></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="65">
+				<item id="displayorder"><![CDATA[63]]></item>
+				<item id="title"><![CDATA[阿里旺旺调用代码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wangwangcode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid={icqnumber}&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid={icqnumber}&site=cntaobao&s=1&charset=utf-8" alt="点此给我发消息" title="点此给我发消息" /></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="66">
+				<item id="displayorder"><![CDATA[64]]></item>
+				<item id="title"><![CDATA[百度HI调用代码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[baiduhicode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a target="_blank" href="baidu://message/?id={icqnumber}"><img src="http://tieba.baidu.com/tb/img/hi/hiOnline.gif" alt="点此给我发消息" title="点此给我发消息" ></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="67">
+				<item id="displayorder"><![CDATA[65]]></item>
+				<item id="title"><![CDATA[Skype调用代码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[skypecode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a target="_blank" href="skype:{icqnumber}?call" on-click="return skypeCheck();"><img src=http://mystatus.skype.com/smallclassic/{icqnumber} style="border: none;" alt="click call me" title="click call me"  /></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="68">
+				<item id="displayorder"><![CDATA[66]]></item>
+				<item id="title"><![CDATA[上传附件类型检测是否图片]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ischkpictype]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="69">
+				<item id="displayorder"><![CDATA[66]]></item>
+				<item id="title"><![CDATA[访问该商家网站提醒]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[viewwebtip]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[访问该商家网站]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="70">
+				<item id="displayorder"><![CDATA[67]]></item>
+				<item id="title"><![CDATA[开启首页缩略图]]></item>
+				<item id="description"><![CDATA[开启将在网站data\attachment\image目录下产生图片缓存文件。]]></item>
+				<item id="variable"><![CDATA[issmallpic]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="71">
+				<item id="displayorder"><![CDATA[68]]></item>
+				<item id="title"><![CDATA[开启相册缩略图]]></item>
+				<item id="description"><![CDATA[开启将在网站data\attachment\image目录下产生图片缓存文件。]]></item>
+				<item id="variable"><![CDATA[isalbumthumb]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="72">
+				<item id="displayorder"><![CDATA[69]]></item>
+				<item id="title"><![CDATA[是否显示商家网站]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isshowweburl]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="73">
+				<item id="displayorder"><![CDATA[70]]></item>
+				<item id="title"><![CDATA[相册上传图片文件大小]]></item>
+				<item id="description"><![CDATA[默认为0，0为不限制。(单位K 1M=1024K)]]></item>
+				<item id="variable"><![CDATA[albumfilesize]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="74">
+				<item id="displayorder"><![CDATA[71]]></item>
+				<item id="title"><![CDATA[开启同步到群组]]></item>
+				<item id="description"><![CDATA[开启同步群组功能，必须先开启站点的群组功能。]]></item>
+				<item id="variable"><![CDATA[allowsyngroup]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="75">
+				<item id="displayorder"><![CDATA[72]]></item>
+				<item id="title"><![CDATA[开启同步到淘贴]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[allcollection]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="76">
+				<item id="displayorder"><![CDATA[74]]></item>
+				<item id="title"><![CDATA[启用hello首页]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ishello]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="77">
+				<item id="displayorder"><![CDATA[75]]></item>
+				<item id="title"><![CDATA[hello首页显示商家个数]]></item>
+				<item id="description"><![CDATA[设置HELLO首页显示商家个数。
+默认为：10,18,12
+大图 中图 小图]]></item>
+				<item id="variable"><![CDATA[helloshownum]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[15,24,10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="78">
+				<item id="displayorder"><![CDATA[76]]></item>
+				<item id="title"><![CDATA[hello首页使用大幻灯]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[hellobigslide]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="79">
+				<item id="displayorder"><![CDATA[77]]></item>
+				<item id="title"><![CDATA[hello首页广告图片地址]]></item>
+				<item id="description"><![CDATA[尺寸：290*182]]></item>
+				<item id="variable"><![CDATA[helloadimage]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/sanree_brand/tpl/good/images/adv.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="80">
+				<item id="displayorder"><![CDATA[78]]></item>
+				<item id="title"><![CDATA[hello首页广告图片链接]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[helloadlink]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://dx.sanee.com/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="81">
+				<item id="displayorder"><![CDATA[79]]></item>
+				<item id="title"><![CDATA[hello首页商家图片滑动加载]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isslideload]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="82">
+				<item id="displayorder"><![CDATA[85]]></item>
+				<item id="title"><![CDATA[启用小鸟模板]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isbird]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="83">
+				<item id="displayorder"><![CDATA[86]]></item>
+				<item id="title"><![CDATA[小鸟模板首页二维码图片]]></item>
+				<item id="description"><![CDATA[如果已安装微商家，可在微商家设置中开启，会优先选择进入微商家的二维码图片]]></item>
+				<item id="variable"><![CDATA[birdindexcode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="84">
+				<item id="displayorder"><![CDATA[87]]></item>
+				<item id="title"><![CDATA[小鸟模板默认店招地址]]></item>
+				<item id="description"><![CDATA[格式例如：http://www.fx8.cc/]]></item>
+				<item id="variable"><![CDATA[birdbannerurl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[javascript:]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="85">
+				<item id="displayorder"><![CDATA[88]]></item>
+				<item id="title"><![CDATA[启用小鸟宽屏nice]]></item>
+				<item id="description"><![CDATA[需要和小鸟模板一起开启]]></item>
+				<item id="variable"><![CDATA[isnice]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="86">
+				<item id="displayorder"><![CDATA[89]]></item>
+				<item id="title"><![CDATA[小鸟nice商家推广]]></item>
+				<item id="description"><![CDATA[填写需要推广商家的 bid
+多个商家请用','隔开
+最多显示3个商家推广]]></item>
+				<item id="variable"><![CDATA[nicepopularize]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="87">
+				<item id="displayorder"><![CDATA[90]]></item>
+				<item id="title"><![CDATA[小鸟nice公告]]></item>
+				<item id="description"><![CDATA[注意：每行显示一条公告,最多只能显示3行，回车换行
+	
+可以给公告上面加链接格式例如：<a href='http://www.fx8.cc'>我是公告内容</a>]]></item>
+				<item id="variable"><![CDATA[nicenotice]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href='http://www.fx8.cc'>我是公告内容1号</a>
+<a href='http://www.fx8.cc'>我是公告内容2号</a>
+<a href='http://www.fx8.cc'>我是公告内容3号</a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="88">
+				<item id="displayorder"><![CDATA[91]]></item>
+				<item id="title"><![CDATA[小鸟nice导航]]></item>
+				<item id="description"><![CDATA[每行显示一个导航,最多只能显示6个，回车换行
+
+格式例如：
+<a href='http://demo.ymg6.Com/123/goods.html'><img src='source/plugin/sanree_brand/tpl/nice/images/nice_brand.png'>商品</a>]]></item>
+				<item id="variable"><![CDATA[nicenav]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href='http://demo.ymg6.Com/169/goods.html'><img src='source/plugin/sanree_brand/tpl/nice/images/nice_brand.png'>商品</a>
+<a href='http://demo.ymg6.Com/169/news.html'><img src='source/plugin/sanree_brand/tpl/nice/images/nice_news.png'>商讯</a>
+<a href='http://demo.ymg6.Com/169/coupon.html'><img src='source/plugin/sanree_brand/tpl/nice/images/nice_coupon.png'>优惠劵</a>
+<a href='http://demo.ymg6.Com/169/jobs.html'><img src='source/plugin/sanree_brand/tpl/nice/images/nice_jobs.png'>招聘</a>
+<a href='http://demo.ymg6.Com/169/activity.html'><img src='source/plugin/sanree_brand/tpl/nice/images/nice_activity.png'>活动</a>
+<a href='http://demo.ymg6.Com/169/tel114.html'><img src='source/plugin/sanree_brand/tpl/nice/images/nice_114.png'>电话114</a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="89">
+				<item id="displayorder"><![CDATA[92]]></item>
+				<item id="title"><![CDATA[小鸟nice广告]]></item>
+				<item id="description"><![CDATA[注意：每行显示一条公告,最多只能显示2行，回车换行
+格式：<a href='我是链接' ><img src='我是图片'></a>]]></item>
+				<item id="variable"><![CDATA[nicead]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href='http://www.fx8.cc/' ><img src='source/plugin/sanree_brand/tpl/nice/images/banner_top.jpg'></a>
+<a href='http://www.fx8.cc/' ><img src='source/plugin/sanree_brand/tpl/nice/images/banner_ft.jpg'></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="90">
+				<item id="displayorder"><![CDATA[92]]></item>
+				<item id="title"><![CDATA[小鸟nice首页广告]]></item>
+				<item id="description"><![CDATA[注意：每行显示一条公告,最多只能显示2行，回车换行
+格式：<a href='我是链接' ><img src='我是图片'></a>]]></item>
+				<item id="variable"><![CDATA[niceindexad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href='http://www.fx8.cc/' ><img src='source/plugin/sanree_brand/tpl/nice/images/banner_top.jpg'></a>
+<a href='http://www.fx8.cc/' ><img src='source/plugin/sanree_brand/tpl/nice/images/banner_ft.jpg'></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="91">
+				<item id="displayorder"><![CDATA[93]]></item>
+				<item id="title"><![CDATA[小鸟nice规则]]></item>
+				<item id="description"><![CDATA[默认为：home.html]]></item>
+				<item id="variable"><![CDATA[urlbrandnice]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[home.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="92">
+				<item id="displayorder"><![CDATA[94]]></item>
+				<item id="title"><![CDATA[小鸟nice底部浮动开关]]></item>
+				<item id="description"><![CDATA[需要配合微商家开启]]></item>
+				<item id="variable"><![CDATA[isnicefudong]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="93">
+				<item id="displayorder"><![CDATA[95]]></item>
+				<item id="title"><![CDATA[小鸟nice底部浮动图片/URL]]></item>
+				<item id="description"><![CDATA[<a href="连接" ><img src="图片地址" /></a>]]></item>
+				<item id="variable"><![CDATA[nicefudongimg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[<a href='http://www.fx8.cc' ><img src="source/plugin/sanree_brand/tpl/nice/images/fb.png" /></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="94">
+				<item id="displayorder"><![CDATA[96]]></item>
+				<item id="title"><![CDATA[小鸟nice服务信息]]></item>
+				<item id="description"><![CDATA[置空为不显示]]></item>
+				<item id="variable"><![CDATA[niceserveinfo]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/sanree_brand/tpl/nice/images/ftbanner.gif]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="95">
+				<item id="displayorder"><![CDATA[98]]></item>
+				<item id="title"><![CDATA[搜索热词]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[popularsearchliststr]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[优惠券
+电影
+餐饮
+自定义关键词
+三瑞品牌123
+宝贝家族
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="96">
+				<item id="displayorder"><![CDATA[99]]></item>
+				<item id="title"><![CDATA[默认微信号二维码图地址]]></item>
+				<item id="description"><![CDATA[图片尺寸为150x150]]></item>
+				<item id="variable"><![CDATA[defaultwxcodeimg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/sanree_brand/tpl/nice/images/wxcode.gif]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="97">
+				<item id="displayorder"><![CDATA[100]]></item>
+				<item id="title"><![CDATA[首页专题风格]]></item>
+				<item id="description"><![CDATA[需要启用Hello首页后方可使用]]></item>
+				<item id="variable"><![CDATA[frontpagestyle]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[no]]></item>
+				<item id="extra"><![CDATA[no=无
+christmas=圣诞
+newyear=元旦
+springfestival=春节]]></item>
+			</item>
+			<item id="98">
+				<item id="displayorder"><![CDATA[101]]></item>
+				<item id="title"><![CDATA[网站微信公众号码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[webweixinhao]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[sanree]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="99">
+				<item id="displayorder"><![CDATA[102]]></item>
+				<item id="title"><![CDATA[网站微信公众号文字]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[webweixintext]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[本站微信公众号]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="100">
+				<item id="displayorder"><![CDATA[105]]></item>
+				<item id="title"><![CDATA[网站微信公众号图片]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[webweixinpic]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="101">
+				<item id="displayorder"><![CDATA[110]]></item>
+				<item id="title"><![CDATA[自定义一卡通名称]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[cardname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[优惠卡]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="102">
+				<item id="displayorder"><![CDATA[115]]></item>
+				<item id="title"><![CDATA[启用登记审核员通知]]></item>
+				<item id="description"><![CDATA[当商家在前台入驻时，会发送一条提醒(消息)给审核员，提示有商家入驻]]></item>
+				<item id="variable"><![CDATA[isauditornotice]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="103">
+				<item id="displayorder"><![CDATA[116]]></item>
+				<item id="title"><![CDATA[审核员ID]]></item>
+				<item id="description"><![CDATA[注意：
+如果有多个ID需要用 ',' 隔开(例如:1,2,3)
+审核员一定是网站管后台管理员]]></item>
+				<item id="variable"><![CDATA[auditorid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="104">
+				<item id="displayorder"><![CDATA[118]]></item>
+				<item id="title"><![CDATA[开启对没有入驻用户的提示]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[is_enterhint]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="105">
+				<item id="displayorder"><![CDATA[119]]></item>
+				<item id="title"><![CDATA[对没有入驻用户的提示]]></item>
+				<item id="description"><![CDATA[格式：普通内容{a}链接文字{/a}普通内容]]></item>
+				<item id="variable"><![CDATA[enterhint]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[亲！你还没有入驻商家，如果需要的话 {a} 请点我入驻 {/a}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="106">
+				<item id="displayorder"><![CDATA[125]]></item>
+				<item id="title"><![CDATA[隐藏三瑞版权密码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[copyrightpass]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="107">
+				<item id="displayorder"><![CDATA[126]]></item>
+				<item id="title"><![CDATA[登记协议]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[agreement]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[1、请登记您与国家相关机构登记名称完全一致；
+2、不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益，不得利用本站制作、复制和传播下列信息：
+（一）煽动抗拒、破坏宪法和法律、行政法规实施的；
+（二）煽动颠覆国家政权，推翻社会主义制度的；
+（三）煽动分裂国家、破坏国家统一的；
+（四）煽动民族仇恨、民族歧视，破坏民族团结的；
+（五）捏造或者歪曲事实，散布谣言，扰乱社会秩序的；
+（六）宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；
+（七）公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；
+（八）损害国家机关信誉的；
+（九）其他违反宪法和法律行政法规的；
+3、互相尊重，对自己的言论和行为负责；]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推荐一个dz商</span><span style="color:#4C33E5;">业插件模版下载的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">网站给大家</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">源码哥分享吧</span></a><span style="color:#4C33E5;">（www.ymg6.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">这</span><span style="color:#E53333;">是一个</span><span style="color:#E53333;">dz商业</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">资源破解分享的网站，而且还有很多精品的网站源码下载</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他们资源每天更新，并且很多都是他们自己出钱在应用中心购买后破解分享出来的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不过还是替他们说一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他们站下载的资源只限于自己学习研究内含的设计思想和原理 请勿有任何商业盈利行为</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介绍也介绍完了，给大家做个小导航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dz商业破解插件下载</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dz商业风格模版下载</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">精品网站源码下载</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">工具素材下载</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">精选教程区</a></span> 
+</h3> ]]></item>
+				<item id="yijing"><![CDATA[品牌管理]]></item>
+				<item id="isbusiness"><![CDATA[您的当前版本无此功能,需要此功能请商业购买！]]></item>
+				<item id="businessesnew"><![CDATA[待审]]></item>
+				<item id="addbusinesses"><![CDATA[登记]]></item>
+				<item id="base"><![CDATA[基本管理]]></item>
+				<item id="manage_nav_pluginshow"><![CDATA[前台品牌123]]></item>
+				<item id="sanree"><![CDATA[三瑞出品]]></item>
+				<item id="category"><![CDATA[分类管理]]></item>
+				<item id="businesses"><![CDATA[品牌管理]]></item>
+				<item id="addcate"><![CDATA[增加分类]]></item>
+				<item id="catename"><![CDATA[分类名称]]></item>
+				<item id="showorder"><![CDATA[排序]]></item>
+				<item id="count"><![CDATA[统计]]></item>
+				<item id="succeed"><![CDATA[操作成功]]></item>
+				<item id="searchbar"><![CDATA[搜索]]></item>
+				<item id="skeyword"><![CDATA[关键字：]]></item>
+				<item id="search"><![CDATA[搜索]]></item>
+				<item id="name"><![CDATA[品牌]]></item>
+				<item id="status"><![CDATA[状态]]></item>
+				<item id="isshow"><![CDATA[显示]]></item>
+				<item id="istop"><![CDATA[置顶]]></item>
+				<item id="menuistop"><![CDATA[顶部菜单]]></item>
+				<item id="isrecommend"><![CDATA[推荐]]></item>
+				<item id="businesseslist"><![CDATA[品牌管理]]></item>
+				<item id="pselect"><![CDATA[选择分类]]></item>
+				<item id="gselect"><![CDATA[选择等级]]></item>
+				<item id="propaganda"><![CDATA[口号]]></item>
+				<item id="introduction"><![CDATA[简介]]></item>
+				<item id="phone"><![CDATA[电话]]></item>
+				<item id="weburl"><![CDATA[网址]]></item>
+				<item id="contact"><![CDATA[联系]]></item>
+				<item id="poster"><![CDATA[品牌LOGO]]></item>
+				<item id="error_nametip"><![CDATA[请填写名称]]></item>
+				<item id="error_cateid"><![CDATA[请选择分类]]></item>
+				<item id="error_nouser"><![CDATA[查无此人]]></item>
+				<item id="subscriber"><![CDATA[登记人]]></item>
+				<item id="audited"><![CDATA[已审核]]></item>
+				<item id="yes"><![CDATA[√]]></item>
+				<item id="no"><![CDATA[×]]></item>
+				<item id="unauditbusinesses"><![CDATA[未审核品牌]]></item>
+				<item id="dateline"><![CDATA[登记时间]]></item>
+				<item id="editbusi"><![CDATA[编辑品牌]]></item>
+				<item id="addbusi"><![CDATA[增加品牌]]></item>
+				<item id="batchshen"><![CDATA[批量审核]]></item>
+				<item id="batchdel"><![CDATA[批量删除]]></item>
+				<item id="delorhen"><![CDATA[审/删?]]></item>
+				<item id="confirmationdel"><![CDATA[此操作无法撤销，您确定要删除吗?]]></item>
+				<item id="auditstatus"><![CDATA[是否审核]]></item>
+				<item id="editcate"><![CDATA[修改分类]]></item>
+				<item id="logoruler"><![CDATA[<font style="color:red">*必填</font>,请选择图片或者输入图片地址]]></item>
+				<item id="bitian"><![CDATA[<font style="color:red">*必填</font> ]]></item>
+				<item id="weburltip"><![CDATA[点击访问【{catename}】的网站]]></item>
+				<item id="ip"><![CDATA[登记IP]]></item>
+				<item id="error_poster"><![CDATA[请输入品牌LOGO]]></item>
+				<item id="slide"><![CDATA[幻灯管理]]></item>
+				<item id="slide_img"><![CDATA[幻灯图片地址]]></item>
+				<item id="slide_link"><![CDATA[幻灯连接地址]]></item>
+				<item id="nologin"><![CDATA[请登录]]></item>
+				<item id="nocateid"><![CDATA[请选择品牌分类！]]></item>
+				<item id="noname"><![CDATA[请输入品牌名称！]]></item>
+				<item id="ishavecom"><![CDATA[此品牌已经登记，请勿重复登记！]]></item>
+				<item id="yesmessage"><![CDATA[登记成功,我们会尽快审核您的提交!]]></item>
+				<item id="okmessage"><![CDATA[登记成功,感谢您的参与!]]></item>
+				<item id="recommendimg"><![CDATA[推荐品牌图片]]></item>
+				<item id="logoruler1"><![CDATA[请选择图片或者输入图片地址,<br />建议尺寸 180*90]]></item>
+				<item id="logoruler2"><![CDATA[请选择图片或者输入图片地址,<br />标准尺寸: 960*140]]></item>
+				<item id="logoruler3"><![CDATA[请选择图片或者输入图片地址,<br />标准尺寸: 150*150]]></item>
+				<item id="nocreditunit"><![CDATA[请先设置交易积分单位]]></item>
+				<item id="nomoney"><![CDATA[余额不足，请充值]]></item>
+				<item id="brand_pass"><![CDATA[用户: {user} 登记了品牌【{brand}】,已经上线。 花费您{price}的 {unit}。 时间:{time}]]></item>
+				<item id="brand_adminpass"><![CDATA[用户: {user} 登记了品牌【{brand}】,已经上线。审核操作人：{adminuser}。 时间:{time}]]></item>
+				<item id="brand_pending"><![CDATA[用户: {user} 登记了品牌【{brand}】，正在审核。 花费您{price}的 {unit} 。时间:{time}]]></item>
+				<item id="brand_refuse"><![CDATA[用户: {user} 登记的品牌【{brand}】被拒绝。审核操作人：{adminuser}。<br>原因：{reason}。 时间:{time}]]></item>
+				<item id="brand_auditopending"><![CDATA[用户: {user} 发布的品牌【{brand}】,需要审核。 时间:{time}]]></item>
+				<item id="noopen"><![CDATA[此功能暂未开放!]]></item>
+				<item id="defaultkeyword"><![CDATA[输入您要查找的品牌]]></item>
+				<item id="published_data3"><![CDATA[<a href="{adminabouturl}">联系我们</a>。]]></item>
+				<item id="all"><![CDATA[所有分类]]></item>
+				<item id="BRD"><![CDATA[登记品牌消耗]]></item>
+				<item id="nobindingforum"><![CDATA[请先设置“绑定版块”]]></item>
+				<item id="reason"><![CDATA[原因]]></item>
+				<item id="pass"><![CDATA[通过]]></item>
+				<item id="refuse"><![CDATA[拒绝]]></item>
+				<item id="refusereason"><![CDATA[拒绝原因]]></item>
+				<item id="zanwustr"><![CDATA[暂无]]></item>
+				<item id="warningforumtitle"><![CDATA[绑定的版块标题中必须要包含字符  {haveforumtitle}]]></item>
+				<item id="warningdelete"><![CDATA[用于【品牌空间123】，谨慎删除]]></item>
+				<item id="error_template"><![CDATA[指定模版错误]]></item>
+				<item id="addsubcate"><![CDATA[增加子分类]]></item>
+				<item id="newsubcate"><![CDATA[新子分类]]></item>
+				<item id="mybrand"><![CDATA[品牌管理]]></item>
+				<item id="addtime"><![CDATA[登记时间]]></item>
+				<item id="nobid"><![CDATA[没有找到这个品牌商家或者正在审核]]></item>
+				<item id="editmessage"><![CDATA[修改成功!]]></item>
+				<item id="post_propaganda_toolong"><![CDATA[口号内容太长]]></item>
+				<item id="post_introduction_toolong"><![CDATA[简介内容太长]]></item>
+				<item id="post_contact_toolong"><![CDATA[联系内容太长]]></item>
+				<item id="inputposter"><![CDATA[请上传品牌LOGO]]></item>
+				<item id="qq"><![CDATA[qq]]></item>
+				<item id="msn"><![CDATA[MSN]]></item>
+				<item id="wangwang"><![CDATA[阿里旺旺]]></item>
+				<item id="baiduhi"><![CDATA[百度Hi]]></item>
+				<item id="skype"><![CDATA[Skype]]></item>
+				<item id="address"><![CDATA[联系地址]]></item>
+				<item id="recommendationindex"><![CDATA[推荐指数]]></item>
+				<item id="tel"><![CDATA[联系电话]]></item>
+				<item id="recommendationindextip"><![CDATA[推荐指数只能是0.0 - 99.9]]></item>
+				<item id="updatecache"><![CDATA[更新缓存]]></item>
+				<item id="updatecachesucceed"><![CDATA[更新缓存成功]]></item>
+				<item id="stopalbumtip"><![CDATA[品牌相册功能未开启.]]></item>
+				<item id="stopalbumgrouptip"><![CDATA[您所在的用户组无法使用品牌相册功能.]]></item>
+				<item id="inputtel"><![CDATA[请输入电话]]></item>
+				<item id="inputaddress"><![CDATA[请输入地址]]></item>
+				<item id="inputqq"><![CDATA[请输入QQ]]></item>
+				<item id="inputmsn"><![CDATA[请输入MSN]]></item>
+				<item id="inputwangwang"><![CDATA[请输入阿里旺旺]]></item>
+				<item id="inputbaiduhi"><![CDATA[请输入百度Hi]]></item>
+				<item id="inputskype"><![CDATA[请输入Skype]]></item>
+				<item id="nodengji"><![CDATA[没有登记！]]></item>
+				<item id="qqtip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="msntip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="wangwangtip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="baiduhitip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="skypetip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="group"><![CDATA[商家等级]]></item>
+				<item id="brand_group"><![CDATA[商家等级]]></item>
+				<item id="group_name"><![CDATA[等级名称]]></item>
+				<item id="group_nums"><![CDATA[有？品牌]]></item>
+				<item id="group_status"><![CDATA[状态]]></item>
+				<item id="addgroup"><![CDATA[增加新等级]]></item>
+				<item id="group_add"><![CDATA[增加商家等级]]></item>
+				<item id="group_modify"><![CDATA[修改等级]]></item>
+				<item id="urlmod"><![CDATA[打开模式]]></item>
+				<item id="urlmod_default"><![CDATA[默认]]></item>
+				<item id="urlmod_onepage"><![CDATA[单页]]></item>
+				<item id="group_enable"><![CDATA[是否启用]]></item>
+				<item id="group_icons"><![CDATA[等级图标]]></item>
+				<item id="group_smallicons"><![CDATA[等级小图]]></item>
+				<item id="region"><![CDATA[地区]]></item>
+				<item id="memo"><![CDATA[备注]]></item>
+				<item id="brandno"><![CDATA[商家编号]]></item>
+				<item id="novoter"><![CDATA[请输入您的评论]]></item>
+				<item id="votersucceed"><![CDATA[发表成功]]></item>
+				<item id="mappos"><![CDATA[地图坐标：]]></item>
+				<item id="marked"><![CDATA[选择地图坐标点]]></item>
+				<item id="nomarked"><![CDATA[此商家暂未标注地图]]></item>
+				<item id="cmenu"><![CDATA[商家菜单]]></item>
+				<item id="addcmenu"><![CDATA[增加菜单]]></item>
+				<item id="notlimited"><![CDATA[不限]]></item>
+				<item id="brandnotip"><![CDATA[商家编号，可用于个性网址，或快速查找商家,不能重复<br>限a-z、0-9字符]]></item>
+				<item id="ishavebrandno"><![CDATA[商家编号已经存在，请更换一个。]]></item>
+				<item id="errorbrandno"><![CDATA[商家编号只能是0-9a-z，注意大小写]]></item>
+				<item id="window"><![CDATA[窗口]]></item>
+				<item id="errorwordtip"><![CDATA[请输入内容]]></item>
+				<item id="succeedmessage"><![CDATA[信息已成功提交,感谢您的支持.]]></item>
+				<item id="msgmanage"><![CDATA[信息管理]]></item>
+				<item id="errorword"><![CDATA[内容]]></item>
+				<item id="bid"><![CDATA[品牌ID]]></item>
+				<item id="yichuli"><![CDATA[已处理]]></item>
+				<item id="weichuli"><![CDATA[<font color=\"red\">未处理</font>]]></item>
+				<item id="username"><![CDATA[用户]]></item>
+				<item id="chuli"><![CDATA[处理]]></item>
+				<item id="chulichenggong"><![CDATA[处理成功]]></item>
+				<item id="noowner"><![CDATA[此店铺已被认领]]></item>
+				<item id="owner"><![CDATA[拥有者]]></item>
+				<item id="error_noowner"><![CDATA[没有此拥有者]]></item>
+				<item id="type"><![CDATA[类型]]></item>
+				<item id="typelist"><![CDATA[错误报告|品牌认领|客户反馈|品牌举报]]></item>
+				<item id="typeinfo0"><![CDATA[全部信息]]></item>
+				<item id="typeinfo1"><![CDATA[报错信息]]></item>
+				<item id="typeinfo2"><![CDATA[认领信息]]></item>
+				<item id="typeinfo3"><![CDATA[反馈信息]]></item>
+				<item id="typeinfo4"><![CDATA[品牌举报]]></item>
+				<item id="postusername"><![CDATA[提交用户]]></item>
+				<item id="copyword"><![CDATA[复制]]></item>
+				<item id="copysucceed"><![CDATA[复制成功]]></item>
+				<item id="copywordformat"><![CDATA[用户【 {uname} 】提交信息：]]></item>
+				<item id="reply"><![CDATA[回复]]></item>
+				<item id="renlingchenggong"><![CDATA[认领成功，附言：<br />]]></item>
+				<item id="notcontrol"><![CDATA[未知操作]]></item>
+				<item id="chulijieguo"><![CDATA[处理结果:<br />]]></item>
+				<item id="renlingjujue"><![CDATA[认领被拒绝,原因：<br />]]></item>
+				<item id="error_subject"><![CDATA[附言：]]></item>
+				<item id="error_brand"><![CDATA[所属品牌]]></item>
+				<item id="error_result"><![CDATA[处理结果]]></item>
+				<item id="notmsgid"><![CDATA[无此信息]]></item>
+				<item id="back"><![CDATA[返回]]></item>
+				<item id="district"><![CDATA[地区设置]]></item>
+				<item id="addsub"><![CDATA[子地区]]></item>
+				<item id="district_level_1"><![CDATA[-选择-]]></item>
+				<item id="district_level_2"><![CDATA[-选择-]]></item>
+				<item id="district_level_3"><![CDATA[-选择-]]></item>
+				<item id="district_level_4"><![CDATA[-选择-]]></item>
+				<item id="levelerror"><![CDATA[只支持四级地区分类]]></item>
+				<item id="slideimgtip"><![CDATA[图片尺寸：731*125]]></item>
+				<item id="album"><![CDATA[商家相册]]></item>
+				<item id="telcate"><![CDATA[分类]]></item>
+				<item id="albumcate"><![CDATA[相册分类]]></item>
+				<item id="piclist"><![CDATA[图片列表]]></item>
+				<item id="albumcatename"><![CDATA[相册名称]]></item>
+				<item id="editalbumcate"><![CDATA[修改相册]]></item>
+				<item id="addalbumcate"><![CDATA[增加相册]]></item>
+				<item id="addalbum"><![CDATA[新建相册]]></item>
+				<item id="albumname"><![CDATA[图片名称]]></item>
+				<item id="pic"><![CDATA[图片]]></item>
+				<item id="albumselect"><![CDATA[选择相册]]></item>
+				<item id="albumgroup"><![CDATA[所属相册]]></item>
+				<item id="albumuser"><![CDATA[所属用户]]></item>
+				<item id="error_catetip"><![CDATA[请输入所属相册]]></item>
+				<item id="error_pictip"><![CDATA[请选择图片]]></item>
+				<item id="pic_tip_format"><![CDATA[{n}]]></item>
+				<item id="user"><![CDATA[创建人]]></item>
+				<item id="error_brandnametip"><![CDATA[请输入所属品牌]]></item>
+				<item id="error_bid"><![CDATA[没有此品牌商家]]></item>
+				<item id="unknowact"><![CDATA[未知动作]]></item>
+				<item id="maxalbumcategorytip"><![CDATA[当前品牌最多能创建<strong> {maxalbumcategory} </strong>个相册!]]></item>
+				<item id="creatalbumsucceed"><![CDATA[创建新相册成功]]></item>
+				<item id="error_brandtip"><![CDATA[所属品牌错误]]></item>
+				<item id="modiyalbumsucceed"><![CDATA[修改相册成功]]></item>
+				<item id="selectedbrand"><![CDATA[请选择品牌]]></item>
+				<item id="selectedalbumcate"><![CDATA[请选择相册]]></item>
+				<item id="modiypidsucceed"><![CDATA[修改图片成功]]></item>
+				<item id="error_pic"><![CDATA[无此图片]]></item>
+				<item id="nocatname"><![CDATA[请输入相册名称]]></item>
+				<item id="uploadpicsucceed"><![CDATA[上传图片成功]]></item>
+				<item id="maxalbumtip1"><![CDATA[当前相册最多只能上传 <font color=red>{maxalbum}</font> 张图片!]]></item>
+				<item id="maxalbumtip"><![CDATA[当前相册最多只能上传 <font color=red>{maxalbum}</font> 张图片!<br />提醒：<font color=red>只有推荐的图片才会在品牌商家店铺首页显示!</font>]]></item>
+				<item id="no_pic"><![CDATA[暂无图片]]></item>
+				<item id="editalbumname"><![CDATA[修改相册]]></item>
+				<item id="creatalbum"><![CDATA[创建新相册]]></item>
+				<item id="savesucceed"><![CDATA[保存成功]]></item>
+				<item id="maxalbumcategory"><![CDATA[相册数]]></item>
+				<item id="maxalbum"><![CDATA[图片数]]></item>
+				<item id="albumistip"><![CDATA[0为不能创建]]></item>
+				<item id="nobrand"><![CDATA[没有这个品牌]]></item>
+				<item id="nostatus"><![CDATA[未认证品牌暂时无法访问]]></item>
+				<item id="brandindex"><![CDATA[品牌首页]]></item>
+				<item id="myalbum"><![CDATA[品牌相册]]></item>
+				<item id="ordinary"><![CDATA[普通版]]></item>
+				<item id="albumlshow"><![CDATA[品牌相册]]></item>
+				<item id="picshowtip"><![CDATA[共有 {picnum} 张图片]]></item>
+				<item id="msgcounttip"><![CDATA[你共有<font color="red">{count}</font>条信息]]></item>
+				<item id="allowalbum"><![CDATA[允许使用相册]]></item>
+				<item id="noallowalbum"><![CDATA[该品牌尚未开启品牌相册]]></item>
+				<item id="nocontrol"><![CDATA[此功能尚未开启]]></item>
+				<item id="startdate"><![CDATA[开始时间]]></item>
+				<item id="enddate"><![CDATA[过期时间]]></item>
+				<item id="allowfastpost"><![CDATA[允许评论该品牌]]></item>
+				<item id="nofastpostcontrol"><![CDATA[<div class="nofastpostcontrol">该品牌尚未开启品牌评论</div>]]></item>
+				<item id="talbum"><![CDATA[相册]]></item>
+				<item id="copymappos"><![CDATA[复制坐标]]></item>
+				<item id="importdistrict"><![CDATA[导入系统城市]]></item>
+				<item id="error_emptydis"><![CDATA[请选择一个地区]]></item>
+				<item id="pleaseinputdis"><![CDATA[请选择要导入的地区：]]></item>
+				<item id="pleaseinputdistip"><![CDATA[友情提示：此操作必须选择一个省份，才能导入数据。<br />
+		选择好地区以后，将导入选择地区的下级分类，比如您选择了“北京市”,<br />
+		程序将导入北京市以下的地区。<br>导入的时间长短取决于您选择的省份包含的地区数]]></item>
+				<item id="cleardistricttip"><![CDATA[您确认清空本地区的所有数据吗？此操作不可撤销.]]></item>
+				<item id="fixdiytip"><![CDATA[您确认校正DIY区块设置吗？]]></item>
+				<item id="cleardistrict"><![CDATA[清空地区表]]></item>
+				<item id="clearalltip"><![CDATA[清空地区表请到： 基本管理=》清空地区表]]></item>
+				<item id="pmsg"><![CDATA[评论]]></item>
+				<item id="qqtipmsg"><![CDATA[点击这里给我发消息]]></item>
+				<item id="msntipmsg"><![CDATA[点击这里给我发消息]]></item>
+				<item id="wangwangtipmsg"><![CDATA[点击这里给我发消息]]></item>
+				<item id="baiduhitipmsg"><![CDATA[点击这里给我发消息]]></item>
+				<item id="skypetipmsg"><![CDATA[点击这里给我发消息]]></item>
+				<item id="banner"><![CDATA[品牌店招]]></item>
+				<item id="discount"><![CDATA[会员折扣]]></item>
+				<item id="inputdistrict"><![CDATA[请选择品牌所在地区]]></item>
+				<item id="adminwork"><![CDATA[【品牌123】运营概况]]></item>
+				<item id="adminwork_str0"><![CDATA[已运营品牌(]]></item>
+				<item id="adminwork_str1"><![CDATA[待审品牌(]]></item>
+				<item id="adminwork_str2"><![CDATA[待认领信息(]]></item>
+				<item id="adminwork_str3"><![CDATA[报错信息(]]></item>
+				<item id="adminwork_str4"><![CDATA[反馈信息(]]></item>
+				<item id="adminwork_str5"><![CDATA[信息举报(]]></item>
+				<item id="admincon"><![CDATA[常用控制]]></item>
+				<item id="ge"><![CDATA[)个]]></item>
+				<item id="tel114id"><![CDATA[电话114登记ID]]></item>
+				<item id="tel114idtip"><![CDATA[指定商家对应的电话114ID，要求【三瑞电话114】版本>=1.121]]></item>
+				<item id="blockclass_sanree"><![CDATA[【三瑞出品】类]]></item>
+				<item id="fixbranddiy"><![CDATA[校正品牌DIY]]></item>
+				<item id="blockclass_index_styletexttitle"><![CDATA[[内置]品牌123_品牌文字模式]]></item>
+				<item id="blockclass_index_styleimgtitle"><![CDATA[[内置]品牌123_品牌图文模式]]></item>
+				<item id="blockclass_brandname"><![CDATA[品牌123]]></item>
+				<item id="blockclass_multibrandname"><![CDATA[品牌123多选分类]]></item>
+				<item id="blockstyle_create_succeed"><![CDATA[校正品牌123DIY成功]]></item>
+				<item id="blockclass_starttitle"><![CDATA[开始行数]]></item>
+				<item id="blockclass_ordertitle"><![CDATA[品牌排序方式]]></item>
+				<item id="blockclass_bid"><![CDATA[品牌ID]]></item>
+				<item id="blockclass_orderby"><![CDATA[显示顺序]]></item>
+				<item id="blockclass_showid"><![CDATA[显示排序]]></item>
+				<item id="blockclass_dateline"><![CDATA[创建时间]]></item>
+				<item id="blockclass_views"><![CDATA[浏览量]]></item>
+				<item id="blockclass_ordersctitle"><![CDATA[排序]]></item>
+				<item id="blockclass_orderscdown"><![CDATA[降序]]></item>
+				<item id="blockclass_orderscup"><![CDATA[升序]]></item>
+				<item id="blockclass_showfilter"><![CDATA[显示条件]]></item>
+				<item id="blockclass_zuixin"><![CDATA[最新商家]]></item>
+				<item id="blockclass_zhiding"><![CDATA[置顶商家]]></item>
+				<item id="blockclass_tuijian"><![CDATA[推荐商家]]></item>
+				<item id="blockclass_brand_field_title"><![CDATA[品牌名称]]></item>
+				<item id="blockclass_brand_field_bid"><![CDATA[品牌ID]]></item>
+				<item id="blockclass_brand_field_url"><![CDATA[品牌链接]]></item>
+				<item id="blockclass_brand_field_pic"><![CDATA[品牌LOGO]]></item>
+				<item id="blockclass_brand_field_views"><![CDATA[浏览量]]></item>
+				<item id="blockclass_brand_field_icq"><![CDATA[ICQ]]></item>
+				<item id="blockclass_brand_field_qq"><![CDATA[腾讯qq]]></item>
+				<item id="blockclass_brand_field_msn"><![CDATA[MSN]]></item>
+				<item id="blockclass_brand_field_wangwang"><![CDATA[阿里旺旺]]></item>
+				<item id="blockclass_brand_field_baiduhi"><![CDATA[百度Hi]]></item>
+				<item id="blockclass_brand_field_skype"><![CDATA[Skype]]></item>
+				<item id="blockclass_brand_field_address"><![CDATA[品牌地址]]></item>
+				<item id="blockclass_brand_field_weburl"><![CDATA[品牌网址]]></item>
+				<item id="blockclass_brand_field_cateid"><![CDATA[品牌所属分类ID]]></item>
+				<item id="blockclass_brand_field_catename"><![CDATA[品牌所属分类名称]]></item>
+				<item id="blockclass_brand_field_tel"><![CDATA[品牌电话]]></item>
+				<item id="blockclass_brand_field_brandno"><![CDATA[品牌编号]]></item>
+				<item id="blockclass_brand_field_region"><![CDATA[品牌所属地区]]></item>
+				<item id="blockclass_brand_field_brandmf"><![CDATA[品牌特色]]></item>
+				<item id="blockclass_brand_field_brandtag"><![CDATA[品牌标签]]></item>
+				<item id="blockclass_brand_field_weixin"><![CDATA[微信号]]></item>
+				<item id="blockclass_brand_field_weixinimg"><![CDATA[微信号二维码]]></item>
+				<item id="blockclass_brand_field_weixinpublic"><![CDATA[微信公众号]]></item>
+				<item id="blockclass_brand_field_weixinpublicpic"><![CDATA[微信公众号二维码]]></item>
+				<item id="blockclass_brand_field_iscard"><![CDATA[是否一卡通]]></item>
+				<item id="blockclass_spicwidth"><![CDATA[图片宽度]]></item>
+				<item id="blockclass_spicheight"><![CDATA[图片高度]]></item>
+				<item id="blockclass_catename"><![CDATA[所属分类]]></item>
+				<item id="plugin_not_found"><![CDATA[【三瑞】品牌123插件未安装，请安装后访问]]></item>
+				<item id="plugin_error_version"><![CDATA[您需安装【三瑞】品牌123版本大于等于（>=）1.107]]></item>
+				<item id="diymanage"><![CDATA[DIY管理]]></item>
+				<item id="diyconfig"><![CDATA[DIY设置]]></item>
+				<item id="diytemplate"><![CDATA[DIY模版]]></item>
+				<item id="diystyle"><![CDATA[DIY样式]]></item>
+				<item id="addstyle"><![CDATA[添加新样式]]></item>
+				<item id="editstyle"><![CDATA[修改样式]]></item>
+				<item id="stylename"><![CDATA[样式名称]]></item>
+				<item id="stylenametip"><![CDATA[必须已字母开头，只能是字母、数字或者下划线组成，<br>样式名称具有唯一性，不能重复]]></item>
+				<item id="stylecontent"><![CDATA[样式内容]]></item>
+				<item id="stylecontenttip"><![CDATA[DIY调用样式内容中 stylename 将自动替换成定义的样式名称。]]></item>
+				<item id="error_stylenametip"><![CDATA[样式名称不能为空]]></item>
+				<item id="ishavestylename"><![CDATA[样式名重复]]></item>
+				<item id="error_stylecontenttip"><![CDATA[样式内容不能为空]]></item>
+				<item id="operationuser"><![CDATA[添加人]]></item>
+				<item id="errorstylename"><![CDATA[样式名称只能是a-z、A-Z、0-9、下划线(_)，且必须以字母开头]]></item>
+				<item id="addtemplate"><![CDATA[添加新模块模版]]></item>
+				<item id="edittemplate"><![CDATA[修改模版]]></item>
+				<item id="templatename"><![CDATA[DIY模版名称]]></item>
+				<item id="templatecontent"><![CDATA[DIY模版内容]]></item>
+				<item id="error_templatenametip"><![CDATA[DIY模版名称不能为空]]></item>
+				<item id="error_templatecontenttip"><![CDATA[DIY模版内容不能为空]]></item>
+				<item id="system"><![CDATA[系统]]></item>
+				<item id="copynewtemplate"><![CDATA[复制]]></item>
+				<item id="copyfuben"><![CDATA[副本]]></item>
+				<item id="neizhi"><![CDATA[[内置]]]></item>
+				<item id="copynewstyle"><![CDATA[复制]]></item>
+				<item id="allcate"><![CDATA[全部]]></item>
+				<item id="isshowbrandname"><![CDATA[是否隐藏招牌内的名称]]></item>
+				<item id="blockclass_groupname"><![CDATA[商家等级]]></item>
+				<item id="kong"><![CDATA[空]]></item>
+				<item id="domainconfig"><![CDATA[域名设置]]></item>
+				<item id="notdomain"><![CDATA[请先设置绑定域名.]]></item>
+				<item id="domain"><![CDATA[域名管理]]></item>
+				<item id="domaintipshow"><![CDATA[<table class="tb tb2 " id="tips">
+<tr><th  class="partition">技巧提示</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis">
+<li>绑定的域名不能和系统设置的域名相同，域名不需要添加“<strong>http://</strong>”，也不要以“<strong>/</strong>”结尾，例如：brand.ymg6.Com</li>
+<li>开启域名，需要配置默认域名，否则会造成多入口问题</li>
+<li>当开启域名时，请在 config/config_global.php 中修改 cookiedomain 值来设置 cookie 作用域</li>
+<li>【三瑞】品牌123 当前绑定的域名为：“<strong>{domain}</strong>”</li>
+<li>请修改文件：“<strong>网站根目录\index.php</strong>”在“&lt;?php”后第一行语句中增加如下代码：
+<br />===================================================<br />
+define("IN_SANREE_BRAND",TRUE);<br />
+<strong> @require './data/sysdata/cache_sanree_brand_domain.php'; </strong>
+<br />=================================================== </li>
+<li>经过以上设置，就可以使用二级访问品牌123了.</li>
+<li>有疑问请到论坛发帖交流：<a href="http://www.fx8.cc/" target="_blank">http://www.fx8.cc/</a></li>
+</ul>
+</td></tr>
+</table>]]></item>
+				<item id="config_title"><![CDATA[品牌【{brandname}】的配置]]></item>
+				<item id="sanreeinfo"><![CDATA[官方动态：]]></item>
+				<item id="businesses_base"><![CDATA[基本]]></item>
+				<item id="businesses_plug"><![CDATA[扩展]]></item>
+				<item id="businesses_config"><![CDATA[配置]]></item>
+				<item id="businesses_defaultconfig"><![CDATA[新入驻品牌默认配置]]></item>
+				<item id="quanxuan"><![CDATA[全选]]></item>
+				<item id="defaultcity"><![CDATA[北京市]]></item>
+				<item id="batchbrand"><![CDATA[批量]]></item>
+				<item id="batchbrandconfig"><![CDATA[批量设置]]></item>
+				<item id="batchbrandconfigtip"><![CDATA[<ul>
+		<li>批量设置将<strong>直接批量修改</strong>品牌商家的设置，请慎用</li>
+	   <li>更新以下数据时，请尽量避开会员访问的高峰时间</li>
+	   <li>每个循环更新数量：数值请在一个合理范围，不要过大，否则会给服务器带来负载压力</li>
+		</ul>]]></item>
+				<item id="allopenallowalbum"><![CDATA[全部开启相册]]></item>
+				<item id="allopenallowalbumtip"><![CDATA[此操作无法撤销，您确定要批量开启吗?]]></item>
+				<item id="allcloseallowalbum"><![CDATA[全部关闭相册]]></item>
+				<item id="allcloseallowalbumtip"><![CDATA[此操作无法撤销，您确定要批量关闭吗?]]></item>
+				<item id="allopenallowfastpost"><![CDATA[全部开启评论]]></item>
+				<item id="allopenallowfastposttip"><![CDATA[此操作无法撤销，您确定要批量开启吗?]]></item>
+				<item id="allcloseallowfastpost"><![CDATA[全部关闭评论]]></item>
+				<item id="allcloseaallowfastposttip"><![CDATA[此操作无法撤销，您确定要批量关闭吗?]]></item>
+				<item id="batchmodule"><![CDATA[模块批量设置]]></item>
+				<item id="batchdongzuo"><![CDATA[批量操作]]></item>
+				<item id="fixmodulecolumn"><![CDATA[校正所有品牌模块：]]></item>
+				<item id="fixmodulecolumn_succeed"><![CDATA[校正所有品牌模块完成]]></item>
+				<item id="fixmodulecolumn_processing"><![CDATA[正在校正品牌模块]]></item>
+				<item id="allsubmit"><![CDATA[此操作无法撤销，您确定要继续吗?]]></item>
+				<item id="brandconfigtip"><![CDATA[<ul>
+		<li>以下设置，在新品牌入驻的时候生效，已入驻的不受影响</li>
+		</ul>]]></item>
+				<item id="selectnull"><![CDATA[请选择]]></item>
+				<item id="selectdefault"><![CDATA[默认]]></item>
+				<item id="selectrepeat"><![CDATA[重复]]></item>
+				<item id="selectnorepeat"><![CDATA[不重复]]></item>
+				<item id="selectrepeatx"><![CDATA[横向重复]]></item>
+				<item id="selectrepeaty"><![CDATA[纵向重复]]></item>
+				<item id="selectfixed"><![CDATA[不滑动]]></item>
+				<item id="selectscroll"><![CDATA[滑动]]></item>
+				<item id="selecttop"><![CDATA[上]]></item>
+				<item id="selectbottom"><![CDATA[下]]></item>
+				<item id="selectleft"><![CDATA[左]]></item>
+				<item id="selectright"><![CDATA[右]]></item>
+				<item id="selectcenter"><![CDATA[居中]]></item>
+				<item id="error_color"><![CDATA[请输入正确的颜色值，比如#FFFFFF]]></item>
+				<item id="bodyconfig"><![CDATA[页面设置]]></item>
+				<item id="bannerconfig"><![CDATA[上传店招]]></item>
+				<item id="wezgimgbanner"><![CDATA[微商家尊贵版店招]]></item>
+				<item id="baseconfig"><![CDATA[基本设置]]></item>
+				<item id="weixinconfig"><![CDATA[微信设置]]></item>
+				<item id="editinfo"><![CDATA[修改信息]]></item>
+				<item id="uploadimg"><![CDATA[上传图片]]></item>
+				<item id="mymsg"><![CDATA[反馈信息]]></item>
+				<item id="myhome"><![CDATA[我的首页]]></item>
+				<item id="templateconfig"><![CDATA[页面配置]]></item>
+				<item id="isenableback"><![CDATA[启用自定义]]></item>
+				<item id="backcolor"><![CDATA[背景颜色]]></item>
+				<item id="backgroundimage"><![CDATA[背景图片]]></item>
+				<item id="selectrepeatshow"><![CDATA[重复方式]]></item>
+				<item id="selectattachment"><![CDATA[附着属性]]></item>
+				<item id="notbacktip"><![CDATA[使用背景图片 ]]></item>
+				<item id="hideheader"><![CDATA[隐藏页面头部]]></item>
+				<item id="backgroundpositionx"><![CDATA[纵向位置]]></item>
+				<item id="backgroundpositiony"><![CDATA[横向位置]]></item>
+				<item id="newtemplateconfig"><![CDATA[新入驻品牌页面默认配置]]></item>
+				<item id="fixtemplateconfig"><![CDATA[校正全部用户的页面设置]]></item>
+				<item id="fixtemplateconfigtip"><![CDATA[<ul>
+		<li>请先设置“<a  href="{murl}">新入驻品牌页面默认配置</a>”.</li>
+		<li>“校正全部品牌商家页面设置”将全部品牌商家页面设置统一成“新登记品牌页面默认设置”，</li>
+		<li>此操作将替换已经修改过的品牌商家页面设置，替换后无法撤销，请慎用。</li></ul>]]></item>
+				<item id="allfixtemplateconfigtip"><![CDATA[此操作无法撤销，您确定要批量校正吗?]]></item>
+				<item id="albummanage"><![CDATA[相册管理]]></item>
+				<item id="imagemanage"><![CDATA[图片管理]]></item>
+				<item id="nidongde"><![CDATA[你懂得]]></item>
+				<item id="managemsg"><![CDATA[反馈管理]]></item>
+				<item id="allowtemplate"><![CDATA[允许自定义页面]]></item>
+				<item id="allowtemplatenottip"><![CDATA[您所在的商家组无法使用页面设置功能]]></item>
+				<item id="do_view"><![CDATA[查看]]></item>
+				<item id="do_edit"><![CDATA[编辑]]></item>
+				<item id="input_imagetip"><![CDATA[请上传{w} * {h}的图片]]></item>
+				<item id="parting"><![CDATA[，]]></item>
+				<item id="multipletip"><![CDATA[多个号码请用逗号“,”分割]]></item>
+				<item id="allowmultiple"><![CDATA[允许使用多号码]]></item>
+				<item id="allowmultipletip"><![CDATA[只有允许使用多个号码的才会显示多个<br>否则只显示第一个]]></item>
+				<item id="allopenallowmultiple"><![CDATA[全部开启多号码]]></item>
+				<item id="allcloseallowmultiple"><![CDATA[全部关闭多号码]]></item>
+				<item id="allopenallowmultipletip"><![CDATA[此操作无法撤销，您确定要批量开启多号码吗?]]></item>
+				<item id="allcloseallowmultipletip"><![CDATA[此操作无法撤销，您确定要批量关闭多号码吗?]]></item>
+				<item id="pubtip_price"><![CDATA[▲ 入驻需要收取您 <span class="srred">{regprice}</span> {creditunitname}]]></item>
+				<item id="pubtip_shen"><![CDATA[▲ 入驻需要 <span class="srred">人工审核</span>，请您耐心等待审核。快速人工审核请致电: <span class="srred">{admintel}</span>]]></item>
+				<item id="pubtip_ok"><![CDATA[<li>▲ 当前免费入驻，自动审核入驻，心动不如行动，赶快入驻吧! 有任何疑问请致电：<span class="srred">{admintel}</span></li>]]></item>
+				<item id="deletealbumsucceed"><![CDATA[删除相册成功]]></item>
+				<item id="albumhavealbum"><![CDATA[请先删除此相册内的图片]]></item>
+				<item id="noalbumcatid"><![CDATA[无此相册]]></item>
+				<item id="dengjititle"><![CDATA[品牌入驻]]></item>
+				<item id="batch_upload_albumtitle"><![CDATA[批量上传到相册({albumname})]]></item>
+				<item id="allowbatchimage"><![CDATA[允许相册批量上传图片]]></item>
+				<item id="notallowbatchimage"><![CDATA[您所在的商家组不允许批量上传图片]]></item>
+				<item id="sanreetemplate"><![CDATA[三瑞模版交流]]></item>
+				<item id="template"><![CDATA[模版管理]]></item>
+				<item id="allowdeletealbum"><![CDATA[允许删除图片]]></item>
+				<item id="notallowdeletealbum"><![CDATA[您无此权限]]></item>
+				<item id="success"><![CDATA[操作成功]]></item>
+				<item id="fixalbum"><![CDATA[校正所有品牌相册：]]></item>
+				<item id="fixalbum_succeed"><![CDATA[校正所有品牌相册完成]]></item>
+				<item id="fixalbum_processing"><![CDATA[正在校正品牌相册]]></item>
+				<item id="pbid"><![CDATA[主品牌ID]]></item>
+				<item id="pbidtip"><![CDATA[设置主品牌ID，此品牌将成为主品牌的分店。]]></item>
+				<item id="tag"><![CDATA[标签管理]]></item>
+				<item id="addtag"><![CDATA[增加标签]]></item>
+				<item id="mf"><![CDATA[特色管理]]></item>
+				<item id="addmf"><![CDATA[增加特色]]></item>
+				<item id="brandmf"><![CDATA[商家特色]]></item>
+				<item id="brandtag"><![CDATA[商家标签]]></item>
+				<item id="selecttag"><![CDATA[选择标签]]></item>
+				<item id="error_maxpic"><![CDATA[图片文件尺寸过大，最大只能上传 {size} KB]]></item>
+				<item id="albumistop"><![CDATA[设为封面]]></item>
+				<item id="allowsyngroup"><![CDATA[开启同步到群组]]></item>
+				<item id="syngroupid"><![CDATA[所属群组分类]]></item>
+				<item id="syngroupidstr"><![CDATA[所属群组分类]]></item>
+				<item id="syngrouptid"><![CDATA[群组tid]]></item>
+				<item id="dzgroup"><![CDATA[群组]]></item>
+				<item id="group_nav_extra"><![CDATA[商家店铺]]></item>
+				<item id="iscard"><![CDATA[是否支持一卡通]]></item>
+				<item id="carddetail"><![CDATA[持一卡通享受的优惠政策]]></item>
+				<item id="viewbycate"><![CDATA[类型查看]]></item>
+				<item id="viewbydis"><![CDATA[地区查看]]></item>
+				<item id="cardcount"><![CDATA[卡数]]></item>
+				<item id="enddatestr"><![CDATA[有效期截至]]></item>
+				<item id="slide1"><![CDATA[默认模板幻灯片]]></item>
+				<item id="slide2"><![CDATA[hello幻灯片]]></item>
+				<item id="slide3"><![CDATA[小鸟幻灯片]]></item>
+				<item id="slide4"><![CDATA[小鸟nice幻灯片]]></item>
+				<item id="pageunit"><![CDATA[页]]></item>
+				<item id="weixin"><![CDATA[微信]]></item>
+				<item id="weixintitle"><![CDATA[商家微信帐号]]></item>
+				<item id="weixinimg"><![CDATA[微信二维码]]></item>
+				<item id="weixinpublic"><![CDATA[商家微信公众号]]></item>
+				<item id="weixinpublicpic"><![CDATA[商家微信公众号二维码图片地址]]></item>
+				<item id="SEOfit"><![CDATA[SEO设置]]></item>
+				<item id="promotion_tip"><![CDATA[<font color="#1fadbe">此项必填，并且不能重复，此项作为标识等级的高低，请以实际等级高低填写否则将影响到积分购买等级的正常购买</font>]]></item>
+				<item id="sanree_tip"><![CDATA[Sanree！提示]]></item>
+				<item id="valid_nonull"><![CDATA[此项必填，并且不能重复！]]></item>
+				<item id="valid_nonull_tips"><![CDATA[<tips class="tips" style="color:#1fadbe">此项作为标识等级的高低，请以实际等级高低填写否则将影响到积分购买等级的正常购买</tips>]]></item>
+				<item id="valid"><![CDATA[不能有同一级别的等级！]]></item>
+				<item id="valid_tips"><![CDATA[<tips class="tips" style="color:#1fadbe">如果要输入最高的等级建议输入<irec style="font-weight:700;color:red">{rec}</irec>，否则需要重新排序其他的等级</tips>]]></item>
+				<item id="group_name_tips"><![CDATA[请填写等级名称]]></item>
+				<item id="group_price"><![CDATA[等级价格]]></item>
+				<item id="promotion_price_tip"><![CDATA[<font color="#1fadbe">如果免费请填写零,如果价格为100请直接提交</font>]]></item>
+				<item id="promotion_price_null"><![CDATA[请填写等级价格]]></item>
+				<item id="promotion_record"><![CDATA[购买记录]]></item>
+				<item id="promotion_brandname"><![CDATA[商家名称]]></item>
+				<item id="promotion_username"><![CDATA[用户名]]></item>
+				<item id="promotion_group"><![CDATA[购买等级]]></item>
+				<item id="promotion_former"><![CDATA[原等级]]></item>
+				<item id="promotion_time"><![CDATA[购买时间]]></item>
+				<item id="promotion_price"><![CDATA[金额]]></item>
+				<item id="promotion_current_nograde"><![CDATA[未选择等级]]></item>
+				<item id="navigation"><![CDATA[导航管理]]></item>
+				<item id="h_goods"><![CDATA[商品]]></item>
+				<item id="h_news"><![CDATA[商讯]]></item>
+				<item id="h_coupon"><![CDATA[优惠券]]></item>
+				<item id="h_jobs"><![CDATA[招聘]]></item>
+				<item id="h_video"><![CDATA[视频]]></item>
+				<item id="h_guestbook"><![CDATA[在线预约]]></item>
+				<item id="navigation_name"><![CDATA[导航名称]]></item>
+				<item id="ismf"><![CDATA[允许商家前台编辑特色]]></item>
+				<item id="istag"><![CDATA[允许商家前台编辑标签]]></item>
+				<item id="friendly_link"><![CDATA[友情链接]]></item>
+				<item id="error_title"><![CDATA[请填写名称]]></item>
+				<item id="add"><![CDATA[添加]]></item>
+				<item id="newbanner1"><![CDATA[店招1]]></item>
+				<item id="newbannerurl1"><![CDATA[店招1 URL]]></item>
+				<item id="newbanner2"><![CDATA[店招2]]></item>
+				<item id="newbannerurl2"><![CDATA[店招2 URL]]></item>
+				<item id="newbanner3"><![CDATA[店招3]]></item>
+				<item id="newbannerurl3"><![CDATA[店招3 URL]]></item>
+				<item id="newbanner4"><![CDATA[店招4]]></item>
+				<item id="newbannerurl4"><![CDATA[店招4 URL]]></item>
+				<item id="newbanner5"><![CDATA[店招5]]></item>
+				<item id="newbannerurl5"><![CDATA[店招5 URL]]></item>
+				<item id="newbanner_tip"><![CDATA[标准尺寸: 960*275]]></item>
+				<item id="bird_slide_link"><![CDATA[幻灯链接地址]]></item>
+				<item id="bird_slide_color"><![CDATA[幻灯背景颜色]]></item>
+				<item id="newslideimgtip"><![CDATA[图片尺寸：765*350]]></item>
+				<item id="frontpage"><![CDATA[首页]]></item>
+				<item id="bird_item_detail"><![CDATA[商家详情]]></item>
+				<item id="wezgimg"><![CDATA[微商家尊贵版店招]]></item>
+				<item id="wezgimg_tip"><![CDATA[推荐图片尺寸：600*375]]></item>
+				<item id="onclickgobrand"><![CDATA[点击进入商家店铺主页]]></item>
+				<item id="noprompt"><![CDATA[不再提醒：]]></item>
+				<item id="year"><![CDATA[年]]></item>
+				<item id="month"><![CDATA[月]]></item>
+				<item id="day"><![CDATA[日]]></item>
+				<item id="nice_home"><![CDATA[广场]]></item>
+				<item id="overdue"><![CDATA[已过期]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="selectedbrand"><![CDATA[请选择品牌]]></item>
+				<item id="upload_pic"><![CDATA[上传图片]]></item>
+				<item id="nocatname"><![CDATA[请输入相册名称]]></item>
+				<item id="itemdiscount"><![CDATA[会员折扣：]]></item>
+				<item id="creatalbum"><![CDATA[创建新相册]]></item>
+				<item id="brandnameto"><![CDATA[所属品牌：]]></item>
+				<item id="brandtoname"><![CDATA[所属品牌]]></item>
+				<item id="albumcatename"><![CDATA[相册名称：]]></item>
+				<item id="albumdesc"><![CDATA[相册描述：]]></item>
+				<item id="albumdisplayorder"><![CDATA[相册排序：]]></item>
+				<item id="selectbrandname"><![CDATA[请选择所属相册]]></item>
+				<item id="uploadnewpic"><![CDATA[上传图片]]></item>
+				<item id="albumnameto"><![CDATA[所属相册]]></item>
+				<item id="selectpic"><![CDATA[选择图片]]></item>
+				<item id="editalbumname"><![CDATA[修改相册]]></item>
+				<item id="upload"><![CDATA[上传]]></item>
+				<item id="modiyalbum"><![CDATA[修改图片]]></item>
+				<item id="tuijian"><![CDATA[推荐：]]></item>
+				<item id="displayorder"><![CDATA[排序：]]></item>
+				<item id="editpicname"><![CDATA[修改图片]]></item>
+				<item id="deletepic"><![CDATA[删除图片]]></item>
+				<item id="savedisplay"><![CDATA[保存]]></item>
+				<item id="morepic"><![CDATA[更多图片>> ]]></item>
+				<item id="albumname"><![CDATA[图片名称]]></item>
+				<item id="brand"><![CDATA[品牌123]]></item>
+				<item id="refusereason"><![CDATA[拒绝原因]]></item>
+				<item id="mybrand"><![CDATA[品牌管理]]></item>
+				<item id="post_new_brand"><![CDATA[登记新品牌]]></item>
+				<item id="pass"><![CDATA[已审核]]></item>
+				<item id="businessesnew"><![CDATA[待审核]]></item>
+				<item id="refuse"><![CDATA[已拒绝]]></item>
+				<item id="no_related_brand"><![CDATA[暂无品牌]]></item>
+				<item id="inputname"><![CDATA[请输入品牌名称！]]></item>
+				<item id="inputcate"><![CDATA[请选择品牌分类!]]></item>
+				<item id="pchose"><![CDATA[请选择行业归属分类]]></item>
+				<item id="urltip"><![CDATA[可以不输入http://，如：www.ymg6.Com]]></item>
+				<item id="inputposter"><![CDATA[请上传品牌LOGO]]></item>
+				<item id="tyxieyi"><![CDATA[您必须同意使用协议，才能登记。]]></item>
+				<item id="catename"><![CDATA[分类：]]></item>
+				<item id="propaganda"><![CDATA[口号：]]></item>
+				<item id="introduction"><![CDATA[简介：]]></item>
+				<item id="contact"><![CDATA[联系：]]></item>
+				<item id="weburl"><![CDATA[网址：]]></item>
+				<item id="published_title"><![CDATA[登记新品牌]]></item>
+				<item id="published_data1"><![CDATA[入驻【品牌123】栏目时遇到问题，
+				 请联系我们：<br />咨询电话：]]></item>
+				<item id="published_data2"><![CDATA[如果您在本栏目下浏览到可疑信息，或您对本栏目有任何疑问和建议， 请]]></item>
+				<item id="published_ad"><![CDATA[刊登本栏目广告 >>]]></item>
+				<item id="recommend_brand"><![CDATA[推荐品牌]]></item>
+				<item id="sanree"><![CDATA[【SanRee】]]></item>
+				<item id="brand123"><![CDATA[品牌123]]></item>
+				<item id="support"><![CDATA[技术支持：]]></item>
+				<item id="promotion_title"><![CDATA[申请升级]]></item>
+				<item id="promotion_tips"><![CDATA[升级为<strong>{grade}</strong>等级需要消耗<strong>{cent}</strong>积分]]></item>
+				<item id="promotion_confirm"><![CDATA[确定升级]]></item>
+				<item id="promotion_cancel"><![CDATA[残忍取消]]></item>
+				<item id="promotion_gselect"><![CDATA[选择等级]]></item>
+				<item id="promotion_plase_gselect"><![CDATA[请选择等级]]></item>
+				<item id="promotion_success"><![CDATA[升级成功，感谢您的参与]]></item>
+				<item id="promotion_maxorder"><![CDATA[<span style="color:#1fadbe;">最高等级</span>]]></item>
+				<item id="promotion_current_grade"><![CDATA[您当前等级为]]></item>
+				<item id="promotion_grade"><![CDATA[当前等级]]></item>
+				<item id="promotion_cent"><![CDATA[当前积分]]></item>
+				<item id="promotion_current_no"><![CDATA[您当前]]></item>
+				<item id="promotion_current_nograde"><![CDATA[暂未选择等级]]></item>
+				<item id="promotion_record"><![CDATA[购买记录]]></item>
+				<item id="promotion_group"><![CDATA[购买等级]]></item>
+				<item id="promotion_price"><![CDATA[金额]]></item>
+				<item id="promotion_nomoney"><![CDATA[余额不足，请充值]]></item>
+				<item id="promotion_nobrand"><![CDATA[您没有该品牌，不能升级]]></item>
+				<item id="promotion_noopen"><![CDATA[未开启购买等级功能，请开启后再申请]]></item>
+				<item id="brand_name"><![CDATA[ 品牌名称：]]></item>
+				<item id="brand_cate"><![CDATA[ 品牌分类：]]></item>
+				<item id="brand_poster"><![CDATA[ 品牌LOGO]]></item>
+				<item id="brand_qq"><![CDATA[ 联系QQ：]]></item>
+				<item id="brand_msn"><![CDATA[ MSN：]]></item>
+				<item id="brand_wangwang"><![CDATA[ 阿里旺旺：]]></item>
+				<item id="brand_baiduhi"><![CDATA[ 百度Hi：]]></item>
+				<item id="brand_skype"><![CDATA[ Skype：]]></item>
+				<item id="inputtel"><![CDATA[请输入电话]]></item>
+				<item id="inputaddress"><![CDATA[请输入地址]]></item>
+				<item id="inputqq"><![CDATA[请输入QQ]]></item>
+				<item id="inputmsn"><![CDATA[请输入MSN]]></item>
+				<item id="inputwangwang"><![CDATA[请输入阿里旺旺]]></item>
+				<item id="inputbaiduhi"><![CDATA[请输入百度Hi]]></item>
+				<item id="inputskype"><![CDATA[请输入Skype]]></item>
+				<item id="brand_tel"><![CDATA[ 联系电话：]]></item>
+				<item id="brand_address"><![CDATA[ 联系地址：]]></item>
+				<item id="brand_weburl"><![CDATA[品牌网址：]]></item>
+				<item id="required"><![CDATA[必填]]></item>
+				<item id="brand_postertip"><![CDATA[ 允许的文件类型：jpg, jpeg, gif, png, bmp]]></item>
+				<item id="brand_agreement"><![CDATA[用户使用条款：]]></item>
+				<item id="brand_agreementbt"><![CDATA[我同意服务条款,并对以上信息真实性负责<p>* 红字为必填项</p>]]></item>
+				<item id="propaganda_tip"><![CDATA[限制1000个字符]]></item>
+				<item id="contact_tip"><![CDATA[限制1000个字符]]></item>
+				<item id="introduction_tip"><![CDATA[限制4000个字符]]></item>
+				<item id="zanwustr"><![CDATA[暂无]]></item>
+				<item id="nobusinesses"><![CDATA[暂时没有登记的品牌，勤劳的站长登记一个吧~0~]]></item>
+				<item id="addyu"><![CDATA[ 登记于 ]]></item>
+				<item id="thread_favorite"><![CDATA[收藏]]></item>
+				<item id="activity_member_unit"><![CDATA[人分享]]></item>
+				<item id="thread_share"><![CDATA[分享]]></item>
+				<item id="show"><![CDATA[查看]]></item>
+				<item id="reply"><![CDATA[回复]]></item>
+				<item id="brandname"><![CDATA[品牌名称]]></item>
+				<item id="addtime"><![CDATA[登记时间]]></item>
+				<item id="operation"><![CDATA[操作]]></item>
+				<item id="edit"><![CDATA[编辑]]></item>
+				<item id="delete"><![CDATA[删除]]></item>
+				<item id="clickupload"><![CDATA[点击上传]]></item>
+				<item id="haveuploaded"><![CDATA[已经上传]]></item>
+				<item id="upload_selectfile"><![CDATA[上传]]></item>
+				<item id="attachment_allow_exts"><![CDATA[可用扩展名]]></item>
+				<item id="qq"><![CDATA[qq]]></item>
+				<item id="msn"><![CDATA[msn]]></item>
+				<item id="wangwang"><![CDATA[阿里旺旺]]></item>
+				<item id="baiduhi"><![CDATA[百度Hi]]></item>
+				<item id="skype"><![CDATA[Skype]]></item>
+				<item id="address"><![CDATA[联系地址]]></item>
+				<item id="recommendationindex"><![CDATA[推荐指数]]></item>
+				<item id="recommendationindex1"><![CDATA[推荐指数：]]></item>
+				<item id="tel"><![CDATA[联系电话]]></item>
+				<item id="recommendationindextip"><![CDATA[推荐指数只能是0.0 - 99.9]]></item>
+				<item id="statistics"><![CDATA[共入驻：]]></item>
+				<item id="brandcate"><![CDATA[品牌分类]]></item>
+				<item id="adminadurl"><![CDATA[我也要出现在这里]]></item>
+				<item id="servicecenter"><![CDATA[客服中心]]></item>
+				<item id="servicetime"><![CDATA[工作时间：]]></item>
+				<item id="copyright"><![CDATA[版权信息]]></item>
+				<item id="notlimited"><![CDATA[不限]]></item>
+				<item id="oders"><![CDATA[排序:]]></item>
+				<item id="orderdefault"><![CDATA[默认]]></item>
+				<item id="ordertime"><![CDATA[时间]]></item>
+				<item id="orderrecommend"><![CDATA[推荐]]></item>
+				<item id="orderdiscount"><![CDATA[折扣]]></item>
+				<item id="brandview"><![CDATA[浏览量：]]></item>
+				<item id="brandaddress"><![CDATA[联系地址：]]></item>
+				<item id="brandqq"><![CDATA[ 联系QQ：]]></item>
+				<item id="brandmsn"><![CDATA[ MSN：]]></item>
+				<item id="brandwangwang"><![CDATA[ 阿里旺旺：]]></item>
+				<item id="brandbaiduhi"><![CDATA[ 百度Hi：]]></item>
+				<item id="brandskype"><![CDATA[ Skype：]]></item>
+				<item id="cateh"><![CDATA[所属行业：]]></item>
+				<item id="brandcity"><![CDATA[地区：]]></item>
+				<item id="brandviews"><![CDATA[人查看]]></item>
+				<item id="brandgroup"><![CDATA[品牌等级：]]></item>
+				<item id="region"><![CDATA[所属地区：]]></item>
+				<item id="login_to_reply"><![CDATA[您需要登录后才可以发表评论]]></item>
+				<item id="satisfaction"><![CDATA[满意度：]]></item>
+				<item id="sendstar"><![CDATA[点击星星给商家打分：]]></item>
+				<item id="yousay"><![CDATA[您说：]]></item>
+				<item id="notclickstar"><![CDATA[您未对商家评分]]></item>
+				<item id="pleasestar"><![CDATA[请给商家评分!]]></item>
+				<item id="pleasestarstr"><![CDATA[您对商家的评分为：]]></item>
+				<item id="markedinfo"><![CDATA[用鼠标右键选择标注]]></item>
+				<item id="markedinfo1"><![CDATA[您可以拖动此图标在地图上标注店铺位置。]]></item>
+				<item id="marked"><![CDATA[标注]]></item>
+				<item id="mapmarked"><![CDATA[地图标注：]]></item>
+				<item id="inputmappos"><![CDATA[请在地图上标注商家]]></item>
+				<item id="map_tel"><![CDATA[电话:]]></item>
+				<item id="map_address"><![CDATA[地址:]]></item>
+				<item id="map_mouth"><![CDATA[口碑：]]></item>
+				<item id="youall"><![CDATA[您可以：]]></item>
+				<item id="regionselect"><![CDATA[地区选择：]]></item>
+				<item id="inputbirthprovince"><![CDATA[请选择地区]]></item>
+				<item id="pub_discount"><![CDATA[会员折扣：]]></item>
+				<item id="errorpay"><![CDATA[错误报告]]></item>
+				<item id="errorword"><![CDATA[内容：]]></item>
+				<item id="errorwordtip"><![CDATA[请输入内容]]></item>
+				<item id="succeedmessage"><![CDATA[信息已成功提交]]></item>
+				<item id="guestbook"><![CDATA[反馈给商家]]></item>
+				<item id="getbrand"><![CDATA[认领此品牌]]></item>
+				<item id="brandstr"><![CDATA[品牌：]]></item>
+				<item id="mymsg"><![CDATA[我的信息]]></item>
+				<item id="myalbum"><![CDATA[品牌相册]]></item>
+				<item id="piclist"><![CDATA[图片列表]]></item>
+				<item id="no_pic"><![CDATA[暂无图片]]></item>
+				<item id="no_album"><![CDATA[暂无相册]]></item>
+				<item id="curalbum"><![CDATA[当前所属相册：]]></item>
+				<item id="submit"><![CDATA[提交]]></item>
+				<item id="album"><![CDATA[相册]]></item>
+				<item id="no_msg"><![CDATA[暂无信息]]></item>
+				<item id="oqq"><![CDATA[在线客服：]]></item>
+				<item id="olevel"><![CDATA[等级：]]></item>
+				<item id="odiscount"><![CDATA[折扣：]]></item>
+				<item id="otelphone"><![CDATA[电话：]]></item>
+				<item id="oaddress"><![CDATA[地址：]]></item>
+				<item id="fav"><![CDATA[已被收藏：]]></item>
+				<item id="noalbum"><![CDATA[暂无相册]]></item>
+				<item id="nopic"><![CDATA[暂无图片]]></item>
+				<item id="report"><![CDATA[举报]]></item>
+				<item id="sethomestr"><![CDATA[设为封面]]></item>
+				<item id="bigmode"><![CDATA[大图片模式]]></item>
+				<item id="middlemode"><![CDATA[中图片模式]]></item>
+				<item id="smallmode"><![CDATA[小图片模式]]></item>
+				<item id="viewthread_share_to"><![CDATA[分享到：]]></item>
+				<item id="qqtip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="msntip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="wangwangtip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="baiduhitip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="skypetip"><![CDATA[点击这里给我发消息]]></item>
+				<item id="orderclick"><![CDATA[浏览量]]></item>
+				<item id="brandconfig"><![CDATA[设置]]></item>
+				<item id="bannerconfig"><![CDATA[上传店招]]></item>
+				<item id="baseconfig"><![CDATA[基本设置]]></item>
+				<item id="submitsave"><![CDATA[提交保存]]></item>
+				<item id="yes"><![CDATA[是]]></item>
+				<item id="no"><![CDATA[否]]></item>
+				<item id="config_hidebannername"><![CDATA[隐藏店招中的名称]]></item>
+				<item id="config_bannerimg"><![CDATA[当前店招：]]></item>
+				<item id="citylist"><![CDATA[城市列表]]></item>
+				<item id="chanagecity"><![CDATA[更换城市]]></item>
+				<item id="searchbar"><![CDATA[搜索]]></item>
+				<item id="searchcitytip"><![CDATA[请输入城市名称：]]></item>
+				<item id="baidumap"><![CDATA[（百度地图）]]></item>
+				<item id="googlemap"><![CDATA[（谷歌地图）]]></item>
+				<item id="bodyconfig"><![CDATA[页面设置]]></item>
+				<item id="editinfo"><![CDATA[修改信息]]></item>
+				<item id="upload_backimagetip"><![CDATA[请选择一张图片作为页面背景.]]></item>
+				<item id="upload_wximagetip"><![CDATA[请上传尺寸大小150x150的微信二维码图片.]]></item>
+				<item id="upload_wezgimgtip"><![CDATA[请上传尺寸大小600x375的微商家尊贵版店招图片.]]></item>
+				<item id="isenableback"><![CDATA[启用自定义：]]></item>
+				<item id="backcolor"><![CDATA[背景颜色：]]></item>
+				<item id="backgroundimage"><![CDATA[背景图片：]]></item>
+				<item id="selectrepeat"><![CDATA[重复方式：]]></item>
+				<item id="selectattachment"><![CDATA[附着属性：]]></item>
+				<item id="notbacktip"><![CDATA[使用背景图片 ]]></item>
+				<item id="hideheader"><![CDATA[隐藏页面头部：]]></item>
+				<item id="backgroundpositionx"><![CDATA[纵向位置：]]></item>
+				<item id="backgroundpositiony"><![CDATA[横向位置：]]></item>
+				<item id="config_bannerimgtip"><![CDATA[友情提醒：店招尺寸为：<strong style="color:red">960*140</strong>]]></item>
+				<item id="gototip"><![CDATA[店招上传成功，3秒后跳转到店铺页面...]]></item>
+				<item id="sethome"><![CDATA[设为首页]]></item>
+				<item id="setfavorite"><![CDATA[收藏本店]]></item>
+				<item id="saveas"><![CDATA[保存到桌面]]></item>
+				<item id="new_window"><![CDATA[新窗口]]></item>
+				<item id="new_windowtip"><![CDATA[在新窗口打开]]></item>
+				<item id="pubnametip"><![CDATA[登记后名称不能修改,请认真填写]]></item>
+				<item id="selectrepeatshow"><![CDATA[重复方式：]]></item>
+				<item id="input_image"><![CDATA[请选择一张图片]]></item>
+				<item id="multipletip"><![CDATA[多个号码请用逗号“,”分割]]></item>
+				<item id="view"><![CDATA[查看]]></item>
+				<item id="temp_brandgroup"><![CDATA[品牌等级]]></item>
+				<item id="promotion_brandgroup"><![CDATA[升级等级]]></item>
+				<item id="apply_promotion"><![CDATA[申请升级]]></item>
+				<item id="pub_brandbtn"><![CDATA[品牌入驻]]></item>
+				<item id="tomybrand"><![CDATA[管理我的品牌]]></item>
+				<item id="friendlyreminder"><![CDATA[友情提醒：]]></item>
+				<item id="reminder_t1"><![CDATA[您还没有入驻品牌商家，]]></item>
+				<item id="reminder_t2"><![CDATA[点这里登记您的第一个品牌吧!]]></item>
+				<item id="confirmationdel"><![CDATA[此操作无法撤销，您确定要删除吗?]]></item>
+				<item id="newsbrandtitle"><![CDATA[最新入驻品牌商家]]></item>
+				<item id="attachment_size"><![CDATA[文件尺寸]]></item>
+				<item id="lower_than"><![CDATA[小于]]></item>
+				<item id="size_no_limit"><![CDATA[大小不限制]]></item>
+				<item id="attachment_filenums_tip"><![CDATA[建议一次上传数量不超过 <strong>20</strong>]]></item>
+				<item id="batch_upload"><![CDATA[批量上传]]></item>
+				<item id="cur_album_name"><![CDATA[当前所属相册: ]]></item>
+				<item id="cur_album_upload_msg1"><![CDATA[还能上传 ]]></item>
+				<item id="cur_album_upload_msg2"><![CDATA[张图片]]></item>
+				<item id="deletepictip"><![CDATA[您确认删除此图片吗？此操作不可撤销.]]></item>
+				<item id="erroruser"><![CDATA[您无此权限]]></item>
+				<item id="tplmf"><![CDATA[商家特色：]]></item>
+				<item id="tpltag"><![CDATA[标签]]></item>
+				<item id="tplbranch"><![CDATA[TA的分店]]></item>
+				<item id="tplbranchstr"><![CDATA[的分店]]></item>
+				<item id="h_businesses"><![CDATA[商家]]></item>
+				<item id="h_goods"><![CDATA[商品]]></item>
+				<item id="h_news"><![CDATA[商讯]]></item>
+				<item id="h_coupon"><![CDATA[优惠券]]></item>
+				<item id="tpl_category"><![CDATA[行业：]]></item>
+				<item id="totalstr1"><![CDATA[已有 ]]></item>
+				<item id="totalstr2"><![CDATA[ 个商家入驻]]></item>
+				<item id="yahei"><![CDATA[微软雅黑]]></item>
+				<item id="h_sanree"><![CDATA[三瑞出品]]></item>
+				<item id="h_brand123"><![CDATA[【品牌123】]]></item>
+				<item id="h_admintel"><![CDATA[服务热线：]]></item>
+				<item id="h_adminqq"><![CDATA[在线客服：]]></item>
+				<item id="h_newpub"><![CDATA[最新入驻]]></item>
+				<item id="h_hotbrand"><![CDATA[热门商家]]></item>
+				<item id="iscard"><![CDATA[是否支持一卡通]]></item>
+				<item id="h_brand"><![CDATA[商家：]]></item>
+				<item id="fen"><![CDATA[分]]></item>
+				<item id="tpl_district"><![CDATA[区域：]]></item>
+				<item id="orderexponent"><![CDATA[指数]]></item>
+				<item id="sminprice"><![CDATA[会员价：]]></item>
+				<item id="cminprice"><![CDATA[优惠价：]]></item>
+				<item id="claimbrand"><![CDATA[认领此商家]]></item>
+				<item id="brand_weixin"><![CDATA[微信：]]></item>
+				<item id="weixin_str1"><![CDATA[扫微信加好友]]></item>
+				<item id="weixin_str2"><![CDATA[商家微信号]]></item>
+				<item id="weixinconfig"><![CDATA[微信设置]]></item>
+				<item id="weixinnum"><![CDATA[微信号码：]]></item>
+				<item id="weixinimg"><![CDATA[微信二维码：]]></item>
+				<item id="weixinpublic"><![CDATA[商家微信公众号]]></item>
+				<item id="weixinpublicpic"><![CDATA[商家微信公众号二维码图片地址]]></item>
+				<item id="nodetail"><![CDATA[未填写优惠政策]]></item>
+				<item id="assist"><![CDATA[赞一下]]></item>
+				<item id="assistly"><![CDATA[已赞]]></item>
+				<item id="promotion_assist"><![CDATA[赞]]></item>
+				<item id="promotion_assistly"><![CDATA[您已赞]]></item>
+				<item id="assist_befor"><![CDATA[已有]]></item>
+				<item id="assist_after"><![CDATA[人觉得很赞]]></item>
+				<item id="favorite"><![CDATA[收藏]]></item>
+				<item id="frontpage"><![CDATA[首页]]></item>
+				<item id="forum"><![CDATA[论坛]]></item>
+				<item id="mf"><![CDATA[商家特色]]></item>
+				<item id="tag"><![CDATA[商家标签]]></item>
+				<item id="clicktag"><![CDATA[点击选择标签]]></item>
+				<item id="friendly_link"><![CDATA[友情链接]]></item>
+				<item id="bird_bus_add"><![CDATA[商家入驻]]></item>
+				<item id="bird_bus_rec"><![CDATA[品牌推荐]]></item>
+				<item id="bird_bus_pos"><![CDATA[我也想出现在这里！]]></item>
+				<item id="bird_bus_search"><![CDATA[搜索：]]></item>
+				<item id="bird_bus_searchbar"><![CDATA[搜索]]></item>
+				<item id="bird_bus_list"><![CDATA[商家列表]]></item>
+				<item id="bird_bus_random"><![CDATA[随机推荐]]></item>
+				<item id="bird_item_map"><![CDATA[查看地图]]></item>
+				<item id="bird_item_num"><![CDATA[次]]></item>
+				<item id="bird_item_detail"><![CDATA[商家详情]]></item>
+				<item id="bird_item_cou"><![CDATA[打折优惠]]></item>
+				<item id="bird_item_good"><![CDATA[本店商品]]></item>
+				<item id="bird_item_limit"><![CDATA[限时优惠]]></item>
+				<item id="bird_item_share"><![CDATA[网友分享]]></item>
+				<item id="bird_item_shareofme"><![CDATA[我要分享]]></item>
+				<item id="bird_item_fourm"><![CDATA[发表评论]]></item>
+				<item id="bird_item_report"><![CDATA[发表于]]></item>
+				<item id="bird_item_of"><![CDATA[对]]></item>
+				<item id="bird_item_idea"><![CDATA[发表看法]]></item>
+				<item id="bird_item_hello"><![CDATA[您好，]]></item>
+				<item id="bird_item_first"><![CDATA[请先进行评分]]></item>
+				<item id="bird_item_input"><![CDATA[限制输入30-2000个字]]></item>
+				<item id="bird_detail_content"><![CDATA[商家资料]]></item>
+				<item id="bird_detail_extra"><![CDATA[其它扩展]]></item>
+				<item id="bird_detail_addr"><![CDATA[店铺地址：]]></item>
+				<item id="bird_detail_tel"><![CDATA[店铺电话：]]></item>
+				<item id="bird_detail_introduce"><![CDATA[商家介绍：]]></item>
+				<item id="bird_detail_management"><![CDATA[我要管理]]></item>
+				<item id="bird_detail_attention"><![CDATA[关注此微信]]></item>
+				<item id="bird_detail_banner"><![CDATA[友情提醒：店招尺寸为：<strong style="color:red">960*275</strong>]]></item>
+				<item id="bird_detail_gototip"><![CDATA[店招上传成功。]]></item>
+				<item id="bird_detail_propaganda"><![CDATA[商家口号]]></item>
+				<item id="bird_detail_viewmore"><![CDATA[查看详情]]></item>
+				<item id="bird_detail_followus"><![CDATA[关注我们]]></item>
+				<item id="bird_detail_followed"><![CDATA[取消关注]]></item>
+				<item id="bird_detail_tag"><![CDATA[商家标签：]]></item>
+				<item id="bird_detail_link"><![CDATA[个性网址：]]></item>
+				<item id="bird_detail_wap"><![CDATA[点我！手机访问]]></item>
+				<item id="bird_detail_favor"><![CDATA[收藏商家]]></item>
+				<item id="bird_detail_brandno"><![CDATA[商家编号]]></item>
+				<item id="bird_detail_album"><![CDATA[品牌图库]]></item>
+				<item id="bird_detail_contact"><![CDATA[联系方式]]></item>
+				<item id="bird_album_addalbum"><![CDATA[新建相册]]></item>
+				<item id="bird_home_add"><![CDATA[一键入驻]]></item>
+				<item id="bird_home_manage"><![CDATA[商家管理]]></item>
+				<item id="bird_home_wxscan"><![CDATA[微信扫描]]></item>
+				<item id="bird_home_dynamic"><![CDATA[查询动态]]></item>
+				<item id="bird_home_attention"><![CDATA[关注]]></item>
+				<item id="bird_home_stf"><![CDATA[满意度]]></item>
+				<item id="bird_home_morec"><![CDATA[更多优惠]]></item>
+				<item id="bird_home_moreg"><![CDATA[更多商品]]></item>
+				<item id="bird_home_moren"><![CDATA[更多商讯]]></item>
+				<item id="bird_home_morej"><![CDATA[更多招聘]]></item>
+				<item id="bird_home_goto"><![CDATA[去看看]]></item>
+				<item id="wezgimgbanner"><![CDATA[微商家尊贵版店招]]></item>
+				<item id="config_wezgimgtip"><![CDATA[友情提醒：店招尺寸为：<strong style="color:red">600*375</strong>左右]]></item>
+				<item id="scancostwap"><![CDATA[扫码访问手机版]]></item>
+				<item id="collection"><![CDATA[淘贴]]></item>
+				<item id="bird_yetenter"><![CDATA[已入驻]]></item>
+				<item id="bird_we"><![CDATA[微商家]]></item>
+				<item id="upimgcode"><![CDATA[请上传图片/二维码]]></item>
+				<item id="all_sale"><![CDATA[全部分类]]></item>
+				<item id="more_cate"><![CDATA[更多分类]]></item>
+				<item id="goods_colon"><![CDATA[商品：]]></item>
+				<item id="coupon_colon"><![CDATA[优惠券：]]></item>
+				<item id="newsnotice"><![CDATA[最新公告]]></item>
+				<item id="nonotice"><![CDATA[暂无公告内容]]></item>
+				<item id="more_businesses"><![CDATA[更多商家]]></item>
+				<item id="nohotbusinesses"><![CDATA[暂无热门商家]]></item>
+				<item id="noseekbusinesses"><![CDATA[未找到商家]]></item>
+				<item id="morecoupon"><![CDATA[更多优惠劵]]></item>
+				<item id="seekfoundcoupon"><![CDATA[未找到优惠劵]]></item>
+				<item id="nohotcoupon"><![CDATA[暂无热门优惠劵]]></item>
+				<item id="moregoods"><![CDATA[更多商品]]></item>
+				<item id="seekfoundgoods"><![CDATA[未找到商品]]></item>
+				<item id="nohotgoods"><![CDATA[暂无热门商品]]></item>
+				<item id="morejobs"><![CDATA[更多招聘]]></item>
+				<item id="seekfoundjobs"><![CDATA[未找到招聘]]></item>
+				<item id="coupon_zuixin"><![CDATA[最新优惠劵]]></item>
+				<item id="goods_zuixin"><![CDATA[最新商品]]></item>
+				<item id="jobs_zuixin"><![CDATA[最新招聘]]></item>
+				<item id="news_zuixin"><![CDATA[最新商讯]]></item>
+				<item id="morenews"><![CDATA[更多商讯]]></item>
+				<item id="seekfoundnews"><![CDATA[未找到商讯]]></item>
+				<item id="activity_zuixin"><![CDATA[最新活动]]></item>
+				<item id="moreactivity"><![CDATA[更多活动]]></item>
+				<item id="seekfoundactivity"><![CDATA[未找到活动]]></item>
+				<item id="visitwe"><![CDATA[穿越到手机]]></item>
+				<item id="moretel"><![CDATA[更多电话]]></item>
+				<item id="tell_zuixin"><![CDATA[最新电话]]></item>
+				<item id="zuixincomment"><![CDATA[最新评论]]></item>
+				<item id="issue_time"><![CDATA[发表于：]]></item>
+				<item id="couponexplain"><![CDATA[优惠说明：]]></item>
+				<item id="seekfoundtel"><![CDATA[未找到电话]]></item>
+				<item id="scancode"><![CDATA[扫二维码]]></item>
+				<item id="clickclose"><![CDATA[点我关闭]]></item>
+				<item id="subbranchinfo"><![CDATA[分店信息]]></item>
+				<item id="scangzgzweixin"><![CDATA[扫码关注公众号]]></item>
+				<item id="scangzweixin"><![CDATA[扫码关注微信号]]></item>
+				<item id="scangomobile"><![CDATA[扫码穿越到手机]]></item>
+				<item id="scanzh"><![CDATA[扫公众号]]></item>
+				<item id="scanxh"><![CDATA[扫微信号]]></item>
+				<item id="entermoblie"><![CDATA[进手机版]]></item>
+				<item id="supportcoupon"><![CDATA[支持优惠：]]></item>
+				<item id="reggrade"><![CDATA[用户评分：]]></item>
+				<item id="myremark"><![CDATA[我要点评]]></item>
+				<item id="brandmap"><![CDATA[商家地图]]></item>
+				<item id="joincollect"><![CDATA[加入收藏]]></item>
+				<item id="visitors"><![CDATA[浏览人数：]]></item>
+				<item id="yetattestation"><![CDATA[已认证]]></item>
+				<item id="grade"><![CDATA[评分：]]></item>
+				<item id="scangzwx"><![CDATA[扫码关注微信]]></item>
+				<item id="brandgoods"><![CDATA[品牌商品]]></item>
+				<item id="brandcoupon"><![CDATA[商家优惠]]></item>
+				<item id="brand_news"><![CDATA[商家商讯]]></item>
+				<item id="nonews"><![CDATA[暂无商讯]]></item>
+				<item id="brandjobs"><![CDATA[商家招聘]]></item>
+				<item id="brandactivity"><![CDATA[商家活动]]></item>
+				<item id="atactivityend"><![CDATA[当前活动已截止]]></item>
+				<item id="signupcount"><![CDATA[报名人数：]]></item>
+				<item id="signupabort"><![CDATA[报名截止：]]></item>
+				<item id="brandvideo"><![CDATA[商家视频]]></item>
+				<item id="morevideo"><![CDATA[更多视频]]></item>
+				<item id="regevaluate"><![CDATA[用户评价]]></item>
+				<item id="ckwzdt"><![CDATA[查看完整地图]]></item>
+				<item id="yrmb"><![CDATA[￥]]></item>
+				<item id="detail_introduce"><![CDATA[商家介绍]]></item>
+			</item>
+			<item id="installlang">
+				<item id="header"><![CDATA[安装步骤]]></item>
+				<item id="defaultcate1"><![CDATA[餐饮美食]]></item>
+				<item id="defaultcate2"><![CDATA[酒店宾馆]]></item>
+				<item id="defaultcate3"><![CDATA[家居装饰]]></item>
+				<item id="defaultcate4"><![CDATA[美容化妆]]></item>
+				<item id="defaultcate5"><![CDATA[服装服饰]]></item>
+				<item id="defaultcate6"><![CDATA[数码家电]]></item>
+				<item id="defaultcate7"><![CDATA[母婴用品]]></item>
+				<item id="defaultcate8"><![CDATA[图书音像]]></item>
+				<item id="defaultcate9"><![CDATA[旅行社]]></item>
+				<item id="defaultcate10"><![CDATA[鲜花礼品]]></item>
+				<item id="defaultcate11"><![CDATA[休闲娱乐]]></item>
+				<item id="defaultcate12"><![CDATA[房产租房]]></item>
+				<item id="defaultcate13"><![CDATA[网络公司]]></item>
+				<item id="defaultcate14"><![CDATA[教育培训]]></item>
+				<item id="favorite"><![CDATA[收藏]]></item>
+				<item id="share"><![CDATA[分享]]></item>
+				<item id="fankui"><![CDATA[反馈]]></item>
+				<item id="baocuo"><![CDATA[报错]]></item>
+				<item id="jubao"><![CDATA[举报]]></item>
+				<item id="blockclass_index_styletexttitle"><![CDATA[品牌123_品牌文字模式]]></item>
+				<item id="blockclass_index_styleimgtitle"><![CDATA[品牌123_品牌图文模式]]></item>
+				<item id="please_back_database"><![CDATA[请先备份您的网站数据库,<br>
+	  备份后请在网站目录 {dir} 下建立 {filename} 空文件，然后进行安装或者升级操作。]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+	</item>
+</root>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title><!--{if !empty($navtitle)}-->$navtitle - <!--{/if}--><!--{if empty($nobbname)}--> $_G['setting']['bbname'] - <!--{/if}--> {lang waptitle} - Powered by Discuz!</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta content="false" name="twcClient" id="twcClient"/>
+    <meta name="data-spm" content="181.8075115"/>
+    <meta name="aplus-touch" content="1"/>
+    <link rel="shortcut icon" href="//h5.m.taobao.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="http://gw.alicdn.com/tps/i1/T1WKgOFmFgXXa.JOZB-114-114.png_q75.jpg"/>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%; }
+
+        * {
+            margin: 0;
+            padding: 0; }
+
+        body {
+            background-color: #fff; }
+
+        .top-bar-guidance {
+            font-size: 15px;
+            color: #fff;
+            height: 70%;
+            line-height: 1.8;
+            padding-left: 20px;
+            padding-top: 20px;
+            background: url(//gw.alicdn.com/tfs/TB1eSZaNFXXXXb.XXXXXXXXXXXX-750-234.png) center top/contain no-repeat; }
+        .top-bar-guidance .icon-safari {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            margin: 0 0.2em; }
+
+        .app-download-tip {
+            margin: 0 auto;
+            width: 290px;
+            text-align: center;
+            font-size: 15px;
+            color: #2466f4;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAcAQMAAACak0ePAAAABlBMVEUAAAAdYfh+GakkAAAAAXRSTlMAQObYZgAAAA5JREFUCNdjwA8acEkAAAy4AIE4hQq/AAAAAElFTkSuQmCC) left center / auto 15px repeat-x; }
+        .app-download-tip .guidance-desc {
+            background-color: #fff;
+            padding: 0 5px; }
+
+        .app-download-btn {
+            display: block;
+            width: 214px;
+            height: 40px;
+            line-height: 40px;
+            margin: 18px auto 0 auto;
+            text-align: center;
+            font-size: 18px;
+            color: #2466f4;
+            border-radius: 20px;
+            border: 0.5px #2466f4 solid;
+            text-decoration: none; }
+    </style>
+    <script id="tb-beacon-aplus" src="//g.alicdn.com/alilog/mlog/aplus_wap.js" tb-beacon-aplus="//g.alicdn.com/alilog/mlog/aplus_wap.js"></script>
+</head>
+<body>
+
+<div class="top-bar-guidance">
+    <p>{lang zhuzhu_taobao:jump_url_htm_25}<img src="//gw.alicdn.com/tfs/TB1xwiUNpXXXXaIXXXXXXXXXXXX-55-55.png" class="icon-safari" /> {lang zhuzhu_taobao:jump_url_htm_26}</p>
+    <p>{lang zhuzhu_taobao:jump_url_htm_27}~</p>
+</div>
+<div class="app-download-tip">
+    <span class="guidance-desc">{lang zhuzhu_taobao:jump_url_htm_28}</span>
+</div>
+<a class="app-download-btn" id="J_BtnDowanloadApp" href="javascript:;">
+    {lang zhuzhu_taobao:jump_url_htm_29}
+</a>
+<script>
+    !(function(){
+        var _sendGoldLog = function (goldCode){
+            try{
+                var img = document.createElement('img');
+                var t = +new Date();
+                img.src = '//gm.mmstat.com/' + goldCode + '?t=' + t;
+            }catch(e){
+
+            }
+        };
+        
+        var isWX = /MicroMessenger/i.test(navigator.userAgent);
+        var isTaobao = /AliApp\(TB/i.test(navigator.userAgent);
+        if(!isWX){  
+            var arrMatchSmb = location.href.match(/[?&]smbUrl=([^?&=]+)/i);
+            var arrMatch = location.href.match(/[?&]backUrl=([^?&=]+)/i);
+            if(arrMatchSmb && arrMatchSmb[1]){
+                document.body.style.display='none';
+                if(isTaobao){
+                    var smbUrl = decodeURIComponent(arrMatchSmb[1]);
+                    if(smbUrl){
+                        return location.replace(smbUrl);
+                    }
+                }else{
+                    _sendGoldLog('sb.sbp.todownload4unvslink');
+                    setTimeout(function(){
+                        location.replace('//h5.m.taobao.com/bcec/downloadTaobao.html');
+                    },500)
+                    return
+                }
+            }else if(arrMatch && arrMatch[1]){
+                var backUrl = decodeURIComponent(arrMatch[1]);
+                if(backUrl){
+					var backUrl = backUrl.replace('http', 'taobao');
+					location.href = backUrl;
+					console.log(backUrl);
+					setTimeout("history.back()", 10000);
+
+                }
+            }
+        }
+
+        _sendGoldLog('tbtrip.tripshare.15');
+
+        document.getElementById('J_BtnDowanloadApp').addEventListener('click', function(){
+            _sendGoldLog('tbtrip.tripshare.16');
+
+            setTimeout(function(){
+                location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.taobao.taobao&source=tripshare_taobao_click';
+            },500)
+        });
+    })();
+</script>
+</body>
+</html>

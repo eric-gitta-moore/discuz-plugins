@@ -1,0 +1,25 @@
+.brandheader{
+	height:28px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:8px;
+	background:url('images/topbg.png');
+	background-repeat:repeat-x;
+	zoom:1;
+	overflow:hidden;
+}
+
+#toptb{
+	width:980px;
+	margin:0 auto;
+	background:none;
+}
+#toptb .new {
+	color:#FFFFFF;
+}
+.brandheader a{
+	color:#FFFFFF;
+}
+#ft{
+	border:none;
+}

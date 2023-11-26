@@ -1,0 +1,6 @@
+.content-slide>a .mbg {height: 60px;}
+.content-slide>a .ico{float: left;}
+.content-slide>a .ico img {margin: 5px;}
+.content-slide>a .title {line-height: 60px;font-size: 14px;margin: 0;overflow: hidden;margin-left: 60px; min-width:80px;}
+.swiper-container {height: 160px;}
+.device {height: 200px;}

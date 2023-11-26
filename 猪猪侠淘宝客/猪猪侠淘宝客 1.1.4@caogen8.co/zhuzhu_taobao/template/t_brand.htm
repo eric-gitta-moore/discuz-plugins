@@ -1,0 +1,79 @@
+<!--{template zhuzhu_taobao:t_header}-->
+<style id="diy_style" type="text/css"></style>
+
+<!--{if $_GET[op] == 'view'}-->
+
+<div class="brand_view">
+	<img src="{echo pic_get($brand[$brand_id][big_banner], 'portal', '', '', '', '')}" alt="$brand[$brand_id][name]" />
+	<div class="brand_info">
+		<i style="background: #FFF url('{echo pic_get($brand[$brand_id][logo], 'portal', '', '', '', '')}') center no-repeat;background-size: 120px auto;"></i>
+		<h2>$brand[$brand_id][name]</h2>
+	</div>
+</div>
+
+<div class="q_item mt_20">
+	<div class="wp cl">
+		<ul class="cl" id="quan_list">
+			<!--{eval $i = 1;}-->
+			<!--{loop $list $v}-->
+				<li class="y4">
+					<i class="q_new"></i>
+					<a href="{$jump_url}$v[num_iid]&e=$v[e]&zk_final_price=$v[zk_final_price]&q_price=$v[q_price]" target="_blank">
+						<img src="$v[pict_url]" alt="$v[title]" />
+					</a>
+					<h2><a target="_blank" href="{$jump_url}$v[num_iid]"><img src="./source/plugin/zhuzhu_taobao/static/image/{if $v[user_type]}tmall{else}taobao{/if}.png">$v[title]</a></h2>
+					<div class="coupon-wrap cl">
+						<p>
+							<span class="y">30{lang zhuzhu_taobao:t_brand_htm_1} $v[volume]</span>
+							<span class="q_price">{lang zhuzhu_taobao:t_brand_htm_2}&yen; <i>$v[q_price]</i>
+						</p>
+					</div>
+					<div class="q_link">
+						<span class="y"><a>{if $v[user_type]}{lang zhuzhu_taobao:t_brand_htm_3}{else}{lang zhuzhu_taobao:t_brand_htm_4}{/if}{lang zhuzhu_taobao:t_brand_htm_5}</a></span>
+						<span class="z">{lang zhuzhu_taobao:jump_url_htm_5}{eval echo $v[zk_final_price]-$v[q_price]}{lang zhuzhu_taobao:jump_url_htm_6}</span>
+					</div>
+				</li>
+			<!--{eval $i ++}-->
+			<!--{/loop}-->
+		</ul>
+	</div>
+</div>
+
+<!--{else}-->
+<div class="brand cl">
+	<h1>
+		<span class="name">{lang zhuzhu_taobao:t_brand_htm_8}</span>
+		<span class="desc">{lang zhuzhu_taobao:t_brand_htm_9}</span>
+	</h1>
+</div>
+
+<div class="t_brand cl mb_15">
+	<ul>
+		<!--{loop $brandlist $v}-->
+		<li class="cl">
+			<a href="plugin.php?id=zhuzhu_taobao&mod=tbrand&op=view&brand_id=$v[brand_id]">
+				<img src="{echo pic_get($v['banner'], 'portal', '', '', '', '')}" alt="$v[name]" />
+				<div class="brand_info">
+					<i style="background: #FFF url('{echo pic_get($v[logo], 'portal', '', '', '', '')}') center no-repeat;background-size: 80px auto;"></i>
+					<h2>$v[name]</h2>
+				</div>
+			</a>
+			<ul>
+				<!--{loop $v[list] $vv}-->
+				<li>
+					<div class="coupon_tip cl">{lang zhuzhu_taobao:jump_url_htm_5} {eval echo $vv[zk_final_price]-$vv[q_price]} {lang zhuzhu_taobao:jump_url_htm_6}<i></i></div>
+					<a href="{$jump_url}$vv[num_iid]&e=$vv[e]&zk_final_price=$vv[zk_final_price]&q_price=$vv[q_price]" target="_blank"><img src="$vv[pict_url]" alt="$vv[title]" /></a>
+					<h2 class="wrap">$vv[title]</h2>
+				</li>
+				<!--{/loop}-->
+			</ul>
+		
+		</li>
+		<!--{/loop}-->
+	</ul>
+</div>
+
+<!--{/if}-->
+
+<!--{subtemplate zhuzhu_taobao:t_tag}-->
+<!--{subtemplate common/footer}-->

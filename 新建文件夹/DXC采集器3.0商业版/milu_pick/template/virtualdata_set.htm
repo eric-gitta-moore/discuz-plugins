@@ -1,0 +1,99 @@
+<!--{template milu_pick:pick_header}-->
+<form id="form12" name="form12" action="?{PICK_GO}virtual_data&myac=virtualdata_set" method="post"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+
+<table class="tb tb2 ">
+<tbody>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:vir_open}</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'vir_open', 'int_val' => 1, 'lang' => array('yes', 'no')), $info);}</td>
+<td s="1" class="vtop tips2">{lang milu_pick:vir_open_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:vir_online_member_count}</td>
+</tr>
+<tr class="noborder" ><td width="260" class="vtop rowform">
+<input name="set[vir_online_member_count]" type="text" class="txt" id="vir_online_member_count" value="{$info['vir_online_member_count']}" > 
+
+</td>
+  <td width="749" class="vtop tips2" s="1">{lang milu_pick:vir_online_member_count_notice}</td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:vir_online_guest_count}</td>
+</tr>
+<tr class="noborder" ><td width="260" class="vtop rowform">
+<input name="set[vir_online_guest_count]" type="text" class="txt" id="vir_online_guest_count" value="{$info['vir_online_guest_count']}" > 
+
+</td>
+  <td width="749" class="vtop tips2" s="1">{lang milu_pick:like_up}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1"> {lang milu_pick:vir_data_bei}</td>
+</tr>
+<tr class="noborder" ><td width="260" class="vtop rowform">
+<input name="set[vir_data_bei]" type="text" class="txt" id="avata_from_uid" value="{$info['vir_data_bei']}" > 
+
+</td>
+  <td width="749" class="vtop tips2" s="1">{lang milu_pick:vir_data_bei_notice}</td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1"> {lang milu_pick:today_fid_data}</td>
+</tr>
+<tr class="noborder" ><td width="260" class="vtop rowform">{$info['forumselect']}</td>
+  <td width="749" class="vtop tips2" s="1">{lang milu_pick:today_fid_data_notice}</td>
+</tr>
+
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:online_data_from}</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'online_data_from', 'int_val' => 1, 'js' => array('show_hide(\'\', \'tr_online_user_group+tr_online_user_set\' ,1);', 'show_hide(\'tr_online_user_group\', \'tr_online_user_set\' ,1);', 'show_hide(\'tr_online_user_set\', \'tr_online_user_group\' ,1);'), 'lang' => array('all_member', 'user_group', 'user_set')), $info);}</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+
+
+<tr id="tr_online_user_group"  {if $info['online_data_from'] != 2}style="display:none"{/if} class="noborder" ><td width="260" class="vtop rowform">
+{eval echo user_group_select('set[vir_data_usergroup]', $info['vir_data_usergroup']);} 
+
+</td>
+  <td width="749" class="vtop tips2" s="1"> {lang milu_pick:an_many} </td>
+</tr>
+
+<tr id="tr_online_user_set"  {if $info['online_data_from'] != 3}style="display:none"{/if} class="noborder" ><td width="260" class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[online_data_user_set]" id="online_data_user_set" cols="50" class="tarea" '..'="">{$info['online_data_user_set']}</textarea> 
+
+</td>
+  <td width="749" class="vtop tips2" s="1"><p>{lang milu_pick:online_data_user_set}</p></td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:vir_must_online}</td>
+</tr>
+<tr class="noborder" ><td width="260" class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[vir_must_online]" id="vir_must_online" cols="50" class="tarea" '..'="">{$info['vir_must_online']}</textarea> 
+
+</td>
+  <td width="749" class="vtop tips2" s="1"><p>{lang milu_pick:vir_must_online_}</p>    </td>
+</tr>
+
+
+
+<tr  class="noborder"><td class="vtop rowform"><div class="fixsel">
+<button type="submit" value="1" name="submit" class="button">{lang milu_pick:submit}</button>
+</div></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<td colspan="15"></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

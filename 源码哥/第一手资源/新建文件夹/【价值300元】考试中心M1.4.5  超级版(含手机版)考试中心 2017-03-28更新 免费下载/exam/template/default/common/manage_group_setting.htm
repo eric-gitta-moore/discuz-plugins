@@ -1,0 +1,21 @@
+		<form id="testform" method="post" autocomplete="off" action="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab&formhash=$_G[formhash]" onsubmit="$('e_textarea').value = wysiwyg ? html2bbcode(getEditorContents()) : $('e_textarea').value">
+		<input value="$_G[formhash]" name="formhash" type="hidden">
+		<div class="exfm">
+		<table cellpadding="0" cellspacing="0" class="table-set" border=0>
+			<tr><th width=60>题组名称</th><td colspan=3><input class="px m" name="name" id="name" value="$group[name]" maxlength=80 style="width:270px"></td><td rowspan=2>
+				1. 题组说明可作为组合题题干,作为组合题题干时名称前加 "<em class="xi1">#</em>" 号区别; <br>
+				2. 显示数量: 为<em class="xi1">负数</em>时随机显示题量,为<em class="xi1">正数</em>时顺序显示题量;<br>
+				&nbsp;&nbsp;&nbsp;　　　　　为<em class="xi1">0</em>时禁止显示,为<em class="xi1">空</em>时候全部显示;
+			</td></tr>
+			<tr><th width=60>每题分值</th><td width=110><input class="px n" name="score" value="$group[score]" maxlength=4></td>
+			<th width=90>最多显示数量</th><td width=80><input class="px n" name="num_max" value="$group[num_max]" maxlength=4></td>
+			</tr>
+			<tr><th>关联组GID</th><td colspan=3><input class="px m" name="assoc" id="assoc" value="<!--{if $group[assoc]}-->$group[assoc]<!--{/if}-->" maxlength=80 style="width:270px"></td>
+			<td rowspan=2>3. 多个GID用逗号分隔,如设置关联组,则各关联组分别使用该组的设置</td>
+		</table>
+		</div>
+		{eval $editor['value']= $group['content'];}
+		<!--{template exam:'.$template.'/common/editor}-->
+		<div style="clear:both"></div>
+		<input type="submit" class="pn pnc pp" id="testsubmit" style="margin-top:15px" value="确定" onclick="if($('name').value.trim()==''){alert('题组名称不能为空');return false;}">
+		</form>

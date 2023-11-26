@@ -1,0 +1,40 @@
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $_G['forum_threadlist'] $key $thread}-->
+            	<!--{if $thread['displayorder'] > 0}-->
+                	<!--{eval continue;}-->
+                <!--{/if}-->
+                <!--{eval $aprice = DB::result_first('SELECT price FROM '.DB::table('forum_trade').' WHERE tid ='.$thread[tid].'')}-->
+                <!--{eval $acostprice = DB::result_first('SELECT costprice FROM '.DB::table('forum_trade').' WHERE tid ='.$thread[tid].'')}-->
+                <!--{eval $alocus = DB::result_first('SELECT locus FROM '.DB::table('forum_trade').' WHERE tid ='.$thread[tid].'')}-->
+                <!--{eval $aquality = DB::result_first('SELECT quality FROM '.DB::table('forum_trade').' WHERE tid ='.$thread[tid].'')}-->
+                <!--{eval $atotalitems = DB::result_first('SELECT totalitems FROM '.DB::table('forum_trade').' WHERE tid ='.$thread[tid].'')}-->
+                <li>
+                	<div class="list-item">
+                    	<div class="p">
+                        	<a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra"><!--{hook/forumdisplay_littlepic_mobile $key}--></a>
+                        </div>
+                        <div class="d">
+                            <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra"><h3 class="d-title" $thread[highlight]>$thread[subject]</h3></a>
+                            <p class="d-price">
+                                <em class="h"><span class="price-icon">￥</span><span class="font-num">$aprice</span></em>
+                                {if $acostprice}<del><span class="price-icon">￥</span><span class="font-num">$acostprice</span></del>{/if}
+                            </p><!--From www.moq u8 .com -->
+                            <div class="d-main">
+                            	{if $aquality == 1}
+                                <p class="d-freight">$alang_quanxin</p>
+                                {else}
+                                <p class="d-freight" style="background:#F40;">$alang_ershou</p>
+                                {/if}
+                                {if $atotalitems}
+                                <p class="d-num"><span class="font-num">$atotalitems</span>人付款</p>
+                                {else}
+                                <p class="d-num"><span class="font-num">0</span>人付款</p>
+                                {/if}
+                                
+                                {if $alocus}<p class="d-area">$alocus</p>{/if}
+                            </div>
+                    	</div>
+                    </div>
+				</li>
+                <!--{/loop}-->

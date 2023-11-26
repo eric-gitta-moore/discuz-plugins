@@ -1,0 +1,56 @@
+<!--{template milu_pick:pick_header}-->
+<script type="text/javascript">
+
+function rules_share(id, name){
+	if(!is_lan == 'yes') {
+		showDialog("{lang milu_pick:share_no_allow}", 'notice');
+		return;
+	}	
+	var desc = $('desc_'+id).innerHTML;
+	show_html_window('download_rules', '{lang milu_pick:share_rules}', 410, 287, '<div class="c bart" style=" width:100%; height:210px;"><p style=" height:23px;line-height:23px;margin-top:15px;"><span style=" float:left;width:70px;">{lang milu_pick:rules_name}:</span><input type="text" class="txt" id="rules_name" value="'+name+'" name="rules_name" style="float:left; margin:0 10px; width:175px"></p><p style=" display:block; float:left; margin:10px 0;"><span style=" float:left;margin:0 0 10px 0; ">{lang milu_pick:rules_desc}:</span><textarea  class="warea" cols="50" id="rules_desc" name="rules_desc" rows="6" >'+desc+'</textarea></p></div><p class="o pns"><button onclick="rules_data('+id+',\'system_rules\', \'share\');" class="pn pnc" name="dsf" type="submit"><span>{lang milu_pick:ok}</span></button><button onclick="hideWindow(\'download_rules\');" class="pn" name="dsf" type="reset"><em>{lang milu_pick:cancel}</em></button></p>');
+	
+}
+
+
+</script>
+<form id="cpform" action="?{PICK_GO}system_rules" autocomplete="off" method="post" name="cpform">
+<input type="hidden" value="4e816df0" name="formhash"><input type="hidden" value="" name="scrolltop" id="formscrolltop">
+   </p>
+    <table class="tb tb2 ">
+	<tr>
+	  <th colspan="17" class="partition">{lang milu_pick:system_rules_list}</th>
+	</tr>
+<tbody><tr class="header"><th></th>
+<th width="150">{lang milu_pick:rules_name}</th>
+  <th width="400">{lang milu_pick:desc}</th>
+  <th>{lang milu_pick:list_public_author}</th>
+  <th>{lang milu_pick:class}</th>
+  <th>{lang milu_pick:op}</th>
+</tr></tbody>
+  <tbody id="">
+  <!--{if $info['rs']}-->
+   <!--{loop $info['rs'] $key $rs}-->
+<tr class="hover"><td class="td25"><input type="checkbox"  name="rid[]" value="{$rs[rid]}" class="checkbox"></td><td width="150"><div><a href="{$rs['url']}" target="_blank">{$rs['rules_name']}</div></td>
+  <td width="400" id="desc_{$rs['rid']}">{$rs['rule_desc']}</td>
+  <td>{$rs['rule_author']}</td>
+  <td>{if $rs['rules_type']==1}{lang milu_pick:bbs}{else}{lang milu_pick:article}{/if}</td>
+  <td><a href="?{PICK_GO}system_rules&myac=rules_edit&rid={$rs[rid]}" >{lang milu_pick:edit}</a>&nbsp;<a href="?{PICK_GO}system_rules&myac=rules_edit&rid={$rs[rid]}&pick_copy=1">{lang milu_pick:copy}</a>
+   &nbsp;<a href="javascript:void(0)" onclick="rules_trun('{$rs['rid']}', 'system')">{lang milu_pick:trun}</a>
+  &nbsp;<a style="display:none" title="{lang milu_pick:update_desc}" href="?{PICK_GO}system_rules&myac=rules_update&rules_hash={$rs[rules_hash]}&tpl=no">{lang milu_pick:update}</a>&nbsp;<a href="?{PICK_GO}system_rules&myac=rules_export&rid={$rs[rid]}&tpl=1">{lang milu_pick:export}</a>&nbsp;<a href="?{PICK_GO}system_rules&myac=rules_del&rid={$rs[rid]}&tpl=1">{lang milu_pick:del_op}</a>
+  &nbsp;<a href="javascript:void(0)" onclick="rules_share('{$rs['rid']}', '{$rs[rules_name]}')" >{lang milu_pick:share}</a>  </td>
+</tr>
+   <!--{/loop}-->
+   <!--{else}-->
+  <tr class="hover"><td colspan="6" align="center" class="td25">{lang milu_pick:no_data}</td></tr>
+  <!--{/if}-->
+  </tbody><tbody style="display: none" id="subnav_6"></tbody>
+<tbody></tbody><tbody><tr><td colspan="17"><div class="cuspages right">{$info['multipage']}</div>
+      <div class="fixsel"><input type="checkbox" name="chkall" id="chkall" class="checkbox" onclick="checkAll('prefix', this.form, 'rid')"><label for="chkall">{lang milu_pick:all_select}</label>&nbsp;
+        <label>
+        <select name="myac" id="myac">
+         <!-- <option value="rules_export">µ¼³ö</option>-->
+          <option value="rules_del">{lang milu_pick:del}</option>
+        </select>
+        </label>
+  <input style="float:none" type="submit" class="btn" name="articlesubmit" value="{lang milu_pick:submit}"></div></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'submit'); });</script></tbody></table>
+</form>

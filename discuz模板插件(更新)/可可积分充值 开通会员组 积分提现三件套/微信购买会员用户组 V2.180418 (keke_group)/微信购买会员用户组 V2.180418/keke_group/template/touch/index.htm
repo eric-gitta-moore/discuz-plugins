@@ -1,0 +1,316 @@
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+        <title>{$title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+		
+    	<script type="text/javascript" src="source/plugin/keke_group/js/jquery.js"></script>
+		<script>jQuery.noConflict();</script>
+    	<link href="source/plugin/keke_group/template/css/wapstyle.css?v=1" rel="stylesheet" type="text/css">
+	</head>
+<body>
+<div class="keke_warning"></div>
+ <form name="alipayment" action="plugin.php" method="get"  id="alipayment">
+        <input type="hidden" name="id" value="keke_group:payapi" >
+        <input type="hidden" name="formhash" value="{FORMHASH}" >
+<div class="header fix">
+
+	<div class="headerbg"></div>
+    <a href="/user.d?m=chat&amp;city=nn" class="chat" id="wapmysf_B01_05">
+        <span class="replay-ico active"></span>
+    </a>
+    <span class="prove">
+        <a href="javascript:history.back(-1);" class="back"></a>
+    </span>
+    <span class="myrec">
+   		{if $_GET['p']==my}<a href="plugin.php?id=keke_group">{lang keke_group:langt31}</a>{else}<a href="plugin.php?id=keke_group&p=my">{lang keke_group:langt32}</a>{/if}
+    </span>
+     <span class="switchgro">
+   		<a href="plugin.php?id=keke_group&p=sw">{lang keke_group:langt33}</a>
+    </span>
+    <span class="uhead">
+        <a href="#">
+            <b class="relative">
+                <img class="head" src="uc_server/avatar.php?uid={$_G['uid']}&size=small">
+            </b>
+            <img class="hi" src="source/plugin/keke_group/template/images/hi.png">
+        </a>
+    </span>
+    
+    {if $_G['uid']}<a href="javascript:;" class="usnmae">{$_G['username']}</a>{else}<a href="member.php?mod=logging&action=login" class="usnmae">{lang keke_group:langt37}</a>{/if}
+    <nav>
+        <ul class="flexBox">
+            <li><a href="home.php?mod=spacecp&ac=usergroup"><span class="current">{lang keke_group:langt05} [ {$nowgroup['title']} ]</span></a>{if $nowgroup['overdue']}<b style="font-weight:500; margin:0 5px;">&</b>{lang keke_group:langt40}{/if}</li>
+             <li><span class="currents" style="font-size:12px; color:#fdcac8">{lang keke_group:langt06} / {$nowgroup['time']}</span></li>
+        </ul>
+    </nav>
+</div>
+{if $_GET['p']==my}
+<section class="mylist fix">
+	<nav>
+    	<ul>
+        	{if $list}{$list}{else}<li class="nolist">{lang keke_group:langt07}</li>{/if}
+		</ul>
+        {$multipage}
+    </nav>
+</section>
+{elseif $_GET['p']=='sw'}
+<section class="mylist fix">
+	<nav>
+   	  <ul class="mygro">
+      		{if $expirylist}
+      		{loop $expirylist $keys $vals}
+        	<li {if $n%2==0}class="sele"{/if}>
+                <span class="rsw">{if $vals['type']=='ext'}<a href="plugin.php?id=keke_group" class="hightline">{lang keke_group:langt08}</a>{/if}{if !($_G['groupid']==$keys)}{if !$vals[noswitch]}<a href="javascript:" onClick="_group_switch('{$keys}')">{lang keke_group:langt09}</a>{/if}{/if}</span>
+                <em class="groico"><img src="{if $vals['ico']}$vals['ico']{else}source/plugin/keke_group/template/images/ico7.png{/if}" alt=""></em>
+                <div class="pup"> {$vals['grouptitle']} </div>
+                <div class="dow"> {if $vals['type']=='ext'}{lang keke_group:langt17} / {$vals['time']}{else}{lang keke_group:langt18}{/if}</div>
+            </li>
+            {eval $n++;}
+            {/loop}
+            {else}
+            	<li class="nolist">{lang keke_group:langt19}<p style="margin-top:15px;"><a href="plugin.php?id=keke_group" class="btns">{lang keke_group:langt20}</a></p></li>
+            {/if}
+		</ul>
+    </nav>
+</section>
+
+<script>	
+	function _group_switch(groupid){
+		var formhash='{FORMHASH}';
+		jQuery.get('{$_G[siteurl]}plugin.php?id=keke_group:swgro', {groupid:groupid,formhash:formhash},function (datas){
+			if(datas.state==1){
+				warning('{lang keke_group:langt21}',1);setTimeout(function() {window.location.reload();}, 2000);return false;
+			}else{
+				warning(datas.msg,2);
+				return false;
+			}
+		}, "json");
+	}
+	
+</script>
+
+{elseif $_GET['p']=='loading'}
+        <div class="loadings">
+            <img src="source/plugin/keke_group/template/images/llls.gif" width="200"><p class="ldp">{lang keke_group:langt29}</p><p class="ldp">{lang keke_group:langt30}</p>
+        </div>
+        <script>
+            var orderid='{$orderid}';
+            setInterval(function(){
+                jQuery.get('{$_G[siteurl]}plugin.php?id=keke_group:checkorder', {orderid:orderid},function (datas){
+                    if(datas.state==1){window.location.href = 'plugin.php?id=keke_group&p=my&orderid='+orderid;return false;}else{return false;}
+                }, "json");
+            },2000); 
+        </script>
+{else}
+<section class="moneylist fix" style="margin-top:10px;">
+	<nav class="guclearfix"><div class="hg"> {lang keke_group:langt24} </div>
+    	{loop $gorupdata $key $val}
+            <div class="service-list mr_35 {if $key==0}actives{/if}"  data-money="{$val['money']}" data-time="{$val['time']}" data-buygroupid="{$val['id']}">
+                <em><img src="{$val['ico']}" alt=""></em>
+                <div class="ct">
+                <b>{$val['groupname']}</b>
+                <p class="ms">{lang keke_group:langt17}{$val['money']}{lang keke_group:langt22} / {lang keke_group:langt06} {$val['time']}{lang keke_group:langt23}</p>
+                </div>
+               	<div class="quanxian" style="display:none">{loop $val[tequan] $tq}<span class="tq">{$tq}</span>{/loop}</div>
+           </div>
+         {/loop}
+	</nav>
+</section>
+<input type="hidden" name="buygroupid" id="buygroupid" value="{$gorupdata[0]['id']}" >
+<section class="fix subboxs" style=" padding:0px 10px 20px 10px; margin-top:20px;   ">
+        <div class="subbox">
+            <div class="hg"> {lang keke_group:langt25}</div>
+            <div class="czcontents" style="line-height:50px">
+               <div class="quanxian" id="viewtq">
+                   {loop $gorupdata[0][tequan] $tq}<span class="tq">{$tq}</span>{/loop}
+                 </div>
+            </div>
+        </div>
+</section>
+
+<section class="pays fix " style=" padding-top:20px; margin-top:0px;    border-top: 10px solid #f4f4f4;">
+	{if $alipayoff }
+	<div class="pay-menu">
+    	<input type="radio" name="zftype" value="1" {if !$iswx}checked="true"{/if} id="zftype"><label>
+        <div class="flol">
+        	<img src="source/plugin/keke_group/template/images/pay_04.png">
+        </div>
+        <div class="info">
+        	<p>{lang keke_group:langt10}</p>
+            <span>{lang keke_group:langt11}</span>
+        </div>
+        <i></i>
+		</label>
+    </div>
+    {/if}
+    {if $wxpayoff}
+    <div class="pay-menu">
+    	<input type="radio" name="zftype" value="2" {if $iswx}checked="true"{/if} id="zftype"><label>
+        <div class="flol">
+        	<img src="source/plugin/keke_group/template/images/pay_05.png">
+        </div>
+        <div class="info">
+        	<p>{lang keke_group:langt12}</p>
+            <span>{lang keke_group:langt13}</span>
+        </div>
+        <i></i>
+		</label>
+    </div>
+    <div id="ewm"></div>
+ 	{/if}
+    {if !$alipayoff && !$wxpayoff}
+    <div class="remind">
+    	{lang keke_group:langt15}
+    </div>
+    {/if}
+</section>
+
+<div class="mm-btn" id="btn"><a href="javascript:void(0);" id="Submit">{lang keke_group:langt16}</a></div>
+</form>
+
+<script>
+jQuery(function() {
+	var zjdtis=jQuery("#zjdtis");
+	var recharge=jQuery("#recharge");
+	var moneyQuantity=jQuery("#moneyQuantity");
+	
+	
+	jQuery(".service-list").on("click", function() {
+				var that=jQuery(this);
+				that.siblings().removeClass("actives");
+				that.addClass("actives");
+				var money=that.attr("data-money"),
+				validity=that.attr("data-time"),
+				buygroupid=that.attr("data-buygroupid"),
+				tqs=that.children(".quanxian").html();
+				jQuery("#countNum").html(money);
+				jQuery("#validity").html(validity);
+				jQuery("#buygroupid").val(buygroupid);
+				jQuery("#viewtq").html(tqs);
+			});
+	
+	jQuery(".moneylist li").on("click", function() {
+				jQuery(this).siblings().removeClass("on");
+				jQuery(this).addClass("on");
+				var nn=jQuery(this).hasClass("zdy");
+				if(nn){
+					zjdtis.hide();
+					recharge.show();
+					moneyQuantity.attr("value","");
+				}else{
+					zjdtis.show();
+					recharge.hide();
+					var money=jQuery(this).attr("money");
+					moneyQuantity.attr("value",money);
+				};
+				
+			});
+				
+	jQuery("#Submit").on("click", function() {
+		
+			var zftype=jQuery('input:radio[name="zftype"]:checked').val();
+			if(!zftype){
+				return false;
+			}
+			var uids='{$_G[uid]}';
+			if(uids<1){
+				warning('{lang keke_group:langt37}',2);
+				 setTimeout(function() {window.location.href='member.php?mod=logging&action=login';}, 4000);
+				return false;
+			}
+			if(zftype==1){
+				jQuery('#alipayment').submit();
+			}else{
+				jQuery.get('{$_G[siteurl]}plugin.php?id=keke_group:payapi', {
+					 zftype:zftype,buygroupid:jQuery("#buygroupid").val()
+				},function (data){
+					//alert(obj2string(data));
+					if(data.err){
+						alert(data.err);
+					}else if(data.h5payurl){
+						window.location.href=data.h5payurl; 
+					}else if(data.ewmurl){
+						jQuery('#ewm').html(data.ewmurl);
+					}else{
+						callpay(data);
+					}
+				}, "json");
+			}	
+			});
+			
+});
+	
+	function jsApiCall(appis)
+	{
+		WeixinJSBridge.invoke(
+			'getBrandWCPayRequest',
+			appis,
+			function(res){
+			/*	WeixinJSBridge.log(res.err_msg);
+				alert(res.err_code+res.err_desc+res.err_msg);*/
+				if(res.err_msg == 'get_brand_wcpay_request:ok'){
+					window.location.href = '{$returnurl}';
+				}
+			}
+		);
+	}
+
+	function callpay(appi)
+	{
+		if (typeof WeixinJSBridge == "undefined"){
+		    if( document.addEventListener ){
+		        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+		    }else if (document.attachEvent){
+		        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+		        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+		    }
+		}else{
+		    jsApiCall(appi);
+		}
+	}
+
+	function obj2string(o){ 
+			 var r=[]; 
+			 if(typeof o=="string"){ 
+			 return "\""+o.replace(/([\'\"\\])/g,"\\$1").replace(/(\n)/g,"\\n").replace(/(\r)/g,"\\r").replace(/(\t)/g,"\\t")+"\""; 
+			 } 
+			 if(typeof o=="object"){ 
+			 if(!o.sort){ 
+			  for(var i in o){ 
+			  r.push(i+":"+obj2string(o[i])); 
+			  } 
+			  if(!!document.all&&!/^\n?function\s*toString\(\)\s*\{\n?\s*\[native code\]\n?\s*\}\n?\s*$/.test(o.toString)){ 
+			  r.push("toString:"+o.toString.toString()); 
+			  } 
+			  r="{"+r.join()+"}"; 
+			 }else{ 
+			  for(var i=0;i<o.length;i++){ 
+			  r.push(obj2string(o[i])) 
+			  } 
+			  r="["+r.join()+"]"; 
+			 } 
+			 return r; 
+			 } 
+			 return o.toString(); 
+			}
+</script>
+{/if}
+ <script>
+  function warning(text,type){
+	  var ico='ld.gif';
+	  if(type==1){
+		  ico='ok.png';
+	  }else if(type==2){
+		  ico='no.png';
+	  }
+	  text='<img src="source/plugin/keke_group/template/images/'+ico+'"><br>'+text;
+	  jQuery('.keke_warning').show().html(text);
+	  if(type!=3){
+		  setTimeout(function() {jQuery('.keke_warning').fadeOut();}, 3000);
+	  }
+  }
+  </script>
+</body></html>

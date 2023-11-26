@@ -1,0 +1,120 @@
+<!--{template milu_pick:pick_header}-->
+
+<style>
+#member_field_ul li{ width:120px;}
+</style>
+<form id="form12" name="form12" action="?{PICK_GO}member&myac=member_set" method="post"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+<table class="tb tb2 ">
+<tbody><tr>
+  <th colspan="15" class="partition">{lang milu_pick:base_set}</th>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:member_pick_url}:</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[url]" type="text" class="txt" id="url" value="{$info['url']}" > 
+
+</td>
+  <td class="vtop tips2" s="1">{lang milu_pick:member_pick_url_notice}</td>
+</tr>
+
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:uid_range}</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[uid_range]" id="uid_range" cols="50" class="tarea" '..'="">{$info['uid_range']}</textarea>
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:uid_range_notice}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:pick_need_login}<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_login] == 1} class="checked" {/if}><input {if $info[is_login] == 1} checked="checked" {/if} name="set[is_login]" type="radio" onclick="show_hide('show_login','',1);" show="" class="is_login" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_login] != 1} class="checked" {/if}><input  type="radio" {if $info[is_login] != 1} checked="checked" {/if}  value="2" name="set[is_login]" onclick="show_hide('show_login','',2);" class="is_login">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<tbody id="show_login" {if $info[is_login] != 1}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">cookie:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[login_cookie]" id="login_cookie" cols="50" class="tarea w_area" >{$info['login_cookie']}</textarea></td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+<tr onMouseOver="setfaq(this, 'faq1')">
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform">{lang milu_pick:test_url}:</span></td>
+</tr>
+<tr ><td width="600" class="vtop rowform"><input name="set[login_test_url]" type="text" class="txt" id="login_test_url" value="{$info['login_test_url']}"></td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform"><a onclick="login_test()" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></span></td>
+</tr>
+
+
+</tbody>
+<!--
+<tr >
+  <td colspan="2" class="td27" s="1">必须的会员资料项</td>
+</tr>
+
+<tr class="noborder" ><td colspan="2" class="vtop rowform"> <div>{echo show_member_field_html($info['member_field'])} </div><p  class="filter_html" style="float:none; clear:both; display:block; padding:5px; border-top:1px dashed #FF99CC; width:95%"><input type="checkbox" name="chkall" id="chkall" class="checkbox" onclick="checkAll('prefix', this.form, 'member_field')"><label for="chkall">全选</label> 
+&nbsp;<span class="tips2">勾选上的资料项，目标站都具备才采集，比如勾选了“  上次活动时间  ”，那么如果采集的会员没有此项资料，会跳过采集下一个</span></p></td>
+</tr>
+-->
+<!--
+<tr ><td width="600" class="vtop rowform"><input name="set[test_uid]" type="text" class="txt" id="test_uid" value="{$info['test_uid']}"></td>
+<td class="vtop tips2" s="1">请填入用来测试获取的uid,不填则系统默认取上面所填uid范围的第一个uid</td>
+</tr>
+
+  <td s="1" class="vtop "><a onclick="get_user_info()" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a><span id="detail_ID_test_show" style="margin-left:5px;"></span></td>
+</tr>
+-->
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:must_chinese}</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<ul onmouseover="altStyle(this);"><li {if $info['username_chinese'] == 1 }class="checked"{/if}><input {if $info['username_chinese'] == 1}checked="checked" {/if} type="radio" value="1" show="" onclick= name="set[username_chinese]">
+&nbsp;{lang milu_pick:yes}</li><li {if $info['username_chinese'] == 2 || !$info['username_chinese']}class="checked"{/if}><input type="radio"  name="set[username_chinese]" value="2" {if $info['username_chinese'] == 2 || !$info['username_chinese']}checked="checked" {/if}>
+&nbsp;{lang milu_pick:no}</li></ul>
+</td>
+  <td class="vtop tips2" s="1">{lang milu_pick:no_chinese_jump}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:pick_all_num}:</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[num]" type="text" class="txt" id="num" value="{$info['num']}" > 
+
+</td>
+  <td class="vtop tips2" s="1">{lang milu_pick:pick_num_notice}</td>
+</tr>
+
+
+
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:jump_num}</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[jump_num]" type="text" class="txt" id="jump_num" value="{$info['jump_num']}" > 
+
+</td>
+  <td class="vtop tips2" s="1">{lang milu_pick:pick_page_num_notice}</td>
+</tr>
+
+<td colspan="15"><div class="fixsel"><input type="submit" class="btn" id="submit_addsubmit" name="addsubmit" title="{lang milu_pick:save_notice}" value="{lang milu_pick:submit}"></div></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

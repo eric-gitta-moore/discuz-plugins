@@ -1,0 +1,30 @@
+{if VIP}
+
+{eval echo pickOutput::show_title(milu_lang('get_post_user_info'));}
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_get_thread_user}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  	 {echo pickOutput::radio(array('name' => 'is_get_thread_user', 'int_val' => 2, 'js' => array("show_hide('show_get_thread_user','',1)", "show_hide('show_get_thread_user','',2)"), 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}
+ </td>
+  <td class="vtop tips2" s="1">{lang milu_pick:only_user_to_bbs}</td>
+</tr>
+
+<tbody id="show_get_thread_user" {if $info['is_get_thread_user'] != 1} style="display:none"{/if}>
+
+{eval echo pickOutput::rules_get_output(array('no_test' => 1, 'name' => 'thread_user', 'title' => milu_lang('post_user_rules'), 'textarea_desc' => milu_lang('user_info_get_username') ), $info);}
+
+{eval echo pickOutput::rules_get_output(array('no_test' => 1,  'name' => 'thread_dateline', 'textarea_desc' => milu_lang('user_info_get_dateline'), 'title' => milu_lang('public_time').' '.milu_lang('get_rules') ), $info);}
+
+{eval echo pickOutput::show_tr(array('name' => milu_lang('is_get_user_other'),'desc' => milu_lang('is_get_user_other_notice'), 'arr' => array('name' => 'is_get_user_other', 'int_val' => 2, 'info' => $info, 'js' => array(0 => 'show_hide(\'user_other_rules_show\', \'\', 1);', 1 => 'show_hide(\'user_other_rules_show\', \'\', 2);') )), 'radio');}
+{eval $info['user_other_rules'] = !$info['user_other_rules'] ? $_G['cache']['evn_milu_pick']['user_other_rules'] : $info['user_other_rules'];}
+<tr id="user_other_rules_show" {if $info['is_get_user_other'] != 1}style="display:none" {/if} class="noborder"><td class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" cols="50" '..'="" onkeyup="textareasize(this, 0)" id="user_other_rules" class="tarea length_6 w_area" style="height:81px;" name="set[user_other_rules]">{$info['user_other_rules']}</textarea></td><td class="vtop tips2" s="1">{eval echo milu_lang('user_other_rules');}</td></tr>
+
+<tr >
+    <td s="1" class="td27" colspan="2"><a onclick="get_user_info_test('thread_dateline')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></td>
+</tr>
+
+</tbody>
+
+{/if}

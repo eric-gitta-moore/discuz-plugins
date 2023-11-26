@@ -1,0 +1,160 @@
+{template common/header}
+<script type="text/javascript" src="source/plugin/ljdaka/js/jquery.js"></script>
+<script type="text/javascript">
+var jq=jQuery.noConflict();
+</script>
+<style type="text/css">
+
+	.pn {
+  background: url("../../static/image/common/pn.png") repeat-x scroll 0 0 #E5E5E5;
+  border: 1px solid #999999;
+  box-shadow: 0 1px 0 #E5E5E5;
+  cursor: pointer;
+  height: 23px;
+  margin-right: 3px;
+  overflow: hidden;
+  padding: 0;
+  vertical-align: middle;
+}
+.pnc, a.pnc {
+  background-color: #0066CC;
+  background-position: 0 -48px;
+  border-color: #235994;
+  color: #FFFFFF !important;
+}
+</style>
+<div class="wp" id="wp"><div class="bm cl" id="pt">
+<div class="z">
+<a title="$_G[setting][bbname]" class="nvhm" href="./">$_G['setting']['bbname']</a><em>&rsaquo;</em>
+<a href="plugin.php?id=ljdaka:daka&action=msg&formhash={FORMHASH}">{lang ljdaka:daka1}</a>
+</div>
+</div>
+<div class="ct2 wp cl" id="ct">
+<div class="mn cl">
+<div class="bm">
+<div class="tb tb_h cl">
+<ul>
+<li  width="20%" style="float:left">
+<a href="plugin.php?id=ljdaka:ranklist" {if !$_GET['mod']}style="background-color: #91CD51;color: #FFFFFF;cursor: default;"{/if}>{lang ljdaka:daka35}</a></li>
+
+<li  width="20%" style="float:left">
+<a href="plugin.php?id=ljdaka:ranklist&mod=z" {if $_GET['mod']=='z'}style="background-color: #91CD51;color: #FFFFFF;cursor: default;"{/if}>{lang ljdaka:daka36}</a></li>
+
+<li  width="20%" style="float:left">
+<a href="plugin.php?id=ljdaka:ranklist&mod=y" {if $_GET['mod']=='y'}style="background-color: #91CD51;color: #FFFFFF;cursor: default;"{/if}>{lang ljdaka:daka37}</a></li>
+
+<li   width="20%" style="float:left;padding-right:2%;">
+<a href="plugin.php?id=ljdaka:ranklist&mod=all" {if $_GET['mod']=='all'}style="background-color: #91CD51;color: #FFFFFF;cursor: default;"{/if}>{lang ljdaka:daka38}</a></li>
+<li  width="18%" style="float:left">
+<a  href="plugin.php?id=ljdaka:daka&action=msg&formhash={FORMHASH}" style="background-color: red;color: #FFFFFF;cursor: default;">{lang ljdaka:daka18}</a></li>
+</ul>
+</div>
+<br/>
+<div style="margin:10px 0 0 0;" class="datalist">
+<div class="notice" style="border:1px dashed #f60; background-color:#FFC">$tips</div>
+<table width="100%" bordercolor="#cccccc" border="1">
+<tbody>
+{if $_GET['mod']=='z'}
+<tr bgcolor="#F2F2F2" align="center">
+<td width="25%">{lang ljdaka:daka12}</td>
+<td width="25%">{lang ljdaka:daka13}</td>
+<td width="25%">{lang ljdaka:daka39}</td>
+<td width="25%">{lang ljdaka:daka40}</td>
+</tr>
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_z $key=>$rank}-->
+<tr align="center">
+<td height="35"> $sign</td>
+<td >
+<a href="home.php?mod=space&uid={$rank['uid']}">
+$rank['username']</a></em></div></td>
+<td>$rank[zhouday]</td>
+<td>$rank[zhoumoney]</td>
+
+</tr>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+{elseif $_GET['mod']=='y'}
+<tr bgcolor="#F2F2F2" align="center">
+<td width="25%">{lang ljdaka:daka12}</td>
+<td width="25%">{lang ljdaka:daka13}</td>
+<td width="25%">{lang ljdaka:daka41}</td>
+<td width="25%">{lang ljdaka:daka42}</td>
+</tr>
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_y $key=>$rank}-->
+<tr align="center">
+<td height="35"> $sign</td>
+<td >
+<a href="home.php?mod=space&uid={$rank['uid']}">
+$rank['username']</a></em></div></td>
+<td>$rank[yueday]</td>
+<td>$rank[yuemoney]</td>
+</tr>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+{else}
+<tr bgcolor="#F2F2F2" align="center">
+<td width="7%">{lang ljdaka:daka12}</td>
+<td width="14%">{lang ljdaka:daka13}</td>
+<td width="14%">{lang ljdaka:daka19}</td>
+<td width="14%">{lang ljdaka:daka14}</td>
+<td width="14">{lang ljdaka:daka15}</td>
+<td width="14%">{lang ljdaka:daka20}</td>
+<td width="10%">{lang ljdaka:daka21}</td>
+<td width="13%">{lang ljdaka:daka43}</td>
+</tr>
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_all $key=>$rank}-->
+<tr align="center">
+<td height="35"> $sign</td>
+<td ><a href="home.php?mod=space&uid={$rank['uid']}">
+$rank['username']</a></em></div></td>
+<td>$rank['day']</td>
+<td>$rank['allday']</td>
+<td>$rank['fen']</td>
+<td>$rank['money']</td>
+<!--{eval $today=date('Y-m-d',$rank['timestamp']);}-->
+<!--{eval $todays=date('Y-m-d',$_G['timestamp']);}-->
+<td><!--{if $today==$todays}--><font color="green">{lang ljdaka:daka22}</font><!--{else}--><a href="http://www.moqu8.com" onclick='showWindow("ljdaka","plugin.php?id=ljdaka:daka&action=msg&formhash={FORMHASH}");'><font color="#CCCCCC">{lang ljdaka:daka23}</font></a><!--{/if}--></td>
+<td><!--{eval echo dgmdate($rank['timestamp']);}--></td>
+</tr>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+{/if}
+
+</tbody></table>
+<div style="clear:both">$paging</div>
+<div style="margin-top:30px;"></div>
+                
+</div>
+</div>
+</div>
+<div class="sd">
+<div class="bm">
+<div class="bm_h">
+<h2>{lang ljdaka:daka16}</h2>
+</div>
+<div class="bm_c">
+$gg</div>
+</div>
+<div class="bm">
+<div class="bm_h">
+<h2>{lang ljdaka:daka17}</h2>
+</div>
+<div class="bm_c">
+<div class="avt y"><img src="uc_server/avatar.php?uid={$_G['uid']}&size=small"></b></div>
+<p><em>{lang ljdaka:daka24}</em><span class="lt"><b>{$ranklist_br[$uid]['rank_br']}</b></span></p>
+<p><em>{lang ljdaka:daka25}</em><span class="lt"><b>{$ranklist_br[$uid]['day']}</b></span></p>
+<p><em>{lang ljdaka:daka26}</em><span class="lt"><b>{$ranklist_br[$uid]['alldays']}</b></span></p>
+<p><em>{lang ljdaka:daka27}</em><span class="lt"><b>{$ranklist_br[$uid]['money']}</b></span></p>
+<p><em>{lang ljdaka:daka28}</em><span class="lt"><b>{$ranklist_br[$uid]['jljifen2']}</b></span></p>
+<p><em>{lang ljdaka:daka29}</em><span class="lt"><font color="red"><b><!--{if $config[zhouqi]}-->{$config[zhouqi]}{lang ljdaka:daka30}<!--{else}-->{lang ljdaka:daka31}<!--{/if}--></b></font></span></p>
+</div>
+</div>
+        <div class="bm">
+$banquan
+</div>
+</div>
+</div>	</div>
+{template common/footer}

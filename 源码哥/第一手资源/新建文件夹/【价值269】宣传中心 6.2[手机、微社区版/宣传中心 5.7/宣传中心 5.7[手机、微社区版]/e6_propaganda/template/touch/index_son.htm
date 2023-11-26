@@ -1,0 +1,41 @@
+<!--{template e6_propaganda:header}-->
+<script>
+e6(function(){
+	e6('#more').on("click",function(event){
+		var page = e6(this).attr("page");
+		page = parseInt(page) + 1;
+		e6.post('plugin.php?id=e6_propaganda&nav=son', {page:page}, function(data) {
+			data = data.replace(/(^\s+)|(\s+$)/g,"");
+			if (data) {
+				e6("#son_list").append(data).listview('refresh');
+				e6("#more").attr("page", page);
+			} else {
+				e6("#footer").hide();
+			}
+		});
+	});
+});
+</script>
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{$e6_nav_name}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" id="son_list">
+			<li data-role="list-divider" data-theme="c">{$e6_nav_name}</li> 
+			<li class="e6_li top_title"><span>{lang e6_propaganda:username}</span><span>{lang e6_propaganda:group}</span><span>{lang e6_propaganda:regdate}</span></li>
+			<!--{loop $son_list $v}-->
+			<li class="e6_li">
+				<span>{$v['username']}</span><span>{$v['groupid']}</span><span>{$v['date']}</span>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{if $count > count($son_list)}-->
+	<div data-role="footer" data-theme="b" id="footer">
+		<h1 id="more" page="1">{lang e6_propaganda:more} >></h1>
+	</div>
+	<!--{/if}-->
+</div>
+<!--{template common/footer}-->

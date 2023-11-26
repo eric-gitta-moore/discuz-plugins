@@ -1,0 +1,61 @@
+<header class="header" id="page-header">
+	<div class="nav">
+        <a class="z back" href="#"><i class="iconfont icon-back_light"></i></a>		
+        <span class="name">$_G['forum'][name]</span>
+		<a href="javascript:;" class="ashare y"><i class="iconfont icon-fenxiang"></i></a>
+    </div>
+</header>
+<!--{template common/top_fix}-->
+
+
+<div class="cl">
+<ul class="ainuo_forumtop cl">
+    <li>
+        <div class="abody">
+            <!--{eval $isfav = DB::result_first("SELECT favid FROM ".DB::table('home_favorite')." where id=".$_G[fid]." and idtype='fid' and uid='$_G[uid]'");}-->
+            <!--{if !$isfav || !$_G[uid]}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum" id="a_favorite" class="afa_fav">+ $alang_gz</a>
+            <!--{else}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum&formhash={FORMHASH}" class="afa_fav gy">$alang_yiguanzhu</a>
+            <!--{/if}--><!--From www.moq u8 .com -->
+            <p>
+            $alang_today: <em>$_G[forum][todayposts]</em>
+            $alang_uzhuti: <em>$_G[forum][threads]</em>
+            </p>
+            
+        </div>
+    </li>
+</ul>
+</div>
+
+<!--{hook/forumdisplay_top_mobile}-->
+
+
+<!--{if $quicksearchlist && !$_GET['archiveid']}-->
+	<!--{subtemplate forum/search_sortoption}-->
+<!--{else}-->
+	<!--{subtemplate forum/type}-->
+<!--{/if}-->
+
+
+<!--{if empty($_G['forum']['sortmode'])}-->
+    {if $_G['forum_threadcount']}
+    <div class="wthreadlist" id="threadlist">
+        <ul id="ainuoloadmore" class="ainuoloadmore">
+			<!--{subtemplate forumlist/word_list}-->
+        </ul> 
+    </div>
+    {else}
+    <div class="ainuoemp">{lang forum_nothreads}</div>
+    {/if}
+
+<!--{else}-->
+    <!--{subtemplate forum/forumdisplay_sort}-->
+<!--{/if}-->
+
+<div id="ainuoloadempty"></div>
+<!--{if $_G[forum][threads] && ($_G[forum][threads] > $_G[tpp])}-->
+<div id="loading" class="loading G-animate-load-wrap">
+	<div class="load-loading"><span class="loading02"></span> <span class="load-word">$alang_loading</span></div>
+</div>
+<!--{/if}-->

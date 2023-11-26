@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="spacecss"><![CDATA[]]></item>
+	<item id="layoutdata">
+		<item id="diy1">
+			<item id="frame`frameC4V2Zv">
+				<item id="attr">
+					<item id="name"><![CDATA[frameC4V2Zv]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`frameC4V2Zv_left">
+					<item id="attr">
+						<item id="name"><![CDATA[frameC4V2Zv_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_312">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_312]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+					<item id="block`portal_block_313">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_313]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+					<item id="block`portal_block_314">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_314]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+					<item id="block`portal_block_315">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_315]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+					<item id="block`portal_block_316">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_316]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+					<item id="block`portal_block_317">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_317]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+					<item id="block`portal_block_318">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_318]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+					<item id="block`portal_block_319">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_319]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+	<item id="blockdata">
+		<item id="block">
+			<item id="312">
+				<item id="bid"><![CDATA[312]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-标题]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="ainuotopic_header food_header">
+    <div class="nav">
+        <a href="javascript:history.back();" class="z back"><i class="iconfont icon-back_light"></i></a>
+        <span class="name">美食频道</span>
+        <a id="ainuo_toggle_menu" href="javascript:;" class="y"><i class="iconfont icon-menu1"></i></a>
+    </div>
+</div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"ainuotopic_header food_header\">
+    <div class=\"nav\">
+        <a href=\"javascript:history.back();\" class=\"z back\"><i class=\"iconfont icon-back_light\"></i></a>
+        <span class=\"name\">美食频道</span>
+        <a id=\"ainuo_toggle_menu\" href=\"javascript:;\" class=\"y\"><i class=\"iconfont icon-menu1\"></i></a>
+    </div>
+</div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1501577460]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="313">
+				<item id="bid"><![CDATA[313]]></item>
+				<item id="blockclass"><![CDATA[forum_thread]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-焦点图]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle">
+					<item id="name"><![CDATA[]]></item>
+					<item id="blockclass"><![CDATA[forum_thread]]></item>
+					<item id="makethumb"><![CDATA[0]]></item>
+					<item id="getpic"><![CDATA[1]]></item>
+					<item id="getsummary"><![CDATA[0]]></item>
+					<item id="settarget"><![CDATA[0]]></item>
+					<item id="moreurl"><![CDATA[0]]></item>
+					<item id="fields">
+						<item id="0"><![CDATA[pic]]></item>
+						<item id="1"><![CDATA[url]]></item>
+						<item id="2"><![CDATA[title]]></item>
+					</item>
+					<item id="template">
+						<item id="raw"><![CDATA[<div class="ainuo_qinzi_focus">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        [loop]
+            <div class="swiper-slide" style="background:url({pic}) no-repeat;background-size:cover;"><a href="{url}"><p>{title}</p><div class="acover"></div></a></div>
+        [/loop]
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>]]></item>
+						<item id="footer"><![CDATA[]]></item>
+						<item id="header"><![CDATA[]]></item>
+						<item id="indexplus">
+						</item>
+						<item id="index">
+						</item>
+						<item id="orderplus">
+						</item>
+						<item id="order">
+						</item>
+						<item id="loopplus">
+						</item>
+						<item id="loop"><![CDATA[<div class="swiper-slide" style="background:url({pic}) no-repeat;background-size:cover;"><a href="{url}"><p>{title}</p><div class="acover"></div></a></div>]]></item>
+					</item>
+					<item id="hash"><![CDATA[b8f5afeb]]></item>
+				</item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[thread]]></item>
+				<item id="param">
+					<item id="tids"><![CDATA[]]></item>
+					<item id="uids"><![CDATA[]]></item>
+					<item id="keyword"><![CDATA[]]></item>
+					<item id="tagkeyword"><![CDATA[]]></item>
+					<item id="typeids"><![CDATA[]]></item>
+					<item id="recommend"><![CDATA[0]]></item>
+					<item id="viewmod"><![CDATA[0]]></item>
+					<item id="rewardstatus"><![CDATA[0]]></item>
+					<item id="picrequired"><![CDATA[1]]></item>
+					<item id="orderby"><![CDATA[lastpost]]></item>
+					<item id="postdateline"><![CDATA[0]]></item>
+					<item id="lastpost"><![CDATA[0]]></item>
+					<item id="highlight"><![CDATA[0]]></item>
+					<item id="titlelength"><![CDATA[40]]></item>
+					<item id="summarylength"><![CDATA[80]]></item>
+					<item id="startrow"><![CDATA[0]]></item>
+					<item id="items"><![CDATA[5]]></item>
+				</item>
+				<item id="shownum"><![CDATA[5]]></item>
+				<item id="cachetime"><![CDATA[3600]]></item>
+				<item id="cachetimerange"><![CDATA[]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1502337313]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="314">
+				<item id="bid"><![CDATA[314]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-导航6图]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="ainuo_food_nav cl">
+	<ul>
+		<li><a href=""><img src="template/qu_app/touch/style/css/topic/food1.jpg" /><p>家常菜</p></a></li>
+        <li><a href=""><img src="template/qu_app/touch/style/css/topic/food2.jpg" /><p>快手菜</p></a></li>
+        <li><a href=""><img src="template/qu_app/touch/style/css/topic/food3.jpg" /><p>下饭菜</p></a></li>
+        <li><a href=""><img src="template/qu_app/touch/style/css/topic/food4.jpg" /><p>早餐</p></a></li>
+        <li><a href=""><img src="template/qu_app/touch/style/css/topic/food5.jpg" /><p>鱼类</p></a></li>
+        <li><a href=""><img src="template/qu_app/touch/style/css/topic/food6.jpg" /><p>肉类</p></a></li>
+	</ul>
+</div>
+<div class="grey_line cl"></div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"ainuo_food_nav cl\">
+	<ul>
+		<li><a href=\"\"><img src=\"template/qu_app/touch/style/css/topic/food1.jpg\" /><p>家常菜</p></a></li>
+        <li><a href=\"\"><img src=\"template/qu_app/touch/style/css/topic/food2.jpg\" /><p>快手菜</p></a></li>
+        <li><a href=\"\"><img src=\"template/qu_app/touch/style/css/topic/food3.jpg\" /><p>下饭菜</p></a></li>
+        <li><a href=\"\"><img src=\"template/qu_app/touch/style/css/topic/food4.jpg\" /><p>早餐</p></a></li>
+        <li><a href=\"\"><img src=\"template/qu_app/touch/style/css/topic/food5.jpg\" /><p>鱼类</p></a></li>
+        <li><a href=\"\"><img src=\"template/qu_app/touch/style/css/topic/food6.jpg\" /><p>肉类</p></a></li>
+	</ul>
+</div>
+<div class=\"grey_line cl\"></div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1502328382]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="315">
+				<item id="bid"><![CDATA[315]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-热门菜谱]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="ainuo_food_hot2 cl">
+	<ul>
+		<li>
+        	<img src="template/qu_app/touch/style/css/topic/hot1.jpg">
+            <a class="ahot" href="">&nbsp;</a>
+        </li>
+		<li>
+        	<img src="template/qu_app/touch/style/css/topic/hot2.jpg">
+            <p class="aname">热门菜谱</p>
+            <a class="ahot" href="">&nbsp;</a>
+		</li>
+		<li>
+        	<img src="template/qu_app/touch/style/css/topic/hot3.jpg">
+            <p class="aname">营养健康</p>
+            <a class="ahot" href="">&nbsp;</a>
+		</li>
+	</ul>
+</div>
+<div class="grey_line cl"></div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"ainuo_food_hot2 cl\">
+	<ul>
+		<li>
+        	<img src=\"template/qu_app/touch/style/css/topic/hot1.jpg\">
+            <a class=\"ahot\" href=\"\">&nbsp;</a>
+        </li>
+		<li>
+        	<img src=\"template/qu_app/touch/style/css/topic/hot2.jpg\">
+            <p class=\"aname\">热门菜谱</p>
+            <a class=\"ahot\" href=\"\">&nbsp;</a>
+		</li>
+		<li>
+        	<img src=\"template/qu_app/touch/style/css/topic/hot3.jpg\">
+            <p class=\"aname\">营养健康</p>
+            <a class=\"ahot\" href=\"\">&nbsp;</a>
+		</li>
+	</ul>
+</div>
+<div class=\"grey_line cl\"></div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1502328400]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="316">
+				<item id="bid"><![CDATA[316]]></item>
+				<item id="blockclass"><![CDATA[forum_thread]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-热门推荐]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle">
+					<item id="name"><![CDATA[]]></item>
+					<item id="blockclass"><![CDATA[forum_thread]]></item>
+					<item id="makethumb"><![CDATA[1]]></item>
+					<item id="getpic"><![CDATA[1]]></item>
+					<item id="getsummary"><![CDATA[0]]></item>
+					<item id="settarget"><![CDATA[0]]></item>
+					<item id="moreurl"><![CDATA[0]]></item>
+					<item id="fields">
+						<item id="0"><![CDATA[url]]></item>
+						<item id="1"><![CDATA[title]]></item>
+						<item id="2"><![CDATA[pic]]></item>
+					</item>
+					<item id="template">
+						<item id="raw"><![CDATA[<div class="ainuo_food_hot cl">
+	<div class="atit"><i class="iconfont icon-hotfill"></i>热门推荐</div>
+    <div class="acon cl">
+    	[loop]
+    	<a href="{url}" title="{title}"><img src="{pic}" width="{picwidth}" height="{picheight}" /><p>{title}</p></a>
+        [/loop]
+    </div>
+</div>
+<div class="grey_line cl"></div>]]></item>
+						<item id="footer"><![CDATA[]]></item>
+						<item id="header"><![CDATA[]]></item>
+						<item id="indexplus">
+						</item>
+						<item id="index">
+						</item>
+						<item id="orderplus">
+						</item>
+						<item id="order">
+						</item>
+						<item id="loopplus">
+						</item>
+						<item id="loop"><![CDATA[<a href="{url}" title="{title}"><img src="{pic}" width="{picwidth}" height="{picheight}" /><p>{title}</p></a>]]></item>
+					</item>
+					<item id="hash"><![CDATA[b3573a40]]></item>
+				</item>
+				<item id="picwidth"><![CDATA[700]]></item>
+				<item id="picheight"><![CDATA[350]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[thread]]></item>
+				<item id="param">
+					<item id="tids"><![CDATA[]]></item>
+					<item id="uids"><![CDATA[]]></item>
+					<item id="keyword"><![CDATA[]]></item>
+					<item id="tagkeyword"><![CDATA[]]></item>
+					<item id="typeids"><![CDATA[]]></item>
+					<item id="recommend"><![CDATA[0]]></item>
+					<item id="viewmod"><![CDATA[0]]></item>
+					<item id="rewardstatus"><![CDATA[0]]></item>
+					<item id="picrequired"><![CDATA[1]]></item>
+					<item id="orderby"><![CDATA[views]]></item>
+					<item id="postdateline"><![CDATA[0]]></item>
+					<item id="lastpost"><![CDATA[0]]></item>
+					<item id="highlight"><![CDATA[0]]></item>
+					<item id="titlelength"><![CDATA[40]]></item>
+					<item id="summarylength"><![CDATA[80]]></item>
+					<item id="startrow"><![CDATA[0]]></item>
+					<item id="items"><![CDATA[1]]></item>
+				</item>
+				<item id="shownum"><![CDATA[1]]></item>
+				<item id="cachetime"><![CDATA[3600]]></item>
+				<item id="cachetimerange"><![CDATA[]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1502337329]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="317">
+				<item id="bid"><![CDATA[317]]></item>
+				<item id="blockclass"><![CDATA[forum_thread]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-精品阅读]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle">
+					<item id="name"><![CDATA[]]></item>
+					<item id="blockclass"><![CDATA[forum_thread]]></item>
+					<item id="makethumb"><![CDATA[1]]></item>
+					<item id="getpic"><![CDATA[1]]></item>
+					<item id="getsummary"><![CDATA[1]]></item>
+					<item id="settarget"><![CDATA[0]]></item>
+					<item id="moreurl"><![CDATA[0]]></item>
+					<item id="fields">
+						<item id="0"><![CDATA[url]]></item>
+						<item id="1"><![CDATA[title]]></item>
+						<item id="2"><![CDATA[pic]]></item>
+						<item id="3"><![CDATA[summary]]></item>
+					</item>
+					<item id="template">
+						<item id="raw"><![CDATA[<div class="ainuo_food_jingpin cl">
+	<div class="atit"><i class="iconfont icon-medal_fill_light"></i>精品阅读</div>
+    <div class="acon cl">
+    	<ul>
+        	[loop]
+        	<li>
+            	<a href="{url}" title="{title}">
+                	<div class="aleft cl">
+                    	<img src="{pic}" width="{picwidth}" height="{picheight}" />
+                    </div>
+                    <div class="aright cl">
+                    	<h2>{title}</h2>
+                        <p>{summary}</p>
+                    </div>
+                </a>
+            </li>
+            [/loop]
+        </ul>
+    </div>
+</div>
+<div class="grey_line cl"></div>]]></item>
+						<item id="footer"><![CDATA[]]></item>
+						<item id="header"><![CDATA[]]></item>
+						<item id="indexplus">
+						</item>
+						<item id="index">
+						</item>
+						<item id="orderplus">
+						</item>
+						<item id="order">
+						</item>
+						<item id="loopplus">
+						</item>
+						<item id="loop"><![CDATA[<li>
+            	<a href="{url}" title="{title}">
+                	<div class="aleft cl">
+                    	<img src="{pic}" width="{picwidth}" height="{picheight}" />
+                    </div>
+                    <div class="aright cl">
+                    	<h2>{title}</h2>
+                        <p>{summary}</p>
+                    </div>
+                </a>
+            </li>]]></item>
+					</item>
+					<item id="hash"><![CDATA[c912c901]]></item>
+				</item>
+				<item id="picwidth"><![CDATA[220]]></item>
+				<item id="picheight"><![CDATA[160]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[thread]]></item>
+				<item id="param">
+					<item id="tids"><![CDATA[]]></item>
+					<item id="uids"><![CDATA[]]></item>
+					<item id="keyword"><![CDATA[]]></item>
+					<item id="tagkeyword"><![CDATA[]]></item>
+					<item id="typeids"><![CDATA[]]></item>
+					<item id="recommend"><![CDATA[0]]></item>
+					<item id="viewmod"><![CDATA[0]]></item>
+					<item id="rewardstatus"><![CDATA[0]]></item>
+					<item id="picrequired"><![CDATA[1]]></item>
+					<item id="orderby"><![CDATA[replies]]></item>
+					<item id="postdateline"><![CDATA[0]]></item>
+					<item id="lastpost"><![CDATA[0]]></item>
+					<item id="highlight"><![CDATA[0]]></item>
+					<item id="titlelength"><![CDATA[40]]></item>
+					<item id="summarylength"><![CDATA[80]]></item>
+					<item id="startrow"><![CDATA[0]]></item>
+					<item id="items"><![CDATA[3]]></item>
+				</item>
+				<item id="shownum"><![CDATA[3]]></item>
+				<item id="cachetime"><![CDATA[3600]]></item>
+				<item id="cachetimerange"><![CDATA[]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1502337341]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="318">
+				<item id="bid"><![CDATA[318]]></item>
+				<item id="blockclass"><![CDATA[member_member]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-美食达人]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle">
+					<item id="name"><![CDATA[]]></item>
+					<item id="blockclass"><![CDATA[member_member]]></item>
+					<item id="makethumb"><![CDATA[1]]></item>
+					<item id="getpic"><![CDATA[0]]></item>
+					<item id="getsummary"><![CDATA[0]]></item>
+					<item id="settarget"><![CDATA[0]]></item>
+					<item id="moreurl"><![CDATA[0]]></item>
+					<item id="fields">
+						<item id="0"><![CDATA[url]]></item>
+						<item id="1"><![CDATA[title]]></item>
+						<item id="2"><![CDATA[avatar_big]]></item>
+						<item id="3"><![CDATA[reason]]></item>
+					</item>
+					<item id="template">
+						<item id="raw"><![CDATA[<div class="ainuo_food_daren cl">
+	<div class="atit"><i class="iconfont icon-friendfill"></i>美食达人</div>
+    <div class="acon cl">
+    	<ul>
+        	[loop]
+        	<li>
+            	<a href="{url}" title="{title}">
+                	<div class="aleft cl">
+                    	<img src="{avatar_big}" width="{picwidth}" height="{picheight}" />
+                    </div>
+                    <div class="aright cl">
+                    	<h2>{title}</h2>
+                        <p>{reason}</p>
+                    </div>
+                </a>
+            </li>
+            [/loop]
+        </ul>
+    </div>
+</div>
+<div class="grey_line cl"></div>]]></item>
+						<item id="footer"><![CDATA[]]></item>
+						<item id="header"><![CDATA[]]></item>
+						<item id="indexplus">
+						</item>
+						<item id="index">
+						</item>
+						<item id="orderplus">
+						</item>
+						<item id="order">
+						</item>
+						<item id="loopplus">
+						</item>
+						<item id="loop"><![CDATA[<li>
+            	<a href="{url}" title="{title}">
+                	<div class="aleft cl">
+                    	<img src="{avatar_big}" width="{picwidth}" height="{picheight}" />
+                    </div>
+                    <div class="aright cl">
+                    	<h2>{title}</h2>
+                        <p>{reason}</p>
+                    </div>
+                </a>
+            </li>]]></item>
+					</item>
+					<item id="hash"><![CDATA[95752ecd]]></item>
+				</item>
+				<item id="picwidth"><![CDATA[150]]></item>
+				<item id="picheight"><![CDATA[150]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[member]]></item>
+				<item id="param">
+					<item id="uids"><![CDATA[]]></item>
+					<item id="special"><![CDATA[]]></item>
+					<item id="gender"><![CDATA[]]></item>
+					<item id="xbirthprovince"><![CDATA[]]></item>
+					<item id="xresideprovince"><![CDATA[]]></item>
+					<item id="avatarstatus"><![CDATA[0]]></item>
+					<item id="orderby"><![CDATA[credits]]></item>
+					<item id="extcredit"><![CDATA[1]]></item>
+					<item id="lastpost"><![CDATA[]]></item>
+					<item id="startrow"><![CDATA[0]]></item>
+					<item id="items"><![CDATA[3]]></item>
+				</item>
+				<item id="shownum"><![CDATA[3]]></item>
+				<item id="cachetime"><![CDATA[3600]]></item>
+				<item id="cachetimerange"><![CDATA[]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1502337346]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="319">
+				<item id="bid"><![CDATA[319]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[[AINUO]美食频道-底部]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="ainuo_food_bottom cl">
+	<a href="">进入美食论坛>></a>
+</div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"ainuo_food_bottom cl\">
+	<a href=\"\">进入美食论坛>></a>
+</div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[3600]]></item>
+				<item id="cachetimerange"><![CDATA[]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1502337303]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+		</item>
+		<item id="style">
+		</item>
+	</item>
+</root>

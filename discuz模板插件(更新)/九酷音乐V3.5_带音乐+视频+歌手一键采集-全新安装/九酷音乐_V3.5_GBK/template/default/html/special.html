@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[special:name] - [special:classname] - [qianwei:webname]</title>
+<meta name="Keywords" content="[special:name]" />
+<meta name="Description" content="[special:name],[qianwei:webname]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/singer.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:tempurl]js/topcommon.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+[qianwei:head]
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box musicBus mt bgWrite">
+   <ul class="clearfix directNew">
+   {qianwei:class sort=turn order=asc}<li><a class="directName" target="_blank" href="[class:link]">[class:name]</a><a class="directPlay" target="_blank" href="[class:link]"></a></li>{/qianwei:class}
+  </ul>
+</div>
+<div class="box">
+ <h2 class="crumb">当前位置 &gt; [special:classname] &gt; [special:name]</h2>
+</div>
+<div class="box clearfix detail">
+  <div class="left fl bgWrite">
+    <h2>专辑介绍</h2>
+    <div class="clearfix detail_box"> <img width="150" height="150" src="[special:pic]" class="fl">
+      <div class="fr detail_ab">
+        <h3>专辑名称：<b>[special:name]</b></h3>
+        <p>发行公司：[special:gongsi]</p>
+	<p>语言：[special:yuyan]</p>
+	<p>创建时间：[special:time style=Y-m-d h:f:s]</p>
+        <p class="zjTag">所属歌手：<a href="[special:singerlink]" target="_blank">[special:singername]</a></p>
+        <p><a href="javascript:void(0)" onclick="qianwei.musicPlayer('{qianwei:music specialid=auto}{song}[music:id],{/qianwei:music}')" class="album_play" title="播放整张专辑">播放</a></p>
+      </div>
+    </div>
+    <div class="clearfix detail_box detail_his">
+      <div class="album-info-introduction">
+          <div class="introduction-all">[special:intros]
+          <a href="javascript:void(0)" class="moreJianjie">……更多简介↓</a>
+          <a href="javascript:void(0)" class="lessJianjie">收起简介↑</a>
+          </div>
+          </div>
+    </div>
+<script type="text/javascript">
+$(function(){
+$(".moreJianjie").live("click",function(){
+$(".introduction-all").addClass("unfold")
+})
+$(".lessJianjie").live("click",function(){
+$(".introduction-all").removeClass("unfold")
+})
+})
+</script>
+    <form name="form" action="[qianwei:path]play.php?id=" method="get">
+      <div class="clearfix detail_box detail_list">
+        <ol id="f1">{qianwei:music specialid=auto}<li><input type="checkbox" checked name="Url" value="{song}[music:id]" /><span class="detail_num">[music:i]</span><a class="song_title" href="[music:link]" target="_blank">[music:name]</a><a href="[music:singerlink]" target="_blank" class="songer">[music:singername]</a><span class="detail_icon">{if:'[music:bestnum]'>='3'}<a class="songVeryGood"></a>{else}{end if}{if:'[music:bestnum]'>'0' && '[music:bestnum]'<'3'}<a class="songGood"></a>{else}{end if}<a class="play" href="[music:link]" title="试听" target="_blank">试听</a><a class="add" title="加入列表" onclick="Addplay('{song}[music:id]')">加入列表</a><a class="down" href="[music:downlink]" title="下载" target="_blank">下载</a></span></li>{/qianwei:music}</ol>
+        <div class="setPlay"> <a title="全选/反选" class="setPlayXuan setPlayXuanCur" onclick="javascript:quanxuan('f1');" style="cursor:pointer;">全选/反选</a> <a title="播放" class="setPlayPlay" onclick="javascript:lbplay();" style="cursor:pointer;">播放</a> <a title="加入列表" class="setPlayAdd" onclick="javascript:clk('playadd','f1');" style="cursor:pointer;">加入列表</a> </div>
+      </div>
+    </form>
+  </div>
+  <div class="right fr">
+    <div class="detail_silde bgWrite clearfix">
+      <h2>类似推荐</h2>
+      <ul>{qianwei:special loop=4 sort=stars classid=auto}<li><a href="[special:link]" target="_blank"><img width="120" height="120" src="[special:pic]" title="[special:name]"></a><p><a href="[special:link]" target="_blank">[special:name]</a></p></li>{/qianwei:special}</ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function Addplay(url){
+var ifplay= GetCookie("jk_ifplay");
+if(ifplay=="1"){
+var now = new Date();
+var ss = now.getTime();
+now.setTime(ss + 12*60*60*1000);
+document.cookie = "jk_addplay="+(url)+";domain=[qianwei:weburl];path=[qianwei:path];expires="+ now.toGMTString();
+asyncbox.tips("恭喜，已经添加到连续播放列表！", "success", 1500);
+}else{if(url.split(",").length-1>1){sendplayer(url);}else{sendplayer(url);}}}
+var old="";
+function quanxuan(obj){
+	if(old!=obj.toString()){
+		document.form.reset();
+		old = obj.toString();
+	}	
+	with(document.getElementById(obj)){
+		var ins = getElementsByTagName("input");
+		for(var i=0;i<ins.length;i++){
+				ins[i].checked=!ins[i].checked;
+		}
+	}
+}
+function playallquanxuan(obj){
+	document.form.reset();
+	with(document.getElementById(obj)){
+		var ins = getElementsByTagName("input");
+		for(var i=0;i<ins.length;i++){
+				ins[i].checked=true;
+		}
+	}
+}
+function lbplay(){
+	var newx="",firstid="";
+	var ok=false;
+	var lens=eval("document.form.Url").length;
+	if(lens==undefined){lens=1}
+	if(lens>1){
+		for (var i=0;i<lens;i++) 
+		{
+	
+		var temp=eval("document.form.Url["+i+"]");
+			if(temp.checked){
+				if(temp.value.replace("@","")!=""&&temp.value.replace("@","")!="0"){
+					if(firstid=="")firstid=temp.value.replace("@","");
+					newx=newx+temp.value.replace("@","")+",";
+					ok=true;
+				}
+			}
+		}
+	}else{
+		ok=true;
+		if(document.form.Url.value.replace("@","")!=""&&document.form.Url.value.replace("@","")!="0"){
+			newx=document.form.Url.value.replace("@","")+",";
+		}
+	}
+	if(ok){	
+		if(newx.length>2009){
+			asyncbox.tips("您选择的太多，请保持在60首以内，以便达到最佳效果！", "wait", 1000);
+		}else{
+			if(newx.split(",").length-1>1)
+			window.open("[qianwei:path]play.php?id="+newx+"");
+			else
+			window.open("[qianwei:path]play.php?id="+newx+"");
+		}
+	}else{
+		asyncbox.tips("请选择后再播放！", "wait", 1000);
+	}
+}
+</script>
+[qianwei:bottom]
+</body>
+</html>

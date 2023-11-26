@@ -1,0 +1,126 @@
+<!--{template common/header}-->
+<!--[name]{Week_Design_list_about_contact_wide}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<link href="$_G['style']['styleimgdir']/about/about.css" rel="stylesheet" type="text/css" />
+
+</div>
+<div class="wk_list_box wk_list_box18">
+</div>
+<div class="wk_blog_tab">
+	<ul>
+    <!--{if $wk_menu}-->
+        <!--{if $cat[others]}-->
+            <!--{loop $cat[others] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{/if}-->
+    <!--{else}-->
+        <!--{if $cat[subs]}-->
+            <!--{loop $cat[subs] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{else}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[others] $value}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                <!--{/loop}-->
+            <!--{/if}-->
+        <!--{/if}-->
+    <!--{/if}-->
+    </ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<div class="week_contact">
+    <div class="week_container">			
+        <ul class="contact-ways">				
+            <li>
+                <a href="tel://$week_lang[101]">
+                <i class="i-phone"></i>
+                <h4>$week_lang[100]</h4>
+                <p class="cway-txt">$week_lang[101]</p>
+                </a>
+            </li>
+            <li>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=$week_lang[103]&site=qq&menu=yes">
+                <i class="i-qq"></i>
+                <h4>$week_lang[102]</h4>
+                <p class="cway-txt">$week_lang[103]</p>
+                </a>
+            </li>
+            <li>
+                <a href="Mailto:$week_lang[105]">
+                <i class="i-mail"></i>
+                <h4>$week_lang[104]</h4>
+                <p class="cway-txt">$week_lang[105]</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="week_weixin">
+    <div class="week_container">
+        <h3>$week_lang[107]</h3>
+        <p>$week_lang[108]</p>
+        <p class="week_weixin-p"><img src="$_G['style']['styleimgdir']/weixin.jpg" /></p>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="week_map">
+    <div id="allmap"></div>
+    <div class="mark-info">
+    <h4>$week_lang[110]</h4>
+        <p>$week_lang[111]</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+<script type="text/javascript">
+ var map = new BMap.Map("allmap");
+ var point = new BMap.Point($week_lang[112]);
+ map.centerAndZoom(point, 17);
+ map.setCurrentCity("$week_lang[113]");
+ var marker = new BMap.Marker(point);
+ map.addOverlay(marker);
+ marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+ var opts = {
+  position : point,
+  offset   : new BMap.Size(-78, 15)
+ }
+ var label = new BMap.Label("$week_lang[114]", opts);
+ label.setStyle({
+  color : "#FFF",
+  fontSize : "14px",
+  lineHeight : "20px",
+  padding:"4px 10px",
+  border:"none",
+  textAlign:"center",
+  background:"#DE262E",
+  fontFamily:"Microsoft Yahei",
+  opacity:"0.7",
+ });
+ map.addOverlay(label); 
+</script>
+
+<div class="clear"></div>
+<div id="wp" class="wp">
+
+    <div class="wp"><!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]--></div>
+    <!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+    <!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+    <div class="clear"></div>
+    <!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+    <!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

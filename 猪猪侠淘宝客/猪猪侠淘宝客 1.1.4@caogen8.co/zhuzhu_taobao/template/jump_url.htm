@@ -1,0 +1,242 @@
+<!--{template zhuzhu_taobao:t_header}-->
+<link rel="stylesheet" href="source/plugin/zhuzhu_taobao/static/js/swiper.min.css">
+<style>
+.swiper-wrapper{transition-delay:.3s}
+.swiper-container{width:400px;height:400px}
+.swiper-slide{text-align:center;font-size:18px;background:#fff;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}
+.swiper-slide:nth-child(2){background:#3183ff;color:#fff}
+.swiper-slide p{transform:translateX(-200px);opacity:0;transition:all .4s}
+.ani-slide p{transform:translateX(0);opacity:1}
+.swiper-pagination-bullet-active{opacity:1;background:#F40}
+</style>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="plugin.php?id=zhuzhu_taobao">{lang zhuzhu_taobao:jump_url_htm_1}</a> <em>&rsaquo;</em>
+		<a href="plugin.php?id=zhuzhu_taobao&mod=tbk">{lang zhuzhu_taobao:jump_url_htm_2}</a> <em>&rsaquo;</em>
+		{lang zhuzhu_taobao:jump_url_htm_3}
+	</div>
+</div>
+
+<div class="goods_item cl">
+	<div class="z">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="$detail[pict_url]" alt="$detail[title]"></div>
+				<!--{loop $detail[small_images][string] $vv}-->
+				<div class="swiper-slide"><img src="$vv" alt="$detail[title]"></div>
+				<!--{/loop}-->
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+
+    <script src="source/plugin/zhuzhu_taobao/static/js/swiper.min.js"></script>
+
+	<div class="y">
+		<h1><!--{if $detail[user_type]}--><img src="http://gw.alicdn.com/tps/i1/T1AV5DFSRbXXbaUxfe-36-32.png" /><!--{/if}--> $detail[title]</h1>
+		<!--{if $keyword_list}-->
+		<div class="tit_key cl">
+			<!--{loop $keyword_list $value}-->
+			<!--{if $value}-->
+			<a href="plugin.php?id=zhuzhu_taobao&mod=quan&keyword={echo urlencode($value)}">$value</a>
+			<!--{/if}-->
+			<!--{/loop}-->
+		</div>
+		<!--{/if}-->
+		<div class="prices cl">
+			<!--{if $_GET[e]}-->
+			<div class="price">{lang zhuzhu_taobao:jump_url_htm_4}<i>&yen;<em> $_GET[q_price]</em></i></div>
+			<dd><span>{lang zhuzhu_taobao:jump_url_htm_5}{echo $_GET[zk_final_price]-$_GET[q_price]}{lang zhuzhu_taobao:jump_url_htm_6}</span></dd>
+			<!--{else}-->
+			<div class="price">{lang zhuzhu_taobao:jump_url_htm_7}<i>&yen;<em> $detail[zk_final_price]</em></i></div>
+			<dd><span>{lang zhuzhu_taobao:jump_url_htm_8} $detail[reserve_price]</span></dd>
+			<!--{/if}-->
+			<dd><span>{lang zhuzhu_taobao:jump_url_htm_9}{$detail[volume]}{lang zhuzhu_taobao:jump_url_htm_10}</span></dd>
+		</div>
+		<ul class="iteminfomodel yahei mt_20 cl none">
+			<li id="location"></li>
+			<li><span id="stuffStatus"></span></li>
+			<li><span id="soldQuantityText"></span></li>
+			<li><span id="quantityText"></span></li>
+		</ul>		
+		<div class="rateinfo cl yahei mt_20" id="feedback">
+			<!--<img src="" id="headPic" />
+			<div class="cl">
+				<h1></h1>
+				<p></p>
+				<p id="feedback"></p>
+			</div>-->
+		</div>
+
+		<div class="tbk_buttom mt_20 cl">
+			<div class="bdsharebuttonbox mt_10 y"><a href="http://t.cn/RvMznky" class="bds_more" data-cmd="more"></a><a href="http://t.cn/RvMznky" class="bds_qzone" data-cmd="qzone"></a><a href="http://t.cn/RvMznky" class="bds_tsina" data-cmd="tsina"></a><a href="http://t.cn/RvMznky" class="bds_tqq" data-cmd="tqq"></a><a href="http://t.cn/RvMznky" class="bds_renren" data-cmd="renren"></a><a href="http://t.cn/RvMznky" class="bds_weixin" data-cmd="weixin"></a></div>
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			<a href="javascript:;" class="copy_url yahei" onclick="copy_tb();return false;">{lang zhuzhu_taobao:jump_url_htm_12}</a>
+			<!--{if $_GET[e]}-->
+			<a href="https://uland.taobao.com/coupon/edetail?e=$_GET[e]&traceId=$_GET[traceId]" class="yahei">{lang zhuzhu_taobao:jump_url_htm_13}</a>
+			<!--{else}-->
+			<a isconvert=1 biz-itemid="$detail[num_iid]" href="" class="yahei" target="_blank">{lang zhuzhu_taobao:jump_url_htm_14}</a>
+			<!--{/if}-->
+		</div>
+	</div>
+</div>
+
+<div class="goods_detail mb_20 cl">
+	<div class="z">
+		<h2>{lang zhuzhu_taobao:jump_url_htm_3}</h2>
+		<div class="goods_detail_info cl">
+			<!--{loop $v[images] $v}-->
+			<img src="$v">
+			<!--{/loop}-->
+		</div>
+	</div>
+	<div class="y">
+		<div class="seller cl yahei">
+			<h2 class="wrap" id="shopTitle"></h2>
+			<ul class="cl" id="sellerInfo">
+			</ul>
+		</div>
+		<div class="ohter yahei mt_20 cl">
+			<h2>{lang zhuzhu_taobao:jump_url_htm_16}</h2>
+			<ul class="cl">
+				<!--{loop $other $v}-->
+				<li class="y2">
+					<a href="{$jump_url}$v[num_iid]">
+						<img src="$v[pict_url]" />
+						<h2>$v[title]</h2>
+						<p>
+							$v[zk_final_price]
+							<span class="y">$v[provcity]</span>
+						</p>
+					</a>
+				</li>
+				<!--{/loop}-->
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var swiper = new Swiper('.swiper-container',{
+		followFinger : false,
+		speed:800,
+		mousewheelControl : true,
+		pagination : '.swiper-pagination',
+		onInit:function(swiper){
+			slide=swiper.slides.eq(0);
+			slide.addClass('ani-slide');
+		},onTransitionStart: function(swiper){
+			for(i=0;i<swiper.slides.length;i++){
+				slide=swiper.slides.eq(i);
+				slide.removeClass('ani-slide');
+				}
+		},onTransitionEnd: function(swiper){
+				slide=swiper.slides.eq(swiper.activeIndex);
+				slide.addClass('ani-slide');
+				
+		},	
+	});
+
+
+    (function(win,doc){
+        var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0];
+        if (!win.alimamatk_show) {
+            s.charset = "gbk";
+            s.async = true;
+            s.src = "https://alimama.alicdn.com/tkapi.js";
+            h.insertBefore(s, h.firstChild);
+        };
+        var o = {
+            pid: "$var[adzoneid]",
+            appkey: "$appkey",
+            unid: "",
+            type: "click"
+        };
+        win.alimamatk_onload = win.alimamatk_onload || [];
+        win.alimamatk_onload.push(o);
+    })(window,document);
+
+	function copy_tb(){
+		var Url2=document.getElementById("fenxiang_info");
+		Url2.select();
+		document.execCommand("Copy");
+		showDialog('{lang zhuzhu_taobao:jump_url_htm_17}', 'notice', '', '', 1, '', '', '', '', '3');
+		return false;
+	}
+</script>
+<script src="static/js/mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" id="sc">
+jQuery.noConflict();
+jQuery(document).ready(function () {  
+	jQuery.ajax({
+		type : "GET",
+		url : "https://acs.m.taobao.com/h5/mtop.taobao.detail.getdetail/6.0/?data=%7B%22itemNumId%22%3A%22{$itemid}%22%7D",
+		dataType:"jsonp",
+		cache:false,
+		async:false,
+		data : "",
+		success : function(data) {
+			data = data.data;
+		console.log(data);
+			//jQuery('#stuffStatus').html(data.itemInfoModel.stuffStatus);
+			//jQuery('#location').html(data.itemInfoModel.location);
+			//jQuery('#quantityText').html(JSON.parse(data.apiStack[0].value).data.itemInfoModel.quantityText);
+			//jQuery('#soldQuantityText').html(JSON.parse(data.apiStack[0].value).data.itemInfoModel.soldQuantityText);
+			//jQuery('#feedback').html(data.rateInfo.rateDetailList[0].feedback);
+			//jQuery('#rateinfo').html(data.rateInfo.rateDetailList[0].nick+'<span>'+data.rateInfo.rateDetailList[0].subInfo+'</span>');
+			//jQuery('#headPic').attr('src', data.rateInfo.rateDetailList[0].headPic);
+			jQuery('#shopTitle').html('<img src="'+data.seller.tagIcon+'" />' + data.seller.shopName);
+			for (var i = 0; i < data.seller.evaluates.length; i++) {
+				jQuery('#sellerInfo').append('<li>'+data.seller.evaluates[i].title+' : '+data.seller.evaluates[i].score+'</li>');
+			}
+			for (var i = 0; i < data.props.groupProps[0].{lang zhuzhu_taobao:jump_url_htm_35}.length; i++) {
+				str = obj2string(data.props.groupProps[0].{lang zhuzhu_taobao:jump_url_htm_35}[i]);
+				str = str.replace(/[{]/g, "");
+				str = str.replace(/[}]/g, "");
+				jQuery('#feedback').append('<i>'+str+'</i>');
+			}
+		}		
+	})
+})
+function obj2string(o){ 
+ var r=[]; 
+ if(typeof o=="string"){ 
+ return "\""+o.replace(/([\'\"\\])/g,"\\$1").replace(/(\n)/g,"\\n").replace(/(\r)/g,"\\r").replace(/(\t)/g,"\\t")+"\""; 
+ } 
+ if(typeof o=="object"){ 
+ if(!o.sort){ 
+  for(var i in o){ 
+  r.push(i+":"+obj2string(o[i])); 
+  } 
+  if(!!document.all&&!/^\n?function\s*toString\(\)\s*\{\n?\s*\[native code\]\n?\s*\}\n?\s*$/.test(o.toString)){ 
+  r.push("toString:"+o.toString.toString()); 
+  } 
+  r="{"+r.join()+"}"; 
+ }else{ 
+  for(var i=0;i<o.length;i++){ 
+  r.push(obj2string(o[i])) 
+  } 
+  r="["+r.join()+"]"; 
+ } 
+ return r; 
+ } 
+ return o.toString(); 
+}
+</script>
+<textarea id="fenxiang_info">
+{lang zhuzhu_taobao:jump_url_htm_18}$detail[title]
+
+<!--{if $_GET[e]}-->
+{lang zhuzhu_taobao:jump_url_htm_4} $_GET[q_price]
+{lang zhuzhu_taobao:jump_url_htm_5}{echo $_GET[zk_final_price]-$_GET[q_price]}{lang zhuzhu_taobao:jump_url_htm_6}
+<!--{else}-->
+{lang zhuzhu_taobao:jump_url_htm_7} $detail[zk_final_price]
+{lang zhuzhu_taobao:jump_url_htm_23} $detail[reserve_price]
+<!--{/if}-->
+
+{lang zhuzhu_taobao:jump_url_htm_24}{$_G[siteurl]}plugin.php?id=zhuzhu_taobao&mod=jump_url&num_iid=$_GET[num_iid]
+</textarea> 
+<!--{subtemplate zhuzhu_taobao:t_tag}-->
+<!--{subtemplate common/footer}-->

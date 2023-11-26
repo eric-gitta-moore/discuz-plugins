@@ -1,0 +1,244 @@
+<!--{template common/header}-->
+  <div class="w cl">
+	<div class="mn mw">
+		<div id="layer_mobileget_$loginhash">
+			<h3 class="flb">
+				<em id="returnmessage3_$loginhash">{lang zhanmishu_sms:getpasswd_bymobile}</em>
+				<span><!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('login')" title="{lang close}">{lang close}</a><!--{/if}--></span>
+			</h3>
+			<form method="post" autocomplete="off" id="lostmobilepwform_$loginhash" class="cl" action="">
+				<div class="c cl">
+					<input type="hidden" name="formhash" value="{FORMHASH}" />
+					<input type="hidden" name="handlekey" value="lostpwform" />
+					<input type="hidden" name="code" id="code" value="">
+
+					<div id="zmsaccount">
+						<div class="rfm">
+							<table>
+								<tr>
+									<th><span class="rq"></span><label for="lostpw_mobileusername">{lang username}:</label></th>
+									<td><input type="text" name="mobileusername" id="lostpw_mobileusername" size="30" value=""  tabindex="1" class="px p_fre" /></td>
+								</tr>
+							</table>
+						</div>
+						<div class="rfm">
+							<table>
+								<tr>
+									<th><span class="rq">*</span><label for="lostpw_mobile">{lang zhanmishu_sms:mobile}</label></th>
+									<td><input class="intel_mobile" type="text" name="mobile" id="lostpw_mobile" size="30" value=""  tabindex="1" class="px p_fre" /><input class="pn pnc" style="height:20px;padding:0 5px;margin-left:5px;line-height: 18px;height: 21px;" type="button" id="send" value="{lang zhanmishu_sms:send}" onclick="javascript:pwdsendMessage();"></td>
+								</tr>
+							</table>
+						</div>
+						<div class="rfm" id="div_sms_verify"> 
+						  <table>
+						    <tbody>
+						      <tr>
+						        <th>
+						          <span class="rq">*</span>
+						          {lang zhanmishu_sms:mobile_verify}
+						        </th>
+						        <td>
+						          <input name="sms_verify" id="sms_verify" type="text" required autocomplete="off" style="ime-mode:disabled;width:100px" class="txt px vm" onblur="pwdverifysms();">
+						        </td>
+						        <td class="tipcol" id="sms_verify_tip">
+						            <span id="sms_verify_tip_wrong" style="display:none;"><img src="static/image/common/check_error.gif" width="16" height="16" class="vm"></span>
+						            <kbd id="chk_papo8p" class="p_chk"></kbd></td>
+						      </tr>
+						    </tbody>
+						  </table>
+						</div>
+					</div>
+					<div id="newpasswd">
+						<div class="rfm">
+							<table>
+								<tr>
+									<th><span class="rq">*</span><label for="lostpw_passwd">{lang zhanmishu_sms:newpasswd}</label></th>
+									<td><input type="password" name="passwd" id="lostpw_passwd" size="30" value=""  tabindex="1" class="px p_fre" /></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="rfm mbw bw0">
+						<table>
+							<tr>
+								<th></th>
+								<td><button class="pn pnc" type="submit" name="lostmobilepwsubmit" value="true" tabindex="100"><span>{lang submit}</span></button></td>
+							</tr>
+						</table>
+					</div>
+					<a href="javascript:;" onclick="display('layer_mobileget_$loginhash');display('layer_lostpw_$loginhash');">{lang zhanmishu_sms:fogetemail_getpasswd_bymobile}</a>
+				</div>
+			</form>
+
+
+			<script type="text/javascript">
+
+
+
+				function checkpwd(){
+					pwd = jQuery("#lostpw_passwd").val();
+					if (pwd.length < 6) {
+						showDialog('{lang zhanmishu_sms:passwd_not_right}');
+						return false;
+					}
+
+					return pwd;
+				}
+
+
+				function checksend(){
+					username = jQuery("#lostpw_mobileusername").val();
+					// if (username.length < 3) {
+					// 	showDialog('{lang zhanmishu_sms:please_input_username}');
+					// 	return false;
+					// }
+
+					if (jQuery("#lostpw_mobile").val().length <= 3) {
+						showDialog('{lang zhanmishu_sms:please_input_mobile}');
+						return false;
+					}
+
+					return true;
+				}
+				
+				function SetRemainTime() {  
+				    if (curCount == 0) {                  
+				        window.clearInterval(InterValObj);
+				        jQuery("#send").removeAttr("disabled");
+				        jQuery("#send").val("{lang zhanmishu_sms:resend}");  
+				        code = ""; // 
+				    }  
+				    else {  
+				        curCount--;  
+				        jQuery("#send").val("{lang zhanmishu_sms:input_tips_sec}");  
+				    }  
+				}
+
+				function pwdsendMessage() {
+
+
+				    s = new zmssms('','','',60,'code','send','lostpw_mobile','verifycode');
+				    s.sendMessage('plugin.php?id=zhanmishu_sms:getpassword&no_submit=sendverifysms&method=getpasswordsend','lostmobilepwform_{$loginhash}');
+
+				}  
+				function pwdverifysms(){
+					username = jQuery("#lostpw_mobileusername").val();
+					phone = encodeURIComponent(jQuery("#lostpw_mobile").val());
+					verify = jQuery("#sms_verify").val();
+					code = jQuery("#code").val();
+					jQuery.ajax({  
+				        type: "POST", 
+				        dataType: "json", 
+				        url: 'plugin.php?id=zhanmishu_sms:getpassword&no_submit=sendverifysms&method=getpasswordverify',
+				        data: "phone="+phone+"&username="+username+"&verify=" + verify + "&code="+code+"&formhash={FORMHASH}",  
+				        error: function (XMLHttpRequest, textStatus, errorThrown) {
+				        	
+				        },  
+				        success: function (msg){
+				        	if (msg.code < 0) {
+				                if (msg.code=='-5') {
+				                    showDialog(msg.msg);
+				                };
+				                jQuery("#sms_verify_tip_wrong").css('display', 'block');
+				                jQuery("#sms_verify_tip").removeClass("p_right");
+				                return false;
+				        	}
+
+				        	if (msg.code == 1) {
+				        		jQuery("#sms_verify_tip").addClass("p_right");
+				        		jQuery("#sms_verify_tip_wrong").css('display', 'none');
+
+				                return true;
+				        	}
+
+				        }  
+				    }); 
+					return false;
+				}
+				jQuery(function(){
+					jQuery("#lostmobilepwform_$loginhash").submit(function(){
+						if (checkpwd) {
+						 	username = jQuery("#lostpw_mobileusername").val();
+							phone = encodeURIComponent(jQuery("#lostpw_mobile").val());
+							verify = jQuery("#sms_verify").val();
+							code = jQuery("#code").val();
+						 	pwd = jQuery("#lostpw_passwd").val();
+							jQuery.ajax({  
+						        type: "POST", 
+						        dataType: "json", 
+						        url: 'plugin.php?id=zhanmishu_sms:getpassword&no_submit=sendverifysms&method=getpasswordsubmit',
+						        data: "pwd="+pwd+"&phone="+phone+"&username="+username+"&verify=" + verify + "&code="+code+"&formhash={FORMHASH}",  
+						        error: function (XMLHttpRequest, textStatus, errorThrown) {
+						        	
+						        },  
+						        success: function (msg){
+						        	if (msg.code < 0) {
+						                if (msg.code=='-5') {
+						                    showDialog(msg.msg);
+						                };
+						                return false;
+						        	}
+
+						        	if (msg.code == 1) {
+						        		hideWindow('login');
+						        		showDialog('{lang zhanmishu_sms:passwd_edit_success}','notice','{lang zhanmishu_sms:tips}',function(){
+						        			self.location.reload();
+						        		});
+						                return true;
+						        	}
+
+						        }  
+						    });
+						}
+						return false;
+					});
+
+					})
+
+			</script>
+			
+		</div>
+		<div id="layer_lostpw_$loginhash" style="display: none;">
+			<h3 class="flb">
+				<em id="returnmessage3_$loginhash">{lang zhanmishu_sms:getpasswd_byemail}</em>
+				<span><!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('login')" title="{lang close}">{lang close}</a><!--{/if}--></span>
+			</h3>
+			<form method="post" autocomplete="off" id="lostpwform_$loginhash" class="cl" onsubmit="ajaxpost('lostpwform_$loginhash', 'returnmessage3_$loginhash', 'returnmessage3_$loginhash', 'onerror');return false;" action="member.php?mod=lostpasswd&lostpwsubmit=yes&infloat=yes">
+				<div class="c cl">
+					<input type="hidden" name="formhash" value="{FORMHASH}" />
+					<input type="hidden" name="handlekey" value="lostpwform" />
+					<div class="rfm">
+						<table>
+							<tr>
+								<th><span class="rq">*</span><label for="lostpw_email">{lang email}:</label></th>
+								<td><input type="text" name="email" id="lostpw_email" size="30" value=""  tabindex="1" class="px p_fre" /></td>
+							</tr>
+						</table>
+					</div>
+					<div class="rfm">
+						<table>
+							<tr>
+								<th><label for="lostpw_username">{lang username}:</label></th>
+								<td><input type="text" name="username" id="lostpw_username" size="30" value=""  tabindex="1" class="px p_fre" /></td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="rfm mbw bw0">
+						<table>
+							<tr>
+								<th></th>
+								<td><button class="pn pnc" type="submit" name="lostpwsubmit" value="true" tabindex="100"><span>{lang submit}</span></button></td>
+							</tr>
+						</table>
+					</div>
+					<a href="javascript:;" onclick="display('layer_mobileget_$loginhash');display('layer_lostpw_$loginhash');">{lang zhanmishu_sms:fogetmobile_getpasswd_byemail}</a>
+				</div>
+			</form>
+			
+		
+		</div>
+	</div>
+</div>
+
+<!--{template common/footer}-->

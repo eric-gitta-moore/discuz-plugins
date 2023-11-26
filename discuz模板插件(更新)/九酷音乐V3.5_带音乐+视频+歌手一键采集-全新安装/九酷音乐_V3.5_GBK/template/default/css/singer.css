@@ -1,0 +1,219 @@
+.singer{}
+.singer_hd{ padding:6px 10px; border:1px solid #e5e5e5; border-top:2px solid #ccc;}
+.crumb{ font-size:12px; font-weight:normal; line-height:36px; height:36px; color:#000;}
+.crumb a{ color:#000;}
+.crumb b{ font-weight:400; color:#666;}
+.singer_hd dl{padding:5px 0; border-bottom:1px dashed #ddd; line-height:30px;font-size:14px;}
+.singer_hd dt{ font-weight:bold; width:120px; text-align:right; margin-right:20px;}
+.singer_hd dd{}
+.singer_hd dd a{ margin:0 8px; color:#666;}
+.singer_hd dd a:hover{ color:#339900}
+.singer_hd dt,.singer_hd dd{ float:left;}
+
+.singer_box{margin-top:10px; border:1px solid #e5e5e5; font-size:14px; position:relative;}
+.singer_box h2{ font-size:24px; font-weight:normal; background-color:#fbfbfb; height:34px;padding:0 10px 0 15px; line-height:34px; color:#000;}
+.tuijian h2{ font-size:14px; font-weight:bold;}
+.tuijian h2 span{ display:block;}
+.tuijian h2 span a{ margin:0 7px;}
+
+.singer_box .list{ padding-bottom:10px;}
+.singer_box .list li{ float:left; width:162px; text-align:left; line-height:24px; height:24px; margin:10px 10px 0 18px; display:inline; overflow:hidden;}
+.tuijian .list li a{ color:#000;}
+.tuijian .list li a:hover{color:#339900;}
+.tuijian .list li a.cor999{ color:#999; margin:0 2px; font-size:12px;}
+
+.f_top{ width:74px; height:22px; position:absolute; right:10px; bottom:10px;background:url(base.png) left -40px no-repeat;}
+.f_top a{ display:block; height:22px; background:url(icon.png) 5px 5px no-repeat; padding-left:15px; font-size:12px; line-height:20px; color:#787878;}
+/*歌手快速筛选*/
+.filter{padding:8px 15px;}
+.filter dl{ width:930px; margin:0 auto;padding:5px 0; border-bottom:1px dashed #ddd; line-height:30px;font-size:14px;}
+.filter dt{float:left;font-weight:bold; width:120px; text-align:right; margin-right:20px;color:#696969; width:70px;}
+.filter dd{float:left;}
+.filter dd a{ color:#666; display:inline-block; height:20px; line-height:20px; margin:0 7px;}
+.filter dd a.active{ background:#55a642;color:#FFF; padding:2px 5px; text-align:center;}
+
+.filter_list{ padding:30px 0 0;}
+.filter_list li{ float:left;height:145px;margin-left:42px;width:88px; text-align:center; display:inline;}
+.filter_list .t-i{border: 1px solid #EEEEEE;height:80px;overflow: hidden;padding: 3px;width: 80px; overflow:hidden; display:inline-block;}
+.filter_list .t-i img{ height:80px; width:80px;}
+.filter_list .t-t{ line-height:20px; width:88px; display:block; height:40px; overflow:hidden;}
+
+.loadMore{ line-height:56px; height:56px; text-align:center; font-size:14px; background:#fff; border-top:2px solid #eee; background:#f5f5f5; margin-top:10px; cursor:pointer;}
+.loadMore a{ color:#390; width:100%; height:56px; display:block;}
+.loadMore a:hover{ color:#390; background:#fff; font-weight:800; text-decoration:none;}
+/*歌手资料*/
+.intro{ border:1px solid #e5e5e5; margin-top:10px;}
+
+.caption{ background-color:#A5A5A5; height:32px; color:#FFF; line-height:32px; margin:10px auto;}
+.caption h1{ font-size:14px; margin-left:20px; height:32px; line-height:32px;}
+.caption span{ font-size:12px; font-weight:normal; margin-right:10px;}
+.intro h2{ font-size:14px; background-color:#fbfbfb; height:30px; padding:0 10px 0 15px; line-height:30px; color:#000;}
+.intro h2 .fav{ margin-left:10px;margin-top:3px; display:inline-block;}
+.intro h2 span.fr{ display:inline-block;font-size:12px; font-weight:normal;}
+
+.intro form{ overflow:hidden; zoom:1;}
+
+.fenleiBox{ overflow:hidden; width:100%; padding-top:5px; padding:6px 0;}
+/*.intro ol{ width:213px;display:inline;float:left; overflow:hidden;zoom:1; margin:0 14px 0 -1px; border-left:1px dashed #ccc; padding:0 0 0 13px;}
+.intro ol li{width:213px; line-height:30px; height:30px; overflow:hidden; float:left; display:block;}*/
+.intro ol{overflow:hidden;zoom:1;width:100%;}
+.intro ol li{width:213px; line-height:28px; height:28px; overflow:hidden; float:left; display:inline; margin:0 11px -1px 15px; padding:3px 0 3px; border-bottom:1px solid #f5f5f5;}
+.intro ol li span{ width:30px; display:inline-block; color:#B1B1B1; float:left;}
+.intro ol li span.num{ font-weight:bold; color:#F00;}
+.intro ol li span.songer{width:60px; height:30px; overflow:hidden;}
+.intro ol li span.songer a{ font-size:12px; width:60px;}
+.intro ol li a{ float:left; font-size:14px; width:136px; overflow:hidden; display:inline-block; height:30px;}
+.intro ol li input{ float:left; margin:10px 4px 0 0;*margin:5px 2px 0 0; display:inline;}
+.intro ol li .play{ float:right; height:30px; width:20px; background-position:0 -37px;}
+.intro ol li .add{background-position:0 -71px; float:right;height:30px;width: 20px;}
+
+.select_btn{ width:930px; margin:5px auto 0 auto; border-top:1px dashed #ccc; text-align:center;}
+.select_btn a{ margin:10px;}
+
+.intro_more{ float:right; font-size:14px; font-weight:normal; color:#F14D4D; display:inline-block;}
+
+.intro ul{}
+.intro ul li{ float:left; margin:5px 10px;}
+.intro ul li p{ text-align:center; line-height:25px;}
+
+.intro ul.intro_hot{ padding-bottom:15px;}
+.intro ul.intro_hot li{ margin:15px 19px 0; width:122px; overflow:hidden;display:inline;}
+.intro ul.intro_hot li a{ width:120px; height:120px; display:block; border:1px solid #e5e5e5;}
+.intro ul.intro_hot li a:hover{ border:1px solid #55a642;}
+.intro ul.intro_hot li p{ line-height:30px;}
+.intro ul.intro_hot li p a{ line-height:24px; height:24px; overflow:hidden; border:0 none;}
+.intro ul.intro_hot li p a:hover{ border:0 none;}
+.intro_info p{ width:840px; margin:10px auto; text-align:center; color:#000; font-size:14px;}
+/*专辑列表*/
+.intro ul.intro_album{ width:100%; padding-bottom:12px;}
+.intro ul.intro_album li{ width:290px; height:123px; padding:7px; border:1px solid #e5e5e5; margin:12px 0 0 10px; display:inline; overflow:hidden;}
+.intro ul.intro_album li img{ border:1px solid #e5e5e5;}
+.intro ul.intro_album li h3{ font-size:12px; line-height:25px; height:25px; overflow:hidden;}
+.intro ul.intro_album li .fr{ width:160px; text-align:left; overflow:hidden;}
+.intro ul.intro_album li .fr p{ text-align:left; color:#666; line-height:20px; height:20px; width:160px; overflow:hidden;}
+.intro ul.intro_album li .fr p.ap_play{ height:35px; width:160px;}
+.intro ul.intro_album li .fr p.ap_play a{ color:#FFF; text-decoration:none;}
+/*自建专辑列表*/
+.intro ul.zj_album li .fr p{line-height:18px; height:18px; overflow:hidden;}
+.intro ul.zj_album li .fr p a{ margin-right:10px;}
+.intro ul.zj_album li .fr p.ap_play{ height:30px;}
+.intro ul.zj_album li .fr p .album_play,.intro ul.zj_album li .fr p .album_fav{ margin-top:0;}
+/*专辑内容页*/
+.detail{}
+.detail_box{ width:630px; margin:15px auto 0 auto;}
+.detail .left{ width:658px; border:1px solid #e5e5e5;overflow:hidden;}
+.detail .right{ width:290px;}
+.detail h2{ font-size:14px; background-color:#fbfbfb; height:30px; padding:0 10px 0 15px; line-height:30px; color:#000;}
+
+.detail_box .detail_ab{ width:460px; line-height:20px; font-size:14px; }
+.detail_box .detail_ab p{margin-bottom:5px;}
+.detail_box .detail_ab h3{ line-height:24px; height:24px; overflow:hidden; margin-bottom:10px;}
+.detail_box .detail_ab .zjTag{ font-size:12px;}
+.detail_box .detail_ab .zjTag a{color:#6d92c4; padding:0 8px 0 0; text-decoration:underline;}
+.detail_box img.fl{ border:1px solid #e5e5e5; padding:3px;}
+.album-info-introduction{ background-color:#f4f4f4; padding:10px; border:1px solid #e5e5e5; color:#666; position:relative; padding:5px; height:100%; overflow:hidden;}
+.introduction-all{height:160px;overflow:hidden;line-height:20px;padding:10px 10px 0 10px;margin-bottom:10px;zoom:1;}
+.lessJianjie{ display:none;position:absolute;bottom:16px;right:10px;font-family:'宋体';background:#f4f4f4;width:100px; text-align:right;color:#390;}
+.moreJianjie{color:#343434;position:absolute;bottom:6px;right:10px;font-family:'宋体';background:#f4f4f4;width:100px; text-align:right; color:#390;}
+
+.songVeryGood{ float:right; width:39px; height:15px; margin-right:15px; display:inline; background:url(singerIcon.png) 0 -133px no-repeat; margin-top:8px;}
+.songGood{ float:right; width:27px; height:15px; margin-right:15px; display:inline; background:url(singerIcon.png) -47px -133px no-repeat; margin-top:8px;}
+
+.album-info-introduction .unfold{ height:auto;}
+.album-info-introduction .unfold .moreJianjie{ display:none;}
+.album-info-introduction .unfold .lessJianjie{ display:block;}
+
+.detail_list{}
+.detail_list ol li{ line-height:20px;padding:8px 0 6px; height:20px; clear:both; border-bottom:1px solid #f1f1f1;}
+.detail_list ol li a{ color:#4D4D4D;}
+.detail_list ol li a:hover{color:#339900;}
+.detail_list ol li input,.detail_list ol li a,.detail_list ol li span{ float:left;display:inline-block;}
+.detail_list ol li input{ margin:4px;_margin:1px 3px;}
+.detail_list ol li .detail_num{ width:40px; text-align:center; color:#b1b1b1;}
+.detail_list ol li .song_title,.detail_list ol li .detail_singer{ width:250px; text-align:left;}
+.detail_list ol li .song_title{ font-size:14px; width:300px; height:20px; overflow:hidden;}
+.detail_list ol li .songer{ font-size:12px; width:120px; height:20px; overflow:hidden; color:#999;}
+.detail_list .detail_icon{ float:right;}
+.detail_list .detail_icon a{ margin:0 5px;}
+.detail_list .setPlay{ margin:5px 0; border:0 none;}
+
+.detail_silde{ border:1px solid #e5e5e5; margin-bottom:10px;}
+.detail_silde ul{ overflow:hidden;zoom:1; padding-bottom:10px;}
+.detail_silde ul li{ float:left;margin:10px 11px 0; display:inline;text-align:center; width:122px; overflow:hidden;}
+.detail_silde ul li a{ width:120px; height:120px; display:block; border:1px solid #e5e5e5;}
+.detail_silde ul li a:hover{ border:1px solid #55a642;}
+.detail_silde ul li p a{ line-height:24px; height:24px; overflow:hidden; border:0 none;}
+.detail_silde ul li p a:hover{ border:0 none;}
+
+.detail_silde span.fr{ display:inline-block; width:74px; height:21px;background:url(base.png) 0 -40px no-repeat; font-size:12px; font-weight:normal; margin-top:5px;}
+.detail_silde span.fr a{ display:block;background:url(icon.png) 10px -13px no-repeat; width:50px; line-height:21px; padding-left:18px;color:#787878; text-align:center;}
+.detail_silde ol{ width:90%; margin:5px auto;}
+.detail_silde ol li a,.detail_silde ol li span{ float:left;display:inline-block;}
+.detail_silde ol li{ line-height:30px; height:30px; clear:both; overflow:hidden;}
+.detail_silde ol li span{ width:30px; display:inline-block; color:#B1B1B1;margin-right:10px;}
+.detail_silde ol li .song_title{ width:110px; overflow:hidden; font-size:14px;}
+.detail_silde ol li .detail_singer{ width:60px; overflow:hidden; font-size:12px;}
+.detail_silde ol li span.num{ font-weight:bold; color:#F00; }
+.detail_silde ol li .detail_icon{ float:right; width:50px; margin:0;}
+.detail_silde ol li .detail_icon a{ margin:6px 5px 0 0;}
+/*topic*/
+.caption h1 span{ display:inline-block; width:210px; margin-left:10px; height:32px;}
+.caption a.all_play{ float:right; margin:4px;}
+
+.intro .zhuanji ul{ padding:10px 0;}
+.intro .zhuanji ul li{ width:138px; font-size:14px; overflow:hidden; display:inline; margin:0 0 0 20px; padding:5px 0;}
+/*分类*/
+.category{ border:1px solid #e5e5e5; margin:10px auto 0;}
+.category_list{ width:940px; margin:5px auto; border-bottom:1px solid #e5e5e5; padding-bottom:20px; margin-top:20px;}
+.category_list h2{ float:left; width:190px;font:400 18px/30px Microsoft YaHei;background:url(module.png) no-repeat; text-indent:20px; color:#338f1d;}
+.category_list h2.cate_album{ height:200px; background-position:20px -60px;}
+.category_list h2.cate_xinqing{ height:160px; background-position:10px -260px;}
+.category_list h2.cate_changhe{ height:87px; background-position:10px -420px;}
+.category_list h2.cate_qufeng{ height:130px; background-position:10px -507px;}
+.category_list h2.cate_yinyue{ height:60px; background-position:20px -637px;}
+.category_list h2.cate_diyu{ height:120px; background-position:20px -695px;}
+.category_list h2.cate_niandai{ height:60px; background-position:0 -815px;}
+.category_list h2.cate_huati{ height:90px; background-position:0 -875px;}
+.category_list ul{  float:left; width:750px;}
+.category_list ul li{ float:left; width:150px; font-size:14px; line-height:30px;}
+/*按标签查看label*/
+.singer_hd .label{ border:none;}
+.label li{ float:left; margin:0 6px; cursor:pointer;}
+.label_view{ width:100%; padding:0; }
+.label_view .label_show{border:1px solid #e5e5e5; display:none; padding:10px 5px;}
+.label_view a{ margin:0 5px; font-size:14px; line-height:25px; white-space:pre-wrap; display:inline-block;} 
+.label a.corf00{ color:#F00;}
+/*风云榜rank*/
+.rank{}
+.rank dl{ margin:5px 10px;}
+.rank dt,.rank dd,.rank dt img{ float:left; line-height:30px;}
+.rank dt{ font-size:14px; font-weight:bold; color:#000; width:150px;}
+.rank dd a{ margin:0 20px;}
+.rank dt img{ margin:8px 10px 0 0;}
+/*专辑归档*/
+.zj_l{ width:210px;border:1px solid #e5e5e5;}
+.zj_r{ width:720px;border:1px solid #e5e5e5; padding:5px;}
+.archive{ width:100%;}
+.archive li{ height:25px; margin:2px; background:url(icon.png) 30px -12px no-repeat #FAFAFA; line-height:25px; overflow:hidden; font-weight:bold;}
+.archive li a{ padding:0 0 0 40px;}
+.albumList{ width:100%;}
+.albumList li{ width:180px; height:216px; float:left; text-align:center; margin-top:10px;}
+.albumList li .albumPic{ display:block; height:150px; width:150px;}
+.albumList li span{ width:100%; display:block; height:20px; line-height:20px; overflow:hidden;}
+.albumLink{ width:150px; padding:2px 4px; display:block; margin:0 auto; background:url(album_bg_150.png) 0 0 no-repeat}
+/*歌手相片*/
+.photo-box .photo-item{text-align:center; margin:15px 5px 0 15px;width:195px;height:220px; overflow:hidden; float:left; display:inline;}
+.photo-box .photo-item .t-i{ padding:4px; border:1px solid #fff; text-align:center; cursor:pointer; display:block;}
+.photo-box .photo-item .t-i img{ display:inline; vertical-align:top;}
+.photo-box .photo-item .t-t{ margin-top:3px; width:100%; line-height:20px; height:20px; text-align:center; overflow:hidden;}
+.photo-box .photo-item .i-t{ text-align:center; color:#999;}
+.photo-view{position:relative; margin:0 auto; padding:20px 0;}
+.photo-view #photoImg{width:630px; height:100%;display:block;margin:auto;overflow:hidden;text-align:center;background:url(loading2.gif) center center no-repeat;min-height:100px;_height:100px;}
+.photo-view #photoImg img{vertical-align:top;}
+.photo-view #prev,.photo-view #next{ width:319px;height:100%;display:block;position:absolute;top:0;}
+.photo-view #prev a,.photo-view #next a{display:block;height:100%;width:100%;overflow:hidden;background:url(photo-view-bg.png) 0 0 repeat; outline:none;}
+.photo-view #prev{ left:0;}
+.photo-view #next{ right:0;}
+.photo-view #prev a{cursor:url(prev.cur),pointer;outline:none; }
+.photo-view #next a{cursor:url(next.cur),pointer;outline:none; }
+.photo-text{ padding:20px 15px;}

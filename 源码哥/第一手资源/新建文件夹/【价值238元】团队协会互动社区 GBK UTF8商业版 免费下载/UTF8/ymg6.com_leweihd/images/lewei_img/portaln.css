@@ -1,0 +1,168 @@
+.lewei_news {
+	float: left;
+	background: #fff;
+	position: relative;
+	width: 870px;
+	padding: 5px 0 0;
+}
+.lewei_le_weil {
+	padding: 0px 15px 5px 15px;
+}
+.lewei_le_weil .bm_c{padding:5px 0;}
+.lewei_bighd {
+	margin-bottom: 0px;
+}
+.ie8 .xld .atc {
+	max-width: 160px;
+}
+.lewei_le_weil dl:hover {
+	background: #F4F4F4;
+}
+.lewei_le_weil .lewei_summary {
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 32px;
+	margin-bottom: 0px;
+}
+.lewei_le_weil .xs2 a {
+	color: #000;
+	font-weight: 500;
+}
+.lewei_le_weil .xs2 {
+	font-size: 18px!important;
+}
+.lewei_le_weil .atc img {
+	height: 160px;
+	width: 160px;
+	padding: 2px;
+	max-width: 160px;
+	max-height: 160px;
+	border: 1px solid #CCC;
+	background: #FFF;
+}
+.lewei_le_weil dl {
+	padding: 10px 0;
+}
+.lewei_le_weil .atc {
+	float: left;
+	margin-left: 0px;
+	margin-right: 20px;
+}
+.lewei_news .pg strong {
+	background-color:#39BDD6;
+	color: #fff;
+	border: 1px solid #39BDD6;
+}
+.lewei_news .pg a, .pg strong, .pgb a, .pg label {
+	margin: 3px;
+	padding: 0 9px;
+}
+.lewei_news .pg a.nxt {
+	padding-right: 25px;
+}
+.addnew {
+	margin-left: 10px;
+	padding-left: 20px;
+*background: url(addbuddy.gif) no-repeat 0 68%;
+	background: url(addbuddy.gif) no-repeat 0 80%;
+*position:absolute;
+*right:65px;
+	padding-top: 5px;
+}
+.rss {
+	margin-left: 10px;
+	padding-left: 20px;
+*background: url(feed.gif) no-repeat 0 68%;
+	background: url(feed.gif) no-repeat 0 80%;
+*position:absolute;
+*right:10px;
+	padding-top: 5px;
+}
+.lewei_title {
+	line-height: 30px;
+}
+.lewei_mr .lewei_pds {
+	width: 300px;
+}
+.lewei_mr .lewei_pds li a {
+	text-decoration: none;
+}
+.lewei_mr .lewei_pds li a:hover {
+	text-decoration: none;
+	color: #0085AB;
+}
+.lewei_mr {border:none;padding:0!important;}
+.lewei_mr .lewei_pds li {
+	float: left;
+	margin: 2px 0;
+	padding: 0;
+	width: 46.6%;
+	height: 1.5em;
+	overflow: hidden;
+	background: #F4F4F4;
+	border-radius: 10px;
+	margin-right: 10px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 15px;
+	box-shadow: inset 1px 1px 3px #ccc;
+}
+.lewei_mr_newslist {
+	width: 321px;
+	float: left;
+	background: #fff;
+	margin: 0px 0px 10px 3px;
+}
+.lewei_mr_newslist dl {
+	height: 95px;
+	overflow: hidden;
+	float: left;
+	width: 292px;
+}
+.lewei_mr_newslist .lewei_hot .m {
+	float: left;
+	width: 80px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	overflow: hidden;
+	margin-right: 6px;
+}
+.lewei_mr_newslist .lewei_bighd {
+	margin-bottom: 15px;
+}
+.lewei_mr_newslist .lewei_hot dt {
+	float: left;
+	width: 198px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	font-weight: 600;
+	color: #666;
+}
+.lewei_zy {
+	padding: 0!important;
+	margin: 10px;
+	border: 1px solid #E4E4E4;
+	font-size: 15px;
+}
+.lewei_sx {
+	color: #0085AB;
+	background-color: #F1F1F1;
+	padding: 10px;
+}
+.lewei_kx {
+	background:#39BDD6;
+	padding: 3px 10px;
+*padding: 3px 10px 0;
+	color: #fff!important;
+	margin-right: 10px;
+}
+.lewei_f15 {
+	font-size: 15px!important;
+}
+.lewei_le_weilt {
+    padding: 5px 15px 10px 15px;
+}
+
+.mt0 {margin-top:0px;}

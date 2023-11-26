@@ -1,0 +1,309 @@
+{template common/header}
+{template levckplayer:js}
+    <script type="text/javascript" src="{$PLSTATIC}swfobject.js"></script>
+	<link rel="stylesheet" href="{$PLSTATIC}css/global_fall.css" type="text/css">
+	<link rel="stylesheet" href="{$PLSTATIC}css/index_images.css" type="text/css">
+<div id="pt" class="bm cl">
+    <div class="z">
+        <a class="nvhm" href="./"></a>
+        <em>›</em><a href="./">{$lev_lang[dindex]}</a>
+        <em>›</em><a href="{$PLURL}:levckplayer">{$lev_lang[conte]}</a>
+        <em>›</em><a href="{$PLURL}:levckplayer&k={$vdtp}">{$vdtypes[$vdtp][1]}</a>
+        </div>
+    </div>
+    
+    <style>
+    .box_box {position:relative;}
+    .listBox {padding-bottom:10px;}
+    .listBox .picLink {min-height:111px;}
+    .listBox .info .r {text-align:left;padding-left:15px;}
+    .listBox .info a {color:#666;float:left;}
+    .listBox .info a:hover {color:#f46;}
+    .listBox li {margin:10px 0 0;width:208px;position:absolute;}
+    .listBox .picLink:hover em {width:208px;}
+    sup.mark_vip_free {
+     	background-image: url("{$PLSTATIC}img/sprite_mark.png");
+	    cursor: pointer;
+	    display: inline-block;
+	    font-size: 0;
+	    left: 0;
+	    line-height: 100;
+	    overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    z-index: 10;
+	    background-position: -60px -120px;
+	    height: 55px;
+	    width: 55px;
+    }
+    .adminopt {
+	    background: #000;
+	    color: #fff;
+	    font-size: 12px;
+	    opacity: 0.8;
+	    padding: 1px 5px 3px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    display:none;
+	}
+    .adminopt a {color:#fff;}
+    .adminopt a:hover {color:#f60;}
+    .listBox li:hover .adminopt {display:inline;}
+    .listBox .info i.r.pic {overflow:hidden;}
+    </style>
+
+{if checkmobile()}
+<style>
+.box_box {float:left;}
+.listBox{width:auto;margin-left:35px;margin-top:1px;}
+.listBox li {position:relative;}
+</style>
+{/if}
+
+<div class="box_box">
+{template levckplayer:leftnav}
+    <div class="listBox">
+    	<ul class="liL" id="levckplayerlist_fall">
+        {loop $lists[lists] $r}
+        {eval $s = unserialize($r[settings]);}
+        	<li class=levckplayerlist_item><a class="picLink" title="{$r[title]}" href="{$tidurl}{$r[id]}&url={$r[url]}&title={$r[title]}&sectime={$r[sectime]}&k=$vdtp">
+        	<img width="208" acheight="111" alt="{$r[title]}" src="{$r[imgsrc]}"><em></em><!--<span></span>--></a>
+        	<span class="info"><a href="{$PLURL}:{$PLNAME}&k={$r[vdtype]}">{$vdtypes[$r[vdtype]][1]}</a><i class="r pic" title='{$r[sectime]}'>{$r[sectime]}</i></span>
+        	<span class="both title"><a title="{$r[title]}" href="{$tidurl}{$r[id]}&url={$r[url]}&title={$r[title]}&sectime={$r[sectime]}&k=$vdtp">{$r[title]}</a></span>
+           <span class="type"><i class="l">
+           <a title="{$r[author]}" href="{$uidurl}{$r[uid]}">
+           <img style="border-radius:50%" width="20" height="20" alt="{$r[author]}" src="{eval echo lev_base::avatar($r[uid]);}">{eval echo cutstr($r[bbsname], 10)} </a></i>
+           <i class="r f9 pic ico_click">{$r[hitnum]}</i>
+           <i class="r" style="padding-right:10px;">
+			<a id=k_favorite href="home.php?mod=spacecp&ac=favorite&type=thread&id={$r[tid]}&formhash={FORMHASH}" onclick="shouch(this)" class='water-like-btn23' ></a>
+			<a href="javascript:;" onclick="sharewin('{$_G[siteurl]}{$tidurl}{$r[id]}&url={$r[url]}&title={$r[title]}&sectime={$r[sectime]}&k=$vdtp')" class="water-share-btn23"></a></i></span>
+			{if $r[isvip]}<sup class="mark_vip_free" title='Lv.{$r[isvip]}{$lev_lang[vipfree]}'>&nbsp;</sup>{/if}
+			{if $_G[adminid] ==1 && $r[id]}<span class='adminopt lev_opcty'>
+			<a href='{$PLURL}:addv&vdid={$r[id]}'>{$lev_lang[edit]}</a> | 
+			<a href='{$lm}_vd._delvd.{$r[id]}' onclick='delvd(this);return false;'>{$lev_lang[del]}</a>
+			</span>{/if}
+          </li>
+          {/loop}
+        </ul>
+    </div>
+</div>
+	
+{if $_PLG[qqgurl]}
+	{if substr($_PLG[qqgurl], 0, 4) =='http'} <span></span>
+		{eval $qqgurl = ' href="'.$_PLG[qqgurl].'" target="_blank" ';}
+	{else}
+		{eval $qqgurl = ' href="javascript:;" onclick="artqqgwin()" ';}
+		<div style='display:none;' id=qqghtml>{$_PLG[qqgurl]}</div>
+		<script>
+		function artqqgwin() {
+			art.dialog({id:'artqqgwin', title:false, content:jQuery('#qqghtml').html()});
+		}
+		</script>
+	{/if}
+{/if}
+
+{if $_PLG[tburl]}
+	{if substr($_PLG[tburl], 0, 4) =='http'} <span></span>
+		{eval $tburl = ' href="'.$_PLG[tburl].'" target="_blank" ';}
+	{else}
+		{eval $tburl = ' href="javascript:;" onclick="tbart()" ';}
+		<div style='display:none;' id=tbhtml>{$_PLG[tburl]}</div>
+		<script>
+		function tbart() {
+			art.dialog({id:'tbart', title:false, content:jQuery('#tbhtml').html()});
+		}
+		</script>
+	{/if}
+{/if}
+<script type="text/javascript">
+function delvd(obj) {
+	if (confirm('{$lev_lang[connfirmvd]}')) {
+		jQuery.get(obj.href, {}, function(data){
+			if (parseInt(data) =="1") {
+				jQuery(obj).parent().parent().fadeOut().remove();
+				art.dialog.tips('{$lev_lang[succeed]}');
+				loadfall();
+			}else {
+				art.dialog.tips(data);
+			}
+		})
+	}
+}
+
+function sharewin(url) {
+	var shareurl = encodeURIComponent(url);
+	var _htmls = '<div class="af-light-box-content">'+
+	'<div class="af-light-box-header">'+
+	'{if $lev_lang[sharewin1]}<div class="af-light-box-title">{$lev_lang[sharewin1]}</div>{/if}'+
+	'{if $lev_lang[sharewin2]}<div class="af-light-box-desc">{$lev_lang[sharewin2]}</div>{/if}'+
+	'<div class="af-light-box-warning af-hide"></div>'+
+	'</div>'+
+	'<div class="share-book-panel">'+
+'{if $_PLG[code2img]}'+
+	'<div class="af-form-group"><label class="af-label">{$lev_lang[sharewin3]}</label>'+
+	'<div class="share-qrurl-img"><img src="http://qr.topscan.com/api.php?w=200&text='+ shareurl +'"></div>'+
+	'</div>'+
+'{/if}{if $lev_lang[sharewin4]}'+
+	'<div class="af-form-group">'+
+	'	<label class="af-label">{$lev_lang[sharewin4]}</label><input type="text" value="'+ url +'" class="form-control"><div class=swfbtnbox><div id=copybtn1></div></div></div>'+
+'{/if}{if $_PLG[eurl]}'+
+	'<div class="af-form-group">'+
+	'	<label class="af-label">{$lev_lang[eurl]}</label><input type="text" value="{$_PLG[eurl]}" class="form-control"><div class=swfbtnbox><div id=copybtn2></div></div></div>'+
+'{/if}'+
+	'<div class="af-form-group"><label class="af-label">{$lev_lang[sharewin5]}</label>'+
+	'<ul class="share-book-btns">'+
+	'	<li><a target="_blank" '+
+	'		href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+ shareurl +'"'+
+	'		title="{$lev_lang[sharewin6]}"><span class="button-pure button-pure-blue"><i class=""></i> {$lev_lang[sharewin6]}</span></a></li>'+
+	'	<li><a target="_blank"'+
+	'		href="http://v.t.sina.com.cn/share/share.php?url='+ shareurl +'"'+
+	'		title="{$lev_lang[sharewin7]}"><span class="button-pure button-pure-teal"><i class=""></i> {$lev_lang[sharewin7]}</span></a></li>'+
+	'	<li><a target="_blank"'+
+	'		href="http://share.v.t.qq.com/index.php?c=share&a=index&url='+ shareurl +'"'+
+	'		title="{$lev_lang[sharewin8]}"><span class="button-pure button-pure-red"><i class=""></i> {$lev_lang[sharewin8]}</span></a></li>'+
+	'	<li><a target="_blank"'+
+	'		href="http://widget.renren.com/dialog/share?resourceUrl='+ shareurl +'"'+
+	'		title="{$lev_lang[sharewin9]}"><span class="button-pure button-pure-orange"><i class=""></i> {$lev_lang[sharewin9]}</span></a></li>'+
+	'</ul>'+
+	'</div>'+
+'{if $_PLG[qqgurl] || $_PLG[tburl]}'+
+	'<div class="af-form-group"><label class="af-label">{$lev_lang[contactme]}</label>'+
+	'<ul class="share-book-btns">'+
+	'	<li><a {$qqgurl}><span class="button-pure button-pure-green" style="width:180px"><i class=""></i> {$lev_lang[qqgurl]}</span></a></li>'+
+	'	<li><a {$tburl}><span class="button-pure button-pure-green" style="width:180px"><i class=""></i> {$lev_lang[tburl]}</span></a></li>'+
+	'</ul>'+
+	'</div>'+
+'{/if}{if $_PLG[epurl]}'+
+	'<div class="af-form-group">'+
+	'	<label class="af-label">{$lev_lang[epurl]}</label><input type="text" value="{$_PLG[epurl]}" class="form-control"><div class=swfbtnbox><div id=copybtn3></div></div></div>'+
+'{/if}'+
+	'</div>'+
+	'</div>';
+	art.dialog({id:'sharewin', title:false, content:_htmls, lock:true, opacity:0.2, fixed:true, cancel:true, init:function(){
+		copycontent(url, 'copybtn1');
+		copycontent('{$_PLG[eurl]}', 'copybtn2');
+		copycontent('{$_PLG[epurl]}', 'copybtn3');
+	}});
+}
+
+function shouch(obj) {
+	jQuery(obj).addClass('liked');
+	showWindow(obj.id, obj.href, 'get', 0);
+}
+</script>
+<script type="text/javascript">
+
+/*
+ * copyCon: 要复制的内容
+ * swfboxid: 复制按钮容器ID
+ * width: 按钮宽
+ * height:按钮高
+ * btnimg:按钮图片
+ */
+function copycontent(copyCon, swfboxid, width, height, btnimg) {
+	width = width >0 ? width : 52;
+	height = height >0 ? height : 25;
+	btnimg = btnimg ? btnimg : '{$PLSTATIC}copy/flash_copy_btn.png';
+	var flashvars = {
+	    content: encodeURIComponent(copyCon),
+	    uri: btnimg
+	};
+	var params = {
+	    wmode: "transparent",
+	    allowScriptAccess: "always"
+	};
+	swfobject.embedSWF("{$PLSTATIC}copy/clipboard.swf", swfboxid, width, height, "9.0.0", null, flashvars, params);
+}
+function copySuccess(){
+    //flash回调
+    art.dialog.tips("{$lev_lang[copycon]}");
+}
+</script>
+    
+
+	<div id="levckplayerlist_fall_more2" style="display:none;">
+	<a href="{$PLURL}&page={if $_GET[page] <2}2{else}{eval echo $_GET[page]+1;}{/if}&ajax=999&k={$_GET[k]}">{$lev_lang[nextpage]}</a>
+	</div>
+	<div id="img_load" style=""></div>
+    <div style="overflow: hidden; padding: 15px 0px 0px;">{$lists[pages]}</div>
+    <p><br></p>
+
+{template common/footer}
+
+
+<script type="text/javascript" src="{$PLSTATIC}jquery.infinitescroll.min.js"></script>
+<script type="text/javascript" src="{$PLSTATIC}jquery.masonry.min.js"></script>
+	
+<script type="text/javascript">
+
+loadfall();
+/*
+ *  取消绑定事件的函数写法：$(window).unbind(‘.infscr’); 通过事件触发加载数据的写法：
+
+$(document).trigger(‘retrieve.infscr’); //比如加到某个click事件中
+
+此插件还有一个鲜为人知的功能就是可以载入任何页面的选择器中的内容，可以是id以及是class，并转化到html存储。要比jquery自带的的load强大多了。
+
+$('').load('/page/2/ #content div.post',function(){      $(this).appendTo('#content');  });
+ */
+
+function loadfall(){
+	var container = jQuery('#levckplayerlist_fall');
+	
+	 layoutfall();
+	 
+    container.infinitescroll({
+      navSelector  : '#levckplayerlist_fall_more2',
+      nextSelector : '#levckplayerlist_fall_more2 a',
+      itemSelector : '.levckplayerlist_item', 
+     // debug        : true, //启用调试信息
+      animate      : true, //当有新数据加载进来的时候，页面是否有动画效果，默认没有
+      extraScrollPx: 50, //滚动条距离底部多少像素的时候开始加载，默认150
+      bufferPx     : 40,//载入信息的显示时间，时间越大，载入信息显示时间越短
+      errorCallback: function(){},//当出错的时候，比如404页面的时候执行的函数
+      localMode    : true, //是否允许载入具有相同函数的页面，默认为false
+      loading: {
+		  msgText: '{$lev_lang[levckplayerlist9]}...',
+          finishedMsg: '{$lev_lang[levckplayerlist22]}',
+          img: '{$PLSTATIC}img/loading.gif'
+        },errorCallback:function(){
+            jQuery('#levckplayerlist_fall_more').html('{$lev_lang[levckplayerlist22]}');
+		}
+      },
+      function( newElements ) {
+       	 var newElems = jQuery( newElements ).css({ opacity: 0 });
+         newElems.animate({ opacity: 1 }, 'slow');
+		 container.masonry( 'appended', newElems, true ); 
+      });
+}
+function layoutfall() {
+	var container = jQuery('#levckplayerlist_fall');
+	container.masonry({
+      	itemSelector: '.levckplayerlist_item',
+		//columnWidth : 240 ,//一列的宽度 ，包括边距 220+10+10
+		 gutterWidth:10,//列的间隙
+		 isAnimated:true, //使用jquery的布局变化，是否启用动画效果
+		 animationOptions:{
+   		queue: true, 
+   		duration: 500
+		 //jquery animate属性 ，动画效果选项。比如渐变效果 Object { queue: false, duration: 500 }
+		 },
+		 isFitWidth:true,//自适应宽度
+		 isResizable:true,// 是否可调整大小
+		 isRTL:false//使用从右到左的布局	
+    });
+}
+
+jQuery('#levckplayerlist_fall_more a').click(function(){
+	jQuery(document).trigger('retrieve.infscr');
+});
+
+jQuery('#switchwidth').click(function() {layoutfall();});
+jQuery('#toptb .y a').click(function() {layoutfall();});//X2.5
+
+function favoriteupdate() {}
+  
+</script>
+
+	

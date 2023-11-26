@@ -1,0 +1,14 @@
+<!--{template milu_pick:pick_header}-->
+
+<form action="?{PICK_GO}{$submit_pmod}&myac={$submit_action}" method="post" {if $info['enctype'] == 'file'}enctype="multipart/form-data"{/if} name="form12" id="form12"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+<table class="tb tb2 ">
+<tbody>
+{$info['show']}
+{if $info['no_submit_show'] != 1}
+<tr><td colspan="15"><div class="fixsel"><input type="submit" class="btn" id="submit_editsubmit" name="editsubmit"  value="{if $info['submit_name']}{$info['submit_name']}{else}{lang milu_pick:submit}{/if}"></div></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'editsubmit'); });</script>
+{/if}
+</tbody>
+</table>
+
+</form>

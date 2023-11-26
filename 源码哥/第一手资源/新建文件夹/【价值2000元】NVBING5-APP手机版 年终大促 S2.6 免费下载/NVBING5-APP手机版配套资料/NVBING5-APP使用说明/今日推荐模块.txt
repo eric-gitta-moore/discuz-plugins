@@ -1,0 +1,28 @@
+在数据调用页面的模块分类处选择【帖子模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-今日推荐
+
+标题最大字节数：40
+
+显示样式：帖子标题
+
+
+【确定】
+
+
+点击确定后，选择刚才添加的模块的“属性”→“模块模板”，将代码修改为（默认代码删除）：
+
+<div class="n5jj_jrtj cl" style="margin:0;border-top: 1px solid #f3f3f3;">
+	<div class="jrtj_btys">今日推荐</div>
+	<div class="jrtj_sjys">
+		<ul>
+			[loop]
+			<li><a href="{url}">{title}</a></li>
+			[/loop]
+		</ul>
+	</div>
+</div>
+
+修改后选择更新，这个模块添加完成。

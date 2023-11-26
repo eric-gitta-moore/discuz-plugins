@@ -1,0 +1,31 @@
+在数据调用页面的模块分类处选择【帖子模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-主题排行
+
+标题最大字节数：40
+
+日期格式：01-18
+
+【确定】
+
+
+点击确定后，选择刚才添加的模块的“属性”→“模块模板”，将代码修改为（默认代码删除）：
+
+<div class="n5jj_phmk cl" style="margin:15px 0 0 0">
+	<div class="n5qj_mkbt cl">
+		<span class="y"><a href="#">更多</a></span>
+		<h2>排行列表模块</h2>
+	</div>
+	<div class="phmk_jlys cl">
+		<ul>
+			[index=1]<li><i>{dateline}</i><span class="ph1">{currentorder}</span><a href="{url}">{title}</a></li>[/index]
+			[index=2]<li><i>{dateline}</i><span class="ph2">{currentorder}</span><a href="{url}">{title}</a></li>[/index]
+			[index=3]<li><i>{dateline}</i><span class="ph3">{currentorder}</span><a href="{url}">{title}</a></li>[/index]
+			[loop]<li><i>{dateline}</i><span>{currentorder}</span><a href="{url}">{title}</a></li>[/loop]
+		</ul>
+	</div>
+</div>
+
+修改后选择更新，这个模块添加完成。

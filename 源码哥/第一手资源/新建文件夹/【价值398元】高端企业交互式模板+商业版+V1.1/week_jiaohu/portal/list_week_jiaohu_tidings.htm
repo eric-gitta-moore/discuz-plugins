@@ -1,0 +1,115 @@
+<!--{template common/header}-->
+<!--[name]{Week_Design_list_tidings}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+
+</div>
+<div class="wk_list_box wk_list_box15">
+    <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+    <div class="bm_h">
+        <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]">{lang article_publish}</a>
+    </div>
+    <!--{/if}-->
+</div>
+<div class="clear"></div>
+<div class="wk_ymbg">
+<div id="wp" class="wp">
+
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+    	<div class="wk_c_right_name">
+            <div class="wk_c_right_name_r">
+                <ul>
+                	<li>
+                        <img src="$_G['style']['styleimgdir']/portal/right_wz.png" alt="" />
+                    </li>
+                    <li>
+                        <span>$week_lang[8]</span>
+                        <span><a href="$_G[setting][navs][1][filename]">{lang portal}</a></span>
+                        <span>$week_lang[17]</span>
+                        <!--{loop $cat[ups] $value}--><span><a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a></span><span>$week_lang[17]</span><!--{/loop}-->
+                        <span>$cat[catname]</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+        <div class="wk_content_right_m">
+        	<div class="wk_tidings_m">
+                <!--{loop $list['list'] $value}-->
+                <!--{eval $highlight = article_title_style($value);}-->
+                <!--{eval $article_url = fetch_article_url($value);}-->		
+                <div class="wk_tidings_main">
+                    <div class="wk_tidings_img">
+                      <a href="$article_url" target="_blank" title="$value[title]"><!--{if $value[pic]}--><img src="$value[pic]" alt="$value[title]"/><!--{else}--><img src="$_G['style']['imgdir']/nophoto.gif" alt="$value[title]"/><!--{/if}--></a>	
+                    </div>
+                    <div class="wk_tidings_main_name">
+                        <span class="wk_tidings_main_name2"><a href="$article_url" target="_blank" title="$value[title]">$value[title]</a></span>
+                    </div>
+                    <div class="wk_tidings_main_cnt">
+                        <span class="wk_tidings_main_cnt2">$value[summary]</span>
+                    </div>
+                    <div class="wk_tidings_main_more"><a target="_blank" title="more" href="$article_url">more>></a> </div>
+                </div>
+                <!--{/loop}-->
+            </div>
+		</div>
+        <div class="clear"></div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}-->
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+	</div>
+    <div class="sd pph">
+    	<div class="wk_c_left_t">
+            <span class="wk_c_left_t1">$week_lang[68]</span> <span class="wk_c_left_t2">$week_lang[69]</span>
+        </div>
+        <div class="wk_c_left_cnt">
+            <ul>
+            <!--{if $wk_menu}-->
+            	<!--{if $cat[others]}-->
+                    <!--{loop $cat[others] $value}-->
+                        <li class="wk_menu1_cur"><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                    <!--{/loop}-->
+                <!--{/if}-->
+            <!--{else}-->
+                <!--{if $cat[subs]}-->
+                    <!--{loop $cat[subs] $value}-->
+                        <li class="wk_menu1_cur"><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                    <!--{/loop}-->
+                <!--{else}-->
+                    <!--{if $cat[others]}-->
+                        <!--{loop $cat[others] $value}-->
+                            <li class="wk_menu1_cur"><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                        <!--{/loop}-->
+                    <!--{/if}-->
+                <!--{/if}-->
+            <!--{/if}-->
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <!--[diy=wk_zcyl1]--><div id="wk_zcyl1" class="area"></div><!--[/diy]-->
+        <div class="clear"></div>
+		<!--{if $wk_contact}-->
+		<!--{template portal/contact}-->
+    	<!--{/if}-->
+        <div class="clear"></div>
+		<!--[diy=wk_zcyl2]--><div id="wk_zcyl2" class="area"></div><!--[/diy]-->
+        <div class="clear"></div>
+    </div>
+</div>
+</div>
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

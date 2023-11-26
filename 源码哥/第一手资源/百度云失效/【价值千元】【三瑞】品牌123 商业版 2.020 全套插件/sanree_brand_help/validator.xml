@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin Validator]]></item>
+	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Data">
+		<item id="0"><![CDATA[source/plugin/sanree_brand_help/admincp/index.htm]]></item>
+		<item id="1"><![CDATA[source/plugin/sanree_brand_help/admincp/sanree_brand_help/index.htm]]></item>
+		<item id="2"><![CDATA[source/plugin/sanree_brand_help/admincp/sanree_brand_help/sanree_brand_help_list.php]]></item>
+		<item id="3"><![CDATA[source/plugin/sanree_brand_help/admincp.inc.php]]></item>
+		<item id="4"><![CDATA[source/plugin/sanree_brand_help/config.inc.php]]></item>
+		<item id="5"><![CDATA[source/plugin/sanree_brand_help/discuz_plugin_sanree_brand_help_SC_GBK.xml]]></item>
+		<item id="6"><![CDATA[source/plugin/sanree_brand_help/discuz_plugin_sanree_brand_help_SC_UTF8.xml]]></item>
+		<item id="7"><![CDATA[source/plugin/sanree_brand_help/discuz_plugin_sanree_brand_help_TC_BIG5.xml]]></item>
+		<item id="8"><![CDATA[source/plugin/sanree_brand_help/discuz_plugin_sanree_brand_help_TC_UTF8.xml]]></item>
+		<item id="9"><![CDATA[source/plugin/sanree_brand_help/function/function_core.php]]></item>
+		<item id="10"><![CDATA[source/plugin/sanree_brand_help/function/index.htm]]></item>
+		<item id="11"><![CDATA[source/plugin/sanree_brand_help/index.html]]></item>
+		<item id="12"><![CDATA[source/plugin/sanree_brand_help/install.php]]></item>
+		<item id="13"><![CDATA[source/plugin/sanree_brand_help/table/index.htm]]></item>
+		<item id="14"><![CDATA[source/plugin/sanree_brand_help/table/table_sanree_brand_help.php]]></item>
+		<item id="15"><![CDATA[source/plugin/sanree_brand_help/uninstall.php]]></item>
+		<item id="16"><![CDATA[source/plugin/sanree_brand_help/validator.xml]]></item>
+	</item>
+</root>

@@ -1,0 +1,55 @@
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $_G['forum_threadlist'] $key $thread}-->
+            	<!--{if $thread['displayorder'] > 0}-->
+                	<!--{eval continue;}-->
+                <!--{/if}-->
+				<li>
+                    <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="litwo cl">
+                        <div class="asub">
+                            <div class="atitle" $thread[highlight]>$thread[subject]</div>
+                        </div>
+                        <!--{hook/forumdisplay_littlepic_mobile $key}-->
+					</a>
+                    <a href="{if $_G[uid] == $thread[authorid]}home.php?mod=space&uid={$thread[authorid]}&do=profile&mycenter=1{else}home.php?mod=space&uid={$thread[authorid]}&do=profile{/if}" class="lione cl" {if $groupcolor[$thread[authorid]]} style="color: $groupcolor[$thread[authorid]];"{/if}>
+						<div class="author">
+                            <div class="aleft">
+                                <div class="ava"><!--{avatar($thread[authorid], 'middle')}--></div>
+                                <span>$thread[author]</span> 
+                                <!--{if $thread['digest'] > 0}-->
+                                <span class="abadge">$alang_newjinghua</span> 
+                                <!--{elseif $thread['displayorder'] == 0}-->
+                                    <!--{if $thread[recommendicon] && $filter != 'recommend'}-->
+                                        <span class="abadge">{lang thread_recommend}</span>
+                                    <!--{/if}-->
+                                    <!--{if $thread[heatlevel]}-->
+                                        <span class="abadge">{lang heats}</span>
+                                    <!--{/if}-->
+                                    <!--{if $thread['rate'] > 0}-->
+                                        <span class="abadge">{lang rate_credit_add}</span>
+                                    <!--{elseif $thread['rate'] < 0}-->
+                                        <span class="abadge">{lang posts_deducted}</span>
+                                    <!--{/if}-->
+                                <!--{/if}-->
+                                <!--{if $thread['special'] == 1}-->
+                                    <span class="abadge leixing">{lang thread_poll}</span>
+                                <!--{elseif $thread['special'] == 2}-->
+                                    <span class="abadge leixing">{lang thread_trade}</span>
+                                <!--{elseif $thread['special'] == 3}-->
+                                    <span class="abadge leixing">{lang thread_reward}</span>
+                                <!--{elseif $thread['special'] == 4}-->
+                                    <span class="abadge leixing">{lang thread_activity}</span>
+                                <!--{elseif $thread['special'] == 5}-->
+                                    <span class="abadge leixing">{lang thread_debate}</span>
+                                <!--{/if}-->
+                            </div>
+                            <div class="aright">
+                                <span>$thread[dateline]</span> 
+                                <span class="pip">/</span> 
+                                <span>$thread[views] $alang_view</span>
+                            </div>
+                        </div>
+					</a>
+                    <div class="grey_line cl"></div>
+				</li>
+                <!--{/loop}-->

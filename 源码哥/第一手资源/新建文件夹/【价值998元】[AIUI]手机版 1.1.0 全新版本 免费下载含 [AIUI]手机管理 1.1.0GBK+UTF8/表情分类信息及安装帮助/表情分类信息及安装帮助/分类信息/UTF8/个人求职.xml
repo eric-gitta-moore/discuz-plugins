@@ -1,0 +1,3336 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Threadtypes]]></item>
+	<item id="Version"><![CDATA[X3.3]]></item>
+	<item id="Time"><![CDATA[2017-08-12 18:50]]></item>
+	<item id="From"><![CDATA[手机站 (http://app.dzzsk.com/)]]></item>
+	<item id="Data">
+		<item id="0">
+			<item id="optionid"><![CDATA[106]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[1]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[照片]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_zp]]></item>
+			<item id="type"><![CDATA[image]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxwidth"><![CDATA[]]></item>
+				<item id="maxheight"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="1">
+			<item id="optionid"><![CDATA[107]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[2]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[姓名]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_xm]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="2">
+			<item id="optionid"><![CDATA[108]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[3]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[年龄]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_nl]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="3">
+			<item id="optionid"><![CDATA[109]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[4]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[性别]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_xb]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 男
+2 = 女]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="4">
+			<item id="optionid"><![CDATA[110]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[5]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[籍贯]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_jg]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="5">
+			<item id="optionid"><![CDATA[111]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[6]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[民族]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_mz]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="6">
+			<item id="optionid"><![CDATA[112]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[7]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[婚否]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_hf]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 未婚
+2 = 已婚]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="7">
+			<item id="optionid"><![CDATA[113]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[8]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[身高(CM)]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_sg]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="8">
+			<item id="optionid"><![CDATA[114]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[9]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[体重(KG)]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_tz]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="9">
+			<item id="optionid"><![CDATA[115]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[10]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[最高学历]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_zgxl]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 初中
+2 = 高中
+3 = 专科
+4 = 本科
+5 = 硕士
+6 = 博士]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="10">
+			<item id="optionid"><![CDATA[116]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[11]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[毕业学校]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_byxx]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="11">
+			<item id="optionid"><![CDATA[117]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[12]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[毕业时间]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_bysj]]></item>
+			<item id="type"><![CDATA[calendar]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="12">
+			<item id="optionid"><![CDATA[118]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[13]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[所学专业]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_sxzy]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="13">
+			<item id="optionid"><![CDATA[119]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[14]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[外语水平]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_wysp]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 英语四级
+2 = 英语六级
+3 = 英语八级
+4 = 四级以下]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="14">
+			<item id="optionid"><![CDATA[120]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[15]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[工作经历]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_gzjl]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="colsize"><![CDATA[]]></item>
+				<item id="rowsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="15">
+			<item id="optionid"><![CDATA[121]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[16]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[求职类型]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_qzlx]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 全职
+2 = 兼职]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="16">
+			<item id="optionid"><![CDATA[122]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[17]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[求职行业]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_qzhy]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 生活 | 服务业
+2 = 人力 | 行政 | 管理
+3 = 销售 | 客服 | 采购 | 淘宝
+4 = 酒店
+5 = 市场 | 媒介 | 广告 | 设计
+6 = 生产 | 物流 | 质控 | 汽车
+7 = 网络 | 通信 | 电子
+8 = 法律 | 教育 | 翻译 | 出版
+9 = 财会 | 金融 | 保险
+10 = 医疗 | 制药 | 环保
+11 = 建筑 | 装修 | 物业 | 其他]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="17">
+			<item id="optionid"><![CDATA[123]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[18]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[求职岗位]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_qzgw]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 人事/行政/后勤
+2 = 高级管理
+3 = 销售
+4 = 客服
+5 = 贸易/采购
+6 = 超市/百货/零售
+7 = 市场/媒介/公关
+8 = 广告/会展/咨询
+9 = 美术/设计/创意
+10 = 普工/技工
+11 = 生产管理/研发
+12 = 物流/仓储
+13 = 服装/纺织/食品
+14 = 质控/安防
+15 = 汽车制造/服务
+16 = 计算机/互联网/通信
+17 = 电子/电气
+18 = 机械/仪器仪表
+19 = 律师
+20 = 教育培训
+21 = 编辑/出版/印刷
+22 = 财务/审计/统计
+23 = 物业管理
+24 = 其他]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="18">
+			<item id="optionid"><![CDATA[124]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[19]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[期望月薪]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_qwyx]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 2000以下
+2 = 2000-3000
+3 = 3000-4000
+4 = 4000-6000
+5 = 6000-8000
+6 = 8000-10000
+7 = 10000-15000
+8 = 15000-20000
+9 = 20000以上
+10 = 面议]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="19">
+			<item id="optionid"><![CDATA[126]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[21]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[个人介绍]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_grjs]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="colsize"><![CDATA[]]></item>
+				<item id="rowsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="20">
+			<item id="optionid"><![CDATA[127]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[22]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[联系电话]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_lxdh]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="21">
+			<item id="optionid"><![CDATA[128]]></item>
+			<item id="classid"><![CDATA[2]]></item>
+			<item id="displayorder"><![CDATA[23]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[邮箱地址]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[ainuo_qz_yxdz]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[6]]></item>
+			<item id="name"><![CDATA[个人求职]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_avatar,.ainuo_viewbi{ display:none;}
+.plc .piauthor{ padding:0;}
+.plc .pi .message{ padding:10px;}
+.plc .pi .huifusize{ padding:0 !important;}
+</style>
+<div class="ainuo_sort_qzview cl">
+	<div class="cl">
+        <div class="acon1 cl">
+            <div class="aleft cl">
+                <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+            </div>
+            <div class="aright cl">
+                <ul>
+                    <li><h2>{ainuo_qz_xm_value}<span>{ainuo_qz_xb_value}</span><span>{ainuo_qz_nl_value}</span></h2></li>
+                    <li>{ainuo_qz_jg}：{ainuo_qz_jg_value}</li>
+                    <li>{ainuo_qz_mz}：{ainuo_qz_mz_value}</li>
+                    <li>{ainuo_qz_hf}：{ainuo_qz_hf_value}</li>
+                    <li>{ainuo_qz_sg}：{ainuo_qz_sg_value}</li>
+                    <li>{ainuo_qz_tz}：{ainuo_qz_tz_value}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ainuo_sorttip cl">{ainuo_qz_grjs_value}</div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon2 cl">
+    	<div class="atit cl">求职方向</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_qzlx}：{ainuo_qz_qzlx_value}</li>
+                <li>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</li>
+                <li>{ainuo_qz_qzgw}：{ainuo_qz_qzgw_value}</li>
+                <li>{ainuo_qz_qwyx}：<em>{ainuo_qz_qwyx_value} 元/月</em></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon3 cl">
+    	<div class="atit cl">教育经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_zgxl}：{ainuo_qz_zgxl_value}</li>
+                <li>{ainuo_qz_byxx}：{ainuo_qz_byxx_value}</li>
+                <li>{ainuo_qz_bysj}：{ainuo_qz_bysj_value}</li>
+                <li>{ainuo_qz_sxzy}：{ainuo_qz_sxzy_value}</li>
+                <li>{ainuo_qz_wysp}：{ainuo_qz_wysp_value}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey_line cl"></div>
+    <div class="acon4 cl">
+    	<div class="atit cl">工作经历</div>
+        <div class="acon cl">
+        	<ul>
+            	<li>{ainuo_qz_gzjl}：{ainuo_qz_gzjl_value}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ainuo_bot_zp cl">
+	<ul>
+    	<li class="aleft">
+        	<a href="tel:{ainuo_qz_lxdh_value}">
+                <span>{ainuo_qz_xm_value}</span>
+                <p>Email:{ainuo_qz_yxdz_value}</p>
+            </a>
+        </li>
+        <li>
+        	<a href="tel:{ainuo_qz_lxdh_value}" style="border-right: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="iconfont icon-phone"></i>
+                <p>电话</p>
+            </a>
+        </li>
+        <li>
+        	<a href="javascript:;" class="ainuobotsortreply_a">
+        	<i class="iconfont icon-comment"></i>
+        	<p>评论</p>
+            </a>
+        </li>
+    </ul>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_qzlist cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+    <li>
+        {modcheck}
+        <a href="{subject_url}">
+            <div class="qzlist cl">
+                <div class="aleft cl">
+                    <img class="ainuolazyload" data-original="{ainuo_qz_zp_value}" />
+                </div>
+                <div class="aright cl">
+                	<h2>{ainuo_qz_xm_value}
+                    <span>{ainuo_qz_xb_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_nl_value}</span><span class="pip">|</span>
+                    <span>{ainuo_qz_zgxl_value}</span>
+                    </h2>
+                    <p>{ainuo_qz_qzhy}：{ainuo_qz_qzhy_value}</p>
+                    <p class="js">{ainuo_qz_grjs_value}</p>
+                </div>
+            </div>
+            <div class="qzlist2 cl">
+            	<span class="z">{dateline}</span>
+                <span class="y">被浏览{views}次</span>
+            </div>
+        </a>
+    </li>
+    <div class="grey_line"></div>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[6]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+	</item>
+</root>

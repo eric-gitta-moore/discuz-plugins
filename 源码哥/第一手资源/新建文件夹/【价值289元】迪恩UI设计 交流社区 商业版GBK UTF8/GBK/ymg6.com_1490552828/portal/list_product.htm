@@ -1,0 +1,158 @@
+<!--{template common/header}-->
+<!--[name][迪恩uidisplay文章列表页][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+<style type="text/css">
+.wp, #wp{ width:100%;}
+body{ background:#f6f6f6!important;}
+#deanpage{ padding:0;}
+.deanproducttitle{ padding-top:68px;}
+.deanproducttitle h4{font-size:33px; line-height:40px; color:#fff;  text-align:center;}
+.deanproducttitle p{text-align:center; font-size:18px; color:#fff; font-weight:normal;margin-top: 10px; margin-bottom:74px;}
+.w1180{ width:1180px; margin:0 auto;}
+.deanwp{ width:1180px; margin:20px auto 0 auto; }
+.ct2 .mn{ width:auto;padding-right: 0px;border-right: 0}
+/* 标题 */
+.dean_productnextnav{ float:left; width:900px; overflow:hidden; height:60px; line-height:60px;}
+.dean_productnextnav ul{ }
+.dean_productnextnav a{ font-size:12px; color:#666; border-right:1px solid #f1f2f3;   display:block;height:60px; line-height:60px; text-align:center; float:left;  min-width:120px;  }
+.dean_productnextnav a:hover{ background:#1A87F3; color:#fff;}
+.deanpc_top{ height:60px; width:1180px; background:#fff; border:1px solid #f1f2f3; margin-top:20px;}
+
+/* 产品列表 */
+
+.deanp_cinfo{ width:1200px;}
+.deanp_cinfo ul{ width:1200px;}
+.deanp_cinfo ul li{  float:left; width:278px; background:#fff;  margin:0 20px 20px 0; border:1px solid #f1f2f3; }
+.deanp_cinfo ul li:hover{ box-shadow:1px 2px 2px #efefef;}
+.deanpropics{ width:278px; height:207px;   position: relative;}
+.deanpropics a{}
+.deanpropics a::before { content: ''; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px;  background: rgba(0, 0, 0,0.5);  opacity: 0; transition: all 0.25s; -webkit-transition: all 0.25s;}
+.deanpropics a span { width: 30px; height: 30px; position: absolute; top: 50%;  left: 50%; margin-top: -15px; margin-left: -15px;  float: left;  opacity: 0; filter: alpha(opacity=0); -webkit-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s;}
+.deanpropics a span:before { width: 5px; height: 50px; top: -6px; left: 22px; -webkit-transform: translateY(100%);  -moz-transform: translateY(100%); -ms-transform: translateY(100%); -o-transform: translateY(100%); transform: translateY(100%);}
+.deanpropics a span:before, .deanpropics a span:after { content: ''; background: #fff; position: absolute; -webkit-transition: all 0.25s;   -o-transition: all 0.25s; transition: all 0.25s;}
+.deanpropics a span:after { width: 50px; height: 5px; left: 0;  top: 15px; -webkit-transform: translateX(-100%);  -moz-transform: translateX(-100%); -ms-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%);}
+.deanpropics a:hover::before {  opacity: 1;}
+.deanpropics a:hover span {  opacity: 1;  filter: alpha(opacity=100);}
+.deanpropics a:hover span:before, .deanpropics a:hover span:after { -webkit-transform: none; -moz-transform: none; -ms-transform: none;
+-o-transform: none;  transform: none;}
+.deanpropics img{ width:278px; height:207px;}
+.design_linfo { height: 25px; padding-left: 16px; padding-bottom:15px;}
+.design_linfo span{font-size: 12px; color: #666; display:inline-block; line-height: 25px; padding-right: 10px; cursor:pointer;}
+.design_linfo span:hover{ color:#1a87f3;}
+.design_linfo span i{  display: inline-block; margin-top: -3px; margin-right: 2px; width: 25px; height: 25px; background: url(./template/ymg6.com_1490552828/deancss/icon_25.png) no-repeat; vertical-align: middle;}
+.design_linfo span i.icon_see{ background-position: 0 -700px;}
+.design_linfo span:hover i.icon_see{background-position: 0 -725px;}
+.design_linfo span i.icon_love{ background-position: 0 -750px;}
+.design_linfo span:hover i.icon_love{ background-position: 0 -775px;}
+.design_linfo span i.icon_message{ background-position: 0 -800px;}
+.design_linfo span:hover i.icon_message{ background-position: 0 -825px;}
+
+.deanp_cinfo ul li h2{ width:248px; padding:0 15px;  overflow:hidden;}
+.deanp_cinfo ul li h2 span{ display:block; float:left; font-size:12px; color:#dcdcdc;  margin-top: 7px; height:20px; line-height:20px; padding:0 10px; font-weight:normal;}
+.deanp_cinfo ul li h2 a.deanh2txt{ font-size: 15px;color: #5b5b5b;font-weight: normal;float: left;height: 35px;line-height: 35px;width: 165px;overflow: hidden;}
+.deanp_cinfo ul li h2 a.deanh2txt:hover{ color:#1A87F3; }
+.deanp_cinfo ul li h2 a.deanbk{display: inline-block;height: 35px;line-height: 35px;font-size: 14px;max-width: 60px; overflow:hidden;color: #1A87F3;float: left; font-weight:normal;}
+.deanp_cinfo ul li .deanneirong{ font-size:12px; color:#9d9f9f; width:248px; padding:0 15px; line-height:22px; height:44px; overflow:hidden;margin-bottom:5px; }
+.deantools{ float:right;}
+.deantools a{ display:inline-block; float:left; width:90px; height:60px!important; line-height:60px;  text-align:center; font-size:12px;color:#666; border-left:1px solid #f1f2f3;margin-right:0; }
+.deantools a.deanaddnew{ background:url(./template/ymg6.com_1490552828/deancss/portal_list_view/pen.png) 20px center no-repeat;padding-left:25px;}
+.deantools a.deanrssartice{ background:url(./template/ymg6.com_1490552828/deancss/portal_list_view/rss.png) 20px center no-repeat; padding-left:15px;}
+
+</style>
+<div class="deanpc_top w1180 deanactions bounceInDown">
+        <!--{if $cat[subs]}-->
+        
+        <div class="dean_productnextnav">
+            <!--{eval $i = 1;}-->
+            <!--{loop $cat[subs] $value}-->
+            <!--{if $i != 1}--><!--{/if}--><a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><!--{eval $i--;}-->
+            <!--{/loop}-->
+            <div class="clear"></div>
+        </div>
+        <!--{/if}-->
+        <div class="deantools">
+                	
+            <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+            <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]" class="deanaddnew deanactions bounceInLeft" title="发布文章">发布文章</a>
+            <!--{/if}-->
+        
+            <!--{if $_G[setting][rssstatus] && !$_GET['archiveid']}--><a href="portal.php?mod=rss&catid=$cat[catid]" class="deanrssartice deanactions bounceInRight" target="_blank" title="RSS">RSS</a><!--{/if}-->
+            
+        </div>
+        <div class="clear"></div>
+        
+        
+    </div>
+<div class="deanwp">
+    <!--{ad/text/wp a_t}-->
+
+    <div class="wp">
+        <!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+    </div>
+    
+    <div id="ct" class="ct2 wp cl">
+    	
+        <div class="deanpc_right">
+                <div class="deanmn">
+                
+                <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+                <div class="clear"></div>
+                <div class="deanp_cinfo">
+                    <ul>
+                        <!--{loop $list['list'] $value}-->
+                        <!--{eval $highlight = article_title_style($value);}-->
+                        <!--{eval $article_url = fetch_article_url($value);}-->
+                        <li class="deanactions fadeInUp">
+                        	<div class="deanpropics">
+                                <!--{if $value[pic]}-->
+                                <a href="$article_url" target="_blank">
+                                    
+                                    <img src="$value[pic]" width="285" height="177">
+                                     <span></span>
+                                </a>
+                                <!--{else}--><a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/nopic.jpg" width="285" height="177" /><span></span></a><!--{/if}-->
+                            </div>
+                            
+                            <div class="clear"></div>
+                            <h2>
+                                
+                                <!--{if $value[catname] && $cat[subs]}--><a class="deanbk" href="{$portalcategory[$value['catid']]['caturl']}" target="_blank">$value[catname]</a><!--{/if}--><span>|</span>
+                                
+                                <a class="deanh2txt" href="$article_url" target="_blank">$value[title]</a>
+                                <div class="clear"></div>
+                            </h2>
+                            <div class="deanneirong">$value[summary]</div>
+                            <div class="design_linfo">
+                                <span>
+                                    <i class="icon_see"></i>{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}
+                                </span>
+                                <span>
+                                    <i class="icon_message"></i>{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}
+                                </span>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                            
+                        <!--{/loop}-->
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+                <!--{if $list['multi']}--><div class="pgs cl" id="deanpage">{$list['multi']}</div><!--{/if}-->
+                
+                <!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+        
+            </div>
+        </div>
+        <div class="clear"></div>
+        
+    </div>
+    <div class="wp mtn">
+        <!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+    </div>
+</div>
+
+<!--{template common/footer}-->

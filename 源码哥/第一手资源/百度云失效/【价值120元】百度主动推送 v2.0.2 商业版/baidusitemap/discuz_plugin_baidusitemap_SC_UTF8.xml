@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-11-01 15:01]]></item>
+	<item id="From"><![CDATA[分享吧（www.fx8.cc）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源码哥_百度主动推送]]></item>
+			<item id="identifier"><![CDATA[baidusitemap]]></item>
+			<item id="description"><![CDATA[百度主动推送 For Discuz! 作者 FX8 人工智能实验室 出品（Made By FX8, Team From fx8.cc ） 功能介绍：本插件利用百度最新推注的链接提交主动推送接口为站长打造一个实时将帖子推送给百度搜索引擎抓取的SEO拓展工具！商业版支持按版块开启机制，支持当日主题有效推送机制！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[baidusitemap/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[v2.0.2]]></item>
+			<item id="__modules">
+				<item id="9">
+					<item id="name"><![CDATA[myyapmagoo]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>源码哥</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[logs]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[推送记录]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[应用推荐]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[网站域名]]></item>
+				<item id="description"><![CDATA[以您在百度站长平台登记的域名为准！]]></item>
+				<item id="variable"><![CDATA[domain]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[www_FX8_co]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[准入密钥]]></item>
+				<item id="description"><![CDATA[在百度站长平台->数据提交->链接提交 页面里获取]]></item>
+				<item id="variable"><![CDATA[token]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[yTvDsU7bQ2pdLXSv]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[开启推送版块]]></item>
+				<item id="description"><![CDATA[被选择的版块的帖子才允许被推送！
+【*】注意：本功能为商业版享有，其他版本设置无效；]]></item>
+				<item id="variable"><![CDATA[forums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[37]]></item>
+					<item id="1"><![CDATA[36]]></item>
+					<item id="2"><![CDATA[2]]></item>
+					<item id="3"><![CDATA[42]]></item>
+					<item id="4"><![CDATA[41]]></item>
+					<item id="5"><![CDATA[40]]></item>
+					<item id="6"><![CDATA[44]]></item>
+					<item id="7"><![CDATA[43]]></item>
+					<item id="8"><![CDATA[45]]></item>
+				</item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[开启今日主题优先推送]]></item>
+				<item id="description"><![CDATA[开启后将优先推送今日发布的主题帖，直到晚上（18:00以后）才会利用百度接口剩余量推送历史主题；开启本功能将优先保证新鲜的内容被推送给百度；
+【*】注意：本功能为商业版享有，其他版本设置无效；]]></item>
+				<item id="variable"><![CDATA[today]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[开启原创标识]]></item>
+				<item id="description"><![CDATA[原创内容较多的网站可开启本功能]]></item>
+				<item id="variable"><![CDATA[type]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推荐一个dz商</span><span style="color:#4C33E5;">业插件模版下载的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">网站给大家</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">源码哥分享吧</span></a><span style="color:#4C33E5;">（www.ymg6.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">这</span><span style="color:#E53333;">是一个</span><span style="color:#E53333;">dz商业</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">资源破解分享的网站，而且还有很多精品的网站源码下载</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他们资源每天更新，并且很多都是他们自己出钱在应用中心购买后破解分享出来的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不过还是替他们说一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他们站下载的资源只限于自己学习研究内含的设计思想和原理 请勿有任何商业盈利行为</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介绍也介绍完了，给大家做个小导航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dz商业破解插件下载</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dz商业风格模版下载</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">精品网站源码下载</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">工具素材下载</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">精选教程区</a></span> 
+</h3> ]]></item>
+				<item id="appname"><![CDATA[百度主动推送]]></item>
+				<item id="title"><![CDATA[推送记录]]></item>
+				<item id="subject"><![CDATA[帖子标题]]></item>
+				<item id="todate"><![CDATA[推送时间]]></item>
+				<item id="s_title"><![CDATA[按推送时间查询]]></item>
+				<item id="s_start"><![CDATA[开始时间]]></item>
+				<item id="s_end"><![CDATA[结束时间]]></item>
+				<item id="addtitle"><![CDATA[【今日推送量剩余<font color="red">{remain}</font>，您的单日最大推送量为<font color="red">{max}</font>】(网站每日推送量限制是百度站长平台根据网站情况给与的，非本插件限制！)]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="appname"><![CDATA[百度主动推送]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

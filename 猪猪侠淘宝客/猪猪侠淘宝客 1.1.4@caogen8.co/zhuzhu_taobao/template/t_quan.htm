@@ -1,0 +1,131 @@
+<!--{if $_GET[inajax]}-->
+<!--{template common/header}-->
+	<!--{eval $i = 1;}-->
+	<!--{loop $list $v}-->
+		<li class="y4">
+			<i class="q_new"></i>
+			<a href="{$jump_url}$v[num_iid]&e=$v[e]&zk_final_price=$v[zk_final_price]&q_price=$v[q_price]" target="_blank">
+				<img {if $i > 8}src="" zhuzhu-{/if}src="$v[pict_url]" alt="$v[title]" />
+			</a>
+			<h2><a target="_blank" href="{$jump_url}$v[num_iid]&e=$v[e]&zk_final_price=$v[zk_final_price]&q_price=$v[q_price]"><img src="./source/plugin/zhuzhu_taobao/static/image/{if $v[user_type]}tmall{else}taobao{/if}.png">$v[title]</a></h2>
+			<div class="coupon-wrap cl">
+				<p>
+					<span class="y">30{lang zhuzhu_taobao:t_brand_htm_1} $v[volume]</span>
+					<span class="q_price">{lang zhuzhu_taobao:t_brand_htm_2}&yen; <i>$v[q_price]</i>
+				</p>
+			</div>
+			<div class="q_link">
+				<span class="y"><a href="$v[coupon_click_url]" target="_blank">{if $v[user_type]}{lang zhuzhu_taobao:t_brand_htm_3}{else}{lang zhuzhu_taobao:t_brand_htm_4}{/if}{lang zhuzhu_taobao:t_brand_htm_5}</a></span>
+				<span class="z">{lang zhuzhu_taobao:jump_url_htm_5}{eval echo $v[zk_final_price]-$v[q_price]}{lang zhuzhu_taobao:jump_url_htm_6}</span>
+			</div>
+			<!--{if $_G[adminid] == 1 }--><span class="fan">{lang zhuzhu_taobao:jump_url_htm_31} $v[commission_rate]%</span><!--{/if}-->
+		</li>
+	<!--{eval $i ++}-->
+	<!--{/loop}-->
+	<!--{template common/footer}-->
+<!--{else}-->
+<!--{template zhuzhu_taobao:t_header}-->
+</div>
+
+<script src="source/plugin/zhuzhu_taobao/static/js/jquery-1.8.3.min.js?{VERHASH}"></script>
+<link rel="stylesheet" type="text/css" href="source/plugin/zhuzhu_taobao/static/js/swiper.min.css">
+<script src="source/plugin/zhuzhu_taobao/static/js/swiper.min.js"></script>
+<div class="q_top">
+	<div class="wp cl" id="q_top">
+		<ul>
+			<li{if !$_GET[category_id]} class="active"{/if}><a href="plugin.php?id=zhuzhu_taobao&mod=quan">{lang zhuzhu_taobao:t_quan_htm_8}</a></li>
+			<!--{loop $category $v}-->
+			<li id="cate-$v[category_id]" {if $zhuzhu_taobao_category[$_GET[category_id]][upid] == $v[category_id]} class="active"{/if}>
+				<a href="javascript:;" onclick="inte('cate-$v[category_id]');">$v[name]</a>
+				<div class="cl">
+					<div class="wp cl swiper-container">
+						<div class="swiper-wrapper">
+						<!--{loop $v[child] $vv}-->
+							<a class="swiper-slide" href="plugin.php?id=zhuzhu_taobao&mod=quan&category_id=$vv[category_id]"><img src="$vv[pic]" title="$vv[name]">
+							<p class="wrap">$vv[name]</p></a>
+						<!--{/loop}-->
+						</div>
+					</div>
+				</div>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	var swiper = new Swiper('.swiper-container', {
+	  slidesPerView: 14,
+	  spaceBetween: 10,
+	});
+	var jQuery = jQuery.noConflict(true);
+	function inte(id){
+		jQuery(".active").removeClass('active');
+		jQuery("#"+id).addClass('active');
+		var swiper = new Swiper('.swiper-container', {
+		  slidesPerView: 14,
+		  spaceBetween: 10,
+		});
+	}
+</script>
+
+<div class="q_item">
+	<div class="wp cl">
+		<h2>{lang zhuzhu_taobao:t_quan_htm_9}!{lang zhuzhu_taobao:t_quan_htm_10}!</h2>
+		<ul class="cl" id="quan_list">
+		</ul>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	loadmore();
+	window.onscroll = function(){
+		var scrollT = document.documentElement.scrollTop||document.body.scrollTop;
+		var scrollH = document.documentElement.scrollHeight||document.body.scrollHeight;
+		var clientH = document.documentElement.clientHeight||document.body.clientHeight;
+
+		if(scrollT == scrollH - clientH){
+			loadmore();
+		}else if(scrollT > 220){
+			<!--{if $_GET[category_id]}-->
+			document.getElementById("q_top").setAttribute("style", "top: 80px;");
+			<!--{/if}-->
+		}else if(scrollT < 220){
+			<!--{if $_GET[category_id]}-->
+			document.getElementById("q_top").setAttribute("style", "");
+			<!--{/if}-->
+		}
+		
+		var aImg = document.querySelectorAll('img');
+        var len = aImg.length;
+        var n = 0;
+		for (var i = n; i < len; i++) {
+			if (aImg[i].offsetTop < clientH + scrollT) {
+				if (aImg[i].getAttribute('src') == '') {
+					aImg[i].src = aImg[i].getAttribute('zhuzhu-src');
+				}
+				n = i + 1;
+			}
+		}
+	}
+	
+	var page = 1;
+	function loadmore() {
+		var x = new Ajax();
+		x.get('{$theurl}&inajax=1&page=' + page, function(s){
+			page ++;
+			if(s){
+				$("quan_list").innerHTML += s;
+			}else{
+				$("quan_list").innerHTML += '<div class="dataend">{lang zhuzhu_taobao:t_quan_htm_11}</div>';
+			}
+		});
+	}
+
+</script>
+
+<!--{subtemplate zhuzhu_taobao:t_tag}-->
+
+<div class="wp cl">
+<!--{subtemplate common/footer}-->
+<!--{/if}-->

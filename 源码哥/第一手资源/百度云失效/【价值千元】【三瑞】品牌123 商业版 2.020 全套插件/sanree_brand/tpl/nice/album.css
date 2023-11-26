@@ -1,0 +1,366 @@
+.al_cc {
+	width: 960px;
+	overflow: hidden;
+	margin: 15px auto;
+}
+.al_cb {
+	width: 708px;
+	padding: 15px 0px 15px 20px;
+	background: #F5F5F5;
+	border-top: 1px solid #E0E0E0;
+	overflow: hidden;
+	float: right;
+}
+.al_sidebar {
+	width: 197px;
+	padding: 15px 9px;
+	background: #F5F5F5;
+	border: 1px solid #E0E0E0;
+	overflow: hidden;
+	float: left;
+}
+.al_cb i {
+	width: 22px;
+	height: 20px;
+	float: left;
+	background: url(images/icon.png) no-repeat scroll 0px -65px transparent;
+	margin-right: 5px;
+}
+.al_cc strong {
+	color: #ff6600;
+	font-size: 16px;
+}
+.al_cb ul li {
+	width: 218px;
+	overflow: hidden;
+	float: left;
+	background: #FFF;
+	margin: 0 15px 15px 0px;
+}
+.al_cb ul li a {
+	display: block;
+	text-decoration: none;
+	border-bottom: 1px solid #e0e0e0;
+}
+.al_cb ul li a:hover {
+	display: block;
+	text-decoration: none;
+	border-bottom: 1px solid #ff6600;
+}
+.al_center ul li .al_ti {
+	width: 218px;
+	height: 218px;
+}
+.al_tb {
+	padding: 9px 15px;
+	background: #fff;
+	font-size: 12px;
+	color: #666;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	word-wrap: normal;
+}
+.al_sl ul {
+	margin-top: 6px;
+	overflow: hidden;
+}
+.al_sl ul li {
+	font-size: 12px;
+	margin-top: 9px;
+	clear: both;
+	overflow: hidden;
+	border-bottom: 1px dashed #e0e0e0;
+	padding-bottom: 9px;
+}
+.al_sl ul li .al_ll {
+	float: left;
+}
+.al_sl ul li .al_ll img {
+	width: 60px;
+	height: 60px;
+}
+.al_sl ul li .al_slt {
+	width: 125px;
+	height: 60px;
+	font-size: 12px;
+	float: right;
+	overflow: hidden;
+}
+.al_sl ul li .al_tt {
+	height: 35px;
+	font-size: 12px;
+	overflow: hidden;
+}
+.al_sl ul li a {
+	color: #666;
+	text-decoration: none;
+	display: block;
+}
+.al_sl ul li a:hover {
+	color: #666;
+	text-decoration: none;
+	display: block;
+	background: #fff;
+}
+.al_sl ul li .al_slt .star {
+	padding: 0;
+	position: relative;
+	top: 0;
+	margin-top: 9px;
+}
+.al_sidebar .al_sc {
+	margin-top: 9px;
+	overflow: hidden;
+	font-size: 12px;
+}
+.al_sidebar .al_sc a {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	background: #ff6600;
+	color: #fff;
+	text-decoration: none;
+}
+.al_sidebar .al_sc .al_lsc {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	font-size: 12px;
+	background: #ff6600;
+	float: left;
+}
+.al_sidebar .al_sc .al_rsc {
+	width: 109px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 9px;
+	font-size: 12px;
+	background: #333;
+	float: left;
+	color: #fff;
+}
+.clear {
+	clear: both;
+}
+.l {
+	float: left;
+}
+.r {
+	float: right;
+}
+.al_kf {
+	margin-top: 9px;
+}
+.al_kf p {
+	margin-top: 5px;
+	clear: both;
+	color: #666;
+	overflow: hidden;
+}
+.mc_albox {
+	width: 960px;
+	overflow: hidden;
+	margin: 15px auto;
+}
+.mc_albox .al_cb .mc_tit {
+	font-size: 16px;
+	color: #999;
+	border-bottom: 1px solid #E9E9E9;
+	padding-bottom: 9px;
+	overflow: hidden;
+	margin-right: 21.5px;
+	margin-bottom: 15px;
+}
+.al_cc .mc_tit {
+	font-size: 16px;
+	color: #999;
+	border-bottom: 1px solid #E9E9E9;
+	padding-bottom: 9px;
+	overflow: hidden;
+	margin-right: 21.5px;
+	margin-bottom: 15px;
+}
+.al_cb .mc_tit span.rw {
+	width: 139px;
+}
+.al_cc .zanwu {
+	margin: 15px 0 0 0 !important;
+	width: 96.7%;
+}
+.mc_albox .zanwu {
+	margin: 15px 0 0 0 !important;
+	width: 96.7%;
+}
+.mc_albox .mc_tit strong {
+	color: #ff6600;
+}
+.mc_albox .al_cb ul li {
+	float: left;
+	width: 218px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.mc_albox .al_cb ul li a {
+	cursor: pointer;
+}
+.mc_albox ul li .al_timg {
+	width: 218px;
+	height: 218px;
+	position: relative;
+}
+.mc_albox ul li .al_timg .al_bn {
+	position: absolute;
+	padding: 9px 15px;
+	background-color: rgba(0,0,0,0.3)!important;
+	filter: Alpha(opacity=50);
+	background: #000;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	width: 188px;
+	font-size: 12px;
+}
+.mc_albox ul li img {
+}
+.mc_albox ul li .al_bbox {
+	padding: 9px 15px;
+	background: #fff;
+}
+.mc_albox ul li .al_bbox .al_t {
+	width: 188px;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	word-wrap: normal;
+}
+.mc_albox ul li .al_bbox .al_d {
+	margin-top: 6px;
+	font-size: 12px;
+	color: #999;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	word-wrap: normal;
+	height: 18px;
+}
+.mc_albox .al_cb ul li a {
+	display: block;
+	text-decoration: none;
+	color: #333;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	word-wrap: normal;
+}
+.mc_albox .al_cb ul li a:hover {
+	display: block;
+	text-decoration: none;
+	color: #333;
+	border-bottom: 1px solid #ff6600;
+}
+.al_cb .mc_tit span a {
+	font-size: 12px;
+	background: #F60;
+	padding: 5px 9px;
+	color: #FFF;
+	float: left;
+	border-radius: 9px;
+	text-decoration: none;
+}
+.al_cb .mc_tit span a:hover {
+	font-size: 12px;
+	background: #333;
+	padding: 5px 9px;
+	color: #FFF;
+	float: left;
+	border-radius: 9px;
+	text-decoration: none;
+}
+.al_cb .mc_tit a.l_link {
+	font-size: 12px;
+	background: #ff6600;
+	padding: 5px 9px;
+	color: #FFF;
+	display: inline-block;
+	border-radius: 9px 0 0 9px;
+	text-decoration: none;
+	float: left;
+}
+.al_cb .mc_tit a:hover.l_link {
+	font-size: 12px;
+	background: #333;
+	padding: 5px 9px;
+	color: #FFF;
+	display: inline-block;
+	border-radius: 9px 0 0 9px;
+	text-decoration: none;
+	float: left;
+}
+.al_cb .mc_tit a.r_link {
+	font-size: 12px;
+	background: #c05d00;
+	padding: 5px 9px;
+	color: #FFF;
+	display: inline-block;
+	border-radius: 0 9px 9px 0;
+	text-decoration: none;
+	float: left;
+}
+.al_cb .mc_tit a:hover.r_link {
+	font-size: 12px;
+	background: #333;
+	padding: 5px 9px;
+	color: #FFF;
+	display: inline-block;
+	border-radius: 0 9px 9px 0;
+	text-decoration: none;
+	float: left;
+}
+.mc_albox .mc_tit span .al_cb {
+	margin-left: 9px;
+}
+.al_cb .mc_tit span label {
+	font-size: 12px;
+	margin-left: 5px;
+}
+#atarget {
+	font-size: 12px;
+    line-height: normal !important;
+    padding-left: 15px;
+    background: url('../../../../../static/image/common/atarget.png') no-repeat scroll 0px 3px transparent;
+    color: #369;
+    cursor: pointer;
+    margin-right: 0px !important;
+    margin-top: 6px !important;
+    font-size: 12px;
+	margin-left: 9px;
+}
+#atarget.atarget_1 {
+    background-position: 0px -37px;
+}
+.brand_manage {
+	z-index: 9;
+}
+.fwinmask {
+	z-index: 9;
+}
+.al_cc .pager {
+	font-size: 12px;
+	margin-top: 0px !important;
+}
+.al_cc .pager strong {
+	font-size: 12px;
+	color: #333;
+}
+#ft {
+	border-top: 1px solid #cdcdcd !important;
+}
+
+
+
+
+

@@ -1,0 +1,82 @@
+<?PHP exit('QQÈº£º550494646');?>
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $adata $key $list}-->   
+			<!--{loop $list['threadlist'] $key $thread}-->
+				<li>
+						<div class="author cl">
+                            <div class="aleft">
+                                <div class="ava"><a href="{if $_G[uid] == $thread[authorid]}home.php?mod=space&uid={$thread[authorid]}&do=profile&mycenter=1{else}home.php?mod=space&uid={$thread[authorid]}&do=profile{/if}"><!--{avatar($thread[authorid], 'middle')}--></a></div>
+                                <span class="t"><a href="{if $_G[uid] == $thread[authorid]}home.php?mod=space&uid={$thread[authorid]}&do=profile&mycenter=1{else}home.php?mod=space&uid={$thread[authorid]}&do=profile{/if}" {if $groupcolor[$thread[authorid]]} style="color: $groupcolor[$thread[authorid]];"{/if}>$thread[author]</a></span> 
+                                <!--{eval $thread[agroupid] = DB::result_first('SELECT groupid FROM '.DB::table('common_member').' WHERE uid='.$thread[authorid].'')}-->
+                                {if $thread[agroupid]}
+    							<!--{eval $thread[astars] = DB::result_first('SELECT stars FROM '.DB::table('common_usergroup').' WHERE groupid='.$thread[agroupid].'')}-->
+                                {else}
+                                <!--{eval $thread[astars] = 0}-->
+                                {/if}
+                                {if $thread[astars]}
+                                <div class="mod-lv user-level">
+                                    <span class="mod-lv-icon"><i class="iconfont icon-evaluate_fill"></i></span>
+                                    <span>$thread['astars']</span>
+                                </div>
+                                {/if}
+                                <p><span>$thread[dateline]</span></p>
+                            </div>
+                            <div class="aright">
+                                <!--{eval $follow = 0;}-->
+                                        <!--{eval $follow = C::t('home_follow')->fetch_all_by_uid_followuid($_G['uid'], $thread['authorid']);}-->
+                                        <!--{if !$follow}-->
+                                            <a id="ainuo_wait_{$thread['tid']}" class="gz_{$thread['authorid']} jgz" onclick="guanzhutis('ainuo_wait_{$thread['tid']}','gz_{$thread['authorid']}','$thread['authorid']')" href="javascript:;">+ $alang_gz</a>
+                                        <!--{else}-->
+                                            <a id="ainuo_wait_{$thread['tid']}" class="gz_{$thread['authorid']} ygz" onclick="guanzhutis('ainuo_wait_{$thread['tid']}','gz_{$thread['authorid']}','$thread['authorid']')" href="javascript:;" >$alang_yiguanzhu</a>
+                                <!--{/if}-->
+                            </div>
+                        </div>
+                    
+                    <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="litwo cl">
+                        <div class="asub">
+                            <div class="atitle" $thread[highlight]>
+                            <!--{if $thread['digest'] > 0}-->
+                                <span class="abadge">$alang_newjinghua</span> 
+                                <!--{elseif $thread['displayorder'] == 0}-->
+                                    <!--{if $thread[recommendicon] && $filter != 'recommend'}-->
+                                        <span class="abadge">{lang thread_recommend}</span>
+                                    <!--{/if}-->
+                                    <!--{if $thread[heatlevel]}-->
+                                        <span class="abadge">{lang heats}</span>
+                                    <!--{/if}-->
+                                    <!--{if $thread['rate'] > 0}-->
+                                        <span class="abadge">{lang rate_credit_add}</span>
+                                    <!--{elseif $thread['rate'] < 0}-->
+                                        <span class="abadge">{lang posts_deducted}</span>
+                                    <!--{/if}-->
+                                <!--{/if}-->
+                                <!--{if $thread['special'] == 1}-->
+                                    <span class="abadge leixing">{lang thread_poll}</span>
+                                <!--{elseif $thread['special'] == 2}-->
+                                    <span class="abadge leixing">{lang thread_trade}</span>
+                                <!--{elseif $thread['special'] == 3}-->
+                                    <span class="abadge leixing">{lang thread_reward}</span>
+                                <!--{elseif $thread['special'] == 4}-->
+                                    <span class="abadge leixing">{lang thread_activity}</span>
+                                <!--{elseif $thread['special'] == 5}-->
+                                    <span class="abadge leixing">{lang thread_debate}</span>
+                                <!--{/if}-->
+                            $thread[subject]</div>
+                        </div>
+                        $thread['image']
+					</a>
+                    <div class="abot cl">
+                        	<!--{subtemplate forum/iszan}-->
+                            <a id="dianzan_{$thread[tid]}" onclick="zanbuzan('dianzan_{$thread[tid]}','red_{$thread[tid]}','$thread[tid]')" href="javascript:;" class="dianzan {if $iszan}yidianzan{/if}"><i id="i_{$thread[tid]}" class="iconfont icon-appreciate_light {if $iszan}icon-appreciate_fill_light{/if}"></i> <span id="red_{$thread[tid]}">$thread[recommend_add]</span></a>
+                            <a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$thread[tid]" class="ainuo_nologin rp">
+                            	<i class="iconfont icon-comment_light"></i> $thread[replies]
+                            </a>
+                            <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="rp">
+                            	<i class="iconfont icon-attention_light"></i> $thread[views]
+                            </a>
+                    </div>
+                    <div class="grey_line cl"></div>
+				</li>
+                <!--{/loop}-->
+                <!--{/loop}-->

@@ -1,0 +1,46 @@
+<!--{template milu_pick:pick_header}-->
+<form action="?{PICK_GO}picker_manage&myac=pick_import" method="post" enctype="multipart/form-data" name="cpform" id="cpform" autocomplete="off">
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+<input type="hidden" value="" name="scrolltop" id="formscrolltop">
+   </p>
+    <table class="tb tb2 ">
+	<tr>
+	  <th width="500" colspan="12" class="partition">{lang milu_pick:import_picker}<span style="font-weight:normal; color:#666666">{lang milu_pick:import_rules_notice}</span></th>
+	</tr>
+<tbody></tbody>
+  <tbody id="">
+   <tr class="noborder" >
+     <td class="vtop rowform"><br>{lang milu_pick:import_picker_notice}</td>
+     <td align="left" valign="middle" class="vtop tips2" s="1">&nbsp;</td>
+   </tr>
+   <tr class="noborder" >
+    <td valign="top" class="vtop rowform">
+      <textarea style="width:450px;" rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="rules_code" id="rules_code" cols="50" class="warea" '..'=""></textarea></td><td align="left" valign="middle" class="vtop tips2" s="1">&nbsp;</td></tr>
+	   <tr class="noborder" >
+     <td class="vtop rowform">
+      <br> {lang milu_pick:file_import}:</td>
+     <td align="left" valign="middle" class="vtop tips2" s="1">&nbsp;</td>
+   </tr>
+	   <tr class="noborder" >
+     <td class="vtop rowform">
+       <input name="rules_file" type="file" id="rules_file" />
+       </td>
+     <td align="left" valign="middle" class="vtop tips2" s="1">&nbsp;</td>
+   </tr>
+   <tr class="noborder" >
+     <td class="vtop rowform">
+      {lang milu_pick:import_pick_class}:</td>
+     <td align="left" valign="middle" class="vtop tips2" s="1">&nbsp;</td>
+   </tr>
+	   <tr class="noborder" >
+     <td class="vtop rowform">{eval echo select_output(pick_category_list(TRUE), '', 'pick_cid', '', 1);}</td>
+     <td align="left" valign="middle" class="vtop tips2" s="1">&nbsp;</td>
+   </tr>
+   <tr class="noborder" >
+    <td valign="top" class="vtop rowform">
+      <input style="float:left; margin:0; width:60px;" type="submit" value="{lang milu_pick:submit}" title=" {lang milu_pick:save_notice}" name="submit" id="submit_submit" class="btn" />
+    </td> 
+    <td align="left" valign="middle" class="vtop tips2" s="1">&nbsp;</td></tr>
+  </tbody><tbody style="display: none" id="subnav_6"></tbody>
+<tbody></tbody><tbody><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'submit'); });</script></tbody></table>
+</form>

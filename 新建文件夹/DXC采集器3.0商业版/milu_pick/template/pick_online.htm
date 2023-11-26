@@ -1,0 +1,68 @@
+<!--{template milu_pick:pick_header}-->
+<script type="text/javascript">
+function picer_download(pid){
+	var select_html = $("select_html").innerHTML;
+	show_html_window('download_pick', '{lang milu_pick:download_picker}', 250, 160, '<div class="c bart" style=" width:100%; height:80px;">'+select_html+'</div><p class="o pns"><button onclick="download_picker_data('+pid+');" class="pn pnc" name="dsf" type="submit"><span>{lang milu_pick:ok}</span></button><button onclick="hideWindow(\'download_pick\');" class="pn" name="dsf" type="reset"><em>{lang milu_pick:cancel}</em></button></p>');
+}
+</script>
+
+<form onkeydown="javascript: search_submit(event,this);" id="form12" name="form12"  action="?{PICK_GO}picker_manage&myac=pick_online" method="post"> 
+	<div id="select_html" style="display:none">
+	<p style="margin:20px 0; text-align:center">
+		<span>{lang milu_pick:select_class}: {eval echo select_output(pick_category_list(TRUE), '', 'pick_cid', '', 1);}</span>
+	</p>
+	</div>
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+  <div class="itemtitle">
+  <p style="float:left; margin-top:10px; width:850px;">
+	<span style="float:left"><font style="float:left">{lang milu_pick:picker}:</font><input type="text" style="float:left; margin:0 10px; width:175px" name="set[s]"  value="{$info['s']}" id="srchforumipt" class="txt">
+	<font style="float:left">{lang milu_pick:list_public_author}:</font><input type="text" style="float:left; margin:0 10px; width:125px" name="set[picker_author]"  value="{$info['picker_author']}" id="srchforumipt" class="txt">
+	{eval echo select_output($info['orderby_arr'], '', 'set[orderby]', $info['orderby'], 1);}  
+	{eval echo select_output($info['ordersc_arr'], '', 'set[ordersc]', $info['ordersc'], 1);}  
+	{eval echo select_output($info['perpage_arr'], '', 'set[perpage]', $info['perpage'], 1);}  
+	
+	</span>
+	<input  style="float:left;  margin:0 0 0 10px; padding:1px 5px; height:23px;" name="submit" type="submit" class="btn" value="{lang milu_pick:search}" id="submit_editsubmit"></p>
+	</div>
+</form>
+	
+<form id="cpform" action="?{PICK_GO}picker_manage" autocomplete="off" method="post" name="cpform">
+    <table class="tb tb2 " >
+	<tr>
+	  <th colspan="19" class="partition">{lang milu_pick:picker_download} <span style=" font-weight:normal; color:#333333">{$info['show_result']}</span></th>
+	</tr>
+<tbody><tr class="header">
+<th width="150">{lang milu_pick:rules_name}</th>
+  <th width="400">{lang milu_pick:desc}</th>
+  <th>{lang milu_pick:list_public_author}</th>
+  <th>{lang milu_pick:share_dateline}</th>
+  <th>{lang milu_pick:last_modify_dateline}</th>
+  <th>{lang milu_pick:download_count}</th>
+  <th>{lang milu_pick:version}</th>
+  <th>{lang milu_pick:op}</th>
+</tr></tbody>
+  <tbody id="">
+  <!--{if $info['rs']}-->
+   <!--{loop $info['rs'] $key $rs}-->
+<tr class="hover"><td width="150"><div>{$rs['name']}</div></td>
+  <td width="400"><span title="{$rs['rule_full_desc']}">{$rs['picker_desc']}</span></td>
+  <td><a href="{$rs['siteurl']}" target="_blank">{$rs['sitename']}</a></td>
+  <td>{$rs['share_dateline']}</td>
+  <td>{$rs['show_lastmodify_dateline']}</td>
+  <td>{$rs['download']}</td>
+  <td>{$rs['version']}</td>
+  <td><a href="javascript:void(0);" onclick="picer_download({$rs['pid']})" >{lang milu_pick:download}</a>&nbsp;</td>
+</tr>
+   <!--{/loop}-->
+   <!--{else}-->
+  <tr class="hover"><td colspan="8" align="center" class="td25">{lang milu_pick:no_data}</td></tr>
+  <!--{/if}-->
+  </tbody>
+<tbody>
+</tbody><tbody>
+<tr><td colspan="19">
+<div class="cuspages right">{$info['multipage']}</div></td>
+</tr>
+
+</tbody></table>
+</form>

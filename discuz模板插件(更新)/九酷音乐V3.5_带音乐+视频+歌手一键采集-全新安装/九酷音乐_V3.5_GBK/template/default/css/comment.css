@@ -1,0 +1,284 @@
+body{
+	margin:0;
+	padding:0
+}
+div{
+	margin:0;
+	padding:0
+}
+dl{
+	margin:0;
+	padding:0
+}
+dt{
+	margin:0;
+	padding:0
+}
+dd{
+	margin:0;
+	padding:0
+}
+ul{
+	margin:0;
+	padding:0
+}
+ol{
+	margin:0;
+	padding:0
+}
+li{
+	margin:0;
+	padding:0
+}
+h1{
+	margin:0;
+	padding:0
+}
+h2{
+	margin:0;
+	padding:0
+}
+h3{
+	margin:0;
+	padding:0
+}
+h4{
+	margin:0;
+	padding:0
+}
+h5{
+	margin:0;
+	padding:0
+}
+h6{
+	margin:0;
+	padding:0
+}
+pre{
+	margin:0;
+	padding:0
+}
+form{
+	margin:0;
+	padding:0
+}
+input{
+	margin:0;
+	padding:0
+}
+textarea{
+	margin:0;
+	padding:0
+}
+p{
+	margin:0;
+	padding:0
+}
+blockquote{
+	margin:0;
+	padding:0
+}
+th{
+	margin:0;
+	padding:0
+}
+td{
+	margin:0;
+	padding:0
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0
+}
+ol{
+	list-style:none
+}
+ul{
+	list-style:none
+}
+li{
+	list-style:none
+}
+h1{
+	font-size:100%;
+	font-weight:normal
+}
+h2{
+	font-size:100%;
+	font-weight:normal
+}
+h3{
+	font-size:100%;
+	font-weight:normal
+}
+h4{
+	font-size:100%;
+	font-weight:normal
+}
+h5{
+	font-size:100%;
+	font-weight:normal
+}
+h6{
+	font-size:100%;
+	font-weight:normal
+}
+h3{
+	font-size:14px
+}
+em{
+	font-style:normal
+}
+a{
+	color:#3a8dc9;
+	text-decoration:none
+}
+img{
+	border:0
+}
+input{
+	vertical-align:middle
+}
+label{
+	vertical-align:middle
+}
+body{
+	font:12px/1.75 Tahoma,Arial;
+	height:100%;
+	color:#333;
+	font-size-adjust:none;
+	font-stretch:normal
+}
+a:link,a:visited,a:hover,a:active{
+	color:#006a92
+}
+.commentArea{
+	padding:10px 20px 0;
+	border-bottom:1px solid #dee3e3;
+	background-color:#f7f7f7;
+	zoom:1
+}
+.commentArea .commentHeader{
+	height:30px;
+	color:#9a9a9a
+}
+.commentHeader h1{
+	padding:0 0 0 20px;
+	background:url("comment-logout.png") no-repeat 0 2px
+}
+.commentHeader h1 a{
+	color:#808080
+}
+.commentHeader h2{
+	padding:0 0 0 20px;
+	background:url("comment-logined.gif") no-repeat 0 2px
+}
+.commentHeader h2 a{
+	color:#808080
+}
+.commentHeader span{
+	margin:0 0 0 5px
+}
+.commentHeader span#userName{
+	font-family:Arial,Sans-Serif
+}
+.commentHeader a.logout{
+	color:#9a9a9a
+}
+#txtMessage{
+	width:100%;
+	height:50px;
+	border:1px solid #cdcdcd;
+	overflow-x:hidden;
+	overflow-y:auto;
+	font-size:12px;
+	line-height:1.75;
+	resize:none;
+	outline:0
+}
+.sendComment{
+	height:45px;
+	_height:35px;
+	margin:0 -2px 0 0;
+	_padding-top:10px;
+	text-align:right;
+	color:#999
+}
+.sendComment .commentTip{
+	margin:0 10px 0 0
+}
+.sendComment .commentTip em{
+	position:relative;
+	top:-5px;
+	font-family:Georgia,Tahoma,Arial;
+	font-size:26px;
+	vertical-align:middle
+}
+.sendComment .btnComment{
+	width:57px;
+	height:23px;
+	padding:0;
+	border:0;
+	background:url("btn-comment2.gif") no-repeat 0 0;
+	cursor:pointer;
+	color:#fff
+}
+.listArea{
+	padding:10px 0
+}
+.listArea .commentList li{
+	padding:6px 20px;
+	margin:0 0 12px 0;
+	border-bottom:1px dashed #cbcbcb;
+	overflow:hidden;
+	zoom:1
+}
+.commentList li .commentHead{
+	float:left;
+	width:40px;
+	padding-top:4px
+}
+.commentList li .commentWrap{
+	margin-left:40px
+}
+.commentList li .commentContent{
+	word-wrap:break-word;
+	word-break:break-all
+}
+.commentList li .commentContent em{
+	color:#999
+}
+.commentList li .commentContent em a:link,.commentList li .commentContent em a:visited{
+	color:#999
+}
+.commentList li .commentContent em a:hover,.commentList li .commentContent em a:active{
+	color:#006a92;
+	text-decoration:underline
+}
+.commentList li .commentContent a{
+	white-space:nowrap
+}
+.commentList li .commentOpe{
+	clear:both;
+	float:right;
+	white-space:nowrap
+}
+.commentList li .commentReply a{
+	display:inline;
+	color:#889db6
+}
+.listArea .moreCommentTip{
+	margin-left:40px
+}
+.listArea .moreCommentTip span{
+	color:#006a92
+}
+.floatLeft{
+	float:left
+}
+.floatRight{
+	float:right
+}
+.highlight{
+	background:#FFC
+}

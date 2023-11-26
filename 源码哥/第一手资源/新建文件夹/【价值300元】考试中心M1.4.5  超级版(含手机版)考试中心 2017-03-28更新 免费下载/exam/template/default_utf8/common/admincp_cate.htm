@@ -1,0 +1,57 @@
+<form method="post" autocomplete="off" action="$baseurl&formhash=$_G[formhash]">
+<input value="$_G[formhash]" name="formhash" type="hidden">
+<div>
+	<table class="tb tb2" id="examcate">
+		<tbody>
+			<!--{if $ERROR==1}-->
+			<div class="itemtitle"><h3><font color="red">&#x8BE5;&#x5206;&#x7C7B;&#x4E0B;&#x6709;&#x5B50;&#x5206;&#x7C7B;&#x6216;&#x8BD5;&#x5377;, &#x65E0;&#x6CD5;&#x5220;&#x9664;!</font></h3></div>
+			<!--{/if}-->
+			<tr style="display:none"><td class="td25"><input type="text" class="txt" name="newcatorder[]" value="0"></td><td colspan=2><div><input name="newcat[]" value="&#x65B0;&#x680F;&#x76EE;&#x540D;&#x79F0;" size="20" type="text" class="txt"style="width:200px"><a href="javascript:;" class="deleterow" onclick="deleterow(this)">&#x5220;&#x9664;</a></div></td></tr>
+			<tr><th colspan="5" class="partition"><b><a href="$baseurl&cid=0">&#x603B;&#x5206;&#x7C7B;</a> <!--{if $curname}-->><!--{/if}--> <a href="">$curname</a></b></th></tr>
+			<tr><th width="30">&#x6392;&#x5E8F;</th><th>&#x680F;&#x76EE;&#x540D;&#x79F0;</th><th></th><th width="250"><!--{if $cid}-->&#x56FE;&#x6807;(&#x76F8;&#x5BF9;&#x4E8E;&#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;)<!--{/if}--></th><th width="150">&#x7BA1;&#x7406;</th></tr>
+			<!--{loop $syscates $v}-->
+				<tr>
+					<td class="td25"><input type="text" name="sort[{$v[cid]}]" value="$v[sort]" class="txt"></td>
+					<td class="rowform" style="width:350px">
+						<input type="text" name="name[{$v[cid]}]" value="$v[name]" class="txt" style="width:200px">
+						<!--{eval //if $v[ucid]==0}-->
+						<a href="$baseurl&cid=$v[cid]">&#x7F16;&#x8F91;&#x5B50;&#x7C7B;</a> &nbsp;
+						<!--{eval ///if}-->
+						<a href="javascript:;" onclick="description_display($v[cid])">&#x680F;&#x76EE;&#x8BF4;&#x660E;</a>
+					</td>
+					<td>
+						<textarea onkeyup="textareasize(this, 0)" onkeydown="textareakey(this, event)" name="description[{$v[cid]}]" id="description_$v[cid]" cols="60" maxlength=255 class="tarea" style="height: 30px;display:none">$v[description]</textarea>
+					</td>							
+					<td class="rowform">
+						<!--{if $v[ucid]>0}-->
+						<input type="text" name="icon[{$v[cid]}]" value="$v[icon]" class="txt">
+						<!--{/if}-->	
+					</td>						
+					<td>
+						<a href="$baseurl&hide=$v[cid]"><!--{if $v[status]}-->&#x9690;&#x85CF;<!--{else}-->&#x663E;&#x793A;<!--{/if}--></a> &nbsp;
+						<a href="$baseurl&delid=$v[cid]">&#x5220;&#x9664;</a>
+					</td>
+				</tr>			
+			<!--{/loop}-->
+		</tbody>
+		<tbody>
+			<tr><td><input type="submit" class="btn" id="submit_editsubmit" name="editsubmit" value="&#x63D0;&#x4EA4;"></td>
+				<td colspan="2"><a href="###" onclick="addRow();return false;" class="addtr">&#x6DFB;&#x52A0;&#x5206;&#x7C7B;</a>(&#x63A8;&#x8350;&#x53EA;&#x521B;&#x5EFA;&#x4E8C;&#x7EA7;&#x5206;&#x7C7B;)</td>
+			</tr>		
+		</tbody>
+	</table>
+</div>
+<script>
+	function addRow(){  
+		var temp=document.getElementById('examcate').getElementsByTagName("tbody")[0];  
+		var newrow=temp.rows[0].cloneNode(true);
+		temp.appendChild(newrow);
+		newrow.style.display='';
+	} 
+	function description_display(id){  
+		var temp=document.getElementById('description_'+id);  
+		temp.style.display = (temp.style.display=='block' ? 'none' : 'block');
+
+	} 
+</script>
+</form>

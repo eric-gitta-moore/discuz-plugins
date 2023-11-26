@@ -1,0 +1,139 @@
+<!--{template zhuzhu_taobao:header}-->
+<link type="text/css" rel="stylesheet" href="./source/plugin/zhuzhu_taobao/static/css/style_touch.css">
+<!--{subtemplate zhuzhu_taobao:t_header}-->
+
+<!--{if $baner_3_slide}-->
+<div class="index_banner_3 cl">
+	<ul>
+		<!--{loop $baner_3_slide $v}-->
+		<li><a href="$v[url]"><img src="$v[pic]" /></a></li>
+		<!--{/loop}-->
+	</ul>
+</div>
+<!--{/if}-->
+
+<!--{if in_array('tqg', $zz_nav) && $tqg_list}-->
+	<div class="index_tqg mt_5 cl">
+		<h2>
+			<div class="time">
+				<span id="t_h">00</span>:<span id="t_m">00</span>:<span id="t_s">00</span>
+			</div>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=tqg"></a>
+		</h2>
+		<div class="swiper-container swiper-container-tqg">
+			<div class="swiper-wrapper">
+				<!--{loop $tqg_list $value}-->
+				<div class="swiper-slide">
+					<a href="{$jump_url}$value[num_iid]&t_url={echo urlencode($value[click_url])}">
+						<img src="$value[pic_url]" />
+						<div class="price-promo">
+							<span class="">&yen; $value[zk_final_price]</span>
+							<del>$value[reserve_price]</del>
+						</div>
+						<div class="progress">
+							<span class="progressbar progressing" style="width: {$value[width]}%;"></span>
+						</div>
+						<p>{lang zhuzhu_taobao:1t_index_htm_1}{$value[sold_num]}{lang zhuzhu_taobao:1t_index_htm_2}</p>
+					</a>
+				</div>
+				<!--{/loop}-->
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<!--{eval $intDiff = strtotime($end)-$_G['timestamp']}-->
+	<script>
+		var swiper = new Swiper('.swiper-container-tqg', {
+			slidesPerView: 3,
+			slidesPerColumn: 2,
+			autoplay: 5000,
+			speed: 300,
+			pagination : '.swiper-pagination',
+		});
+		
+		var intDiff = parseInt($intDiff);//倒计时总秒数量
+		function timer(intDiff){
+			window.setInterval(function(){
+			var day=0,
+				hour=0,
+				minute=0,
+				second=0;//时间默认值        
+			if(intDiff > 0){
+				day = Math.floor(intDiff / (60 * 60 * 24));
+				hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+				minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+				second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+			}
+			if(intDiff == 0){
+				location.reload();
+			}
+			if (minute <= 9) minute = '0' + minute;
+			if (second <= 9) second = '0' + second;
+			$('#t_h').html('0'+hour);
+			$('#t_m').html(minute);
+			$('#t_s').html(second);
+			intDiff--;
+			}, 1000);
+		} 
+		$(function(){
+			timer(intDiff);
+		}); 
+	</script>
+<!--{/if}-->
+
+<!--{if in_array('tbrand', $zz_nav) && $brandlist}-->
+<div class="index_brand mt_20 cl">
+	<h2><a href="plugin.php?id=zhuzhu_taobao&mod=tbrand"><img src="{$img}index_brand.png"></a></h2>
+	<div class="t_brand cl">
+		<ul>
+			<!--{loop $brandlist $v}-->
+			<li class="cl">
+				<a href="plugin.php?id=zhuzhu_taobao&mod=tbrand&keyword=$v[name]">
+					<img src="{echo pic_get($v['banner'], 'portal', '', '', '', '')}" title="$v[name]">
+					<div class="brand_info">
+						<i style="background: #FFF url('{echo pic_get($v[logo], 'portal', '', '', '', '')}') center no-repeat;background-size: 80px auto;"></i>
+						<h2>$v[name]</h2>
+					</div>
+				</a>
+				<ul>
+					<!--{loop $v[list] $vv}-->
+					<li>
+						<a href="{$jump_url}$vv[num_iid]&e=$vv[e]&zk_final_price=$vv[zk_final_price]&q_price=$vv[q_price]"><img data-original="$vv[pict_url]" src="{$img}nopic.png" class="lazy" /></a>
+						<h2 class="wrap"><i>&yen;</i> $vv[q_price]</h2>
+						<div class="coupon_tip cl">{lang zhuzhu_taobao:1jump_url_htm_1} {eval echo $vv[zk_final_price]-$vv[q_price]} {lang zhuzhu_taobao:1jump_url_htm_2}<i></i></div>
+					</li>
+					<!--{/loop}-->
+				</ul>
+			
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+</div>
+<!--{/if}-->
+
+<!--{if in_array('quan', $zz_nav)}-->
+<div class="index_quan mt_20">
+	<h2><a href="plugin.php?id=zhuzhu_taobao&mod=quan"><img src="{$img}quna_cate.png"></a></h2>
+
+	<ul class="cl">
+		<!--{loop $quan_list $v}-->
+		<li>
+			<i class="q_new"></i>
+			<a href="{$jump_url}$v[num_iid]&e=$v[e]&zk_final_price=$v[zk_final_price]&q_price=$v[q_price]">
+				<img data-original="$v[pict_url]" src="{$img}nopic.png" class="lazy" />
+			</a>
+			<div class="cl">
+				<p class="wrap">$v[title]</p>
+				<span class="f14"><cite>&yen;</cite> <i>$v[q_price]</i><img src="{$img}quanhoujia.png"></span>
+				<span class="y"><em>{lang zhuzhu_taobao:1t_index_htm_6}{eval echo $v[zk_final_price]-$v[q_price]}{lang zhuzhu_taobao:1jump_url_htm_2}</em></span>
+			</div>
+			<!--{if $_G['adminid'] == 1 }--><span class="fan">{lang zhuzhu_taobao:jump_url_htm_31} $v[commission_rate]%</span><!--{/if}-->
+		</li>
+		<!--{/loop}-->
+	</ul>
+</div>
+<!--{/if}-->
+
+<!--{subtemplate zhuzhu_taobao:t_footer}-->
+<!--{subtemplate zhuzhu_taobao:footer}-->

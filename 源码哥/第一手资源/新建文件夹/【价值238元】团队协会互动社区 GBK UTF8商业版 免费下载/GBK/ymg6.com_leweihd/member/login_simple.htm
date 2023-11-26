@@ -1,0 +1,23 @@
+<!--{if CURMODULE != 'logging'}-->
+<script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
+<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onsubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
+		<div class="fastlg cl" style=""> <span id="return_ls"></span>
+				<div class="y pns">
+						<table cellspacing="0" cellpadding="0">
+								<tr>
+										<td><a onclick="showWindow('login', this.href);return false;" href="member.php?mod=logging&amp;action=login">{lang login}</a></td>
+										<td class="xg1"style="width:1px;padding:0 5px;">/</td>
+										<td><a href="member.php?mod={$_G[setting][regname]}" class="">$_G['setting']['reglinkname']</a></td>
+								</tr>
+						</table>
+						<input type="hidden" name="quickforward" value="yes" />
+						<input type="hidden" name="handlekey" value="ls" />
+				</div>
+		</div>
+</form>
+
+<!--{if $_G['setting']['pwdsafety']}--> 
+<script type="text/javascript" src="{$_G['setting']['jspath']}md5.js?{VERHASH}" reload="1"></script> 
+<!--{/if}--> 
+
+<!--{/if}-->

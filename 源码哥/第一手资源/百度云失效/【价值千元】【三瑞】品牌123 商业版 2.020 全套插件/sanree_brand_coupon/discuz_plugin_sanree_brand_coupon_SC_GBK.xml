@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-01-06 16:56]]></item>
+	<item id="From"><![CDATA[Ô´Âë¸ç£¨www.ymg6.com£©]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[Ô´Âë¸ç_¡¾ÈýÈð¡¿123ÓÅ»ÝÈ¯Ä£¿é]]></item>
+			<item id="identifier"><![CDATA[sanree_brand_coupon]]></item>
+			<item id="description"><![CDATA[ÓÃÓÚ¡¾ÈýÈðÆ·ÅÆ123¡¿µÄÓÅ»ÝÈ¯Ä£¿é£¬´ËÄ£¿é²»ÄÜµ¥¶ÀÊ¹ÓÃ£¬±ØÐëÏÈ°²×°¡¾ÈýÈðÆ·ÅÆ123¡¿·½ÄÜÕý³£Ê¹ÓÃ¡£Æ·ÅÆ123µÄÓÅ»ÝÈ¯²å¼þ¡£]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[sanree_brand_coupon/]]></item>
+			<item id="copyright"><![CDATA[Ô´Âë¸ç£¨www.ymg6.com£©]]></item>
+			<item id="version"><![CDATA[1.005]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>¸ü¶à²å¼þ</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[sanree_brand_coupon]]></item>
+					<item id="menu"><![CDATA[ÓÅ»ÝÈ¯]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="menu"><![CDATA[ÓÅ»ÝÈ¯¹ÜÀí]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñÆôÓÃ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[°ó¶¨°æ¿é]]></item>
+				<item id="description"><![CDATA[µ¥Ñ¡¡£
+Ñ¡ÔñÒ»¸öÓÃÓÚÍ¬²½Éú³ÉÌû×ÓµÄÓÅ»ÝÈ¯°æ¿é¡£
+½¨Òé²»ÒªºÍÆ·ÅÆÉÌ¼ÒµÄ°æ¿éÏàÍ¬¡£]]></item>
+				<item id="variable"><![CDATA[bindingforum]]></item>
+				<item id="type"><![CDATA[forum]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[°ó¶¨°æ¿é±êÌâ±êÖ¾]]></item>
+				<item id="description"><![CDATA[·ÀÖ¹°ó¶¨´íÎó½¨Á¢´Ë±êÖ¾¡£
+±ÈÈç£º°ó¶¨°æ¿éµÄ±êÌâÊÇ¡°ÈýÈðÆ·ÅÆ123µÄÓÅ»ÝÈ¯Çø¡±£¬ÕâÀï¿ÉÒÔÉèÖÃÎª¡°ÓÅ»ÝÈ¯Çø¡±]]></item>
+				<item id="variable"><![CDATA[haveforumtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[123ÓÅ»ÝÈ¯]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[Ê×Ò³Ã¿Ò³ÏÔÊ¾ÓÅ»ÝÈ¯ÊýÁ¿]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[shownum]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[6]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[Ê×Ò³ÏÔÊ¾ÍÆ¼öÆ·ÅÆÊýÁ¿]]></item>
+				<item id="description"><![CDATA[Ä¬ÈÏÎª4£»
+ÇëÊäÈë4µÄ±¶Êý£¬Èç£º4,8,12...]]></item>
+				<item id="variable"><![CDATA[indexrecommendnum]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[4]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñÆôÓÃÎ±¾²Ì¬]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[is_rewrite]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[ÓÅ»ÝÈ¯Ê×Ò³Î±¾²Ì¬]]></item>
+				<item id="description"><![CDATA[Ä¬ÈÏÎª£ºcoupon.html]]></item>
+				<item id="variable"><![CDATA[urlcouponmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[coupon.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[ÓÃ»§ÓÅ»ÝÈ¯Ê×Ò³Î±¾²Ì¬]]></item>
+				<item id="description"><![CDATA[Ä¬ÈÏÎª£ºcoupon-usercoupon-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlcouponusermode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[coupon-usercoupon-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[ÓÅ»ÝÈ¯ÄÚÈÝÒ³¹æÔò]]></item>
+				<item id="description"><![CDATA[Ä¬ÈÏÎª£ºcoupon-couponshow-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlitemmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[coupon-couponshow-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[ÓÅ»ÝÈ¯ÁÐ±íÒ³¸ñÊ½]]></item>
+				<item id="description"><![CDATA[Ä¬ÈÏÎª£ºcoupon-index-{tid}-{did}-{filter}-{listmode}.html]]></item>
+				<item id="variable"><![CDATA[urllistmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[coupon-index-{tid}-{did}-{filter}-{listmode}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[ÔÊÐí·ÃÎÊµÄÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[allowgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+					<item id="13"><![CDATA[7]]></item>
+				</item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[Ò³Ãæ±êÌâ]]></item>
+				<item id="description"><![CDATA[SEO
+ÓÅ»ÝÈ¯ÁÐ±íÒ³±êÌâ]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÓÅ»ÝÈ¯ - ÈýÈð³öÆ·]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[keywords]]></item>
+				<item id="description"><![CDATA[SEO
+ÓÅ»ÝÈ¯ÁÐ±íÒ³¹Ø¼ü×Ö]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[Æ·ÅÆÉÌ¼Ò,Í¬³ÇºÃÍøµê,ºÃÉÌ¼Ò,ÃûÓÅÆ·ÅÆ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[description]]></item>
+				<item id="description"><![CDATA[SEO
+ÓÅ»ÝÈ¯ÁÐ±íÒ³ÃèÊö]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[Æ·ÅÆÉÌ¼Ò,ÏàÐÅÆ·ÅÆµÄÁ¦Á¿£¬ÌáÉýÆóÒµÆ·ÅÆÐÎÏó£¬¾ÍÑ¡Ôñ¡¾ÈýÈðÆ·ÅÆ123¡¿.Çë¼Ç×¡ÎÒÃÇµÄÍøÖ·:http://www.fx8.cc¡£]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[·¢²¼ÓÅ»ÝÈ¯ÐèÒªÉóºË]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isshen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[·¢²¼ÓÅ»ÝÈ¯ÉóºËÌáÐÑ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[chksendtip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[¸ÐÐ»ÄúµÄ²ÎÓë£¬ÎÒÃÇ»á¾¡¿ìÉóºËÄúÌá½»µÄÓÅ»ÝÈ¯]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[²»ÐèÒªÉóºËµÄÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[´ËÀàÓÃ»§·¢²¼ÓÅ»ÝÈ¯²»ÐèÒªÉóºË¡£]]></item>
+				<item id="variable"><![CDATA[nochkgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[ÓÅ»ÝÈ¯Ä£°æ]]></item>
+				<item id="description"><![CDATA[ÓÅ»ÝÈ¯Õ¹Ê¾Ò³ÃæÊ¹ÓÃµÄÄ£°æ]]></item>
+				<item id="variable"><![CDATA[template]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[default]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[Ìû×Ó±êÌâÄ£°æ]]></item>
+				<item id="description"><![CDATA[Í¬²½Éú³ÉµÄÌû×Ó±êÌâÄ£°æ]]></item>
+				<item id="variable"><![CDATA[forumtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[[{catename}]{name}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[Ìû×ÓÄÚÈÝÄ£°æ]]></item>
+				<item id="description"><![CDATA[Í¬²½Éú³ÉµÄÌû×ÓÄÚÈÝÄ£°æ]]></item>
+				<item id="variable"><![CDATA[forumbody]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[{content}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[Ìû×ÓÌáÐÑ]]></item>
+				<item id="description"><![CDATA[Í¬²½Éú³ÉµÄÌû×ÓÌáÐÑÓÃ»§²»Òª·¢Ìû¡£
+¿ÉÎª¿Õ¡£]]></item>
+				<item id="variable"><![CDATA[forumwarning]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<br /><strong><font color=red>´ËÌû×ÓÓÉ¡¾<a href="http://www.fx8.cc/" target="_blank">ÈýÈðÆ·ÅÆ123</a>¡¿×Ô¶¯Éú³É,ÇëÎðÊÖ¶¯±à¼­¡£</font></strong>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[ÔÊÐí·¢²¼ÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[¿ÉÒÔ·¢²¼ÓÅ»ÝÈ¯µÄÓÃ»§×é£¬
+Ö»ÓÐ´Ë×éµÄÓÃ»§¿ÉÒÔ·¢²¼ÓÅ»ÝÈ¯¡£]]></item>
+				<item id="variable"><![CDATA[addgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[½ûÖ¹·¢²¼ÌáÐÑ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[stopaddtip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[ÄúËùÔÚµÄÓÃ»§×éÎÞ·¨·¢²¼ÓÅ»ÝÈ¯]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[ÔÊÐíä¯ÀÀÓÅ»ÝÈ¯µÄÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[¿ÉÒÔä¯ÀÀ²é¿´ÓÅ»ÝÈ¯µÄÓÃ»§×é¡£]]></item>
+				<item id="variable"><![CDATA[viewgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+					<item id="13"><![CDATA[7]]></item>
+				</item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[½ûÖ¹ä¯ÀÀÌáÐÑ]]></item>
+				<item id="description"><![CDATA[²»ÔÊÐí²é¿´ÓÅ»ÝÈ¯µÄÓÃ»§×éÌáÐÑ¡£]]></item>
+				<item id="variable"><![CDATA[stopviewtip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[ÄúËùÔÚµÄÓÃ»§×éÎÞ·¨ä¯ÀÀÓÅ»ÝÈ¯]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[·¢²¼ÐÂÓÅ»ÝÈ¯±êÌâ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[djtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[±à¼­ÓÅ»ÝÈ¯]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[ÔÊÐíÓÅ»ÝÈ¯ÆÀÂÛ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[allowfastpost]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[Æ·ÅÆ²Ëµ¥Ãû³Æ]]></item>
+				<item id="description"><![CDATA[Ä£¿éÔÚÆ·ÅÆÉÌ¼Ò²Ëµ¥ÖÐÏÔÊ¾Ãû³Æ¡£]]></item>
+				<item id="variable"><![CDATA[modulemenuname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÓÅ»ÝÈ¯]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[·ÖÏí´úÂë]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[sharecode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[ÓÅ»ÝÈ¯¹ýÆÚÌáÐÑ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[enddatetip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[´ËÓÅ»ÝÈ¯ÒÑ¾­¹ýÆÚ£¡]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[¼Û¸ñµ¥Î»ÁÐ±í]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[selectpriceunit]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[0 = £¤
+1 = $
+2 = &amp;#8364;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[´òÓ¡Í¼Æ¬ÏÔÊ¾Ë®Ó¡]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isprintwatermark]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[Í¼Æ¬Ë®Ó¡ÎÄ×Ö]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[watermarktext]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[´òÓ¡Âë£º{printcode}
+À´×ÔÍøÕ¾[www.fx8.cc] 
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[Ë®Ó¡ÎÄ×ÖÑÕÉ«]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[watercolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#FFCC00]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[Ë®Ó¡×ÖÌå]]></item>
+				<item id="description"><![CDATA[ÌîÐ´Ë®Ó¡×ÖÌåµÄÏà¶ÔÂ·¾¶¡£ÀýÈç£º
+/source/plugin/sanree_brand_coupon/fonts/yahei.ttf
+ÓÉÓÚ×ÖÌåÎÄ¼þ±È½Ï´ó£¬Çë×ÔÐÐµ½ÈýÈðÂÛÌ³ÏÂÔØ°²×°]]></item>
+				<item id="variable"><![CDATA[watermarkfont]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[¿ªÆô·µÀûÏµÍ³]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isrebate]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[Ïû·Ñ½±Àø±¶Êý]]></item>
+				<item id="description"><![CDATA[Ä¬ÈÏÎª1
+ÀýÈçÉèÖÃÎª10£¬ÓÃ»§Ê¹ÓÃÓÅ»ÝÈ¯Ïû·Ñ100ÔªÏÖ½ð£¬Ëû»ñÈ¡µÄ»ý·Ö½±ÀøÎª£º100*10=1000¸ö»ý·Öµ¥Î»¡£]]></item>
+				<item id="variable"><![CDATA[consumeproportion]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[Ïû·Ñ½±Àø»ý·Öµ¥Î»]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[rebateunit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">ÍÆ¼öÒ»¸ödzÉÌ</span><span style="color:#4C33E5;">Òµ²å¼þÄ£°æÏÂÔØµÄ</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">ÍøÕ¾¸ø´ó¼Ò</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">Ô´Âë¸ç·ÖÏí°É</span></a><span style="color:#4C33E5;">£¨www.ymg6.com£©</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">Õâ</span><span style="color:#E53333;">ÊÇÒ»¸ö</span><span style="color:#E53333;">dzÉÌÒµ</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">²å</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">¼þ</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">Ä£</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">°æ</span></u></a><span style="color:#E53333;">×ÊÔ´ÆÆ½â·ÖÏíµÄÍøÕ¾£¬¶øÇÒ»¹ÓÐºÜ¶à¾«Æ·µÄÍøÕ¾Ô´ÂëÏÂÔØ</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">ËûÃÇ×ÊÔ´Ã¿Ìì¸üÐÂ£¬²¢ÇÒºÜ¶à¶¼ÊÇËûÃÇ×Ô¼º³öÇ®ÔÚÓ¦ÓÃÖÐÐÄ¹ºÂòºóÆÆ½â·ÖÏí³öÀ´µÄ</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">²»¹ý»¹ÊÇÌæËûÃÇËµÒ»ÏÂ</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;ËûÃÇÕ¾ÏÂÔØµÄ×ÊÔ´Ö»ÏÞÓÚ×Ô¼ºÑ§Ï°ÑÐ¾¿ÄÚº¬µÄÉè¼ÆË¼ÏëºÍÔ­Àí ÇëÎðÓÐÈÎºÎÉÌÒµÓ¯ÀûÐÐÎª</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">½éÉÜÒ²½éÉÜÍêÁË£¬¸ø´ó¼Ò×ö¸öÐ¡µ¼º½°É</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dzÉÌÒµÆÆ½â²å¼þÏÂÔØ</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dzÉÌÒµ·ç¸ñÄ£°æÏÂÔØ</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">¾«Æ·ÍøÕ¾Ô´ÂëÏÂÔØ</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">¹¤¾ßËØ²ÄÏÂÔØ</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">¾«Ñ¡½Ì³ÌÇø</a></span> 
+</h3> ]]></item>
+				<item id="yijing"><![CDATA[Æ·ÅÆ¹ÜÀí]]></item>
+				<item id="isbusiness"><![CDATA[ÄúµÄµ±Ç°°æ±¾ÎÞ´Ë¹¦ÄÜ,ÐèÒª´Ë¹¦ÄÜÇëÉÌÒµ¹ºÂò£¡]]></item>
+				<item id="couponnew"><![CDATA[´ýÉóÓÅ»ÝÈ¯]]></item>
+				<item id="addcoupon"><![CDATA[·¢²¼ÐÂÓÅ»ÝÈ¯]]></item>
+				<item id="editcoupon"><![CDATA[±à¼­ÐÂÓÅ»ÝÈ¯]]></item>
+				<item id="manage_nav_pluginshow_coupon"><![CDATA[Ç°Ì¨ÓÅ»ÝÈ¯]]></item>
+				<item id="sanree"><![CDATA[ÈýÈð³öÆ·]]></item>
+				<item id="addcate"><![CDATA[Ìí¼Ó·ÖÀà]]></item>
+				<item id="catename"><![CDATA[·ÖÀàÃû³Æ]]></item>
+				<item id="showorder"><![CDATA[ÅÅÐò]]></item>
+				<item id="count"><![CDATA[Í³¼Æ]]></item>
+				<item id="succeed"><![CDATA[²Ù×÷³É¹¦]]></item>
+				<item id="category"><![CDATA[·ÖÀà¹ÜÀí]]></item>
+				<item id="coupon"><![CDATA[ÓÅ»ÝÈ¯¹ÜÀí]]></item>
+				<item id="status"><![CDATA[×´Ì¬]]></item>
+				<item id="addsubcate"><![CDATA[Ôö¼Ó×Ó·ÖÀà]]></item>
+				<item id="ubcate"><![CDATA[ÐÂ×Ó·ÖÀà]]></item>
+				<item id="searchbar"><![CDATA[ËÑË÷]]></item>
+				<item id="skeyword"><![CDATA[¹Ø¼ü×Ö£º]]></item>
+				<item id="search"><![CDATA[ËÑË÷]]></item>
+				<item id="smallpic"><![CDATA[ÓÅ»ÝÈ¯Í¼Æ¬]]></item>
+				<item id="bigpic"><![CDATA[ÓÅ»ÝÈ¯´óÍ¼]]></item>
+				<item id="pselect"><![CDATA[Ñ¡Ôñ·ÖÀà]]></item>
+				<item id="content"><![CDATA[ÓÅ»ÝÈ¯½éÉÜ]]></item>
+				<item id="displayorder"><![CDATA[ÅÅÐò]]></item>
+				<item id="dateline"><![CDATA[Ê±¼ä]]></item>
+				<item id="audited"><![CDATA[×´Ì¬]]></item>
+				<item id="istop"><![CDATA[ÖÃ¶¥]]></item>
+				<item id="isrecommend"><![CDATA[ÍÆ¼ö]]></item>
+				<item id="ishot"><![CDATA[ÈÈÃÅ]]></item>
+				<item id="couponno"><![CDATA[ÓÅ»ÝÈ¯±àºÅ]]></item>
+				<item id="allowreply"><![CDATA[ÔÊÐíÆÀÂÛ]]></item>
+				<item id="enddate"><![CDATA[½ØÖÁÈÕÆÚ]]></item>
+				<item id="memo"><![CDATA[±¸×¢]]></item>
+				<item id="grade"><![CDATA[´ò·Ö]]></item>
+				<item id="attribute"><![CDATA[ÊôÐÔ]]></item>
+				<item id="brandname"><![CDATA[ËùÊôÆ·ÅÆ]]></item>
+				<item id="error_bid"><![CDATA[Ã»ÓÐ´ËÆ·ÅÆÉÌ¼Ò]]></item>
+				<item id="couponname"><![CDATA[ÓÅ»ÝÈ¯±êÌâ]]></item>
+				<item id="error_cateid"><![CDATA[ÇëÑ¡Ôñ·ÖÀà]]></item>
+				<item id="error_nametip"><![CDATA[ÇëÌîÐ´Ãû³Æ]]></item>
+				<item id="error_brandnametip"><![CDATA[ÇëÊäÈëËùÊôÆ·ÅÆ]]></item>
+				<item id="error_smallpic"><![CDATA[ÇëÊäÈëÓÅ»ÝÈ¯Ð¡Í¼]]></item>
+				<item id="ishavecouponno"><![CDATA[´ËÆ·ÅÆ±àºÅÒÑ´æÔÚ]]></item>
+				<item id="errorcouponno"><![CDATA[Æ·ÅÆ±àºÅ´íÎó]]></item>
+				<item id="reply"><![CDATA[ÆÀÂÛ]]></item>
+				<item id="yes"><![CDATA[¡Ì]]></item>
+				<item id="no"><![CDATA[¡Á]]></item>
+				<item id="batchshen"><![CDATA[ÅúÁ¿ÉóºË]]></item>
+				<item id="batchdel"><![CDATA[ÅúÁ¿É¾³ý]]></item>
+				<item id="delorhen"><![CDATA[Éó/É¾?]]></item>
+				<item id="confirmationdel"><![CDATA[´Ë²Ù×÷ÎÞ·¨³·Ïú£¬ÄúÈ·¶¨ÒªÉ¾³ýÂð?]]></item>
+				<item id="nobindingforum"><![CDATA[ÇëÏÈÉèÖÃ¡°°ó¶¨°æ¿é¡±]]></item>
+				<item id="warningforumtitle"><![CDATA[°ó¶¨µÄ°æ¿é±êÌâÖÐ±ØÐëÒª°üº¬×Ö·û  {haveforumtitle}]]></item>
+				<item id="zanwustr"><![CDATA[ÔÝÎÞ]]></item>
+				<item id="isshow"><![CDATA[ÏÔÊ¾]]></item>
+				<item id="mycoupon"><![CDATA[ÓÅ»ÝÈ¯¹ÜÀí]]></item>
+				<item id="post_new_coupon"><![CDATA[·¢²¼ÐÂÓÅ»ÝÈ¯]]></item>
+				<item id="edit_new_coupon"><![CDATA[±à¼­±£´æ]]></item>
+				<item id="nonid"><![CDATA[Ã»ÓÐ´ËÓÅ»ÝÈ¯»òÕýÔÚÉóºËÖÐ]]></item>
+				<item id="itemcoupon"><![CDATA[ÓÅ»ÝÈ¯]]></item>
+				<item id="inputpicture"><![CDATA[ÇëÉÏ´«ÓÅ»ÝÈ¯Í¼Æ¬]]></item>
+				<item id="okmessage"><![CDATA[·¢²¼ÓÅ»ÝÈ¯³É¹¦]]></item>
+				<item id="post_picture"><![CDATA[ÓÅ»ÝÈ¯Í¼Æ¬£º]]></item>
+				<item id="upload"><![CDATA[ÉÏ´«]]></item>
+				<item id="description"><![CDATA[ÕªÒª]]></item>
+				<item id="post_ishome"><![CDATA[·âÃæ]]></item>
+				<item id="e_attach_insert"><![CDATA[µã»÷Í¼Æ¬ÎÄ¼þÃûÌí¼Óµ½ÓÅ»ÝÈ¯½éÉÜÖÐ]]></item>
+				<item id="cancel"><![CDATA[È¡ÏûÉÏ´«]]></item>
+				<item id="error_install"><![CDATA[´Ë²å¼þ²»ÄÜµ¥¶ÀÊ¹ÓÃ£¬±ØÐë°²×°¡¾ÈýÈð¡¿Æ·ÅÆ123£¬ÕýÔÚÌø×ªÇëÉÔºó...]]></item>
+				<item id="pass"><![CDATA[Í¨¹ý]]></item>
+				<item id="refuse"><![CDATA[¾Ü¾ø]]></item>
+				<item id="ishavecom"><![CDATA[ÇëÎð·¢²¼ÖØ¸´ÓÅ»ÝÈ¯]]></item>
+				<item id="coupon_pass"><![CDATA[ÓÃ»§: {user} ·¢²¼µÄÓÅ»ÝÈ¯¡¾{brand}¡¿,ÒÑ¾­ÉÏÏß¡£ Ê±¼ä:{time}]]></item>
+				<item id="coupon_adminpass"><![CDATA[ÓÃ»§: {user} ·¢²¼µÄÓÅ»ÝÈ¯¡¾{brand}¡¿,ÒÑ¾­ÉÏÏß¡£ÉóºË²Ù×÷ÈË£º{adminuser}¡£ Ê±¼ä:{time}]]></item>
+				<item id="coupon_pending"><![CDATA[ÓÃ»§: {user} ·¢²¼µÄÓÅ»ÝÈ¯¡¾{brand}¡¿£¬ÕýÔÚÉóºË¡£ Ê±¼ä:{time}]]></item>
+				<item id="coupon_refuse"><![CDATA[ÓÃ»§: {user} ·¢²¼µÄÓÅ»ÝÈ¯¡¾{brand}¡¿±»¾Ü¾ø¡£ÉóºË²Ù×÷ÈË£º{adminuser}¡£<br>Ô­Òò£º{reason}¡£ Ê±¼ä:{time}]]></item>
+				<item id="name"><![CDATA[ÓÅ»ÝÈ¯±êÌâ]]></item>
+				<item id="refusereason"><![CDATA[¾Ü¾øÔ­Òò]]></item>
+				<item id="reason"><![CDATA[Ô­Òò]]></item>
+				<item id="all"><![CDATA[È«²¿]]></item>
+				<item id="defaultkeyword"><![CDATA[Àý£º»ð¹ø¡¢Ä¾µØ°å]]></item>
+				<item id="slide"><![CDATA[»ÃµÆ¹ÜÀí]]></item>
+				<item id="slide_img"><![CDATA[»ÃµÆÍ¼Æ¬µØÖ·]]></item>
+				<item id="slide_link"><![CDATA[»ÃµÆÁ¬½ÓµØÖ·]]></item>
+				<item id="slideimgtip"><![CDATA[Í¼Æ¬³ß´ç£º697*174]]></item>
+				<item id="bitian"><![CDATA[<span color="red">*±ØÌîÏî</span>]]></item>
+				<item id="selectbrand"><![CDATA[Ñ¡ÔñÆ·ÅÆ]]></item>
+				<item id="selected"><![CDATA[Ñ¡Ôñ]]></item>
+				<item id="listtip"><![CDATA[µã»÷Æ·ÅÆÐÐ¼´¿ÉÑ¡Ôñ]]></item>
+				<item id="nocoupon"><![CDATA[´ËÆ·ÅÆµÄÓÅ»ÝÈ¯Ä£¿é´¦ÓÚ¹Ø±ÕÖÐ¡£]]></item>
+				<item id="nocouponshow"><![CDATA[ÎÞ´ËÓÅ»ÝÈ¯»òÕýÔÚÉóºËÖÐ]]></item>
+				<item id="couponshow"><![CDATA[ÓÅ»ÝÈ¯Õ¹Ê¾]]></item>
+				<item id="erroruser"><![CDATA[ÇëÎð·Ç·¨²Ù×÷]]></item>
+				<item id="notisshow"><![CDATA[´ËÓÅ»ÝÈ¯ÒÑÏÂ¼Ü]]></item>
+				<item id="showyes"><![CDATA[ÒÑÏÔÊ¾]]></item>
+				<item id="notshow"><![CDATA[<span style="color:red">ÒÑÒþ²Ø</span>]]></item>
+				<item id="pleaseaddbrand"><![CDATA[ÇëÏÈÈë×¡ÖÁÉÙÒ»¸öÆ·ÅÆÉÌ¼Ò²ÅÄÜ·¢²¼ÓÅ»ÝÈ¯.]]></item>
+				<item id="stopallowtip"><![CDATA[ÄúËùÔÚµÄÓÃ»§×éÎÞ·¨·ÃÎÊ]]></item>
+				<item id="stopviewtip"><![CDATA[ÄúËùÔÚµÄÓÃ»§×éÎÞ·¨ä¯ÀÀÓÅ»ÝÈ¯]]></item>
+				<item id="ismaxcoupon"><![CDATA[ÄúµÄÓÅ»ÝÈ¯ÊýÁ¿ÒÑ¾­´ïµ½ÉÏÏß,ÇëÁªÏµ¹ÜÀíÔ±À©ÈÝ.]]></item>
+				<item id="editbusi"><![CDATA[ÐÞ¸ÄÓÅ»ÝÈ¯]]></item>
+				<item id="addbusi"><![CDATA[Ìí¼ÓÓÅ»ÝÈ¯]]></item>
+				<item id="telcate"><![CDATA[·ÖÀà¹ÜÀí]]></item>
+				<item id="editcate"><![CDATA[±à¼­·ÖÀà]]></item>
+				<item id="auditstatus"><![CDATA[×´Ì¬]]></item>
+				<item id="blockclass_catename"><![CDATA[ËùÊô·ÖÀà]]></item>
+				<item id="blockclass_sanree"><![CDATA[¡¾ÈýÈð³öÆ·¡¿Àà]]></item>
+				<item id="fixbranddiy"><![CDATA[Ð£ÕýÓÅ»ÝÈ¯DIY]]></item>
+				<item id="blockclass_index_styletexttitle"><![CDATA[[ÄÚÖÃ]Æ·ÅÆ123_ÓÅ»ÝÈ¯ÎÄ×ÖÄ£Ê½]]></item>
+				<item id="blockclass_index_styleimgtitle"><![CDATA[[ÄÚÖÃ]Æ·ÅÆ123_ÓÅ»ÝÈ¯Í¼ÎÄÄ£Ê½]]></item>
+				<item id="blockclass_brandname"><![CDATA[123ÓÅ»ÝÈ¯]]></item>
+				<item id="blockstyle_create_succeed"><![CDATA[Ð£ÕýÓÅ»ÝÈ¯DIY³É¹¦]]></item>
+				<item id="blockclass_starttitle"><![CDATA[¿ªÊ¼ÐÐÊý]]></item>
+				<item id="blockclass_ordertitle"><![CDATA[ÓÅ»ÝÈ¯ÅÅÐò·½Ê½]]></item>
+				<item id="blockclass_nid"><![CDATA[ÓÅ»ÝÈ¯ID]]></item>
+				<item id="blockclass_brand_field_pic"><![CDATA[ÓÅ»ÝÈ¯Í¼Æ¬]]></item>
+				<item id="blockclass_orderby"><![CDATA[ÏÔÊ¾Ë³Ðò]]></item>
+				<item id="blockclass_showid"><![CDATA[ÏÔÊ¾ÅÅÐò]]></item>
+				<item id="blockclass_dateline"><![CDATA[´´½¨Ê±¼ä]]></item>
+				<item id="blockclass_views"><![CDATA[ä¯ÀÀÁ¿]]></item>
+				<item id="blockclass_ordersctitle"><![CDATA[ÅÅÐò]]></item>
+				<item id="blockclass_orderscdown"><![CDATA[½µÐò]]></item>
+				<item id="blockclass_orderscup"><![CDATA[ÉýÐò]]></item>
+				<item id="blockclass_bid"><![CDATA[Æ·ÅÆID]]></item>
+				<item id="blockclass_showfilter"><![CDATA[ÏÔÊ¾Ìõ¼þ]]></item>
+				<item id="blockclass_zuixin"><![CDATA[×îÐÂÓÅ»ÝÈ¯]]></item>
+				<item id="blockclass_zhiding"><![CDATA[ÖÃ¶¥ÓÅ»ÝÈ¯]]></item>
+				<item id="blockclass_tuijian"><![CDATA[ÍÆ¼öÓÅ»ÝÈ¯]]></item>
+				<item id="blockclass_brand_field_title"><![CDATA[ÓÅ»ÝÈ¯Ãû³Æ]]></item>
+				<item id="blockclass_brand_field_nid"><![CDATA[ÓÅ»ÝÈ¯ID]]></item>
+				<item id="blockclass_brand_field_url"><![CDATA[ÓÅ»ÝÈ¯Á´½Ó]]></item>
+				<item id="blockclass_brand_field_views"><![CDATA[ä¯ÀÀÁ¿]]></item>
+				<item id="blockclass_brand_field_cateid"><![CDATA[ÓÅ»ÝÈ¯ËùÊô·ÖÀàID]]></item>
+				<item id="blockclass_brand_field_catename"><![CDATA[ÓÅ»ÝÈ¯ËùÊô·ÖÀàÃû³Æ]]></item>
+				<item id="blockclass_brand_field_brandname"><![CDATA[ÓÅ»ÝÈ¯ËùÊôÆ·ÅÆÃû³Æ]]></item>
+				<item id="blockclass_brand_field_bid"><![CDATA[ÓÅ»ÝÈ¯ËùÊôÆ·ÅÆID]]></item>
+				<item id="diymanage"><![CDATA[DIY¹ÜÀí]]></item>
+				<item id="diyconfig"><![CDATA[DIYÉèÖÃ]]></item>
+				<item id="diytemplate"><![CDATA[DIYÄ£°æ]]></item>
+				<item id="diystyle"><![CDATA[DIYÑùÊ½]]></item>
+				<item id="addstyle"><![CDATA[Ìí¼ÓÐÂÑùÊ½]]></item>
+				<item id="editstyle"><![CDATA[ÐÞ¸ÄÑùÊ½]]></item>
+				<item id="stylename"><![CDATA[ÑùÊ½Ãû³Æ]]></item>
+				<item id="stylenametip"><![CDATA[±ØÐëÒÑ×ÖÄ¸¿ªÍ·£¬Ö»ÄÜÊÇ×ÖÄ¸¡¢Êý×Ö»òÕßÏÂ»®Ïß×é³É£¬<br>ÑùÊ½Ãû³Æ¾ßÓÐÎ¨Ò»ÐÔ£¬²»ÄÜÖØ¸´]]></item>
+				<item id="stylecontent"><![CDATA[ÑùÊ½ÄÚÈÝ]]></item>
+				<item id="stylecontenttip"><![CDATA[DIYµ÷ÓÃÑùÊ½ÄÚÈÝÖÐ stylename ½«×Ô¶¯Ìæ»»³É¶¨ÒåµÄÑùÊ½Ãû³Æ¡£]]></item>
+				<item id="error_stylenametip"><![CDATA[ÑùÊ½Ãû³Æ²»ÄÜÎª¿Õ]]></item>
+				<item id="ishavestylename"><![CDATA[ÑùÊ½ÃûÖØ¸´]]></item>
+				<item id="error_stylecontenttip"><![CDATA[ÑùÊ½ÄÚÈÝ²»ÄÜÎª¿Õ]]></item>
+				<item id="operationuser"><![CDATA[Ìí¼ÓÈË]]></item>
+				<item id="errorstylename"><![CDATA[ÑùÊ½Ãû³ÆÖ»ÄÜÊÇa-z¡¢A-Z¡¢0-9¡¢ÏÂ»®Ïß(_)£¬ÇÒ±ØÐëÒÔ×ÖÄ¸¿ªÍ·]]></item>
+				<item id="addtemplate"><![CDATA[Ìí¼ÓÐÂÄ£¿éÄ£°æ]]></item>
+				<item id="edittemplate"><![CDATA[ÐÞ¸ÄÄ£°æ]]></item>
+				<item id="templatename"><![CDATA[DIYÄ£°æÃû³Æ]]></item>
+				<item id="templatecontent"><![CDATA[DIYÄ£°æÄÚÈÝ]]></item>
+				<item id="error_templatenametip"><![CDATA[DIYÄ£°æÃû³Æ²»ÄÜÎª¿Õ]]></item>
+				<item id="error_templatecontenttip"><![CDATA[DIYÄ£°æÄÚÈÝ²»ÄÜÎª¿Õ]]></item>
+				<item id="system"><![CDATA[ÏµÍ³]]></item>
+				<item id="copynewtemplate"><![CDATA[¸´ÖÆ]]></item>
+				<item id="copysucceed"><![CDATA[¸´ÖÆ³É¹¦]]></item>
+				<item id="copyfuben"><![CDATA[¸±±¾]]></item>
+				<item id="neizhi"><![CDATA[[ÄÚÖÃ]]]></item>
+				<item id="copycoupontyle"><![CDATA[¸´ÖÆ]]></item>
+				<item id="fixdiytip"><![CDATA[ÄúÈ·ÈÏÐ£ÕýDIYÇø¿éÉèÖÃÂð£¿]]></item>
+				<item id="allcate"><![CDATA[ËùÓÐ·ÖÀà]]></item>
+				<item id="blockclass_isimage"><![CDATA[±ØÐëº¬Í¼Æ¬]]></item>
+				<item id="blockclass_yes"><![CDATA[ÊÇ]]></item>
+				<item id="blockclass_no"><![CDATA[·ñ]]></item>
+				<item id="smallpictip"><![CDATA[½¨ÒéÉÏ´«560*350µÄÍ¼Æ¬]]></item>
+				<item id="condition"><![CDATA[Ê¹ÓÃÌõ¼þËµÃ÷]]></item>
+				<item id="price"><![CDATA[ÊÐ³¡¼Û¸ñ]]></item>
+				<item id="minprice"><![CDATA[ÓÅ»Ý¼Û¸ñ]]></item>
+				<item id="priceunit"><![CDATA[¼Û¸ñµ¥Î»]]></item>
+				<item id="inputprice"><![CDATA[ÇëÊäÈëÉÌÆ·ÊÐ³¡¼Û¸ñ]]></item>
+				<item id="inputminprice"><![CDATA[ÇëÊäÈëÉÌÆ·ÓÅ»Ý¼Û¸ñ]]></item>
+				<item id="unit"><![CDATA[ÉÌÆ·µ¥Î»]]></item>
+				<item id="unittip"><![CDATA[ÏÔÊ¾ÔÚ¼Û¸ñºóÃæ£¬ÀýÈç£º¸ö£¬Æ½Ã×£¬¿Ë£¬kg£¬ÏÔÊ¾Îª£º/¸ö£¬/Æ½Ã×£¬/¿Ë£¬/kg]]></item>
+				<item id="post_stock"><![CDATA[¿â´æÇé¿ö]]></item>
+				<item id="inputstock"><![CDATA[ÇëÌîÐ´¿â´æÊý£¬±ØÐë´óÓÚ0]]></item>
+				<item id="stocktip"><![CDATA[×¢Òâ£º¿â´æÐ¡ÓÚ1£¬ÓÃ»§½«ÎÞ·¨´òÓ¡ÓÅ»ÝÈ¯]]></item>
+				<item id="nostock"><![CDATA[¿â´æ²»×ã£¬½ûÖ¹´òÓ¡]]></item>
+				<item id="printlog"><![CDATA[´òÓ¡¼ÇÂ¼]]></item>
+				<item id="username"><![CDATA[ÓÃ»§]]></item>
+				<item id="allcountstr"><![CDATA[±¾Õ¾¹²ÓÐÓÅ»ÝÈ¯<span>{allcount}</span>¸ö]]></item>
+				<item id="hookhtml"><![CDATA[ÔÚÄúÖ®Ç°ÒÑ¾­ÓÐ {viewnum} ÈËä¯ÀÀ£¬{downnum} ÈËÏÂÔØ´òÓ¡]]></item>
+				<item id="colorprint"><![CDATA[²ÊÉ«´òÓ¡]]></item>
+				<item id="blackprint"><![CDATA[ºÚ°×´òÓ¡]]></item>
+				<item id="nofastpostcontrol"><![CDATA[<div class="nofastpostcontrol">¸ÃÓÅ»ÝÈ¯ÉÐÎ´¿ªÆôÆÀÂÛ</div>]]></item>
+				<item id="enddatestr"><![CDATA[ÓÐÐ§ÆÚ½ØÖÁ]]></item>
+				<item id="discountstr1"><![CDATA[ÕÛ]]></item>
+				<item id="discountstr2"><![CDATA[²»´òÕÛ]]></item>
+				<item id="free"><![CDATA[Ãâ·Ñ]]></item>
+				<item id="couponst0"><![CDATA[Î´Ê¹ÓÃ]]></item>
+				<item id="couponst1"><![CDATA[<font color="red">ÒÑÊ¹ÓÃ</font>]]></item>
+				<item id="couponst2"><![CDATA[ÒÑÁìÈ¡]]></item>
+				<item id="couponst3"><![CDATA[ÒÑ·µÀû]]></item>
+				<item id="couponst4"><![CDATA[ÒÑ×÷·Ï]]></item>
+				<item id="noprintlog"><![CDATA[Ã»ÓÐ´ËÏû·ÑÈ¯]]></item>
+				<item id="deal_succeed"><![CDATA[´¦Àí³É¹¦]]></item>
+				<item id="useprintlog"><![CDATA[´ËÓÅ»ÝÈ¯ÒÑÊ¹ÓÃ.]]></item>
+				<item id="memberscoupon"><![CDATA[ÎÒµÄÓÅ»ÝÈ¯]]></item>
+				<item id="notuseprintlog"><![CDATA[´ËÓÅ»ÝÈ¯Î´Ê¹ÓÃ£¬²»ÄÜÁìÈ¡½±Àø.]]></item>
+				<item id="getrewarded"><![CDATA[ÄúÒÑ¾­ÁìÈ¡¹ý½±Àø£¬²»ÄÜÖØ¸´ÁìÈ¡.]]></item>
+				<item id="getreward"><![CDATA[ÁìÈ¡½±Àø]]></item>
+				<item id="getreward_succeed"><![CDATA[ÁìÈ¡³É¹¦]]></item>
+				<item id="notrebate"><![CDATA[·µÀûÏµÍ³ÏµÍ³Î´¿ªÆô]]></item>
+				<item id="COU"><![CDATA[ÓÅ»ÝÈ¯½±Àø»ý·Ö]]></item>
+				<item id="rebateproportion"><![CDATA[·µÀû±ÈÀý]]></item>
+				<item id="inputrebateproportion"><![CDATA[ÇëÊäÈë·µÓ¶±ÈÀý£¬1-99Ö®¼ä]]></item>
+				<item id="rebateproportiontip"><![CDATA[Ã¿µ¥·µÀû¸øÕ¾³¤µÄ½ð¶î±ÈÀý,1-99Ö®¼äµÄÊý×Ö¡£<br>ÀýÈç£ºÓÃ»§Ïû·Ñ80Ôª£¬½ð¶î±ÈÀýÎª5 Äú½«·µÀû¸øÕ¾³¤80*5/100 = 4ÔªÏÖ½ð¡£]]></item>
+				<item id="printcode"><![CDATA[´òÓ¡Âë]]></item>
+				<item id="enddatetip"><![CDATA[ÀýÈç£º2013-3-31 00:00]]></item>
+				<item id="nocreditunit"><![CDATA[ÇëÉèÖÃ¡°Ïû·Ñ½±Àø»ý·Öµ¥Î»¡±]]></item>
+				<item id="notwatermarkfont"><![CDATA[ÇëÏÈÉèÖÃË®Ó¡×ÖÌåÎÄ¼þ]]></item>
+				<item id="notwatermarkfontfile"><![CDATA[Î´ÕÒµ½Ë®Ó¡×ÖÌåÎÄ¼þ]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="post_new_coupon"><![CDATA[·¢²¼ÐÂÓÅ»ÝÈ¯]]></item>
+				<item id="edit_new_coupon"><![CDATA[±à¼­±£´æ]]></item>
+				<item id="addtime"><![CDATA[ÉÏ¼ÜÊ±¼ä]]></item>
+				<item id="description"><![CDATA[ÃèÊö]]></item>
+				<item id="readperm"><![CDATA[ÔÄ¶ÁÈ¨ÏÞ]]></item>
+				<item id="e_attach_insert"><![CDATA[µã»÷Í¼Æ¬ÎÄ¼þÃûÌí¼Óµ½ÓÅ»ÝÈ¯½éÉÜÖÐ]]></item>
+				<item id="post_ajax_error"><![CDATA[ÄÚ²¿´íÎó£¬ÎÞ·¨ÏÔÊ¾´ËÄÚÈÝ]]></item>
+				<item id="post_remind"><![CDATA[ÓÑÇéÌáÐÑ£º±íµ¥Ö§³ÖTab»»ÐÐ]]></item>
+				<item id="post_couponname"><![CDATA[ÓÅ»ÝÈ¯±êÌâ£º]]></item>
+				<item id="post_couponcate"><![CDATA[ÉÌÆ··ÖÀà£º]]></item>
+				<item id="post_keywords"><![CDATA[¹Ø¼ü´Ê£º]]></item>
+				<item id="post_description"><![CDATA[ÕªÒª£º]]></item>
+				<item id="upload"><![CDATA[ÉÏ´«]]></item>
+				<item id="post_ishome"><![CDATA[·âÃæ]]></item>
+				<item id="post_content"><![CDATA[ÓÅ»ÝÈ¯½éÉÜ£º]]></item>
+				<item id="post_picture"><![CDATA[ÓÅ»ÝÈ¯Í¼Æ¬£º]]></item>
+				<item id="post_enddate"><![CDATA[½ØÖÁÈÕÆÚ£º]]></item>
+				<item id="post_displayorder"><![CDATA[ÅÅÐò£º]]></item>
+				<item id="post_isshow"><![CDATA[ÏÔÊ¾£º]]></item>
+				<item id="post_yew"><![CDATA[ÊÇ]]></item>
+				<item id="post_no"><![CDATA[·ñ]]></item>
+				<item id="mode_coupon"><![CDATA[ÓÅ»ÝÈ¯ÁÐ±í]]></item>
+				<item id="nocoupon"><![CDATA[ÔÝÎÞÓÅ»ÝÈ¯]]></item>
+				<item id="cancel"><![CDATA[È¡ÏûÉÏ´«]]></item>
+				<item id="error_install"><![CDATA[´Ë²å¼þ²»ÄÜµ¥¶ÀÊ¹ÓÃ£¬±ØÐë°²×°¡¾ÈýÈð¡¿Æ·ÅÆ123£¬ÕýÔÚÌø×ªÇëÉÔºó...]]></item>
+				<item id="inputbid"><![CDATA[ÇëÑ¡ÔñËùÊôÆ·ÅÆ]]></item>
+				<item id="inputcouponname"><![CDATA[ÇëÊäÈëÓÅ»ÝÈ¯±êÌâ]]></item>
+				<item id="inputcontent"><![CDATA[ÇëÊäÈëÓÅ»ÝÈ¯½éÉÜ]]></item>
+				<item id="hotcoupon"><![CDATA[ÈÈÃÅÓÅ»ÝÈ¯]]></item>
+				<item id="discount"><![CDATA[»áÔ±ÕÛ¿Û£º]]></item>
+				<item id="couponname"><![CDATA[ÓÅ»ÝÈ¯±êÌâ]]></item>
+				<item id="brandname"><![CDATA[ËùÊôÆ·ÅÆ]]></item>
+				<item id="mode_coupon_show"><![CDATA[ÓÅ»ÝÈ¯Õ¹Ê¾]]></item>
+				<item id="sendstar"><![CDATA[µã»÷ÐÇÐÇ¸øÓÅ»ÝÈ¯´ò·Ö£º]]></item>
+				<item id="notclickstar"><![CDATA[ÄúÎ´¶ÔÓÅ»ÝÈ¯ÆÀ·Ö]]></item>
+				<item id="pleasestarstr"><![CDATA[Äú¶ÔÓÅ»ÝÈ¯µÄÆÀ·ÖÎª£º]]></item>
+				<item id="pleasestar"><![CDATA[Çë¸øÓÅ»ÝÈ¯ÆÀ·Ö!]]></item>
+				<item id="show_qq"><![CDATA[ÁªÏµÉÌ¼Ò£º]]></item>
+				<item id="post_dateline"><![CDATA[ÉÏ¼ÜÊ±¼ä£º]]></item>
+				<item id="delete"><![CDATA[É¾³ý]]></item>
+				<item id="deleteask"><![CDATA[É¾?]]></item>
+				<item id="deletetip"><![CDATA[ÄúÈ·ÈÏÉ¾³ý´ËÓÅ»ÝÈ¯Âð£¿´Ë²Ù×÷²»¿É³·Ïú]]></item>
+				<item id="no_related_coupon"><![CDATA[ÔÝÎÞÓÅ»ÝÈ¯]]></item>
+				<item id="satisfaction"><![CDATA[ÓÃ»§ÆÀ·Ö£º]]></item>
+				<item id="status"><![CDATA[×´Ì¬]]></item>
+				<item id="isshow"><![CDATA[ÊÇ·ñÏÔÊ¾£º]]></item>
+				<item id="coupon123"><![CDATA[¡¾ÈýÈðÆ·ÅÆ123¡¿<span>ÓÅ»ÝÈ¯Ä£¿é</span>]]></item>
+				<item id="hotbrand"><![CDATA[ÈÈÃÅÆ·ÅÆ]]></item>
+				<item id="views"><![CDATA[µã»÷Á¿:]]></item>
+				<item id="postby"><![CDATA[·¢²¼Õß£º]]></item>
+				<item id="subcate"><![CDATA[ÏÂÊô·ÖÀà£º]]></item>
+				<item id="couponcate"><![CDATA[ÉÌÆ··ÖÀà£º]]></item>
+				<item id="filterstr"><![CDATA[°´Ìõ¼þ²éÕÒ£º]]></item>
+				<item id="fen"><![CDATA[·Ö]]></item>
+				<item id="publishedtip"><![CDATA[µã»÷ÕâÀï·¢²¼ÉÌ¼Ò×ÊÑ¶]]></item>
+				<item id="viewsh"><![CDATA[ä¯ÀÀÁ¿£º]]></item>
+				<item id="inputcate"><![CDATA[ÇëÑ¡ÔñÉÌÆ··ÖÀà]]></item>
+				<item id="inputsmallpic"><![CDATA[ÇëÊäÈëÓÅ»ÝÈ¯Í¼Æ¬]]></item>
+				<item id="post_condition"><![CDATA[Ê¹ÓÃÌõ¼þËµÃ÷£º]]></item>
+				<item id="enddate"><![CDATA[½ØÖÁÈÕÆÚ£º]]></item>
+				<item id="limit_usermaxdowntip"><![CDATA[²»ÌîÎª²»ÏÞÖÆ]]></item>
+				<item id="post_price"><![CDATA[ÊÐ³¡¼Û£º]]></item>
+				<item id="post_minprice"><![CDATA[ÓÅ»Ý¼Û£º]]></item>
+				<item id="unit"><![CDATA[ÉÌÆ·µ¥Î»£º]]></item>
+				<item id="unittip"><![CDATA[ ÀýÈç£º¸ö£¬Æ½Ã×£¬¿Ë£¬kg]]></item>
+				<item id="priceunit"><![CDATA[¼Û¸ñµ¥Î»£º]]></item>
+				<item id="post_stock"><![CDATA[¿â´æÇé¿ö£º]]></item>
+				<item id="inputstock"><![CDATA[ÇëÌîÐ´¿â´æÊý£¬±ØÐë´óÓÚ0]]></item>
+				<item id="stocktip"><![CDATA[×¢Òâ£º¿â´æÐ¡ÓÚ1£¬ÓÃ»§½«ÎÞ·¨´òÓ¡ÓÅ»ÝÈ¯]]></item>
+				<item id="printtime"><![CDATA[´òÓ¡Ê±¼ä]]></item>
+				<item id="username"><![CDATA[ÓÃ»§]]></item>
+				<item id="no_related_couponprint"><![CDATA[ÔÝÎÞ´òÓ¡¼ÇÂ¼]]></item>
+				<item id="show_price"><![CDATA[ÊÐ³¡¼Û£º]]></item>
+				<item id="show_minprice"><![CDATA[ÓÅ»Ý¼Û£º]]></item>
+				<item id="hotword"><![CDATA[ÈÈÃÅ£º]]></item>
+				<item id="catetitle"><![CDATA[ÉÌÆ··ÖÀà£º]]></item>
+				<item id="subcatetitle"><![CDATA[ÏÂÊô·ÖÀà£º]]></item>
+				<item id="order_default"><![CDATA[Ä¬ÈÏÅÅÐò]]></item>
+				<item id="order_time"><![CDATA[Ê±¼ä]]></item>
+				<item id="order_rec"><![CDATA[ÍÆ¼ö]]></item>
+				<item id="order_price"><![CDATA[¼Û¸ñ]]></item>
+				<item id="order_view"><![CDATA[ä¯ÀÀÁ¿]]></item>
+				<item id="sanree_brand123"><![CDATA[¡¾ÈýÈðÆ·ÅÆ123¡¿]]></item>
+				<item id="modename"><![CDATA[ÕÒÓÅ»ÝÄ£¿é]]></item>
+				<item id="printnum"><![CDATA[´òÓ¡ÊýÁ¿£º]]></item>
+				<item id="printlog"><![CDATA[´òÓ¡¼ÇÂ¼]]></item>
+				<item id="logstr"><![CDATA[¼ÇÂ¼]]></item>
+				<item id="dealconsumer"><![CDATA[´¦Àí]]></item>
+				<item id="rebateproportion"><![CDATA[·µÀû±ÈÀý£º]]></item>
+				<item id="inputrebateproportion"><![CDATA[ÇëÊäÈë·µÓ¶±ÈÀý£¬1-99Ö®¼ä]]></item>
+				<item id="rebateproportiontip"><![CDATA[Ã¿µ¥·µÀû¸øÕ¾³¤µÄ½ð¶î±ÈÀý,1-99Ö®¼äµÄÊý×Ö¡£<br>ÀýÈç£ºÓÃ»§Ïû·Ñ80Ôª£¬½ð¶î±ÈÀýÎª5 Äú½«·µÀû¸øÕ¾³¤80*5/100 = 4ÔªÏÖ½ð¡£]]></item>
+				<item id="printlogid"><![CDATA[Ïû·ÑID£º]]></item>
+				<item id="post_goodsname"><![CDATA[ÓÅ»ÝÈ¯±êÌâ£º]]></item>
+				<item id="printtime1"><![CDATA[´òÓ¡Ê±¼ä£º]]></item>
+				<item id="brandname1"><![CDATA[ËùÊôÆ·ÅÆ£º]]></item>
+				<item id="status1"><![CDATA[×´Ì¬£º]]></item>
+				<item id="view"><![CDATA[²é¿´]]></item>
+				<item id="submitprint"><![CDATA[È·ÈÏÒÑÏû·Ñ]]></item>
+				<item id="confirmsubmitprint"><![CDATA[ÄúÈ·ÈÏ´ËÏû·ÑÈ¯ÒÑÏû·ÑÂð£¿´Ë²Ù×÷²»¿ÉÒÔ³·Ïú.]]></item>
+				<item id="usedateline"><![CDATA[Ïû·ÑÊ±¼ä£º]]></item>
+				<item id="rebatesdate"><![CDATA[·µÀûÊ±¼ä£º]]></item>
+				<item id="printcode1"><![CDATA[´òÓ¡Âë£º]]></item>
+				<item id="printcode"><![CDATA[´òÓ¡Âë]]></item>
+				<item id="weiruanyahei"><![CDATA[Î¢ÈíÑÅºÚ]]></item>
+				<item id="memberscoupon"><![CDATA[ÎÒµÄÓÅ»ÝÈ¯]]></item>
+				<item id="members_all"><![CDATA[È«²¿]]></item>
+				<item id="members_default"><![CDATA[Î´Ê¹ÓÃ]]></item>
+				<item id="members_use"><![CDATA[ÒÑÊ¹ÓÃ]]></item>
+				<item id="members_get"><![CDATA[ÒÑÁìÈ¡]]></item>
+				<item id="couponst3"><![CDATA[ÒÑ·µÀû]]></item>
+				<item id="couponst4"><![CDATA[ÒÑ×÷·Ï]]></item>
+				<item id="orders_name"><![CDATA[Ãû³Æ]]></item>
+				<item id="buytime"><![CDATA[´òÓ¡Ê±¼ä]]></item>
+				<item id="operation"><![CDATA[²Ù×÷]]></item>
+				<item id="no_related"><![CDATA[ÔÝÎÞ¼ÇÂ¼]]></item>
+				<item id="getreward"><![CDATA[ÁìÈ¡½±Àø]]></item>
+				<item id="viewconsumer"><![CDATA[²é¿´ÓÅ»ÝÈ¯]]></item>
+				<item id="dealconsumertitle"><![CDATA[´¦ÀíÓÅ»ÝÈ¯]]></item>
+				<item id="kkword"><![CDATA[¹Ø¼ü×Ö£º]]></item>
+				<item id="clicksearch"><![CDATA[µã»÷²éÑ¯]]></item>
+				<item id="disclaimer"><![CDATA[ÃâÔðÉùÃ÷£º ±¾Õ¾×÷ÎªÃâ·ÑµÄÐÅÏ¢·¢²¼Æ½Ì¨£¬ÐÅÏ¢¾ùÓÉÉÌ¼Ò·¢²¼¡£Ïû·ÑÕßÔÚÊ¹ÓÃÓÅ»ÝÐÅÏ¢Ê±£¬ÇëÖ÷¶¯ºËÊµÏû·ÑÈ¯Ìõ¿î¡£Èç·¢ÏÖÐé¼Ù£¬Çë¼°Ê±Í¨ÖªÎÒÃÇ¡£]]></item>
+				<item id="ninfos"><![CDATA[ÓÅ»ÝÈ¯ÐÅÏ¢]]></item>
+				<item id="con"><![CDATA[ÁªÏµ·½Ê½]]></item>
+				<item id="condition"><![CDATA[Ê¹ÓÃÌõ¼þËµÃ÷£º]]></item>
+				<item id="enddatestr1"><![CDATA[ÓÐÐ§ÆÚÖÁ£º]]></item>
+				<item id="colorprint"><![CDATA[²ÊÉ«´òÓ¡]]></item>
+				<item id="blackprint"><![CDATA[ºÚ°×´òÓ¡]]></item>
+				<item id="hookstr1"><![CDATA[ÁªÏµµØÖ·£º]]></item>
+				<item id="hookstr2"><![CDATA[ËùÊôÑ¶ÅÆ£º]]></item>
+				<item id="hookstr3"><![CDATA[ÓÅ»Ý·ÖÀà£º]]></item>
+				<item id="hookstr4"><![CDATA[ÁªÏµµç»°£º]]></item>
+				<item id="hookstr5"><![CDATA[ÔÚÏß¿Í·þ£º]]></item>
+			</item>
+			<item id="installlang">
+				<item id="header"><![CDATA[°²×°²½Öè]]></item>
+				<item id="defaultcate1"><![CDATA[²ÍÒûÃÀÊ³]]></item>
+				<item id="defaultcate2"><![CDATA[¾Æµê±ö¹Ý]]></item>
+				<item id="defaultcate3"><![CDATA[¼Ò¾Ó×°ÊÎ]]></item>
+				<item id="defaultcate4"><![CDATA[ÃÀÈÝ»¯×±]]></item>
+				<item id="defaultcate5"><![CDATA[·þ×°·þÊÎ]]></item>
+				<item id="defaultcate6"><![CDATA[ÊýÂë¼Òµç]]></item>
+				<item id="defaultcate7"><![CDATA[Ä¸Ó¤ÓÃÆ·]]></item>
+				<item id="defaultcate8"><![CDATA[Í¼ÊéÒôÏñ]]></item>
+				<item id="defaultcate9"><![CDATA[ÂÃÐÐÉç]]></item>
+				<item id="defaultcate10"><![CDATA[ÏÊ»¨ÀñÆ·]]></item>
+				<item id="defaultcate11"><![CDATA[ÐÝÏÐÓéÀÖ]]></item>
+				<item id="defaultcate12"><![CDATA[·¿²ú×â·¿]]></item>
+				<item id="defaultcate13"><![CDATA[ÍøÂç¹«Ë¾]]></item>
+				<item id="defaultcate14"><![CDATA[½ÌÓýÅàÑµ]]></item>
+				<item id="error_install"><![CDATA[´Ë²å¼þ²»ÄÜµ¥¶ÀÊ¹ÓÃ£¬±ØÐë°²×°¡¾ÈýÈð¡¿Æ·ÅÆ123£¬ÕýÔÚÌø×ªÇëÉÔºó...]]></item>
+				<item id="Error_Install_brand"><![CDATA[´Ë²å¼þ²»ÄÜµ¥¶ÀÊ¹ÓÃ£¬±ØÐë°²×°¡¾ÈýÈð¡¿Æ·ÅÆ123.]]></item>
+				<item id="iscoupon"><![CDATA[ÊÇ·ñÆôÓÃÓÅ»ÝÈ¯Ä£¿é]]></item>
+				<item id="maxcoupon"><![CDATA[ÔÊÐí·¢²¼µÄÓÅ»ÝÈ¯ÊýÄ¿]]></item>
+				<item id="plugin_error_version"><![CDATA[ÄúÐè°²×°¡¾ÈýÈð¡¿Æ·ÅÆ123 v1.425¼°ÒÔÉÏ°æ±¾·½¿É°²×°.]]></item>
+				<item id="blockclass_index_styletexttitle"><![CDATA[[ÄÚÖÃ]Æ·ÅÆ123_ÓÅ»ÝÈ¯ÎÄ×ÖÄ£Ê½]]></item>
+				<item id="blockclass_index_styleimgtitle"><![CDATA[[ÄÚÖÃ]Æ·ÅÆ123_ÓÅ»ÝÈ¯Í¼ÎÄÄ£Ê½]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]±¾²å¼þ²»ÄÜµ¥¶À°²×°Ê¹ÓÃ£¬±ØÐë°²×°¡¾ÈýÈð¡¿Æ·ÅÆ123Ö÷³ÌÐò£¬·½ÄÜ°²×°Ê¹ÓÃ¡£
+[*]ÏÂÔØ°²×°¡¾ÈýÈð¡¿Æ·ÅÆ123Ö÷³ÌÐò£º[url=http://www.fx8.cc/?@sanree_brand.plugin]ÏÂÔØ[/url]
+[*]±¾²å¼þ°æÈ¨¹éÊô²å¼þ×÷ÕßËùÓÐ.
+[*]Î´¾­²å¼þ×÷ÕßÐí¿É,ÈÎºÎÈË²»µÃÒÔÈÎºÎÐÎÊ½ÔÚÈÎºÎµØ·½·¢²¼/×ª·¢Ô­°æÒÔ¼°ÆäÑÜÉúµÄÐÞ¸Ä°æ.
+[*][b]²å¼þ×÷Õß:[/b]»´ÄÏÊÐÈýÈðÍøÂç¿Æ¼¼ÓÐÏÞ¹«Ë¾ www.ymg6.Com
+[*][b]×÷Æ·¼ò½é:[/b]±¾²å¼þ½«ÔÚÏµÍ³ÖÐ°²×°Æ·ÅÆ123µÄÓÅ»ÝÈ¯¹¦ÄÜ¡£±¾²å¼þ½«Ìá¹©Æ·ÅÆ¹ÜÀí×Ô¼ºµÄÓÅ»ÝÈ¯£¬¹ÜÀíÔ±ºóÌ¨¹ÜÀíÆ·ÅÆÓÅ»ÝÈ¯¡£
+[*][b]·¢²¼µØÖ·:[/b][url]http://www.fx8.cc/forum-64-1.html[/url]
+[*]ÈçÓÐÈÎºÎ¹ØÓÚÊ¹ÓÃÉÏµÄÒÉÎÊ,ÇëÖÁ[url]http://www.fx8.cc/forum-64-1.html[/url]Ìá³ö.
+[*][color=Red]ÇëÄúÔÚ°²×°Ç°ÔÄ¶ÁÈýÈð¿Æ¼¼Èí¼þ²úÆ·×îÖÕÓÃ»§Í¨ÓÃÊÚÈ¨Ð­Òé[/color]£¬µØÖ·£º[url]http://www.ymg6.Com/xieyi.html[/url].
+[*][color=Red]Èç¹ûÄúÔ¸Òâ×ÊÖúÎÒÃÇ,ÇëÖÁ[url]http://www.ymg6.Com/tel114/Donation.aspx[/url]¶ÔÎÒÃÇ½øÐÐÔÞÖú.[/color]
+[*]×îºó,¸ÐÐ»ÄúÊ¹ÓÃÎÒÃÇµÄ²å¼þ,Ò²Ï£ÍûÄúÄÜ¹»¸øÎÒÃÇÌá¹©¸üºÃµÄÒâ¼û([url=http://www.ymg6.Com/]Çëµã»÷ÕâÀï½øÈëÈýÈð¿Æ¼¼¹Ù·½Õ¾µã[/url]).
+[/list]]]></item>
+	</item>
+</root>

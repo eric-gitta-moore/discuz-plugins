@@ -1,0 +1,37 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+    <tr class="e6_yellow">
+		<td>ID</td>
+		<td>{lang e6_propaganda:username}</td>
+		<td>{lang e6_propaganda:group}</td>
+		<td>{lang e6_propaganda:regdate}</td>
+		<td>{lang e6_propaganda:oltime}</td>
+		<td>{lang e6_propaganda:posts}</td>
+		<!--{if $e6_propaganda['area']}-->
+		<td>{lang e6_propaganda:area}</td>
+		<!--{/if}-->
+		<!--{loop $active_title $v}-->
+		<td>{$v}</td>
+		<!--{/loop}-->
+    </tr>
+    <!--{loop $son_list $v}-->
+	<tr>
+		<td>$v[n]</td>
+        <td>$v[username]</td>
+		<td>$v[groupid]</td>
+        <td>$v[regdate]</td>
+        <td>$v[oltime] {lang e6_propaganda:hour}</td>
+		<td>$v[posts] {lang e6_propaganda:post}</td>
+		<!--{if $e6_propaganda['area']}-->
+		<td>$v[region]</td>
+		<!--{/if}-->
+		<!--{loop $active_title $k $s}-->
+		<td>{$v['activation'.$k]}</td>
+		<!--{/loop}-->
+	</tr>
+    <!--{/loop}-->
+</table>		
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

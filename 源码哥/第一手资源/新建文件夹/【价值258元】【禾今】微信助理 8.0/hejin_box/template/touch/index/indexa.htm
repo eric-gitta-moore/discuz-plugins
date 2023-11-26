@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$charset">
+<title>{$plugindata['hjbox_wxmc']}</title>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta charset="$charset">
+<link rel="stylesheet" href="{HEJIN_PATH}index/idangerous.swiper.css">
+<link href="{HEJIN_PATH}index/iscroll.css" rel="stylesheet" type="text/css" />
+
+<link href="{HEJIN_PATH}index/{$zhucss}_.css" rel="stylesheet" type="text/css" />
+ <link href="{HEJIN_PATH}index/{$zhucss}kz{$plugindata['hjbox_wwebsyid']}.css" rel="stylesheet" type="text/css" />
+<style>
+  .themeStyle{ background-color:#E83407 !important; }  
+</style>
+
+<script src="{HEJIN_PATH}index/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+
+function loaded() {
+myScroll = new iScroll('wrapper', {
+snap: true,
+momentum: false,
+hScrollbar: false,
+onScrollEnd: function () {
+document.querySelector('#indicator > li.active').className = '';
+document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+}
+ });
+ 
+ 
+}
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+ 
+</head>
+
+<body id="{$zhucss}">
+<div id="insert1" style="z-index:10000; position:fixed; top:20px;" ></div>
+{if $plugindata['hjbox_wwebbgyy']}
+<style>
+.btn_music {
+display: inline-block;
+width: 35px;
+height: 35px;
+background: url('{HEJIN_PATH}index/play.png') no-repeat center center;
+background-size: 100% auto;
+position: absolute;
+z-index: 100;
+left: 15px;
+top: 20px;
+}
+.btn_music.on {
+    background-image: url("{HEJIN_PATH}index/stop.png");
+}
+
+</style>
+<script src="{HEJIN_PATH}index/audio.js"></script>
+ 
+        
+<span id="playbox" class="btn_music on" onclick="playbox.init(this).play();"><audio autoplay="autoplay" src="$plugindata['hjbox_wwebbgyy']" loop id="audio"></audio></span>
+{/if}
+
+<div class="banner">
+<div id="wrapper">
+<div id="scroller">
+<ul id="thelist">
+
+<!--{loop $indexbges $indexbg}-->               
+<li style="background-image:url('<!--{eval echo trim($indexbg);}-->');background-attachment: inherit;background-repeat:no-repeat;background-size:100% 100%;background-position: center center " ></li>
+<!--{/loop}--> 
+
+</ul>
+</div>
+</div>
+    <div class="clr"></div>
+</div>
+ 
+
+<div class="device">
+    <a class="arrow-left" href="#"></a> 
+    <a class="arrow-right" href="#"></a>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+      
+      
+         
+            
+           
+                           
+                
+        {if count($wfles)}               
+        <div class="swiper-slide">
+            <div class="content-slide">
+            <!--{loop $wfles $key $wfl}-->
+            {if ($key+1)%$mysl != 0}
+          <a href="{if $wfl['url']}<!--{eval echo stripslashes($wfl['url']);}-->{else}{HEJIN_URL}:index&model=list&fid=$wfl['id']{/if}">
+          <div class="mbg">
+                    <p class="ico"><img src="<!--{eval echo stripslashes($wfl['pic']);}-->" /></p>
+                    <p class="title"><!--{eval echo stripslashes($wfl['title']);}--></p></div>
+                </a>
+             {else}
+          <a href="{if $wfl['url']}<!--{eval echo stripslashes($wfl['url']);}-->{else}{HEJIN_URL}:index&model=list&fid=$wfl['id']{/if}">
+          <div class="mbg">
+                    <p class="ico"><img src="<!--{eval echo stripslashes($wfl['pic']);}-->" /></p>
+                    <p class="title"><!--{eval echo stripslashes($wfl['title']);}--></p></div>
+                </a>
+                     </div>
+    		</div>
+
+                                
+                
+                       
+        <div class="swiper-slide">
+            <div class="content-slide">
+             {/if}
+           <!--{/loop}-->                              
+                
+                            
+       
+
+      
+                     </div>
+    		</div>
+{/if}
+                 
+
+
+  </div>
+  <div class="pagination"></div>
+
+</div>
+
+
+
+
+
+
+<script src="{HEJIN_PATH}index/jquery-1.10.1.min.js"></script>
+  <script src="{HEJIN_PATH}index/idangerous.swiper-2.1.min.js"></script>
+  <script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    loop:true,
+    grabCursor: true,
+    paginationClickable: true
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+  </script>
+
+
+<script>
+var count = document.getElementById("thelist").getElementsByTagName("li").length;	
+
+var count2 = document.getElementsByClassName("menuimg").length;
+for(i=0;i<count;i++){
+ document.getElementById("thelist").getElementsByTagName("li").item(i).style.width = document.documentElement.clientWidth+"px";
+  document.getElementById("thelist").getElementsByTagName("li").item(i).style.height = document.documentElement.clientHeight+"px";
+  //document.getElementById("thelist").getElementsByTagName("img").item(i).style.width = document.documentElement.clientWidth+"px";
+  //document.getElementById("thelist").getElementsByTagName("img").item(i).style.height = document.documentElement.clientHeight+"px";
+}
+document.getElementById("scroller").style.cssText = " width:"+document.documentElement.clientWidth*count+"px";
+
+   setInterval(function(){
+myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+window.onresize = function(){ 
+for(i=0;i<count;i++){
+document.getElementById("thelist").getElementsByTagName("li").item(i).style.width = document.documentElement.clientWidth+"px";
+  document.getElementById("thelist").getElementsByTagName("li").item(i).style.height = document.documentElement.clientHeight+"px";
+  //document.getElementById("thelist").getElementsByTagName("img").item(i).style.width = document.documentElement.clientWidth+"px";
+  //document.getElementById("thelist").getElementsByTagName("img").item(i).style.height = document.documentElement.clientHeight+"px";
+}
+ document.getElementById("scroller").style.cssText = " width:"+document.documentElement.clientWidth*count+"px";
+} 
+
+
+</script>
+ 
+  </div>
+ 
+<div style="display:none"> </div>
+
+{if $plugindata['hjbox_wwebbgdh']}
+<div id="leafContainer"></div> 
+ <style>
+ #leafContainer 
+{
+    position: fixed;
+    z-index:2;
+width:100%;
+    height: 690px;
+top:0;
+overflow:hidden;
+}
+ #leafContainer > div 
+{
+    position: absolute;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+}
+
+#leafContainer > div > img {
+     position: absolute;
+     width: 100%;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+     -webkit-animation-timing-function: ease-in-out;
+     -webkit-transform-origin: 50% -100%;
+}
+
+ @-webkit-keyframes fade
+{
+   
+    0%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+ @-webkit-keyframes drop
+{
+       0%   { -webkit-transform: translate(0px, -50px); }
+    100% { -webkit-transform: translate(0px, 650px); }
+}
+ @-webkit-keyframes clockwiseSpin
+{
+    0%   { -webkit-transform: rotate(-50deg); }
+    100% { -webkit-transform: rotate(50deg); }
+}
+ @-webkit-keyframes counterclockwiseSpinAndFlip 
+{
+    
+    0%   { -webkit-transform: scale(-1, 1) rotate(50deg); }
+   
+    100% { -webkit-transform: scale(-1, 1) rotate(-50deg); }
+}
+ </style>
+<script src="{HEJIN_PATH}index/bjdh{$plugindata['hjbox_wwebbgdh']}.js"></script>
+{/if}
+ 
+{if $plugininfo['hjbox_wxgzrz']==2 && $plugindata['hjbox_jssdk'] && $plugindata['hjbox_appid'] && $plugindata['hjbox_appsecret']}
+<input id="wx-share-title" type="hidden" value="{$plugindata['hjbox_wwebtitle']}" />
+<input id="wx-share-img" type="hidden" value="{$plugindata['hjbox_wwebpic']}" />
+<input id="wx-share-desc" type="hidden" value="{$plugindata['hjbox_wwebms']}" />
+<input id="wx-share-link" type="hidden" value="{HEJIN_URL}:index" />
+<input id="sharebackurl" type="hidden" value="" /> 
+ <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+var appIdstr='{$signPackage["appId"]}';
+var timestampstr ={$signPackage["timestamp"]};
+var nonceStrstr='{$signPackage["nonceStr"]}';
+var signaturestr='{$signPackage["signature"]}';
+</script>
+<script src="{HEJIN_PATH}index/newfxjs.js"></script> 
+{/if}
+
+{if $plugindata['hjbox_wwebqqkf'] && $plugindata['hjbox_wwebkfxs']}
+<a href="http://wpa.qq.com/msgrd?v=3&uin={$plugindata['hjbox_wwebqqkf']}&site=qqmenu=yes" id="CustomerChatFloat" style="position: fixed; right: 0px; top: 150px; z-index: 99999; height: 70px; width: 65px; min-width: 65px; background: url({HEJIN_PATH}boxpic/qqkf/{$plugindata['hjbox_wwebkftb']}.png) 0px 0px  no-repeat; background-size:65px auto"></a>
+<script type="text/javascript">
+ var obj=document.getElementById('CustomerChatFloat');  
+ obj.addEventListener("touchmove", function () { obj.style.left = (event.targetTouches[0].pageX - -document.body.scrollLeft - 30) + "px"; obj.style.top = (event.targetTouches[0].pageY - document.body.scrollTop - 30) + "px";}, false);
+</script>
+{/if}
+
+<script src="{HEJIN_URL}:index&model=buttom"></script>
+
+
+
+</body>
+</html>

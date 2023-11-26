@@ -1,0 +1,27 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+    <tr class="e6_tr_con">
+    	<td nowrap="nowrap">{lang e6_propaganda:type}</td>
+    	<td nowrap="nowrap">{lang e6_propaganda:smoney}</td>
+        <td nowrap="nowrap">{lang e6_propaganda:change}</td>
+	    <td nowrap="nowrap">{lang e6_propaganda:emoney}</td>
+        <td nowrap="nowrap">{lang e6_propaganda:date}</td>
+        <td nowrap="nowrap">IP</td>
+        <td>{lang e6_propaganda:describe}</td>
+    </tr>
+    <!--{loop $log_list $k $v}-->
+	<tr>
+		<td nowrap="nowrap">{$v['type']}</td>
+        <td nowrap="nowrap">{$v['smoney']}</td>
+        <td nowrap="nowrap">{$v['change']}</td>
+        <td nowrap="nowrap">{$v['emoney']}</td>
+		<td nowrap="nowrap">{$v['date']}</td>
+		<td nowrap="nowrap">{$v['ip']}</td>
+		<td>{$v['describe']}</td>
+	</tr>
+    <!--{/loop}-->
+</table>		
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

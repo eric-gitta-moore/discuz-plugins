@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>点歌台 - [qianwei:webname]</title>
+<meta name="Keywords" content="[qianwei:keywords]" />
+<meta name="Description" content="[qianwei:description]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/diange.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:tempurl]js/topcommon.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+[qianwei:head]
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a class="active" href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box bgWrite mt">
+ <div class="diange">
+  <div class="diangeHd clearfix">
+   <h1 class="diangeLogo"><img src="[qianwei:tempurl]css/diange.png">点歌台</h1>
+   <div class="diangeNav">
+    <ul class="step-nav clearfix">
+     <li class="current"><span class="stepnum stepnum01"></span><span class="t-t">选择歌曲</span><span class="arrow"></span></li>
+     <li><span class="stepnum stepnum02"></span><span class="t-t">填写点歌信息</span><span class="arrow"></span></li>
+     <li><span class="stepnum stepnum03"></span><span class="t-t">提交成功</span></li>
+    </ul>
+   </div>
+  </div>
+  <div class="diangeBd step01 clearfix">
+   <div class="search-box clearfix">
+<script type="text/javascript">
+function diange(){
+var k=document.getElementById("wdiange").value;
+if(k==""){asyncbox.tips("请输入歌曲或者用户名称！", "wait", 1000);document.getElementById("wdiange").focus();return false;}else{document.diangeform.submit();}
+}
+</script>
+    <form name="diangeform" method="get" action="[qianwei:path]search.php" target="_blank">
+    <div class="clearfix"> <strong>选择歌曲：</strong>
+     <input type="text" name="key" value="" id="wdiange" class="input-value input search-input">
+     <input type="button" class="search-btn" value="搜索" onclick="javascript:diange();">
+    </div>
+	</form>
+   </div>
+   <div class="diangeL">
+    <div class="insideNav">
+     <div class="diangeTongji">总共有<strong>{qianwei:pagedata}</strong>首歌曲</div>
+     <h2>歌曲点播列表</h2>
+    </div>
+    <div class="mod-box diange-list">
+     <ul>{qianwei:music pagesize=20 classid=auto}
+<li><div class="control clearfix"><a class="diangeView" href="javascript:void(0)" onclick="window.open('[music:link]')">查看</a><a class="diangeDian" href="javascript:void(0)" onclick="window.open('[music:diangelink]')">点这首歌</a></div>[[music:time style=Y-m-d h:f:s]] 来自 <span>[music:singername]</span> 的一首歌曲：<a href="javascript:void(0)" onclick="window.open('[music:link]')"><strong>【[music:name]】</strong></a><p><strong>赠言：</strong>带上深深的祝福，把这首 [music:name] 点播给您的亲朋好友吧！目前这首歌被点播 [music:diangehits] 次</p></li>
+     {/qianwei:music}</ul>
+<div id="mypage"><a href="{qianwei:pagedown}">加载更多&gt;</a></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="footer clearfix">
+  <div class="box">
+    <p><font style="color:000;"><a href="mailto:[qianwei:mail]">本站所有音乐均来自互联网搜集，版权为原作者所有，如有侵犯权益，请联系我们删除！</a></font> -- <a href="http://www.miitbeian.gov.cn/" target="_blank">[qianwei:icp]</a> [qianwei:webstat]<br></p>
+    <p>Copyright &copy; [qianwei:copytime] <a href="http://[qianwei:weburl]" target="_blank">[qianwei:weburl]</a> .All Rights Reserved. <a href="http://[qianwei:httphost][qianwei:path]" target="_blank">[qianwei:webname]</a> 版权所有</p>
+  </div>
+</div>
+</body>
+</html>

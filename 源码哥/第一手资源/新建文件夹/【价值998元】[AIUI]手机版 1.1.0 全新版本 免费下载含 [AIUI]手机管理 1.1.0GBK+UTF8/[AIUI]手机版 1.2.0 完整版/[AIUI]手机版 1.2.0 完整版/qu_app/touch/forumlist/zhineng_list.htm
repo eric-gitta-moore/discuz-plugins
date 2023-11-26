@@ -1,0 +1,21 @@
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $_G['forum_threadlist'] $key $thread}-->
+            	<!--{if $thread['displayorder'] > 0}-->
+                	<!--{eval continue;}-->
+                <!--{/if}-->
+                <!--{if $thread['special'] == 1}-->
+                    	<!--{template ainuozhineng/poll}-->
+                    <!--{elseif $thread['special'] == 2}-->
+                    	<!--{template ainuozhineng/trade}-->
+                    <!--{elseif $thread['special'] == 3}-->
+                    	<!--{template ainuozhineng/reward}-->
+                    <!--{elseif $thread['special'] == 4}-->
+                    	<!--{template ainuozhineng/activity}-->
+                    <!--{elseif $thread['special'] == 5}-->
+                    	<!--{template ainuozhineng/debate}-->
+                    <!--{else}--><!--From www.moq u8 .com -->
+                    	<!--{template ainuozhineng/zhineng}-->
+                    <!--{/if}-->
+				
+			<!--{/loop}-->

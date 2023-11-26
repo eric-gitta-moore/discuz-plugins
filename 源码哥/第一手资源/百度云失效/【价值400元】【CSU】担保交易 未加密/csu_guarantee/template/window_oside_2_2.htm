@@ -1,0 +1,35 @@
+<h3 class="flb" id="fctrl_guarantee_status" style="cursor: move;"> <em id="return_guarantee_status" fwin="guarantee_status">&#x4E2D;&#x4ECB;&#x4EA4;&#x6613; &#x300B; &#x540C;&#x610F;&#x4EA4;&#x6613;</em> 
+  <span><a href="javascript:;" onclick="hideWindow('csu_guarantee_status');" class="flbc" title="&#x5173;&#x95ED;">&#x5173;&#x95ED;</a></span> 
+</h3>
+<div id="main_messaqge" fwin="guarantee_status">
+  <div id="layer_login" fwin="guarantee_status">
+    <div class="postbox" style="border:2px solid orange;padding:10px;">
+      <form method="post" class="s_clear" action="plugin.php?id=csu_guarantee:csu_guarantee">
+        <input type="hidden" name="formhash" value="{FORMHASH}">
+        <input type="hidden" name="gid" value="{$_GET['gid']}">
+        <h1><a href="plugin.php?id=csu_guarantee&item=detail&gid={$_GET['gid']}" target="_blank">[{$order['price']}&#x5143;]&nbsp;&nbsp;[&#x4E70;&#x65B9;:{$buyandsell['buy']['username']}]    [&#x5356;&#x65B9;:{$buyandsell['sell']['username']}]</a></h1>
+         
+        &#x4ED6;&#x9700;&#x8981;&#x4ED8;&#x6B3E;&#x5230; {$var['name']}&#x8D26;&#x6237; &#x4EBA;&#x6C11;&#x5E01;<font size="4" color="red"><b>{$price['amount']}&#x5143;</b></font><br>
+        &#x4EA4;&#x6613;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x60A8;&#x5C06;&#x5F97;&#x5230;&#x4EBA;&#x6C11;&#x5E01;<font size="4" color="blue"><b> {$price['gains']} &#x5143;</b></font><br>
+        <br>
+         
+        <table cellspacing="0" cellpadding="0" class="guaranteetable"><tbody><tr><td colspan="2" class="header">&#x8D26;&#x53F7;&#xFF1A; (<font color="red">&#x63A8;&#x8350;&#x5DE5;&#x884C;&#x7B49;&#x94F6;&#x884C;&#xFF0C;&#x5230;&#x8D26;&#x5FEB;&#x901F;</font>)</td><td colspan="2" class="header">&#x6211;&#x7684;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;</td></tr>
+					  <tr><th>&#x94F6;&#x884C;</th><td><select name="contact[bank_name]">
+								<option value="">&#x9009;&#x62E9;&#x6211;&#x7684;&#x6536;&#x6B3E;&#x94F6;&#x884C;</option>
+{$salemoney}								</select> <font color="red">*</font></td>
+					  		<th>QQ&#x53F7;&#x7801;</th><td><input type="text" name="contact[qq]" class=""> <font color="red">*</font></td>
+					  </tr>
+					<tr><th>&#x8D26;&#x53F7;</th><td><input type="text" name="contact[bank_idnum]" size="30" value=""> <font color="red">*</font></td>
+					  		<th>&#x8054;&#x7CFB;&#x624B;&#x673A;</th><td><input type="text" name="contact[mobile]" > <font color="red">*</font></td>
+					  </tr>
+					  <tr><th>&#x59D3;&#x540D;</th><td><input type="text" name="contact[bank_username]" value=""> <font color="red">*</font></td>
+					  		<th>&nbsp;</th><td>&nbsp;</td>
+					  </tr></tbody></table>        <p class="fsubmit s_clear" style="text-align:center;padding-top:10px;">
+          <button type="submit" class="bottonC" name="agreedeal" value="yes">&#x540C;&#x610F;&#x4EA4;&#x6613;</button>
+          &nbsp;
+          <button type="button" class="bottonDD" onclick="hideWindow('csu_guarantee_status');" value="yes">&#x53D6;&#x6D88;</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

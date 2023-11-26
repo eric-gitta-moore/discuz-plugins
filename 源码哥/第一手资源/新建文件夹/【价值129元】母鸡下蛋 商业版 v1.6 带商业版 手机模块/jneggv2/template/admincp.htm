@@ -1,0 +1,128 @@
+{subtemplate common/header}
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="forum.php">{$_G[setting][navs][2][navname]}</a>
+		<em>&rsaquo;</em><a href="plugin.php?id=jneggv2">{lang jneggv2:MJXD}</a> 
+        <em>&rsaquo;</em>{lang jneggv2:jnegg41}
+	</div>
+</div>
+<a href="plugin.php?id=jneggv2:admincp">{lang jneggv2:jnegg42}</a> | <a href="plugin.php?id=jneggv2:admincp&do=viewlog">{lang jneggv2:jnegg43}</a>
+{if !$_GET['do']}
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td>ID</td>
+    <td>{lang jneggv2:jnegg44} (UID)</td>
+    <td>{lang jneggv2:jnegg8}</td>
+    <td>{lang jneggv2:jnegg2}{lang jneggv2:jnegg45}</td>
+    <td>{lang jneggv2:jnegg21}</td>
+    <td>{lang jneggv2:jnegg46}</td>
+    <td>{lang jneggv2:jnegg47}</td>
+  </tr>
+  <tr>
+  	{loop $userlist $value}
+    <td>$value[id]</td>
+    <td>$value[username] ($value[uid])</td>
+    <td>{if !$value[chicken]}0{else}<a href="javascript:;" onclick="showWindow('checkchic', 'plugin.php?id=jneggv2:admincp&do=checkchic&userid={$value[uid]}')">$value[chicken]</a>{/if}</td>
+    <td>$value[jidan]</td>
+    <td>$value[luck]</td>
+    <td>$value[jointime]</td>
+    <td><a href="plugin.php?id=jneggv2:admincp&do=user&userid={$value[uid]}">{lang jneggv2:jnegg48}</a> | <a href="javascript:;" onclick="showDialog('{lang jneggv2:jnegg49}', 'confirm', '', function(){	showWindow('speedbuild', 'plugin.php?id=jneggv2:admincp&do=deleteuser&formhash=$_G[formhash]&userid=$value[uid]');return false;},1)"><font color="#FF0000">{lang jneggv2:jnegg50}</font></a></td>
+  </tr>
+  {/loop}
+  <tr>
+    <td colspan="7">$multipage</td>
+  </tr>
+</table>
+{/if}
+{if $_GET['do'] == 'user' && $userid > '0'}
+{loop $userinfo $value}
+<form id="user" name="user" method="post" action="plugin.php?id=jneggv2:admincp">
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<input type="hidden" name="editusersubmit" value="yes" />
+<input type="hidden" name="handlekey" value="editmine" />
+<input type="hidden" name="referer" value="{echo dreferer();}" />
+<input type="hidden" name="userid" value="{$value[uid]}" />
+<table width="500" border="1" cellspacing="0" cellpadding="5">
+  <tr><td>UID</td><td>: <a href="home.php?mod=space&uid={$value[uid]}" target="_blank">{$value[username]} ({$value[uid]})</a></td></tr>
+  <tr><td>{lang jneggv2:jnegg8}</td><td>: <a href="javascript:;" onclick="showWindow('checkchic', 'plugin.php?id=jneggv2:admincp&do=checkchic&userid={$value[uid]}')">{$value[chicken]}</a></td></tr>
+  <tr><td>{lang jneggv2:jnegg2}{lang jneggv2:jnegg45}</td><td>: <input name="jidan" type="text" id="jidan" value="{$value[jidan]}" /></td></tr>
+  <tr><td>{lang jneggv2:jnegg21}</td><td>: <input name="luck" type="text" id="luck" value="{$value[luck]}" /></td></tr>
+  <tr><td>{lang jneggv2:jnegg46}</td><td>: {$value[jointime]}</td></tr>
+  <tr><td>&nbsp;</td><td>: <button type="submit" name="updateadmincp" value="true" class="pn pnc" id="updateadmincp"><strong>{lang jneggv2:jnegg32}</strong></button></td></tr>
+</table>
+{/loop}
+</form>
+{/if}
+{if $_GET['do'] == 'viewlog'}
+<br/>
+<form id="user" name="user" method="post" action="plugin.php?id=jneggv2:admincp">
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<input type="hidden" name="deletebigsubmit" value="yes" />
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr><td><font color="#FF0000">{lang jneggv2:jnegg51} <br/>{lang jneggv2:jnegg50}<input name="time" type="text" id="time" value="30" size="10" maxlength="4" /> 
+  {lang jneggv2:jnegg52}</font><button type="submit" name="updateadmincp" value="true" class="pn pnc" id="updateadmincp"><strong>{lang jneggv2:jnegg32}</strong></button></td></tr></table>
+  </form><br/>
+  <form id="suser" name="suser" method="post" action="plugin.php?id=jneggv2:admincp">
+  <input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="searchuserlog1submit" value="yes" />
+  <table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr><td><font color="#FF0000">{lang jneggv2:jnegg61} <input name="userid" type="text" id="userid" value="0" size="10" maxlength="4" /><button type="submit" name="suser" value="true" class="pn pnc" id="suser"><strong>{lang jneggv2:jnegg32}</strong></button></td></tr></table>
+  </form><br/>
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td>ID</td>
+    <td>{lang jneggv2:jnegg44} (UID)</td>
+    <td>{lang jneggv2:jnegg47}</td>
+    <td>{lang jneggv2:jnegg53}</td>
+    <td>{lang jneggv2:jnegg47}</td>
+  </tr>
+  <tr>
+  	{loop $Loginfo $value}
+    <td>$value[id]</td>
+    <td><a href="plugin.php?id=jneggv2:admincp&do=searchuserlog&userid=$value[uid]">$value[username] ($value[uid])</a></td>
+    <td>$value[desc]</td>
+    <td>$value[timestamp]</td>
+    <td><a href="javascript:;" onclick="showDialog('{lang jneggv2:jnegg54}', 'confirm', '', function(){	showWindow('speedbuild', 'plugin.php?id=jneggv2:admincp&do=deletelog&formhash=$_G[formhash]&logid=$value[id]');return false;},1)"><font color="#FF0000">{lang jneggv2:jnegg50}</font></a></td>
+  </tr>
+  {/loop}
+  <tr>
+    <td colspan="5">$multipage</td>
+  </tr>
+</table>
+{/if}
+{if $_GET['do'] == 'searchuserlog'}
+<br/>
+<form id="user" name="user" method="post" action="plugin.php?id=jneggv2:admincp">
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<input type="hidden" name="deletebigsubmit" value="yes" />
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr><td><font color="#FF0000">{lang jneggv2:jnegg51} <br/>{lang jneggv2:jnegg50}<input name="time" type="text" id="time" value="30" size="10" maxlength="4" /> 
+  {lang jneggv2:jnegg52}</font><button type="submit" name="updateadmincp" value="true" class="pn pnc" id="updateadmincp"><strong>{lang jneggv2:jnegg32}</strong></button></td></tr></table>
+  </form><br/>
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td colspan="5"><a href="javascript:;" onclick="showDialog('{lang jneggv2:jnegg62}', 'confirm', '', function(){	showWindow('speedbuild', 'plugin.php?id=jneggv2:admincp&do=deleteuserlog&formhash=$_G[formhash]&userid=$userid');return false;},1)"><font color="#FF0000">{lang jneggv2:jnegg63} (<font color="#0000FF">{$username}</font>) {lang jneggv2:jnegg64})</font></a></td>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>{lang jneggv2:jnegg44} (UID)</td>
+    <td>{lang jneggv2:jnegg47}</td>
+    <td>{lang jneggv2:jnegg53}</td>
+    <td>{lang jneggv2:jnegg47}</td>
+  </tr>
+  <tr>
+  	{loop $userlog $value}
+    <td>$value[id]</td>
+    <td>$value[username] ($value[uid])</td>
+    <td>$value[desc]</td>
+    <td>$value[timestamp]</td>
+    <td><a href="javascript:;" onclick="showDialog('{lang jneggv2:jnegg54}', 'confirm', '', function(){	showWindow('speedbuild', 'plugin.php?id=jneggv2:admincp&do=deletelog&formhash=$_G[formhash]&logid=$value[id]');return false;},1)"><font color="#FF0000">{lang jneggv2:jnegg50}</font></a></td>
+  </tr>
+  {/loop}
+  <tr>
+    <td colspan="5">$multipage</td>
+  </tr>
+</table>
+{/if}
+{subtemplate common/footer}
+

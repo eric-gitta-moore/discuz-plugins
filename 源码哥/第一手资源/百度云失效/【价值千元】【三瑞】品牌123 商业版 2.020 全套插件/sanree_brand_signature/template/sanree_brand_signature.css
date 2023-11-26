@@ -1,0 +1,180 @@
+.sanree_brand_signature{
+	margin:10px auto;
+	clear:both;
+}
+.sanree_brand_signature .hd{
+	height:23px;
+	background:url('images/hd.jpg');
+	background-repeat:no-repeat;
+	padding-top:3px;
+}
+.sanree_brand_signature .hd a{
+	float:right;
+	display:block;
+	height:19px;
+	width:61px;
+	background:url('images/qmgl.jpg');
+	background-repeat:no-repeat;	
+}
+.sanree_brand_signature .hd a:hover {
+	display:block;
+	height:19px;
+	width:61px;
+	background:url('images/qmgl2.jpg');
+	background-repeat:no-repeat;	
+}
+
+.sanree_brand_signature .bd{
+	border:1px solid #DADADA;
+	clear:both;
+	overflow:hidden;
+}
+.sanree_brand_signature .bd .signaturebody{
+	border-top:1px solid #FFFFFF;
+	height:170px;
+	background-color:#F0F0F0;	
+	overflow:hidden;
+}
+.sanree_brand_signature .bd .signaturebody .logoshow{
+	float:left;
+	width:218px;
+	height:167px;
+	background:url('images/logoshow.jpg');
+	background-repeat:no-repeat;
+}
+
+.sanree_brand_signature .bd .signaturebody .logoshow .brandlogo{
+	padding-left:18px;
+	padding-top:15px;
+	position:relative;
+}
+.sanree_brand_signature .bd .signaturebody .logoshow .brandlogo img{
+	width:180px;
+	height:135px;
+}
+.sanree_brand_signature .bd .signaturebody .logoshow .brandlogo .tuijian{
+	position:absolute;
+	top:5px;
+	left:6px;
+	z-index:20px;
+	width:66px;
+	height:68px;
+    background:url("images/tuijian.png") !important;
+    *background:url("images/tuijian.png") !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand_signature/template/images/tuijian.png",sizingMethod="scale");
+}
+
+.sanree_brand_signature .bd .signaturebody .viewbar{
+	float:right;
+	width:188px;
+	height:167px;	
+	background:url('images/viewbar.jpg');
+	background-repeat:no-repeat;
+	color:#FFFFFF;
+}
+.sanree_brand_signature .bd .signaturebody .viewbar .copyright{
+	text-align:right;
+	margin-right:10px;
+	padding-top:3px;
+}
+.sanree_brand_signature .bd .signaturebody .viewbar .copyright a{
+	color:#FFFFFF;
+}
+.sanree_brand_signature .bd .signaturebody .viewbar .viewbtn{
+	padding-top:87px;
+}
+.sanree_brand_signature .bd .signaturebody .viewbar .viewbtn a{
+	display:block;
+	width:177px;
+	height:45px;	
+	background:url('images/viewbtn1.jpg');
+	background-repeat:no-repeat;	
+}
+.sanree_brand_signature .bd .signaturebody .viewbar .viewbtn a:hover {
+	display:block;
+	width:177px;
+	height:45px;	
+	background:url('images/viewbtn2.jpg');
+	background-repeat:no-repeat;	
+}
+.sanree_brand_signature .bd .brandinfo{
+	float:left;
+	height:153px;
+	padding-top:14px;
+	overflow:hidden;
+	width:46%;
+}
+.sanree_brand_signature .bd .brandinfo h2{
+	font-size:16px;
+	font-weight:bold;
+	color:#343434;
+	margin:0;
+}
+.sanree_brand_signature .bd .brandinfo h2 a{
+	font-size:16px;
+	font-weight:bold;
+	color:#343434;
+}
+.sanree_brand_signature .bd .brandinfo .nline{
+	padding-top:23px;
+}
+.sanree_brand_signature .bd .brandinfo .nline .catename{
+	float:left;
+	width:48%;
+	height:20px;
+	overflow:hidden;
+	color:#333333;
+}
+.sanree_brand_signature .bd .brandinfo .nline .catename a{
+	color:#2B65B7;
+}
+.sanree_brand_signature .bd .brandinfo .mline .brandqq{
+	float:left;
+	height:30px;
+	display:inline;
+	line-height:30px;
+}
+.sanree_brand_signature .bd .brandinfo .mline .brandqq img{
+	position:relative;
+	top:4px;
+
+}
+.sanree_brand_signature .bd .brandinfo .mline{
+	clear:both;
+	height:30px;
+	overflow:hidden;
+}
+.sanree_brand_signature .bd .brandinfo .mline .brandgroup{
+	float:left;
+	width:49%;
+	height:20px;
+	overflow:hidden;
+	padding-top:6px;
+}
+.sanree_brand_signature .bd .brandinfo .mline .brandgroup img{
+	position:relative;
+	top:2px;
+}
+
+.sanree_brand_signature .bd .brandinfo .nline .discount{
+	color:#333333;
+}
+.sanree_brand_signature .bd .brandinfo .nline .discount span{
+	color:#FF5800;
+}
+
+.sanree_brand_signature .bd .brandinfo .telline{
+	clear:both;
+	color:#FF5800;
+	font-size:22px;
+	font-weight:bold;
+	padding-left:35px;
+	background:url('images/tel.jpg');
+	background-repeat:no-repeat;
+	height:35px;
+	margin-top:10px;
+
+}
+.sanree_brand_signature .bd .brandinfo .telline a{
+	color:#FF5800;
+}

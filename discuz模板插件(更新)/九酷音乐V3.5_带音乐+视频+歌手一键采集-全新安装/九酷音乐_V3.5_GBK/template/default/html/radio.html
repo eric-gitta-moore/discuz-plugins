@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>电台 - [qianwei:webname]</title>
+<meta name="Keywords" content="[qianwei:keywords]" />
+<meta name="Description" content="[qianwei:description]" />
+<link href="[qianwei:tempurl]radio/css/fm.css" rel="stylesheet" type="text/css" />
+<script src="[qianwei:tempurl]radio/js/jquery.js" type="text/javascript"></script>
+<script src="[qianwei:tempurl]radio/js/geci.js" type="text/javascript"></script>
+<script src="[qianwei:tempurl]radio/js/fm.js" type="text/javascript"></script>
+<script src="[qianwei:tempurl]radio/js/jquery.jplayer.min.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script src="[qianwei:tempurl]radio/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+<script type="text/javascript">DD_belatedPNG.fix('#albumPic,.jp-mute,.jp-unmute,.downMusic,#backFm-img,.jp-play,.jp-pause,.jp-love,.jp-unlove,.jp-next,.jp-next,.jp-loveed');</script>
+<![endif]-->
+</head>
+<body>
+<div class="radio">
+<div id="radiobg"><img id="radiobgImg" src="[qianwei:tempurl]radio/css/skinA06.jpg" /></div>
+<div id="headerbg"></div>
+<div id="footerbg"></div>
+<div id="footertext">Copyright &copy; [qianwei:copytime] <a href="http://[qianwei:httphost][qianwei:path]" target="_blank">[qianwei:webname]</a> <a href="http://[qianwei:weburl]" target="_blank">[qianwei:weburl]</a></div>
+<div id="wrap">
+<div id="header">
+<div class="logoWrap"><a class="logo" href="[qianwei:mod]radio"></a></div>
+<div class="toptext"><img src="[qianwei:tempurl]radio/css/channel-current.gif"><span>当前电台频道:</span><span id="channel_name">[qianwei:fmname]</span></div>
+<div class="topnav"> <a class="tool tool_channel" id="tool_channel" href="javascript:void(0)">更换频道<b></b></a> <a class="tool tool_skin" id="tool_skin" href="javascript:void(0)">更换皮肤<b></b></a> </div>
+<div class="topnavbg1"></div>
+<div class="topnavbg2"></div>
+</div>
+<div id="fmDivWrap">
+<div id="fmPlayer">
+<div id="PlayStateTxt" style="display:none;"></div>
+<center>
+<div id="player" style="width:100%;height:400px;"></div>
+<script type="text/javascript" src="[qianwei:userpath]static/swf/v.js"></script>
+<script type="text/javascript">
+var cmpo;
+function cmp_loaded(key) {
+	cmpo = CMP.get("cmp");
+	if (cmpo) {
+		document.title = cmpo.config("name");
+		cmpo.addEventListener("model_load", "cmp_model_load");
+	}
+}
+function cmp_model_load(data) {
+	document.title = cmpo.item("label");
+}
+var flashvars = {
+	api : "cmp_loaded",
+	lists : "[qianwei:musicid]"
+};
+var htm = CMP.create("cmp", "100%", "100%", "[qianwei:userpath]static/swf/v.swf?php=fm", flashvars, {wmode:"transparent"});
+document.getElementById("player").innerHTML = htm;
+</script>
+</center>
+</div>
+</div>
+<div id="channelDiv">
+<div id="channellist" class="clearfix">
+{qianwei:class sort=turn order=asc}<div class="channel-cate"><ul class="channel-cate-list"><li class="channel-btn radio[class:id]"><div class="channel-btn-bg"></div><div class="channel-btn-inner"><div class="channel-btn-icon"></div><a href="javascript:void(0);" onclick="window.location.href='[class:fmlink]';">[class:name]</a></div></li></ul></div>{/qianwei:class}
+<style type="text/css">
+.radio[qianwei:fmid] .channel-btn-inner a{color:#FFF}
+.radio[qianwei:fmid] .channel-btn-icon{background:transparent url([qianwei:tempurl]radio/css/channel-current.gif) no-repeat center center;}
+.radio[qianwei:fmid] .channel-btn-bg{opacity:0.65;filter:alpha(opacity=65);}
+</style>
+</div>
+</div>
+<div id="skinDiv">
+<ul class="skinList">
+<li id="skin_0"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA01.jpg"><img src="[qianwei:tempurl]radio/css/skinB01.jpg" /></a></li>   
+<li id="skin_1"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA02.jpg"><img src="[qianwei:tempurl]radio/css/skinB02.jpg" /></a></li>
+<li id="skin_2"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA03.jpg"><img src="[qianwei:tempurl]radio/css/skinB03.jpg" /></a></li>
+<li id="skin_3"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA04.jpg"><img src="[qianwei:tempurl]radio/css/skinB04.jpg" /></a></li>
+<li id="skin_4"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA05.jpg"><img src="[qianwei:tempurl]radio/css/skinB05.jpg" /></a></li>
+<li id="skin_5" class="skinSelect"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA06.jpg"><img src="[qianwei:tempurl]radio/css/skinB06.jpg" /></a><span id="bgSelectFlag"></span></li>
+<li id="skin_6"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA07.jpg"><img src="[qianwei:tempurl]radio/css/skinB07.jpg" /></a></li>
+<li id="skin_7"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA08.jpg"><img src="[qianwei:tempurl]radio/css/skinB08.jpg" /></a></li>
+<li id="skin_8"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA09.jpg"><img src="[qianwei:tempurl]radio/css/skinB09.jpg" /></a></li>
+<li id="skin_9"><a href="javascript:void(0);" onclick="return false;" dataimg="[qianwei:tempurl]radio/css/skinA10.jpg"><img src="[qianwei:tempurl]radio/css/skinB10.jpg" /></a></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

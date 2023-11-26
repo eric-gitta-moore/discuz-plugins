@@ -1,0 +1,11 @@
+<!--{block return}-->
+<!--{if $this->check&&!empty($this->xianshi)}-->
+<a  href="plugin.php?id=ljdaka:ranklist"  style="cursor:pointer"><font color="red">{lang ljdaka:daka11}</font></a>
+<!--{else}-->
+<script type="text/javascript" src="source/plugin/ljdaka/js/jquery.js" reload="1"></script>
+<script type="text/javascript" reload="1">
+var jq=jQuery.noConflict();
+</script>
+<a  href="http://www.moqu8.com" onclick='showWindow("ljdaka","{if $this->check}plugin.php?id=ljdaka:daka&action=tips&formhash={FORMHASH}{else}plugin.php?id=ljdaka:daka&action=showWindow&formhash={FORMHASH}{/if}");' style="cursor:pointer"><font color="red">{lang ljdaka:daka1}</font></a>
+<!--{/if}-->
+<!--{/block}-->

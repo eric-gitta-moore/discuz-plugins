@@ -1,0 +1,114 @@
+.albumlist .albumleft .newsshow .ahd {
+	height:48px;
+	border-bottom:1px dashed #CDCDCD;
+	line-height:54px;
+	background-color:#F6F6F6;
+	text-align:right;
+	padding-right:40px;
+	font-size:26px;
+	font-weight:bold;
+	color:#FF3C00;
+}
+.albumlist .albumleft .newsshow .ahd a{
+	background:url('images/views.jpg');
+	background-repeat:no-repeat;
+	display:block;
+	height:48px;
+	float:right;
+	padding-left:28px;
+	color:#FF3C00;
+	text-decoration:none;
+	text-indent:25px;
+}
+.albumlist .albumleft .newsshow .abd h1 {
+	color:#333333;
+	font-size:20px;
+	text-align:center;
+	margin-bottom:20px;
+}
+ 
+.albumlist .albumleft .newsshow .abd {
+	padding:25px;
+}
+.albumlist .albumleft .newsshow .abd .ginfo {
+	overflow:hidden;
+}
+.albumlist .albumleft .newsshow .abd .ginfo .gcatename {
+	float:left;
+	width:180px;
+	overflow:hidden;
+	line-height:25px;
+	height:25px;
+	color:#AAAAAA;
+	margin-top:2px;
+}
+.albumlist .albumleft .newsshow .abd .ginfo .gcatename span {
+	color:#BE7F01
+}
+.albumlist .albumleft .newsshow .abd .ginfo .gdateline {
+	float:left;
+	width:300px;
+	line-height:25px;
+	height:25px;
+	color:#AAAAAA;
+	margin-top:2px;
+}
+.albumlist .albumleft .newsshow .abd .ginfo .gdateline  span {
+	color:#BE7F01;
+}
+.albumlist .albumleft .newsshow .abd .ty {
+	background:url('images/ty.jpg');
+	background-repeat:no-repeat;
+	height:28px;
+}
+.albumlist .albumleft .newsshow .gcontenttxt {
+	clear:both;
+	padding:10px 10px 10px 13px;
+	line-height:20px;
+	white-space:pre-wrap;
+	*white-space:pre;
+	*word-wrap:break-word;
+	color:#444444;
+	font-size:14px;
+}
+.albumlist .albumleft .newsshow .gpiclist {
+	clear:both;
+	background:url('images/g02.jpg');
+	background-repeat:no-repeat;
+	height:38px;
+	width:700px;
+	margin:10px auto;
+}
+.albumlist .albumleft .newsshow .gpiclisttxt {
+	padding:10px;
+	line-height:20px;
+	text-align:center;
+}
+.albumlist .albumleft .newsshow .gpiclisttxt img {
+	margin:10px;
+	cursor:pointer;
+}
+.albumlist .albumleft .newsshow .abd .ginfo .satisfaction {
+	float:right;
+	line-height:25px;
+	height:25px;
+	color:#AAAAAA;
+}
+.albumlist .albumleft .newsshow .abd .ginfo .satisfactiona {
+	width:91px;
+	background:url(images/staroff.gif) no-repeat 0px 3px;
+	float:left;
+	height:19px
+}
+.albumlist .albumleft .newsshow .abd .ginfo .satisfactionb {
+	background:url(images/staron.gif) no-repeat 0px 3px;
+	height:19px
+}
+.albumlist .albumleft .newsshow .abd .ginfo .satisfactionc {
+	float:left;
+	margin-top:3px;
+}
+.albumlist .albumleft .newsshow .tshare {
+	padding-left:25px;
+	padding-top:25px;
+}

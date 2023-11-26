@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[video:name] - [video:classname] - [qianwei:webname]</title>
+<meta name="Keywords" content="[video:name]" />
+<meta name="Description" content="[video:name],[qianwei:webname]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/mvnew.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:tempurl]js/topcommon.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+[qianwei:head]
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box musicBus mt bgWrite">
+   <ul class="clearfix directNew">
+   {qianwei:class sort=turn order=asc}<li><a class="directName" target="_blank" href="[class:link]">[class:name]</a><a class="directPlay" target="_blank" href="[class:link]"></a></li>{/qianwei:class}
+  </ul>
+</div>
+<div class="box">
+ <h2 class="crumb">当前位置 &gt; [video:classname] &gt; [video:name]</h2>
+</div>
+<div class="playBg">
+<div class="box mvPlay mb10">
+<div class="playWrap">
+<div class="playBox">
+<embed src="[video:play]" width="100%" height="600" align="middle" wmode="transparent" type="application/x-shockwave-flash" allowscriptaccess="always" quality="high" allowfullscreen="true"></embed>
+</div>
+</div>
+</div>
+</div>
+<div class="box mb10">
+<div class="mvShare">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount"></a>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=58999"></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</script>
+</div>
+</div>
+<div class="box  mb10 clearfix">
+ <div class="mdBox bgWrite">
+  <div class="mdBoxHd">
+   <h2 class="mdBoxHdTit">相关MV推荐</h2>
+  </div>
+  <div class="mdBoxBd">
+   <div class="mvList">
+    <ul class="mvListUl clearfix">
+{qianwei:video loop=7 sort=stars classid=auto}
+     <li><a class="t-i" href="[video:link]"><img src="[video:pic]" title="[video:name]"></a><a class="t-t" href="[video:link]">[video:name]</a><div class="i-t"><p class="mvSinger"><a href="[video:singerlink]" target="_blank">[video:singername]</a></p><p>{if:'[video:isbest]'=='1'}<a class="videoMv"></a>{else}{end if}播放：[video:hits]</p><p>更新时间：[video:time style=y-m-d]</p></div></li>
+{/qianwei:video}
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="footer clearfix">
+  <div class="box">
+    <p><font style="color:000;"><a href="mailto:[qianwei:mail]">本站所有音乐均来自互联网搜集，版权为原作者所有，如有侵犯权益，请联系我们删除！</a></font> -- <a href="http://www.miitbeian.gov.cn/" target="_blank">[qianwei:icp]</a> [qianwei:webstat]<br></p>
+    <p>Copyright &copy; [qianwei:copytime] <a href="http://[qianwei:weburl]" target="_blank">[qianwei:weburl]</a> .All Rights Reserved. <a href="http://[qianwei:httphost][qianwei:path]" target="_blank">[qianwei:webname]</a> 版权所有</p>
+  </div>
+</div>
+</body>
+</html>

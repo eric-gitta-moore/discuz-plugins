@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[music:name] - [music:classname] - [qianwei:webname]</title>
+<meta name="Keywords" content="[music:name]" />
+<meta name="Description" content="[music:name],[qianwei:webname]" />
+<link href="[qianwei:tempurl]css/player.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+<script type="text/javascript" src="[qianwei:tempurl]js/func.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+<script type="text/javascript">
+var userAgent = navigator.userAgent.toLowerCase();
+var is_opera = userAgent.indexOf('opera') != -1 && opera.version();
+var is_moz = (navigator.product == 'Gecko') && userAgent.substr(userAgent.indexOf('firefox') + 8, 3);
+var is_ie = (userAgent.indexOf('msie') != -1 && !is_opera) && userAgent.substr(userAgent.indexOf('msie') + 5, 3);
+function setcopy(text, alertmsg){
+	if(is_ie) {
+		clipboardData.setData('Text', text);
+		asyncbox.tips(alertmsg, "success", 1000);
+	} else if(prompt('Press Ctrl+C Copy to Clipboard', text)) {
+		asyncbox.tips(alertmsg, "success", 1000);
+	}
+}
+function copyflash(){
+	setcopy('http://[qianwei:httphost][qianwei:userpath]static/swf/v.swf?php=share&lists={share}[music:id]&.swf', 'FlaSH代码复制成功！');
+}
+function copyhtml(){
+	setcopy('<embed src=\"http://[qianwei:httphost][qianwei:userpath]static/swf/v.swf?php=share&lists={share}[music:id]&.swf\" width=\"510\" height=\"245\" wmode=\"transparent\" type=\"application/x-shockwave-flash\"></embed>', 'HTML代码复制成功！');
+}
+function shareText(){
+		asyncbox.open({
+		id:"popShareText",
+		modal:true,
+		drag:true,
+		width:580,
+		height:440,
+		title:"播放器代码",
+		html:"<div style='padding:20px 0 20px 0; text-align:center;'><embed src='[qianwei:userpath]static/swf/v.swf?php=share&lists={share}[music:id]&.swf' width='510' height='245' wmode='transparent' type='application/x-shockwave-flash'></embed><br><br><p><strong>FlaSH代码：</strong><input type='text' value='http://[qianwei:httphost][qianwei:userpath]static/swf/v.swf?php=share&lists={share}[music:id]&.swf' onclick='copyflash()' style='width:350px'></p><br><br><p><strong>HTML代码：</strong><input type='text' value='<embed src=\"http://[qianwei:httphost][qianwei:userpath]static/swf/v.swf?php=share&lists={share}[music:id]&.swf\" width=\"510\" height=\"245\" wmode=\"transparent\" type=\"application/x-shockwave-flash\"></embed>' onclick='copyhtml()' style='width:350px'></p></div>"
+		})
+}
+</script>
+</head>
+<body>
+<div class="page">
+ <div class="header mb10">
+  <div class="box clearfix">
+   <div class="logo"><a href="[qianwei:path]"><img src="[qianwei:tempurl]css/newlogo.png" />[qianwei:webname]</a></div>
+	<div class="fr" id="userinfo"><script type="text/javascript">getlogin();</script></div>
+  </div>
+   <div class="navWrap">
+   <div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+  </div>
+ </div>
+  <div class="box clearfix mb10">
+  <div class="pFl clearfix">
+  <div class="ppL">
+   <div class="listWrap">
+   <div class="listTit">
+   <div class="search-bar" style="position:relative;">
+<script type="text/javascript">
+function play(){
+var k=document.getElementById("splay").value;
+if(k==""){asyncbox.tips("请输入歌曲或者用户名称！", "error", 1000);document.getElementById("splay").focus();return false;}else{document.playform.submit();}
+}
+</script>
+          <form name="playform" action="[qianwei:path]search.php" method="get" target="_blank">
+           <input name="key" id="splay" class="search-txt input-value" x-webkit-speech type="text" value="" />
+           <button class="search-btn" type="button" onclick="javascript:play();">搜索</button>
+          </form>
+   </div>
+   </div>
+   <div class="listBody clearfix">
+   <div class="playerBody clearfix">
+     <div class="playerBodyL">
+      <div class="playerNav">
+       <div class="playerNavBody">
+        <ul class="playerNavList">
+        <li class="current"><a>类似推荐</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="playerBodyR">
+      <div class="playerTab">
+       <div class="playerTabBd">
+        <div class="playerTabBd-box playerTabBd-box01">
+         <ul class="playList clearfix" id="list_val">{qianwei:music loop=15 sort=stars classid=auto}<li><input class="check" type="checkbox" value="{song}[music:id]"><span class="num">[music:i]</span><a href="[music:link]" style="cursor:pointer;" class="playList-songName">[music:name]</a><a href="[music:singerlink]" target="_blank" style="cursor:pointer;" class="playList-singerName">[music:singername]</a></li>{/qianwei:music}</ul>
+         <div class="ctrBtn clearfix"><label class="allXuan" id="selectall" style="cursor:pointer;"><input name="selectall" onclick="qianwei.quanxuan('list_val')" class="check" type="checkbox"> 全选/反选</label><a onclick="qianwei.player('list_val')" class="allAdd" style="cursor:pointer;">加入列表</a><a onclick="qianwei.musicPlayer('{qianwei:music loop=15 sort=stars classid=auto}{song}[music:id],{/qianwei:music}')" class="allPlay" style="cursor:pointer;">全部播放</a></div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   </div>
+   </div>
+   <div class="ppR">
+   <div class="ppBox mb10"><embed src="[qianwei:userpath]static/swf/v.swf?php=v&lists={v}[music:id]&.swf" width="298" height="248" wmode="transparent" type="application/x-shockwave-flash"></embed></div>
+	<div class="dongBox mb10">
+	<div class="dong01 clearfix">
+	<p class="dong01-l"><a href="[music:favlink]" target="_blank" class="dongLove">收藏</a><a class="dongDown" href="[music:downlink]" target="_blank">下载</a><a class="dongLian" href="javascript:void(0)" onclick="shareText();">外链</a><a class="dongDian" href="[music:diangelink]" target="_blank">点歌</a></p>{qianwei:videoclass loop=1 sort=turn order=asc}<a title="观看高清MV" class="dong01-r" href="[videoclass:link]" target="_blank"></a>{/qianwei:videoclass}
+	</div>
+	<div class="dong02 clearfix">
+	<div class="dong02-l" id="like"><script type="text/javascript">getdohits([music:id]);</script></div>
+	<div class="dong02-r">
+	<div id="bdshare" class="bdshare_b" style="line-height:12px; padding-bottom:0;">
+	<img src="[qianwei:tempurl]css/share.png" />
+	</div>
+	<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=58999"></script>
+	<script type="text/javascript" id="bdshell_js"></script>
+	<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+	</script>
+	</div>
+	</div>
+	</div>
+	<div class="dong03">
+		<div class="dingCai clearfix"><a title="顶一下" href="javascript:void(0)" onfocus="this.blur();" onclick="up_down([music:id], 'good')" class="ding">顶</a>  <a title="踩一下" href="javascript:void(0)" onfocus="this.blur();" onclick="up_down([music:id], 'bad')" class="cai">踩</a></div>
+	</div>
+   <div style="border:1px solid #B3D591; width:298px; height:248px; line-height:20px; background:#ffffff;">
+   <center><table>
+   <tr><td><font color="#93C366"><b>歌曲名称：</b></font>[music:name len=10]</td></tr>
+   <tr><td><font color="#93C366"><b>所属歌手：</b></font><a href="[music:singerlink]" target="_blank"><font color="#FF6969">[music:singername]</font></a></td></tr>
+   <tr><td><font color="#93C366"><b>所属栏目：</b></font><a href="[music:classlink]" target="_blank"><font color="#0C87CD">[music:classname]</font></a></td></tr>
+   <tr><td><font color="#93C366"><b>推荐指数：</b></font><font color="#FF6969">[music:bestnul]</font></td></tr>
+   <tr><td><font color="#93C366"><b>下载扣点：</b></font>[music:points] 金币</td></tr>
+   <tr><td><font color="#93C366"><b>上传会员：</b></font><a href="[music:userlink]" target="_blank"><font color="#0C87CD">[music:user]</font></a></td></tr>
+   <tr><td><font color="#93C366"><b>更新时间：</b></font>[music:time style=Y-m-d h:f:s]</td></tr>
+   <tr><td><font color="#93C366"><b>所属专辑：</b></font><a href="[music:speciallink]" target="_blank"><font color="#FF6969">[music:specialname]</font></a></td></tr>
+   <tr><td><font color="#93C366"><b>试听人气：</b></font>[music:hits]</td></tr>
+   <tr><td><font color="#93C366"><b>收藏人数：</b></font>[music:favhits]</td></tr>
+   <tr><td><font color="#93C366"><b>下载次数：</b></font>[music:downhits]</td></tr>
+   <tr><td><font color="#93C366"><b>点播次数：</b></font>[music:diangehits]</td></tr>
+   </table></center>
+   </div>
+   </div>
+  </div>
+  <div class="pFr">
+   <div class="mb10" style="border:1px solid #B3D591; width:300px; height:585px; background:#ffffff;">
+   <iframe border="0" vspace="0" hspace="0" marginwidth="0" marginheight="0" framespacing="0" frameborder="0" scrolling="no" width="300" height="585" src="[qianwei:tempurl]comment.php?id=[music:id]"></iframe>
+   </div>
+  </div>
+ </div>
+ <div class="box bgWrite mb10">
+ <div class="botTxt">[music:singername]歌曲《[music:name len=10]》在线试听，如果您喜欢，请将[qianwei:webname]（[qianwei:weburl]）告诉您身边的亲朋好友！[qianwei:webname]感谢您的支持。</div>
+ </div>
+ <div class="fotter">
+  <p><font style="color:000;"><a href="mailto:[qianwei:mail]">本站所有音乐均来自互联网搜集，版权为原作者所有，如有侵犯权益，请联系我们删除！</a></font> -- <a href="http://www.miitbeian.gov.cn/" target="_blank">[qianwei:icp]</a> [qianwei:webstat]<br></p>
+    <p>Copyright &copy; [qianwei:copytime] <a href="http://[qianwei:weburl]" target="_blank">[qianwei:weburl]</a> .All Rights Reserved. <a href="http://[qianwei:httphost][qianwei:path]" target="_blank">[qianwei:webname]</a> 版权所有</p>
+ </div>
+</div>
+</body>
+</html>

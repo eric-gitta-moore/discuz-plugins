@@ -1,0 +1,27 @@
+<!--{template milu_pick:pick_header}-->
+<form action="?{PICK_GO}picker_manage&cid={$cid}&myaction=pick_del_category" method="post" enctype="multipart/form-data" name="cpform" id="cpform" autocomplete="off">
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+
+<table class="tb tb2 ">
+	<tbody>
+		<tr>
+			<td class="td27" colspan="2">{lang milu_pick:picker_class}:</td>
+		</tr>
+		<tr class="noborder">
+			<td class="vtop rowform">
+				<ul onmouseover="altStyle(this);" class="nofloat">
+					<li class="checked"><input type="radio" checked="" value="move" name="category_op" class="radio">
+					&nbsp;{lang milu_pick:move_picker_}&nbsp;&nbsp;&nbsp;
+					{eval echo select_output(pick_category_list(TRUE), '', 'to_cid', '', 1);}</li>
+					<li><input type="radio" value="delete" name="category_op" class="radio">&nbsp;{lang milu_pick:so_del}</li>
+				</ul>
+			</td>
+			<td class="vtop tips2"></td>
+		</tr>
+		<tr>
+			<td colspan="15"><div class="fixsel"><input type="submit" value="{lang milu_pick:submit}" title="{lang milu_pick:save_notice}" name="deletesubmit" id="submit_deletesubmit" class="btn"></div>
+			</td>
+		</tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'deletesubmit'); });</script>
+	</tbody>
+</table>
+</form>

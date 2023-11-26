@@ -1,0 +1,91 @@
+<!--{template e6_propaganda:header}-->
+<script>
+e6(function(){
+	e6('#more').on("click",function(event){
+		var page = e6(this).attr("page");
+		page = parseInt(page) + 1;
+		e6.post('plugin.php?id=e6_propaganda&nav=withdraw', {page:page}, function(data) {
+			data = data.replace(/(^\s+)|(\s+$)/g,"");
+			if (data) {
+				e6("#withdraw_list").append(data).listview('refresh');
+				e6("#more").attr("page", page);
+			} else {
+				e6("#footer").hide();
+			}
+		});
+	});
+});
+function e6_submit() {
+	$("#e6_withdraw").submit();
+}
+</script>
+<div data-role="page" id="pageone">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{$e6_nav_name}</h1>
+	</div>
+	<div data-role="content">
+		<form action="plugin.php?id=e6_propaganda&nav=withdraw" name="form" method="post" data-ajax="false" id="e6_withdraw">
+		<input type="hidden" value="{FORMHASH}" name="formhash">
+		<input type="hidden" name="mobile" value="1">
+		<div class="withdraw_money">
+			<div class="b_b">{lang e6_propaganda:over}: {$e6_user['extcredits'.$e6_propaganda['withdraw_type']]} {$money_list[$e6_propaganda['withdraw_type']]}</div>
+			<!--{if is_array($e6_propaganda['withdraw_profile'])}-->
+				<!--{loop $e6_propaganda['withdraw_profile'] $v}-->
+					<div class="b_b">
+					<!--{if $user_profile[$v]}-->
+						<span class="e6_yellow">{$profile_title[$v]['title']}: </span> {$user_profile[$v]}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<!--{else}-->
+						<span class="e6_yellow">{$profile_title[$v]['title']}: </span> <a data-ajax="false" href="home.php?mod=spacecp" class="e6_blue">{lang e6_propaganda:profile_site}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<!--{/if}-->
+					</div>
+				<!--{/loop}-->
+			<!--{/if}-->
+		</div>
+		<div class="withdraw_fee">{$fee_content}</div>
+		<label for="money" class="withdraw_number">{lang e6_propaganda:withdraw_money}: </label>
+		<input type="text" name="money" id="money" placeholder="<!--{if $e6_propaganda['withdraw_money']}-->{lang e6_propaganda:small_money}: {$e6_propaganda['withdraw_money']} {$money_list[$e6_propaganda['withdraw_type']]}<!--{/if}-->">
+		<button onclick="e6_submit();">{lang e6_propaganda:withdraw_submit}</button>
+		</form>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#" class="ui-btn-active ui-state-persist">{lang e6_propaganda:withdraw_nav}</a></li>
+				<li><a href="#pagetwo">{lang e6_propaganda:withdraw_log}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div data-role="page" id="pagetwo">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:withdraw_log}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" id="withdraw_list">
+			<li data-role="list-divider" data-theme="c" class="e6_li" id="li_title">
+			<span>{lang e6_propaganda:money_withdraw}</span><span>{lang e6_propaganda:fee}</span><span>{lang e6_propaganda:state}</span>
+			</li> 
+			<!--{loop $withdraw_list $v}-->
+			<li class="e6_li">
+				<span>{$v['money']}</span><span>{$v['feemoney']}</span><span>{$v['ok']}</span>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{if $count > count($withdraw_list)}-->
+	<div data-role="footer" data-theme="b" id="footer">
+		<h1 id="more" page="1">{lang e6_propaganda:more} >></h1>
+	</div>
+	<!--{/if}-->
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#pageone">{lang e6_propaganda:withdraw_nav}</a></li>
+				<li><a href="#" class="ui-btn-active ui-state-persist">{lang e6_propaganda:withdraw_log}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

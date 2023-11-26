@@ -1,0 +1,7 @@
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $_G['forum_threadlist'] $key $thread}-->
+    <li>
+        <div class="asub cl"><!--{hook/forumdisplay_littlepic_mobile $key}--></div>
+    </li>
+<!--{/loop}-->

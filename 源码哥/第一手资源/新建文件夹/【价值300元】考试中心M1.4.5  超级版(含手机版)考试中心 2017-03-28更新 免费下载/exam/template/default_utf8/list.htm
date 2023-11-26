@@ -1,0 +1,242 @@
+<!--{template common/header}-->
+<link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/exam/image/common.css?{VERHASH}" />
+ 
+<div id="wp" class="wp">
+	<div id="pt" class="bm cl">
+		<div class="z"><a target="_blank" href="./" class="nvhm" title="首页"></a><em>?</em><a href="$indexurl">考试中心</a>
+		<!--{if $parentcate}--><em>?</em><a href="$listurl$parentcate[cid].html">$parentcate[name]</a><!--{/if}-->
+		<!--{if $curcate}--><em>?</em><a href="$listurl$curcate[cid].html">$curcate[name]</a><!--{/if}-->
+		</div>
+		<div style="float:right"><!--{template exam:'.$template.'/common/nav}--></div>
+	</div>
+	<div class="sd" style="float:left;width:220px;" id="side_ct">
+		<div class="bm">
+			<div class="bm_h cl"><h2>栏目分类</h2></div>
+			<div class="bm_c">
+			<dl class="tree_list" id="menu_cate">
+				<li><i class="tree_icon_home" onclick="mn_change()"></i><a class="<!--{if $curcate[cid]==0}-->xi1<!--{/if}-->" href="$indexurl">全部试卷</a></li>
+				<!--{loop $tree $p}-->
+					<dt><span class="<!--{if !in_array($p[cid], $_G[cookie][cookie_cate])}-->tree_icon_cate_close<!--{else}-->tree_icon_cate_open<!--{/if}-->" onclick="mn_change($p[cid])"></span><a onclick="mn_change($p[cid],1)" class="<!--{if $curcate[cid]==$p[cid]}-->xi1<!--{/if}-->" href="$listurl$p[cid].html" title="$p[name]">$p[name]</a></dt>
+					<cite cid='$p[cid]' <!--{if !in_array($p[cid], $_G[cookie][cookie_cate])}-->style="display:none"<!--{/if}-->>
+					<!--{loop $p[child] $c}-->
+						<!--{if empty($c[child])}-->
+							<dd><span class="tree_icon_paper"></span><a class="<!--{if $curcate[cid]==$c[cid]}-->xi1<!--{/if}-->" href="$listurl$c[cid].html" title="$c[name]">$c[name]</a></dd>
+						<!--{else}-->
+							<dd><span class="tree_icon_cate_open"></span><a class="<!--{if $curcate[cid]==$c[cid]}-->xi1<!--{/if}-->" href="$listurl$c[cid].html" title="$c[name]">$c[name]</a></dd>
+							<!--{loop $c[child] $cc}-->
+								<ol><span class="tree_icon_paper"></span><a class="<!--{if $curcate[cid]==$cc[cid]}-->xi1<!--{/if}-->" href="$listurl$cc[cid].html" title="$cc[name]">$cc[name]</a></ol>
+							<!--{/loop}-->
+						<!--{/if}-->
+					<!--{/loop}-->
+					</cite>
+				<!--{/loop}-->
+			</dl> 
+			</div>
+		</div>
+	</div>
+
+	<div id="ct" class="ct2 wp cl" style="margin-left: 235px;margin-right: 0;">
+		<div class="mn" id="main">
+			<!--{if $curcate[cid]>0}-->
+				<div class="bm bml">
+					<span class="y" style="margin: 4px 8px 0 0">
+						<!--{if $_G[uid]}-->
+							<!--{if empty($config['groupadd']) || in_array($_G['groupid'], $config['groupadd'])}-->
+								<!--{if !$curcate[lastcate]}-->
+									<a href="javascript:;"  title="制作试卷" onclick="showDialog('请从左侧进入带 <img align=absmiddle src=\'source/plugin/exam/image/tree_paper.gif\'> 分类后再&nbsp;<img align=\'absmiddle\' src=\'source/plugin/exam/image/e_post.png\'>')"><img src="source/plugin/exam/image/e_post.png" alt="制作试卷"></a>
+								<!--{else}-->
+									<a href="javascript:;"  title="制作试卷" onclick="showDialog($('paperNameDialog').innerHTML,'info','添加试卷',0,1)"><img src="source/plugin/exam/image/e_post.png" alt="制作试卷"></a>			
+								<!--{/if}-->
+							<!--{/if}-->
+						<!--{else}-->
+						<a href="javascript:;"  title="制作试卷" onclick="showDialog('您没有登录, 无法添加试卷')"><img src="source/plugin/exam/image/e_post.png" alt="制作试卷"></a>
+						<!--{/if}-->
+					</span>
+					<div class="bm_h cl  pbn">
+						<h1 class="xs2"><a href="$listurl$curcate[cid].html">$curcate[name]</a>
+						<span class="xs1 xw0 i">试卷: <strong class="xi1">$curcate[paper_count]</strong><span class="pipe">|</span>题目: <strong class="xi1">$curcate[exam_count]</strong></h1>
+					</div>
+					<!--{if $curcate[description]}-->
+					<div class="bm_c cl">
+						$curcate[description] 
+					</div>
+					<!--{/if}-->
+				</div>
+			<!--{else}-->
+				<div class="bm bml pbn">
+					<!--{if !empty($config[welcome])}--><div class="bm_c cl" style="font-size:14px;padding:10px"><img align="absmiddle" src="static/image/common/ann_icon.gif">$config[welcome]</div><!--{else}--><div style="padding:5px"></div><!--{/if}-->
+					<!--{if $lognum>0}-->
+						<div class="bm_c cl">
+							<div class="newlog">
+							<!--{loop $newlog $v}-->
+								<li>
+									<a class="y xi2" href="$paperurl$v[pid].html" target="_BLANK">我也试一试</a>
+									<div class="nowrap"><a href="home.php?mod=space&uid=$v[uid]" target="_BLANK"><img src="uc_server/avatar.php?uid=$v[uid]&size=small" height=22 width=22 align="absmiddle"></a>
+									<span class="xi1"><a href="home.php?mod=space&uid=$v[uid]" target="_BLANK">$v[username]</a></span> 于 <span class="xi1">{echo date("m/d H:i", $v[time]);}</span> 参加了《<a href="$paperurl$v[pid].html" target="_BLANK">$v[title]</a>》考试, 取得了 <span class="xi1">$v[score]</span> 分的成绩
+									</div>
+								</li>
+							<!--{/loop}-->
+							</div>
+						</div>
+					<!--{/if}-->
+				</div>
+			<!--{/if}-->	
+			<div id="threadlist" class="tl bm bmw">
+			<div class="th">
+				<table cellspacing="0" cellpadding="0"><tbody><tr>
+					<th colspan="2"><div class="tf">
+					<!--{if $_G[adminid]==1}-->
+						<a href="plugin.php?id=exam:list&cid=$cid"><i <!--{if $action==''}-->class="xi2 xw1"<!--{/if}-->>已发布</i></a>&nbsp;		
+						<a href="plugin.php?id=exam:list&cid=$cid&action=unpublic"><i <!--{if $action=='unpublic'}-->class="xi2 xw1"<!--{/if}-->>未发布</i></a>&nbsp;						
+						<a href="plugin.php?id=exam:list&cid=$cid&action=uncheck"><i <!--{if $action=='uncheck'}-->class="xi2 xw1"<!--{/if}-->>未审核</i></a>&nbsp;				
+						<a href="plugin.php?id=exam:list&cid=$cid&action=lock"><i <!--{if $action=='lock'}-->class="xi2 xw1"<!--{/if}-->>已锁定</i></a>&nbsp;	
+					<!--{else}-->
+						试卷列表
+					<!--{/if}-->
+					</div></th>
+					<td class="by">作者</td>
+					<td class="num" align="center">参与/查看</td>
+					<td class="by" align="center">最后参与</td>
+				</tr></tbody></table>
+			</div>
+
+			<div class="bm_c">
+			<form method="post" autocomplete="off" name="acp_papers_form" id="acp_papers_form" action="plugin.php?id=exam:list&cid=$cid">
+			<input value="$_G[formhash]" name="formhash" type="hidden">
+					<table cellspacing="0" cellpadding="0" style="font-size:14px">
+					<!--{loop $papers $v}-->
+					<tbody id="paper_$v[pid]">
+						<tr class="exam_list_row">
+							<td class="icn">
+								<!--{if $v[stick]}-->
+									<a href="$paperurl$v[pid].html" title="新窗口打开" target="_blank"><img src="source/plugin/exam/image/stick.gif"></a>
+								<!--{elseif $v[status]==2}-->
+									<img src="source/plugin/exam/image/paper_lock.gif">								
+								<!--{else}-->
+									<a href="$paperurl$v[pid].html" title="新窗口打开" target="_blank"><img src="<!--{if $_SERVER[REQUEST_TIME]-$v[addtime]<43200}-->source/plugin/exam/image/paper_new.gif<!--{else}-->source/plugin/exam/image/paper_common.gif<!--{/if}-->"></a>
+								<!--{/if}-->						
+							</td>
+							<!--{if $_G[adminid]==1}--><td class="o"><input onclick="pmodclick(this)" type="checkbox" name="moderate[]" value="$v[pid]"></td><!--{/if}-->
+							<td class="common"><cite>
+								<!--{if $cid!=$v[cid]}-->[<a href="$listurl$v[cid].html">$cates[$v[cid]][name]</a>]<!--{/if}-->
+								<!--{if $_G[groupid]==1 || $v[status]==1}-->
+									<a href="<!--{if $config[show]==1}-->$testrurl$v[pid].html<!--{else}-->$paperurl$v[pid].html<!--{/if}-->" target="_blank" class="s xst" style="color: $COLOR[$v[color]]" title="$v[title]">$v[title]</a>
+								<!--{else}-->
+									<span class="s xst" style="color: $COLOR[$v[color]]" title="$v[title]">$v[title]</span>
+								<!--{/if}-->
+								
+								<!--{if $v[price]}-->(<span class="xi1">售价: $v[price] $config[extcredit][unit]</span>)<!--{/if}-->
+								</cite>
+								<em class="xs1">
+									<!--{if $config[show]==3}--><span><a href="$paperurl$v[pid].html" target="_blank" class="md1">模拟考试模式</a></span><!--{/if}--> 
+									<!--{if $config[show]==3}--><span><a href="$testrurl$v[pid].html" target="_blank" class="md1">逐题练习模式</a></span><!--{/if}--> 
+									<!--{if $v[starttime]}-->
+										<span>考试时间: {echo date("m月d日 H:i",$v[starttime])}-{echo date("H:i",$v[starttime]+$v[minute]*60)}</span>
+									<!--{else}-->
+										<span>考试时间: $v[minute]分钟</span>
+									<!--{/if}-->
+									<!--{if $v[uid]==$_G[uid] || $_G[adminid]==1}--><span><a href="plugin.php?id=exam:manage&pid=$v[pid]" target="_blank">编辑</a></span><!--{/if}--> 
+								</em>
+							</td>
+							<td class="by">
+								<cite><a href="home.php?mod=space&username=$v[username]" target="_blank">$v[username]</a></cite>
+								<em><span title="{eval echo date("m-d H:i", $v[edittime]);}">{eval echo date("m-d H:i", $v[edittime]);}</span></em>
+							</td>
+							<td class="num" align="center"><cite>$v[submit]</cite><em><span>$v[pv]</span></em></td>
+							<td class="by" align="center">
+								<cite><!--{if empty($v[last_user])}-->无<!--{else}--><a href="home.php?mod=space&username=$v[last_user]" target="_blank">$v[last_user]</a><!--{/if}--></cite>
+								<em><span title="{eval echo date("m-d H:i", $v[last_time]);}">{eval echo date("m-d H:i", $v[last_time]);}</span></em>
+							</td>
+						</tr>
+					</tbody>
+					<!--{/if}-->
+					</table> 
+					<!--{if $_G[adminid]==1}-->
+						<div id="mdly" style="display: none;left:47.5%;">
+							<div class="ptcolor">
+								<table cellspacing="0" cellpadding="0">
+									<tr><td style="background-color:#EE5023" onclick="acp_papers(1)"></td><td style="background-color:#2897C5" onclick="acp_papers(2)"></td><td style="background-color:#996600" onclick="acp_papers(3)"></td></tr>
+									<tr><td style="background-color:#3C9D40" onclick="acp_papers(4)"></td><td style="background-color:#000000" onclick="acp_papers(0)"></td><td style="background-color:#2B65B7" onclick="acp_papers(5)"></td></tr>
+									<tr><td style="background-color:#EC1282" onclick="acp_papers(6)"></td><td style="background-color:#8F2A90" onclick="acp_papers(7)"></td><td style="background-color:#FF0000" onclick="acp_papers(8)"></td></tr>
+								</table>
+							</div>
+							<a class="cp" href="javascript:;" title="最小化" onclick="$('mdly').className='cpd'">最小化</a>
+							<label><input type="checkbox" name="chkall" class="pc" onclick="if(!($('mdct').innerHTML = modclickcount = checkall(this.form, 'moderate'))) {$('mdly').style.display = 'none';}" />全选</label>
+							<h6><span>选中</span><strong onclick="$('mdly').className='';" onmouseover="this.title='最大化'" id="mdct"></strong><span>篇: </span></h6>
+							<p>
+							<strong><a href="javascript:;" onclick="acp_papers('delete');return false;">删除</a></strong><span class="pipe">|</span>
+							<strong><a href="javascript:;" onclick="acp_papers('move');return false;">移动</a></strong><span class="pipe">|</span>
+							<strong><a href="javascript:;" onclick="acp_papers('stick');return false;">置顶</a></strong><span class="pipe">|</span>
+							<strong><a href="javascript:;" onclick="acp_papers('unstick');return false;">取消置顶</a></strong>
+							</p>
+							<p>
+							<strong><a href="javascript:;" onclick="acp_papers('lock');return false;">锁定</a></strong><span class="pipe">|</span>
+							<strong><a href="javascript:;" onclick="acp_papers('check');return false;">审核</a></strong><span class="pipe">|</span>
+							<strong><a href="javascript:;" onclick="acp_papers('uncheck');return false;">未审</a></strong>
+							</p>
+						</div> 
+					<!--{/if}-->
+					<link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_moderator.css?{VERHASH}" />
+			</form>
+			<div id="paperNameDialog" style="display:none">
+				<form method="post" id="paperNameForm" action="plugin.php?id=exam:list&cid=$cid" autocomplete="off" onsubmit="this.id='paperNameFormDialog';if($('papername').value.match(/^\s*$/)){showError('&#x8BF7;&#x8F93;&#x5165;&#x8BD5;&#x5377;&#x540D;&#x79F0;');return false;}">
+					<input value="$_G[formhash]" name="formhash" type="hidden">
+					<div class="c altw" style="padding:20px 0 30px 10px;border-top:1px solid #CCC">
+						试卷名称: <input id="papername" name="papername" class="px" style="width:250px">
+					</div>
+					<p class="o pns">
+						<button value="true" class="pn pnc" type="submit"><strong>确定</strong></button>
+						<button value="true" class="pn" onclick="hideMenu('fwin_dialog', 'dialog')"><strong>取消</strong></button>
+					</p>
+				</form>
+			</div> 
+			<div id="cateDialog" style="display:none">
+					<div class="c altw" style="padding:20px 0 30px 10px;border-top:1px solid #CCC"><span style="font-size:12px;font-weight:700">将选中的试卷移动到: </span>
+						<select name="varsnew" id="varsnew">
+						<!--{loop $tree $v}-->
+								<optgroup label="--$v[name]">
+								<!--{loop $v[child] $vv}-->
+									<option value="$vv[cid]">$vv[name]</option>
+								<!--{/loop}-->
+								</optgroup>
+						<!--{/loop}-->
+						</select>
+					</div>
+					<p class="o pns">
+						<button value="true" class="pn pnc" type="submit" onclick="move_action()"><strong>确定</strong></button>
+						<button value="true" class="pn" onclick="hideMenu('fwin_dialog', 'dialog')"><strong>取消</strong></button>
+					</p>
+			</div> 
+			</div>
+			</div>
+	 
+			<div class="bm bw0 pgs cl">
+				<span id="fd_page_bottom">$multipage</span>
+				<span class="pgb y"><a href="plugin.php?id=exam<!--{if $curcate[cid]}-->&list={$curcate[cid]}.html<!--{else}--><!--{/if}-->">返回</a></span>
+						<!--{if $_G[uid]}-->
+							<!--{if empty($config['groupadd']) || in_array($_G['groupid'], $config['groupadd'])}-->
+								<!--{if !$curcate[lastcate]}-->
+									<a href="javascript:;"  title="制作试卷" onclick="showDialog('请从左侧进入带 <img align=absmiddle src=\'source/plugin/exam/image/tree_paper.gif\'> 分类后再&nbsp;<img align=\'absmiddle\' src=\'source/plugin/exam/image/e_post.png\'>')"><img src="source/plugin/exam/image/e_post.png" alt="制作试卷"></a>
+								<!--{else}-->
+									<a href="javascript:;"  title="制作试卷" onclick="showDialog($('paperNameDialog').innerHTML,'info','添加试卷',0,1)"><img src="source/plugin/exam/image/e_post.png" alt="制作试卷"></a>			
+								<!--{/if}-->
+							<!--{/if}-->
+						<!--{else}-->
+						<a href="javascript:;"  title="制作试卷" onclick="showDialog('您没有登录, 无法添加试卷')"><img src="source/plugin/exam/image/e_post.png" alt="制作试卷"></a>
+						<!--{/if}-->
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+		_attachEvent(window, 'load', function(){
+			if($('side_ct').clientHeight <  $('main').clientHeight - 50)
+				$('side_ct').style.minHeight = $('main').clientHeight - 50 + 'px';
+		}, document);
+</script>
+
+<script type="text/javascript" src="source/plugin/exam/image/list.js"></script>
+</div>
+	 
+
+<!--{subtemplate common/footer}-->

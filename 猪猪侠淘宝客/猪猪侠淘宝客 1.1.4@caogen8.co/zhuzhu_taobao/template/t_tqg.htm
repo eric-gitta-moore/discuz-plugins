@@ -1,0 +1,156 @@
+<!--{if $_GET[inajax]}-->
+<!--{template common/header}-->
+		<!--{loop $list $key=>$v}-->
+		<li class="qg-item y2 {if $_G[timestamp] < $v[start]}qg-will{else}{if $v[sold_num] == $v[total_amount]}qg-done{else}qg-ing{/if}{/if}">
+			<a href="{$jump_url}$v[num_iid]" target="_blank">
+				<div class="qg-img"><img {if $key > 5}src="" zhuzhu-{/if}src="$v[pic_url]" alt="$v[title]" /></div>
+				<div class="qg-detail">
+					<div class="name">
+						<p class="des">$v[title]</p>
+						<p class="subtitle">{lang zhuzhu_taobao:t_tqg_htm_1}{echo $v[reserve_price]-$v[zk_final_price]}{lang zhuzhu_taobao:jump_url_htm_6}</p>
+					</div>
+
+					<div class="link">
+						<div class="price">
+							<span class="original-price">&yen;<i>$v[reserve_price]</i></span>
+							<span class="promo-price">&yen;<em>$v[zk_final_price]</em></span>
+						</div>
+						<div class="link-btn">{if $_G[timestamp] < $v[start]}{lang zhuzhu_taobao:t_tqg_htm_3}{else}{if $v[sold_num] == $v[total_amount]}{lang zhuzhu_taobao:t_tqg_htm_4}{else}{lang zhuzhu_taobao:t_tqg_htm_5}{/if}{/if}</div>
+					</div>
+					<div class="process">
+						<div class="process-text">
+							{if $_G[timestamp] < $v[start]}
+							<span>{echo dgmdate($v[start], 'Y{lang zhuzhu_taobao:t_tqg_htm_6} H:s')}{lang zhuzhu_taobao:t_tqg_htm_7}</span>
+							{else}
+							<span class="percent">{lang zhuzhu_taobao:t_tqg_htm_8}{echo round($v[sold_num]/$v[total_amount]*100, 2)}%</span>
+							<span class="num">{lang zhuzhu_taobao:t_index_htm_8}$v[sold_num]{lang zhuzhu_taobao:t_index_htm_9}</span>
+							{/if}
+						</div>
+						
+						{if $_G[timestamp] > $v[start]}
+						<div class="process-bar"><span style="width: {echo $v[sold_num]/$v[total_amount]*100}%;"></span></div>
+						{/if}
+					</div>
+				</div>
+			</a>
+		</li>
+		<!--{/loop}-->
+	<!--{template common/footer}-->
+<!--{else}-->
+<!--{template zhuzhu_taobao:t_header}-->
+</div>
+
+<link rel="stylesheet" type="text/css" href="source/plugin/zhuzhu_taobao/static/css/style_tqg.css?LsJ">
+<style id="diy_style" type="text/css"></style>
+<input type="hidden" id="dateid" value="" />
+<div class="tqg_nav cl">
+
+	<div class="nav_tow" id="nav_tow">
+		<div class="wp cl">
+			<ul id="nav_ul">
+				<!--{loop $datearr $key=>$v}-->
+				{eval $key2 = $key + 1;}
+				<!--{if $key < 13}-->
+				<li{if $v < $Now && $Now < $datearr[$key2] || $v == $Now} class="cur"{/if}>
+					<a href="javascript:;" onclick="getdate('$key')">
+						<p class="time">$v</p>
+						<p class="text">{if $v < $Now && $Now < $datearr[$key2] || $v == $Now}{lang zhuzhu_taobao:t_tqg_htm_11}{elseif $v < $Now}{lang zhuzhu_taobao:t_tqg_htm_12}{else}{lang zhuzhu_taobao:t_tqg_htm_13}{/if}</p>
+					</a>
+				</li>
+				<!--{/if}-->
+				<!--{/loop}-->
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="wp cl tqg_banner">
+	<!--[diy=tqg_banner]--><div id="tqg_banner" class="area cl"></div><!--[/diy]-->
+</div>
+
+<div class="cl zhuzhu_tgq wp">
+	<div class="qg-limit-list z cl">
+		<ul id="qg-limit-list">
+		</ul>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	loadmore();
+	function getdate(id) {
+		var x = new Ajax();
+		document.getElementById("dateid").value=id;
+		x.get('plugin.php?id=zhuzhu_taobao&mod=tqg&inajax=1&date=' + id, function(s){
+			if(s){
+				$("qg-limit-list").innerHTML = s;
+			}else{
+				$("qg-limit-list").innerHTML = '<div class="dataend">{lang zhuzhu_taobao:t_quan_htm_11}</div>';
+			}
+		});
+
+	}
+
+	var nav_ul=document.getElementById('nav_ul');
+	var myli=nav_ul.getElementsByTagName('li');
+	for (var i = 0; i < myli.length; i++) {
+		myli[i].index=i;
+		myli[i].onclick=function(){
+		  for (var j = 0; j < myli.length; j++) {
+			  myli[j].className='';
+		  }
+		  this.className='cur';
+		  document.documentElement.scrollTop = document.body.scrollTop = 380;
+		}
+	}
+
+	window.onscroll = function(){
+		var scrollT = document.documentElement.scrollTop||document.body.scrollTop;
+		var scrollH = document.documentElement.scrollHeight||document.body.scrollHeight;
+		var clientH = document.documentElement.clientHeight||document.body.clientHeight;
+
+		if(scrollT == scrollH - clientH){
+			loadmore();
+		}else if(scrollT > 100){
+			document.getElementById("nav_tow").setAttribute("style", "position: fixed;top: 0;z-index: 302;left: 0");
+		}else if(scrollT < 100){
+			document.getElementById("nav_tow").setAttribute("style", "");
+		}
+		
+		var aImg = document.querySelectorAll('img');
+        var len = aImg.length;
+        var n = 0;
+		for (var i = n; i < len; i++) {
+			if (aImg[i].offsetTop < clientH + scrollT) {
+				if (aImg[i].getAttribute('src') == '') {
+					aImg[i].src = aImg[i].getAttribute('zhuzhu-src');
+				}
+				n = i + 1;
+			}
+		}
+	}
+	
+	var page = 1;
+	function loadmore() {
+		var x = new Ajax();
+		var dateid = document.getElementById("dateid").value;
+		if(dateid){
+			var url = 'plugin.php?id=zhuzhu_taobao&mod=tqg&inajax=1&date=' + dateid + '&page=' + page;
+		}else{
+			var url = 'plugin.php?id=zhuzhu_taobao&mod=tqg&inajax=1&page=' + page;
+		}
+		x.get(url, function(s){
+			page ++;
+			if(s){
+				$("qg-limit-list").innerHTML += s;
+			}else{
+				$("qg-limit-list").innerHTML += '<div class="dataend">{lang zhuzhu_taobao:t_quan_htm_11}</div>';
+			}
+		});
+	}
+
+</script>
+<div class="wp cl">
+
+<!--{subtemplate zhuzhu_taobao:t_tag}-->
+<!--{subtemplate common/footer}-->
+<!--{/if}-->

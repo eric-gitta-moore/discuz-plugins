@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-07-21 22:25]]></item>
+	<item id="From"><![CDATA[M12社区]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[支付宝微信积分充值]]></item>
+			<item id="identifier"><![CDATA[keke_chongzhi]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[keke_chongzhi/]]></item>
+			<item id="copyright"><![CDATA[M12社区]]></item>
+			<item id="version"><![CDATA[V1.6]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[myyapmagoo]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>应用中心</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[keke_chongzhi]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[积分充值]]></item>
+					<item id="url"><![CDATA[plugin.php?id=keke_chongzhi]]></item>
+					<item id="type"><![CDATA[19]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admin_credit]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[积分配置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[订单管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admin_url]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[支付页面]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[app]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<span style="color:red">更多可可精品插件</span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[支付宝-合作伙伴身份pid]]></item>
+				<item id="description"><![CDATA[查看地址：https://openhome.alipay.com/platform/keyManage.htm?keyType=partner]]></item>
+				<item id="variable"><![CDATA[alipaypid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[支付宝-MD5密钥]]></item>
+				<item id="description"><![CDATA[查看地址：https://openhome.alipay.com/platform/keyManage.htm?keyType=partner]]></item>
+				<item id="variable"><![CDATA[alipaykey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[微信支付-APPID]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wxappid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[微信支付-secert]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wxsecert]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[微信支付-商户号]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wxmchid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[微信支付-商户支付密钥]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wxshkey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[预置金额]]></item>
+				<item id="description"><![CDATA[预置金额，支持6个预置金额，金额之间用,号隔开]]></item>
+				<item id="variable"><![CDATA[yz]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[0.01,5,10,30,50,100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[单次最低充值]]></item>
+				<item id="description"><![CDATA[单次最低充值金额，单位/元]]></item>
+				<item id="variable"><![CDATA[zuidi]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[0.01]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[支付成功后跳转地址]]></item>
+				<item id="description"><![CDATA[支付成功后跳转地址，留空则默认跳转到我的充值记录页]]></item>
+				<item id="variable"><![CDATA[tz]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[是否默认选中积分类型]]></item>
+				<item id="description"><![CDATA[充值积分类型是否默认勾选，如选否，则用户需要自行勾选充值积分类型]]></item>
+				<item id="variable"><![CDATA[mrcredit]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[微信端是否显示支付宝充值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[zfbonwx]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[充值记录每页条数]]></item>
+				<item id="description"><![CDATA[充值记录每页条数，默认30]]></item>
+				<item id="variable"><![CDATA[pgt]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[30]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[SEO-支付页title]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[积分充值]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[充值说明]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[sm]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[在使用充值方式时，您务必仔细确认自己的账号并仔细选择相关操作选项。若因为您自身输入账号错误、操作不当或不了解充值计费方式等因素造成充错账号、错选充值种类等情形而损害自身权益的，网站将不会作出任何补偿或赔偿。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[手机版顶部色调设置]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ys]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#e14546]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推荐一个dz商</span><span style="color:#4C33E5;">业插件模版下载的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">网站给大家</span><a href="http://M12社区" target="_blank"><span style="color:#4C33E5;"></span></a><span style="color:#4C33E5;">（M12社区）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">这</span><span style="color:#E53333;">是一个</span><span style="color:#E53333;">dz商业</span><a href="http://M12社区/dzchajian/" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://M12社区/discuz/" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">资源破解分享的网站，而且还有很多精品的网站源码下载</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他们资源每天更新，并且很多都是他们自己出钱在应用中心购买后破解分享出来的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不过还是替他们说一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他们站下载的资源只限于自己学习研究内含的设计思想和原理 请勿有任何商业盈利行为</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介绍也介绍完了，给大家做个小导航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://M12社区/dzchajian/" target="_blank">dz商业破解插件下载</a> &nbsp; <a href="http://M12社区/discuz/" target="_blank">dz商业风格模版下载</a> &nbsp; &nbsp;<a href="http://M12社区/yuanma/" target="_blank">精品网站源码下载</a> &nbsp; &nbsp;<a href="http://M12社区/forum.php?gid=59" target="_blank">工具素材下载</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://M12社区/webschool/" target="_blank">精选教程区</a></span> 
+</h3> ]]></item>
+				<item id="lang01"><![CDATA[积分充值]]></item>
+				<item id="lang02"><![CDATA[最低充值金额为]]></item>
+				<item id="lang03"><![CDATA[元]]></item>
+				<item id="lang05"><![CDATA[确认]]></item>
+				<item id="lang06"><![CDATA[充值]]></item>
+				<item id="lang07"><![CDATA[操作成功]]></item>
+				<item id="lang08"><![CDATA[订单管理]]></item>
+				<item id="lang09"><![CDATA[清空所有未支付订单记录]]></item>
+				<item id="lang10"><![CDATA[订单列表]]></item>
+				<item id="lang11"><![CDATA[订单编号]]></item>
+				<item id="lang12"><![CDATA[充值会员]]></item>
+				<item id="lang13"><![CDATA[充值积分]]></item>
+				<item id="lang14"><![CDATA[金额]]></item>
+				<item id="lang15"><![CDATA[支付方式]]></item>
+				<item id="lang16"><![CDATA[支付状态]]></item>
+				<item id="lang17"><![CDATA[交易单号]]></item>
+				<item id="lang18"><![CDATA[创建时间]]></item>
+				<item id="lang19"><![CDATA[支付时间]]></item>
+				<item id="lang20"><![CDATA[充值成功]]></item>
+				<item id="lang21"><![CDATA[未支付]]></item>
+				<item id="lang22"><![CDATA[支付宝]]></item>
+				<item id="lang23"><![CDATA[微信]]></item>
+				<item id="lang25"><![CDATA[支付页地址]]></item>
+				<item id="lang26"><![CDATA[支付页二维码]]></item>
+				<item id="lang27"><![CDATA[设置成功]]></item>
+				<item id="lang28"><![CDATA[充值积分配置]]></item>
+				<item id="lang29"><![CDATA[积分类型]]></item>
+				<item id="lang30"><![CDATA[比例设置]]></item>
+				<item id="lang31"><![CDATA[开启充值]]></item>
+				<item id="lang32"><![CDATA[显示顺序]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="langt01"><![CDATA[充值]]></item>
+				<item id="langt02"><![CDATA[记录]]></item>
+				<item id="langt03"><![CDATA[当前积分]]></item>
+				<item id="langt05"><![CDATA[累计充值(元)]]></item>
+				<item id="langt06"><![CDATA[自定义充值金额]]></item>
+				<item id="langt07"><![CDATA[金额]]></item>
+				<item id="langt08"><![CDATA[每1元等于]]></item>
+				<item id="langt09"><![CDATA[元]]></item>
+				<item id="langt10"><![CDATA[支付宝支付]]></item>
+				<item id="langt11"><![CDATA[推荐有支付宝账户的用户使用]]></item>
+				<item id="langt12"><![CDATA[微信支付]]></item>
+				<item id="langt13"><![CDATA[推荐有微信账户的用户使用]]></item>
+				<item id="langt15"><![CDATA[暂无支付方式，请到后台配置支付参数]]></item>
+				<item id="langt16"><![CDATA[立即充值]]></item>
+				<item id="langt17"><![CDATA[最低充值金额为]]></item>
+				<item id="langt18"><![CDATA[积分充值]]></item>
+				<item id="langt19"><![CDATA[充值记录]]></item>
+				<item id="langt20"><![CDATA[暂无充值记录]]></item>
+				<item id="langt21"><![CDATA[当前账户余额：]]></item>
+				<item id="langt22"><![CDATA[累计充值：]]></item>
+				<item id="langt23"><![CDATA[充值数量：]]></item>
+				<item id="langt24"><![CDATA[自定义]]></item>
+				<item id="langt25"><![CDATA[充值金额]]></item>
+				<item id="langt26"><![CDATA[请输入充值金额：]]></item>
+				<item id="langt27"><![CDATA[应付金额：]]></item>
+				<item id="langt28"><![CDATA[支付方式：]]></item>
+				<item id="langt29"><![CDATA[我已支付完成]]></item>
+				<item id="langt30"><![CDATA[充值积分类型：]]></item>
+				<item id="langt31"><![CDATA[充值积分]]></item>
+				<item id="langt32"><![CDATA[请选择充值积分类型]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="enablefile"><![CDATA[enable.php]]></item>
+	</item>
+</root>

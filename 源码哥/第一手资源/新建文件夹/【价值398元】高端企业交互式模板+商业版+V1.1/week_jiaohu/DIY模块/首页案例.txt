@@ -1,0 +1,27 @@
+<ul>
+    <li>
+    [loop]
+        <div class="wk_case_list"><a href="{url}"{target} title="{title}"><div class="wk_case_img"><img 
+
+src="{pic}" width="{picwidth}" height="{picheight}" alt="{title}"/></div><div class="wk_case_ico"></div> <div 
+
+class="wk_case_xian"><span class="wk_span_1"></span><span class="wk_span_2"></span><span 
+
+class="wk_span_3"></span><span class="wk_span_4"></span></div></a></div>
+    [order=9]</li><li><div class="wk_case_list"><a href="{url}"{target} title="{title}"><div 
+
+class="wk_case_img"><img src="{pic}" width="{picwidth}" height="{picheight}" alt="{title}"/></div><div 
+
+class="wk_case_ico"></div> <div class="wk_case_xian"><span class="wk_span_1"></span><span 
+
+class="wk_span_2"></span><span class="wk_span_3"></span><span class="wk_span_4"></span></div></a></div>[/order]
+    [order=17]</li><li><div class="wk_case_list"><a href="{url}"{target} title="{title}"><div 
+
+class="wk_case_img"><img src="{pic}" width="{picwidth}" height="{picheight}" alt="{title}"/></div><div 
+
+class="wk_case_ico"></div> <div class="wk_case_xian"><span class="wk_span_1"></span><span 
+
+class="wk_span_2"></span><span class="wk_span_3"></span><span class="wk_span_4"></span></div></a></div>[/order]
+    [/loop]
+    </li>
+</ul>

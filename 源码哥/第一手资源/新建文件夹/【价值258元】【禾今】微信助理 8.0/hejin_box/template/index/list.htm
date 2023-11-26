@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$charset">
+<title><!--{eval echo stripslashes($flinfo['title']);}--></title>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta charset="$charset">
+<link href="{HEJIN_PATH}list/listhome{$flinfo['listid']}_{if $plugindata['hjbox_wwebysfg']}{$plugindata['hjbox_wwebysfg']}{/if}.css" rel="stylesheet" type="text/css" />
+ 
+<style>
+ 
+ 
+</style>
+</head>
+<script>
+window.onload = function ()
+{
+var oWin = document.getElementById("win");
+var oLay = document.getElementById("overlay");	
+var oBtn = document.getElementById("popmenu");
+var oClose = document.getElementById("close");
+oBtn.onclick = function ()
+{
+oLay.style.display = "block";
+oWin.style.display = "block"	
+};
+oLay.onclick = function ()
+{
+oLay.style.display = "none";
+oWin.style.display = "none"	
+}
+};
+</script>
+<body id="listhome{$flinfo['listid']}">
+<div id="ui-header">
+<div class="fixed">
+<a class="ui-title" id="popmenu"><!--{eval echo stripslashes($flinfo['title']);}--></a>
+<a class="ui-btn-left_pre" href="javascript:history.go(-1);"></a>
+<a class="ui-btn-right" href="{HEJIN_URL}:index&model=list&fid=$flinfo['id']{if $page}&page=$page{/if}"></a>
+</div>
+</div>
+
+
+<div class="Listpage">
+<div class="top46"></div>
+{if $flinfo['listid']!=3}
+{if $tjnews}
+    <div class="focus">
+<ul>
+<li>
+<a href="{if $tjnews['url']}<!--{eval echo stripslashes($tjnews['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$tjnews['id']{/if}">
+<img alt="<!--{eval echo stripslashes($tjnews['title']);}-->" src="{if $tjnews['pic']}<!--{eval echo stripslashes($tjnews['pic']);}-->{else}{HEJIN_PATH}boxpic/fmpic/noneimg.jpg{/if}">
+<div class="opacity"></div>
+<h2><!--{eval echo stripslashes($tjnews['title']);}--></h2>
+</a>
+</li>
+</ul>
+</div>
+{/if}
+{else}
+{if $tjnews}
+<div class="topding">
+<ul  class="chatPanel">
+<li class="media mediaFullText">
+<a href="{if $tjnews['url']}<!--{eval echo stripslashes($tjnews['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$tjnews['id']{/if}">
+<div class="mediaPanel">
+<div class="mediaHead"><span class="title"><!--{eval echo stripslashes($tjnews['title']);}--></span><span class="time"></span>
+<div class="clr"></div>
+</div>
+<div class="mediaImg"><img alt="<!--{eval echo stripslashes($tjnews['title']);}-->" src="{if $tjnews['pic']}<!--{eval echo stripslashes($tjnews['pic']);}-->{else}{HEJIN_PATH}boxpic/fmpic/noneimg.jpg{/if}"></div>
+<div class="mediaContent mediaContentP">
+<p><!--{eval echo stripslashes($news['text']);}--></p>
+</div>
+<div class="mediaFooter">
+<span class="mesgIcon right"></span><span style="line-height:50px;" class="left">{lang hejin_box:seeall}</span>
+<div class="clr"></div>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+{/if}
+{/if}
+
+<div id="todayList">
+{if $flinfo['listid']!=3}
+<ul  class="todayList">
+{else}
+<ul  class="chatPanel">
+{/if}
+<!--{loop $newses $news}-->
+{if $news['id'] != $tjnews['id']}
+
+{if $flinfo['listid']==7}      
+<li>
+<a href="{if $news['url']}<!--{eval echo stripslashes($news['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$news['id']{/if}">
+<h2><!--{eval echo stripslashes($news['title']);}--></h2>
+<div class="img"><img src="{if $news['pic']}<!--{eval echo stripslashes($news['pic']);}-->{else}{HEJIN_PATH}boxpic/fmpic/noneimg.jpg{/if}"></div>
+<p class="onlyheight"><!--{eval echo stripslashes($news['text']);}--></p>
+<div class="commentNum"></div>
+</a>
+</li>
+{elseif $flinfo['listid']==11 or $flinfo['listid']==9}
+<li>
+<a href="{if $news['url']}<!--{eval echo stripslashes($news['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$news['id']{/if}">
+<img src="{if $news['pic']}<!--{eval echo stripslashes($news['pic']);}-->{else}{HEJIN_PATH}boxpic/fmpic/noneimg.jpg{/if}">
+            <div>
+<h2><!--{eval echo stripslashes($news['title']);}--></h2>
+    <p><!--{eval echo stripslashes($news['text']);}--></p>
+</div>
+</a>
+</li>
+{elseif $flinfo['listid']==10}
+<li>
+<a href="{if $news['url']}<!--{eval echo stripslashes($news['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$news['id']{/if}"><b></b>
+<img src="{if $news['pic']}<!--{eval echo stripslashes($news['pic']);}-->{else}{HEJIN_PATH}boxpic/fmpic/noneimg.jpg{/if}">
+            <div>
+<h2><!--{eval echo stripslashes($news['title']);}--></h2>
+    <p><!--{eval echo stripslashes($news['text']);}--></p>
+</div>
+</a>
+</li>
+{elseif $flinfo['listid']==8}
+<li>
+<a href="{if $news['url']}<!--{eval echo stripslashes($news['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$news['id']{/if}">
+<img src="{if $news['pic']}<!--{eval echo stripslashes($news['pic']);}-->{else}{HEJIN_PATH}boxpic/fmpic/noneimg.jpg{/if}">
+<p><!--{eval echo stripslashes($news['title']);}--></p>
+</a>
+</li>
+{elseif $flinfo['listid']==13}
+<li>
+<a href="{if $news['url']}<!--{eval echo stripslashes($news['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$news['id']{/if}">
+            <div>
+<h2><!--{eval echo stripslashes($news['title']);}--></h2>
+    <p><!--{eval echo stripslashes($news['text']);}--></p>
+</div>
+</a>
+</li>
+{elseif $flinfo['listid']==2}
+<li>
+<a href="{if $news['url']}<!--{eval echo stripslashes($news['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$news['id']{/if}">
+<h2><!--{eval echo stripslashes($news['title']);}--></h2><i></i>
+</a>
+</li>
+{elseif $flinfo['listid']==3}
+<li class="media mediaFullText">
+<a href="{if $news['url']}<!--{eval echo stripslashes($news['url']);}-->{else}{HEJIN_URL}:index&model=show&nid=$news['id']{/if}">
+<div class="mediaPanel">
+<div class="mediaHead"><span class="title"><!--{eval echo stripslashes($news['title']);}--></span><span class="time"></span>
+<div class="clr"></div>
+</div>
+<div class="mediaImg"><img src="{if $news['pic']}<!--{eval echo stripslashes($news['pic']);}-->{else}{HEJIN_PATH}boxpic/fmpic/noneimg.jpg{/if}"></div>
+<div class="mediaContent mediaContentP">
+<p><!--{eval echo stripslashes($news['text']);}--></p>
+</div>
+<div class="mediaFooter">
+<span class="mesgIcon right"></span><span style="line-height:50px;" class="left">{lang hejin_box:seeall}</span>
+<div class="clr"></div>
+</div>
+</div>
+</a>
+</li>
+
+{/if}
+{/if}
+<!--{/loop}-->
+ 
+</ul>
+</div>
+$page_string
+
+
+</div>
+
+
+<div style="display:none"> </div>
+{if $plugininfo['hjbox_wxgzrz']==2 && $plugindata['hjbox_jssdk'] && $plugindata['hjbox_appid'] && $plugindata['hjbox_appsecret']}
+  <input id="wx-share-title" type="hidden" value="<!--{eval echo stripslashes($flinfo['title']);}-->" />
+<input id="wx-share-img" type="hidden" value="<!--{eval echo stripslashes($flinfo['pic']);}-->" />
+<input id="wx-share-desc" type="hidden" value="" />
+<input id="wx-share-link" type="hidden" value="{HEJIN_URL}:index&model=list&fid=$flinfo['id']" />
+<input id="sharebackurl" type="hidden" value="" /> 
+ <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+var appIdstr='{$signPackage["appId"]}';
+var timestampstr ={$signPackage["timestamp"]};
+var nonceStrstr='{$signPackage["nonceStr"]}';
+var signaturestr='{$signPackage["signature"]}';
+</script>
+<script src="{HEJIN_PATH}index/newfxjs.js"></script> 
+{/if}
+
+{if $plugindata['hjbox_wwebqqkf'] && $plugindata['hjbox_wwebkfxs']!=3}
+<a href="http://wpa.qq.com/msgrd?v=3&amp;uin={$plugindata['hjbox_wwebqqkf']}&amp;site=qq&amp;menu=yes" id="CustomerChatFloat" style="position: fixed; right: 0px; top: 150px; z-index: 99999; height: 70px; width: 65px; min-width: 65px; background: url({HEJIN_PATH}boxpic/qqkf/{$plugindata['hjbox_wwebkftb']}.png) 0px 0px  no-repeat; background-size:65px auto"></a>
+<script type="text/javascript">
+ var obj=document.getElementById('CustomerChatFloat');  
+ obj.addEventListener("touchmove", function () { obj.style.left = (event.targetTouches[0].pageX - -document.body.scrollLeft - 30) + "px"; obj.style.top = (event.targetTouches[0].pageY - document.body.scrollTop - 30) + "px";}, false);
+</script>
+{/if}
+
+
+
+<script src="{HEJIN_URL}:index&model=buttom"></script>
+ </body>
+</html>

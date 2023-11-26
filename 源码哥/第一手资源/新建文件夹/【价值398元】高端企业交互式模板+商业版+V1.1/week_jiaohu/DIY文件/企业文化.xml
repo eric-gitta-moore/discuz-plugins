@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="spacecss"><![CDATA[#framePgZs79 { margin:0px !important;}#portal_block_22 { margin:0px !important;}#portal_block_22 .dxb_bc { margin:0px !important;}]]></item>
+	<item id="layoutdata">
+		<item id="diy1"><![CDATA[]]></item>
+		<item id="listcontenttop"><![CDATA[]]></item>
+		<item id="wk_about">
+			<item id="frame`framePgZs79">
+				<item id="attr">
+					<item id="name"><![CDATA[framePgZs79]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`framePgZs79_left">
+					<item id="attr">
+						<item id="name"><![CDATA[framePgZs79_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_22">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_22]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="diycontentbottom"><![CDATA[]]></item>
+		<item id="diy3"><![CDATA[]]></item>
+	</item>
+	<item id="blockdata">
+		<item id="block">
+			<item id="22">
+				<item id="bid"><![CDATA[22]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[¹ØÓÚÎÒÃÇ]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<span>
+    <p><img alt="" align="right" src="template/week_jiaohu/images/ad/qywh.jpg" width="350" height="350" style=" margin-left:20px;" /> </p>
+    <br />
+    <p>¾¡ÐÄÁ¦¡¢½üÎ´À´:¾¡ÐÄ¾¡Á¦Îª¿Í»§Ñ¡ÔñºÍÌá¹©ÓÐ¼ÛÖµµÄÀí²ÆÇþµÀ£¬¾¡ÐÄ¾¡Á¦·þÎñÓÚÃ¿Ò»Î»¿Í»§£¬¾¡ÐÄ¾¡Á¦×öºÃÃ¿Ò»¼þÊÂÇé£¬ÊÇÖÐÈÚÎÄ»¯µÄ¾«Ëè¡£ÎÒÃÇ¼áÐÅ×öÈÎºÎÊÂÇéÖ»Òª×öµ½¾¡ÐÄ¾¡Á¦£¬Ò»¶¨»áÎÞÏÞ½Ó½üÃÀºÃµÄÎ´À´¡£<br /></p><br />
+    <p>ÆóÒµÔ¸¾°£ºÓë¿Í»§¹²ÏíÈ«Çò¾­¼Ã·¢Õ¹´øÀ´µÄ¼ÛÖµ¡£<br /></p><br />
+    <p>ÆóÒµÊ¹Ãü£º³ÉÎª´óÖÐ»ªÇø×î¾ß¼ÛÖµµÄ×Ê±¾Í¶×ÊÔËÓªÆ½Ì¨¡£<br /></p><br />
+    <p>ÆóÒµ¾«Éñ£º×¨Òµ³ÏÐÅ¡¢ºÏ×÷¹²Ó®¡¢³ÖÐø³É³¤¡£<br /></p><br />
+    <p>ÆóÒµ¼ÛÖµ¹Û£ºÎª¸ß¾»ÖµÈËÊ¿Ìá¹©×¨ÒµµÄ¡¢¿ÉÐÅÀµµÄÍ¶×Ê¹ÜÀíÓë×Ê²úÔöÖµ×ÛºÏ·þÎñ£¬ÖúÁ¦¿Í»§³É³¤¡£<br /></p><br />
+    <p>·þÎñÀíÄî£ºÖÐÈÚÊ¼ÖÕ±ü³ÐÒÔ¿Í»§ÀûÒæ×î´ó»¯µÄ·þÎñÀíÄî¡£<br /></p><br />
+    <p>·þÎñÏîÄ¿£ºÔÚÈ«Çò·¶Î§ÄÚÎª¿Í»§Ìá¹©·çÏÕ¿É¿Ø¡¢ÊÕÒæÎÈ¶¨µÄ¾ßÓÐ¸ß¼ÛÖµµÄÍ¶×ÊÆ½Ì¨¡£×îÖÕÂú×ã¿Í»§×Ê²ú±£ÖµÔöÖµµÄÄ¿µÄ¡£</p><br />
+</span>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<span>
+    <p><img alt=\"\" align=\"right\" src=\"template/week_jiaohu/images/ad/qywh.jpg\" width=\"350\" height=\"350\" style=\" margin-left:20px;\" /> </p>
+    <br />
+    <p>¾¡ÐÄÁ¦¡¢½üÎ´À´:¾¡ÐÄ¾¡Á¦Îª¿Í»§Ñ¡ÔñºÍÌá¹©ÓÐ¼ÛÖµµÄÀí²ÆÇþµÀ£¬¾¡ÐÄ¾¡Á¦·þÎñÓÚÃ¿Ò»Î»¿Í»§£¬¾¡ÐÄ¾¡Á¦×öºÃÃ¿Ò»¼þÊÂÇé£¬ÊÇÖÐÈÚÎÄ»¯µÄ¾«Ëè¡£ÎÒÃÇ¼áÐÅ×öÈÎºÎÊÂÇéÖ»Òª×öµ½¾¡ÐÄ¾¡Á¦£¬Ò»¶¨»áÎÞÏÞ½Ó½üÃÀºÃµÄÎ´À´¡£<br /></p><br />
+    <p>ÆóÒµÔ¸¾°£ºÓë¿Í»§¹²ÏíÈ«Çò¾­¼Ã·¢Õ¹´øÀ´µÄ¼ÛÖµ¡£<br /></p><br />
+    <p>ÆóÒµÊ¹Ãü£º³ÉÎª´óÖÐ»ªÇø×î¾ß¼ÛÖµµÄ×Ê±¾Í¶×ÊÔËÓªÆ½Ì¨¡£<br /></p><br />
+    <p>ÆóÒµ¾«Éñ£º×¨Òµ³ÏÐÅ¡¢ºÏ×÷¹²Ó®¡¢³ÖÐø³É³¤¡£<br /></p><br />
+    <p>ÆóÒµ¼ÛÖµ¹Û£ºÎª¸ß¾»ÖµÈËÊ¿Ìá¹©×¨ÒµµÄ¡¢¿ÉÐÅÀµµÄÍ¶×Ê¹ÜÀíÓë×Ê²úÔöÖµ×ÛºÏ·þÎñ£¬ÖúÁ¦¿Í»§³É³¤¡£<br /></p><br />
+    <p>·þÎñÀíÄî£ºÖÐÈÚÊ¼ÖÕ±ü³ÐÒÔ¿Í»§ÀûÒæ×î´ó»¯µÄ·þÎñÀíÄî¡£<br /></p><br />
+    <p>·þÎñÏîÄ¿£ºÔÚÈ«Çò·¶Î§ÄÚÎª¿Í»§Ìá¹©·çÏÕ¿É¿Ø¡¢ÊÕÒæÎÈ¶¨µÄ¾ßÓÐ¸ß¼ÛÖµµÄÍ¶×ÊÆ½Ì¨¡£×îÖÕÂú×ã¿Í»§×Ê²ú±£ÖµÔöÖµµÄÄ¿µÄ¡£</p><br />
+</span>
+]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1461205026]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+		</item>
+		<item id="style">
+		</item>
+	</item>
+</root>

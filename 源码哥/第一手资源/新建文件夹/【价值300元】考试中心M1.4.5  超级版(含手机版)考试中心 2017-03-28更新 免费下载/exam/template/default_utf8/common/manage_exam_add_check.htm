@@ -1,0 +1,43 @@
+		<form id="testform" method="post" autocomplete="off" action="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab&eid=$eid&formhash=$_G[formhash]">
+		<input value="$_G[formhash]" name="formhash" type="hidden">
+		<table cellpadding="0" cellspacing="0" border=0 class="table-add">
+			<tr><td colspan=2 style="padding-top:1px">{eval $editor['textarea']='subject';$editor['value']=$exam['subject'];}<!--{template exam:'.$template.'/common/editor}--></td></tr>
+			<tr><th>参考答案:</th><td>
+				<label style="padding-right:20px"><input type="radio" class="cb" name="result" value=1 <!--{if $exam[result]==1}-->checked<!--{/if}-->>正确</label>
+				<label><input class="cb" type="radio" name="result" value=2 <!--{if $exam[result]==2}-->checked<!--{/if}-->>错误</label>
+			</td></tr>
+			<tr class="line"><th width=70>附加图片:</th><td><input class="px imgw y" name="image" id="image" value="$exam[image]"></td></tr>
+			<tr><th colspan=2><a href="javascript:;" onclick="$('note').style.display='block'"><!--{if !trim($exam[note])}-->添加试题解释<!--{else}-->试题解释<!--{/if}--></a></th></tr>
+			<tr><td colspan=2><cite <!--{if !trim($exam[note])}-->style="display:none"<!--{/if}--> id="note">{eval $editor['textarea']="note";$editor['value']=$exam['note'];}<!--{template exam:'.$template.'/common/editor_simple}--></cite></td></tr>
+		</table>
+		<input type="submit" id="testsubmit" class="pn pnc pp" style="margin-top:15px" value="确定" onclick="validate_editor_simple(this);return form_check();">
+		</form>
+		
+		<script type="text/javascript">
+			editorsimple();
+			doane();
+			editorsize(0,editorminheight=200)
+			
+			function form_check()
+			{
+				$('e_textarea').value = wysiwyg ? html2bbcode(getEditorContents()) : $('e_textarea').value;
+			
+				if($('e_textarea').value.trim() == ''){
+					showError('标题不能为空');return false;
+				}
+				
+				//参考答案
+				var result = document.getElementsByName('result');
+				var result_have = false;
+				for(var i=0;i<result.length;i++){
+					if(result[i].checked){
+						result_have = true;
+						break;
+					}
+				}
+				if( !result_have){
+					showError('参考答案未选定')
+					return false;
+				}
+			}
+		</script>

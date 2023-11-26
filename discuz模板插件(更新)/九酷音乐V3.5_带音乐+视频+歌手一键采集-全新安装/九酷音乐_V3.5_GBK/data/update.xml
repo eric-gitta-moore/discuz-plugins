@@ -1,0 +1,14 @@
+[patch]http://www.qianwe.net/qianwenet/patch_gbk.zip[patch]
+
+[version]V3.5[version]
+
+[build]20150120[build]
+
+[date]
+<strong>更新日志</strong><br /><br />
+注：该更新非必要；因更新接口兼容2.0，故更新包较大，<br />为避免频繁升级带来的未知隐患，请先考虑站点自身情况再按需升级<br /><br />
+增加一个利用jquery设置时间的插件<br />
+优化FTP与本地上传插件<br />
+后台增加一个上传视频可设置格式的选项...<br />
+以往省略......
+[date]

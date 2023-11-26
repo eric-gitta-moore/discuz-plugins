@@ -1,0 +1,15 @@
+.qq_bind {margin-top:6px;}
+.lewei_hometop {width:auto!important;height:auto!important;background:#fff!important;}
+.lewei_footer {margin:0 auto;border-top:1px solid #e3e3e3;padding-top:6px;background:none;margin-top:6px;}
+.lewei_ft {display:none;}
+.lewei_footer_c {text-align:center;background:none;}
+.lewei_footer_c p a {color:#74D1FF;}
+.lewei_footer img {background:none;}
+a.scrolltopa:hover {  background-position: -40px 0px !important;}
+#nv li, #home {margin-right: 1px; padding: 0 5px;border: none;height: 30px!important;background: ;line-height: 30px!important;font-size: 12px;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #70FFFFFF,endColorstr = #70FFFFFF);}
+#nv li a {float: left;padding: 0 15px;height: 33px;line-height:33px;font-size:12px;}
+#nv li a, #nv li a:visited {padding: 0px 5px;}
+#nv {border-bottom:none;border-top:none;min-width:auto;background:none;height:auto!important;width:auto;}
+#ft {margin-top: 2px!important;border-top:none;margin: 0 auto;padding:0 0 20px;min-height:auto;background:none!important;}
+#nv li a:hover {text-decoration:underline;}
+#scrolltop {visibility: hidden;position: fixed; bottom: 100px;display: block; margin: -30px 0 0 2px;width: 40px;background: #f4f4f4;border: 1px #cdcdcd solid;border-radius: 3px;border-top: 0;cursor: pointer;}

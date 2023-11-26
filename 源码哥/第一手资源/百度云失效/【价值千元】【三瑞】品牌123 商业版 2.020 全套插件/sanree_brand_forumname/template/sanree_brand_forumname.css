@@ -1,0 +1,38 @@
+.tabtn {
+	width:135px;
+	margin:10px auto;
+}
+.tabtn a{
+	display:block;
+	width:135px;
+	height:28px;
+	cursor:pointer;
+	background:url('images/brand.gif');
+	background-repeat:no-repeat;
+}
+.tabtn a:hover{
+	background:url('images/brand.gif') 0px 28px;
+}
+.tabrand{
+	zoom:1;
+	height:180px;
+	overflow:auto;
+}
+.tabrand li{
+	height:35px;
+	line-height:35px;
+	overflow:hidden;
+	padding-left:10px;
+	border-bottom:#c2d5e3 1px solid;
+}
+.tabrand li:hover{
+	background:#F2F2F2;
+}
+.tabrand li a{
+	font-size:14px;
+	font-family:Î¢ÈíÑÅºÚ;
+}
+.tabrandbox{
+	width:400px;
+	height:180px;
+}

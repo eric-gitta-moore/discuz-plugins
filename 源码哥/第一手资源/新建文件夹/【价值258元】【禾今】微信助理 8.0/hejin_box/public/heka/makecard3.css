@@ -1,0 +1,20 @@
+#makecard { 
+		background: rgba(00, 00, 00, 0.5) !important; /* IE无效，FF有效 */
+		background: #ffffff;
+		filter: alpha(opacity=90);
+		position:fixed;
+		left:0px;
+		bottom:0px;
+		text-align:center;
+		width:100%;
+		height:200px;
+		margin:0px; 
+		padding-left:0px;	
+		color:#33ffff;
+		font-size:20pt;
+		font-weight:bold;
+		z-index:50000;
+		text-decoration:none;
+		}
+
+#makecard a {margin:5px; color:#fff;text-decoration:none;}

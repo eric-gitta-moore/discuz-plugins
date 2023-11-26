@@ -1,0 +1,69 @@
+	
+<link rel="stylesheet" href="{$PLSTATIC}css/css.css" type="text/css">
+<script type="text/javascript" src="{$PLSTATIC}dialog417/dialog.js?skin=default"></script>
+<script type="text/javascript" src="{$PLSTATIC}dialog417/plugins/iframeTools.js"></script>
+<script type="text/javascript" src="{$PLSTATIC}jquery.min.js"></script>
+
+<script type="text/javascript">
+
+jQuery.noConflict();
+
+function levmarquee(elementID, h, n, speed, delay){
+	var t = null;
+	var box = '#' + elementID;
+	jQuery(box).hover(function(){
+		clearInterval(t);
+	}, function(){
+		t = setInterval(function(){_start(box, h, n, speed)}, delay);
+	}).trigger('mouseout');
+}
+function _start(box, h, n, speed){
+	jQuery(box).children('ul:first').animate({marginTop: '-='+h}, speed, function(){
+		jQuery(this).css({marginTop:'0'}).find('li').slice(0,n).appendTo(this);
+	})
+}
+
+</script>
+<script type="text/javascript">
+
+function levckall(name, obj) {
+	if (jQuery(obj).attr("checked")) {
+		jQuery("input[name='"+name+"[]']").attr('checked', true);
+	} else {
+		jQuery("input[name='"+name+"[]']").attr('checked', false);
+	}
+}
+
+function levrandom(Min,Max) {   
+	var Range = Max - Min;   
+	var Rand = Math.random();   
+	return(Min + Math.round(Rand * Range));   
+}   
+
+</script>
+
+{if $levnav}
+<div class="bm cl" id="pt">
+<div class="z">
+<a class="nvhm" href="./" title="{$_G[setting][bbname]}">{$_G[setting][bbname]}</a>
+<em>&raquo;</em>
+{if $navtitle}
+<a href="{$idxurl}">{$navtitle}</a>
+<em>&raquo;</em>
+{/if}
+{if $subnavtitle}
+<a href="{$subidxurl}">{$subnavtitle}</a>
+<em>&raquo;</em>
+{/if}
+<a href="javascript:history.back()">{$levnav}</a>
+</div>
+<div class="z"></div>
+</div>
+{/if}
+
+
+
+
+
+
+

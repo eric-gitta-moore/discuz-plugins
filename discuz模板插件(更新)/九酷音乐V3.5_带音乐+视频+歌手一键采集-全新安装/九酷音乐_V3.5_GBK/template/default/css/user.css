@@ -1,0 +1,203 @@
+.mb10{ margin-bottom:10px;}
+.mb12{ margin-bottom:12px;}
+.crumb{ font-size:12px; font-weight:normal; line-height:36px; height:36px; color:#000;}
+.crumb a{ color:#000;}
+.crumb b{ font-weight:400; color:#666;}
+.boxW{border:1px solid #e5e5e5; width:960px; margin:0 auto;}
+
+.useHeader h1{font-family:Microsoft YaHei; font-size:30px; color:#333; line-height:44px; height:44px; overflow:hidden; margin:10px 0 0;}
+.useHeader .url{ color:#999; padding:0 0 3px;}
+.useHeader .userNav li{ float:left; font-size:14px; font-weight:800; width:46px; text-align:left; padding:0 0 30px; line-height:20px; height:20px;}
+.useHeader .userNav li.active{ background:url(userNav.png) 8px 25px no-repeat;}
+.useHeader .userNav li.active a{ color:#090;}
+
+.userBg{ background:url(rightBg.png) right 0 repeat-y;}
+.userL{ float:left; width:728px;}
+.userR{ float:right; width:222px; padding-bottom:20px;}
+.userRline{ height:5px; line-height:0; font-size:0; background:url(user.png) 0 -135px no-repeat;}
+.userSelf{ width:193px; margin:10px auto 0;}
+.userSelf a{ width:193px; height:100px; overflow:hidden; display:block;}
+.userSelf img{ float:left; width:100px; height:100px; display:block;}
+.userSelf strong{ width:85px; float:right; height:100px; font-size:14px; overflow:hidden;}
+.Rset{ width:193px; margin:10px auto 0; height:26px; text-align:center; background:url(user.png) 0 -27px no-repeat;}
+.Rset a{ line-height:25px; padding:0 5px; color:#999;}
+.Rset a:hover{ color:#090;}
+.Rziliao{width:193px; margin:10px auto 0; height:75px; padding-top:5px; background:url(user.png) 0 -54px no-repeat;}
+.Rziliao p{ line-height:18px; height:18px; overflow:hidden; width:173px; margin:3px auto 0; color:#999;}
+.Rfang{width:193px; margin:15px auto 0;}
+.Rfang h4{ font-weight:400; border-bottom:1px solid #e5e5e5; padding:0 0 3px;}
+.Rfang h4 span{ color:#999;}
+.Rfang h4 a{ float:right; color:#999;}
+.Rfang h4 a:hover{ color:#090;}
+.RfangList li{ width:50px; float:left; margin:10px 7px 0; display:inline;}
+.RfangList li a img{ width:50px; height:50px; display:block;}
+.RfangList li a span{ width:50px; height:20px; display:block; line-height:20px; overflow:hidden; color:#999;}
+.RfangList li a:hover span{ color:#090;}
+.Rcai{width:193px; margin:15px auto 0;}
+.Rcai h4{ font-weight:400; border-bottom:1px solid #e5e5e5; padding:0 0 3px;}
+.Rcai h4 a{ display:block; width:97px; height:26px; text-indent:-999em; background:url(user.png) -96px 0 no-repeat;}
+.RcaiList li{line-height:20px; height:20px; overflow:hidden;margin:5px auto 0;}
+.RcaiList li .songNum{ width:20px; height:20px;color:#b1b1b1; float:left; overflow:hidden;}
+.RcaiList li .songName{ float:left; font-size:12px; width:115px; overflow:hidden;height:20px;}
+.RcaiList li .singerName{ float:left; font-size:12px; width:58px; text-align:right; overflow:hidden;height:20px; color:#999;}
+
+.mdBox{ border:1px solid #e5e5e5;}
+.mdBoxHd{background:#fbfbfb; line-height:44px; height:44px;padding:0 12px 0 15px;}
+.mdBoxHdTit{ font-size:20px; font-family:Microsoft YaHei; color:#333;}
+.mdBoxHd .fr{ color:#999;}
+.album-pic{width:150px; height:150px; position:relative;}
+.album-pic .t-i img{ width:150px; height:150px; display:block;}
+.album-pic .album-btn-paly{ background:url(btn-play-off.png) 0 0 no-repeat;bottom:0;cursor:pointer;display:block;height:27px;position:absolute;right:0;width:27px;z-index:10; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="btn-play-off.png" ,sizingMethod="crop"); outline:none; display:none;}
+.album-pic .album-btn-paly:hover{ background:url(btn-play-on.png) 0 0 no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="btn-play-on.png" ,sizingMethod="crop"); outline:none;}
+.album-box{ padding-bottom:20px;}
+.album-box li{ width:150px; margin:20px 0 0 25px; float:left; display:inline;}
+.album-box li .s-t{ display:block; font-size:14px; overflow:hidden; height:20px; line-height:20px; margin:5px 0 0;}
+.album-box li .t-t{ color:#999; display:block; height:18px; line-height:18px; overflow:hidden;}
+.album-box li .t-t:hover{ color:#090;}
+.album-box li .editBox{ height:18px; margin-top:3px;}
+.album-box li .e-t{ display:none;height:18px; line-height:18px; }
+.album-box li .e-t a{overflow:hidden;zoom:1;float:left; margin-right:20px;display:inline;}
+.album-box li .editAlbum{ color:#62b84e; }
+.album-box li .delAlbum{ color:#ff7676; }
+.jianGedan{ width:89px; height:26px; overflow:hidden;float:left;background:url(user.png) 0 0 no-repeat; text-indent:-999em; font-size:12px; display:inline; margin:10px 0 0 10px;}
+.singer-box{ padding-bottom:20px;}
+.singer-box li{ width:80px; margin:20px 0 0 35px; float:left; display:inline;}
+.singer-box li .t-i img{ width:80px; height:80px; display:block;}
+.singer-box li .s-t{ display:block; font-size:14px; overflow:hidden; height:20px; line-height:20px; margin:5px 0 0;}
+.singer-box li .editBox{ height:18px;margin-top:3px;}
+.singer-box li .e-t{ display:none;height:18px; line-height:18px; }
+.singer-box li .delSinger{ color:#ff7676;overflow:hidden;zoom:1;float:left; margin-right:20px;display:inline;}
+.songList{ padding:10px 0; width:100%; overflow:hidden;}
+.songList ol{overflow:hidden;zoom:1;width:100%;}
+.songList li{width:210px; line-height:30px; height:30px; overflow:hidden;margin-bottom:5px;float:left;display:inline; margin:0 7px -1px 21px; padding:3px 0 3px; border-bottom:1px solid #f5f5f5;}
+.songList li .songNum{ width:30px; height:30px;color:#b1b1b1; float:left; overflow:hidden;}
+.songList li .topRed{ font-weight:bold; color:#F00;}
+.songList li .songName{ float:left; font-size:14px; width:130px; overflow:hidden;height:30px;}
+.songList li .check{ float:left; margin:10px 4px 0 0;*margin:5px 2px 0 0; display:inline;}
+.songList li .add{background-position:0 -71px; float:right;height:30px;width: 20px;}
+.setPlay a.setDelCollect{background:url(user.png) 0 -141px no-repeat; width:122px;}
+.fangke-box{ padding:0 20px 30px;}
+.fangke-box li{padding:15px 0; border-bottom:1px solid #f2f2f2;}
+.fangke-box .t-i{ float:left; width:50px; height:50px;}
+.fangke-box .t-i img{ width:50px; height:50px; display:block;}
+.fangke-box .i-t{ margin:0 0 0 60px; color:#999;}
+/*form public*/
+.form-box {color:#666;font-size:14px;overflow:hidden; zoom:1; padding:10px 20px 50px;}
+.form-box .form-item{ padding-top:18px;}
+.form-box .input{ line-height:20px; height:20px; border:1px solid #d2d2d2; padding:5px; width:400px; font-size:12px;word-break:break-all;word-wrap:break-word; background:#fff url(form-line.png) 0 0 repeat-x; color:#666;}
+.form-box .readOnly{ background:#e8e8e8; cursor:default;}
+.form-box .label{ float:left;width:120px; text-align:right; height:20px; line-height:20px; padding:5px 0;}
+.form-box .label em{color:#f00; font-family:\5b8b\4f53; padding-right:2px;}
+.form-box .tips{ display:inline-block;*display:inline; zoom:1; padding-left:5px; color:#b1b1b1; font-size:12px;}
+.form-box select{ padding:5px;border:1px solid #d2d2d2; background:#fff url(form-line.png) 0 0 repeat-x; color:#666;}
+.form-box textarea{border:1px solid #d2d2d2; width:400px; height:100px; font-size:12px; color:#666; padding:5px;line-height:20px;word-break:break-all;word-wrap:break-word; background:#fff url(form-line.png) 0 0 repeat-x;resize:none}
+.btnSave{ width:64px; height:26px; line-height:26px; text-indent:-999px;display:block; float:left;overflow:hidden; border:0 none; font-size:14px;text-align:center; cursor:pointer;background:url(user.png) -138px -141px no-repeat;}
+.mdBoxHd .setTab a{ padding:0 20px; text-align:center; line-height:44px; height:44px;float:left; font-weight:400; font-size:14px; font-family:Arial;}
+.mdBoxHd .setTab a.active{ font-size:14px; font-weight:800; background:#fff; padding:0 25px; border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;}
+.introduction-main{ width:680px; margin:0 auto; padding:10px 0 40px;word-break:break-all;word-wrap:break-word;}
+.introduction-main li{ overflow:hidden; color:#666;border-bottom:1px dashed #D8D8D8; line-height:24px; margin-top:10px; padding-bottom:10px;}
+.introduction-main li strong{ float:left; width:80px; text-align:right; font-size:14px; padding-right:15px; color:#333;}
+.introduction-info{ float:left;line-height:26px;width:525px;float:left;padding-right:10px;padding-top:5px;white-space:normal;word-break:break-all;}
+.introduction-main li.bor-no{ border:0 none;}
+
+.set-share-form{border-top:1px dotted #ccc; width:900px; margin:20px auto 0; padding:10px 0 120px;}
+.set-share-form li{border-bottom:1px dotted #ccc;display:block;position:relative; height:75px;}
+.set-share-form li:hover{ background:#fafafa;}
+.set-share-form li *{ vertical-align:middle;}
+.set-share-form li a.bind-title{color:#000;display:block;padding:20px 0 20px 15px;position:relative;text-decoration:none;}
+.set-share-form li a.bind-title strong{ font-family:"Microsoft YaHei";font-size:18px;font-weight:400;padding:0 10px 0 0;}
+.set-share-form li .bind-ok{ height:75px;line-height:75px;padding:0 0 0 15px; display:none;}
+.set-share-form li .bind-ok em{ background:url(arrow.png) 0 0 no-repeat;display:inline-block;height:16px;margin:0 5px;width:22px;}
+.set-share-form li .bind-ok b{display:inline-block;font-size:14px;font-weight:400;margin:0 10px;}
+.set-share-form li .bind-set{ position:absolute; right:20px; top:25px;}
+.set-share-form li .bind-go{ font-size:12px;}
+.set-share-form li .bind-del{ display:none;}
+.set-share-form li .with-share{display:none;}
+.set-share-form li.binded .bind-go{ display:none;}
+.set-share-form li.binded .bind-del{ color:#aaa; font-size:12px;display:block; text-align:right;}
+.set-share-form li.binded .with-share{ display:block; font-size:12px;}
+.set-share-form li.binded .with-share input{ _vertical-align:2px; outline:none; width:13px; height:13px;}
+.set-share-form li.binded a.bind-title{ display:none;}
+.set-share-form li.binded .bind-ok{ display:block;}
+
+.login{ padding:30px 0 30px;}
+.login-left{ float:left; width:492px;}
+.login-right{ float:right; width:430px;}
+.user-login .login-left .go-register{ background:url(../preview.jpg) 0 0 no-repeat; width:492px; height:294px; display:block;}
+.user-login .login-left p{ width:492px;margin:20px 0 0 0px; font-size:14px; color:#999;}
+.login-box{ border:1px solid #ccc;width:428px; background:#fff;}
+.login-box .hd h2{font-size:20px; font-family:Microsoft YaHei; color:#333;background:#fbfbfb; line-height:44px;padding:0 15px;height:44px; line-height:44px;}
+.login-form .form-box{padding:10px 20px 0px;}
+.login-form .label{ width:115px;}
+.login-form .input{ width:240px;}
+.login-form li.remember{ font-size:12px; padding-top:5px;}
+.login-form .btnDenglu{ width:84px; height:26px; text-indent:-999em; display:block; float:left;text-align:center;color:#fff;overflow:hidden;border:0 none; font-size:12px;cursor:pointer;background:url(user.png) -226px -141px no-repeat;}
+.login-box .bt{background:#f5f5f5;border-top:1px solid #ececec; text-align:center; padding:15px 0; font-size:12px; color:#999; margin-top:10px;}
+.login-box .bt a{ display:block; width:176px; height:25px;background:url(user.png) 0 -168px no-repeat; margin:0 auto;}
+.other-login{ margin-top:15px;}
+.other-login p{ margin-bottom:5px;}
+.logoIcon li{ float:left; margin-right:12px;display:inline;}
+.logoIcon li span{ display:inline-block; vertical-align:middle; margin-right:3px;}
+.logoIcon li .icon-logo{ width:16px; height:16px; display:inline-block; background:url(logo-icon.png) 0 0 no-repeat;}
+.logoIcon li .icon-qq{ background-position:0 0;}
+.logoIcon li .icon-renren{ background-position:0 -16px;}
+.logoIcon li .icon-sina{ background-position:0 -32px;}
+/*getPass*/
+.getPass{ margin-top:20px;}
+.getPass .getPass-form{ float:left; width:660px; padding:20px 0 220px;}
+.getPass .getPass-form .label{ width:150px;}
+.getPass .getPass-form .input{ width:360px;}
+.getPass .getPass-form .tips{ display:block; margin-left:145px; padding:5px;}
+.getPass .guess{ float:left; border-left:1px solid #e8e8e8; margin:30px 0 0; padding-left:12px; width:270px; height:300px;}
+.getPass .guess h3{ font-size:14px; color:#999; margin-bottom:10px;}
+.getPass .guess p{ margin-top:6px;}
+.getPass .guess h4{ margin-top:20px; color:#999;}
+.getPass .guess .logoIcon li{ float:none; margin-top:7px;}
+.getPass .btnGetPass{ width:84px; height:26px; text-indent:-999em;text-align:center;color:#fff;display:block; float:left;overflow:hidden; border:0 none; font-size:12px;cursor:pointer;background:url(user.png) -226px -195px no-repeat;}
+/*register*/
+.register{ margin-top:20px;}
+.register-step01 .register-form{ float:left; width:660px; padding:20px 0 120px;}
+.register-step01 .register-form .input{ width:360px;}
+.register-step01 .register-form .tips{ display:block; margin-left:115px; padding:5px;}
+.register-step01 .guess{ float:left; border-left:1px solid #e8e8e8; margin:30px 0 0; padding-left:12px; width:270px; height:500px;}
+.register-step01 .guess h3{ font-size:14px; color:#999; margin-bottom:10px;}
+.register-step01 .guess p{ margin-top:6px;}
+.register-step01 .guess h4{ margin-top:20px; color:#999;}
+.register-step01 .guess .logoIcon li{ float:none; margin-top:7px;}
+.register-step01 .agreement{ font-size:12px;}
+.register-step01 .agreement .agreement-main{ display:none;margin-top:5px;width:450px; height:100px; overflow:auto;padding:5px 5px 8px 5px;background:#fff; border:2px solid #ccc;}
+.register .btnZhuce{ width:84px; height:26px; text-indent:-999em;text-align:center;color:#fff;display:block; float:left;overflow:hidden; border:0 none; font-size:12px;cursor:pointer;background:url(user.png) -226px -168px no-repeat;}
+/**/
+.noClect{ padding:20px; font-size:14px; float:left; color:#999;}
+.noClect a{ color:#55A642}
+/*edit gedan*/
+.gdMusicDel{ padding:10px; background:#fff;}
+.gdMusicDel .del{ width:18px; height:18px; background:url(user.png) -19px -198px no-repeat; display:inline-block; text-indent:-999em; cursor:pointer;}
+.gdMusicDel .del:hover{ background-position:0 -198px;}
+.gdMusicDel li .del{float:right; margin-top:6px;}
+.bianjiMusic{ width:193px; height:26px; font-weight:800; line-height:26px; float:left; color:#55A642; display:block; font-size:12px; cursor:pointer;text-align:center; background:url(user.png) 0 -27px no-repeat;}
+/*loginbind*/
+.loginbind{ margin-top:15px;}
+.openLogin{ width:900px; margin:0 auto; padding:20px 0 50px; }
+.openLogin .red{ color:#f00;}
+.bindWrap{ padding:0 0 100px;}
+.openLogin .newId{ float:left; width:420px; padding-right:30px; border-right:1px dashed #ccc;}
+.openLogin .oldId{ float:right;width:420px;}
+.openLogin .hd .tx .t-i{ float:left;}
+.openLogin .hd .tx .t-t{font:100 14px/24px "Microsoft YaHei"; float:left; padding-left:10px;}
+.openLogin .hd .tx .t-t strong{ color:#44A900;}
+.openLogin .bd{ padding:20px 0 0 0;}
+.openLogin .bd h3{ font-weight:400;}
+.openLogin .bd h3 label{ background:#f5f5f5; padding:6px 15px; display:block; height:24px;font:800 18px/24px "Microsoft YaHei";}
+.openLogin .bd h3 .changeName{ font-size:12px; padding:0 10px; text-decoration:underline; cursor:pointer;}
+.openLogin .bd .form-box .input{ width:250px; font-size:14px;}
+.openLogin .bd .form-box .label{ width:90px; font-size:12px;}
+.openLogin .bd .form-box .tips{ display:block; margin:5px 0 0 85px;}
+.openLogin .bd .form-box{ padding:10px 0 0;}
+.openLogin .ft .notice{border:1px solid #ffd07d; background:#fff6e5; padding:2px 10px; font-size:12px; line-height:20px; color:#f60; margin:50px 0 0 50px; width:500px;}
+.openLogin .btnSds{border:0 none; width:84px; height:26px; float:left;text-indent:-999em;text-align:center;color:#fff; line-height:26px; cursor:pointer; background:url(user.png) -226px -249px no-repeat;}
+.openLogin .error{ margin:10px 0;border:1px solid #ff967e; background:#ffe2db; padding:2px 10px; font-size:12px; line-height:20px; color:#f00;}
+/*noBindqq*/
+.noBindqq{ background:#fff2f2; border:1px solid #ffbdbd; height:36px; line-height:36px; overflow:hidden; margin-bottom:20px; font-size:14px; text-align:center;}
+.noBindqq a{height:36px; line-height:36px; display:inline-block; color:#666; padding-right:130px; background:url(qqLian.png) right 6px no-repeat;}
+.noBindqq a:hover{ text-decoration:none; color:#ff4d4d; }

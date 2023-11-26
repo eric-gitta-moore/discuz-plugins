@@ -1,0 +1,548 @@
+.sanree_brand_video_indexbody {
+	margin:0 auto;
+	clear:both;
+	background-color:#FFFFFF;
+	width:960px;
+	padding-bottom:15px;
+}
+.sanree_brand_video_indexbody .video_body {
+	clear:both;
+	overflow:hidden;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar{
+	width:960px;
+	height:174px;
+	overflow:hidden;
+	clear:both;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar .videoflash{
+	float:left;
+	width:697px;
+	height:174px;
+	overflow:hidden;
+	background:url('images/videoflash.jpg') no-repeat;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar .ctopbarright{
+	float:right;
+	width:250px;
+	height:174px;
+	overflow:hidden;
+	background:#FFD801 url('images/bg0.jpg') bottom no-repeat;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar .ctopbarright .hd{
+	text-align:center;
+	height:35px;
+	color:#FFFFFF;
+	line-height:35px;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar .ctopbarright .hd span{
+	color:#AA9000;
+	font-weight:bold;
+	margin:0px 6px 0px 6px;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar .ctopbarright .bd .addbutton{
+	margin:0 auto;
+	display:block;
+	width:243px;	
+	height:75px;
+	background:url('images/published1.jpg') no-repeat;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar .ctopbarright .bd .addbutton:hover{
+	background:url('images/published2.jpg') no-repeat;
+}
+.sanree_brand_video_indexbody .video_body .ctopbar .ctopbarright .bd .myvideobutton{
+	display:block;
+	width:197px;	
+	height:35px;
+	background:url('images/myvideobutton1.jpg') no-repeat;
+	margin:8px auto;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand{
+    margin:10px auto;
+	width:960px;
+	height:217px;
+	overflow:hidden;
+	clear:both;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .hd{
+	text-align:right;
+	padding-right:20px;
+	line-height:43px;
+	color:#AB9001;
+	height:40px;
+	overflow:hidden;
+	background:#F5F5F5 url('images/cr_brand_01.jpg') no-repeat;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .hd a{
+	color:#AB9001;	
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .bd {
+	width:960px;
+	height:177px;
+	overflow:hidden;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .bd ul {
+	width:980px;
+	zoom:1;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .bd ul li {
+	float:left;
+	width:228px;
+	height:177px;
+	overflow:hidden;
+	margin-top:8px;
+	margin-right:16px;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .bd .brand_logo {
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .bd .brand_logo img {
+	width:228px;
+	height:131px;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .bd .brand_name {
+	line-height:31px;
+	height:31px;
+	margin-top:7px;
+	background-color:#E5E5E5;
+	text-align:center;
+	width:228px;
+}
+.sanree_brand_video_indexbody .video_body .cr_brand .bd .brand_name a {
+	color:#000000;
+}
+
+.sanree_brand_video_indexbody .video_body .cr_video{
+    margin:10px auto;
+	width:960px;
+	height:209px;
+	overflow:hidden;
+	clear:both;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul{
+	zoom:1;
+	position:absolute;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li{
+	float:left;
+	width:159px;
+	height:209px;
+	overflow:hidden;
+	border-right:1px dashed #FEF5B8;
+	background:#FFD801 url('images/bg1.jpg') left bottom repeat-x;	
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul .hover{
+	background:#FFED88 url('images/bg2.jpg') left bottom repeat-x;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .spic{
+	width:159px;
+	height:150px;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .spic .showpic{
+	position:absolute;
+	width:159px;	
+	height:140px;
+	text-align:center;
+	padding-top:10px;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .spic .showem{
+	position:relative;
+	width:63px;
+	height:73px;
+	margin-left:4px;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .spic .emtop{
+    background:url("images/top.png") no-repeat bottom !important;
+    *background:url("images/top.png") no-repeat bottom !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand_video/tpl/default/images/top.png",sizingMethod="scale");
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .spic .emhot{
+    background:url("images/hot.png") no-repeat bottom !important;
+    *background:url("images/hot.png") no-repeat bottom !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand_video/tpl/default/images/hot.png",sizingMethod="scale");
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .spic .showpic img{
+	width:140px;
+	height:140px;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .sname{
+	width:137px;
+	height:40px;
+	line-height:20px;
+	padding:5px 10px 0px 10px;
+	overflow:hidden;
+}
+.sanree_brand_video_indexbody .video_body .cr_video ul li .sname a{
+	color:#836800;
+}
+.sanree_brand_video_indexbody .video_body .cr_video .scissors{
+	height:20px;
+	position:relative;
+	z-index:3;
+	top:180px;
+    background:url("images/scissors.png") no-repeat !important;
+    *background:url("images/scissors.png") no-repeat !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand_video/tpl/default/images/scissors.png",sizingMethod="scale");
+}
+.sanree_brand_video_indexbody .video_body .ccate{
+    margin:10px auto;
+	width:960px;
+	overflow:hidden;
+	clear:both;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd{
+	padding-top:5px;
+	height:33px;
+	overflow:hidden;
+	background:#FC9300;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd .video_search{
+	float:right;
+	margin-right:12px;
+	padding-top:2px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd .video_search .keywords {
+	height:24px;
+	margin-left:117px;
+	border:1px solid #DE8100;
+	width:207px;
+	color:#BBBBBB;
+	line-height:20px;
+	padding-left:5px;
+	margin-right:5px;
+	padding:0px;
+	vertical-align:middle;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd .video_search .submitbtn{
+	border:0;
+	padding:0;
+	vertical-align:middle;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd .video_search input::-moz-focus-inner {
+	border:0;
+	padding:0;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd ul {
+	zoom:1;
+	overflow:hidden;
+	height:38px;
+	width:500px;
+	padding-left:10px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd ul li{
+	float:left;
+	line-height:33px;
+	height:35px;
+	color:#FFFFFF;
+	margin-right:20px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .hd ul li a{
+	color:#FFFFFF;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd{
+	border:1px solid #FC980B;
+	padding:10px 0px 10px 0px;
+	background:#FFFDF4;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .catedata ul{
+	zoom:1;
+	overflow:hidden;
+	padding-bottom:8px;
+	border-bottom:1px dashed #D8C09C;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .catedata ul li{
+	float:left;
+	margin-left:10px;
+	margin-right:5px;
+	display:inline;
+	white-space:nowrap;
+	height:25px;
+	padding:5px 5px 2px 5px;
+	line-height:25px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .catedata ul .a a{
+	background:#9B7E00;
+	color:#FFFFFF;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .catedata ul .catetitle{
+	padding:5px 10px 2px 10px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .catedata ul a {
+	color:#010000;
+	display:block !important;
+	*display:block !important;
+	display:table-cell;
+	padding:0px 5px 8px 5px;
+	height:16px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .subcate{
+	clear:both;
+	padding-top:13px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .subcate ul {
+	zoom:1;
+	overflow:hidden;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .subcate ul li{
+	float:left;
+	margin-left:10px;
+	margin-right:5px;
+	display:inline;
+	white-space:nowrap;	
+	height:25px;
+	padding:5px 5px 2px 5px;
+	line-height:25px;	
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .subcate ul .cateon a{
+	background:#9B7E00;
+	color:#FFFFFF;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .subcate ul .a a{
+	background:#9B7E00;
+	color:#FFFFFF;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .subcate ul .catetitle{
+	padding:5px 10px 2px 10px;
+}
+.sanree_brand_video_indexbody .video_body .ccate .bd .subcate ul a {
+	color:#010000;
+	display:block !important;
+	*display:block !important;
+	display:table-cell;
+	padding:0px 5px 8px 5px;
+	height:16px;	
+}
+.sanree_brand_video_indexbody .video_body .cfilter{
+    margin:10px auto;
+	width:960px;
+	height:35px;
+	overflow:hidden;
+	clear:both;
+	background:#F9F9F9;	
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul{
+	border-top:3px solid #FC9301;
+	zoom:1;
+	overflow:hidden;
+	background:#F9F9F9;
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul li{
+	float:left;
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #F1F1F1;
+	border-left:1px solid #F1F1F1;
+	border-right:1px solid #F1F1F1;
+	margin-right:2px;
+	padding:0px 10px 0px 10px;
+	background:#FFFFFF;
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul li a{
+	color:#404040;
+}
+
+.sanree_brand_video_indexbody .video_body .cfilter ul .asc a{
+	background:#FFFFFF url('images/cfilter_down.jpg') right no-repeat;
+	padding-right:12px;	
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul .desc a{
+	background:#FFFFFF url('images/cfilter_up.jpg') right no-repeat;
+	padding-right:12px;	
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul .ordertimeon{
+	border-bottom:1px solid #FDDFBE;
+	border-left:1px solid #FDDFBE;
+	border-right:1px solid #FDDFBE;
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul .ordertimeon a{
+	color:#9A7B00;
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul .orderviewon a{
+	color:#9A7B00;
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul .orderrecommendon a{
+	color:#9A7B00;
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul .orderpriceon a{
+	color:#9A7B00;
+}
+.sanree_brand_video_indexbody .video_body .cfilter ul .orderclickon a{
+	color:#9A7B00;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist{
+	width:960px;
+	overflow:hidden;
+	clear:both;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist{
+	margin-top:0px;
+	width:957px;
+	overflow:hidden;
+	border-left:1px dashed #DEDDDD;	
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul{
+	zoom:1;
+	width:980px;
+	border-top:1px dashed #DEDDDD;
+}
+
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li{
+	float:left;
+	border-right:1px dashed #DEDDDD;
+	border-bottom:1px dashed #DEDDDD;
+	width:318px;
+	height:239px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .videotop{
+	height:126px;
+	background:#F6F3EA url('images/bg21.jpg') right bottom  no-repeat;
+	padding:10px;
+	overflow:hidden;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul .mhover .videotop{
+	background:#ECE8DB url('images/bg22.jpg') right bottom  no-repeat;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .videotop .c_logo{
+	padding:1px 2px 1px 2px;
+	float:left;
+	width:120px;
+}
+
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .videotop .c_logo img{
+	width:120px;
+	height:120px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .videotop .c_info{
+	float:right;
+	width:162px;
+	padding-top:4px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .videotop .c_info .c_minprice{
+	height:25px;
+	line-height:25px;
+	font-size:20px;
+	color:#F99402;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .videotop .c_info .c_price{
+	height:25px;
+	line-height:25px;
+	color:#676665;
+	padding-bottom:50px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .videotop .c_info .c_price .c1{
+	font-size:14px;
+	text-decoration:line-through;	
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .c_title{
+	clear:both;
+	height:45px;
+	line-height:25px;
+	font-size:14px;
+	padding:5px 10px 0px 10px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .c_title a{
+	color:#656565;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .condition{
+	margin-top:4px;
+	clear:both;
+	padding-left:10px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .condition span{
+	color:#999999;
+	line-height:30px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .condition .lgo{
+	float:right;
+	margin-right:12px;
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .index_video_showlist ul li .condition .lgo a{
+	display:block;
+	width:74px;
+	height:26px;
+	background:url('images/lgo.jpg') no-repeat;	
+}
+.sanree_brand_video_indexbody .video_body .cvideolist .pager{
+	clear:both;
+	margin-top:20px;
+}
+.sanree_brand_video_indexbody .video_body .csanree{
+	width:940px;
+	height:35px;
+	overflow:hidden;
+	clear:both;
+	background:url('images/csanree.jpg') right no-repeat;
+	margin:35px auto 0px auto;
+	text-align:right;
+	line-height:35px;
+	padding-right:20px;
+	font-weight:bold;
+	color:#32315A;
+}
+.sanree_brand_video_indexbody .video_body .csanree .d1{
+	color:#C80803;
+}
+.sanree_brand_video_indexbody .video_body .csanree .d2{
+	color:#02A0CB;
+}
+.sanree_brand_video_indexbody .video_body .csanree a{
+	color:#02A0CB;
+}
+/* pub*/
+.video_published {
+	width:740px;
+	height:470px !important;
+	*height:470px !important;
+	height:480px;
+	overflow:hidden;
+}
+.video_published .videoitem {
+	height:429px;
+	overflow:scroll;
+	margin:10px;
+}
+.video_published .fright {
+	float:right;
+}
+.video_published .post_remind {
+	float:left;
+	line-height:30px;
+	height:26px;
+	color:#FF0000;
+	font-weight:bold;
+}
+.video_published .videoitem .videoname {
+	width:500px;
+}
+.video_published .videoitem .lefttip {
+	text-align:right;
+	width:200px;
+}
+.video_published .videoitem .lefttip span {
+	color:#FF0000;
+	margin-right:5px;
+}
+.video_published .videoitem .bitian {
+	}.appl {
+	float:left;
+}
+.sanreesubmit {
+	padding-left:10px;
+	padding-right:10px;
+	font-weight:bold;
+}
+.attswf {
+	width:425px;
+}
+.atds {
+	width:100px;
+	text-align:left;
+}
+.atds input {
+	width:80px;
+}
+.attpr {
+	width:60px;
+}
+.m_c .tedt {
+width:580px;
+}

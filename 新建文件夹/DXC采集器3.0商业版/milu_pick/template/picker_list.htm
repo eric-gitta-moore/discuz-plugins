@@ -1,0 +1,141 @@
+<!--{template milu_pick:pick_header}-->
+<script type="text/javascript" language="javascript">
+function pick_log(pid){
+	showWindow('kk', PICK_URL+'picker_manage&myfunc=ajax_func&inajax=1&af=pick_log_list&tpl=no&pid='+pid);
+}
+function del_log(pid,filename,k){
+	ajaxget(PICK_URL+'picker_manage&myfunc=ajax_func&inajax=1&af=del_log&inajax=1&tpl=no&pid='+pid+'&file_name='+filename, 'threadtypes');
+	$("log_list").removeChild($("log_"+k));
+}
+
+function op_change_show(value){
+	if(value == 'move'){
+		ajaxget(PICK_URL+'picker_manage&myfunc=ajax_func&inajax=1&af=show_pick_class&inajax=1&tpl=no&xml=1', 'show_op_class');
+	}else{
+		$("show_op_class").innerHTML = '';
+	}
+}
+
+var rowtypedata = [
+
+	[[1,'', 'td25'],[1,'', 'td25'],[1,'<input type="text" class="txt" name="neworder[{1}][]" value="0" />', 'td25'], [3, '<div class="parentboard"><input type="text" class="txt" value="{lang milu_pick:add_class}" name="newname[{1}][]"/><a onclick="deleterow(this)" class="deleterow" href="javascript:;">{lang milu_pick:del_op}</a></div>']],
+];
+function picker_share(pid, pick_name){
+	if(!is_lan == 'yes') {
+		showDialog("{lang milu_pick:share_no_allow}", 'notice');
+		return;
+	}	
+	show_html_window('share_pick', '{lang milu_pick:share_picker}', 410, 287, '<div class="c bart" style=" width:100%; height:210px;"><p style=" height:23px;line-height:23px;margin-top:15px;"><span style=" float:left;width:70px;">{lang milu_pick:picker_name}</span><input type="text" class="txt" id="pick_name" value="'+pick_name+'" name="pick_name" style="float:left; margin:0 10px; width:175px"></p><p style=" display:block; float:left; margin:10px 0;"><span style=" float:left;margin:0 0 10px 0; ">{lang milu_pick:rules_desc}:</span><textarea  class="warea" cols="50" id="picker_desc" name="picker_desc" rows="6" ></textarea></p></div><p class="o pns"><button onclick="share_picker_data('+pid+');" class="pn pnc" name="dsf" type="submit"><span>{lang milu_pick:ok}</span></button><button onclick="hideWindow(\'share_pick\');" class="pn" name="dsf" type="reset"><em>{lang milu_pick:cancel}</em></button></p>');
+}
+
+function import_article(pid){
+	var html = '<form action="'+PICK_URL+'picker_manage&myac=import_article&pid='+pid+'" method="post" enctype="multipart/form-data" name="cpform" id="cpform" autocomplete="off"><p align="center" style=" height:30px;">{lang milu_pick:import_zip}</p><p style=" height:70px;" align="center"><input  name="file" type="file" id="file"></p><p class="o pns"><button class="pn pnc" name="dsf" type="submit"><span>{lang milu_pick:ok}</span></button><button onclick="hideWindow(\'import_article\');" class="pn" name="dsf" type="reset"><em>{lang milu_pick:cancel}</em></button></p></div></form>';
+	show_html = '<h3 class="flb">{lang milu_pick:import_article}<span><a href="javascript:;" class="flbc" onclick="hideWindow(\'import_article\');" title="{lang milu_pick:close}">{lang milu_pick:click_close}</a></span></h3><div class="article_detail c" style="width:350px;height:150px;overflow-y:scroll;">'+html+'</div>';
+	showWindow('import_article', show_html, 'html');
+}
+
+</script>
+<style>
+.td25{ width:20px; overflow:hidden}
+.act{ margin:0 3px;}
+</style>
+<form action="?{PICK_GO}picker_manage" method="post" enctype="multipart/form-data" name="cpform" id="cpform" autocomplete="off">
+  <input type="hidden" value="4e816df0" name="formhash"><input type="hidden" value="" name="scrolltop" id="formscrolltop"><input type="hidden" value="" name="anchor">
+  
+
+  <div style="height:30px;line-height:30px; width:340px;  float:none; clear:both"><span style="float:left"><a onclick="show_all()" href="javascript:;">{lang milu_pick:show_all}</a> | <a onclick="hide_all()" href="javascript:;">{lang milu_pick:hide_all}</a> <input type="text" class="txt" id="srchforumipt"></span> <input style="float:right" type="submit" onclick="return srchforum()" value="{lang milu_pick:search}" class="btn"></div>
+  
+<table class="tb tb2 ">
+<tbody id="hidden_system_category_stat" class="sub">
+
+<tr><td colspan="2">
+<table class="tb tb2 ">
+  <tr class="header">
+    <th ></th>
+    <th>&nbsp;</th>
+    <th>{lang milu_pick:sort}</th>
+  <th>{lang milu_pick:name}</th>
+     <th>{lang milu_pick:import_num}</th>
+	  <th colspan="2">{lang milu_pick:lastrun} / {lang milu_pick:nextrun}</th>
+	  <th>{lang milu_pick:op}</th>
+  </tr>
+  <!--{loop $cat_arr $key_c $rs_c}-->
+  
+  <tr class="hover">
+    <td class="td25" onclick="toggle_group('group_{$rs_c['cid']}')" ><a href="javascript:;" id="a_group_{$rs_c['cid']}">[-]</a></td>
+    <td class="td25">&nbsp;</td>
+    <td class="td25"><input type="text" value="{$rs_c['displayorder']}" name="cate_setarr[{$rs_c['cid']}][displayorder]" class="txt"></td>
+    <td><div class="parentboard"><input type="text" class="txt" value="{$rs_c['name']}" name="cate_setarr[{$rs_c['cid']}][name]"></div></td>
+      <td colspan="3">&nbsp;</td>
+    <td><a class="act" href="?{PICK_GO}picker_manage&cid={$rs_c[cid]}&myaction=pick_del_category">{lang milu_pick:del_op}</a></td>
+  </tr>
+	  <tbody id="group_{$rs_c['cid']}">
+   	   <!--{loop $data[$rs_c['cid']] $key $rs}-->
+	   
+	   <tr class="hover">
+	     <td class="td25">&nbsp;</td>
+	      <td class="td25">
+			<input type="checkbox" name="pid[]" value="{$rs['pid']}"  class="checkbox">
+	        </td>
+	      <td class="td25"><input type="text" value="{$rs['displayorder']}" name="pick_setarr[{$rs['pid']}][displayorder]" class="txt"></td><td><div class="board">{$rs['name']}<input type="hidden" class="txt" value="{$rs['name']}" name="name[{$rs['pid']}]"></div></td>
+	       <td>{$rs['no_import_count']}/{$rs['article_count']}</td>
+   <td colspan="2">{if $rs['is_auto_pick'] > 0}{if $rs['lastrun_show'] || $rs['nextrun_show']}{$rs['lastrun_show']} / {$rs['nextrun_show']}{else}{lang milu_pick:wait_run}{/if}{/if}</td>
+    <td>
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=get_article">{lang milu_pick:pick}</a>
+	<a class="act" href="?{PICK_GO}picker_create&pid={$rs[pid]}&add=copy">{lang milu_pick:copy}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&myaction=edit_pick&pid={$rs[pid]}">{lang milu_pick:edit}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=pick_del">{lang milu_pick:del_op}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=export&pid={$rs[pid]}">{lang milu_pick:export}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=pick_empty">{lang milu_pick:empty}</a>
+	
+	
+	<a class="act" href="?{PICK_GO}picker_manage&myac=article_manage&pid={$rs[pid]}&p=1">{lang milu_pick:view_article}</a>  
+	<a class="pick_addtr" href="javascript:void(0);" onclick="show_more('more_op_{$rs['pid']}')">{lang milu_pick:more_op}</a>
+	</br>
+	<span id="more_op_{$rs['pid']}" style="display:none">
+	<a class="act" href="javascript:void(0);" onclick="picker_share('{$rs[pid]}', '{$rs['name']}')" >{lang milu_pick:share}</a>
+	<a class="act" href="javascript:void(0)" onclick="rules_trun('{$rs['pid']}', 'picker')">{lang milu_pick:trun}</a>
+	{if !VIP}
+	<a class="act" href="javascript:void(0);" onclick="pick_log('{$rs[pid]}')" >{lang milu_pick:log}</a>
+	<a class="act" href="javascript:void(0);" onclick="import_article({$rs['pid']})">{lang milu_pick:import_article}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&myac=export_article&pid={$rs[pid]}&tpl=no">{lang milu_pick:export_article}</a>
+	{/if}
+	 
+	 <!-- <a class="act" title="查看统计信息" href="?{PICK_GO}picker_manage&myaction=article_list&pid={$rs[pid]}">查看统计</a>-->   
+	   </span>	   </td>
+	     </tr>
+	   <!--{/loop}-->
+	    <tr>
+	     <td class="td25"></td>
+	      <td class="td25"></td>
+	      <td class="td25"></td><td colspan="3"><div class="lastboard"><a href="?{PICK_GO}picker_create&pick_cid={$rs_c['cid']}" class="addtr">{lang milu_pick:add_picker}</a></div></td>
+	     </tr>
+	   </tbody> 
+	   <!--{/loop}-->
+	  
+	  
+	     <tr><td class="td25">&nbsp;</td>
+	        <td class="td25">&nbsp;</td>
+	        <td class="td25">&nbsp;</td><td colspan="3"><div><a href="javascript:void(0)" onclick="addrow(this, 0, 0)" class="addtr">{lang milu_pick:add_class}</a></div></td>
+	     </tr>
+	   <tr>
+	     <td colspan="6" class="td25"><div class="fixsel" style="float:left; width:650px; height:35px; line-height:35px;">
+		 <span style="float:left; margin-left:30px;"><input type="checkbox" name="chkall" onclick="checkAll('prefix', this.form, 'pid')" class="checkbox">
+  {lang milu_pick:select_all} 
+  <label>
+  <select id="op_change" name="pick_op" style="width:70px;" onchange="op_change_show(this.value);">
+  	<option value="0">{lang milu_pick:p_select}</option>
+    <option value="del">{lang milu_pick:del_op}</option>
+    <option value="move">{lang milu_pick:_move}</option>
+  </select>
+ <span id="show_op_class"></span>
+  </label>
+  &nbsp;</span>
+	       <input type="submit" value="{lang milu_pick:submit}" title="{lang milu_pick:save_notice}" name="submit" id="submit_submit" class="btn">
+	       </div></td>
+	      </tr>
+</table>
+</td></tr>
+</tbody></table>
+
+</form>

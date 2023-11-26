@@ -1,0 +1,105 @@
+<!--{template milu_pick:pick_header}-->
+<script>
+function check_rules_submit(){
+	var name = $("rules_name").value;
+	if(!name) {
+		showDialog('{lang milu_pick:no_set_picker_name}', 'notice');
+		return false;
+	}
+}
+</script>
+<form id="form12" name="form12" action="?{PICK_GO}fast_pick&myac=fastpick_edit" method="post" onsubmit="return check_rules_submit();"> 
+  <input name="id" type="hidden" value="{$info['id']}" />
+   <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+<table class="tb tb2 ">
+<tbody><tr>
+  <th colspan="15" class="partition">{lang milu_pick:base_set}</th>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:content_type}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  {echo radio_output(array('name' => 'rules_type', 'int_val' => 1, 'lang' => array('pick_bbs', 'pick_normal') ), $info);}</td>
+  <td class="vtop tips2" s="1"><input name="rid" type="hidden" id="rid"  value="{$info['rid']}"/>
+    <input name="copy" type="hidden" id="copy"  value="{$info['copy']}"/></td></tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:rules_name}:</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[rules_name]" type="text" class="txt" id="rules_name" value="{$info['rules_name']}" >
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:rules_name_notice}</td>
+</tr>
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:test_url}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[theme_url_test]" type="text" class="longtxt" id="theme_url_test" value="{$info['theme_url_test']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:input_test_url}</td>
+</tr>
+{if !VIP}
+<tbody id="need_login" >
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_need_login}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_login] == 1} class="checked" {/if}><input {if $info[is_login] == 1} checked="checked" {/if} name="set[is_login]" type="radio" onclick="show_hide('show_login','',1);" show="" class="is_login" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_login] != 1} class="checked" {/if}><input  type="radio" {if $info[is_login] != 1} checked="checked" {/if}  value="2" name="set[is_login]" onclick="show_hide('show_login','',2);" class="is_login">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+</tbody>
+<tbody id="show_login" {if $info[is_login] != 1}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">cookie:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[login_cookie]" id="login_cookie" cols="50" class="tarea w_area" >{$info['login_cookie']}</textarea></td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform"><a onclick="login_test()" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></span></td>
+</tr>
+</tbody>
+
+{/if}
+
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:auto_match_set}</th>
+</tr>
+
+
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:fastpick_auto_detail_id}:</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[detail_ID]" id="detail_ID" cols="50" class="tarea" '..'="">{$info['detail_ID']}</textarea>
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:auto_list_id_notice}</td>
+</tr>
+
+<tr  class="noborder"><td class="vtop rowform"><a onclick="check_web_type('detail_ID','theme_url_test')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a><span id="theme_url_test_show" style="margin-left:5px;"></span></td>
+<td s="1" class="vtop tips2"></td>
+</tr>
+
+
+
+<!--{template milu_pick:common_get_content}-->
+<tr>
+  <th colspan="15" class="partition"><span class="td27">{lang milu_pick:about_desc}</span></th>
+</tr>
+
+<tr  class="noborder"><td class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[rule_desc]" id="rule_desc" cols="50" class="tarea w_area">{$info['rule_desc']}</textarea></td>
+<td s="1" class="vtop tips2">{lang milu_pick:about_desc}</td>
+</tr>
+<tr>
+<td colspan="15"><div class="fixsel"><input type="submit" class="btn" id="submit_addsubmit" name="addsubmit" title="{lang milu_pick:save_notice}" value="{lang milu_pick:submit}"></div></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

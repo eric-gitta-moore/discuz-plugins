@@ -1,0 +1,42 @@
+<tbody id="show_get_page" {if  $info[url_range_type] == 1 || !$info[url_range_type]} {else}style="display:none"{/if}>
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:list_get_notice}</th>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:list_get_rules}:&nbsp;&nbsp;&nbsp;<a id="insert_string_link" style="<{ {if $info[page_get_type] != 2}>display:none<{/if}>" href="javascript:void(0)"  onclick="insertAtCursor('page_link_rules','[link]')">{lang milu_pick:insert_link}</a>&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);">
+  <li id="li_page_get_type_1" {if $info[page_get_type] == 1} class="checked" {/if}><input  id="page_get_type_1" name="set[page_get_type]" type="radio" class="page_get_type_dom" onclick="show_hide('page_link_rules_1+page_link_dom','page_link_rules_2+insert_string_link',1);" value="1"  {if $info[page_get_type] == 1} checked="checked" {/if}>
+  {lang milu_pick:dom_get}  </li>
+  <li  id="li_page_get_type_2" {if $info[page_get_type] == 2 || !$info[page_get_type]} class="checked" {/if} ><input id="page_get_type_2"  name="set[page_get_type]" type="radio" class="page_get_type_dom"  value="2"  onclick="show_hide('page_link_rules_1','page_link_rules_2+insert_string_link+page_link_dom',2);"  {if $info[page_get_type] == 2 ||!$info[page_get_type]}checked="CHECKED" {/if}>
+    {lang milu_pick:str_get}</li>
+	
+	 <li  id="li_page_get_type_3" {if $info[page_get_type] == 3 } class="checked" {/if} ><input id="page_get_type_3"  name="set[page_get_type]" type="radio" class="page_get_type_dom"  value="3"  onclick="show_hide('page_link_rules_1+page_link_rules_2+page_link_dom','page_link_rules_2+insert_string_link+',2);"  {if $info[page_get_type] == 3}checked="CHECKED" {/if}>
+    {lang milu_pick:evo_get}</li>
+	
+	
+</ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+<tr id="page_link_dom"  {if $info['page_get_type'] == 3}style="display:none"{/if} class="noborder"  ><td class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[page_link_rules]" id="page_link_rules" cols="50" class="tarea w_area">{$info['page_link_rules']}</textarea></td>
+<td class="vtop tips2" s="1"><p id="page_link_rules_1" style="{if $info[page_get_type] == 2 || !$info[page_get_type]}display:none{/if}">{lang milu_pick:dom_page_get_notice}</p>
+  <p id="page_link_rules_2" style=" {if $info[page_get_type] != 2}display:none{/if}">{lang milu_pick:misc_notice}<br>{lang milu_pick:insert_link_notice}[link]</p></td>
+</tr>
+
+
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:link_test}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[page_url_test]" type="text" class="longtxt" id="page_url_test" value="{$info['page_url_test']}"></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1"><a onclick="get_page_link();" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></td>
+</tr>
+
+
+</tbody>

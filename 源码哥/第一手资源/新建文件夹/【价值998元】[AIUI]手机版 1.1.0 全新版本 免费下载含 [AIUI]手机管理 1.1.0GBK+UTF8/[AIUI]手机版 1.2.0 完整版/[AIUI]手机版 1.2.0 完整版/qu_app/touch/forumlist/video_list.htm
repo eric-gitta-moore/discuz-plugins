@@ -1,0 +1,21 @@
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $_G['forum_threadlist'] $key $thread}--><!--From www.moq u8 .com -->
+				<li>
+                    <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="cl">
+                        <div class="asub cl">
+                        	<!--{hook/forumdisplay_littlepic_mobile $key}-->
+                            <div class="author">
+                            	<span>$thread[author]</span> 
+                                <span class="pip"></span> 
+                                <span>$thread[dateline]</span> 
+                                <span class="pip"></span> 
+                                <span>$thread[views] $alang_view</span>
+                                <span class="pip"></span> 
+                                <span>$thread[replies] $alang_reply</span>
+                            </div>
+                        </div>
+                        
+					</a>
+				</li>
+                <!--{/loop}-->

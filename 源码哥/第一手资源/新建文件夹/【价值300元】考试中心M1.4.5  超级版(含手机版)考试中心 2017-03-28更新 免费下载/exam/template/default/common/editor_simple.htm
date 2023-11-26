@@ -1,0 +1,43 @@
+{eval
+	$editorid = !$editor['id'] ? 'uchome' : $editor['id'];
+}
+<div>
+<script type="text/javascript" language="javascript" src="{STATICURL}image/editor/editor_function.js?{VERHASH}"></script>
+<textarea class="userData" name="$editor[textarea]" id="{$editorid}-ttHtmlEditor" style="height: 100%; width: 100%; display: none; border: 0px">$editor[value]</textarea>
+<iframe src="home.php?mod=editor&charset={CHARSET}&allowhtml=1&isportal=0" name="{$editorid}-ifrHtmlEditor" id="{$editorid}-ifrHtmlEditor" scrolling="no" border="0" frameborder="0" style="width:100%;height:100%;border:1px solid #C5C5C5;position:relative;zoom: 1"></iframe>
+</div>
+
+<script type="text/javascript">
+function validate_editor_simple() {
+	 edit_save();
+	 //window.onbeforeunload = null;
+	 //obj.form.submit();
+}
+
+function changeEditFull(flag) {
+	var ifrHtmlEditor = $('{$editorid}-ifrHtmlEditor');
+	var editor = ifrHtmlEditor.parentNode;
+	if(flag) {
+		document.body.scroll = 'no';
+		document.body.style.overflow = 'hidden';
+		window.resize = function(){changeEditFull(1)};
+		editor.style.top = '0';
+		editor.style.left = '0';
+		editor.style.position = 'fixed';
+		editor.style.width = '100%';
+		editor.setAttribute('srcheight', editor.style.height);
+		editor.style.height = '100%';
+		editor.style.zIndex = '300';
+		ifrHtmlEditor.style.height = '100%';
+		ifrHtmlEditor.style.zoom = ifrHtmlEditor.style.zoom=="1"?"100%":"1";
+	} else {
+		document.body.scroll = 'yes';
+		document.body.style.overflow = 'auto';
+		window.resize = null;
+		editor.style.position = '';
+		editor.style.width = '';
+		editor.style.height = editor.getAttribute('srcheight');
+	}
+	doane();
+}
+</script>

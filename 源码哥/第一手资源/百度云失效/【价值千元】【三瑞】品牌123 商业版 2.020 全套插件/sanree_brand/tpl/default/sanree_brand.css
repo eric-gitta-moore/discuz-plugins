@@ -1,0 +1,543 @@
+.sanree_brand_indexbody {
+	width:960px;
+	margin:0 auto;
+}
+.sanree_brand_indexbody #pt .z H2 {
+	float:left;
+	width:500px;
+	margin-left:5px
+}
+.sanree_brand_catelist {
+	clear:both;
+	border:1px solid #E3E3E3;
+	background-color:#F9F9F9;
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+}
+.sanree_brand_catelist .sanree_brand_lborder {
+	border:1px solid #FFFFFF;
+	padding:0px 10px 0px 10px;
+	margin:0px;
+}
+.sanree_brand_catelist .sanree_brand_lborder .hd {
+	background:url(images/catebg.jpg);
+	background-repeat:no-repeat;
+	height:33px;
+	border-bottom:1px solid #E5E5E5;
+	padding-top:5px;
+}
+.sanree_brand_catelist .sanree_brand_lborder .hd .sanree_brand_searchbar {
+	float:right;
+	width:300px;
+	border:1px solid #BEBEBE;
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+}
+.sanree_brand_catelist .sanree_brand_lborder .hd .sanree_brand_searchbar .mykeyword {
+	height:20px !important;
+	*height:20px !important;
+	height:17px;
+	border:1px solid #F9F9F9;
+	width:226px !important;
+	*width:220px !important;
+	width:224px;
+	position:relative !important;
+	*position:static !important;
+	position:relative;
+	top:-8px !important;
+	*top:-8px !important;
+	top:-4px;
+	color:#cccccc;
+}
+.sanree_brand_catelist .sanree_brand_lborder .bd {
+	clear:both;
+	overflow:hidden;
+}
+.sanree_brand_catelist .sanree_brand_lborder .bd .sanree_brand_catedata {
+	margin:10px auto 0px auto;
+	overflow:hidden;
+	list-style:none;
+	list-style-type:none;
+}
+.sanree_brand_catelist .sanree_brand_lborder .bd .sanree_brand_catedata li {
+	float:left;
+	font-size:14px;
+	width:55px;
+	height:21px;
+	line-height:21px;
+	text-align:center;
+	overflow:hidden;
+	color:#5C5C5C;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+.sanree_brand_catelist .lborder .bd .sanree_brand_catedata li A {
+	color:#5C5C5C;
+}
+.cateon {
+	background-color:#FC7700;
+}
+.cateon A {
+	color:#FFFFFF;
+}
+.sanree_brand_business {
+	clear:both;
+	margin:10px auto 10px auto;
+	overflow:hidden;
+}
+.sanree_brand_business .sanree_brand_left {
+	float:left;
+	width:718px;
+	overflow:hidden;
+}
+.sanree_brand_business .sanree_brand_right {
+	float:right;
+	width:238px;
+}
+.sanree_brand_business .sanree_brand_right .regbar {
+	height:331px;
+	background-color:#FFBA00;
+	overflow:hidden;
+}
+.sanree_brand_business .sanree_brand_right .regbar .hd {
+	margin:10px auto;
+	width:214px;
+	height:75px;
+}
+.sanree_brand_business .sanree_brand_right .regbar .bd {
+	padding:10px;
+}
+.sanree_brand_business .sanree_brand_right .regbar .bd .stitle {
+	color:#363735;
+	font-weight:bold;
+	line-height:20px;
+	border-bottom:1px solid #E3A500;
+	height:20px;
+}
+.sanree_brand_business .sanree_brand_right .regbar .bd  .sline {
+	line-height:20px;
+	color:#6B696F;
+	border-top:1px solid #FFCE52;
+	padding-top:10px;
+}
+.sanree_brand_business .sanree_brand_right .regbar .bd  .sline2 {
+	line-height:20px;
+	color:#6B696F;
+	margin-top:13px;
+	padding-bottom:10px;
+	border-bottom:1px solid #E3A400;
+}
+.sanree_brand_business .sanree_brand_right .regbar .bd  .sline2 A {
+	color:#019BFF;
+}
+.sanree_brand_business .sanree_brand_right .regbar .bd .published_s {
+	border-top:1px solid #FFCE52;
+	text-align:right;
+	line-height:30px;
+	font-weight:bold;
+	color:#009EFC;
+}
+.sanree_brand_business .sanree_brand_right .regbar .bd .published_s A {
+	color:#009EFC;
+}
+.sanree_brand_business .sanree_brand_right .recommend_brand {
+	margin-top:10px;
+	border:1px solid #E3E3E3;
+	padding:10px;
+	background-color:#F9F9F9;
+}
+.sanree_brand_business .sanree_brand_right .recommend_brand .hd {
+	height:20px;
+	line-height:20px;
+	color:#FFFFFF;
+}
+.sanree_brand_business .sanree_brand_right .recommend_brand .hd a {
+	color:#FFFFFF;
+	background-color:#FC7600;
+	padding:2px 10px 2px 10px;
+	text-decoration:none;
+}
+.sanree_brand_business .sanree_brand_right .recommend_brand .bd .recommendlist li {
+	margin-top:10px;
+}
+.sanree_brand_business .sanree_brand_right .recommend_brand .bd .recommendlist li img {
+	border:5px solid #E6E6E6;
+	width:206px;
+	height:74px;
+}
+.mtop {
+	margin-top:10px;
+}
+.copyright {
+	overflow:hidden;
+	height:105px;
+	background:#F5F5F5 url('images/copyright.jpg') no-repeat;
+	border:1px solid #E6E6E6;
+}
+.sanreeinfo {
+	margin-left:70px;
+	margin-top:10px;
+	line-height:18px;
+	color:#A6A6A6;
+}
+.sanreeinfo .softname {
+	color:#266CC1;
+}
+.sanreeinfo .sanreecom,.sanreeinfo .sanreecom a {
+	color:#FF0094;
+}
+.sanreeinfo .sanree {
+	color:#2A9AC6;
+	font-weight:bold;
+}
+.sanreeinfo .brand {
+	color:#FFA200;
+	font-weight:bold;
+}
+.sanreeinfo a {
+	color:#B9B9B9;
+	font-weight:bold;
+}
+.service {
+	background:#F5F5F5 url('images/serverbg.jpg') no-repeat;
+	width:300px;
+	overflow:hidden;
+	height:102px;
+}
+.sanree_brand_business .sanree_brand_left .businesslist {
+	list-style:none;
+	list-style-type:none;
+	width:723px;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li {
+	float:left;
+	width:32%;
+	margin-right:9px;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow {
+	margin-bottom:10px;
+	background-repeat:no-repeat;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow strong {
+	color:#666666;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .image {
+	padding-top:10px;
+	border-top:1px solid #E5E5E5;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	background:#F9F9F9;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .bname {
+	padding:10px;
+	line-height:22px;
+	color:#FFFFFF;
+	font-weight:bold;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	background:#F9F9F9;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .czbar .hm .xi1 {
+	font:20px/1.5 Tahoma;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .czbar {
+	padding:10px;
+	line-height:22px;
+	color:#FFFFFF;
+	font-weight:bold;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	background:#F9F9F9;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .bname span {
+	background-color:#FC7700;
+	padding:2px 5px 2px 5px;
+	line-height:20px;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .bname A {
+	color:#FFFFFF;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .catename {
+	line-height:22px;
+	padding:0px 10px 10px 10px;
+	color:#999999;
+	border-bottom:1px solid #E5E5E5;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	background:#F9F9F9;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .introduction {
+	line-height:22px;
+	padding:10px;
+	color:#999999;
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #E5E5E5;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	background:#F9F9F9;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .propaganda {
+	border-bottom:1px solid #E5E5E5;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	line-height:22px;
+	padding:10px;
+	background:#F9F9F9;
+	color:#999999;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .contact {
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	border-bottom:1px solid #E5E5E5;
+	line-height:22px;
+	padding:10px;
+	color:#999999;
+	background:#F9F9F9;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .weburl {
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	border-bottom:1px solid #E5E5E5;
+	background:#F9F9F9;
+	line-height:22px;
+	padding-left:10px;
+	padding:10px;
+	color:#999999;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .oweruser {
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	border-bottom:1px solid #E5E5E5;
+	background:#F9F9F9;
+	line-height:22px;
+	padding-left:10px;
+	padding:10px;
+	color:#999999;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .oweruser img {
+	float:left;
+	margin-right:10px;
+	height:30px;
+	width:30px;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .weburl a {
+	color:#009EFF;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .catename span {
+	color:#009CFE;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .image .mimg {
+	margin:0px auto;
+	width:92%;
+	overflow:hidden;
+}
+.sanree_brand_business .sanree_brand_left .businesslist li .businessshow .image .mimg img {
+	width:100%;
+}
+.clear {
+	clear:both;
+}
+.sanree_brand_business .sanree_brand_left .pager {
+	clear:both;
+}
+.published {
+	width:720px;
+	height:510px !important;
+	*height:510px !important;
+	height:520px;
+	overflow:hidden;
+}
+.published_notajax {
+	margin:10px auto;
+	border:1px solid #CCCCCC;
+}
+.published h3 {
+	height:23px;
+	background-color:#E8EAED;
+	border-bottom:1px solid #FFFFFF;
+	line-height:30px;
+}
+.published .pub_body {
+	border-top:1px solid #D5D5D5;
+	clear:both;
+	overflow:hidden;
+	border-bottom:1px solid #D5D5D5;
+	padding-bottom:10px;
+	background-color:#FBFBFC;
+}
+.published .pub_left {
+	float:left;
+	width:354px;
+	overflow:hidden;
+}
+.published .pub_left .pub_name {
+	margin-top:10px;
+	padding-left:15px;
+	color:#E70002;
+}
+.published .pub_left .pub_cate {
+	margin-top:10px;
+	padding-left:15px;
+	color:#E70002;
+}
+.published .pub_left .pub_poster {
+	margin-top:10px;
+	padding-left:15px;
+	color:#E70002;
+}
+.published .pub_left .pub_weburl {
+	margin-top:3px;
+	padding-left:20px;
+	color:#444444;
+}
+.published .pub_left .pub_weburl .weburltxt {
+	;width:195px !important;
+	*width:192px !important;
+	width:195px;
+	border:1px solid #BFBFBF;
+	background-image:url('images/http.jpg');
+	background-repeat:no-repeat;
+	padding-left:60px;
+	height:20px;
+	font-size:14px;
+}
+.published .pub_left .pub_introduction {
+	margin-top:13px;
+	margin-left:12px;
+}
+.published .pub_agreement {
+	clear:both;
+	border-top:1px solid #ffffff;
+	background-color:#E8EAED;
+	height:200px;
+}
+.published .pub_agreement .hd {
+	height:35px;
+	line-height:35px;
+	padding-left:12px;
+	font-size:14px;
+	font-weight:bold;
+	color:#356699;
+}
+.published .pub_agreement .bd {
+	padding:0px 14px 5px 14px;
+}
+.published .pub_agreement .bd .agreementtxt {
+	overflow-x:visible;
+	overflow-y:scroll;
+	color:#585858;
+	background-color:#FFFFFF;
+	height:83px;
+	border:1px solid #BFBFC0;
+	scrollbar-base-color:#D4D0C8;
+}
+.published .pub_agreement .fd {
+	padding:2px 16px 5px 14px;
+	line-height:20px;
+	color:#E70002;
+}
+.published .pub_agreement .fd p {
+	color:#0000ff;
+}
+.published .pub_agreement .fd .submit {
+	float:right;
+}
+.published .pub_left .pub_introduction textarea {
+	height:54px;
+}
+.published .pub_left .pub_poster input {
+	border:1px solid #C0C0C0;
+	width:256px !important;
+	*width:251px !important;
+	width:256px;
+	height:20px;
+}
+.published .pub_left .pub_poster  p {
+	text-align:center;
+	color:#32679A;
+}
+.published .pub_left .pub_name input {
+	border:1px solid #C0C0C0;
+	width:256px !important;
+	*width:251px !important;
+	width:256px;
+	height:20px;
+}
+.published .pub_right {
+	float:right;
+	width:340px;
+	padding-right:13px;
+	overflow:hidden;
+}
+.published .pub_right .pub_propaganda {
+	margin-top:8px;
+}
+.published .pub_right .pub_propaganda textarea {
+	height:95px;
+}
+.published .pub_right .pub_contact {
+	margin-top:14px;
+}
+.published .pub_right .pub_contact textarea {
+	height:54px;
+}
+.pub_data dd {
+	line-height:25px;
+}
+.xieyishow {
+	width:98%;
+	height:100px;
+}
+.pub_btn {
+	text-align:right;
+	margin-top:10px;
+}
+.tedt1 {
+	BORDER-BOTTOM:#ccc 1px solid;
+	BORDER-LEFT:#999 1px solid;
+	WIDTH:99%;
+	BORDER-TOP:#999 1px solid;
+	BORDER-RIGHT:#ccc 1px solid
+}
+.tedt1 .bar {
+	BORDER-BOTTOM:#cdcdcd 1px solid;
+	PADDING-BOTTOM:0px;
+	LINE-HEIGHT:25px;
+	PADDING-LEFT:0px;
+	PADDING-RIGHT:10px;
+	BACKGROUND:#f2f2f2;
+	HEIGHT:25px;
+	PADDING-TOP:0px
+}
+.tedt1 .bar .hook {
+	padding-left:10px;
+}
+.tedt1 .area {
+	PADDING-BOTTOM:4px;
+	PADDING-LEFT:4px;
+	PADDING-RIGHT:4px;
+	ZOOM:1;
+	BACKGROUND:#fff;
+	PADDING-TOP:4px
+}
+.tedt1 .pt {
+	BORDER-BOTTOM:medium none;
+	BORDER-LEFT:medium none;
+	PADDING-BOTTOM:0px !important;
+	PADDING-LEFT:0px !important;
+	WIDTH:100%;
+	PADDING-RIGHT:0px !important;
+	BACKGROUND:#fff;
+	BORDER-TOP:1px dotted #ccc;
+	MARGIN-RIGHT:0px;
+	BORDER-RIGHT:medium none;
+	PADDING-TOP:0px !important
+}
+.tedt1 .pt:focus {
+	OUTLINE-STYLE:none;
+	OUTLINE-COLOR:invert;
+	OUTLINE-WIDTH:medium;
+	-moz-box-shadow:none
+}

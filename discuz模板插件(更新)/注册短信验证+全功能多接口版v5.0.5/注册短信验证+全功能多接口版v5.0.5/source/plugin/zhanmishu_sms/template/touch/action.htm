@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+
+  <title>活动标题，根据自己的实际上推广需求酌情设置</title>
+  <link rel="stylesheet" href="source/plugin/zhanmishu_sms/template/intel/css/intlTelInput.css">
+  <link rel="stylesheet" href="source/plugin/zhanmishu_sms/template/touch/action/css/bootstrap.css">
+  <link rel="stylesheet" href="source/plugin/zhanmishu_sms/template/touch/action/css/public.css">
+  <link rel="stylesheet" href="source/plugin/zhanmishu_sms/template/touch/action/css/dialog.css">
+  <link rel="stylesheet" href="source/plugin/zhanmishu_sms/template/touch/action/css/share.css">
+
+</head>
+<body>
+<form action="" id="transferform">
+<div id="share">
+
+  <img src="source/plugin/zhanmishu_sms/template/touch/action/picture/bg1.png">
+  <div class="promotion">
+    <img src="source/plugin/zhanmishu_sms/template/touch/action/picture/yellowbox.png">
+    <div class="promotionInfo">
+      <p>好基友<span id="inviteName" class="stress"></span>邀请你争夺现金红包：</p>
+      <p>注册闪银奇异并获得信用额度，</p>
+      <p>好友即可获得<span class="stress">XX元</span>红包</p>
+      <p>注册后你也可发起邀请夺得红包：</p>
+      <p>每邀请一个有额度的好友即可获得<span class="stress">XX元</span></p>
+      <p>立即注册闪银奇异，加入争夺财富的行列！</p>
+    </div>
+  </div>
+</div>
+<div id="content">
+  <img src="source/plugin/zhanmishu_sms/template/touch/action/picture/bg2.png">
+</div>
+<div id="page">
+  <div id="contain"></div>
+  <img id="rule" class="rule" src="source/plugin/zhanmishu_sms/template/touch/action/picture/view_rule.png">
+  <div>
+    <img class="wecash-log" src="source/plugin/zhanmishu_sms/template/touch/action/picture/smallshan.png">
+  </div>
+  <form>
+  <div id="register">
+    <div class="form-item">
+      <input type="tel" id="mobile" name="mobile"  placeholder="手机号在此" maxlength="11">
+      <span class="commonfont w-clear reset"></span>
+    </div>
+    <div class="form-item code-item">
+      <input class="code-input" type="tel" id="smsverify" name="smsverify" placeholder="验证码在此" maxlength="6">
+      <span id="not-received" class="not-received v-hide">没收到?</span>
+      <span id="sendsec" class="code-btn">获取验证码</span>
+      <input type="hidden" id="code" name="code" value="">
+      <input type="hidden" id="formhash" name="formhash" value="{FORMHASH}">
+    </div>
+    <div class="form-item">
+      <input type="password" id="passwd" placeholder="设置6-20位登录密码" maxlength="20">
+      <span class="commonfont w-clear reset reset-long"></span>
+      <span id="password-lock" class="commonfont w-unseen"></span>
+    </div>
+    <div class="inviteCode">
+      <div class="inviteContain">
+        <span class="invite-des">好友邀请码</span>
+        <input type="text" id="invite_phone" placeholder="可不填写" maxlength="20" value="">
+        <span class="commonfont w-clear reset"></span>
+      </div>
+    </div>
+    <div class="form-item">
+      <span class="submit-register" id="submit">立即注册</span>
+    </div>
+    <p class="protocol">注册即同意<a href="serviceAgreement.html">《服务与隐私协议》</a></p>
+    <section class="download-share">
+      <img id="downloadShare" src="source/plugin/zhanmishu_sms/template/touch/action/picture/download_btn.png">
+      <img class="download-des" src="source/plugin/zhanmishu_sms/template/touch/action/picture/download_des.png">
+    </section>
+  </div>
+ 
+</div>
+<div class="mark" id="mark" style="display:none;">
+  <img src="source/plugin/zhanmishu_sms/template/touch/action/picture/sharemark.png">
+</div>
+<div id="r-dialog" class="modal fade send-voice away-from-keyboard">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body prompt_box">
+        <div class="c_787878 rem15 t_c pb10 pt20">
+          <div id="imgZYM" class="obtain">
+            <img id="r-img">
+          </div>
+          <input id="r-input" type="text" placeholder="请输入图片验证码" maxlength="4">
+        </div>
+        <div class="dialog-btn btn_box mt26">
+          <a id="r-cancel">取消</a>
+          <a id="r-confirm">确定</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+ </form>
+<script src="source/plugin/zhanmishu_sms/template/touch/action/js/fastclick.min.js"></script>
+<script src="source/plugin/zhanmishu_sms/template/touch/action/js/layer.js"></script>
+<script type="text/javascript">
+    !window.$ && document.write('<script type = "text/javascript" src ="source/plugin/zhanmishu_sms/template/static/jQuery.min.js"><\/script>');
+</script>
+
+<script type="text/javascript">
+
+   $(function(){
+      $("#sendsec").on('click',function(){
+        sendsms();
+      });
+      $("#submit").on('click',function(){
+        register();
+      });
+   });
+   function sendsms(){
+        s = new zmssms('','','',60,'code','sendsec','mobile','smsverify');
+          
+        if (!s.mobile) {
+          layer.open({
+            content: '手机号必须填写'
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+          });
+          return;
+        }
+        s.sendMessage('plugin.php?id=zhanmishu_sms:send&no_submit=no_submit&method=send','transferform');
+   }
+   function register(){
+        v = new zmssms('','','',60,'code','sendsec','mobile','smsverify');
+        if (!v.mobile) {
+           layer.open({
+              content: '手机号必须填写'
+              ,skin: 'msg'
+              ,time: 2 //2秒后自动关闭
+            });
+            return;     
+          }else if (!v.verify) {
+           layer.open({
+              content: '验证码必须填写'
+              ,skin: 'msg'
+              ,time: 2 //2秒后自动关闭
+            });
+            return;   
+          }else if (!$('#passwd').val()) {
+           layer.open({
+              content: '密码必须填写'
+              ,skin: 'msg'
+              ,time: 2 //2秒后自动关闭
+            });
+            return;   
+          }
+          var str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+          var n = 13, username = "";
+          for(var i = 0; i < n; i++){
+              var rand = Math.floor(Math.random() * str.length);
+              username += str.charAt(rand);
+          }
+        v.register('plugin.php?id=zhanmishu_sms:send&registersubmit=yes&method=register&verify='+v.verify+'&username='+username,'transferform');
+   }
+   function zmssms(code,mobile,verify,count,codeid,sendid,mobileid,verifyid){
+
+        this.codeid = codeid ? codeid : '';
+        this.sendid = sendid ? sendid : '';
+        this.mobileid = mobileid ? mobileid : '';
+        this.verifyid = verifyid ? verifyid : '';
+
+        this.code = $("#"+codeid).val();
+        this.mobile = $("#"+mobileid).val();
+        this.verify = $("#"+verifyid).val();
+
+        this.count = count ? count : 60;
+        this.curCount = count ? count : 60;
+        this.codeLength = 6;
+   }
+   zmssms.prototype.sendMessage=function(requesturl,formid){
+
+        var obj = this;
+        var SetRemainTime=function(){
+            var curCount;
+            if (obj.curCount == 0) {
+                window.clearInterval(InterValObj);
+                $("#"+obj.sendid).removeAttr("disabled");
+                $("#"+obj.sendid).html("{lang zhanmishu_sms:resend}");  
+                obj.code = "";
+            }else {  
+                obj.curCount--; 
+                curCount = obj.curCount;
+                $("#"+obj.sendid).html("{lang zhanmishu_sms:input_tips_sec}");  
+            }              
+        }
+        if(this.mobile){  
+            code = 0;
+            for (var i = 0; i < this.codeLength; i++) {  
+                code += parseInt(Math.random() * 10).toString();
+            }
+            $("#"+this.codeid).val(code);
+            $("#"+this.sendid).attr("disabled", "true");  
+
+            InterValObj = window.setInterval(SetRemainTime, 1000);
+
+            $.ajax({  
+                type: "POST", 
+                dataType: "json", 
+                url: requesturl,   
+                data: $("#" + formid).serialize(),
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    $("#"+obj.sendid).removeAttr("disabled");
+                    $("#"+obj.sendid).html("{lang zhanmishu_sms:resend}");
+                },  
+                success: function (msg){
+                    
+                    if (msg.code <= 0) {
+                        window.clearInterval(InterValObj);
+                        $("#"+obj.sendid).removeAttr("disabled");
+                        $("#"+obj.sendid).html("{lang zhanmishu_sms:resend}");
+                    }else{
+                    }
+                }  
+            });
+        }else{  
+        }  
+   }
+   zmssms.prototype.register=function(requesturl,formid){
+        this.mobile = $('#'+this.mobileid).val();
+        if (!this.code) {
+            layer.open({
+              content: '验证失败，请刷新网页重试'
+              ,skin: 'msg'
+              ,time: 2 //2秒后自动关闭
+            });
+        }
+        layer.open({
+          type: 2,
+          content: '正在注册',
+          time:2
+        });
+        $.ajax({  
+            type: "POST",
+            dataType: "json", 
+            url: requesturl, 
+            data: $("#"+formid).serialize(),
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //window.clearInterval(InterValObj);
+            },  
+            success: function (msg){
+                if (msg.code <= 0) {
+                  layer.open({
+                    content: '注册用户失败，请刷新网页重试'
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                  });
+                }
+
+                if (msg.code == 1) {
+                  self.location = './';
+                }
+
+            }  
+        }); 
+        return false;
+   }
+</script>
+
+</body>
+</html>

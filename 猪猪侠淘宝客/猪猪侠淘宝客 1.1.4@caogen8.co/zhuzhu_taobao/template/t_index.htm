@@ -1,0 +1,219 @@
+<!--{template zhuzhu_taobao:t_header}-->
+</div>
+<link rel="stylesheet" href="./source/plugin/zhuzhu_taobao/static/css/swiper.min.css">
+<style type="text/css">
+.swiper-wrapper {width: 750px;float: left}
+.swiper-pagination-bullet {width: 12px;height: 12px;background: #FFFFFF;opacity: .7;}
+.swiper-pagination-bullet-active {background: #fb3434}
+</style>
+<div class="index_slide cl" id="index_slide" style="background: #$slide[0][bgcolor]">
+	<div class="swiper-container wp cl">
+		<div class="z">
+			<div class="cl slidebox">
+				<ul class="slideshow">
+					<!--{loop $left_slide $v}-->
+					<li><a href="$v[url]"><img src="$v[pic]" /></a></li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+			<script type="text/javascript">runslideshow();</script>
+		</div>
+		<div class="swiper-wrapper">
+			<!--{loop $slide $v}-->
+			<div class="swiper-slide"><a href="$v[url]"><img src="$v[pic]" /></a></div>
+			<!--{/loop}-->
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="y">
+			<div class="loginfo">
+				{avatar($_G[uid],middle)}
+			<!--{if $_G[uid]}-->
+				<p>{lang zhuzhu_taobao:t_index_htm_1}$_G[username]</p>
+				<p class="saving cl">{lang zhuzhu_taobao:jump_url_htm_9}{lang credits} <em> $_G[member][credits]</em></p>
+			<!--{else}-->
+				<p>{lang zhuzhu_taobao:t_index_htm_3}</p>
+				<a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)">{lang zhuzhu_taobao:t_index_htm_4}</a>
+				<a href="member.php?mod=register" target="_blank">{lang zhuzhu_taobao:t_index_htm_5}</a>
+			<!--{/if}-->
+			</div>
+			<div class="QRcode">
+				  <img src="http://pan.baidu.com/share/qrcode?w=212&h=212&url=$_G[siteurl]" />
+			 </div>
+		</div>
+	</div>
+</div>
+<!-- Swiper JS -->
+<script src="./source/plugin/zhuzhu_taobao/static/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+var bg_arr = new Array({$bg_arr});
+var mySwiper = new Swiper('.swiper-container', {
+	autoplay: 5000,
+	speed: 1200,
+	pagination : '.swiper-pagination',
+	onTransitionStart: function(swiper){
+		document.getElementById("index_slide").style.backgroundColor=bg_arr[swiper.activeIndex];
+    }
+})
+</script>
+
+<div class="bg_fff cl">
+	<div class="wp">
+		<img src="{$img}index_banner_footer.png" />
+	</div>
+</div>
+
+<div class="wp cl">
+<!--{if in_array('tqg', $zz_nav)}-->
+	<div class="index_tqg mt_20 cl">
+		<h2>
+		<a href="plugin.php?id=zhuzhu_taobao&mod=tqg"><img src="{$img}TB1cfpfOVXXXXaAXXXXXXXXXXXX-700-66.png"></a>
+		<span class="y">
+			<div class="time">
+				<i class="yahei">{lang zhuzhu_taobao:t_index_htm_6}</i>
+				<span id="t_h">00</span>:<span id="t_m">00</span>:<span id="t_s">00</span>
+				<a href="plugin.php?id=zhuzhu_taobao&mod=tqg" class="more yahei">{lang zhuzhu_taobao:t_index_htm_7}</a>
+			</div>
+			<script>
+				function GetRTime(){
+				  var EndTime= new Date('$end');
+				  var NowTime = new Date();
+				  var t =EndTime.getTime() - NowTime.getTime();
+				  var h=0;
+				  var m=0;
+				  var s=0;
+				  if(t>=0){
+					  h=Math.floor(t/1000/60/60%24);
+					  m=Math.floor(t/1000/60%60); 
+					  s=Math.floor(t/1000%60); 
+				  }
+
+				  document.getElementById("t_h").innerHTML = PrefixInteger(h, 2);
+				  document.getElementById("t_m").innerHTML = PrefixInteger(m, 2);
+				  document.getElementById("t_s").innerHTML = PrefixInteger(s, 2); 
+				}
+				setInterval(GetRTime,0);
+				function PrefixInteger(num, length) {
+					return (Array(length).join('0') + num).slice(-length);
+				} 
+
+			</script> 
+		</span>
+		</h2>
+		<ul class="cl">
+			<!--{loop $tqg_list $value}-->
+			<li>
+				<a href="{$jump_url}$value[num_iid]" target="_blank">
+					<img src="$value[pic_url]" alt="$value[title]" />
+					<div class="cl">
+						<h1 class="wrap2 yahei">$value[title]</h1>
+						<div class="price-promo">
+							<span class="">&yen; $value[zk_final_price]</span>
+							<del>$value[reserve_price]</del>
+						</div>
+						<div class="progress">
+							<span class="progressbar progressing" style="width: {$value[width]}%;"></span>
+							<span class="progress-text">{lang zhuzhu_taobao:t_index_htm_8}{$value[sold_num]}{lang zhuzhu_taobao:t_index_htm_9}</span>
+						</div>
+						<!--{if $value[width] > '90'}-->
+						<p class="warning yahei">{lang zhuzhu_taobao:t_index_htm_10}~{lang zhuzhu_taobao:t_index_htm_11}</p>
+						<!--{/if}-->
+					</div>
+				</a>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<script type="text/javascript">
+		(function(win,doc){
+			var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0];
+			if (!win.alimamatk_show) {
+				s.charset = "gbk";
+				s.async = true;
+				s.src = "https://alimama.alicdn.com/tkapi.js";
+				h.insertBefore(s, h.firstChild);
+			};
+			var o = {
+				pid: "$var[adzoneid]",
+				appkey: "$appkey",
+				unid: "",
+				type: "click"
+			};
+			win.alimamatk_onload = win.alimamatk_onload || [];
+			win.alimamatk_onload.push(o);
+		})(window,document);
+	</script>
+<!--{/if}-->
+
+<!--{if in_array('tbrand', $zz_nav)}-->
+	<div class="index_brand mt_20 cl">
+		<h2 class="yahei">
+			<a href="plugin.php?id=zhuzhu_taobao&mod=tbrand"><img src="{$img}index_brand.png"></a>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=tbrand" class="y more">{lang zhuzhu_taobao:t_index_htm_7}</a>
+		</h2>
+		<div class="t_brand cl">
+			<ul>
+				<!--{loop $brandlist $v}-->
+				<li class="cl">
+					<a href="plugin.php?id=zhuzhu_taobao&mod=tbrand&op=view&brand_id=$v[brand_id]">
+						<img src="{echo pic_get($v['banner'], 'portal', '', '', '', '')}" title="$v[name]" alt="$v[name]">
+						<div class="brand_info">
+							<i style="background: #FFF url('{echo pic_get($v[logo], 'portal', '', '', '', '')}') center no-repeat;background-size: 80px auto;"></i>
+							<h2>$v[name]</h2>
+						</div>
+					</a>
+					<ul>
+						<!--{loop $v[list] $vv}-->
+						<li>
+							<div class="coupon_tip cl">{lang zhuzhu_taobao:jump_url_htm_5} {eval echo $vv[zk_final_price]-$vv[q_price]} {lang zhuzhu_taobao:jump_url_htm_6}<i></i></div>
+							<a href="{$jump_url}$vv[num_iid]&e=$vv[e]&zk_final_price=$vv[zk_final_price]&q_price=$vv[q_price]"><img src="$vv[pict_url]" alt="$vv[title]"></a>
+							<h2 class="wrap">$vv[title]</h2>
+						</li>
+						<!--{/loop}-->
+					</ul>
+				
+				</li>
+				<!--{/loop}-->
+			</ul>
+		</div>
+	</div>
+<!--{/if}-->
+
+<!--{if in_array('quan', $zz_nav)}-->
+	<div class="index_quan mt_20 mb_20">
+		<h2>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=quan"><img src="{$img}quna_cate.png"></a>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=quan" class="y more">{lang zhuzhu_taobao:t_index_htm_7}</a>
+		</h2>
+		<div class="q_item">
+			<div class="wp cl">
+				<ul class="cl" id="quan_list">
+					<!--{loop $quan_list $v}-->
+					<li class="y4">
+						<i class="q_new"></i>
+						<a href="{$jump_url}$v[num_iid]&e=$v[e]&zk_final_price=$v[zk_final_price]&q_price=$v[q_price]" target="_blank">
+							<img src="$v[pict_url]" alt="$v[title]" />
+						</a>
+						<h2><a target="_blank" href="{$jump_url}$v[num_iid]"><img src="./source/plugin/zhuzhu_taobao/static/image/{if $v[user_type]}tmall{else}taobao{/if}.png">$v[title]</a></h2>
+						<div class="coupon-wrap cl">
+							<p>
+								<span class="y">30{lang zhuzhu_taobao:t_brand_htm_1} $v[volume]</span>
+								<span class="q_price">{lang zhuzhu_taobao:t_brand_htm_2}&yen; <i>$v[q_price]</i>
+							</p>
+						</div>
+						<div class="q_link">
+							<span class="y"><a>{if $v[user_type]}{lang zhuzhu_taobao:t_brand_htm_3}{else}{lang zhuzhu_taobao:t_brand_htm_4}{/if}{lang zhuzhu_taobao:t_brand_htm_5}</a></span>
+							<span class="z">{lang zhuzhu_taobao:jump_url_htm_5}{eval echo $v[zk_final_price]-$v[q_price]}{lang zhuzhu_taobao:jump_url_htm_6}</span>
+						</div>
+						<!--{if $_G['adminid'] == 1 }--><span class="fan">{lang zhuzhu_taobao:jump_url_htm_31} $v[commission_rate]%</span><!--{/if}-->
+					</li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--{/if}-->
+
+<!--{subtemplate zhuzhu_taobao:t_tag}-->
+<!--{subtemplate common/footer}-->

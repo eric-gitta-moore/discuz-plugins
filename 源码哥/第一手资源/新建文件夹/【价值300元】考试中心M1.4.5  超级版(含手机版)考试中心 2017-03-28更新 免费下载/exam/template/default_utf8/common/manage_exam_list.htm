@@ -1,0 +1,74 @@
+		<form id="group_list" method="post" autocomplete="off" action="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab&formhash=$_G[formhash]">	
+		<input value="$_G[formhash]" name="formhash" type="hidden">
+		<table cellpadding="0" cellspacing="0" class="table-el"><tr><th width=40 class="bm_h"><center>排序</center></th><th width=35 class="bm_h"><center>分值</center></th><th class="bm_h"><center>题组: $groups[$gid][name]</center></th><tr></table>
+		{eval $i=0;}
+		<!--{loop $groups $_gid $_group}-->
+			<!--{if ($tab[0]=='p' || $gid==$_group[gid]) && trim($_group[content])}--><div class="edit-gct">$_group[content]</div><!--{/if}-->
+			<!--{loop $_group[list] $v}-->
+			<a name="move{$v[eid]}"></a>
+			<div class="edit-item" id="id_$v[eid]">
+				<table cellpadding="0" cellspacing="0" class="table-el"><tr>			
+					<td class="st"><input maxLength=3 name="sort[{$v[eid]}]" value="$v[sort]"></td>
+					<td class="st"><input maxLength=4 name="score[{$v[eid]}]" value="<!--{if $v[score]!=0}-->$v[score]<!--{/if}-->"></td>
+					<td <!--{if !$v[display]}-->class="hide"<!--{/if}-->>
+						<!--{if $v[image]}--><div class="y"><img src="$v[image]" height=60></div><!--{/if}-->
+						<div id="subject_$v[eid]">$v[subject]
+							<!--{if $v[type]==2 || $v[type]==3}--><br><br>
+								{eval $data=explode("\n", $v[data])}
+								<!--{loop $data $_k $_v}-->
+								{eval echo chr($_k+65)}. $_v<br>
+								<!--{/loop}-->
+							<!--{/if}-->
+						</div>
+					</td>
+				<tr></table>
+				<table cellpadding="0" cellspacing="0" class="table-el"><tr><td width=85 valign="top" align="right">参考答案:</td>
+					<td class="xi1">
+						<!--{if     $v[type]==1}--><!--{if $v[result]==1}-->正确<!--{else}-->错误<!--{/if}-->
+						<!--{elseif $v[type]==2 || $v[type]==3}-->$v[result]
+						<!--{elseif $v[type]==4 || $v[type]==5}-->$v[data]<!--{/if}-->
+					</td><td width="200">
+					<div class="ei-bar"><a href="javascript:;" onclick="user_exam_set_display($v[eid],this)">开关</a>
+						 <a href="plugin.php?id=exam:manage&pid=$pid&gid=$v[gid]&tab=$v[type]&eid=$v[eid]" class="a">编辑</a>
+						 <a href="javascript:;" onclick="user_exam_delete($v[eid])">删除</a>
+						 <a href="forum.php?mod=viewthread&tid=$v[tid]" target="_blank">帖子</a>
+					</div>
+				</td></tr></table>
+			</div>
+			{eval $i = $v[gid];}
+			<!--{/loop}-->
+		<!--{/loop}-->
+		<input type="submit" class="pn pnc pp mtm" value="确定"> <p class="mtn xi1">小提示: 如果一个试题的分值设定为空或0,则该题目的分值继承题组中的分值, 如果设定了该分值,该题的分值则为该设定值!</p>
+		</form>
+		<script type="text/javascript">
+			function saveData(){}
+			function loadData(){}
+			function user_exam_set_display(eid,e){
+				var obj = e;
+				ajaxget('plugin.php?id=exam:ajax&formhash='+formhash+'&action=user_exam_set_display&eid='+eid+'&'+Math.random(), 'ajaxwaitid', '','','',function(){
+					var display = $('ajaxwaitid').innerHTML;
+					var color   = display==1 ? 'show' : 'hide';
+					$('subject_'+eid).className = color;
+				});
+			}	
+			function user_exam_delete(eid){
+				ajaxget('plugin.php?id=exam:ajax&formhash='+formhash+'&action=user_exam_delete&eid='+eid+'&'+Math.random(), 'ajaxwaitid', '','','',function(){
+					var status = $('ajaxwaitid').innerHTML;
+					if(status!=1)return;
+					delete_tr = $('id_'+eid);
+					tr_left_height = Math.max(delete_tr.offsetHeight, delete_tr.clientHeight)
+					delete_tr.innerHTML='<td colspan=3 style="padding:0;"></td>';
+					delete_tr.style.height = tr_left_height + 'px';
+					delete_tr_step = tr_left_height / 40;
+					user_exam_delete_hide = function user_exam_delete_hide(){
+						tr_left_height-=delete_tr_step;
+						if(tr_left_height<0){
+							clearInterval(user_exam_delete_hide_obj);
+							delete_tr.parentNode.deleteRow(delete_tr.rowIndex)
+						}
+						delete_tr.style.height=tr_left_height+'px';
+					}
+					var user_exam_delete_hide_obj = setInterval('user_exam_delete_hide()',5);
+				});
+			}
+		</script>

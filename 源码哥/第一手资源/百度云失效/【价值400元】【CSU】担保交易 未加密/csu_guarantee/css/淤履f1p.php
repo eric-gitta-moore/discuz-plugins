@@ -1,0 +1,23 @@
+┏*--*--*--*--*--*--*--*--*--*--★源码哥随机资源推荐★--*--*--*--*--*--*--*--*--*--*--*--*--*--*
+┊
+┃1、Discuz!防止CSRF跨站讲解 http://www.ymg6.com/thread-540-1-1.html
+┊
+┃2、价值9.9元Qing_freefresh 完整版 免费发布 http://www.ymg6.com/thread-1011-1-1.html
+┊
+┃3、discuzX2.5 评分美化修改方法 http://www.ymg6.com/thread-763-1-1.html
+┊
+┃4、Mysql 自动备份脚本（Discuz Mysql优化技巧） http://www.ymg6.com/thread-648-1-1.html
+┊
+┃5、价值299百度站内搜索辅助 2.0.1 高级版 http://www.ymg6.com/thread-168-1-1.html
+┊
+┃6、价值20元的论坛背景 VIP2.1 http://www.ymg6.com/thread-127-1-1.html
+┊
+┃7、Discuz! X3.1 X3.2 1225版邮箱重置密码失败解决方案之一 http://www.ymg6.com/thread-760-1-1.html
+┊
+┃8、discuz教程：手机版注册页输入框提示文字修改方法 http://www.ymg6.com/thread-716-1-1.html
+┊
+┃9、价值9.9元扁平化红黑经典版 GBK宽窄屏赞助版 免费发布 http://www.ymg6.com/thread-1033-1-1.html
+┊
+┃10、价值318元禾今微信投票 32.0 http://www.ymg6.com/thread-1244-1-1.html
+┊
+┗--*--*--*--*--*--*--*--★--*--*--*--*--*--*--★--*--*--*--*--*--*--★--*--*--*--*--*--*--*--*

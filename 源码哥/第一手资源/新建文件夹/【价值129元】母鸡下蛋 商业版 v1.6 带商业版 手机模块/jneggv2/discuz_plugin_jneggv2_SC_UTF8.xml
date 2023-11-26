@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-11-01 13:50]]></item>
+	<item id="From"><![CDATA[分享吧（www.fx8.cc）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源码哥_母鸡下蛋]]></item>
+			<item id="identifier"><![CDATA[jneggv2]]></item>
+			<item id="description"><![CDATA[母鸡下蛋，用户可获得可观收益！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[jneggv2/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.6]]></item>
+			<item id="__modules">
+				<item id="25">
+					<item id="name"><![CDATA[myyapmagoo]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>源码哥</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[jneggv2]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[母鸡下蛋]]></item>
+					<item id="url"><![CDATA[plugin.php?id=jneggv2]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推荐一个dz商</span><span style="color:#4C33E5;">业插件模版下载的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">网站给大家</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">源码哥分享吧</span></a><span style="color:#4C33E5;">（www.ymg6.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">这</span><span style="color:#E53333;">是一个</span><span style="color:#E53333;">dz商业</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">资源破解分享的网站，而且还有很多精品的网站源码下载</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他们资源每天更新，并且很多都是他们自己出钱在应用中心购买后破解分享出来的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不过还是替他们说一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他们站下载的资源只限于自己学习研究内含的设计思想和原理 请勿有任何商业盈利行为</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介绍也介绍完了，给大家做个小导航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dz商业破解插件下载</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dz商业风格模版下载</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">精品网站源码下载</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">工具素材下载</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">精选教程区</a></span> 
+</h3> ]]></item>
+				<item id="MJXD"><![CDATA[母鸡下蛋]]></item>
+				<item id="metaMJXD"><![CDATA[母鸡下金蛋！这是网络赚钱最新模式！收取鸡蛋的时候还有机率获得额外奖励！]]></item>
+				<item id="jnegg1"><![CDATA[管理中心]]></item>
+				<item id="jnegg2"><![CDATA[游戏未开启]]></item>
+				<item id="jnegg3"><![CDATA[您的所在用户组没权限可进入。]]></item>
+				<item id="jnegg4"><![CDATA[管理员还没到后台设置母鸡购买积分]]></item>
+				<item id="jnegg5"><![CDATA[管理员开启了运气，但是并没有指定运气积分。]]></item>
+				<item id="jnegg6"><![CDATA[花费了]]></item>
+				<item id="jnegg7"><![CDATA[购买了]]></item>
+				<item id="jnegg8"><![CDATA[只母鸡]]></item>
+				<item id="jnegg9"><![CDATA[收取了]]></item>
+				<item id="jnegg10"><![CDATA[粒鸡蛋！]]></item>
+				<item id="jnegg11"><![CDATA[在收取鸡蛋的时候，幸运的获得了]]></item>
+				<item id="jnegg12"><![CDATA[粒金蛋！]]></item>
+				<item id="jnegg13"><![CDATA[加入了饲养行列！]]></item>
+				<item id="jnegg14"><![CDATA[幸运的获得了1点运气！]]></item>
+				<item id="jnegg15"><![CDATA[支付了{totalcost}{g_costbuyext}，购买了{paymount}只母鸡。]]></item>
+				<item id="jnegg16"><![CDATA[出售了]]></item>
+				<item id="jnegg17"><![CDATA[粒金蛋，换取了]]></item>
+				<item id="jnegg18"><![CDATA[粒鸡蛋，换取了]]></item>
+				<item id="jnegg19"><![CDATA[！]]></item>
+				<item id="jnegg20"><![CDATA[没有输入数量！]]></item>
+				<item id="jnegg21"><![CDATA[购买成功！]]></item>
+				<item id="jnegg22"><![CDATA[购买{paymount}母鸡需花费{totalcost}{g_costbuyext}，而您的{g_costbuyext}只有{buyext}不足以购买！]]></item>
+				<item id="jnegg23"><![CDATA[验证错误，请重新登录试试！]]></item>
+				<item id="jnegg24"><![CDATA[出售成功！]]></item>
+				<item id="jnegg25"><![CDATA[最低兑出的数量是{g_goldeggmin}粒！]]></item>
+				<item id="jnegg26"><![CDATA[售卖了{paymount}粒金蛋。]]></item>
+				<item id="jnegg27"><![CDATA[你的金蛋不足！]]></item>
+				<item id="jnegg28"><![CDATA[售卖了{paymount}粒鸡蛋。]]></item>
+				<item id="jnegg29"><![CDATA[你的鸡蛋不足！]]></item>
+				<item id="jnegg30"><![CDATA[开通成功！您现在可以开始获取收益了！]]></item>
+				<item id="jnegg31"><![CDATA[您已经开通过了！]]></item>
+				<item id="jnegg32"><![CDATA[单次最低提取量为{g_eggmin}粒鸡蛋，请达到此产量再领取。]]></item>
+				<item id="jnegg33"><![CDATA[已达到今日可领取次数，请明日再领取！]]></item>
+				<item id="jnegg34"><![CDATA[提取成功！，您很幸运的获得了{g_mt}粒金蛋！]]></item>
+				<item id="jnegg35"><![CDATA[提取成功！，您很幸运的获得了{g_mt}粒金蛋！也获得了1点运气！]]></item>
+				<item id="jnegg36"><![CDATA[提取成功！]]></item>
+				<item id="jnegg37"><![CDATA[提取成功！，您很幸运的获得了1点运气！]]></item>
+				<item id="jnegg38"><![CDATA[未知错误]]></item>
+				<item id="jnegg39"><![CDATA[您不是管理员！]]></item>
+				<item id="jnegg40"><![CDATA[没有选择编辑的用户]]></item>
+				<item id="jnegg41"><![CDATA[更新成功。]]></item>
+				<item id="jnegg42"><![CDATA[没有输入天数]]></item>
+				<item id="jnegg43"><![CDATA[删除成功！总共清除了{nlog}条日志。]]></item>
+				<item id="jnegg44"><![CDATA[没有选择要删除的日志！]]></item>
+				<item id="jnegg45"><![CDATA[没有选择要删除的用户！]]></item>
+				<item id="jnegg46"><![CDATA[删除成功！]]></item>
+				<item id="jnegg47"><![CDATA[饲养的]]></item>
+				<item id="jnegg48"><![CDATA[只鸡因操劳过度已经死亡。]]></item>
+				<item id="jnegg49"><![CDATA[查询用户成功，现在正在跳转中。]]></item>
+				<item id="jnegg50"><![CDATA[没有该用户的相关日志]]></item>
+				<item id="jnegg51"><![CDATA[请先提取未领取的鸡蛋产量才可以购买新的母鸡]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="MJXD"><![CDATA[母鸡下蛋]]></item>
+				<item id="jnegg1"><![CDATA[总收成是]]></item>
+				<item id="jnegg2"><![CDATA[鸡蛋]]></item>
+				<item id="jnegg3"><![CDATA[全日收成加成]]></item>
+				<item id="jnegg4"><![CDATA[最新动态]]></item>
+				<item id="jnegg5"><![CDATA[收成计算]]></item>
+				<item id="jnegg6"><![CDATA[每日产量]]></item>
+				<item id="jnegg7"><![CDATA[价值约]]></item>
+				<item id="jnegg8"><![CDATA[母鸡数量]]></item>
+				<item id="jnegg9"><![CDATA[计算]]></item>
+				<item id="jnegg10"><![CDATA[个人信息]]></item>
+				<item id="jnegg11"><![CDATA[请先登录]]></item>
+				<item id="jnegg12"><![CDATA[昵称]]></item>
+				<item id="jnegg13"><![CDATA[积分]]></item>
+				<item id="jnegg14"><![CDATA[操作]]></item>
+				<item id="jnegg15"><![CDATA[开通成为牧场主后可享有收入，确认开通？]]></item>
+				<item id="jnegg16"><![CDATA[请先开通才能进行操作]]></item>
+				<item id="jnegg17"><![CDATA[牧场主资讯]]></item>
+				<item id="jnegg18"><![CDATA[粒]]></item>
+				<item id="jnegg19"><![CDATA[出售]]></item>
+				<item id="jnegg20"><![CDATA[金蛋]]></item>
+				<item id="jnegg21"><![CDATA[运气]]></item>
+				<item id="jnegg22"><![CDATA[目前您的牧场有]]></item>
+				<item id="jnegg23"><![CDATA[只母鸡]]></item>
+				<item id="jnegg24"><![CDATA[当前产量]]></item>
+				<item id="jnegg25"><![CDATA[每日预估产量]]></item>
+				<item id="jnegg26"><![CDATA[每日收取次数上限为]]></item>
+				<item id="jnegg26_1"><![CDATA[次，每次收取都有机率获得金蛋。获得<font color=\'#CCCC00\'>金蛋</font>的机率跟运气有关。]]></item>
+				<item id="jnegg27"><![CDATA[提取]]></item>
+				<item id="jnegg28"><![CDATA[购买母鸡]]></item>
+				<item id="jnegg29"><![CDATA[当前母鸡单价]]></item>
+				<item id="jnegg30"><![CDATA[请输入购买数量]]></item>
+				<item id="jnegg31"><![CDATA[只。 请输入整数]]></item>
+				<item id="jnegg32"><![CDATA[确定]]></item>
+				<item id="jnegg33"><![CDATA[出售金蛋]]></item>
+				<item id="jnegg34"><![CDATA[当前金蛋收购单价]]></item>
+				<item id="jnegg35"><![CDATA[粒。 请输入整数。]]></item>
+				<item id="jnegg36"><![CDATA[最低出售数量是]]></item>
+				<item id="jnegg37"><![CDATA[出售鸡蛋]]></item>
+				<item id="jnegg38"><![CDATA[当前鸡蛋收购价]]></item>
+				<item id="jnegg39"><![CDATA[，注意，请确保每次出售都可以获得整数的]]></item>
+				<item id="jnegg40"><![CDATA[，小数点直接剔除，没有四舍五入！]]></item>
+				<item id="jnegg41"><![CDATA[管理中心]]></item>
+				<item id="jnegg42"><![CDATA[用户管理]]></item>
+				<item id="jnegg43"><![CDATA[日志管理]]></item>
+				<item id="jnegg44"><![CDATA[用户名]]></item>
+				<item id="jnegg45"><![CDATA[数量]]></item>
+				<item id="jnegg46"><![CDATA[加入日期]]></item>
+				<item id="jnegg47"><![CDATA[操作]]></item>
+				<item id="jnegg48"><![CDATA[编辑]]></item>
+				<item id="jnegg49"><![CDATA[删除后不可回溯，请慎用！(为了方便查询, 相关用户的操作日志暂不删除, 管理员可以到日志管理查看, 如果确认要删除, 请在日志管理删除即可。)]]></item>
+				<item id="jnegg50"><![CDATA[删除]]></item>
+				<item id="jnegg51"><![CDATA[批量删除日志 : 您要删除多少天以前的日志？]]></item>
+				<item id="jnegg52"><![CDATA[天以前。(此操作不可回溯，请慎用。)]]></item>
+				<item id="jnegg53"><![CDATA[操作日期]]></item>
+				<item id="jnegg54"><![CDATA[确定删除？此操作不可回溯。]]></item>
+				<item id="jnegg55"><![CDATA[确认收取？]]></item>
+				<item id="jnegg56"><![CDATA[请输入出售数量]]></item>
+				<item id="jnegg57"><![CDATA[养鸡达人]]></item>
+				<item id="jnegg58"><![CDATA[提取达人]]></item>
+				<item id="jnegg59"><![CDATA[金蛋达人]]></item>
+				<item id="jnegg60"><![CDATA[只]]></item>
+				<item id="jnegg61"><![CDATA[查找用户]]></item>
+				<item id="jnegg62"><![CDATA[删除后不可回溯，如果该用户还有在游戏内，并不对其记录做出修改 (如已经领取的鸡蛋，还是在该用户记录内)，只是删除曾经做过的操作的日志。]]></item>
+				<item id="jnegg63"><![CDATA[点击批量删除所有关于]]></item>
+				<item id="jnegg64"><![CDATA[用户的日志 ！ 慎用 (多数用于站长已经删除该用户后，所残留的日志，站长检查完毕或备份后，才建议删除。]]></item>
+				<item id="jnegg65"><![CDATA[查询母鸡]]></item>
+				<item id="jnegg66"><![CDATA[母鸡数量]]></item>
+				<item id="jnegg67"><![CDATA[购买日期]]></item>
+				<item id="jnegg68"><![CDATA[死亡日期]]></item>
+				<item id="jnegg69"><![CDATA[状态]]></item>
+				<item id="jnegg70"><![CDATA[死亡]]></item>
+				<item id="jnegg71"><![CDATA[生产中]]></item>
+				<item id="jnegg72"><![CDATA[修改购买日期输入格式 <font color="#FF0000">年年年年-月月-日日 时时:分分</font> 格式错误会导致日期不正常！]]></item>
+				<item id="jnegg73"><![CDATA[电脑版]]></item>
+			</item>
+			<item id="installlang">
+				<item id="Hongli"><![CDATA[红利]]></item>
+
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否开启]]></item>
+				<item id="description"><![CDATA[是否开启游戏]]></item>
+				<item id="variable"><![CDATA[jn_onoff]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[购买母鸡的论坛积分]]></item>
+				<item id="description"><![CDATA[设置使用什么论坛积分购买母鸡]]></item>
+				<item id="variable"><![CDATA[jn_buyext]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[母鸡单价]]></item>
+				<item id="description"><![CDATA[设置1只母鸡售价多少]]></item>
+				<item id="variable"><![CDATA[jn_costbuy]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[母鸡每日下蛋/只]]></item>
+				<item id="description"><![CDATA[每只母鸡每日下多少粒蛋]]></item>
+				<item id="variable"><![CDATA[jn_egg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[可进入用户组]]></item>
+				<item id="description"><![CDATA[设置可进入的游戏组]]></item>
+				<item id="variable"><![CDATA[jn_usergroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+					<item id="4"><![CDATA[13]]></item>
+					<item id="5"><![CDATA[14]]></item>
+					<item id="6"><![CDATA[15]]></item>
+					<item id="7"><![CDATA[20]]></item>
+					<item id="8"><![CDATA[16]]></item>
+					<item id="9"><![CDATA[17]]></item>
+					<item id="10"><![CDATA[18]]></item>
+					<item id="11"><![CDATA[19]]></item>
+					<item id="12"><![CDATA[1]]></item>
+					<item id="13"><![CDATA[2]]></item>
+					<item id="14"><![CDATA[3]]></item>
+					<item id="15"><![CDATA[7]]></item>
+					<item id="16"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[运气开关]]></item>
+				<item id="description"><![CDATA[运气是用户可以获得金蛋，如果关闭着无法获得金蛋。]]></item>
+				<item id="variable"><![CDATA[jn_luck]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[获得金蛋成功率]]></item>
+				<item id="description"><![CDATA[普通用户获得金蛋的成功率，设置 1 代表 1%，以此类推]]></item>
+				<item id="variable"><![CDATA[jn_goldegg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[VIP用户组]]></item>
+				<item id="description"><![CDATA[VIP用户组可以获得更多的金蛋机率]]></item>
+				<item id="variable"><![CDATA[jn_vip]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[VIP用户组成功率]]></item>
+				<item id="description"><![CDATA[VIP用户组获得金蛋的成功率，这是30 代表30%的基本成功率 (另外每100点运气属性+1%)]]></item>
+				<item id="variable"><![CDATA[jn_vipgoldegg]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[30]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[金蛋获得数量]]></item>
+				<item id="description"><![CDATA[金蛋获得数量介于什么数目？设置 1,10 代表每次如果成功获得金蛋，获得的数目介于 1~10之间。]]></item>
+				<item id="variable"><![CDATA[jn_mtrand]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1,10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[管理员UID]]></item>
+				<item id="description"><![CDATA[设置管理员 UID, 可以登录前台管理中心查看资讯。用 | 隔开]]></item>
+				<item id="variable"><![CDATA[jn_adminids]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1|2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[昨日生产加成]]></item>
+				<item id="description"><![CDATA[昨日生产加成是否开启，开启后，以下两项设置才有效。]]></item>
+				<item id="variable"><![CDATA[jn_bonusof]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[提取每达多少,增加1%]]></item>
+				<item id="description"><![CDATA[昨夜鸡蛋提取量达到多少，可以增加今日的产量1%，如果设置10000，昨天提取量有20000，则今日会增加2%额外产量。下一个选项可设置额外%上限。]]></item>
+				<item id="variable"><![CDATA[jn_bonus]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1000000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[额外提取量上限%]]></item>
+				<item id="description"><![CDATA[配合上面的设置，设置 10 等于 上限为 10%]]></item>
+				<item id="variable"><![CDATA[jn_bonusmax]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[金蛋兑出积分]]></item>
+				<item id="description"><![CDATA[设置金蛋兑出后可以获得的论坛积分]]></item>
+				<item id="variable"><![CDATA[jn_goldcredit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[金蛋兑出价值]]></item>
+				<item id="description"><![CDATA[1颗金蛋可兑换多少论坛积分]]></item>
+				<item id="variable"><![CDATA[jn_goldeggprice]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[最低金蛋兑出数]]></item>
+				<item id="description"><![CDATA[单次兑出最低数目，如果设置100，则 用户身上必须要有 100 粒金蛋才可以兑出。]]></item>
+				<item id="variable"><![CDATA[jn_goldeggmin]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[鸡蛋兑出积分]]></item>
+				<item id="description"><![CDATA[设置兑换鸡蛋后可以获得的积分]]></item>
+				<item id="variable"><![CDATA[jn_eggcredit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[多少鸡蛋兑换1点论坛积分]]></item>
+				<item id="description"><![CDATA[设置多少鸡蛋兑换1点论坛积分，设置 3000 代表 3000 粒鸡蛋 = 1 论坛积分。本设置也是最低鸡蛋兑出数，即设置3000的话，用户必须有3000鸡蛋才能兑出。]]></item>
+				<item id="variable"><![CDATA[jn_ratio]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[最低鸡蛋提取数量]]></item>
+				<item id="description"><![CDATA[最低的鸡蛋生产提取数量。]]></item>
+				<item id="variable"><![CDATA[jn_eggmin]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[单日可领取收益的次数]]></item>
+				<item id="description"><![CDATA[每个用户每天最多可以提取多少次鸡蛋]]></item>
+				<item id="variable"><![CDATA[jn_maxget]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[母鸡死亡开关]]></item>
+				<item id="description"><![CDATA[是否让母鸡有死亡期限，设置 "是" 后，下方的相关设置才有用途。注意，母鸡死亡后，把此设置关闭，母鸡还是不会复活的，只是新买的母鸡不会死亡。但是如果一段时间后又开启，母鸡会根据(购买时间+死亡周期)到期而死亡 (将是非常严重的后果.. 所以如果开启就别关闭, 如果关闭 ...]]></item>
+				<item id="variable"><![CDATA[jn_chicdie]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[死亡周期]]></item>
+				<item id="description"><![CDATA[母鸡多久的时间将会死亡？以分钟为单位，默认为 14400 ，即14400分钟 = 10天。]]></item>
+				<item id="variable"><![CDATA[jn_chictime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[14400]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[生产周期]]></item>
+				<item id="description"><![CDATA[以分钟为单位。超过此处设定的周期后，鸡蛋将不再生产。默认为 480 分钟。当母鸡提取后，经过480分钟将不再增加鸡蛋，用户必须提取。]]></item>
+				<item id="variable"><![CDATA[jn_zhouqi]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[480]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[购买母鸡限制]]></item>
+				<item id="description"><![CDATA[默认设置 50, 即如果产量达到 50, 用户不领取将无法购买新的母鸡。(必须提取后才能购买)]]></item>
+				<item id="variable"><![CDATA[jn_limitbuy]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[50]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

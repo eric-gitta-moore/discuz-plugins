@@ -1,0 +1,68 @@
+.brandalbum{
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px dashed #CECECE;
+	background-color:#F6F6F6;
+	margin-bottom:52px;
+}
+.brandalbum .hd{
+	background:url(images/item_05.jpg) center;
+	background-repeat:no-repeat;
+	height:48px;
+	text-align:right;	
+}
+.brandalbum .hd span{
+	margin-right:30px;
+	padding-top:21px;
+	display:block;
+}
+.brandalbum .hd a{
+	color:#000000;
+
+}
+.brandalbum .bd{
+	padding:15px 10px 15px 3px;
+	overflow:hidden;
+}
+.brandalbum .bd ul{
+	zoom:1;
+	overflow:hidden;
+	padding:0px;
+}
+.brandalbum .bd ul li{
+	float:left;
+	height:180px;
+	overflow:hidden;
+	width:165px;
+	margin-left:10px !important;
+	*margin-left:9px !important;
+	margin-left:9px;		
+}
+.brandalbum .bd ul li img{
+	width:165px;
+	height:165px;
+	cursor:pointer;
+}
+.brandalbum .bd ul li .albumname a{
+    color:#FFFFFF;
+	cursor:pointer;
+}
+.brandalbum .bd ul li .albumname {
+	position:relative; 
+	z-index:2; 
+	top:140px;
+	line-height:25px;
+	-moz-opacity:0.5;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	height:25px;
+	background-color:#000000; 
+	width:165px; 
+	overflow:hidden;
+	color:#FFFFFF;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	text-align:center;
+	display:none;
+}

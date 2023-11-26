@@ -1,0 +1,14 @@
+<!--{block returns}-->
+<div class="playlist">
+<div class="mp3PlayIcon" id="mp3list_{$thread[tid]}">
+  <div class="avatar" style="display: none;"> <a href="home.php?mod=space&uid=$thread[authorid]" title="" target="_blank"> $avatar </a> </div>
+  <!--{loop $thread['palylist'] $k $mp3}-->
+  <!--{if $k== 0}--> 
+  <a href="javascript:void(0)" title="{$thread[subject]}" class="pause-item jp-pause_{$thread[tid]}" style="display: none;"></a> 
+  <a href="javascript:void(0)" title="{$thread[subject]}" class="play-item jp-play_{$thread[tid]}" tid="{$thread[tid]}" uid="{$thread[uid]}" price="$mp3[price]" aid="{$mp3[aid]}" packaid="{$mp3[packaid]}"  date="{$thread[date]}" url="{$mp3[mp3]}" crimp="{$mp3[crimp]}" waveform="$mp3[waveform]" style="display: block;"></a> 
+   <!--{elseif $k > 0}--> 
+  <a href="javascript:void(0)" class="mp3next" aid="$mp3[aid]"  url="$mp3[mp3]" crimp="$mp3[crimp]" waveform="$mp3[waveform]"></a> 
+  <!--{/if}--> 
+  <!--{/loop}--> 
+ </div> </div>
+<!--{/block}-->

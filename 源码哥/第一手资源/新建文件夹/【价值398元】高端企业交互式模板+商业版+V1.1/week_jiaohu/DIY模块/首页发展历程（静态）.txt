@@ -1,0 +1,74 @@
+<div id="List1_1">
+	<div class="wk_fzlc_s">
+		<h4>2009年11月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img1.jpg"></dt>
+			<dd>2009年，三个热爱设计工作的年轻人成立了周末网页设计工作室...</dd>
+		</dl>
+	</div>
+	<div class="wk_fzlc_b">
+		<h4>2009年5月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img2.jpg"></dt>
+			<dd>经过近两年来不断的创新探索和稳定发展,逐渐积累了丰富的客户资源，至今已服务客户300余家
+
+...</dd>
+		</dl>
+	</div>
+	<div class="wk_fzlc_s">
+		<h4>2010年7月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img3.jpg"></dt>
+			<dd>随着人员和客户资源的不断增加，逐步以公司的模式进行运营...</dd>
+		</dl>
+	</div>
+	<div class="wk_fzlc_b">
+		<h4>2012年12月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img4.jpg"></dt>
+			<dd>服务客户已超过600余家，公司产品研发力度持续增强，手机网站和PC客户端、移动互联
+
+网...</dd>
+		</dl>
+	</div>
+	<div class="wk_fzlc_s">
+		<h4>2013年10月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img5.jpg"></dt>
+			<dd>公司更名为源码哥出品技术有限公司，并与众多知名企业进行合作...</dd>
+		</dl>
+	</div>
+	<div class="wk_fzlc_b">
+		<h4>2014年5月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img6.jpg"></dt>
+			<dd>源码哥出品与山东智卓软件公司合并，打造集网站、APP与软件开发为一体的综合型科技产业公
+
+司...</dd>
+		</dl>
+	</div>
+	<div class="wk_fzlc_s">
+		<h4>2015年2月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img7.jpg"></dt>
+			<dd>与铭艺影视传媒公司合作，共同为客户提供互联网影视传媒服务...</dd>
+		</dl>
+	</div>
+	<div class="wk_fzlc_b">
+		<h4>2015年10月</h4>
+		<div class="wk_his_ico"></div>
+		<dl>
+			<dt><img src="template/week_jiaohu/images/portal/history_img8.jpg"></dt>
+			<dd>致力于互联网+服务，打造品牌设计建设与网络推广营销综合服务新模式，更好的为客户提供全
+
+方位的互联网服务...</dd>
+		</dl>
+	</div>
+</div>

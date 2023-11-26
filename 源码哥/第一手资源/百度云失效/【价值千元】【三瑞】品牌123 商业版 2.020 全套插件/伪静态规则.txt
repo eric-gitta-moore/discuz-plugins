@@ -1,0 +1,64 @@
+默认伪静态规则，免费。非默认伪静态规则编写，每条10元。
+
+切记，品牌123的伪静态要放在
+“RewriteRule ^(.*)/([a-z]+[a-z0-9_]*)-([a-z0-9_\-]+)\.html(\?(.*))*$ $1/plugin\.php\?id=$2:$3&$5
+
+”之前才能生效。
+=============================================
+httpd.ini（已认证）
+--------------------------------------------------------------------------------------------
+RewriteRule ^(.*)/brand\.html(\?(.*))*$ $1/plugin\.php\?id=sanree_brand&$3
+RewriteRule ^(.*)/brand-index-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html(\?(.*))*$ $1/plugin\.php\?id=sanree_brand&mod=list&tid=$2&did=$3&filter=$4&listmode=$5&$6
+RewriteRule ^(.*)/brand-(.+)-([0-9]+)\.html(\?(.*))*$ $1/plugin\.php\?id=sanree_brand&mod=$2&tid=$3&$5
+RewriteRule ^(.*)/b/([a-z0-9]+)\.html(\?(.*))*$ $1/plugin\.php\?id=sanree_brand&mod=brandno&tid=$2&$4
+==========================================
+
+.htaccess（已认证）
+-----------------------------------------------------------------------------------------
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^brand\.html$ plugin.php?id=sanree_brand&%1
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^brand-index-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html$ plugin.php?id=sanree_brand&mod=list&tid=$1&did=$2&filter=$3&listmode=$4&%1
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^brand-(.+)-([0-9]+)\.html$ plugin.php?id=sanree_brand&mod=$1&tid=$2&%1
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^b/([a-z0-9]+)\.html$ $1/plugin.php?id=sanree_brand&mod=brandno&tid=$1&%1
+==========================================
+
+httpd.conf
+===========================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)/brand\.html\?*(.*)$ $1/plugin.php?id=sanree_brand&$2
+RewriteRule ^(.*)/brand-index-(.+)-(.+)-(.+)-(.+)\.html\?*(.*)$ $1/plugin.php?id=sanree_brand&mod=list&tid=$2&did=$3&filter=$4&listmode=$5&$6
+RewriteRule ^(.*)/brand-(.+)-(.+)\.html\?*(.*)$ $1/plugin.php?id=sanree_brand&mod=$2&tid=$3&$5
+RewriteRule ^(.*)/b/(.+)\.html\?*(.*)$ $1/plugin.php?id=sanree_brand&mod=brandno&tid=$2&$4
+</IfModule>
+===============================================
+Web.Config（已认证）
+===============================================
+<rule name="sanree_brand_home">
+<match url="^(.*/)*brand.html\?*(.*)$" />
+<action type="Rewrite" url="{R:1}/plugin.php\?id=sanree_brand&amp;{R:2}" />
+</rule>	
+
+<rule name="sanree_brand_cate">
+<match url="^(.*/)*brand-index-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+).html\?*(.*)$" />
+<action type="Rewrite" url="{R:1}/plugin.php\?id=sanree_brand&amp;mod=list&amp;tid={R:2}&amp;did={R:3}&amp;filter={R:4}&amp;listmode={R:5}&amp;{R:6}" />
+</rule>	
+
+<rule name="sanree_brand_item">
+<match url="^(.*/)*brand-(.+)-([0-9]+).html\?*(.*)$" />
+<action type="Rewrite" url="{R:1}/plugin.php\?id=sanree_brand&amp;mod={R:2}&amp;tid={R:3}&amp;{R:4}" />
+</rule>	
+
+<rule name="sanree_brand_short">
+<match url="^(.*/)*b/([0-9]+).html\?*(.*)$" />
+<action type="Rewrite" url="{R:1}/plugin.php\?id=sanree_brand&amp;mod=brandno&amp;tid={R:2}&amp;{R:3}" />
+</rule>	
+==============================================
+Nginx伪静态规则：
+rewrite ^([^\.]*)/brand\.html$ $1/plugin.php?id=sanree_brand last;
+rewrite ^([^\.]*)/brand-index-(.+)-(.+)-(.+)-(.+)\.html$ $1/plugin.php?id=sanree_brand&mod=list&tid=$2&did=$3&filter=$4&listmode=$5 last;
+rewrite ^([^\.]*)/brand-(.+)-(.+)\.html$ $1/plugin.php?id=sanree_brand&mod=$2&tid=$3 last;
+rewrite ^([^\.]*)/b/(.+)\.html$ $1/plugin.php?id=sanree_brand&mod=brandno&tid=$2 last;

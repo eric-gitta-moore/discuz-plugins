@@ -1,0 +1,36 @@
+{if VIP}
+<tbody id="is_get_post_show">
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_get_post_user}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  	 {echo pickOutput::radio(array('name' => 'is_get_post_user', 'int_val' => 2, 'js' => array("is_get_post_user_show();", "is_get_post_user_show();"), 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}
+ </td>
+  <td class="vtop tips2" s="1">{lang milu_pick:only_user_to_bbs}</td>
+</tr>
+</tbody>
+
+<tbody id="show_get_post_user" {if $info['is_get_post_user'] != 1} style="display:none"{/if}>
+
+
+<tr class="noborder" >
+  <td class="vtop rowform"><label>
+    <input type="checkbox" onclick="show_user_setting('is_use_thread_setting', 'show_get_post_user_rules');" name="set[is_use_thread_setting]" {if $info['is_use_thread_setting'] == 1}checked="checked"{/if} class="is_use_thread_setting" value="1" />
+    {lang milu_pick:is_use_thread_setting}</label></td>
+  <td class="vtop tips2" s="1"></td>
+</tr>
+</tbody>
+<tbody id="show_get_post_user_rules" {if $info['is_use_thread_setting'] != 1 || $info['is_use_thread_setting'] == 1} style="display:none"{/if}>
+{eval echo pickOutput::rules_get_output(array('no_test' => 1, 'name' => 'post_user', 'title' => milu_lang('post_user_rules') ), $info);}
+
+{eval echo pickOutput::rules_get_output(array('no_test' => 1,  'name' => 'post_dateline', 'title' => milu_lang('public_time').' '.milu_lang('get_rules') ), $info);}
+
+
+
+</tbody>
+<tr  id="show_get_post_user_rules_test">
+    <td s="1" class="td27" colspan="2"><a onclick="get_user_info_test('reply_dateline')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></td>
+</tr>
+{/if}

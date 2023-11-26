@@ -1,0 +1,179 @@
+<style>
+.ainuo_f_top{ height:190px;overflow: initial; position:relative;}
+.ainuo_f_top .banner-pic {position: relative;left: 0;top: 0;width: 100%;height: 100%; overflow:hidden;}
+.ainuo_f_top .banner-pic:after {display: block;position: absolute;content: '';width: 100%;height: 100%;background: rgba(0,0,0,.6);left: 0;top: 0;}
+.ainuo_f_top .banner-pic .aimg {position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: center no-repeat #5a5a5a;background-size: cover;}
+.ainuo_f_top .banner-info{ position:absolute; top:110px; color:#fff; padding-left:80px; width:100%;}
+.ainuo_f_top .ficn{ position:absolute; left:10px;}
+.ainuo_f_top .ficn img{ width:60px; height:60px;box-shadow: 0 0 3px 1px rgba(0,0,0,.25);border-radius: 60px;border: 3px solid #fff;}
+.ainuo_f_top .banner-info h2{font-size:20px; margin-bottom:6px; font-weight:400; margin-top:6px;}
+.ainuo_f_top .info{margin-bottom: 6px; height: 20px;line-height: 20px;overflow: hidden; color:#eee; font-size:12px;}
+.ainuo_f_top .rule{ padding:0 30px;margin-bottom: 4px;height: 16px;line-height: 18px;overflow: hidden; font-weight:100; color:#eee;}
+.ainuo_f_top .guanzhu{ position:absolute; top:10px; right:10px; text-align:center;}
+.ainuo_f_top .guanzhu a{font-size: 12px;color: #fff;background: #36B70A;border-radius: 2px;display: inline-block; height:26px; line-height:26px;width:60px;position: relative;}
+.ainuo_f_top .guanzhu a.fxt{ background:#d43d3d; margin-left:5px;}
+.ainuo_f_top .banner-title{ position:absolute; width:100%; height:50px; line-height:50px; color:#fff; top:0; text-align:center;}
+.ainuo_f_top .banner-title a{ display:inline-block; width:40px; line-height:50px; height:50px; font-size:20px; position:absolute;}
+.ainuo_f_top .banner-title a i{font-size:16px; color:#fff;}
+.ainuo_f_top .banner-title span{ font-size:16px; color:#fff; font-weight:700;}
+.ainuo_f_top .banner-title a.z{ left:0;}
+.ainuo_f_top .banner-title a.y{ right:0;}
+.ainuo_type .aleft a.current{ color:#287faf; border-bottom:1px solid #287faf;}
+.ainuo_piclist{}
+.ainuo_piclist li{ background:#fff;}
+.ainuo_piclist li a{ display:block;}
+.ainuo_piclist li a.lione{ padding:12px 10px 6px 10px;}
+.ainuo_piclist li a.litwo{ padding:6px 10px 12px 10px;}
+.ainuo_piclist li .author{ height:30px; line-height:30px; font-size:12px; color:#999;}
+.ainuo_piclist li .author .aleft{ float:left;}
+.ainuo_piclist li .author .aleft .ava{ float:left; margin-right:8px;}
+.ainuo_piclist li .author .aleft .ava img{ width:30px; height:30px;}
+.ainuo_piclist li .author .aleft .t{ color:#287faf; font-size:14px;}
+.ainuo_piclist li .author .aright{ float:right;}
+.ainuo_piclist li .author .aright .abadge{color: white;background-color: #fe7c51;font-size:12px;padding: 2px 5px; border-radius:2px; margin-top:5px;}
+.ainuo_piclist li .author .aright .leixing{background-color:#A8C500;}
+.ainuo_piclist li .asub{ display:flex; position:relative;}
+.ainuo_piclist li .asub .atitle{ font-size:17px; line-height:1.5;-webkit-flex-shrink: 1;-ms-flex: 0 1 auto;-webkit-flex-shrink: 1;flex-shrink: 1;position: relative;width: 100%;}
+.ainuo_piclist li .apic1{-webkit-flex-shrink: 0;flex-shrink: 0; margin-top:5px;}
+.ainuo_piclist li .apic1 img{ max-width:80%; height:auto;}
+.ainuo_piclist li .apic2{ margin-top:5px;}
+.ainuo_piclist li .apic2 .apic{ width:49.5%; margin-left:1%; float:left;}
+.ainuo_piclist li .apic2 img{width: 100%;height: auto;}
+.ainuo_piclist li .apic2 .apic:first-child {margin-left: 0;}
+.ainuo_piclist li .apic3{ margin-top:5px;}
+.ainuo_piclist li .apic3 .apic{ width:32.666%; margin-left:1%; float:left;}
+.ainuo_piclist li .apic3 img{width: 100%;height: auto;}
+.ainuo_piclist li .apic3 .apic:first-child {margin-left: 0;}
+.ainuo_piclist li .afenlei{  padding:0 10px; height:30px;}
+.ainuo_piclist li .afenlei em{font-size:0;}
+.ainuo_piclist li .afenlei em a{font-size: 12px;display: inline;background: #eee;padding: 3px 10px;border-radius: 20px;color: #666;}
+.ainuo_piclist li .abot{ margin:0 10px; border-top:1px solid #eee; font-size:12px; height:40px; line-height:40px;}
+.ainuo_piclist li .abot .al{ color:#999; float:left;}
+.ainuo_piclist li .abot .al span{ margin-right:25px;}
+.ainuo_piclist li .abot .ar{ float:right;}
+.ainuo_piclist li .abot .ar a{ display:inline; float:right; margin-left:25px; color:#287faf;}
+.ainuo_piclist li .abot .ar .rp i{ position:relative; top:1px;}
+.ainuo_piclist li .abot .ar .yidianzan{ color:#287faf;}
+.ainuo_piclist li .henzan{ border-top:1px solid #f5f5f5; font-size:12px; padding:10px;}
+.ainuo_piclist li .henzan i{ color:#287faf;}
+.ainuo_piclist li .zxhuifu{ margin:0 10px; padding:10px 0; border-top:1px solid #f6f6f6;}
+.ainuo_piclist li .zxhuifu p{ font-size:14px;}
+.ainuo_piclist li .zxhuifu p a{ float:left;color:#285c9d;}
+.ainuo_piclist li .lookmore a{color:#285c9d; font-size:14px;}
+.ainuo_piclist li .woysyj{ padding:10px; padding-top:0;}
+.ainuo_piclist li .woysyj a{ display:block; border:1px solid #ddd; color:#999; height:38px; line-height:38px; font-size:14px; text-indent:10px;}
+
+.ainuo_piclist .mod-lv {display: inline-block;height: 16px;-webkit-border-radius: 10px;background: #ffc11b;color: #fff;text-align: center;margin: 0 3px;vertical-align: middle;white-space: nowrap;padding: 0 4px;font-size: 0;position:relative;top:-1px;}
+.ainuo_piclist .mod-lv .mod-lv-icon {line-height: 16px;width: 16px;height: 16px;margin-left: -4px;margin-right: 2px;border: 1px solid rgba(255,181,36,.8);color: #ed850a;background: #ffe970;-webkit-border-radius: 100%;display: inline-block;vertical-align: top;position: relative;font-size: 11px;}
+.ainuo_piclist .mod-lv .mod-lv-icon i {position: absolute;width: 100%;height: 100%;left: 0;top: 0;font-size:12px;}
+.ainuo_piclist .mod-lv span:not(.mod-lv-icon) {font-size: 11px;line-height: 17px;display: inline-block;vertical-align: top;position: relative;}
+.ainuo_f_post{ background:rgba(40,127,175,.85);}
+</style>
+
+
+<div class="ainuo_f_top cl">
+	<div class="banner-pic"> 
+    	<!--{if $_G[forum][banner]}-->
+    		<div class="aimg" style="background-image:url($_G[forum][banner])"></div>
+    	<!--{elseif $_G['forum'][icon]}-->
+			<div class="aimg" style="background-image:url(data/attachment/common/$_G['forum'][icon])"></div>
+        <!--{else}-->
+        	<div class="aimg" style="background-image:url(template/qu_app/touch/style/css/0.png)"></div>
+        <!--{/if}-->
+	</div>
+    <div class="banner-title">
+        <a class="back z" href="#"><i class="iconfont icon-back_light"></i></a>	
+        <a href="javascript:;" class="ashare y"><i class="iconfont icon-fenxiang"></i></a>
+    </div>
+    <!--{eval $isfav = DB::result_first("SELECT favid FROM ".DB::table('home_favorite')." where id=".$_G[fid]." and idtype='fid' and uid='$_G[uid]'");}-->
+    <div class="banner-info">
+    	<div class="ficn z">
+            <!--{if $_G['forum'][icon]}-->
+                <img src="data/attachment/common/$_G['forum'][icon]">
+            <!--{else}-->
+                <img src="template/qu_app/touch/style/css/0.png">
+            <!--{/if}-->
+        </div>
+    	<h2><!--{eval echo strip_tags($_G['forum']['name']) ? strip_tags($_G['forum']['name']) : $_G['forum']['name'];}--></h2>
+        <p class="info cl">
+            {lang index_today}: $_G[forum][todayposts]
+            &nbsp;/&nbsp; 
+            {lang index_threads}: $_G[forum][threads]
+        </p>
+        <p class="guanzhu y cl">
+        	 <!--{eval $isfav = DB::result_first("SELECT favid FROM ".DB::table('home_favorite')." where id=".$_G[fid]." and idtype='fid' and uid='$_G[uid]'");}-->
+            <!--{if !$isfav || !$_G[uid]}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum" id="a_favorite" class="afa_fav afa_fav2">$alang_gz</a>
+            <!--{else}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum&formhash={FORMHASH}" class="afa_fav afa_fav2 gy">$alang_yiguanzhu</a>
+            <!--{/if}-->
+            
+        </p>
+    </div>
+</div>
+
+<!--{hook/forumdisplay_top_mobile}-->
+<!--{if $quicksearchlist && !$_GET['archiveid']}-->
+	<!--{subtemplate forum/search_sortoption}-->
+<!--{else}-->
+	<!--{subtemplate forum/type}-->
+<!--{/if}-->
+<!--{subtemplate forum/zd}-->
+
+<!--{if empty($_G['forum']['sortmode'])}-->
+    
+    <!--{if $_G['forum_threadcount']}-->
+    <!--{eval require_once(DISCUZ_ROOT."./source/function/function_post.php");}-->
+    <div class="ainuo_piclist cl">
+        <ul id="ainuoloadmore" class="ainuoloadmore">
+			<!--{subtemplate forumlist/qqzone_list}-->
+        </ul>
+    </div>
+    <!--{else}-->
+    <div class="ainuoemp">{lang forum_nothreads}</div>
+    <!--{/if}-->
+
+<!--{else}-->
+    <!--{subtemplate forum/forumdisplay_sort}-->
+<!--{/if}-->
+<div id="ainuoloadempty"></div>
+<!--{if $_G[forum][threads] && ($_G[forum][threads] > $_G[tpp])}-->
+<div id="loading" class="loading G-animate-load-wrap">
+	<div class="load-loading"><span class="loading02"></span> <span class="load-word">$alang_loading</span></div>
+</div>
+<!--{/if}-->
+
+
+<script type="text/javascript">
+	function zanbuzan(val,clsa,aid){
+		<!--{if !$_G[uid]}-->
+			popup.open('{lang nologin_tip}', 'confirm', 'member.php?mod=logging&action=login');
+			return false;
+		<!--{/if}-->
+		Zepto('.page').append('<div class="ainuooverlay"><div class="preloader-indicator-overlay"></div><div class="preloader-indicator-modal"><span class="preloader preloader-white"></span></div></div>');
+		$.ajax({
+			type:'GET',
+			url:'forum.php?mod=misc&action=recommend&do=add&tid='+aid+'&hash={FORMHASH}&inajax=1',
+			dataType:'xml',
+		})
+		.success(function(s) {
+			if(s.lastChild.firstChild.nodeValue.indexOf("$alang_yipingjia") >= 0){
+				Zepto('.ainuooverlay').remove();
+				Zepto.toast('$alang_dianzanguo',1000,'toast');
+			}else if(s.lastChild.firstChild.nodeValue.indexOf("$alang_zanjiayi") >= 0){
+				if(document.getElementById(clsa)){
+					setTimeout(document.getElementById(clsa).innerHTML = '$alang_wohe');
+				}
+				$("#dianzan_" + aid).addClass('yidianzan');
+				$("#i_" + aid).addClass('icon-appreciate_fill_light');
+				Zepto('.ainuooverlay').remove();
+				Zepto.toast('$alang_zanjiayi2',1000,'toast');
+			}
+		})
+		.error(function() {
+			window.location.href = obj.attr('href');
+			Zepto('.ainuooverlay').remove();
+		});
+		return false;
+	};
+</script>

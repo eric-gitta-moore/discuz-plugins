@@ -1,0 +1,3251 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Threadtypes]]></item>
+	<item id="Version"><![CDATA[X3.3]]></item>
+	<item id="Time"><![CDATA[2017-08-12 18:51]]></item>
+	<item id="From"><![CDATA[手机站 (http://app.dzzsk.com/)]]></item>
+	<item id="Data">
+		<item id="0">
+			<item id="optionid"><![CDATA[159]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[1]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[昵称]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_nicheng]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="1">
+			<item id="optionid"><![CDATA[160]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[3]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[性别]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_xingbie]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=男
+2=女]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="2">
+			<item id="optionid"><![CDATA[161]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[5]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[年龄]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_nianling]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=18岁
+2=19岁
+3=20岁
+4=21岁
+5=22岁
+6=23岁
+7=24岁
+8=25岁
+9=26岁
+10=27岁
+11=28岁
+12=29岁
+13=30岁
+14=31岁
+15=32岁
+16=33岁
+17=34岁
+18=35岁
+19=36岁
+20=37岁
+21=38岁
+22=39岁
+23=40岁]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="3">
+			<item id="optionid"><![CDATA[162]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[7]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[身高]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_shengao]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[CM]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[50]]></item>
+				<item id="defaultvalue"><![CDATA[170]]></item>
+			</item>
+		</item>
+		<item id="4">
+			<item id="optionid"><![CDATA[163]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[9]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[星座]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_xingzuo]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=白羊座
+2=金牛座
+3=双子座
+4=巨蟹座
+5=狮子座
+6=处女座
+7=天秤座
+8=天蝎座
+9=射手座
+10=摩羯座
+11=水瓶座
+12=双鱼座]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="5">
+			<item id="optionid"><![CDATA[164]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[11]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[学历]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_xueli]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=高中及以下
+2=大专
+3=本科
+4=硕士
+5=博士]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="6">
+			<item id="optionid"><![CDATA[165]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[15]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[居住地]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_juzhudi]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=北京
+2=上海
+3=南京
+4=深圳
+5=海南
+6=长沙
+7=合肥
+8=新疆
+9=内蒙古
+10=西安
+11=郑州
+12=武汉
+13=秦皇岛
+14=南宁
+15=东莞]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="7">
+			<item id="optionid"><![CDATA[166]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[23]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[血型]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_xuexing]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=A型
+2=B型
+3=O型
+4=AB型
+5=未知]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="8">
+			<item id="optionid"><![CDATA[167]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[25]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[职业]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_zhiye]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[occupation]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="9">
+			<item id="optionid"><![CDATA[168]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[27]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[月薪]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_yuexin]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=2000以下
+2=2000-5000
+3=5000-8000
+4=8000-10000
+5=10000-20000
+6=20000-50000
+7=50000以上]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="10">
+			<item id="optionid"><![CDATA[169]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[29]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[毕业院校]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_yuanxiao]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[graduateschool]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="11">
+			<item id="optionid"><![CDATA[170]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[47]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[体重]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_tizhong]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[KG]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[55]]></item>
+			</item>
+		</item>
+		<item id="12">
+			<item id="optionid"><![CDATA[171]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[57]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[个性]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_gexing]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=浪漫迷人
+2=成熟稳重
+3=风趣幽默
+4=乐天达观
+5=活泼可爱
+6=忠厚老实
+7=淳朴害羞
+8=温柔体贴
+9=多愁善感
+10=新潮时尚
+11=热辣动感
+12=豪放不羁]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="13">
+			<item id="optionid"><![CDATA[172]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[59]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[作息习惯]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_zuoxi]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=早睡早起有规律
+2=经常熬夜晚睡
+3=常常早起晨练
+4=偶尔懒散
+5=没有规律]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="14">
+			<item id="optionid"><![CDATA[173]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[61]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[吸烟]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_xiyan]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=不吸烟
+2=社交时吸
+3=不吸]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="15">
+			<item id="optionid"><![CDATA[174]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[63]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[饮酒]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_yinjiu]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=不喝酒
+2=偶尔喝酒
+3=社交时喝酒
+4=不喝酒]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="16">
+			<item id="optionid"><![CDATA[175]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[67]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[所在行业]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_hangye]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1=在校学生
+2=计算机/网络
+3=科研/教育
+4=公关/广告
+5=传媒/出版
+6=营销/市场/策划
+7=金融/证券/保险
+8=房地产/建筑业
+9=装饰/装潢
+10=邮电通信
+11=电子/电器
+12=美容/形体
+13=警察/消防
+14=食品业
+15=消费品业
+16=制药业
+17=商业/贸易
+18=咨询业
+19=汽车
+20=航天
+21=社会服务
+22=旅游
+23=餐饮
+24=健康/医疗
+25=交通运输
+26=文化/娱乐/体育
+27=政府机关
+28=法律/司法
+29=制造业
+30=农林牧渔业
+31=其它]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="17">
+			<item id="optionid"><![CDATA[176]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[36]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[联系QQ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_qq]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[<font color="#f60">请登陆后查看</font>]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[1]]></item>
+				<item id="mode"><![CDATA[2]]></item>
+				<item id="usergroup"><![CDATA[1	2	3	10	14	15	16	17	18	19	20	21]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[qq]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="18">
+			<item id="optionid"><![CDATA[177]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[37]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[联系电话]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_dianhua]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[<font color="#f60">请登陆后查看</font>]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[1]]></item>
+				<item id="mode"><![CDATA[2]]></item>
+				<item id="usergroup"><![CDATA[1	2	3	10	14	15	16	17	18	19	20	21]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[mobile]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="19">
+			<item id="optionid"><![CDATA[178]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[38]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[形象照片]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_zhaopian]]></item>
+			<item id="type"><![CDATA[image]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[建议上传照片尺寸比例：150*200]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxwidth"><![CDATA[]]></item>
+				<item id="maxheight"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="20">
+			<item id="optionid"><![CDATA[179]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[96]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[交友目的]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_mudi]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="21">
+			<item id="optionid"><![CDATA[180]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[97]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[择友条件]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_zeyou]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="22">
+			<item id="optionid"><![CDATA[181]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[98]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[征友宣言]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[an_xuanyan]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[10]]></item>
+			<item id="name"><![CDATA[同城约会]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style>
+.ainuo_sort_main{ padding:20px; margin-bottom:20px; background:url(template/qu_app/touch/style/css/images/sp_bg.gif) repeat-x 0 0;}
+.ainuo_sort_main .basic_info{ position:relative; min-height:200px;}
+.ainuo_sort_main .info_left{ position:absolute; width:132px;}
+.ainuo_sort_main .info_left img{ width:120px; height:150px;border: 1px solid #ddd;box-shadow: 0 1px 3px #eee;padding: 5px; background:#fff;}
+.ainuo_sort_main .info_left p{ margin-top:15px;}
+.ainuo_sort_main .info_left p a{ color:#FB03A9;}
+.ainuo_sort_main .info_right{ margin-left:150px;}
+.ainuo_sort_main td{ height:28px;line-height: 28px; text-align:left;}
+.ainuo_sort_main td a{ color:#FB03A9;}
+.ainuo_sort_main .w1{ width:75px; color:#777; word-spacing:normal;}
+.ainuo_sort_main .info_right td{ height:28px; line-height:28px;}
+.ainuo_sort_main .info_right h2{color: #FB03A9;}
+.ainuo_sort_main .info_right h2,.info_right p{ height:32px; line-height:32px; font-weight:700; margin:0;}
+.ainuo_sort_main .info_right p span{ margin-right:20px;}
+.ainuo_sort_main .ainuo_h2{ font-weight:700;height: 35px;line-height: 35px;padding: 0; border-bottom:1px solid #ddd;font-size: 14px; margin-top:20px; margin-bottom:10px; color:#FB03A9;}
+.ainuo_sort_main .second_info p{line-height:24px;}
+</style>
+
+<div class="ainuo_sort_main cl">
+	<div class="basic_info cl">
+    	<div class="info_left cl">
+        	<img class="ainuolazyload" data-original="{an_zhaopian_value}" />
+            <p>QQ：{an_qq_value}</p>
+            <p>电话：{an_dianhua_value}</p>
+        </div>
+        <div class="info_right cl">
+        	<h2>【{an_nicheng_value}】</h2>
+            <table width="100%">
+            	<tr>
+                	<td class="w1">性别：</td><td>{an_shengao_value}{an_shengao_unit}</td>
+                    <td class="w1">居住地：</td><td>{an_juzhudi_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">年龄：</td><td>{an_nianling_value}{an_nianling_unit}</td>
+                    <td class="w1">毕业院校：</td><td>{an_yuanxiao_value}</td>
+                </tr>
+                <tr>
+                	<td class="w1">身高：</td><td>{an_shengao_value}cm</td>
+                    <td class="w1">体重：</td><td>{an_tizhong_value}KG</td>
+                </tr>
+                <tr>
+                    <td class="w1">星座：</td><td>{an_xingzuo_value}</td>
+                    <td class="w1">个性：</td><td>{an_gexing_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">学历：</td><td>{an_xueli_value}</td>
+                    <td class="w1">月薪：</td><td>{an_yuexin_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">血型：</td><td>{an_xuexing_value}</td>
+                    <td class="w1">作息习惯：</td><td>{an_zuoxi_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">职业：</td><td>{an_zhiye_value}</td>
+                    <td class="w1">吸烟：</td><td>{an_xiyan_value}</td>
+                </tr>
+                <tr>
+                    <td class="w1">饮酒：</td><td>{an_yinjiu_value}</td>
+                    <td class="w1">所在行业：</td><td>{an_hangye_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_mudi}</div>
+        <p>{an_mudi_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_zeyou}</div>
+        <p>{an_zeyou_value}</p>
+    </div>
+    <div class="second_info cl">
+    	<div class="ainuo_h2 xi2">{an_xuanyan}</div>
+        <p>{an_xuanyan_value}</p>
+    </div>
+    
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="ainuo_sort_main cl">
+<ul id="ainuoloadmore" class="ainuoloadmore">
+[loop]
+<li>
+	<div class="basic_info cl">
+    <span class="modcheck">{modcheck}</span>
+    	<div class="info_left cl">
+        	<a href="{subject_url}"><img class="ainuolazyload" data-original="{an_zhaopian_value}" /></a>
+        </div>
+        <div class="info_right cl">
+        	<h2><a href="{subject_url}">{an_nicheng_value}</a></h2>
+            <p class="info_list1 cl"><span>来自：{an_juzhudi_value}</span></p>
+            <p class="info_list1 cl"><span>{an_nianling_value}{an_nianling_unit}，{an_shengao_value}cm，{an_xueli_value}</span></p>
+            <p class="info_list1 cl"><span>{an_tizhong_value}{an_tizhong_unit}，{an_gexing_value}，{an_hangye_value}</span></p>
+            <p class="more_info"><a href="{subject_url}">查看详细资料>></a></p>
+        </div>
+    </div>
+</li>
+[/loop]
+</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[10]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[0]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+	</item>
+</root>

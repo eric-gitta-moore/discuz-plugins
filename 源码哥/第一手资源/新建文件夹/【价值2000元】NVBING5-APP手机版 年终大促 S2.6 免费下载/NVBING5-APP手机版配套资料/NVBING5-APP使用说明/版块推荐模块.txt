@@ -1,0 +1,29 @@
+在数据调用页面的模块分类处选择【版块模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-版块推荐
+
+显示条数：8
+
+
+【确定】
+
+
+点击确定后，选择刚才添加的模块的“属性”→“模块模板”，将代码修改为（默认代码删除）：
+
+<div class="n5jj_bkmk cl" style="margin:15px 0 0 0">
+	<div class="n5qj_mkbt cl">
+		<span class="y"><a href="http://app.nvbing5.net/thread-97-1-1.html">更多</a></span>
+		<h2>版块推荐</h2>
+	</div>
+	<div class="bkmk_bklb cl">
+		<ul>
+			[loop]
+			<li><a href="{url}"><img src="{icon}"><p>{title}</p></a></li>
+			[/loop]
+		</ul>
+	</div>
+</div>
+
+修改后选择更新，这个模块添加完成。

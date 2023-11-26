@@ -1,0 +1,75 @@
+<!--{template common/header}-->
+<!--[name]{Week_Design_list_about_wide}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<link href="$_G['style']['styleimgdir']/about/about.css" rel="stylesheet" type="text/css" />
+
+</div>
+<div class="wk_list_box wk_list_box3">
+</div>
+<div class="wk_blog_tab">
+	<ul>
+    <!--{if $wk_menu}-->
+        <!--{if $cat[others]}-->
+            <!--{loop $cat[others] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{/if}-->
+    <!--{else}-->
+        <!--{if $cat[subs]}-->
+            <!--{loop $cat[subs] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{else}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[others] $value}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                <!--{/loop}-->
+            <!--{/if}-->
+        <!--{/if}-->
+    <!--{/if}-->
+    </ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<div class="main_about">
+	<div class="who">
+    	<!--[diy=wk_about_diy1]--><div id="wk_about_diy1" class="area"></div><!--[/diy]-->
+	</div>
+	<div class="bottom">
+    	<!--[diy=wk_about_diy2]--><div id="wk_about_diy2" class="area"></div><!--[/diy]-->
+	</div>
+</div>
+<div class="clear"></div>
+<div class="project_gray">
+	<div class="project">
+    	<!--[diy=wk_about_diy3]--><div id="wk_about_diy3" class="area"></div><!--[/diy]-->
+	</div>
+</div>
+<div class="clear"></div>
+<div class="team_box">
+	<div class="team">
+    	<!--[diy=wk_about_diy4]--><div id="wk_about_diy4" class="area"></div><!--[/diy]-->
+	</div>
+</div>
+
+
+<div id="wp" class="wp">
+
+    <div class="wp"><!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]--></div>
+    <!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+    <!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+    <div class="clear"></div>
+    <!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+    <!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

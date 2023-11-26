@@ -1,0 +1,8 @@
+<div class="jslist">
+<!--{loop $list $v}-->
+	<li>
+		<a href="home.php?mod=space&uid=$v[uid]" target="_BLANK"><img src="uc_server/avatar.php?uid=$v[uid]&size=small" height=22 width=22 align="absmiddle"></a>
+		<span class="xi1">$v[username]</span> 于 <span class="xi1">{echo date("m-d H:i", $v[time]);}</span> 参加了《$v[title]》考试, 取得了 <span class="xi1">$v[score]</span> 分的成绩
+	</li>
+<!--{/loop}-->
+</div>

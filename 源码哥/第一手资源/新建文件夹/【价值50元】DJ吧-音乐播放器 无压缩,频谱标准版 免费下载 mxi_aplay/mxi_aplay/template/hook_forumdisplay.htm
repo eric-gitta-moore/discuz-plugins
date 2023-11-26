@@ -1,0 +1,57 @@
+<!--{block returns}-->
+<script type="text/javascript" src="./source/plugin/mxi_aplay/jplayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="./source/plugin/mxi_aplay/jplayer/forumplayer.js?{VERHASH}"></script>
+<style>
+
+</style>
+<div style="position: fixed; bottom: -9999px;">
+  <div id="m2pic" style="display: none;"></div>
+</div>
+<div id="line">
+  <div id="mx_audution">
+    <div id="jquery_jplayer"></div>
+    <div class="jp_container" id="jp_container">
+      <div class="jp-infos" id="jp-infos">
+        <div class="mp3Box">
+          <div class="mp3author"></div>
+          <div class="mp3Inner">
+            <h4 class="mp3Title"></h4>
+            <div class="metadata"> <span class="mp3date"></span>&nbsp;|&nbsp; <span class="jp-duration">00:00</span>/<span class="jp-current-time">00:00</span> <span class="mp3Category"></span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-mute"></div>
+      <div class="jp-unmute" style="display: none;"></div>
+      <div class="jp-volume-bar">
+        <div class="jp-volume-bar-value"></div>
+      </div>
+      <div class="mp3List" title="{lang mxi_aplay:playlist}">
+        <div class="mp3ListBox">
+          <h3>{lang mxi_aplay:playlist}<span class="icon_close"></span></h3>
+          <div class="mp3ListItems">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <!--{loop $_G['forum_threadlist'] $key $thread}--> 
+              <!--{loop $thread['palylist'] $key1 $mp3}-->
+              <tr uid="$thread[tid]" tid="$thread[tid]" aid="$mp3[aid]" price="{$mp3[price]}" packaid="{$mp3[packaid]}">
+                <td>$mp3[filename]</td>
+                <td>$thread[typehtml]/// $thread[sorthtml]</td>
+                <td><span class="mp3_down"></span> <span class="mp3_collect"></span><span class="mp3_share"></span></td>
+              </tr>
+              <!--{/loop}--> 
+              <!--{/loop}-->
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="transport-controls"> <a href="javascript:void(0);" id="jplay_puase" class="jp-pause bp-pause" tabindex="1" style="display: none; " title="pause"></a> <a href="javascript:void(0);" id="jplay_play" class="jp-play bp-play" title="play" style="display: block; "></a> </div>
+      <div id="jp-progress" class="jp-progress">
+        <div class="jp-seek-bar" id="jp-seek-bar">
+          <div class="jp-play-bar" id="jp-play-bar"></div>
+        </div>
+      </div>
+      <div class="mp3Icons"> <a id="k_download" class="mp3Down" href="" title="{lang mxi_aplay:download}" target="_blank"></a> <a class="mp3Collect" href="" title="{lang favorite}" target="_blank"></a> <a id="k_share" class="mp3Share" href="" title="{lang share}" onclick="showWindow(this.id, this.href, 'get', 0);"></a> </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--{/block}-->

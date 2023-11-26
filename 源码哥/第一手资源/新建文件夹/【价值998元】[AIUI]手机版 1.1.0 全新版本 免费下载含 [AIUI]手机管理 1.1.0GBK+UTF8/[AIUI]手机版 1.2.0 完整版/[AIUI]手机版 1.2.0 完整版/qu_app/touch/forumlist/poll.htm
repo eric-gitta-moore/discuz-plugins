@@ -1,0 +1,64 @@
+<style>
+.bar-header-secondary{ display:none;}
+.ainuo_piclist{}
+.ainuo_piclist li {min-height: 80px;padding: 12px;border-bottom: 1px solid #dbdbdb;position: relative;}
+.ainuo_piclist li .list-item {display: -webkit-box;}
+.ainuo_piclist li .p {width: 100px;height: 100px;margin-right: 10px;margin-left: 8px;}
+.ainuo_piclist li .p {display: inline-block;text-align: center;overflow: hidden;}
+.ainuo_piclist li .p a {line-height: 79px;display: inline-block;position: relative;}
+.ainuo_piclist li .p img {width: 100px;height: 100px;}
+.ainuo_piclist li .d {-webkit-box-flex: 1;}
+.ainuo_piclist li .d-title {margin-bottom: 3px;position: relative;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;word-break: break-all;color: #111; font-size:16px; font-weight:400;}
+.ainuo_piclist li .d p {line-height: 24px;color: #999;}
+.ainuo_piclist li .h {color: #fe7c51;}
+.ainuo_piclist li .d .d-price .h {font-size: 13px;}
+.ainuo_piclist li .price-icon {font-family: arial;}
+.ainuo_piclist li .font-num {font-family: avenir arial;}
+.ainuo_piclist li .d .d-price del {font-size: 10px;margin-left: 5px;}
+.ainuo_piclist li .d .d-main {display: -webkit-box;margin-top: -1px;height: 20px;overflow: hidden;}
+.ainuo_piclist li .d .d-main p {font-size: 12px;overflow: hidden;}
+.ainuo_piclist li .d .d-main .d-num {-webkit-box-flex: 1;text-align: center;}
+.ainuo_piclist li .font-num {font-family: avenir arial;}
+.ainuo_piclist li .d-freight{ color:#fff !important; font-size:10px; background:#00ba97; position:relative; padding:0 2px; top:4px;line-height:16px !important; height:16px !important; border-radius:2px;}
+.ainuo_piclist li .d .d-main .d-area span{ color:#ff0000;}
+
+</style>
+<header class="header" id="page-header">
+	<div class="nav">
+        <a class="back z" href="#"><i class="iconfont icon-back"></i></a>		
+        <span class="name">$_G['forum'][name]</span>
+        <a href="javascript:;" class="ashare y"><i class="iconfont icon-fenxiang"></i></a>
+    </div>
+</header>
+<!--{template common/top_fix}-->
+
+<!--{hook/forumdisplay_top_mobile}-->
+<!--{if $quicksearchlist && !$_GET['archiveid']}-->
+	<!--{subtemplate forum/search_sortoption}-->
+<!--{else}-->
+	<!--{subtemplate forum/type_ts}-->
+<!--{/if}-->
+<!--{subtemplate forum/zd}-->
+
+
+<!--{if empty($_G['forum']['sortmode'])}-->
+    
+    <!--{if $_G['forum_threadcount']}-->
+    <div class="ainuo_piclist cl">
+        <ul id="ainuoloadmore" class="ainuoloadmore">
+			<!--{subtemplate forumlist/poll_list}-->
+        </ul>
+    </div>
+    <!--{else}-->
+    <div class="ainuoemp">{lang forum_nothreads}</div>
+    <!--{/if}-->
+
+<!--{else}-->
+    <!--{subtemplate forum/forumdisplay_sort}-->
+<!--{/if}-->
+<div id="ainuoloadempty"></div>
+<!--{if $_G[forum][threads] && ($_G[forum][threads] > $_G[tpp])}-->
+<div id="loading" class="loading G-animate-load-wrap">
+	<div class="load-loading"><span class="loading02"></span> <span class="load-word">$alang_loading</span></div>
+</div>
+<!--{/if}-->

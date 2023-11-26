@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>upload file</title>
+</head>
+<body>
+<link href="{$PLSTATIC}uploadlib/css/uploadfile.css" rel="stylesheet">
+<script src="{$PLSTATIC}jquery.min.js"></script>
+<script src="{$PLSTATIC}jquery.form.min.js"></script>
+<script src="{$PLSTATIC}uploadlib/js/jquery.uploadfile.min.js"></script>
+<style>
+body {margin:0;padding:0;}
+.ajax-file-upload-filename {width:275px;font-size:12px;}
+.ajax-file-upload-container {margin:2px 0;}
+.ajax-file-upload-statusbar {overflow:hidden;padding:3px;margin-left:0;}
+.ajax-file-upload-progress {float:left;width:220px;margin-right:5px;}
+.ajax-file-upload-red {width:30px;float:left;padding:3px 5px;margin:5px 0;}
+.ajax-upload-dragdrop {padding: 2px 0;border:none;height:25px;overflow:hidden;}
+.ajax-file-upload {height: 14px;line-height: 14px;font-size:14px;margin: 0 5px 5px 0;}
+.ajax-upload-dragdrop span {font-size:12px;color:red;}
+.ajax-upload-dragdrop span b {color:#666;font-size:14px;}
+.ajax-file-upload-error {font-size: 12px; color: red;}
+</style>
+</head>
+<body>
+<div id="fileuploader">Upload</div>
+<script>
+$(document).ready(function() {
+	$("#fileuploader").uploadFile({
+		url:"{$lm}x_upload._upload.myfile",
+		fileName:"myfile",
+		showFileCounter:false,
+        maxFileCount: 1,
+       // acceptFiles: "video/*",
+        allowedTypes: "flv,f4v,mp4,webm,ogg,m3u8",
+        statusBarWidth: 270,
+        dragdropWidth: 270,
+        maxFileSize: parseInt('{$_PLG[uploadsize]}')*1024,
+        multiple: true, //是否允许多文件上传。
+        showAbort: true,
+        showCancel: true,
+        showDone: false,
+        showDelete: true,
+        multiDragErrorStr: "禁止多文件上传！",
+        extErrorStr: "错误的文件后缀：",
+        duplicateErrorStr: "该文件已经上传过了！",
+        sizeErrorStr: "上传文件大小超出上限：",
+        uploadErrorStr: "禁止上传文件！",
+        maxFileCountErrorStr: "上传文件个数超出上限：",
+        dragDropStr: "<span><b>未上传文件！</b></span>",
+        uploadStr:"上 传...",
+        cancelStr: "取 消",
+        deletelStr: "删 除",
+        abortStr: "中 止",
+        onSuccess:function(files,data,xhr,pd) {//alert(data);
+        	//$("#eventsmessage").html($("#eventsmessage").html()+"<br/>Success for: "+JSON.stringify(data));
+    		$('.ajax-upload-dragdrop span').html(data);
+    		parent.jQuery('#videourl').val(data);
+        },
+        afterUploadAll:function(obj) {
+        	//$("#eventsmessage").html($("#eventsmessage").html()+"<br/>All files are uploaded");
+        },
+        onError: function(files,status,errMsg,pd) {//alert(errMsg);
+        	//$("#eventsmessage").html($("#eventsmessage").html()+"<br/>Error for: "+JSON.stringify(files));
+    		$('.ajax-upload-dragdrop span').html(data);
+        },
+        onCancel:function(files,pd) {
+        		//$("#eventsmessage").html($("#eventsmessage").html()+"<br/>Canceled  files: "+JSON.stringify(files));
+        }
+	});
+});
+</script>
+</body>
+</html>

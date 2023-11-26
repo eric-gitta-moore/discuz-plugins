@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+		<title><!--{$splugin_setting['study_index_title']}--></title>
+		<meta name="keywords" content="<!--{$splugin_setting['study_seo_keyword']}-->" />
+		<meta name="description" content="<!--{$splugin_setting['study_seo_describe']}-->" />
+		<meta name="generator" content="MyIndex" />
+		<meta name="author" content="1314study.com" />
+		<meta name="copyright" content="2010-2013 1314study.com" />
+		<!--{if $splugin_setting['study_bgsound']}-->
+		<bgsound src="source/plugin/study_index/sound/fallingstar.mid" loop="-1">
+		<!--{/if}-->
+		<link rel="stylesheet" href="source/plugin/study_index/images/homepage.css" type="text/css">
+		<link href="favicon.ico" rel="icon" type="image/x-icon" />
+		<script type="text/javascript" src="source/plugin/study_index/images/homepage.js"></script>
+		<script>
+		var aaa=r;
+		aaa.svcToolbarYSpritePosition={a1:"0",a2:"-37px",a3:"-74px",a4:"-111px",a5:"-148px",a6:"-185px",a7:"-222px"};
+		window.onload=aaa.init;
+		</script>
+</head>
+<body>
+		<!-- icon start -->
+		<div id="wrapper">
+			<div id="top">
+				<!--{if $_G[uid]}-->
+					<strong class="vwmy">
+						<a href="home.php?mod=space&uid={$_G[uid]}" target="_blank">{$_G[username]}</a>
+					</strong>
+					<span class="pipe">|</span>
+					<a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+				<!--{else}-->
+					<a href="<!--{$splugin_setting['study_reg']}-->" target="_blank"><!--{$splugin_setting['study_reg_name']}--></a> | <a href="<!--{$splugin_setting['study_log']}-->" target="_blank"><!--{$splugin_setting['study_log_name']}--></a>
+				<!--{/if}-->
+			</div>
+		
+			<div id="logo"><a href="#" title="<!--{$splugin_setting['study_index_title']}-->"><img src="<!--{$splugin_setting['study_logo']}-->" alt="<!--{$splugin_setting['study_index_title']}-->" border="0" /></a></div>
+		
+			<table id="svc-toolbar" class="bgp" cellpadding="3" cellspacing="2" border="0">
+				<tr>
+					<td><a target="_blank" id="a1-i" href="<!--{$splugin_setting['study_link001']}-->" title="<!--{$splugin_setting['study_explain001']}-->"><span class="bgp-fr"></span><span><!--{$splugin_setting['study_daohang001']}--></span></a></td>
+					<td><a target="_blank" id="a2-i" href="<!--{$splugin_setting['study_link002']}-->" title="<!--{$splugin_setting['study_explain002']}-->"><span class="bgp-fr"></span><span><!--{$splugin_setting['study_daohang002']}--></span></a></td>
+					<td><a target="_blank" id="a3-i" href="<!--{$splugin_setting['study_link003']}-->" title="<!--{$splugin_setting['study_explain003']}-->"><span class="bgp-fr"></span><span><!--{$splugin_setting['study_daohang003']}--></span></a></td>
+					<td><a target="_blank" id="a4-i" href="<!--{$splugin_setting['study_link004']}-->" title="<!--{$splugin_setting['study_explain004']}-->"><span class="bgp-fr"></span><span><!--{$splugin_setting['study_daohang004']}--></span></a></td>
+					<td><a target="_blank" id="a5-i" href="<!--{$splugin_setting['study_link005']}-->" title="<!--{$splugin_setting['study_explain005']}-->"><span class="bgp-fr"></span><span><!--{$splugin_setting['study_daohang005']}--></span></a></td>
+					<td><a target="_blank" id="a6-i" href="<!--{$splugin_setting['study_link006']}-->" title="<!--{$splugin_setting['study_explain006']}-->"><span class="bgp-fr"></span><span><!--{$splugin_setting['study_daohang006']}--></span></a></td>
+					<td><a target="_blank" id="a7-i" href="<!--{$splugin_setting['study_link007']}-->" title="<!--{$splugin_setting['study_explain007']}-->"><span class="bgp-fr"></span><span><!--{$splugin_setting['study_daohang007']}--></span></a></td>
+				</tr>
+			</table>
+			
+			<!--{if $splugin_setting['study_search_radio']}-->
+			<div id="s">
+			    <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?searchsubmit=yes{/if}" target="_blank" onsubmit="return CheckForm();">
+			    		<input type="hidden" name="mod" id="scbar_mod" value="search" />
+							<input type="hidden" name="formhash" value="{FORMHASH}" />
+							<input type="hidden" name="srchtype" value="title" />
+							<input type="hidden" name="srhfid" value="$_G[fid]" />
+							<input type="hidden" name="srhlocality" value="$_G['basescript']::{CURMODULE}" />
+							<!--{if !empty($searchparams[params])}-->
+								<input type="hidden" name="source" value="discuz" />
+								<input type="hidden" name="fId" id="srchFId" value="$_G[fid]" />
+								<input type="hidden" name="q" id="cloudsearchquery" value="" />
+							<!--{/if}-->
+			        <input type="text" name="srchtxt" id="s_input" value="{lang enter_content}" onclick="if(this.value=='{lang enter_content}'){this.value='';}" onblur="if(this.value==''){this.value='{lang enter_content}';}" autocomplete="off" x-webkit-speech speech />
+			        <input type="submit" name="searchsubmit" id="s_button" value="true"/>
+			    </form>
+			    <div id="smart_pop" style="display: none; "></div>
+			</div>
+			<!--{/if}-->
+			
+			<div id="foot">
+				<a href="<!--{$splugin_setting['study_flink001']}-->"><!--{$splugin_setting['study_footer001']}--></a> | 
+		    <a href="<!--{$splugin_setting['study_flink002']}-->"><!--{$splugin_setting['study_footer002']}--></a>
+		    <!--{if $splugin_setting['study_tongji']}--> | 
+		    <!--{$splugin_setting['study_tongji']}-->
+				<!--{/if}-->
+				<p id="cp">
+					<!--{$splugin_setting['study_copyright']}-->
+		      <!--{if $splugin_setting['study_beian']}-->
+						 - <a style="color:#77c" href="http://www.miitbeian.gov.cn/" target="_blank"><!--{$splugin_setting['study_beian']}--></a>
+					<!--{/if}-->
+				</p>
+		  </div>
+		</div>
+		<!-- icon end -->
+		<!-- tips start:don't changes these id-->
+		<div id="tt" class="ttm" style="display:none">
+		<div class="ttl"></div>
+		<div class="ttc">
+			<div class="ttdc">
+				<div class="ttdl"></div>
+				<div class="ttdr"></div>
+			</div>
+			<div class="tt-text"></div>
+			<div class="ttdc">
+				<div class="ttdl"></div>
+				<div class="ttdr"></div>
+			</div>
+		</div>
+		<div class="ttl"></div>
+		<div class="ttvc">
+			<div class="ttv"></div>
+		</div>
+		</div>
+		<!-- tips end -->
+		<script language="javascript">
+		<!--
+		function CheckForm(){
+			if (document.getElementById('s_input').value=='{lang enter_content}' || document.getElementById('s_input').value=='') {
+		      document.getElementById('s_input').value='';
+		      document.getElementById('s_input').focus();
+		      return false;
+			}
+			return true;
+		}
+		-->
+		</script>
+</body>
+</html>

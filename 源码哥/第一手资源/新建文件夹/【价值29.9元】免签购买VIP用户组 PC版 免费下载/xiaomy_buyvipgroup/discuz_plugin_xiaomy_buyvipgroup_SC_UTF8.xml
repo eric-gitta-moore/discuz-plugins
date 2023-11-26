@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-08-18 17:02]]></item>
+	<item id="From"><![CDATA[源码哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源码哥_个人免签购买VIP用户组]]></item>
+			<item id="identifier"><![CDATA[xiaomy_buyvipgroup]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[xiaomy_buyvipgroup/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.0.1]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>使用说明</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[VIP用户充值管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[buyvipgroup]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[购买VIP用户组]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[moreapp]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多应用]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[用户组购买配置]]></item>
+				<item id="description"><![CDATA[格式：key=用户组ID||月价格||用户组描述||是否永久yj：永久，noyj:非永久，注意key在同一配置中不能重复]]></item>
+				<item id="variable"><![CDATA[groupconfigs]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[1=21||10||这里配置用户组描述111||yj
+2=11||20||这里配置用户组描述222||noyj]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[设置快捷支付时长]]></item>
+				<item id="description"><![CDATA[设置快捷支付显示]]></item>
+				<item id="variable"><![CDATA[qgrouptime]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[3
+6
+12]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[收款账号设置]]></item>
+				<item id="description"><![CDATA[格式：key=收款账号||二维码图片||付款方式图片，注意key在同一配置中不能重复]]></item>
+				<item id="variable"><![CDATA[skzhcfgs]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[alipay=test1@aplipay.com||source/plugin/xiaomy_buyvipgroup/css/alipayqr.jpg||source/plugin/xiaomy_buyvipgroup/css/alipaylogo.png
+weixin=weixin1.com||source/plugin/xiaomy_buyvipgroup/css/weixinqr.jpg||source/plugin/xiaomy_buyvipgroup/css/weixinicon.jpg
+alipay2=test2@aplipay.com||source/plugin/xiaomy_buyvipgroup/css/alipayqr.jpg||source/plugin/xiaomy_buyvipgroup/css/alipaylogo.png
+weixin2=weixin3.com||source/plugin/xiaomy_buyvipgroup/css/weixinqr.jpg||source/plugin/xiaomy_buyvipgroup/css/weixinicon.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[到期后用户组]]></item>
+				<item id="description"><![CDATA[设置购买的用户组到期后变成的用户组]]></item>
+				<item id="variable"><![CDATA[expiredgroup]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[55]]></item>
+				<item id="title"><![CDATA[是否显示最新购买记录]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[newrecord]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[56]]></item>
+				<item id="title"><![CDATA[邮件通知地址]]></item>
+				<item id="description"><![CDATA[设置审核通知的email地址，不填发送email]]></item>
+				<item id="variable"><![CDATA[mail]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="paystatus1"><![CDATA[审核中]]></item>
+				<item id="paystatus2"><![CDATA[<font color='green'>审核通过</font>]]></item>
+				<item id="paystatus3"><![CDATA[已被拒绝]]></item>
+				<item id="kminfo"><![CDATA[充值列表]]></item>
+				<item id="astr01"><![CDATA[<strong>购买用户组</strong>]]></item>
+				<item id="astr02"><![CDATA[<strong>充值金额</strong>]]></item>
+				<item id="astr0002"><![CDATA[<strong>开通时长</strong>]]></item>
+				<item id="astr03"><![CDATA[<strong>充值账号</strong>]]></item>
+				<item id="astr04"><![CDATA[<strong>充值交易号</strong>]]></item>
+				<item id="astr05"><![CDATA[<strong>支付方式</strong>]]></item>
+				<item id="astr06"><![CDATA[<strong>状态</strong>]]></item>
+				<item id="astr07"><![CDATA[<strong>创建时间</strong>]]></item>
+				<item id="astr08"><![CDATA[<strong>审核时间</strong>]]></item>
+				<item id="astr09"><![CDATA[<strong>操作</strong>]]></item>
+				<item id="astr001"><![CDATA[<strong>充值用户</strong>]]></item>
+				<item id="astr10"><![CDATA[<font color=green>已审核通过</font>]]></item>
+				<item id="astr11"><![CDATA[通过]]></item>
+				<item id="astr13"><![CDATA[拒绝]]></item>
+				<item id="astr12"><![CDATA[删除]]></item>
+				<item id="astr114"><![CDATA[您的用户组购买已审核通过,请重新登录系统查看]]></item>
+				<item id="astr115"><![CDATA[您的用户组购买已被拒绝,请尽快联系管理员]]></item>
+				<item id="tips"><![CDATA[<li>技术支持QQ:3396710833</li>]]></item>
+				<item id="payment1"><![CDATA[微信]]></item>
+				<item id="payment2"><![CDATA[支付宝]]></item>
+				<item id="postrtc04"><![CDATA[VIP用户组购买已提交成功,请耐心等待审核]]></item>
+				<item id="htmlstr02"><![CDATA[个月]]></item>
+				<item id="bvip01"><![CDATA[管理员账号无法购买用户组]]></item>
+				<item id="bvip02"><![CDATA[购买用户组审核通知]]></item>
+				<item id="bvip03"><![CDATA[提交了购买用户组信息，请及时审核]]></item>
+				<item id="shstr2"><![CDATA[永久]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="bcstr01"><![CDATA[付款账户不能为空]]></item>
+				<item id="bcstr02"><![CDATA[交易单号不能为空]]></item>
+				<item id="bcstr03"><![CDATA[购买VIP用户组]]></item>
+				<item id="bcstr04"><![CDATA[您的账号]]></item>
+				<item id="bcstr004"><![CDATA[购买VIP用户组]]></item>
+				<item id="bcstr05"><![CDATA[开通时长]]></item>
+				<item id="bcstr06"><![CDATA[应支付]]></item>
+				<item id="bcstr07"><![CDATA[元]]></item>
+				<item id="bcstr08"><![CDATA[付款方式]]></item>
+				<item id="bcstr09"><![CDATA[支付二维码]]></item>
+				<item id="bcstr10"><![CDATA[请使用手机[支付宝、微信]客户端二维码扫描支付]]></item>
+				<item id="bcstr11"><![CDATA[付款账户]]></item>
+				<item id="bcstr12"><![CDATA[交易单号]]></item>
+				<item id="bcstr13"><![CDATA[提交信息]]></item>
+				<item id="bcstr15"><![CDATA[ 下一步]]></item>
+				<item id="pr01"><![CDATA[VIP用户组购买记录]]></item>
+				<item id="pr02"><![CDATA[创建时间]]></item>
+				<item id="pr03"><![CDATA[审核时间]]></item>
+				<item id="pr04"><![CDATA[用户组]]></item>
+				<item id="pr0004"><![CDATA[开通时长]]></item>
+				<item id="pr05"><![CDATA[金额(元)]]></item>
+				<item id="pr06"><![CDATA[账户]]></item>
+				<item id="pr07"><![CDATA[支付方式/订单号]]></item>
+				<item id="pr08"><![CDATA[状态]]></item>
+				<item id="rr01"><![CDATA[用户信息]]></item>
+				<item id="rr02"><![CDATA[你需要登录,才可以购买用户组]]></item>
+				<item id="rr03"><![CDATA[登录]]></item>
+				<item id="rr04"><![CDATA[注册]]></item>
+				<item id="rr05"><![CDATA[当前登录用户:]]></item>
+				<item id="rr06"><![CDATA[用户组: ]]></item>
+				<item id="rr07"><![CDATA[立即购买VIP]]></item>
+				<item id="rr08"><![CDATA[查看购买记录]]></item>
+				<item id="rr09"><![CDATA[ 最新VIP购买记录]]></item>
+				<item id="rr10"><![CDATA[恭喜]]></item>
+				<item id="rr11"><![CDATA[成功购买用户组]]></item>
+				<item id="jsstr01"><![CDATA[请选择用户组]]></item>
+				<item id="jsstr02"><![CDATA[请选择开通时长]]></item>
+				<item id="htmlstr01"><![CDATA[Tips：请选择用户组]]></item>
+				<item id="htmlstr02"><![CDATA[个月]]></item>
+				<item id="shstr1"><![CDATA[暂无购买记录]]></item>
+				<item id="shstr2"><![CDATA[永久]]></item>
+				<item id="shstr3"><![CDATA[付款账号:]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

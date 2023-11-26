@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-03-17 17:36]]></item>
+	<item id="From"><![CDATA[源  碼 哥   y  m  g 6  .  c  o   m]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[游客變會員]]></item>
+			<item id="identifier"><![CDATA[guests]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[guests/]]></item>
+			<item id="copyright"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[5.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[guests]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[member]]></item>
+					<item id="menu"><![CDATA[趨勢查詢]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[logo]]></item>
+					<item id="menu"><![CDATA[修改歡迎圖標]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[aboutme]]></item>
+					<item id="menu"><![CDATA[關于我們]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[4]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<!--item id="4">
+					<item id="name"><![CDATA[help]]></item>
+					<item id="menu"><![CDATA[無法正常使用點此處]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item-->
+				<item id="5">
+					<item id="name"><![CDATA[contact]]></item>
+					<item id="menu"><![CDATA[聯系我們]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[recommend]]></item>
+					<item id="menu"><![CDATA[<span style="color:#f60;font-weight:bold;">推薦插件</span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[40]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				
+				<item id="9">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>資源中心</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否開啟應用]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<!--
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[是否開啟驗證碼]]></item>
+				<item id="description"><![CDATA[建議關閉驗證碼，以提高游客變會員的轉化率；
+自定義驗證碼設置，進入Discuz!后臺：全局->防灌水設置->驗證碼設置；【暫時不支持Flash驗證碼】
+驗證碼開啟，前臺不顯示，請檢查Discuz!后臺：全局->防灌水設置->驗證碼設置，啟用驗證碼：推薦勾選充值卡密或修改密碼；]]></item>
+				<item id="variable"><![CDATA[seccode]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			-->
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[投放范圍]]></item>
+				<item id="description"><![CDATA[選擇投放范圍，默認為全局顯示]]></item>
+				<item id="variable"><![CDATA[show_scope]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="value"><![CDATA[a:1:{i:0;s:3:"all";}]]></item>
+				<item id="extra"><![CDATA[all=全局
+forum=論壇
+portal=門戶
+group=群組
+home=空間]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[是否開啟歡迎圖標]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[welcome_logo]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[是否開啟QQ登錄提醒]]></item>
+				<item id="description"><![CDATA[【請注意】如果您的論壇尚未開啟QQ互聯功能，請勿開啟該選項，以防報錯。]]></item>
+				<item id="variable"><![CDATA[qq_login]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[是否開啟推薦用戶名]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[recommend_username]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[游客推薦用戶名前綴]]></item>
+				<item id="description"><![CDATA[不填寫自定義帳號名稱，則默認隨機4位小寫字母；
+填寫自定義帳號名稱，最長為11個字母/數字或漢字不超過5個，否則自動變成默認隨機（建議漢字填寫2-4個為佳)；]]></item>
+				<item id="variable"><![CDATA[username_prefix]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[推薦用戶名后綴數字長度]]></item>
+				<item id="description"><![CDATA[必填。默認為4，即隨機四位數作為推薦的用戶名后綴，不建議過長]]></item>
+				<item id="variable"><![CDATA[username_suffix]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[4]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[是否記錄來訪次數]]></item>
+				<item id="description"><![CDATA[關閉后不再記錄每個游客來訪次數，可提高響應速度
+但以下四項設置將無效，每次游客來訪都會提示
+關閉此項后請將提醒內容中提示來訪次數的語句修改，否則可能出錯]]></item>
+				<item id="variable"><![CDATA[record_radio]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[保存游客IP周期（天）]]></item>
+				<item id="description"><![CDATA[根據自身服務器設置，設置的時間越長，越占數據庫資源，建議30天]]></item>
+				<item id="variable"><![CDATA[ip_save_time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[30]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[游客來訪多少次開啟提示（次）]]></item>
+				<item id="description"><![CDATA[流量低的網站建議設置為0，流量稍好的網站建議設置為2-4比較適合]]></item>
+				<item id="variable"><![CDATA[visit_count]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[游客來訪間隔多少分鐘后，再次開啟提示（分鐘）]]></item>
+				<item id="description"><![CDATA[0或空標識不做限制，游客刷新幾次頁面就會提示幾次]]></item>
+				<item id="variable"><![CDATA[visit_time_interval]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[同一 IP 在 24 小時允許注冊的最大次數（次）]]></item>
+				<item id="description"><![CDATA[為防止惡意灌水，限制同一IP地址在24小時內注冊次數，建議設置在30-100范圍內取值，0或不填表示不限制]]></item>
+				<item id="variable"><![CDATA[user_count_of_ip]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[新注冊用戶默認用戶組]]></item>
+				<item id="description"><![CDATA[新注冊用戶積分為0，用戶組的積分限制將影響用戶所屬用戶組]]></item>
+				<item id="variable"><![CDATA[groupid]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[提醒內容]]></item>
+				<item id="description"><![CDATA[支持HTML代碼
+說明（以下變量會自動替換）：
+_MONTH_COUNT_：月訪問次數
+如關閉了來訪記錄，請勿在提醒內容中使用以上變量]]></item>
+				<item id="variable"><![CDATA[content]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[尊敬的來賓，您好！這是您本月第 <span style="color:#f00;font-size:20px;text-decoration:underline;font-weight:bold;">_MONTH_COUNT_</span> 次來訪，為了感謝您的回訪，現在登錄可以馬上領取禮物哦~]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[注冊URL]]></item>
+				<item id="description"><![CDATA[網站注冊頁面URL地址
+例如：http://www.man3c.com/member.php?mod=register]]></item>
+				<item id="variable"><![CDATA[register_url]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[member.php?mod=register]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[郵箱激活狀態]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[emailstatus]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="installlang">
+				<item id="upgrade_fail"><![CDATA[由于出現以下錯誤，導致升級失敗：]]></item>
+			</item>
+			<item id="scriptlang">
+				<item id="to_opening"><![CDATA[該功能即將開啟]]></item>
+				<item id="user_count_of_ip_over_limit"><![CDATA[該ip已達到最大注冊數]]></item>
+				<item id="system_error"><![CDATA[系統錯誤，請稍候重試]]></item>
+				<item id="username_not_null"><![CDATA[用戶名不能為空]]></item>
+				<item id="password_not_null"><![CDATA[密碼不能為空]]></item>
+				<item id="username_exist"><![CDATA[帳號重復]]></item>
+				<item id="upload_welcome_logo_tips"><![CDATA[<li>如需在前臺登錄框中顯示歡迎圖標，請在設置里開啟歡迎圖標開關，圖標上傳尺寸建議為：75*75像素</li>]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="close"><![CDATA[關閉]]></item>
+				<item id="random_name"><![CDATA[為您推薦帳號：]]></item>
+				<item id="not_like"><![CDATA[不喜歡，]]></item>
+				<item id="change"><![CDATA[修改]]></item>
+				<item id="cancel"><![CDATA[取消]]></item>
+				<item id="change_one"><![CDATA[換一個]]></item>
+				<item id="refresh_seccode"><![CDATA[刷新驗證碼]]></item>
+				<item id="input_username"><![CDATA[請輸入注冊帳號：]]></item>
+				<item id="input_password"><![CDATA[請輸入登錄密碼：]]></item>
+				<item id="input_password_suggestion"><![CDATA[建議設置常用密碼]]></item>
+				<item id="input_seccode"><![CDATA[請輸入驗證碼：]]></item>
+				<item id="login_button"><![CDATA[注冊并登錄]]></item>
+				<item id="to_opening"><![CDATA[該功能即將開啟]]></item>
+				<item id="id_login"><![CDATA[已有帳號？點擊登錄]]></item>
+				<item id="free_register"><![CDATA[注冊完整帳號]]></item>
+				<item id="member_title_1"><![CDATA[游客變會員 已為您提供社區運營解決方案超過]]></item>
+				<item id="member_title_2"><![CDATA[天，目前累計為您增加新會員數]]></item>
+				<item id="member_title_3"><![CDATA[名]]></item>
+				<item id="member_username"><![CDATA[用戶名]]></item>
+				<item id="member_reg_time"><![CDATA[注冊時間]]></item>
+				<item id="member_ip"><![CDATA[IP]]></item>
+				<item id="member_referer"><![CDATA[來源頁面]]></item>
+				<item id="member_group"><![CDATA[用戶組]]></item>
+				<item id="member_permission"><![CDATA[權限]]></item>
+				<item id="member_jifen"><![CDATA[積分]]></item>
+				<item id="member_xunzhang"><![CDATA[勛章]]></item>
+				<item id="member_majia"><![CDATA[馬甲]]></item>
+				<item id="member_detail"><![CDATA[詳情]]></item>
+				<item id="member_forbid"><![CDATA[禁止用戶]]></item>
+				<item id="kefu_qq"><![CDATA[客服ＱＱ：154606914]]></item>
+				<item id="kefu_qq_tips1"><![CDATA[游客變會員插件交流2群550494646]]></item>
+				<item id="help"><![CDATA[無法正常使用點此處]]></item>
+				<item id="help_tips1"><![CDATA[在線更新、安裝如無法正常使用，請卸載再重新安裝（免費）<br>如還無法解決問題請聯系客服ＱＱ：154606914]]></item>
+				<item id="help_tips2"><![CDATA[驗證碼開啟，前臺不顯示，請檢查Discuz!后臺：全局->防灌水設置->驗證碼設置，啟用驗證碼：推薦勾選充值卡密或修改密碼，暫時不支持Flash驗證碼；]]></item>
+				<item id="aboutme"><![CDATA[關于我們]]></item>
+				<item id="aboutme_tips1"><![CDATA[源碼哥聯合創始人 veking：<br />
+源碼哥由幾名做過站長的技術大拿與產品達人共同成立，專為站長們開發、定制各種應用。因為做過站長，所以了解站長需求；因為運營過網站，所以知道網站缺乏什么。我們希望能和Discuz! 一起成長，也希望能像Discuz! 一樣做一名送水人，在站長的成功路上，能使用我們的插件來輔助網站運營，解決技術難題。最后請大家多多支持我們，趕緊來安裝插件吧！<br />
+<br />
+<strong>官方網站</strong><br/>
+<a href="http://www.ymg6.com" target="_blank">http://www.ymg6.com</a><br/>
+<strong>技術支持</strong><br/>
+售后QQ群：<a href="http://www.ymg6.com/?idkey=4d3c26c25ac0b9514ef6fc071f629ab2c2292d8a413763b05abccc12f7c5a7ef" target="_blank">550494646</a>&nbsp;&nbsp;&nbsp;&nbsp;客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=154606914&site=qq&menu=yes" target="_blank">154606914</a>&nbsp;&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&uin=550494646&site=qq&menu=yes" target="_blank">550494646</a>]]></item>
+				<item id="contact"><![CDATA[聯系我們]]></item>
+				<item id="contact_content"><![CDATA[<strong>官方網站</strong><br/>
+<a href="http://www.ymg6.com" target="_blank">http://www.ymg6.com</a><br/>
+<strong>技術支持</strong><br/>
+售后QQ群：<a href="http://www.ymg6.com/?idkey=4d3c26c25ac0b9514ef6fc071f629ab2c2292d8a413763b05abccc12f7c5a7ef" target="_blank">550494646</a>&nbsp;&nbsp;&nbsp;&nbsp;客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=154606914&site=qq&menu=yes" target="_blank">154606914</a>&nbsp;&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&uin=550494646&site=qq&menu=yes" target="_blank">550494646</a>]]></item>
+				<item id="recommend"><![CDATA[推薦插件]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[[*]源碼哥：www.ymg6.com.
+[*]更多商業插件/模版免費下載 百度搜索 源碼哥.
+[*]本資源來源于網絡收集,僅供個人學習交流，請勿用于商業用途，并于下載24小時后刪除!
+[*][b]技術支持:[/b][url=http://www.ymg6.com/]源碼哥[/url]
+[*]如果侵犯了您的權益,請及時告知我們,我們即刻刪除!.
+[*][b]QQ群:[/b]550494646
+[*][color=Red]如果您愿意資助我們,請至[url]http://www.ymg6.com[/url]對我們進行贊助.[/color]
+[*]最后,感謝您使用我們分享的插件,更多精品插件盡在源碼哥).]]></item>
+	</item>
+</root>

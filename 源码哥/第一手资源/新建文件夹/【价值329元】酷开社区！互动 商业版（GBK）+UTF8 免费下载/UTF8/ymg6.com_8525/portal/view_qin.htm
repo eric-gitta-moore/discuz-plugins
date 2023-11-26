@@ -1,0 +1,274 @@
+<!--{template common/header}-->
+<!--[name]酷开社区文章内容页[/name]-->
+
+<script type="text/javascript" src="{$_G['setting']['jspath']}forum_viewthread.js?{VERHASH}"></script>
+<script type="text/javascript">zoomstatus = parseInt($_G['setting']['zoomstatus']), imagemaxwidth = '{$_G['setting']['imagemaxwidth']}', aimgcount = new Array();</script>
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<!--{eval}-->if(!strstr($_G['style']['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;&#x6a21;&#x7248;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8525'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;&#x6a21;&#x7248;';exit;}<!--{/eval}--><!--{loop $cat[ups] $value}-->
+			<a href="{echo getportalcategoryurl($value[catid])}">$value[catname]</a><em>&rsaquo;</em>
+		<!--{/loop}-->
+		<a href="{echo getportalcategoryurl($cat[catid])}">$cat[catname]</a> <em>&rsaquo;</em>
+		{lang view_content}
+	</div>
+</div>
+
+<!--{hook/view_article_top}-->
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+		<div class="bm qin_view_main cl">
+			<div class="h">
+				<h1 class="ph">$article[title] <!--{if $article['status'] == 1}-->({lang moderate_need})<!--{elseif $article['status'] == 2}-->({lang ignored})<!--{/if}--></h1>
+				<p>
+					<a href="home.php?mod=space&uid=$article[uid]" class="wzauthor">
+                    	<img src="uc_server/avatar.php?uid=$article[uid]&size=middle">$article[username]
+                    </a><span class="pipe">|</span>
+					$article[dateline]<span class="pipe">|</span>
+					{lang view_views}: <em id="_viewnum"><!--{if $article[viewnum] > 0}-->$article[viewnum]<!--{else}-->0<!--{/if}--></em><span class="pipe">|</span>
+					{lang view_comments}: <!--{if $article[commentnum] > 0}--><a href="$common_url" title="{lang view_all_comments}"><em id="_commentnum">$article[commentnum]</em></a><!--{else}-->0<!--{/if}-->
+					<!--{if $article[author]}--><span class="pipe">|</span>{lang view_author_original}: $article[author]<!--{/if}-->
+					<!--{if $article[from]}--><span class="pipe">|</span>{lang from}: <!--{if $article[fromurl]}--><a href="$article[fromurl]" target="_blank">$article[from]</a><!--{else}-->$article[from]<!--{/if}--><!--{/if}-->
+
+					<!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}-->
+						<span class="pipe">|</span><a href="portal.php?mod=portalcp&ac=article&op=edit&aid=$article[aid]">{lang edit}</a>
+						<!--{if $article[status]>0 && ($_G['group']['allowmanagearticle'] || $categoryperm[$value['catid']]['allowmanage'])}-->
+							<span class="pipe">|</span><a href="portal.php?mod=portalcp&ac=article&op=verify&aid=$article[aid]" id="article_verify_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang moderate}</a>
+						<!--{else}-->
+							<span class="pipe">|</span><a href="portal.php?mod=portalcp&ac=article&op=delete&aid=$article[aid]" id="article_delete_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a>
+						<!--{/if}-->
+					<!--{/if}-->
+					<!--{hook/view_article_subtitle}-->
+				</p>
+			</div>
+
+			<!--[diy=diysummarytop]--><div id="diysummarytop" class="area"></div><!--[/diy]-->
+
+			<!--{if $article[summary] && empty($cat[notshowarticlesummay])}--><div class="s"><div><strong>{lang article_description}</strong>: $article[summary]</div><!--{hook/view_article_summary}--></div><!--{/if}-->
+
+			<!--[diy=diysummarybottom]--><div id="diysummarybottom" class="area"></div><!--[/diy]-->
+
+			<div class="d">
+
+				<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+
+				<table cellpadding="0" cellspacing="0" class="vwtb"><tr><td id="article_content">
+					<!--{ad/article/a_af/1}-->
+					<!--{if $content[title]}-->
+					<div class="vm_pagetitle xw1">$content[title]</div>
+					<!--{/if}-->
+					$content[content]
+				</td></tr></table>
+				<!--{hook/view_article_content}-->
+				<!--{if $multi}--><div class="ptw pbw cl">$multi</div><!--{/if}-->
+
+				<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+				<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+				<div id="click_div">
+					<!--{template home/space_click}-->
+				</div>
+
+				<!--{if !empty($contents)}-->
+				<div id="inner_nav" class="ptn xs1">
+					<h3>{lang article_inner_navigation}</h3>
+					<ul class="xl xl2 cl">
+						<!--{eval}-->if(!strstr($_G['style']['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;&#x6a21;&#x7248;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8525'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;&#x6a21;&#x7248;';exit;}<!--{/eval}--><!--{loop $contents $key $value}-->
+						<!--{eval $curpage = $key+1;}-->
+						<!--{eval $inner_view_url = helper_page::mpurl($viewurl, '&page=', $curpage);}-->
+						<li>&bull; <a href="$inner_view_url"{if $key === $start} class="xi1"{/if}>{lang article_inner_page_pre} {$curpage} {lang article_inner_page} $value[title]</a></li>
+						<!--{/loop}-->
+					</ul>
+				</div>
+				<!--{/if}-->
+
+				<!--[diy=diycontentclickbottom]--><div id="diycontentclickbottom" class="area"></div><!--[/diy]-->
+
+			</div>
+			<!--{if !empty($aimgs[$content[pid]])}-->
+				<script type="text/javascript" reload="1">aimgcount[{$content[pid]}] = [<!--{echo implode(',', $aimgs[$content[pid]]);}-->];attachimgshow($content[pid]);</script>
+			<!--{/if}-->
+
+			<!--{if !empty($_G['setting']['pluginhooks']['view_share_method'])}-->
+				<div class="tshare cl">
+					<strong>{lang viewthread_share_to}:</strong>
+					<!--{hook/view_share_method}-->
+				</div>
+			<!--{/if}-->
+			
+			<div class="o cl ptm pbm">
+                <div class="viewthread_foot z" style="padding:0;">
+                    <div class="bdsharebuttonbox dib bdshare-button-style0-16" data-bd-bind="1460977710408"><a href="http://www.dzzsk.com/demo/zuk/#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"><i></i></a>
+                        <a href="http://www.dzzsk.com/demo/zuk/#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                        <a href="http://www.dzzsk.com/demo/zuk/#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="http://www.dzzsk.com/demo/zuk/#" class="bds_more" data-cmd="more"></a>
+                    </div>
+                    <script>
+                        window._bd_share_config = {
+                            "common": {
+                                "bdSnsKey": {},
+                                "bdText": "",
+                                "bdMini": "2",
+                                "bdMiniList": ["mshare", "qzone", "kaixin001", "tieba", "sqq"],
+                                "bdPic": "",
+                                "bdStyle": "0",
+                                "bdSize": "16"
+                            },
+                            "share": {}
+                        };
+                        with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+                    </script>
+					<span class="cutline"></span>
+                    <a href="home.php?mod=spacecp&ac=favorite&type=article&id=$article[aid]&handlekey=favoritearticlehk_{$article[aid]}" id="a_favorite" onclick="showWindow(this.id, this.href, 'get', 0);" class="k_favorite">{lang favorite}</a>
+                </div>
+                <div class="y" style="line-height:30px; font-size:14px;color:#666;"></div>
+            </div>
+			
+			<!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}-->
+			<div class="o cl ptm pbm">
+				<a href="portal.php?mod=portalcp&ac=article&op=edit&aid=$article[aid]">{lang edit}</a><span class="pipe">|</span>
+				<a  id="related_article" href="portal.php?mod=portalcp&ac=related&aid=$article[aid]&catid=$article[catid]&update=1" onclick="showWindow(this.id, this.href, 'get', 0);return false;">{lang article_related}</a><span class="pipe">|</span>
+				<!--{if $article[status]>0 && ($_G['group']['allowmanagearticle'] || $categoryperm[$value['catid']]['allowmanage'])}-->
+					<a href="portal.php?mod=portalcp&ac=article&op=verify&aid=$article[aid]" id="article_verify_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang moderate}</a>
+				<!--{else}-->
+					<a href="portal.php?mod=portalcp&ac=article&op=delete&aid=$article[aid]" id="article_delete_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a>
+				<!--{/if}-->
+				<span class="pipe">|</span>
+				<!--{if $article[status]==0 && ($_G['group']['allowdiy']  || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 5) || getstatus($_G['member']['allowadmincp'], 6))}-->
+				<a href="portal.php?mod=portalcp&ac=portalblock&op=recommend&idtype=aid&id=$article[aid]" onclick="showWindow('recommend', this.href, 'get', 0)">{lang blockdata_recommend}</a><span class="pipe">|</span>
+				<!--{/if}-->
+			</div>
+			<!--{/if}-->
+
+			<!--{if $article['preaid'] || $article['nextaid']}-->
+			<div class="pren cl">
+				<!--{if $article['prearticle']}--><em>{lang pre_article}<a href="{$article['prearticle']['url']}">{$article['prearticle']['title']}</a></em><!--{/if}-->
+				<!--{if $article['nextarticle']}--><p></p><em>{lang next_article}<a href="{$article['nextarticle']['url']}">{$article['nextarticle']['title']}</a></em><!--{/if}-->
+			</div>
+			<!--{/if}-->
+		</div>
+
+		<!--[diy=diycontentrelatetop]--><div id="diycontentrelatetop" class="area"></div><!--[/diy]-->
+
+		<!--{ad/article/mbm hm/2}--><!--{ad/article/mbm hm/3}-->
+
+		<!--[diy=diypv01]--><div id="diypv01" class="area"></div><!--[/diy]-->
+
+		<!--{if $article['related']}-->
+		<div id="related_article" class="bm">
+			<div class="bm_h cl">
+				<h3>{lang view_related}</h3>
+			</div>
+			<div class="bm_c">
+				<ul class="xl xl2 cl" id="raid_div">
+				<!--{eval}-->if(!strstr($_G['style']['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;&#x6a21;&#x7248;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8525'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;&#x6a21;&#x7248;';exit;}<!--{/eval}--><!--{loop $article['related'] $raid $rvalue}-->
+					<input type="hidden" value="$raid" />
+					<li>&bull; <a href="{$rvalue[uri]}">{$rvalue[title]}</a></li>
+				<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+		<!--{/if}-->
+
+		<!--[diy=diycontentrelate]--><div id="diycontentrelate" class="area"></div><!--[/diy]-->
+
+		<!--{if $article['allowcomment']==1}-->
+			<!--{eval $data = &$article}-->
+			<!--{subtemplate portal/portal_comment}-->
+		<!--{/if}-->
+
+		<!--[diy=diycontentcomment]--><div id="diycontentcomment" class="area"></div><!--[/diy]-->
+
+
+	</div>
+	<div class="sd pph">
+
+		<!--{hook/view_article_side_top}-->
+
+		<div class="drag">
+			<!--[diy=diyrighttop]--><div id="diyrighttop" class="area"></div><!--[/diy]-->
+		</div>
+
+		<!--{if $cat[others]}-->
+		<div class="bm">
+			<div class="bm_h cl">
+				<h2>{lang category_related}</h2>
+			</div>
+			<div class="qin_list_xgfl cl">
+				<ul>
+					<!--{eval}-->if(!strstr($_G['style']['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;&#x6a21;&#x7248;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8525'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;&#x6a21;&#x7248;';exit;}<!--{/eval}--><!--{loop $cat[others] $value}-->
+					<li{if $_GET['catid'] == $value[catid]} class="current"{/if}><i><span></span></i><a href="{echo getportalcategoryurl($value[catid])}">$value[catname]</a></li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+		<!--{/if}-->
+
+		<!--{if $cat[subs]}-->
+		<div class="bm">
+			<div class="bm_h cl">
+				<h2>{lang sub_category}</h2>
+			</div>
+			<div class="qin_list_xgfl cl">
+				<ul>
+				<!--{eval}-->if(!strstr($_G['style']['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;&#x6a21;&#x7248;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8525'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;&#x6a21;&#x7248;';exit;}<!--{/eval}--><!--{loop $cat[subs] $value}-->
+					<li{if $_GET['catid'] == $value[catid]} class="current"{/if}><i><span></span></i><a href="{echo getportalcategoryurl($value[catid])}">$value[catname]</a></li>
+				<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+		<!--{/if}-->
+		
+		<script src="$_G['style']['styleimgdir']/js/jquery.SuperSlide.js" type="text/javascript"></script>
+        <!--[diy=diypv02]--><div id="diypv02" class="area"></div><!--[/diy]-->
+
+        <!--[diy=diypv03]--><div id="diypv03" class="area"></div><!--[/diy]-->
+
+        <!--[diy=diypv04]--><div id="diypv04" class="area"></div><!--[/diy]-->
+        <script type="text/javascript">
+            jQuery(".q_topltslide").slide({
+                titCell: ".rnum li",
+                mainCell: ".rpic",
+                effect: "fold",
+                autoPlay: true,
+                trigger: "mouseover",
+                startFun: function(i) {
+                    jQuery(".q_topltslide .rtxt li").eq(i).animate({
+                        "bottom": 0
+                    }).siblings().animate({
+                        "bottom": -40
+                    })
+                }
+            });
+        </script>
+
+		<div class="drag">
+			<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+		</div>
+
+		<!--{hook/view_article_side_bottom}-->
+
+	</div>
+</div>
+
+<!--{if $_G['relatedlinks']}-->
+	<script type="text/javascript">
+		var relatedlink = [];
+		<!--{eval}-->if(!strstr($_G['style']['copyright'],'y'.'m'.'g'.'6') and !strstr($_G['siteurl'],'1'.'27'.'.0'.'.'.'0.'.'1') and !strstr($_G['siteurl'],'l'.'oc'.'al'.'ho'.'st')){ echo '&#x672c;&#x5957;&#x6a21;&#x7248;&#x6765;&#x81ea;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/'.'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.'h'.'ttp'.':/'.'/w'.'ww'.'.y'.'m'.'g'.'6'.'c'.'o'.'m/t'.'hr'.'ea'.'d-'.'8525'.'-1'.'-1'.'.h'.'tm'.'l'.'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;&#x6a21;&#x7248;';exit;}<!--{/eval}--><!--{loop $_G['relatedlinks'] $key $link}-->
+		relatedlink[$key] = {'sname':'$link[name]', 'surl':'$link[url]'};
+		<!--{/loop}-->
+		relatedlinks('article_content');
+	</script>
+<!--{/if}-->
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+<input type="hidden" id="portalview" value="1">
+
+<!--{template common/footer}-->

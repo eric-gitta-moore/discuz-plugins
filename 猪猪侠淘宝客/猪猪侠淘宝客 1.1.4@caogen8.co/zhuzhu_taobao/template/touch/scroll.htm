@@ -1,0 +1,35 @@
+<div id="scroll_loading" style="display: none"><h3><i class="am-icon-spinner am-icon-spin"></i> {lang zhuzhu_taobao:1scroll_htm_1}..</h3></div>
+<div id="scroll_end" style="display: none"><h3>{lang zhuzhu_taobao:1scroll_htm_2}</h3></div>
+
+<script type="text/javascript">
+	var zhuzhu_page = 1;
+	var zhuzhu_isend = false;
+	$(window).scroll(function() {
+		if($(window).height() + $(window).scrollTop() - $(document).height() + 100 > 0 && !zhuzhu_isend) {
+			get_data();
+		}
+	});
+	function get_data() {
+		zhuzhu_isend = true;
+		if(zhuzhu_perpage * zhuzhu_page >= zhuzhu_count) {
+			$('#scroll_end').show();
+			return;
+		} else {
+			zhuzhu_page ++;
+			$('#scroll_loading').show();
+		}
+		$.ajax({
+			url: document.location.href + '&inajax=1' + '&page=' + zhuzhu_page +'&rand='+ Math.round(Math.random()*100) ,
+			type: 'GET',
+			dataType: 'xml',
+			async: false,
+			success: function (s) {
+				zhuzhu_isend = false;
+				$('#scroll_loading').hide();
+				$('#zhuzhu_list').append(s.lastChild.firstChild.nodeValue);
+				$("img.lazy").lazyload({effect : "fadeIn"});
+			}
+		});
+	}
+	$("img.lazy").lazyload({effect : "fadeIn"});
+</script>

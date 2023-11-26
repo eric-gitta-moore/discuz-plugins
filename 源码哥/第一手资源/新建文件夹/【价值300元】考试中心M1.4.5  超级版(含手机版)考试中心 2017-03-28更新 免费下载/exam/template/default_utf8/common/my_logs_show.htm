@@ -1,0 +1,135 @@
+<div id="threadlist" class="tl bm bmw">
+
+		<table cellspacing="0" cellpadding="0" class="log">
+		<tbody class="th">
+		<tr>
+			<th class="number"></th>
+			<th class="title">参与考生: <span class="xi1">$log[username]</span> &nbsp; 考试得分: <span class="xi1">$log[score] 分</span></th>
+			<td class="score">考生答案</td>
+			<td class="score">系统答案</td>
+			<td class="score">系统判定</td>
+			<td class="score">系统评分</td>
+			<td class="score">作者评分</td>
+			<td class="score-per" style="border-left:1px solid #C2D5E3">正确率:错误率</td>
+		</tr>
+
+	</tbody>
+		<tbody  class="log bm_c" id="paper_log">
+		{eval $score=0; $score2=0; $i=0;}
+		<!--{loop $logexam $k $v}-->
+			{eval $e=$exams[$k];$i++;}	
+			<tr leid="$v[leid]">
+				<td class="number">$i</td>
+				<td class="title"><!--{if $config[push_exam_fid]}--><a href="forum.php?mod=viewthread&tid=$e[tid]" target="_blank"><!--{if !$e[subject]}--><i class="xi1">作者已经删除该试题<i><!--{else}-->$e[subject]<!--{/if}--></a><!--{else}--><!--{if !$e[subject]}--><i class="xi1">作者已经删除该试题<i><!--{else}-->$e[subject]<!--{/if}--><!--{/if}--></td>
+				<td class="score"><!--{if strval($v[result])===''}-->--<!--{else}-->
+				<!--{if $v[type]==4}-->{echo str_replace("\n","<br>",$v[result])}<!--{elseif $v[type]==5}--><span title="$v[result]">{echo cutstr($v[result], 10)}</span><!--{else}-->$v[result]<!--{/if}-->
+				<!--{/if}--></td>
+				<td class="score">
+				<!--{if $v[type]==4}-->{echo str_replace("\n","<br>",$e[data])}<!--{elseif $v[type]==5}--><span title="$e[data]">{echo cutstr($e[data], 10)}</span><!--{else}-->$e[result]<!--{/if}-->
+				</td>
+				<td class="score">
+					<!--{if $e[type]<=3}-->
+						<!--{if $e[result]==$v[result]}-->√<!--{else}-->×<!--{/if}-->
+					<!--{elseif $e[type]==4}-->
+						<!--{if $e[data]==$v[result]}-->√<!--{else}-->×<!--{/if}-->
+					<!--{elseif $e[type]==5}-->
+						---
+					<!--{/if}-->
+				</td>
+				<td class="score">$v[score]</td>
+				<th class="score">
+				<!--{if $_G[groupid]==1 || $_G[uid]==$e[uid]}-->
+					<a href="javascript:;"><!--{if $v[score2]==null}-->---<!--{else}-->$v[score2]<!--{/if}--></a>
+				<!--{else}-->
+					$v[score2]
+				<!--{/if}-->
+				</th>
+				<td class="score-per"><span <!--{if $e[type]==2 || $e[type]==3}-->onclick="showper_23(this)" class="showper-a"<!--{/if}-->>$e[count_right]:$e[count_wrong]</span></td>
+			</tr>
+		{eval $score += $v[score]; $score2 += $v[score2];}
+		<!--{/loop}-->
+				</tbody>
+		
+		<tbody class="bm_c">
+			<tr>
+				<th colspan=8>&nbsp;阅卷点评<br>$log[comment]</th>
+			</tr>
+		</tbody>
+		</table>
+	<div class="pg mtm mbm">$multipage</div>
+</div>
+<div id="ajaxresult"></div>
+
+
+ 
+<!--{if $_G[groupid]==1}-->
+
+<div id="postscore" style="display:none">
+<form method="post" id="postscoreform" action="plugin.php?id=exam:my&tab=show&lid=$lid" autocomplete="off" target="_blank" onsubmit="return false;">
+<input value="$_G[formhash]" name="formhash" type="hidden">
+<input value="" id="leid" name="leid" type="hidden">
+<div class="c altw" style="padding:20px 0 10px 10px;border-top:1px solid #CCC">
+该题打分: <input id="score2" name="score2" class="px" style="width:250px">
+<div style="padding:10px 5px 0 55px;"><b>
+<a href="javascript:;" onclick="$('score2').value=''">默认</a>,&nbsp;
+<a href="javascript:;" onclick="$('score2').value=0">0 分</a>,&nbsp;
+<a href="javascript:;" onclick="$('score2').value=1">1 分</a>,&nbsp;
+<a href="javascript:;" onclick="$('score2').value=2">2 分</a>,&nbsp;
+<a href="javascript:;" onclick="$('score2').value=5">5 分</a>,&nbsp;
+<a href="javascript:;" onclick="$('score2').value=10">10分</a></b>
+</div>
+</div>
+<p class="o pns">
+<button value="true" class="pn pnc" type="submit" onclick="score2_submit()"><strong>确定</strong></button>
+<button value="true" class="pn" onclick="hideMenu('fwin_dialog', 'dialog')"><strong>取消</strong></button>
+</p>
+</form>
+</div> 
+
+
+<script type="text/javascript">
+ var objselect = null;
+ var postscore_data = '';
+ function score2_submit(){
+  jq.post(jq("#postscoreform").attr("action"), jq("#postscoreform").serialize(), function(v){
+		objselect.innerText = v;
+	});
+}
+
+_attachEvent(window, 'load', function(){
+	var logs = $('paper_log').getElementsByTagName('a');
+	if(postscore_data=='')postscore_data=$('postscore').innerHTML;
+	for(var i = 0; i<logs.length; i++){
+		if(logs[i].parentNode.tagName=='TD')continue;
+		_attachEvent(logs[i], 'click', function(e){
+			e = e || window.event;
+			objselect = e.srcElement || e.target;
+			showDialog(postscore_data,'info','人工打分',0,1);
+			$('leid').value = objselect.parentNode.parentNode.getAttribute('leid');
+			//$('score2').value = this.innerText == '---' ? '' : this.innerText;
+
+		});
+	}
+	$('postscore').outerHTML = '';
+}, document);
+ 
+function showper_23(obj){
+	var leid = obj.parentNode.parentNode.getAttribute('leid');
+	ajaxget('plugin.php?id=exam:my&tab=show&showper=1&formhash=$_G[formhash]&leid='+leid, 'ajaxresult', 'ajaxwaitid', '', '', function(){
+		var v = $('ajaxresult').innerHTML;
+		var arr = v.split(';');
+		var str = '';
+		for(var i=0;i<arr.length;i++)
+		{
+			if(arr[i].length==0)continue;
+			str += '<li><em class="pl">'+String.fromCharCode(65+i)+'</em><span style="width:'+arr[i]+'%"></span><em class="pr">'+arr[i]+'%</em></li>';
+		}
+		showDialog('<ul class="showper">'+str+'<ul>','info','各选项命中率');
+	});
+		
+
+}
+
+</script>
+
+<!--{/if}-->

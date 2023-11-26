@@ -1,0 +1,2407 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Threadtypes]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2017-01-18 06:52]]></item>
+	<item id="From"><![CDATA[讯幻网www.xhkj5.com]]></item>
+	<item id="Data">
+		<item id="0">
+			<item id="optionid"><![CDATA[178]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[17]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[公司地址]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpdz]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[请输入公司地址]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="1">
+			<item id="optionid"><![CDATA[179]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[16]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[公司名称]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpmc]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[1]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[请输入公司名称]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="2">
+			<item id="optionid"><![CDATA[180]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[15]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[简历邮箱]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpyx]]></item>
+			<item id="type"><![CDATA[email]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[N;]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[请输入接收简历邮箱]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="3">
+			<item id="optionid"><![CDATA[181]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[14]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[联系电话]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpldh]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[1]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[请输入联系电话]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="4">
+			<item id="optionid"><![CDATA[182]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[13]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[联系人]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzplxr]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[请输入联系人称呼]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="5">
+			<item id="optionid"><![CDATA[183]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[12]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[职位描述]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpms]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="6">
+			<item id="optionid"><![CDATA[184]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[11]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[人数]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzprs]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[人]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[请输入招聘人数]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="7">
+			<item id="optionid"><![CDATA[185]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[10]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[性别]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpxb]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 不限
+2 = 男
+3 = 女]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="8">
+			<item id="optionid"><![CDATA[186]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[9]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[年龄]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpnl]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[岁]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 18-20
+2 = 20-25
+3 = 25-30
+4 = 30-35
+5 = 35-50
+6 = 50以上]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="9">
+			<item id="optionid"><![CDATA[187]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[8]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[语言]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpyy]]></item>
+			<item id="type"><![CDATA[checkbox]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 不限
+2 = 英语
+3 = 韩语
+4 = 俄语
+5 = 日语]]></item>
+			</item>
+		</item>
+		<item id="10">
+			<item id="optionid"><![CDATA[188]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[7]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[经验]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpjy]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 不限
+2 = 1-2年
+3 = 2-3年
+4 = 3-5年
+5 = 5年以上]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="11">
+			<item id="optionid"><![CDATA[189]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[6]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[区域]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpqy]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 朝阳区
+2 = 海淀区
+3 = 丰台区
+4 = 西城区
+5 = 通州区
+6 = 东城区
+7 = 昌平区
+8 = 宣武区
+9 = 崇文区]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="12">
+			<item id="optionid"><![CDATA[190]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[5]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[学历]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpxl]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 不限
+2 = 高中
+3 = 技校
+4 = 中专
+5 = 大专
+6 = 本科
+7 = 硕士
+8 = 博士]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="13">
+			<item id="optionid"><![CDATA[191]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[4]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[薪资]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpxz]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[元/月]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 1000以下
+2 = 1000-2000
+3 = 2000-3000
+4 = 3000-5000
+5 = 5000-8000
+6 = 8000-10000
+7 = 10000以上]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="14">
+			<item id="optionid"><![CDATA[192]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[3]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[福利]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpfl]]></item>
+			<item id="type"><![CDATA[checkbox]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 五险一金
+2 = 年底双薪
+3 = 养老保险
+4 = 医疗保险
+5 = 工伤保险
+6 = 失业保险
+7 = 加班补助
+8 = 员工体检
+9 = 员工旅游
+10 = 出国机会
+11 = 绩效奖金
+12 = 年终奖金]]></item>
+			</item>
+		</item>
+		<item id="15">
+			<item id="optionid"><![CDATA[193]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[1]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[职位]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpzw]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 营业员/促销/零售
+2 = 服务员/收银员
+3 = 销售/市场/业务员
+4 = 文员/客服/助理
+5 = 保姆/家政
+6 = 司机/驾驶员
+7 = 保安/保洁
+8 = 厨师/切配
+9 = 送货/快递/仓管
+10 = 工人/技工
+11 = 财务/会计
+12 = 老师/培训师
+13 = 美工/设计/程序员
+14 = 保健师/美容师
+15 = 人才招聘会
+16 = KTV/酒吧
+17 = 其他招聘]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="16">
+			<item id="optionid"><![CDATA[194]]></item>
+			<item id="classid"><![CDATA[3]]></item>
+			<item id="displayorder"><![CDATA[2]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[状态]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[flzpzt]]></item>
+			<item id="type"><![CDATA[radio]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[11]]></item>
+			<item id="name"><![CDATA[招聘信息]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+<div class="n5_zpxxbt">
+	<span class="zpxxbtz">{flzpzw_value}</span>
+	<span class="zpxxbtx">{flzpzt_value}</span>
+	<p>{flzpfl_value}</p>
+</div>
+<div class="n5_zpxxjs">
+    <dl class="cl">
+	        <dt>{flzpxz}</dt>
+		<dd class="n5_xzsjbys"><i><b>{flzpxz_value}</b>{flzpxz_unit}</i></dd>
+		<dt>{flzpxl}</dt>
+		<dd>{flzpxl_value}</dd>
+		<dt>{flzpqy}</dt>
+		<dd>{flzpqy_value}</dd>
+		<dt>{flzpjy}</dt>
+		<dd>{flzpjy_value}</dd>
+		<dt>{flzpyy}</dt>
+		<dd>{flzpyy_value}</dd>
+		<dt>{flzpnl}</dt>
+		<dd>{flzpnl_value}{flzpnl_unit}</dd>
+		<dt>{flzpxb}</dt>
+		<dd>{flzpxb_value}</dd>
+		<dt>{flzprs}</dt>
+		<dd>{flzprs_value}{flzprs_unit}</dd>
+	</dl>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">{flzpms}</div>
+	</div>
+	<div class="xxxxnr cl">
+		{flzpms_value}
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">联系方式</div>
+	</div>
+	<div class="xxxxnr cl">
+		<p class="xxnrlxr"><i>{flzplxr} : </i>{flzplxr_value}</p>
+		<p class="xxnrldh"><i>{flzpldh} : </i>{flzpldh_value}</p>
+		<p><i>{flzpyx} : </i>{flzpyx_value}</p>
+		<p><i>{flzpmc} : </i>{flzpmc_value}</p>
+		<p><i>{flzpdz} : </i>{flzpdz_value}</p>
+	</div>
+</div>
+<div class="n5_flxxxx cl">
+    <div class="xxxxbt cl">
+	    <div class="xxbtnr cl">更多信息</div>
+	</div>
+</div>
+
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{flzplxr_value}</h4>
+		<p>{flzpldh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{flzpldh_value}">{flzpldh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_zpxxlb">
+    <ul>
+[loop]
+	    <li>
+		    <i class="n5_zpxxzt">{flzpzt_value}</i>
+			<div class="n5_zpxxlbnr">
+				<div class="n5_zpxxjt">
+					<h3><a href="{subject_url}">{flzpzw_value}</a>{modcheck}</h3>
+					<p class="n5_zpxxjtyq">
+						<span class="n5_xxjtyqxz">{flzpxz_value}{flzpxz_unit}</span>
+						<span class="n5_xxjtyqqy">{flzpqy_value}</span>
+						<span class="n5_xxjtyqxl">{flzpxl}{flzpxl_value}</span>
+						<span class="n5_xxjtyqjy">{flzpjy_value}{flzpjy}</span>
+						<span class="n5_xxjtyqrs">{flzprs_value}{flzprs_unit}</span>
+					</p>
+					<p class="flxxhysj"><span class="xxfbhy"><a href="{author_url}">{author}</a></span><span class="xxfbsj">{dateline}</span></p>
+				</div>
+				<div class="n5_zpxxgs">
+					<p class="n5_zpxxgsmc">{flzpmc_value}</p>
+					<p class="n5_zpxxgsdz">{flzpdz_value}</p>
+				</div>
+			</div>
+		</li>
+[/loop]
+	</ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul>
+[loop]
+<li>
+<a href="{subject_url}" class="zpxxbt" target="_blank">{flzpmc_value}</a>
+<p><em>[聘]</em><a href="{subject_url}" target="_blank">{flzpzw_value}</a></p>
+</li>
+[/loop]
+</ul>]]></item>
+			<item id="sortid"><![CDATA[11]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = 招聘中
+2 = 已结束]]></item>
+			</item>
+		</item>
+	</item>
+</root>

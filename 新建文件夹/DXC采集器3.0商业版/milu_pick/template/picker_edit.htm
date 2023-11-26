@@ -1,0 +1,662 @@
+<!--{template milu_pick:pick_header}-->
+<script language="javascript" charset="gbk"  type="text/javascript" src="{PICK_URL}static/phprpc_client.js?v={PICK_VERSION}"></script>
+<script src="static/js/calendar.js?v={PICK_VERSION}" type="text/javascript" type="text/javascript"></script>
+<script>
+function check_pick_edit(){
+	var pick_name = $("pick_name").value;
+	if(!pick_name) {
+		showDialog('{lang milu_pick:must_set_pickername}', 'notice');
+		return false;
+	}
+}
+</script>
+<div class="itemtitle">
+<ul id="tab_menu" class="tab1" style="margin-top:8px;">
+	<li {if $step == 1}class="current" {/if}><a ><span>{lang milu_pick:menu_base_set}</span></a></li>
+	<li {if $step == 2}class="current" {/if}><a >{lang milu_pick:menu_url_rules}</a></li>
+	<li {if $step == 3}class="current" {/if}><a ><span>{lang milu_pick:menu_body_rules_set}</span></a></li>
+	<li {if $step == 4}class="current" {/if}><a ><span>{lang milu_pick:menu_public_set}</span></a></li>
+	<li {if $step == 5}class="current" {/if}><a ><span>{lang milu_pick:menu_misc_set}</span></a></li>
+</ul>
+</div>
+</ul>
+
+<form id="cpform" action="?{PICK_GO}picker_create" autocomplete="off" method="post" name="cpform" onsubmit="return check_pick_edit();">
+  <input name="add" type="hidden" value="{$_GET['add']}" />
+<input name="pid" type="hidden" value="{$info['pid']}" />
+<input name="step" type="hidden" id="step" value="{$step}" />
+<table  class="tab_content tb tb2" {if $step == 1}style="display:block"{else}style="display:none"{/if}>
+<tbody>
+<tr onMouseOver="setfaq(this, 'faq1')">
+  <td s="1" class="td27 model-1" colspan="2"><span class="vtop rowform">{lang milu_pick:rules_name}:</span></td>
+</tr>
+<tr  class="model-1"><td width="600" class="vtop rowform"><input name="set[name]" type="text" class="txt" id="pick_name" value="{$info['name']}"></td>
+<td class="vtop tips2" s="1">{lang milu_pick:rules_name_notice}</td>
+</tr>
+
+<tr onMouseOver="setfaq(this, 'faq1')">
+  <td s="1" class="td27 model-1" colspan="2"><span class="vtop rowform">{lang milu_pick:rules_class}</span></td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">{eval echo select_output(pick_category_list(TRUE), '', 'set[pick_cid]', $info['pick_cid'], 1);}</td>
+  <td class="vtop tips2" s="1">{lang milu_pick:class_notice}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:pick_type}:</td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);">
+	 
+	<li {if $info[rules_type] == 3 || !$info[rules_type]} class="checked" {/if}>
+    <label>
+    <input onclick="show_hide('system_rules+show_url_var_set+one_pick','system_rules+show_url_var_set+pick_content_type+need_login+show_login',1);rules_show_page_set(3);"  {if $info[rules_type] == 3 || !$info[rules_type]}checked="checked"{/if} class="rules_type" type="radio" name="set[rules_type]" value="3" />
+    </label>
+    {lang milu_pick:one_pick}</li>
+  <li {if $info[rules_type] == 1} class="checked" {/if}>
+    <label>
+    <input onclick="show_hide('system_rules+show_url_var_set','one_pick+pick_content_type',1);rules_show_page_set(1);hide_get_page('{$info['rules_hash']}')"  {if $info[rules_type] == 1}checked="checked"{/if} class="rules_type" type="radio" name="set[rules_type]" value="1" />
+    </label>
+    {lang milu_pick:system_rules}</li>
+  <li {if $info[rules_type] == 2} class="checked" {/if}>
+    <input onclick="show_hide('system_rules+show_url_var_set+one_pick','pick_content_type',2);rules_show_page_set(2);"  {if $info[rules_type] == 2}checked="checked"{/if} class="rules_type" type="radio" name="set[rules_type]" value="2" />
+    {lang milu_pick:user_set}  </li>
+</ul></td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+
+<tbody id="one_pick" style="display:{if $info['rules_type'] != 3 }{else}none{/if}">
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[manyou_start_url]" id="manyou_start_url" cols="50" class="tarea w_area" >{$info['manyou_start_url']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:fast_pick_notice}</td>
+</tr>
+</tbody>
+ 
+<tbody id="need_login" {if $info[rules_type] == 3 || !$info[rules_type]}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_need_login}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_login] == 1} class="checked" {/if}><input {if $info[is_login] == 1} checked="checked" {/if} name="set[is_login]" type="radio" onclick="show_hide('show_login','',1);"  class="is_login" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_login] != 1} class="checked" {/if}><input  type="radio" {if $info[is_login] != 1} checked="checked" {/if}  value="2" name="set[is_login]" onclick="show_hide('show_login','',2);" class="is_login">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+</tbody>
+
+<tbody id="show_login" {if $info[is_login] != 1}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">cookie:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[login_cookie]" id="login_cookie" cols="50" class="tarea w_area" >{$info['login_cookie']}</textarea></td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+<tr onMouseOver="setfaq(this, 'faq1')">
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform">{lang milu_pick:test_url}:</span></td>
+</tr>
+<tr ><td width="600" class="vtop rowform"><input name="set[login_test_url]" type="text" class="txt" id="login_test_url" value="{$info['login_test_url']}"></td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform"><a onclick="login_test()" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></span></td>
+</tr>
+</tbody>
+
+ 
+
+
+<tbody id="system_rules" style="display:{if $info['rules_type'] == 1}{else}none{/if}">
+	
+	
+    <tr >
+      <td s="1" class="td27 model-1" colspan="2">{lang milu_pick:insert_test_url}:</td>
+    </tr>
+    <tr  class="noborder">
+      <td class="vtop rowform"><input name="set[rules_match_url]" type="text" class="longtxt" id="rules_match_url" value="{$info['rules_match_url']}" />
+        <span class="td27"></span> </td>
+      <td s="1" class="vtop tips2"><a style="color:#0099cc" href="javascript:void(0)" onclick="match_rules()">{lang milu_pick:auto_match_rules}</a><span style="margin-left:5px;" id="show_match_rules_result"></span></td>
+    </tr>
+	
+<tr >
+  <td colspan="2" class="td27" s="1"><label>{lang milu_pick:select_system_rules}</label>
+      <span style="font-weight:normal" id="show_rules_select">{eval show_rules_select(array('no_ajax' => 1, 'select_id' => $info['rules_hash']));}</span>
+	  
+  </td>
+</tr>
+	</tbody>
+</tbody>
+<tbody id="show_url_var_set" style="display:{if $info['rules_type'] != 2}{else}none{/if}">
+{eval echo show_rules_set(0, array('rules_hash' => $info['rules_hash'] ,'rules_set' => $info['rules_var']));}
+</tbody>
+</table>
+<table class="tab_content tb tb2" {if $step == 2}style="display:block"{else}style="display:none"{/if}>
+<tr id="page_url_hide_notice"  style="display:none">
+  <th class="partition" colspan="15">{lang milu_pick:pick_range_set}:<font style="font-weight:normal; color:red;">{lang milu_pick:auto_notice}</font></th>
+</tr>
+<tbody id="model-r" style="display:{if $info[pick_type] } none {/if}">
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:pick_range_set}</th>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:pick_range_select}:</span></td>
+</tr>
+<tr  class="noborder">
+<td colspan="2" class="vtop rowform" >
+<ul id="ul_url_range_type"  class="myul" onMouseOver="altStyle(this);" ><li id="li_url_range_type_page" {if $info[url_range_type] == 1 || !$info[url_range_type]} class="checked" {/if}><input id="url_range_type_page" name="set[url_range_type]" type="radio" class="url_range_type" onclick="show_hide('show_get_page+show_page_link+model-url-1','show_manyou+show_rss+many_list_page',1);" value="1"  {if $info[url_range_type] == 1 || !$info[url_range_type]} checked="checked" {/if}>
+&nbsp;{lang milu_pick:url_type_pagelist}</li>
+  <li {if $info[url_range_type] == 2} class="checked" {/if}><input id="article_get_type_detail" {if $info[url_range_type] == 2} checked="checked" {/if}  onclick="show_hide('model-url-1+','show_manyou+show_rss+show_page_link+many_list_page+show_get_page',1);" name="set[url_range_type]" type="radio" class="url_range_type" value="2">
+ {lang milu_pick:url_type_url_range}  </li>
+    <li {if $info[url_range_type] == 4} class="checked" {/if}><input id="article_get_type_detail" {if $info[url_range_type] == 4} checked="checked" {/if}  onclick="show_hide('show_rss','show_get_page+show_manyou+show_page_link+model-url-1+many_list_page',1);" name="set[url_range_type]" type="radio" class="url_range_type" value="4">
+  {lang milu_pick:url_type_url_rss}  </li>
+  <li {if $info[url_range_type] == 5} class="checked" {/if}><input id="article_get_type_detail" {if $info[url_range_type] == 5} checked="checked" {/if}  onclick="show_hide('many_list_page','show_get_page+show_manyou+show_page_link+model-url-1+show_rss',1);" name="set[url_range_type]" type="radio" class="url_range_type" value="5">
+  {lang milu_pick:url_type_url_manylist}  </li>
+</ul></td></tr>
+</tbody>
+<tbody id="model-url-1" style="display:{if $info[url_range_type] == 2 || $info[url_range_type] == 1 || !$info[url_range_type]}{else} none {/if}">
+<tr >
+  <td s="1" class="td27 model-1" colspan="2"><span class="vtop rowform">{lang milu_pick:url_range}:&nbsp;&nbsp;&nbsp;<a  style="<{ {if $info[page_get_type] != 2}>display:none<{/if}>" href="javascript:void(0)"  onclick="insertAtCursor('url_page_range','(*)')">{lang milu_pick:insert_var_place}(*)</a>&nbsp;&nbsp;&nbsp;</span></td>
+</tr>
+<tr  class="model"><td class="vtop rowform"><input name="set[url_page_range]" type="text" style="width:550px;" class="longtxt" id="url_page_range" value="{$info['url_page_range']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:var_place}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:url_ext_set}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform"><div style="width:600px;"><label>
+    <input name="set[page_url_auto]" type="checkbox" id="page_url_auto" {if $info['page_url_auto']}checked="checked"{/if} value="1" />
+    {lang milu_pick:auto_0}</label> 
+    <span>&nbsp;&nbsp; {lang milu_pick:from}
+    <input name="set[page_url_auto_start]" style="width:60px;" type="text" class="txt" id="page_url_auto_start" value="{$info['page_url_auto_start']}" />
+    </span>
+	<span>{lang milu_pick:to}
+	<input name="set[page_url_auto_end]" style="width:60px;" type="text" class="txt" id="page_url_auto_end" value=" $info['page_url_auto_end']" />
+	&nbsp;&nbsp; {lang milu_pick:step_add}
+    <input name="set[page_url_auto_step]" style="width:60px;" type="text" class="txt" id="page_url_auto_step" value=" $info[page_url_auto_step]" />
+	</span>	 </div></td>
+  <td class="vtop tips2" s="1"></td>
+</tr>
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform"><a onclick="url_page_range_test()" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></span></td>
+</tr>
+</tbody>
+
+<tbody id="show_manyou" {if $info[url_range_type] != 3} style="display:none"{/if}>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:url_level}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[manyou_max_level]" type="text"  class="txt" id="manyou_max_level" value="{$info['manyou_max_level']}"></td>
+<td class="vtop tips2" s="1">{lang milu_pick:url_level_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1"> {lang milu_pick:is_in_domain} :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[only_in_domain] != 1} class="checked" {/if}><input {if $info[only_in_domain] != 1} checked="checked" {/if} name="set[only_in_domain]" type="radio" show="" class="radio" value="0">
+&nbsp;{lang milu_pick:yes}</li>
+  <li {if $info[only_in_domain] == 1} class="checked" {/if}><input  type="radio" {if $info[only_in_domain] == 1} checked="checked" {/if}  value="1" name="set[only_in_domain]" class="radio">
+&nbsp;{lang milu_pick:no}</li>
+</ul>
+</td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+</tbody>
+<tbody id="show_rss" {if $info[url_range_type] != 4} style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:rss_url}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[rss_url]" id="rss_url" cols="50" class="tarea w_area" >{$info['rss_url']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:row_one}</td>
+</tr>
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform"><a onclick="get_rss_link()" href="javascript:void(0);">{lang milu_pick:hits_get_link}</a></span></td>
+</tr>
+</tbody>
+
+<tbody id="many_list_page" style="display:{if $info[url_range_type] != 5 } none {/if}">
+<tr >
+  <td s="1" class="td27 model-1" colspan="2"><span class="vtop rowform">{lang milu_pick:pick_start_url}:</span></td>
+</tr>
+<tr  class="model"><td class="vtop rowform"><input  name="set[many_list_start_url]" type="text" class="longtxt" id="many_list_start_url" value="{$info['many_list_start_url']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:pick_start_url_notice}</td>
+</tr>
+<tr class="noborder" >
+  <td colspan="2" class="vtop rowform">
+<table width="500" class="tb tb2 tdtable" >
+
+<tr class="header"><th width="100">{lang milu_pick:rules_type}</th>
+  <th width="200">{lang milu_pick:rules_body}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <th>{lang milu_pick:test}</th>
+  <th>{lang milu_pick:op}</th>
+</tr>
+<tbody id="many_page_list_tbody">
+{eval echo create_rules_html('many_page_list', $info['many_page_list']);}
+</tbody>
+</tbody>
+
+<tbody><tr class="hover">
+  <td><a href="javascript:void(0)"   onclick="add_rules('many_page_list');">{lang milu_pick:add_one_rules}</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr></tbody></table></td>
+  </tr>
+</tbody>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:filter_url}:</td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[page_fiter] == 1} class="checked" {/if}><input class="page_fiter" name="set[page_fiter]" type="radio" onclick="show_hide('show_page_fiter','',1);" value="1"  {if $info[page_fiter] == 1} checked="checked" {/if}>
+&nbsp;{lang milu_pick:yes}</li>
+  <li {if $info[page_fiter] != 1} class="checked" {/if}><input class="page_fiter"  {if $info[page_fiter] != 1} checked="checked" {/if}  onclick="show_hide('show_page_fiter','',2);" name="set[page_fiter]" type="radio" value="2">
+    &nbsp;{lang milu_pick:no}  </li>
+</ul></td><td  s="1" class="vtop tips2"></td></tr>
+<tbody id="show_page_fiter" {if $info[page_fiter] != 1} style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:pick_url}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[page_url_other]" id="page_url_other" cols="50" class="tarea w_area" >{$info['page_url_other']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:add_url_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:no_pick_url}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[page_url_no_other]" id="page_url_no_other" cols="50" class="tarea w_area" >{$info['page_url_no_other']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:filter_url_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:url_contain_notice}:&nbsp;&nbsp;&nbsp;<a  href="javascript:void(0)"  onclick="insertAtCursor('page_url_contain','(*)')">{lang milu_pick:fast_insert}</a>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[page_url_contain]" id="page_url_contain" cols="50" class="tarea" >{$info['page_url_contain']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:row_insert_something}(*)</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:url_no_notice}:&nbsp;&nbsp;&nbsp;<a   href="javascript:void(0)"  onclick="insertAtCursor('page_url_no_contain','(*)')">{lang milu_pick:fast_insert}</a>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[page_url_no_contain]" id="page_url_no_contain" cols="50" class="tarea" >{$info['page_url_no_contain']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:row_insert_something}</td>
+</tr>
+</tbody>
+
+
+<!--{template milu_pick:common_get_page}-->
+
+
+
+</table>
+<table id="show_common_get_content" class="tab_content tb tb2" {if $step == 3}style="display:block"{else}style="display:none"{/if}>
+<tbody id="page_url_hide_notice2">
+<tr >
+  <th class="partition" colspan="15">{lang milu_pick:text_get}<font style="font-weight:normal; color:red;">{lang milu_pick:auto_notice}</font></th>
+</tr>
+</tbody>
+
+
+<!--{template milu_pick:common_get_content}-->
+
+
+  <tbody id="content_pick_filter">
+    <tr>
+      <th class="partition" colspan="15">{lang milu_pick:filter_text}</th>
+    </tr>
+    
+    <tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:article_min_num}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[article_min_len]" type="text" class="txt" id="article_min_len" value="{$info['article_min_len']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:article_min_num_notice}</td>
+</tr>
+	 
+    <tr >
+      <td colspan="2" class="td27" s="1">{lang milu_pick:keyword_flag}<span class="vtop rowform"></span></td>
+    </tr>
+    <tr  class="noborder">
+      <td class="vtop rowform"><ul onmouseover="altStyle(this);">
+        <li {if $info[keyword_flag] == 1} class="checked" {/if}>
+          <input onclick="show_hide('show_keyword_filter','',1);" name="set[keyword_flag]" type="radio" class="keyword_flag" {if $info[keyword_flag] == 1} checked="checked" {/if} value="1" />
+          &nbsp;{lang milu_pick:yes}</li>
+        <li {if $info[keyword_flag] != 1} class="checked" {/if}>
+          <input type="radio"  onclick="show_hide('show_keyword_filter','',2);" {if $info[keyword_flag] != 1} checked="checked" {/if}  value="2" name="set[keyword_flag]" class="keyword_flag" />
+          &nbsp;{lang milu_pick:no}</li>
+      </ul></td>
+      <td s="1" class="vtop tips2"></td>
+    </tr>
+  </tbody>
+  <tbody id="show_keyword_filter" style="{if $info[keyword_flag] == 1}{else}display:none{/if}">
+    <tr >
+      <td s="1" class="td27" colspan="2">{lang milu_pick:keyword_title}<a onclick="insertAtCursor('keyword_title','(*)')" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;{lang milu_pick:fast_insert}</a></td>
+    </tr>
+    <tr  class="noborder">
+      <td class="vtop rowform"><textarea '..'="" class="tarea" cols="50" id="keyword_title" name="set[keyword_title]" onkeyup="textareasize(this, 0)" ondblclick="textareasize(this, 1)" rows="6" style="">{$info['keyword_title']}</textarea></td>
+      <td s="1" class="vtop tips2">{lang milu_pick:row_one}</td>
+    </tr>
+    <tr >
+      <td s="1" class="td27" colspan="2">{lang milu_pick:keyword_title_exclude}<a onclick="insertAtCursor('keyword_title_exclude','(*)')" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;{lang milu_pick:fast_insert}</a></td>
+    </tr>
+    <tr  class="noborder">
+      <td class="vtop rowform"><textarea '..'="" class="tarea" cols="50" id="keyword_title_exclude" name="set[keyword_title_exclude]" onkeyup="textareasize(this, 0)" ondblclick="textareasize(this, 1)" rows="6" style="">{$info['keyword_title_exclude']}</textarea></td>
+      <td s="1" class="vtop tips2">{lang milu_pick:row_one}</td>
+    </tr>
+    <tr >
+      <td s="1" class="td27" colspan="2">{lang milu_pick:keyword_content}<a onclick="insertAtCursor('keyword_content','(*)')" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;{lang milu_pick:fast_insert}</a></td>
+    </tr>
+    <tr  class="noborder">
+      <td class="vtop rowform"><textarea '..'="" class="tarea" cols="50" id="keyword_content" name="set[keyword_content]" onkeyup="textareasize(this, 0)" ondblclick="textareasize(this, 1)" rows="6" style="">{$info['keyword_content']}</textarea></td>
+      <td s="1" class="vtop tips2">{lang milu_pick:row_one}</td>
+    </tr>
+    <tr >
+      <td s="1" class="td27" colspan="2">{lang milu_pick:keyword_content_exclude}<a onclick="insertAtCursor('keyword_content_exclude','(*)')" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;{lang milu_pick:fast_insert}</a></td>
+    </tr>
+    <tr  class="noborder">
+      <td class="vtop rowform"><textarea '..'="" class="tarea" cols="50" id="keyword_content_exclude" name="set[keyword_content_exclude]" onkeyup="textareasize(this, 0)" ondblclick="textareasize(this, 1)" rows="6" style="">{$info['keyword_content_exclude']}</textarea></td>
+      <td s="1" class="vtop tips2">{lang milu_pick:row_one}</td>
+    </tr>
+ 
+  </tbody>
+  
+</table>
+<table class="tab_content tb tb2" {if $step == 4}style="display:block"{else}style="display:none"{/if}>
+<tbody>
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:public_uid}:<span class="vtop rowform"></span></td>
+</tr>
+
+
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'public_uid_type', 'int_val' => 2, 'js' => array("show_hide('public_uid_group','user_setting_uid', 1)", "show_hide('public_uid_group','user_setting_uid', 2)"), 'lang' => array('user_group', 'user_setting_uid')), $info);}</td>
+<td s="1" class="vtop tips2"></td>
+</tr>
+
+<tr  class="noborder"><td class="vtop rowform">
+<span  id="public_uid_group" {if $info['public_uid_type'] == 1}{else}style="display:none" {/if}>
+{eval echo user_group_select('set[public_uid_group]', $info['public_uid_group'])}
+</span>
+<span  id="user_setting_uid" {if $info['public_uid_type'] == 1}style="display:none" {/if}>
+<input name="set[public_uid]" type="text" class="txt" id="public_uid" value="{$info['public_uid']}">
+</span>
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:public_uid_notice} </td>
+</tr>
+
+ 
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:reply_author}UID:<span class="vtop rowform"></span></td>
+</tr>
+
+
+
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'reply_uid_type', 'int_val' => 2, 'js' => array("show_hide('reply_uid_group','reply_uid_setting_uid', 1)", "show_hide('reply_uid_group','reply_uid_setting_uid', 2)"), 'lang' => array('user_group', 'user_setting_uid')), $info);}</td>
+<td s="1" class="vtop tips2"></td>
+</tr>
+
+
+
+<tr  class="noborder"><td class="vtop rowform">
+<span  id="reply_uid_group" {if $info['reply_uid_type'] == 1}{else}style="display:none" {/if}>
+{eval echo user_group_select('set[reply_uid_group]', $info['public_uid_group'])}
+</span>
+<span  id="reply_uid_setting_uid" {if $info['reply_uid_type'] == 1}style="display:none" {/if}>
+<input name="set[reply_uid]" type="text" class="txt" id="reply_uid" value="{$info['reply_uid']}">
+</span>
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:like_up} </td>
+</tr>
+ 
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:public_dateline}:<span class="vtop rowform"></span></td>
+</tr>
+
+  
+  <tr  class="noborder"><td class="vtop rowform">
+<div style="width:600px;">
+	<span style="float:left; margin-right:15px;">
+   <input id="time_public" {if $info['public_time_type']==1 || !$info['public_time_type']}checked="checked"{/if} name="set[public_time_type]" onclick="show_hide('show_public_time','',2);" type="radio"  class="radio" value="1"><label for="time_public">{lang milu_pick:time_public}</label>
+   
+    <input id="time_pick_time" {if $info['public_time_type'] == 2}checked="checked"{/if} name="set[public_time_type]" onclick="show_hide('show_public_time','',2);" type="radio"  class="radio" value="2"><label for="time_pick_time">{lang milu_pick:time_pick_time}</label>
+	
+   <input id="time_rand" {if $info['public_time_type'] == 3}checked="checked"{/if}  name="set[public_time_type]" onclick="show_hide('show_public_time','',1);" type="radio"  class="radio" value="3"><label for="time_rand">{lang milu_pick:time_rand}</label>
+   </span>
+   <br />
+   <p style="display:block; width:400px; margin-top:10px;">
+   <span id="show_public_time" {if $info['public_time_type'] != 3}style="display:none"{/if}>
+   <input style="float:left; width:140px;" name="set[public_start_time]" type="text" class="txt" onclick="showcalendar(event, this, 1)" id="public_start_time" value="{$info['public_start_time']}">
+<span style="float:left; margin-right:10px;">-</span>
+<input style="float:left; width:140px;" name="set[public_end_time]" type="text" class="txt" onclick="showcalendar(event, this, 2)" id="public_end_time" value="{$info['public_end_time']}" />
+</span>
+</p>
+</div></td>
+<td s="1" class="vtop tips2">{lang milu_pick:public_dateline_notice}</td>
+</tr>
+
+
+
+ 
+    
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:reply_dateline}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[reply_dateline]" type="text" class="txt" id="reply_dateline" value="{$info['reply_dateline']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:reply_dateline_notice}</td>
+</tr>
+
+ 
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:article_hits}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[view_num]" type="text" class="txt" id="view_num" value="{$info['view_num']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:article_hits_notice}</td>
+</tr>
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:img_water}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_water_img] == 1 || !$info[is_water_img]} class="checked" {/if}><input {if $info[is_water_img] == 1 || !$info[is_water_img]} checked="checked" {/if} name="set[is_water_img]" type="radio" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:img_water_yes}</li>
+  <li {if $info[is_water_img] == 2} class="checked" {/if}><input  type="radio" {if $info[is_water_img] == 2} checked="checked" {/if}  value="2" name="set[is_water_img]" class="radio">
+&nbsp;{lang milu_pick:img_water_no}</li>
+</ul></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:is_download_img}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_download_img] || !$info[is_download_img]} class="checked" {/if}><input {if $info[is_download_img] || !$info[is_download_img]} checked="checked" {/if} name="set[is_download_img]" type="radio" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_download_img] == 2} class="checked" {/if}><input  type="radio" {if $info[is_download_img] == 2} checked="checked" {/if}  value="2" name="set[is_download_img]" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:download_img_notice}</td>
+</tr>
+
+ 
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:is_download_file}<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_download_file] == 1} class="checked" {/if}><input {if $info[is_download_file] == 1} checked="checked" {/if} name="set[is_download_file]" type="radio" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_download_file] != 1} class="checked" {/if}><input  type="radio" {if $info[is_download_file] != 1} checked="checked" {/if}  value="2" name="set[is_download_file]" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:download_file_notice}</td>
+</tr>
+
+ 
+
+ 
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:is_word_replace}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_word_replace] == 1} class="checked" {/if}><input {if $info[is_word_replace] == 1} checked="checked" {/if} name="set[is_word_replace]" type="radio" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_word_replace] != 1} class="checked" {/if}><input  type="radio" {if $info[is_word_replace] != 1} checked="checked" {/if}  value="2" name="set[is_word_replace]" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:word_replace_notice}</td>
+</tr>
+ 
+
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:is_public_del}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_public_del] == 1} class="checked" {/if}><input {if $info[is_public_del] == 1} checked="checked" {/if} name="set[is_public_del]" type="radio" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_public_del] != 1} class="checked" {/if}><input  type="radio" {if $info[is_public_del] != 1} checked="checked" {/if}  value="2" name="set[is_public_del]" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:is_public_del_notice}</td>
+</tr>
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:content_merge}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_page_public] == 1} class="checked" {/if}><input {if $info[is_page_public] == 1} checked="checked" {/if} name="set[is_page_public]" type="radio" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_page_public] != 1} class="checked" {/if}><input  type="radio" {if $info[is_page_public] != 1} checked="checked" {/if}  value="2" name="set[is_page_public]" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:content_merge_notice}</td>
+</tr>
+
+ 
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_public_reply}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_public_reply] != 2} class="checked" {/if}><input {if $info[is_public_reply] != 2} checked="checked" {/if} name="set[is_public_reply]" type="radio" onclick="show_hide('show_public_reply','',1);" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_public_reply] == 2} class="checked" {/if}><input  type="radio" {if $info[is_public_reply] == 2} checked="checked" {/if}  value="2" name="set[is_public_reply]" onclick="show_hide('show_public_reply','',2);" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<tbody id="show_public_reply"  {if $info[is_public_reply] == 2}style="display:none"{/if}>
+<tr><td colspan="2" class="td27" s="1">{lang milu_pick:is_reply_rand}:</td></tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[public_reply_seq] != 2} class="checked" {/if}><input {if $info[public_reply_seq] !=2} checked="checked" {/if} name="set[public_reply_seq]" type="radio"  show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[public_reply_seq] == 2} class="checked" {/if}><input  type="radio" {if $info[public_reply_seq] == 2} checked="checked" {/if}  value="2" name="set[public_reply_seq]" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:reply_rand_notice}</td>
+</tr>
+</tbody>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_auto_public}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_auto_public]} class="checked" {/if}><input {if $info[is_auto_public]} checked="checked" {/if} name="set[is_auto_public]" type="radio" onclick="show_hide('show_auto_public','',1);" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if !$info[is_auto_public]} class="checked" {/if}><input  type="radio" {if !$info[is_auto_public]} checked="checked" {/if}  value="0" name="set[is_auto_public]" onclick="show_hide('show_auto_public','',2);" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:auto_public_notice}</td>
+</tr>
+
+ 
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:public_sort}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'article_public_sort', 'int_val' => 1, 'lang' => array('article_public_sort_desc', 'article_public_sort_asc')), $info);}
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:article_public_sort_notice}</td>
+</tr>
+
+
+<tr>
+  <td colspan="2" class="td27" s="1">{lang milu_pick:bind_class}:</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">    <label>{lang milu_pick:public_to}:</label>
+    <select name="set[public_type]" onchange="change_public_type(this.value);">
+	  <option {if !$info['public_type']}selected="selected"{/if} value="0">{lang milu_pick:please_select}</option>
+      <option {if $info['public_type'] == 1}selected="selected"{/if} value="1">{lang milu_pick:protal}</option>
+      <option {if $info['public_type'] == 2}selected="selected"{/if}  value="2">{lang milu_pick:bbs}</option>
+      <option {if $info['public_type'] == 3}selected="selected"{/if}  value="3">{lang milu_pick:blog}</option>
+      </select>
+    </label>
+    <span id="portal_show" {if $info['public_type'] != 1}style="display:none"{/if}>{$portalselect}&nbsp;&nbsp;</span>
+    <span id="forums_show"  {if $info['public_type'] != 2}style="display:none"{/if}> <!--{$forumselect}-->&nbsp;&nbsp;<span id="threadtypes">{$threadtypes}</span></span>
+    <span id="blog_show" {if $info['public_type'] != 3}style="display:none"{/if} > {$blogselect}&nbsp;&nbsp;</span>&nbsp;&nbsp;<span style="font-weight:normal">{lang milu_pick:auto_public_class}</span></td>
+</tr>
+
+
+
+</tbody>
+</table>
+<table class="tab_content tb tb2" {if $step == 5}style="display:block"{else}style="display:none"{/if}>
+<tbody>
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:pick_page_num}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[jump_num]" type="text" class="txt" id="jump_num" value="{$info['jump_num']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:pick_page_num_notice}</td>
+</tr>
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:pick_all_num}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[pick_num]" type="text" class="txt" id="pick_num" value="{$info['pick_num']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:pick_all_num_notice}</td>
+</tr>
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:stop_time}<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[stop_time]" type="text" class="txt" id="stop_time" value="{$info['stop_time']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:sleep_notice}</td>
+</tr>
+ 
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:cron}</th>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_can}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_auto_pick]} class="checked" {/if}><input {if $info[is_auto_pick]} checked="checked" {/if} name="set[is_auto_pick]" type="radio" onclick="show_hide('show_task','',1);" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if !$info[is_auto_pick]} class="checked" {/if}><input  type="radio" {if !$info[is_auto_pick]} checked="checked" {/if}  value="0" name="set[is_auto_pick]" onclick="show_hide('show_task','',2);" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:cron_notice} </td>
+</tr>
+<tbody id="show_task"  {if !$info[is_auto_pick]}style="display:none"{/if}>
+{eval show_cron_setting_output($info);}
+</tbody>
+ 
+
+</tbody>
+</table>
+<tr>
+<br >
+<div class="fixsel"><input style="display:none" type="submit" class="btn" id="submit_addsubmit" name="editsubmit" title="{lang milu_pick:save_notice}" value="{lang milu_pick:save}">
+<input type="submit" class="btn" id="submit_addsubmit" name="editsubmit" title="{lang milu_pick:save_notice}" value="{lang milu_pick:submit}"></div><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script>
+</form>
+<script>
+{$show_bottom_js}
+</script>

@@ -1,0 +1,69 @@
+<!--{template common/header}-->
+<!--[name]{Week_Design_list_about_course_wide}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<style>
+.ct2 { border:0; padding-bottom:30px;} 
+.wk_about_1_warp { width:1080px; padding:15px 0;}
+</style>
+<link href="$_G['style']['styleimgdir']/about/about.css" rel="stylesheet" type="text/css" />
+
+</div>
+<div class="wk_list_box wk_list_box18">
+</div>
+<div class="wk_blog_tab">
+	<ul>
+    <!--{if $wk_menu}-->
+        <!--{if $cat[others]}-->
+            <!--{loop $cat[others] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{/if}-->
+    <!--{else}-->
+        <!--{if $cat[subs]}-->
+            <!--{loop $cat[subs] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{else}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[others] $value}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                <!--{/loop}-->
+            <!--{/if}-->
+        <!--{/if}-->
+    <!--{/if}-->
+    </ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="wk_ymbg">
+<div id="wp" class="wp">
+
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl">
+
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+        <div class="wk_content_right_m">
+            <div class="wk_about_1_warp">
+            	<!--[diy=wk_about]--><div id="wk_about" class="area"></div><!--[/diy]-->
+      		</div>
+        </div>
+        <div class="clear"></div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+	</div>
+</div>
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

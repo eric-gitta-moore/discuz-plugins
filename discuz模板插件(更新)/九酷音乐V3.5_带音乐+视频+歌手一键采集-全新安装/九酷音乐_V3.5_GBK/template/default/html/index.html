@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[qianwei:webname] - 国内最前卫的MP3下载音乐网站</title>
+<meta name="Keywords" content="[qianwei:keywords]" />
+<meta name="Description" content="[qianwei:description]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/index.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/lanmu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:tempurl]js/topcommon.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+[qianwei:head]
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a class="active" href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box musicBus mt bgWrite">
+   <ul class="clearfix directNew">
+   {qianwei:class sort=turn order=asc}<li><a class="directName" target="_blank" href="[class:link]">[class:name]</a><a class="directPlay" target="_blank" href="[class:link]"></a></li>{/qianwei:class}
+  </ul>
+</div>
+<form name="form" action="[qianwei:path]play.php?id=" method="get">
+ <div class="box clearfix sort mt">
+  <div class="clearfix label">
+   <ul class="label_title clickTab-hd">
+    <li><span>按分类</span></li>
+    <li class="current"><span>按排行</span></li>
+   </ul>
+  </div>
+  <div id="tipcontent" style="position:relative;">
+  <div class="label_view bgWrite clickTab-bd clearfix">
+   <div class="label_show clearfix">
+    <ul class="clearfix">
+     {qianwei:class sort=turn order=asc}<li><a href="[class:link]" target="_blank">[class:name]</a></li>{/qianwei:class}
+    </ul>
+   </div>
+   <div style="display:block;" class="label_show clearfix"><ul class="clearfix">{qianwei:class classid=5,6,7,8,9,10,11,12 sort=turn order=asc}<li><a href="[class:link]" target="_blank">[class:name]</a></li>{/qianwei:class}</ul></div>
+  </div>
+ </div>
+</div>
+<div class="box clearfix mt" id="wall"><script type="text/javascript">getavatar();</script></div>
+ <div class="box clearfix mt">
+  <div class="fl recom bgWrite">
+   <div class="label">
+    <ul class="label_title clickTab-hd">
+     <li class="current"><span>{qianwei:class classid=8}[class:name]{/qianwei:class}</span></li>
+     <li><span>{qianwei:class classid=10}[class:name]{/qianwei:class}</span></li>
+    </ul> </div>
+   <div class="label_view clickTab-bd">
+    <div class="label_show" style="display:block;">
+     <div class="clearfix" id="f1">
+      <ul class="fl" style="border-right:1px dashed #ccc;">
+{qianwei:music loop=3 sort=goodhits start=1}<li><span class="num">[music:i].<input style="display:none;" type="checkbox" name="Url" value="{song}[music:id]"></span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a title="加入列表" onclick="javascript:Addplay('{song}[music:id]')" class="add">加入列表</a></li>{/qianwei:music}
+{qianwei:music loop=7 sort=goodhits start=4}<li><span><script type="text/javascript">var a=[music:i];var b=3;var c=a+b;document.write(c);</script>.<input style="display:none;" type="checkbox" name="Url" value="{song}[music:id]"></span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a title="加入列表" onclick="javascript:Addplay('{song}[music:id]')" class="add">加入列表</a></li>{/qianwei:music}</ul>
+<ul class="fr">{qianwei:music loop=10 sort=goodhits start=11}<li><span><script type="text/javascript">var a=[music:i];var b=10;var c=a+b;document.write(c);</script>.<input style="display:none;" type="checkbox" name="Url" value="{song}[music:id]"></span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a title="加入列表" onclick="javascript:Addplay('{song}[music:id]')" class="add">加入列表</a></li>{/qianwei:music}
+      </ul>
+     </div>
+     <div class="listen"><a style="cursor:pointer;" onclick="javascript:playallquanxuan('f1');lbplay();document.form.reset();" title="试听全部">试听全部</a></div>
+    </div>
+    <div class="label_show">
+     <div class="clearfix" id="f2">
+      <ul class="fl" style="border-right:1px dashed #ccc;">
+{qianwei:music loop=3 sort=favhits start=1}<li><span class="num">[music:i].<input style="display:none;" type="checkbox" name="Url" value="{song}[music:id]"></span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a title="加入列表" onclick="javascript:Addplay('{song}[music:id]')" class="add">加入列表</a></li>{/qianwei:music}
+{qianwei:music loop=7 sort=favhits start=4}<li><span><script type="text/javascript">var a=[music:i];var b=3;var c=a+b;document.write(c);</script>.<input style="display:none;" type="checkbox" name="Url" value="{song}[music:id]"></span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a title="加入列表" onclick="javascript:Addplay('{song}[music:id]')" class="add">加入列表</a></li>{/qianwei:music}</ul>
+<ul class="fr">{qianwei:music loop=10 sort=favhits start=11}<li><span><script type="text/javascript">var a=[music:i];var b=10;var c=a+b;document.write(c);</script>.<input style="display:none;" type="checkbox" name="Url" value="{song}[music:id]"></span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a title="加入列表" onclick="javascript:Addplay('{song}[music:id]')" class="add">加入列表</a></li>{/qianwei:music}
+      </ul>
+     </div>
+     <div class="listen"><a style="cursor:pointer;" onclick="javascript:playallquanxuan('f2');lbplay();document.form.reset();" title="试听全部">试听全部</a></div>
+    </div>
+   </div>
+  </div>
+	<div class="fr gsTui bgWrite" id="tipcontent2" style="position:relative;">
+   <h3>{qianwei:class classid=1}<a href="[class:link]" target="_blank">更多</a>[class:name]{/qianwei:class}</h3>
+	<ul class="gsTuiHot clearfix">{qianwei:singer loop=8 sort=hits start=1}<li><a target="_blank" href="[singer:link]"><img title="[singer:name]" src="[singer:pic]"><span>[singer:name]</span></a></li>{/qianwei:singer}</ul>
+<div class="gsTuiLine"></div>
+<ul class="gsTuiList clearfix">{qianwei:singer loop=16 sort=hits start=9}<li><a target="_blank" href="[singer:link]" title="[singer:name]">[singer:name]</a></span></li>{/qianwei:singer}</ul>
+  </div>
+ </div>
+<script type="text/javascript">
+$(document).ready(function(){
+(function($){$.fn.jCarouselLite=function(o){o=$.extend({btnPrev:null,btnNext:null,btnGo:null,mouseWheel:false,auto:null,speed:1000,easing:null,vertical:false,circular:true,visible:6,start:0,scroll:3,beforeStart:null,afterEnd:null},o||{});return this.each(function(){var b=false,animCss=o.vertical?"top":"left",sizeCss=o.vertical?"height":"width";var c=$(this),ul=$("ul",c),tLi=$("li",ul),tl=tLi.size(),v=o.visible;if(o.circular){ul.prepend(tLi.slice(tl-v-1+1).clone()).append(tLi.slice(0,v).clone());o.start+=v}var f=$("li",ul),itemLength=f.size(),curr=o.start;c.css("visibility","visible");f.css({overflow:"hidden",float:o.vertical?"none":"left"});ul.css({margin:"0",padding:"0",position:"relative","list-style-type":"none","z-index":"1"});c.css({overflow:"hidden",position:"relative","z-index":"2",left:"0px"});var g=o.vertical?height(f):width(f);var h=g*itemLength;var j=g*v;f.css({width:f.width(),height:f.height()});ul.css(sizeCss,h+"px").css(animCss,-(curr*g));c.css(sizeCss,j+"px");if(o.btnPrev)$(o.btnPrev).click(function(){return go(curr-o.scroll)});if(o.btnNext)$(o.btnNext).click(function(){return go(curr+o.scroll)});if(o.btnGo)$.each(o.btnGo,function(i,a){$(a).click(function(){return go(o.circular?o.visible+i:i)})});if(o.mouseWheel&&c.mousewheel)c.mousewheel(function(e,d){return d>0?go(curr-o.scroll):go(curr+o.scroll)});if(o.auto)setInterval(function(){go(curr+o.scroll)},o.auto+o.speed);function vis(){return f.slice(curr).slice(0,v)};function go(a){if(!b){if(o.beforeStart)o.beforeStart.call(this,vis());if(o.circular){if(a<=o.start-v-1){ul.css(animCss,-((itemLength-(v*2))*g)+"px");curr=a==o.start-v-1?itemLength-(v*2)-1:itemLength-(v*2)-o.scroll}else if(a>=itemLength-v+1){ul.css(animCss,-((v)*g)+"px");curr=a==itemLength-v+1?v+1:v+o.scroll}else curr=a}else{if(a<0||a>itemLength-v)return;else curr=a}b=true;ul.animate(animCss=="left"?{left:-(curr*g)}:{top:-(curr*g)},o.speed,o.easing,function(){if(o.afterEnd)o.afterEnd.call(this,vis());b=false});if(!o.circular){$(o.btnPrev+","+o.btnNext).removeClass("disabled");$((curr-o.scroll<0&&o.btnPrev)||(curr+o.scroll>itemLength-v&&o.btnNext)||[]).addClass("disabled")}}return false}})};function css(a,b){return parseInt($.css(a[0],b))||0};function width(a){return a[0].offsetWidth+css(a,'marginLeft')+css(a,'marginRight')};function height(a){return a[0].offsetHeight+css(a,'marginTop')+css(a,'marginBottom')}})(jQuery);
+$(function() {
+$(".lanAlbum-scroll").jCarouselLite({
+btnNext: ".next",
+btnPrev: ".prev"
+});
+});
+})
+</script>
+<div class="box clearfix mt">
+<div class="mdBox bgWrite">
+<div class="mdBoxHd">{qianwei:class classid=4}<a href="[class:link]" target="_blank" class="fr">更多</a><h2 class="mdBoxHdTit"><span>[class:name]</span></h2>{/qianwei:class}</div>
+   <div class="mdBoxBd">
+    <div class="lanAlbum">
+    <div class="lanAlbum-scroll">
+     <ul class="scroll_ul">
+      {qianwei:special loop=12 sort=stars}<li class="scroll_li"><div class="scroll_box"> <a href="[special:link]" target="_blank" title="[special:name]"><img src="[special:pic]" width="120" height="120"></a><p><a href="[special:link]" target="_blank">[special:name]</a></p></div></li>{/qianwei:special}
+     </ul>
+    </div>
+      <a class="prev" href="javascript:void();">Previous</a>
+     <a class="next" href="javascript:void();">Next</a>
+    </div>
+   </div>
+  </div>
+</div>
+ <div class="box clearfix mt rank bgWrite">
+ <h3>{qianwei:class classid=5}[class:name]{/qianwei:class}Top60</h3>
+  <div class="clearfix mb rankBox" id="f3"><ol>{qianwei:music loop=4 sort=time start=1}<li><input type="checkbox" name="Url" value="{song}[music:id]" /><span class="num">[music:i].</span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}{qianwei:music loop=56 sort=time start=5}<li><input type="checkbox" name="Url" value="{song}[music:id]" /><span><script type="text/javascript">var a=[music:i];var b=4;var c=a+b;document.write(c);</script>.</span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}</ol></div><div class="setPlay"> <a style="cursor:pointer;" onclick="javascript:quanxuan('f3');" class="setPlayXuan">全选/反选</a> <a style="cursor:pointer;" onclick="javascript:lbplay();" class="setPlayPlay">播放</a> <a class="setPlayAdd" style="cursor:pointer;" onclick="javascript:clk('playadd','f3');">加入列表</a> <a class="setPlaySui" onclick="qianwei.musicPlayer('{qianwei:music loop=60 sort=time}{song}[music:id],{/qianwei:music}')" style="cursor:pointer;">全部播放</a></div>
+ </div>
+ <div class="box clearfix mt rank bgWrite">
+ <h3>{qianwei:class classid=6}[class:name]{/qianwei:class}Top60</h3>
+  <div class="clearfix mb rankBox" id="f4"><ol>{qianwei:music loop=60 sort=hits}<li><input type="checkbox" name="Url" value="{song}[music:id]" /><span>[music:i].</span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}</ol></div><div class="setPlay"> <a style="cursor:pointer;" onclick="javascript:quanxuan('f4');" class="setPlayXuan">全选/反选</a> <a style="cursor:pointer;" onclick="javascript:lbplay();" class="setPlayPlay">播放</a> <a class="setPlayAdd" style="cursor:pointer;" onclick="javascript:clk('playadd','f4');">加入列表</a> <a class="setPlaySui" onclick="qianwei.musicPlayer('{qianwei:music loop=60 sort=hits}{song}[music:id],{/qianwei:music}')" style="cursor:pointer;">全部播放</a></div>
+ </div>
+ <div class="box clearfix mt rank bgWrite">
+ <h3>{qianwei:class classid=7}[class:name]{/qianwei:class}Top60</h3>
+  <div class="clearfix mb rankBox" id="f5"><ol>{qianwei:music loop=60 sort=stars}<li><input type="checkbox" name="Url" value="{song}[music:id]" /><span>[music:i].</span><span class="singer_title"><a href="[music:link]" target="_blank"><font color="[music:color]">[music:name]</font></a></span><span class="songer"><a href="[music:singerlink]" target="_blank">[music:singername]</a></span><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}</ol></div><div class="setPlay"> <a style="cursor:pointer;" onclick="javascript:quanxuan('f5');" class="setPlayXuan">全选/反选</a> <a style="cursor:pointer;" onclick="javascript:lbplay();" class="setPlayPlay">播放</a> <a class="setPlayAdd" style="cursor:pointer;" onclick="javascript:clk('playadd','f5');">加入列表</a> <a class="setPlaySui" onclick="qianwei.musicPlayer('{qianwei:music loop=60 sort=stars}{song}[music:id],{/qianwei:music}')" style="cursor:pointer;">全部播放</a></div>
+ </div>
+</form>
+<script type="text/javascript">
+function Addplay(url){
+var ifplay= GetCookie("jk_ifplay");
+if(ifplay=="1"){
+var now = new Date();
+var ss = now.getTime();
+now.setTime(ss + 12*60*60*1000);
+document.cookie = "jk_addplay="+(url)+";domain=[qianwei:weburl];path=[qianwei:path];expires="+ now.toGMTString();
+asyncbox.tips("恭喜，已经添加到连续播放列表！", "success", 1500);
+}else{if(url.split(",").length-1>1){sendplayer(url);}else{sendplayer(url);}}}
+var old="";
+function quanxuan(obj){
+	if(old!=obj.toString()){
+		document.form.reset();
+		old = obj.toString();
+	}	
+	with(document.getElementById(obj)){
+		var ins = getElementsByTagName("input");
+		for(var i=0;i<ins.length;i++){
+				ins[i].checked=!ins[i].checked;
+		}
+	}
+}
+function playallquanxuan(obj){
+	document.form.reset();
+	with(document.getElementById(obj)){
+		var ins = getElementsByTagName("input");
+		for(var i=0;i<ins.length;i++){
+				ins[i].checked=true;
+		}
+	}
+}
+function lbplay(){
+	var newx="",firstid="";
+	var ok=false;
+	var lens=eval("document.form.Url").length;
+	if(lens==undefined){lens=1}
+	if(lens>1){
+		for (var i=0;i<lens;i++) 
+		{
+	
+		var temp=eval("document.form.Url["+i+"]");
+			if(temp.checked){
+				if(temp.value.replace("@","")!=""&&temp.value.replace("@","")!="0"){
+					if(firstid=="")firstid=temp.value.replace("@","");
+					newx=newx+temp.value.replace("@","")+",";
+					ok=true;
+				}
+			}
+		}
+	}else{
+		ok=true;
+		if(document.form.Url.value.replace("@","")!=""&&document.form.Url.value.replace("@","")!="0"){
+			newx=document.form.Url.value.replace("@","")+",";
+		}
+	}
+	if(ok){	
+		if(newx.length>2009){
+			asyncbox.tips("您选择的太多，请保持在60首以内，以便达到最佳效果！", "wait", 1000);
+		}else{
+			if(newx.split(",").length-1>1)
+			window.open("[qianwei:path]play.php?id="+newx+"");
+			else
+			window.open("[qianwei:path]play.php?id="+newx+"");
+		}
+	}else{
+		asyncbox.tips("请选择后再播放！", "wait", 1000);
+	}
+}
+</script>
+<div class="box clearfix mt">
+<div class="mdBox bgWrite">
+   <div class="mdBoxHd">
+   <h2 class="mdBoxHdTit"><span><strong><i><font color="#FF3E3E">[qianwei:usernum]</font></i></strong> <small>位乐迷开启了他们各自的音乐库</small></span></h2>
+   </div>
+   <div class="mdBoxBd">
+    <ul class="singerList">
+    {qianwei:user loop=42}<li><a href="[user:link]" target="_blank" title="[user:name]"><img src="[user:photo]" width="50" height="50"></a><p><a href="[user:link]" target="_blank">[user:name]</a></p></li>{/qianwei:user}
+    </ul>
+   </div>
+  </div>
+</div>
+<div class="friend_link box clearfix bgWrite">
+ <h2><span class="fr"></span>友情链接</h2>
+ <ul class="clearfix">{qianwei:link sort=turn order=asc classid=txt}
+  <li><a href="[link:url]" target="_blank">[link:name]</a></li>
+ {/qianwei:link}</ul>
+</div>
+<div class="box clearfix copyRight mt bgWrite">
+ <table><tr>{qianwei:link sort=turn order=asc classid=pic}<td width="100" height="50"><a href="[link:url]" target="_blank"><img src="[link:pic]" title="[link:name]" width="88" height="31" border="0" style="margin-left:15px;"></a></td>{/qianwei:link}</tr></table>
+</div>
+[qianwei:bottom]
+</body></html>

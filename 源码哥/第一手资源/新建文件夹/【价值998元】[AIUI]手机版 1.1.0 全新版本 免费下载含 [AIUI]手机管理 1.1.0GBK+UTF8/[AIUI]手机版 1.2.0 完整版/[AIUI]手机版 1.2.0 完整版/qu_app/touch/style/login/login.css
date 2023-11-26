@@ -1,0 +1,140 @@
+/*
+ *
+ * Ô´Âë¸çwww.ymg6.com QQç¾¤ï¼š550494646
+ *
+ */
+
+.ainuo_login_reg .login-header{ height:50px; display:block; color:#fff; line-height:50px;}
+.ainuo_login_reg .login-header a{ display:block; width:40px; height:50px; text-align:center; line-height:50px;}
+.ainuo_login_reg .login-header .nav .z i{ font-size:18px; color:#fff;}
+.ainuo_login_reg .login-header .nav .y{ width:40px; height:50px;display:block; color:#666; float:right; line-height:50px; text-align:center;}
+.ainuo_login_reg .login-header .nav .y i{ font-size:18px;}
+.ainuo_login_reg .login-header .nav .name {font-size:16px; text-align:center; display:block; left:0; width:100%; position:absolute; z-index:-1; color:#fff;}
+.ainuo_login_reg input {
+	width:100%;
+    height: 42px;
+	line-height:42px;
+    margin-top: 15px;
+    padding: 0 15px;
+    background: #2d2d2d; 
+    *background-color:transparent;
+    background: rgba(45,45,45,.15);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #3d3d3d;
+    border: 1px solid rgba(255,255,255,.15);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+.ainuo_login_reg .login-btn-inner,.ainuo_login_reg .sec_code {
+	width:100%;
+    height: 42px;
+	line-height:42px;
+    margin-top: 15px;
+    padding: 0 15px;
+    background: #2d2d2d; 
+    *background-color:transparent;
+    background: rgba(45,45,45,.15);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #3d3d3d;
+    border: 1px solid rgba(255,255,255,.15);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+.ainuo_login_reg select{ color:#ccc;}
+.ainuo_login_reg .sec_code input{ margin-top:0;}
+
+.ainuo_login_reg input:-moz-placeholder { color: #ccc; }
+.ainuo_login_reg input:-ms-input-placeholder { color: #ccc; }
+.ainuo_login_reg input::-webkit-input-placeholder { color: #ccc; }
+
+.ainuo_login_reg input:focus {
+    outline: none;
+    -moz-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+.ainuo_login_reg button {
+    cursor: pointer;
+	font-weight:400;
+    height: 44px;
+    margin-top: 25px;
+    padding: 0;
+    background: #ef4300;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 0px;
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+.ainuo_login_reg button:hover {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+.ainuo_login_reg button:active {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:        
+        0 5px 8px 0 rgba(0,0,0,.1) inset,
+        0 1px 4px 0 rgba(0,0,0,.1);
+
+    border: 0px solid #ef4300;
+}
+

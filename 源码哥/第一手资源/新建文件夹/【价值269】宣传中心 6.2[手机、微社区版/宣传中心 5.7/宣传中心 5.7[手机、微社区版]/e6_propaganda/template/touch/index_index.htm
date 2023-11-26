@@ -1,0 +1,80 @@
+<!--{template e6_propaganda:header}-->
+<div data-role="page" id="pageone">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:spread_url}</h1>
+	</div>
+	<div data-role="content">
+		<label for="siteurl" style="line-height:37px;">{lang e6_propaganda:spread_url} :</label>
+		<input type="text" class="px vm" id="siteurl" value="{if $e6_propaganda['wechat_open']}{$_G['siteurl']}plugin.php?id=e6_propaganda&x={$_G['uid']}{else}{$_G['siteurl']}forum.php?x={$_G['uid']}{/if}" size="50" /> 
+		<div class="bdsharebuttonbox" data-tag="share_8">
+			<a class="bds_tsina" data-cmd="tsina"></a>
+			<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+			<a class="bds_tqq" data-cmd="tqq"></a>
+			<a class="bds_sqq" data-cmd="sqq"></a>
+			<a class="bds_tieba" data-cmd="tieba"></a>
+			<a class="bds_renren" data-cmd="renren"></a>
+		</div>
+		<script>
+			window._bd_share_config = {
+				common : {
+					bdText : '{$_G['bbname']}',	
+					bdUrl : '{if $e6_propaganda['wechat_open']}{$_G['siteurl']}plugin.php?id=e6_propaganda&x={$_G['uid']}{else}{$_G['siteurl']}forum.php?x={$_G['uid']}{/if}', 	
+					bdSign : 'off'
+				},
+				share : [{
+					"tag" : "share_8",
+					"bdSize" : 32
+				}],
+			}
+			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+		</script>
+		<div class="c_c" style="margin-top:50px;"><span>{lang e6_propaganda:mobile_count_money}{$e6_user_count['money']}</span><span>{lang e6_propaganda:mobile_count_user}{$e6_user_count['register']}</span></div>
+		<div class="c_c no_border"><span>{lang e6_propaganda:mobile_count_ip}{$e6_user_count['ip']}</span><span>{lang e6_propaganda:mobile_count_task}{$e6_user_count['task']}</span></div>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#" class="ui-btn-active ui-state-persist">{lang e6_propaganda:spread_url}</a></li>
+				<li><a href="#pagetwo">{lang e6_propaganda:index_comment}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div data-role="page" id="pagetwo">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:index_comment}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" class="e6_ul">
+
+			<li>1. {$prompt_1}</li>
+			<li>2. {$prompt_2}
+				<div>
+					<!--{loop $prompt_2_list $v}-->
+						<span>{$v}</span>
+					<!--{/loop}-->
+				</div>
+			</li>
+			<li>3. {$prompt_3}</li>
+			<li>4. {$prompt_4}
+				<!--{loop $prompt_4_list $v}-->
+				<div style="border-bottom: 1px dashed #cdcdcd;padding:10px 0px;">
+					{$v['comment']}, 
+					{$v['reward']}
+				</div>
+				<!--{/loop}-->
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#pageone">{lang e6_propaganda:spread_url}</a></li>
+				<li><a href="#" class="ui-btn-active ui-state-persist">{lang e6_propaganda:index_comment}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

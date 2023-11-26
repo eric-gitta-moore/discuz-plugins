@@ -1,0 +1,162 @@
+<!--{block return}-->
+<script src="source/plugin/x520_top/template/js/saved_resource.js"></script>
+<script src="source/plugin/x520_top/template/js/header.js"></script>
+<script type="text/javascript">
+TMall = TMall || {};
+TMall.BackTop = function() {
+    function C() {
+        this.start = 0;
+        this.step = 100;
+        this.updateValue = function(K, N, L, M) {
+            E.scrollTo(0, -L * (K /= M) * (K - 2) + N)
+        };
+        this.getValue = function() {
+            return E.pageYOffset || G.body.scrollTop || G.documentElement.scrollTop
+        }
+    }
+    function H(K) {
+        if (! (this instanceof H)) {
+            return new H(K)
+        }
+        this.config = {};
+        this.scrollBtn = null;
+        this._init(K)
+    }
+    var I = KISSY,
+    J = I.DOM,
+    F = I.Event,
+    G = document,
+    E = window,
+    B = I.UA.ie == 6,
+    D = "hidden",
+    A = {
+        triggerId: "J_ScrollTopBtn",
+        triggerClass: "backToTop",
+        style: "",
+        bottom: <!--{$qinqin['x520_bg_bottom']}-->,
+        right: <!--{$qinqin['x520_bg_right']}-->,
+        baseLine: <!--{$qinqin['x520_bg_baseLine']}-->
+    };
+    C.prototype.scrollTop = function(K) {
+        var Q = this,
+        L = Q.getValue(),
+        M = null,
+        P = Q.start,
+        N = 0,
+        O = parseInt(L / 100);
+        if (K !== L) {
+            N = K - L;
+            M = setInterval(function() {
+                if (P <= O) {
+                    Q.updateValue(P, L, N, O);
+                    P++
+                } else {
+                    clearInterval(M)
+                }
+            },
+            5)
+        }
+    };
+    I.augment(H, {
+        _init: function(K) {
+            var L = this;
+            L.config = I.merge(K, A);
+            I.ready(function(M) {
+                L.createEl();
+                L.scrollBtn = M.get("#" + L.config.triggerId);
+                L.addEvent()
+            })
+        },
+        createEl: function() {
+            var K = this.config,
+            L = J.create("<div>", {
+                css: {
+                    display: "block",
+                    textIndent: "-9999px",
+                    position: B ? "absolute": "fixed",
+                    bottom: K.bottom,
+                    right: K.right,
+                    height: "<!--{if $qinqin['x520_bg_size'] ==1}-->60<!--{elseif $qinqin['x520_bg_size'] ==2}-->55<!--{elseif $qinqin['x520_bg_size'] ==3}-->50<!--{elseif $qinqin['x520_bg_size'] ==4}-->45<!--{elseif $qinqin['x520_bg_size'] ==5}-->40<!--{/if}-->px",
+                    width: "<!--{if $qinqin['x520_bg_size'] ==1}-->60<!--{elseif $qinqin['x520_bg_size'] ==2}-->55<!--{elseif $qinqin['x520_bg_size'] ==3}-->50<!--{elseif $qinqin['x520_bg_size'] ==4}-->45<!--{elseif $qinqin['x520_bg_size'] ==5}-->40<!--{/if}-->px",
+                    outline: "none",
+                    opacity: "0",
+                    overflow: "hidden",
+                    cursor: "pointer",
+                    background: "<!--{if $qinqin['x520_onoffs'] ==1}-->url('./source/plugin/x520_top/template/img/tops.png') no-repeat center center <!--{$qinqin['x520_colors']}--><!--{else}-->url<!--{if $qinqin['x520_bg_color'] ==1}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==2}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback1<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback1_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback1_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback1_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback1_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==3}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback2<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback2_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback2_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback2_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback2_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==4}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback3<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback3_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback3_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback3_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback3_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==5}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback4<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback4_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback4_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback4_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback4_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==6}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback5<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback5_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback5_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback5_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback5_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==7}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback6<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback6_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback6_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback6_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback6_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==8}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback7<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback7_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback7_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback7_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback7_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==9}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback8<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback8_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback8_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback8_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback8_40<!--{/if}-->.png')<!--{elseif $qinqin['x520_bg_color'] ==10}-->('./source/plugin/x520_top/template/img/<!--{if $qinqin['x520_bg_size'] ==1}-->goback9<!--{elseif $qinqin['x520_bg_size'] ==2}-->goback9_55<!--{elseif $qinqin['x520_bg_size'] ==3}-->goback9_50<!--{elseif $qinqin['x520_bg_size'] ==4}-->goback9_45<!--{elseif $qinqin['x520_bg_size'] ==5}-->goback9_40<!--{/if}-->.png')<!--{/if}--> 0 -0px no-repeat<!--{/if}-->"
+                },
+                id: K.triggerId,
+                "class": K.triggerClass + " hidden",
+                text: "\u8fd4\u56de\u9876\u90e8",
+                href: "#"
+            });
+            K.style || J.attr(L, "style", J.attr(L, "style") + K.style);
+            J.addStyleSheet(".hidden{visibility:hidden}");
+            J.append(L, "body")
+        },
+        addEvent: function() {
+            function K() {
+                var P = J.hasClass(L, D),
+                O = parseInt(J.scrollTop(G));
+                if (O > M && P) {
+                    P = new I.Anim(L, {
+                        opacity: <!--{$qinqin['x520_bg_opacity']}-->
+                    },
+                    0.3);
+                    P.run();
+                    J.removeClass(L, D)
+                } else {
+                    if (O < M && !P) {
+                        P = new I.Anim(L, {
+                            opacity: 0
+                        },
+                        0.3);
+                        P.run();
+                        J.addClass(L, D)
+                    }
+                }
+                if (B) {
+                    P = J.viewportHeight(G);
+                    O = O + P - N.bottom - J.height(L);
+                    J.css(L, "top", O)
+                }
+            }
+            var N = this.config,
+            L = I.get("#" + N.triggerId),
+            M = parseInt(N.baseLine);
+            if (L) {
+                F.on(E, "scroll", K);
+                F.on(L, "click",
+                function(O) {
+                    O.halt(); (new C(G.documentElement)).scrollTop(0)
+                });
+                F.on(L, "mouseover",
+                function() { (new I.Anim(L, {
+                        opacity: 1
+                    },
+                    0.3)).run()
+                });
+                F.on(L, "mouseout",
+                function() { (new I.Anim(L, {
+                        opacity: <!--{$qinqin['x520_bg_opacity']}-->
+                    },
+                    0.3)).run()
+                })
+            }
+        }
+    });
+    H.init = function(K) {
+        H(K)
+    };
+    return H
+} ();
+</script>
+<script>TMall.BackTop.init();</script>
+<style type="text/css">
+#scrolltop {
+    display: none;
+}
+.backToTop {
+    z-index: <!--{$qinqin['x520_bg_zindex']}-->;
+}
+</style>
+<!--{/block}-->

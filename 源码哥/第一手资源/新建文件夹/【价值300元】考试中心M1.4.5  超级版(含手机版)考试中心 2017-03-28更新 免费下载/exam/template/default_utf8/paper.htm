@@ -1,0 +1,250 @@
+<!--{template common/header}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/exam/image/common.css?{VERHASH}" />
+<script type="text/javascript"  src="source/plugin/exam/image/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">var formhash = '$_G[formhash]'; var jq = jQuery.noConflict();</script>
+<!--{if !isset($_GET[paper])}--><style> .paper .exam{display:none;min-height:300px;} </style><!--{/if}-->
+<div id="ajaxresult" style="display:none"></div>  
+<div id="ajaxtiny"></div>
+<div id="wp" class="wp">
+	<div id="pt" class="bm cl">
+		<div class="z"><a target="_blank" href="./" class="nvhm" title="首页"></a><em>?</em><a href="plugin.php?id=exam">考试中心</a><em>?</em><a href="plugin.php?id=exam&p=$paper[pid]">$paper[title]</a></div>
+		<div style="float:right"><!--{template exam:'.$template.'/common/nav}--></div>
+	</div>
+<div id="ct" class="wp cl">
+	<div class="fl bm" style="border:none">
+		<div class="paper fl" id="examination" oncopy="return false;" oncut="return false;">
+				<div class="ptit">
+					<div class="y"><!--{if $_G[uid]==$paper[uid] || $_G[adminid]==1}--><a href="plugin.php?id=exam:my&tab=paper&pid=$paper[pid]" target="_blank" class="xi2">考试记录</a>&nbsp;-&nbsp;<a href="plugin.php?id=exam:manage&pid=$paper[pid]" target="_blank" class="xi2">试卷管理</a><!--{/if}--></div>
+					<center>
+					<h2>$paper[title]</h2>
+ 					<p>作者: <em class="xi1">$paper[username]</em> , 
+					发布日期: <em class="xi1">{eval echo date('Y-m-d H:i', $paper[edittime]);}</em>, 
+					已浏览: <em class="xi1">$paper[pv]</em> 次, 
+					已答卷: <em class="xi1">$paper[submit]</em> 次, 
+					您已完成 <em class="xi1">$paper[twice_did]</em> <!--{if $paper[twice]}-->/ $paper[twice]<!--{/if}--> 次答卷<!--{if $paper[twice]}-->, 还剩  <em class="xi1">$paper[twice_left]</em>  次参与机会<!--{/if}-->
+					</p>
+					</center>
+					<!--{if $paper[content]}--><p class="ctt">$paper[content] </p><!--{/if}-->
+				</div>
+				
+			<!--{if $queuelock}-->
+				<div class="errormsg">	
+					<a href="javascript:window.close()" class="y">关闭</a>当前考试繁忙, 请稍后重试......
+				</div>
+			<!--{elseif $checkPaperStatus===true}-->
+					<form id="examination_form" method="post" autocomplete="off" onsubmit="" action="plugin.php?id=exam:result&replay=$_GET[replay]&formhash=$_G[formhash]">
+						<input value="$_G[formhash]" name="formhash" type="hidden">
+						<input value="$_POST[pwd]" name="pwd" type="hidden">
+						<input value="$paper[pid]" name="pid" type="hidden">
+
+						{eval $no=1}
+						<!--{loop $groups $_gid $_group}-->
+							<!--{if intval($_gid)==0}-->{eval continue;}<!--{/if}-->
+							<!--{if isset($_GET[paper])}-->
+								<div class="group">
+								<!--{if !trim($_group[content])}-->
+								<div class="ghr"></div>
+								<!--{else}-->
+								<div class="gtit">$_group[content]</div>
+								<!--{/if}-->
+							<!--{/if}-->
+							<!--{loop $_group[list] $v}-->
+								<!--{if isset($_GET[paper])}-->
+									<!--{if $no>1}--><div class="ehr"></div><!--{/if}-->
+								<!--{elseif $no==1}-->
+									<script type="text/javascript">var examid_first = '$v[eid]';</script>
+								<!--{/if}-->
+								<div class="exam" name="exam" id="examid$v[eid]">
+									<a class="flag" href="javascript:;">标记</a>
+									<div class="e_no">{echo $no++}#</div>
+									<a name="$v[eid]" id="$v[eid]" class="a_tag">&nbsp;</a>
+									<map id="item_$v[eid]" eid="$v[eid]" score="$v[score]" type="$v[type]" <!--{if $config[showexam] && !isset($_GET[paper])}-->_result="{echo str_replace('"','&#34;', $v[type]>3?$v[data]:$v[result])}""<!--{/if}-->>
+											<!--{if !isset($_GET[paper]) && $_group[content]}--><div class="eline">$_group[content]</div><!--{/if}-->
+											<input type="hidden" name="e_{$v[eid]}[type]" value="$v[type]">
+											<!--{if $v[type]==4}-->	
+												{eval include DISCUZ_ROOT.'source/plugin/exam/subject_replace_blank.php';}
+											<!--{/if}-->
+											<div class="subject">$v[subject] ($v[score] 分)
+											<!--{if $v[uid]==$_G[uid] || $_G[adminid]==1}-->	
+												[<a href="plugin.php?id=exam:manage&pid=$v[pid]&gid=$v[gid]&tab=$v[type]&eid=$v[eid]" target="_blank" class="xi1">编辑</a>]
+											<!--{/if}-->
+											</div>
+											<!--{if $v[image]}--><span class="y"><img class="eimgshow" src="$v[image]"></span><!--{/if}-->
+											<!--{if $v[type]==1}-->
+												<div class="check">
+													<label><input type="radio" name="e_{$v[eid]}[]" value="1" <!--{if $history[$v[eid]][user_result]==1}-->checked<!--{/if}-->>正确</label>
+													<label><input type="radio" name="e_{$v[eid]}[]" value="2" <!--{if $history[$v[eid]][user_result]==2}-->checked<!--{/if}-->>错误</label>
+												</div>
+											<!--{elseif $v[type]==2 || $v[type]==3}-->
+												{eval $bEmptyAB = !$v[data]; $v[data]=explode("\n", $v[data]); $i=0;}
+												<div class="<!--{if $bEmptyAB}-->check<!--{else}-->option<!--{/if}-->">
+												<!--{loop $v[data] $o}-->
+													{eval $c = chr(65+$i++);}
+													<label><input type="<!--{if $v[type]==2}-->radio<!--{else}-->checkbox<!--{/if}-->" name="e_{$v[eid]}[]" value="$c" <!--{if strpos($history[$v[eid]][user_result], $c)!==FALSE}-->checked<!--{/if}-->>$c. {echo dzcode($o)}</label>
+													<!--{if !$bEmptyAB}--><div class="br"></div><!--{/if}-->
+												<!--{/loop}-->
+												</div>
+											<!--{elseif $v[type]==4}-->
+												<div class="blank">
+			 
+												</div>
+											<!--{elseif $v[type]==5}-->
+												<div class="question">
+													<label><textarea name="e_{$v[eid]}[]">$history[$v[eid]][user_result]</textarea></label><br><br>
+													<label>该题自我估分: <input type="text" name="e_{$v[eid]}[]" value="$history[$v[eid]][user_score]"> (满分:$v[score]分)</label>
+												</div>
+											<!--{/if}-->
+											<cite class="emsg"><span class="wrong"></span><b>参考答案: </b>
+												<span class="result"></span>
+												<!--{if trim($v[note])}--><a class="note" href="javascript:;" onclick="exam_note_show($v[eid])">本题解释</a><!--{/if}-->
+												<!--{if $v[tid]}--><a class="forum" target="_blank" href="forum.php?mod=viewthread&tid=$v[tid]">本题讨论</a><!--{else}-->{eval push_exam_to_form($v[eid]);}<!--{/if}-->
+											</cite>
+									</map>
+								</div>
+							<!--{/loop}-->
+							<!--{if isset($_GET[paper])}--></div><!--{/if}-->
+						<!--{/loop}-->
+					<!--{template exam:'.$template.'/common/layer}-->
+					</form>
+
+					<!--{if !isset($_GET[paper])}-->
+						<div class="exam-next-nav">
+							<button class="btn1" onclick="test_btnNav('prev')">上一题</button>
+							<button class="btn1" onclick="test_btnNav('next')">下一题</button>
+							<!--{if $config[showexam]}-->
+							<button class="btn1" onclick="test_show_exam()">显示答案</button>
+							<!--{/if}-->
+						</div>
+						<script type="text/javascript">
+							var idfromurl =location.href.match(/#(\d+)/i);
+							var currentElement = $('examid' + (idfromurl ? idfromurl[1] : examid_first));
+							if(!currentElement)currentElement=$('examid' + examid_first);
+							currentElement.style.display = 'block';
+						</script>
+					<!--{/if}-->
+ 				<!--{else}-->
+						<!--{if $checkPaperStatus=='pwd'}-->
+							<div class="pwdmsg">	
+								<form method="post" autocomplete="off" onsubmit="" action="">
+									<input value="$_G[formhash]" name="formhash" type="hidden">
+									 <!--{if isset($_POST[pwd]) && strval($paper[pwd])!=strval($_POST[pwd])}--><div class="xi1 mbw">密码错误, 请重试</div><!--{/if}-->
+									试卷密码: &nbsp;<input name="pwd" type="text"> &nbsp;<input value="确定"  type="submit">
+								</form>
+							</div>
+						<!--{else}-->
+							<div class="errormsg">	
+								<a href="javascript:window.close()" class="y">关闭</a>
+								<!--{if $checkPaperStatus=='nopaper'}-->
+									试卷不存在, 请与管理员联系
+								<!--{elseif $checkPaperStatus=='empty'}-->
+									试卷中无试题, 作者正在筹集试题, 请稍等...
+								<!--{elseif $checkPaperStatus=='lock'}-->
+									试卷已经被管理员锁定, 请与管理员联系
+								<!--{elseif $checkPaperStatus=='unpublic'}-->
+									试卷未发布, 作者正在整理试题, 请稍等...
+								<!--{elseif $checkPaperStatus=='friend_group'}-->
+									你不在作者的"朋友组"中,无法使用该试卷,请与他联系
+								<!--{elseif $checkPaperStatus=='starttime'}-->
+									考试开始时间是 {echo date('Y-m-d H&#58;i', $paper['starttime'])}, 请稍后再来!
+								<!--{elseif $checkPaperStatus=='endtime'}-->
+									考试于 {echo date('Y-m-d H&#58;i', $paper['endtime'])} 结束, 欢迎下次再来!
+								<!--{elseif $checkPaperStatus=='twice'}-->
+									该试卷最多只能参与 $paper[twice] 次, 您已超限!
+								<!--{elseif $checkPaperStatus=='delay'}-->
+									<!--{if $paper[lock_time]>84600}-->
+										请在 {echo intval($paper[lock_time]/84600)} 分钟后再次参与
+									<!--{elseif $paper[lock_time]>3600}-->
+										请在 {echo intval($paper[lock_time]/3600)} 小时后再次参与
+									<!--{else}-->
+										请在 {echo intval($paper[lock_time]/60)} 分钟后再次参与
+									<!--{/if}-->
+								<!--{elseif $checkPaperStatus=='exppay'}-->
+									你没有购买该试卷或之前购买的时间已经过期
+								<!--{elseif $checkPaperStatus=='groupuse'}-->
+									你没有登陆或所在的用户组无权使用该试卷	
+								<!--{elseif $checkPaperStatus=='pwd'}-->
+									哎呀! 密码不对
+								<!--{elseif $checkPaperStatus=='unlogin'}-->
+									你没有登陆, 请先 <a href="member.php?mod=logging&action=login" class="xi1">登陆</a> 或 <a href="member.php?mod=register" class="xi1">注册账号</a>								
+								<!--{elseif $checkPaperStatus=='readgroup'}-->
+									你所在的用户组无权使用该试卷,请与作者联系
+								<!--{/if}-->
+							</div>
+						<!--{/if}-->	
+				<!--{/if}-->
+		</div>
+ 	</div>
+
+	<script type="text/javascript"  src="source/plugin/exam/image/paper.js"></script>
+	<script type="text/javascript">
+		//常量定义
+		var COLOR_FLAG		= '$config[flagcolor]';
+		var COLOR_SELECT	= '$config[bgcolor]';
+		var COLOR_UNSELECT	= '';
+		var SCORE_TOTAL		= '$paper[total_score]';
+		var SCORE_PASS		= '$paper[pass]';
+		var PAPER_PID		= '$paper[pid]';
+		var PAPER_CID		= '$paper[cid]';
+		var PAPER_PRICE		= '$paper[price]';
+		var TIME_LEFT		= '$paper[minute]' * 60;		
+		var TIME_PASS		= 0;
+		var TIME_TIMER		= null;
+		var RESULT			= null;
+		var SUBMIT_WAIT		= '$paper[wait]'*60;
+ 
+		var config_extcredit_unit  = '$config[extcredit][unit]';
+		var config_extcredit_title = '$config[extcredit][title]';
+ 
+		
+		<!--{if $checkPaperStatus==='exppay'}-->
+		_attachEvent(window, 'load', showBuyDialog = function(){
+				if('$_G['uid']'==0){
+					showDialog('<div style="line-height:39px">没有登录, 无法使用该试卷</div>','confirm','购买试卷',function(){
+						ajaxget('plugin.php?id=exam:ajax&formhash='+formhash+'&action=user_paper_payfor&pid='+PAPER_PID+'&'+Math.random(),'ajaxtiny','','','',function(){
+							window.location.href= 'member.php?mod=logging&action=login';
+						});
+					},1,function(){
+						window.location.href= 'plugin.php?id=exam:list&cid='+PAPER_CID;
+					})
+					$('fwin_dialog_submit').innerHTML = '<strong>立即登录</strong>';
+					$('fwin_dialog_cancel').innerHTML = '<strong>返回</strong>';
+				}else{
+					showDialog('<div style="line-height:39px">你未购买该套试卷,是否支付<font color="red">'+ PAPER_PRICE + config_extcredit_unit + config_extcredit_title + '</font>购买?</div>','confirm','购买试卷',function(){
+						ajaxget('plugin.php?id=exam:ajax&formhash='+formhash+'&action=user_paper_payfor&pid='+PAPER_PID+'&'+Math.random(),'ajaxtiny','','','',function(){
+							var rt = $('ajaxtiny').innerHTML;
+							if(rt=='lowcredit'){
+								showDialog('您没有足够的积分购买该套试卷! <a href="home.php?mod=spacecp&ac=credit&op=base" target="_blank">立即充值</a>');
+							}else if(rt=='creditfield'){
+								showDialog('站长没有设置积分交易字段!');
+							}else if(rt==1){
+								showError('购买成功!');
+								window.location.reload(); 
+							}else{
+								showDialog('购买试卷失败, 请与管理员联系!');
+							}
+						});
+					},1,function(){
+						//window.location.href= 'plugin.php?id=exam:list&cid='+PAPER_CID;
+					})
+					$('fwin_dialog_submit').innerHTML = '<strong>确认购买</strong>';
+					$('fwin_dialog_cancel').innerHTML = '<strong>取消</strong>';
+				}
+		}, document);
+		<!--{elseif $checkPaperStatus===true}-->
+			//window.onbeforeunload=function(){return '关闭或刷新网页将结束本次考试, 请慎重选择...';}
+			
+			_attachEvent(window, 'load', function(){
+					if(label_bind_click()){
+						TIME_TIMER = setInterval('time_counter()',1000);
+						$('scrolltop').style.display = 'none';
+					}
+			}, document);
+		<!--{/if}-->
+		
+		<!--{if $_GET[replay]>0}-->
+		exam_submit_get_result();
+		<!--{/if}-->
+		
+	</script>
+
+<!--{template common/footer}-->

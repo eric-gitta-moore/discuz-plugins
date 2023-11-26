@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-01-05 10:28]]></item>
+	<item id="From"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源碼哥_【CSU】擔保交易]]></item>
+			<item id="identifier"><![CDATA[csu_guarantee]]></item>
+			<item id="description"><![CDATA[擔保交易插件 Discuz!站長群：40421178]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[csu_guarantee/]]></item>
+			<item id="copyright"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.0.2]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>使用說明</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[admin_order]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[查看訂單]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[csu_guarantee]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[中介交易]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[feedback]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<font color='red'><b>評價or反饋</b></font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[donate]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<font color='red'><b>贊助我們</b></font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[允許使用的用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[中介名稱]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[中介]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[中介費比例]]></item>
+				<item id="description"><![CDATA[請輸入中介費百分比比例，如2則代表100元有2元是中介費]]></item>
+				<item id="variable"><![CDATA[sale]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[最低中介費]]></item>
+				<item id="description"><![CDATA[若中介費比例*價格＜最低中介費，則收取最低中介費]]></item>
+				<item id="variable"><![CDATA[min]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[中介交易規則]]></item>
+				<item id="description"><![CDATA[請輸入鏈接]]></item>
+				<item id="variable"><![CDATA[rule]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://zj.admin5.net/article-1-1.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[收款帳號]]></item>
+				<item id="description"><![CDATA[每行一個，格式：
+銀行LOGO|名稱|銀行官網|開戶人姓名|卡號]]></item>
+				<item id="variable"><![CDATA[account]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[source/plugin/csu_guarantee/css/icon_icbc.gif|工商銀行|http://www.icbc.com.cn/|9558881106000189834|章征軍|江蘇徐州(徐州三環東路支行)
+source/plugin/csu_guarantee/css/cmbchina.gif|招商銀行|http://www.cmbchina.com/|6226095160055518|章征軍|江蘇徐州 (徐州分行)
+source/plugin/csu_guarantee/css/icon_boc.gif|農業銀行|http://www.95599.cn/|6228480454163836215|章征軍|江蘇徐州 (黃山垅支行)
+source/plugin/csu_guarantee/css/cbb.gif|建設銀行|http://www.ccb.com/|4340621250089111|章征軍|江蘇徐州(城中支行)
+source/plugin/csu_guarantee/css/alipay.png|支付寶|http://www.alipay.com/|zj@admin5.com|章征軍|支付寶]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[頁面標題]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[擔保交易]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[頁面關鍵詞]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[擔保交易]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[頁面描述]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[擔保交易]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[防騙提醒]]></item>
+				<item id="description"><![CDATA[防騙提醒代碼]]></item>
+				<item id="variable"><![CDATA[tips]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<em style="color:red;">備注：</em>中介唯一收款人姓名為“<b style="color:red;">章征軍</b>”，其他都是欺詐。請辨別假冒QQ，詳情參考<a href="plugin.php?id=csu_guarantee&item=account" target="_blank"><u>收款賬戶</u></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[客服代碼]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[kefucode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[				  <ul>
+					<li>中介交易咨詢：</li>
+					<li><a target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=154606914&cref&ref=&f=1&ty=1&ap=&as=&v="><img border="0" alt="業務" src="http://wpa.qq.com/pa?p=4:154606914:4"> 154606914</a>(中介)</li>
+					<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=154606914&amp;site=qq&amp;menu=yes"><img border="0" alt="中介" src="http://wpa.qq.com/pa?p=1:154606914:4"> 154606914</a>(黑蝦)</li>
+					<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=154606914&amp;site=qq&amp;menu=yes"><img border="0" alt="中介交易" src=" http://wpa.qq.com/pa?p=4:154606914:4"> 154606914</a>(飛魚)</li>
+					<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=154606914&amp;site=qq&amp;menu=yes"><img border="0" alt="中介" src=" http://wpa.qq.com/pa?p=1:154606914:4"> 154606914</a>(源碼哥)</li>
+		<li class="dea_b">服務電話:4000-765-755</li>
+				  </ul>
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[交易類型]]></item>
+				<item id="description"><![CDATA[每行一個]]></item>
+				<item id="variable"><![CDATA[type]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[網站
+域名
+源碼
+賬戶
+任務
+APP買賣
+其他]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[管理用戶組]]></item>
+				<item id="description"><![CDATA[可參與前臺的管理，進行交易糾紛的處理]]></item>
+				<item id="variable"><![CDATA[admin]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[交易信息客服代碼]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[kefucode1]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=154606914&amp;cref&amp;ref=&amp;f=1&amp;ty=1&amp;ap=&amp;as=&amp;v="><img border="0" alt="業務" src="http://wpa.qq.com/pa?p=4:154606914:4"> 154606914</a>(交易中介客服)|免費電話：4000-765-755]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[支持快遞]]></item>
+				<item id="description"><![CDATA[每行一個]]></item>
+				<item id="variable"><![CDATA[express]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[無需快遞
+德邦物流
+EMS快遞
+匯通快遞
+全峰快遞
+申通快遞
+順豐快遞
+天天快遞
+圓通快遞
+韻達快遞]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[賣家收款方式]]></item>
+				<item id="description"><![CDATA[每行一個]]></item>
+				<item id="variable"><![CDATA[salemoney]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[中國工商銀行
+中國農業銀行
+中國建設銀行
+招商銀行
+支付寶
+財付通
+其他銀行]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推薦一個dz商</span><span style="color:#4C33E5;">業插件模版下載的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">網站給大家</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">源碼哥分享吧</span></a><span style="color:#4C33E5;">（www.ymg6.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">這</span><span style="color:#E53333;">是一個</span><span style="color:#E53333;">dz商業</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">資源破解分享的網站，而且還有很多精品的網站源碼下載</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他們資源每天更新，并且很多都是他們自己出錢在應用中心購買后破解分享出來的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不過還是替他們說一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他們站下載的資源只限于自己學習研究內含的設計思想和原理 請勿有任何商業盈利行為</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介紹也介紹完了，給大家做個小導航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dz商業破解插件下載</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dz商業風格模版下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">精品網站源碼下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">工具素材下載</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">精選教程區</a></span> 
+</h3> ]]></item>
+				<item id="tip"><![CDATA[請不要使用盜版程序]]></item>
+				<item id="0"><![CDATA[修改訂單狀態成功]]></item>
+				<item id="1"><![CDATA[請輸入需要搜索的UID]]></item>
+				<item id="2"><![CDATA[交易取消]]></item>
+				<item id="3"><![CDATA[等待接受]]></item>
+				<item id="4"><![CDATA[等待付款并查帳]]></item>
+				<item id="5"><![CDATA[等待發貨]]></item>
+				<item id="6"><![CDATA[等待確認]]></item>
+				<item id="7"><![CDATA[交易完成]]></item>
+				<item id="8"><![CDATA[交易糾紛]]></item>
+				<item id="9"><![CDATA[交易糾紛完畢]]></item>
+				<item id="10"><![CDATA[訂單詳情]]></item>
+				<item id="11"><![CDATA[前臺查看訂單]]></item>
+				<item id="12"><![CDATA[對不起，暫未搜索到相關訂單]]></item>
+				<item id="13"><![CDATA[訂單ID]]></item>
+				<item id="14"><![CDATA[發起人]]></item>
+				<item id="15"><![CDATA[接收人]]></item>
+				<item id="16"><![CDATA[交易狀態]]></item>
+				<item id="17"><![CDATA[價格]]></item>
+				<item id="18"><![CDATA[付款額]]></item>
+				<item id="19"><![CDATA[交易類別]]></item>
+				<item id="20"><![CDATA[發貨方式]]></item>
+				<item id="21"><![CDATA[快遞單]]></item>
+				<item id="22"><![CDATA[買家信息]]></item>
+				<item id="23"><![CDATA[賣家信息]]></item>
+				<item id="24"><![CDATA[用戶名]]></item>
+				<item id="25"><![CDATA[姓名]]></item>
+				<item id="26"><![CDATA[手機]]></item>
+				<item id="27"><![CDATA[地址]]></item>
+				<item id="28"><![CDATA[銀行]]></item>
+				<item id="29"><![CDATA[銀行卡號]]></item>
+				<item id="30"><![CDATA[共有]]></item>
+				<item id="31"><![CDATA[個訂單]]></item>
+				<item id="32"><![CDATA[對不起，暫未搜索到相關訂單]]></item>
+				<item id="33"><![CDATA[買家]]></item>
+				<item id="34"><![CDATA[賣家]]></item>
+				<item id="35"><![CDATA[操作]]></item>
+				<item id="36"><![CDATA[編輯]]></item>
+				<item id="37"><![CDATA[您需要先登錄才能繼續本操作]]></item>
+				<item id="38"><![CDATA[當前用戶組禁止訪問本插件]]></item>
+				<item id="39"><![CDATA[當前不允許任何操作]]></item>
+				<item id="40"><![CDATA[權限不足]]></item>
+				<item id="41"><![CDATA[交易取消并關閉]]></item>
+				<item id="42"><![CDATA[請聯系對方"接受交易"]]></item>
+				<item id="43"><![CDATA[接受交易]]></item>
+				<item id="44"><![CDATA[等待買方付款并查帳]]></item>
+				<item id="45"><![CDATA[點擊發貨]]></item>
+				<item id="46"><![CDATA[等待對方發貨]]></item>
+				<item id="47"><![CDATA[等待確認交易]]></item>
+				<item id="48"><![CDATA[確認交易]]></item>
+				<item id="49"><![CDATA[交易已完成]]></item>
+				<item id="50"><![CDATA[聯系客服處理交易糾紛]]></item>
+				<item id="51"><![CDATA[交易糾紛處理完畢]]></item>
+				<item id="52"><![CDATA[等待接受交易]]></item>
+				<item id="53"><![CDATA[關閉交易]]></item>
+				<item id="54"><![CDATA[等待買方付款并等待或聯系中介查帳]]></item>
+				<item id="55"><![CDATA[等待賣家發貨]]></item>
+				<item id="56"><![CDATA[等待您發貨]]></item>
+				<item id="57"><![CDATA[交易糾紛]]></item>
+				<item id="58"><![CDATA[￥]]></item>
+				<item id="59"><![CDATA[元]]></item>
+				<item id="60"><![CDATA[買方]]></item>
+				<item id="61"><![CDATA[賣方]]></item>
+				<item id="62"><![CDATA[ 對不起，沒有找到匹配結果]]></item>
+				<item id="63"><![CDATA[來源錯誤]]></item>
+				<item id="64"><![CDATA[權限不足]]></item>
+				<item id="65"><![CDATA[操作成功]]></item>
+				<item id="66"><![CDATA[必填項不能為空]]></item>
+				<item id="67"><![CDATA[交易金額不能小于0]]></item>
+				<item id="68"><![CDATA[用戶名不存在]]></item>
+				<item id="69"><![CDATA[請不要和自己發起交易]]></item>
+				<item id="70"><![CDATA[發起交易成功]]></item>
+				<item id="71"><![CDATA[您沒有權限訪問本頁]]></item>
+				<item id="72"><![CDATA[交易已結束，禁止回復本交易]]></item>
+				<item id="73"><![CDATA[回復成功]]></item>
+				<item id="74"><![CDATA[管理員:]]></item>
+				<item id="75"><![CDATA[發表于]]></item>
+				<item id="76"><![CDATA[樓]]></item>
+			</item>
+			<item id="installlang">
+				<item id="tip"><![CDATA[請不要使用盜版程序]]></item>
+			</item>
+		</item>
+	</item>
+</root>

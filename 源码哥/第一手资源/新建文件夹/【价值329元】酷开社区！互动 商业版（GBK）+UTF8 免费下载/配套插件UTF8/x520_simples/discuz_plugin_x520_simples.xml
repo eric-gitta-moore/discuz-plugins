@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-08-18 15:54]]></item>
+	<item id="From"><![CDATA[源码哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[0]]></item>
+			<item id="name"><![CDATA[源码哥_手游宝助手]]></item>
+			<item id="identifier"><![CDATA[x520_simples]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[x520_simples/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.0.1]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>使用教程</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[simplesadmin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[【联系作者及说明】]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[simplesindex]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[面包屑导航名称]]></item>
+				<item id="description"><![CDATA[留空，将取网站名称。可能的值：首页，主页，最新活动xxx，通知当然也可以适应于面包屑文字广告]]></item>
+				<item id="variable"><![CDATA[syb_navname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[首页]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[只在首页显示友情链接]]></item>
+				<item id="description"><![CDATA[默认关闭。[否] 友情链接将在全局的底部显示。选择 [是] 友情链接只在首页论坛forum显示其它页面将显示（自定义页脚导航）文本框里面的内容]]></item>
+				<item id="variable"><![CDATA[syb_frs_link]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[自定义页脚导航]]></item>
+				<item id="description"><![CDATA[上一项显示友情链接值为 [是] 生效。请参照默认值对应着修改或者自行个性定义，作导航 作为版块链接跳转，或者文字 img广告都行<img src="./图片地址" alt="文字" />]]></item>
+				<item id="variable"><![CDATA[syb_linknav]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<div class="gb-frs">
+    <ul>
+        <li>
+<strong>导航</strong>
+        </li>
+        <li>	<a href="http://www.discuz.net" target="_blank" title="Discuz!">话题</a>
+        </li>
+        <li>	<a href="http://www.qinqinda.com" target="_blank" title="游戏">图片</a>
+        </li>
+        <li>	<a href="http://v.qq.com" target="_blank" title="腾讯视频">攻略交流</a>
+        </li>
+        <li>	<a href="http://bbs.youxi.com" target="_blank" title="CODOL">冒泡</a>
+        </li>
+        <li>	<a href="http://bbs.chinaz.com" target="_blank" title="站长之家">发展建议</a>
+        </li>
+        <li>	<a href="http://www.qinqinda.cn" target="_blank" title="小萌哒">520</a>
+        </li>
+        <li>	<a href="http://bbs.18183.com/" target="_blank" title="18183">网游</a>
+        </li>
+        <li>	<a href="http://www.ggg.cn/" target="_blank" title="极游网">loo</a>
+        </li>
+        <li>	<a href="http://www.wowoyou.com/" target="_blank" title="窝窝游">窝窝游</a>
+        </li>
+    </ul>
+</div>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[头部右上角]]></item>
+				<item id="description"><![CDATA[头部右上角未登录状态自定义的内容：可用于增加第三方QQ和微博图标的快捷登录]]></item>
+				<item id="variable"><![CDATA[syb_header]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)">登录</a>
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[页脚二维码]]></item>
+				<item id="description"><![CDATA[页面底部的二维码展示层，二维码图片路径template\x520_simple\res\img文件夹目录下替换对应即可]]></item>
+				<item id="variable"><![CDATA[syb_footerqr]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<span class="gb-ad-b">
+				<span class="gb-apk-img"></span>
+				<strong>手游宝</strong>
+				<em>最强手游礼包天天有11111111111111111</em>
+				<a href="./" class="gb-ad-btn">android下载</a>
+			</span>
+			<span class="gb-ad-b">
+				<span class="gb-wx-img"></span>
+				<strong>手游宝官方微信</strong>
+				<em>最强手游礼包天天有礼包等你领!</em>
+			</span>
+
+			<span class="gb-ad-b gb-ad-c">
+				<span class="gb-qq-img"></span>
+				<strong>手游宝QQ公众号</strong>
+				<em>手Q用户，领礼包更方便啦！</em>
+			</span>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[登录提示文字]]></item>
+				<item id="description"><![CDATA[默认关闭。登录弹出层左上角提示文字，选择 [是] 将显示]]></item>
+				<item id="variable"><![CDATA[syb_returnmessage]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[主导航菜单]]></item>
+				<item id="description"><![CDATA[默认关闭]]></item>
+				<item id="variable"><![CDATA[syb_navmenu]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[整体主题【N色】]]></item>
+				<item id="description"><![CDATA[网站整体的样式风格，一键切换。选择喜欢的一个吧]]></item>
+				<item id="variable"><![CDATA[syb_styles]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=默认样式
+2=蓝色样式
+3=粉色样式
+4=自定义样式]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[自定义的全局css样式]]></item>
+				<item id="description"><![CDATA[自定义的全局css样式，可以新增色值代码也可以作为颜色数据保存备份]]></item>
+				<item id="variable"><![CDATA[syb_diystyle]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[.gb-box-b .gb-box-title a{background:#F3AD10;color:#FFF;}.gb-box-r .gb-box-title a{background:#FA3A78;color:#FFF;}.gb-box-p .gb-box-title a{background:#9A7AFE;color:#FFF;}.gb-box-g .gb-box-title a{background:#7BC761;color:#FFF;}.gb-box-pi .gb-box-title a{background:#FF809E;color:#FFF;}.gb-box-do .gb-box-title a{background:#B15BFF;color:#FFF;}.gb-s-form .gb-button{background:#F1A027;}.gb-bbs-info .gb-button{background:#FF005E;}.ico-d,.ico-j,.ico-r{color:#0099FF;border-color:#0099FF;}.gb-cate-menu .gb-hover .gb-inner{border-left:4px solid #8C22ED;}.gb-sub-menu li strong{color:#FC2F65;}.gb-app-cols .gb-inner:hover{border-color:#0099FF;}.gb-app .g-text strong{color:#FF1C78;}.gb-bbs-info .gb-bbs-if-inner strong{color:#fe850f;}.gb-d-menu a{color:#0F35FE;}.gb-dm-c a{color:grey;}.p-jh .gb-bl-title a{color:#0099FF;}.gb-tabs li.gb-current a{border-bottom:2px solid #0099FF;}li.gb-important a{color:#C41CEB;}#autopbn{border-bottom:1px solid #FF7070;}.gb-floor-l .gb-u-name{color:#333;}.gb-u-info span.g-chk-level{color:#333;}.gb-nobbs-txt{color:#F94856;}.pn{background:#B1B1B1;}.pnc,a.pnc{border-color:#FF8035;background-color:#FF8035;}.tbn li.a a{color:#3F84ED;}.tbn li.a{border-left:1px solid #3F84ED;color:#3F84ED;}.ct2_a .appl a:hover{color:#3F84ED;}.tb .a a,.tb .current a{color:#F73E93;border-bottom:1px solid #F73E93;}.ct2_a .mn a:hover{color:#F73E93;}.ct2_a_r .tb .a a,.tb .current a{color:#FE727D;border-bottom:1px solid #F598C7;}.qin_profile .q_hdmenu a.newbtn{background:#FA3C82;background:-moz-linear-gradient(top,#FA3C82 0%,#F11A69 100%);background:-webkit-linear-gradient(top,#FA3C82 0%,#F11A69 100%);background:-o-linear-gradient(top,#FA3C82 0%,#F11A69 100%);background:-ms-linear-gradient(top,#FA3C82 0%,#F11A69 100%);background:linear-gradient(top bottom,#FA3C82 0%,#F11A69 100%);}.qin_profile .q_hdmenu a.newbtn:hover{background:#F42E80;background:-moz-linear-gradient(top,#F42E80 0%,#F10969 100%);background:-webkit-linear-gradient(top,#F42E80 0%,#F10969 100%);background:-o-linear-gradient(top,#F42E80 0%,#F10969 100%);background:-ms-linear-gradient(top,#F42E80 0%,#F10969 100%);background:linear-gradient(top bottom,#F42E80 0%,#F10969 100%);}.qin_space_tb .tb .a a,.qin_space_tb .tb .current a{color:#E2231A;border-bottom:1px solid #E2231A;}.qin_space_tb .tb a:hover{color:#F93930;}.u_profile .mbn{border-left:1px solid #FEA68C;}.qin-bbs-menu li.a{background:#F7208D;}.qin-bbs-menu li a:hover{color:#FC3E9E;}.xc-nav{border-bottom:#E1E1E1 1px solid;}.rfmrig .btn{background:#FC3C3C;}.popuptext .pc_l,.popuptext .pc_c,.popuptext .pc_inner,.popuptext .pc_r{background:#F59027;}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[[通知] 短消息]]></item>
+				<item id="description"><![CDATA[初始值：#F93469 ，数据显示优先级：消息 > 提醒]]></item>
+				<item id="variable"><![CDATA[syb_stylenewpm]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#F93469]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[[通知] 提醒条数]]></item>
+				<item id="description"><![CDATA[初始值：#5D34F9]]></item>
+				<item id="variable"><![CDATA[syb_stylenewprompt]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#5D34F9]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[关闭内页标题浮顶]]></item>
+				<item id="description"><![CDATA[默认开启。[是] 将取消帖子内容页标题文字顶部悬停效果]]></item>
+				<item id="variable"><![CDATA[syb_js_topside]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[显示收藏按钮]]></item>
+				<item id="description"><![CDATA[默认关闭。开启后将在帖子内页标题右侧显示收藏按钮，简洁模式下生效]]></item>
+				<item id="variable"><![CDATA[syb_favorite]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[回复框字数限制]]></item>
+				<item id="description"><![CDATA[支持帖子内页底部回复框，初始值：5000字]]></item>
+				<item id="variable"><![CDATA[syb_replyzs]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[回复框样式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[syb_replystyle]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=功能操作图标(底)  默认
+2=功能操作图标(顶) 
+3=简约文本框]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[右侧快捷回复表情]]></item>
+				<item id="description"><![CDATA[默认关闭]]></item>
+				<item id="variable"><![CDATA[syb_fastsmiliesdiv]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[等级头衔：管理员]]></item>
+				<item id="description"><![CDATA[用户组groupid:1的自定义等级头衔，将用于帖子内页左侧头像下方展示]]></item>
+				<item id="variable"><![CDATA[syb_ico_va]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[萌萌米咻]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[等级头衔：超级版主]]></item>
+				<item id="description"><![CDATA[用户组groupid:2]]></item>
+				<item id="variable"><![CDATA[syb_ico_vb]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[宝宝唔啦]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[等级头衔：版主]]></item>
+				<item id="description"><![CDATA[用户组groupid:3]]></item>
+				<item id="variable"><![CDATA[syb_ico_vc]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[丫头啵啵]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[帖子内容页发帖宽度]]></item>
+				<item id="description"><![CDATA[帖子内容页面，发帖回复内容尺寸填充宽度]]></item>
+				<item id="variable"><![CDATA[syb_p_inner]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=宽度填充95% (默认)
+2=宽度填充100%]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[帖子内页风格]]></item>
+				<item id="description"><![CDATA[2模式自由选择]]></item>
+				<item id="variable"><![CDATA[syb_bodymode]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=简洁模式
+2=常规模式]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[用户头像层右显示]]></item>
+				<item id="description"><![CDATA[默认关闭。开启体验不一样的风格]]></item>
+				<item id="variable"><![CDATA[syb_userright]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[管理员标识图标]]></item>
+				<item id="description"><![CDATA[默认关闭。开启后，将在等级处显示。包括：管理员，超级版主，版主]]></item>
+				<item id="variable"><![CDATA[syb_guanlibs]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[头像V标识]]></item>
+				<item id="description"><![CDATA[默认关闭。自定义头衔后，可显示蓝V。管理组包括版主则显示橙V。优先级：蓝V 大于 橙V]]></item>
+				<item id="variable"><![CDATA[syb_vipbs]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[显示个人积分]]></item>
+				<item id="description"><![CDATA[默认关闭]]></item>
+				<item id="variable"><![CDATA[syb_credits]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[显示勋章]]></item>
+				<item id="description"><![CDATA[默认关闭。勋章图标尺寸32x32，为了颜值体验和页面布局设计最多显示8条数据]]></item>
+				<item id="variable"><![CDATA[syb_medalnooff]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[默认列表顶部图片]]></item>
+				<item id="description"><![CDATA[图片尺寸980x200。未定义版块头部图片之前显示的默认图片，可作为图片广告，活动，活跃节日气氛相关展示]]></item>
+				<item id="variable"><![CDATA[syb_urlbanner]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[template/x520_simple/images/common_1_banner.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[默认版块图标]]></item>
+				<item id="description"><![CDATA[图标尺寸120x120 (最低)。推荐150 - 190之间取值效果更佳]]></item>
+				<item id="variable"><![CDATA[syb_urlicon]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[template/x520_simple/images/common_1_icon.png]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[选择列表图片版块]]></item>
+				<item id="description"><![CDATA[帖子列表图片所显示的版块，默认操作建议全选中]]></item>
+				<item id="variable"><![CDATA[syb_fid]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[39]]></item>
+				</item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[列表图片数量]]></item>
+				<item id="description"><![CDATA[初始值4，取值范围 0 - 6 之间]]></item>
+				<item id="variable"><![CDATA[syb_num]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[4]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[图片可直接打开]]></item>
+				<item id="description"><![CDATA[默认关闭。[是] 列表图片可直接打开进入帖子页面]]></item>
+				<item id="variable"><![CDATA[syb_lianjie]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[列表内容字数摘要]]></item>
+				<item id="description"><![CDATA[初始值99，推荐取值范围 50 - 150 之间]]></item>
+				<item id="variable"><![CDATA[syb_message]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[99]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[列表不显示下一页]]></item>
+				<item id="description"><![CDATA[默认关闭。帖子列表的下一页js加载按钮]]></item>
+				<item id="variable"><![CDATA[syb_hidepage]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[列表分类帖子数]]></item>
+				<item id="description"><![CDATA[默认关闭。帖子列表页面，所在的版块开启分类后是否显示所分类的帖子数量]]></item>
+				<item id="variable"><![CDATA[syb_classify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[列表显示头像]]></item>
+				<item id="description"><![CDATA[默认关闭。开启后，帖子列表将显示用户头像]]></item>
+				<item id="variable"><![CDATA[syb_avatarnooff]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[列表头像尺寸]]></item>
+				<item id="description"><![CDATA[3尺寸自由切换，推荐默认尺寸 (32x32)]]></item>
+				<item id="variable"><![CDATA[syb_ulist_avatar]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=小 (32x32) 默认
+2=中 (42x42)
+3=大 (52x52)]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[最后回复时间]]></item>
+				<item id="description"><![CDATA[默认关闭。帖子列表是否显示用户最后回帖时间 [最后回复：回帖作者 .  回帖时间]]]></item>
+				<item id="variable"><![CDATA[syb_lastpost]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[38]]></item>
+				<item id="title"><![CDATA[个人主页背景图]]></item>
+				<item id="description"><![CDATA[初始值：16张，个人主页背景图片随机显示的数量。高清图片尺寸 1980 x 320。配合下列文件夹功能用途很强大的，自由发挥想象或者参照文档]]></item>
+				<item id="variable"><![CDATA[syb_uhd_bgimg]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[16]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="38">
+				<item id="displayorder"><![CDATA[39]]></item>
+				<item id="title"><![CDATA[主页背景图文件夹]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[syb_uhd_bgimgurl]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[template/x520_simple/images/h1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="39">
+				<item id="displayorder"><![CDATA[40]]></item>
+				<item id="title"><![CDATA[文件夹开关]]></item>
+				<item id="description"><![CDATA[默认关闭。根据自行需要是否打开，主页背景图文件夹开关]]></item>
+				<item id="variable"><![CDATA[syb_uhd_bgimgurls]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

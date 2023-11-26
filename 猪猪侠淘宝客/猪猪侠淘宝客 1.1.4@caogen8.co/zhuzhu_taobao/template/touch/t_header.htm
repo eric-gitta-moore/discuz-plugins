@@ -1,0 +1,83 @@
+<link rel="stylesheet" type="text/css" href="source/plugin/zhuzhu_taobao/static/js/swiper.min.css">
+<script src="source/plugin/zhuzhu_taobao/static/js/swiper.min.js"></script>
+<script src="source/plugin/zhuzhu_taobao/static/js/amazeui.lazyload.js"></script>
+<div class="swiper-container swiper-container-top">
+	<div class="swiper-wrapper">
+		<!--{loop $slide $v}-->
+		<div class="swiper-slide"><a href="$v[url]"><img src="$v[pic]" /></a></div>
+		<!--{/loop}-->
+	</div>
+	<div class="swiper-pagination"></div>	
+
+	<div class="l_search" onclick="show_sch();">
+		<i class="iconfont">&#xe641;</i>
+		{if $_GET[keyword]}$_GET[keyword]{else}$hotkeys[$hotkey]{/if}
+	</div>
+</div>
+<script>
+var swiper = new Swiper('.swiper-container-top', {
+	autoplay: 5000,
+	speed: 300,
+	pagination : '.swiper-pagination',
+});
+
+$("#keyword").focus(function(){
+	$(".h_search").addClass("searched");
+});
+</script>
+<div class="h_search none">
+	<div class="j_search">
+		<a href="plugin.php?id=zhuzhu_taobao">{lang zhuzhu_taobao:home_page}</a>
+		<form id="form" method="post" autocomplete="off" action="plugin.php?id=zhuzhu_taobao&mod=quan">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<input id="keyword" class="inp-search" name="keyword" type="text" x-webkit-speech="">
+			<button type="submit"></button>
+		</form>
+		<span onclick="hide_sch();">{lang zhuzhu_taobao:quxiao}</span>
+	</div>
+
+	<div class="sch_history">
+		<h2><i class="iconfont y" onclick="del_history();">&#xe792;</i>{lang zhuzhu_taobao:jump_url_htm_32}</h2>
+		<!--{if $sch_list}-->
+		<ul id="sch_history">
+			<!--{loop $sch_list $v}-->
+				<li><a href="plugin.php?id=zhuzhu_taobao&mod=quan&keyword={echo UrlEncode($v)}">$v</a></li>
+			<!--{/loop}-->
+		</ul>
+		<!--{else}-->
+		<p>{lang zhuzhu_taobao:jump_url_htm_33}{lang zhuzhu_taobao:jump_url_htm_32}</p>
+		<!--{/if}-->
+	</div>
+
+	<!--{if $hotkeys}-->
+	<div class="sch_hotwords">
+		<h2>{lang zhuzhu_taobao:jump_url_htm_34}</h2>
+		<ul>
+			<!--{loop $hotkeys $v}-->
+			<!--{if $v}--><li><a href="plugin.php?id=zhuzhu_taobao&mod=quan&keyword={echo UrlEncode($v)}">$v</a></li><!--{/if}-->
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{/if}-->
+</div>
+<script type="text/javascript">
+	function show_sch(){
+		$('.h_search').removeClass('none');
+		document.getElementById('keyword').focus();
+	}
+
+	function hide_sch(){
+		$('.h_search').addClass('none');
+	}
+
+	function del_history(){
+		$.ajax({ 
+			type:'post',
+			url: 'plugin.php?id=zhuzhu_taobao&mod=list&op=del_history',
+			dataType:'text',
+			success:function(msg){
+				$('#sch_history').html('<p>{lang zhuzhu_taobao:jump_url_htm_33}{lang zhuzhu_taobao:jump_url_htm_32}</p>');
+			}
+		});	
+	}
+</script>

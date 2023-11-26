@@ -1,0 +1,174 @@
+
+<style>
+
+#check th,.a {
+
+  color: #6CA1B4;
+
+  font-weight: 700;
+
+  padding: 5px;
+
+}
+
+
+
+.tb .pdleft1 span{
+
+  padding-left: 67px;
+
+  text-align:left;
+
+  display:block;
+
+  
+
+}
+
+.tb .padleft span,.tb .padleft span{ 
+
+	padding-left:45px; 
+
+	text-align:left;
+
+    display:block;
+
+ }
+
+.nw span{
+
+  background: url("./install/images/bg_repno.gif") no-repeat scroll 45px -197px transparent;
+
+}
+
+.w span{ background:url("./install/images/bg_repno.gif") no-repeat 45px -148px; }
+
+</style>
+
+<table class="tb tb2 " id="tips">
+
+<tbody>
+
+
+
+<tr><th class="partition">{lang milu_pick:user_info}</th></tr>
+
+<tr><td class="tipsblock" s="1"><ul id="tipslis">
+
+<li>{lang milu_pick:user_level}：<img  border="0" src="source/plugin/milu_pick/static/image/vip.gif" />{lang milu_pick:user_vip_text}</li>
+  <li>{lang milu_pick:_version}:  {PICK_VERSION} Release {V_D} {$user_arr['show_upgrade']}</li>
+  
+</ul></td></tr>
+
+
+<tr><th class="partition">{lang milu_pick:data_count}</th></tr>
+
+<tr><td class="tipsblock" s="1">
+
+<table class="tb" style="margin:5px;width:90%;" id="check">
+
+<tbody><tr>
+
+	<th width="30%"><span>{lang milu_pick:count_field}</span></th>
+
+	<th width="29%" class="padleft"><span>{lang milu_pick:result}</span></th>
+
+	<th width="41%" class="padleft"><span>{lang milu_pick:shuoming}</span></th>
+
+</tr>
+
+<!--{loop $pick_count_msg $key $rs}-->
+
+<tr>
+
+<td>{$rs['name']}</td>
+
+<td style="padding-left:40px;"><span>{$rs['show']}</span></td>
+
+<td class="padleft"><span>{if $rs['msg']}$rs['msg']{else}{lang milu_pick:user_info}{lang milu_pick:no_have}{/if}</span></td>
+
+</tr>
+
+<!--{/loop}-->
+
+</tbody></table>
+
+</td></tr>
+
+
+<tr><th class="partition">{lang milu_pick:evo_check}</th></tr>
+
+<tr><td class="tipsblock" s="1">
+
+<table class="tb" style="margin:5px;width:90%;" id="check">
+
+<tbody><tr>
+
+	<th width="30%"><span>{lang milu_pick:check_field}</span></th>
+
+	<th width="29%" class="padleft"><span>{lang milu_pick:check_result}</span></th>
+
+	<th width="41%" class="padleft"><span>{lang milu_pick:result_desc}</span></th>
+
+</tr>
+
+<!--{loop $evo_check_msg $key $rs}-->
+
+<tr>
+
+<td>{$rs['name']}</td>
+
+<td class="{if $rs['check']}w{else}nw{/if} pdleft1"><span>{if $rs['check']}{lang milu_pick:suport}{else}{if $rs['tip']}{$rs['tip']}{else}{lang milu_pick:no_suport}{/if}{/if}</span></td>
+
+<td class="padleft"><span>{if $rs['msg']}$rs['msg']{else}{lang milu_pick:no_have}{/if}</span></td>
+
+</tr>
+
+<!--{/loop}-->
+
+</tbody></table>
+
+</td></tr>
+
+<tr>
+  <th class="partition">{lang milu_pick:server_value}</th>
+</tr>
+
+<tr><td class="tipsblock" s="1">
+
+<table class="tb" style="margin:5px;width:90%;" id="check">
+
+<tbody><tr>
+
+	<th width="19%"><span>{lang milu_pick:value_name}</span></th>
+
+	<th width="19%" class="padleft"><span>{lang milu_pick:set_value}</span></th>
+
+	<th width="14%" class="padleft">{lang milu_pick:recoment_value}</th>
+	<th width="28%" class="padleft"><span>{lang milu_pick:shuoming}</span></th>
+
+</tr>
+
+<!--{loop $evo_config_arr $key $rs}-->
+
+<tr>
+
+<td>{$rs['name']}</td>
+
+<td><span style="padding-left:40px;">{if $rs['value']}{$rs['value']}{else}{lang milu_pick:no_check_value}{/if}</span></td>
+
+<td style="padding-left:40px;"><span>{if $rs['best_value']}$rs['best_value']{else}{lang milu_pick:no_have}{/if}</span></td>
+<td class="padleft"><span>{if $rs['msg']}$rs['msg']{else}{lang milu_pick:no_have}{/if}</span></td>
+</tr>
+
+<!--{/loop}-->
+</tbody></table>
+
+</td></tr>
+
+
+
+</tbody></table>
+
+
+

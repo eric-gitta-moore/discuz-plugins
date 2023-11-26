@@ -1,0 +1,55 @@
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:underline;color:#55a642;}
+.mb10{ margin-bottom:10px;}
+.crumb{ font-size:12px; font-weight:normal; line-height:36px; height:36px; color:#000;}
+.crumb a{ color:#000;}
+.crumb b{ font-weight:400; color:#666;}
+
+.header .logo{ width:297px;}
+
+/*index*/
+.filter{ border:1px solid #e5e5e5;}
+.filterBox{padding:8px 15px;}
+.filterBox dl{ width:930px; margin:0 auto;padding:5px 0; border-bottom:1px dashed #ddd; line-height:30px;font-size:14px;}
+.filterBox dt{float:left;font-weight:bold; text-align:right; margin-right:20px;color:#696969; width:120px; line-height:24px; height:24px;}
+.filterBox dd{float:left;}
+.filterBox dd a{ color:#666; display:inline-block; height:20px; line-height:20px; margin:0 7px;}
+.filterBox dd a:hover{ color:#55a642;}
+.filterBox dd a.active{ background:#55a642;color:#FFF; padding:2px 5px; text-align:center;}
+
+.mvL{ float:left; width:700px;}
+.mvR{ float:right; width:250px;}
+.mdBox{ border:1px solid #e5e5e5;}
+.mdBoxHd{background:#fbfbfb; line-height:38px; height:38px; padding:0 12px;}
+.mdBoxHdTit{ font:400 18px/38px Microsoft YaHei; height:38px; overflow:hidden;}
+.gengxinTime{ font-size:12px; font-weight:400; color:#f47373; padding:0 10px; font-family:Arial;}
+.mdBoxHd .fr{ color:#999;}
+
+.videoMv{ float:right; width:17px; height:13px; background:url(singerIcon.png) -82px -133px no-repeat; margin-top:0px;}
+
+.mvList .mvListUl{ padding-bottom:11px;}
+.mvList .mvListUl li{ float:left; width:120px; display:inline; margin:14px 0 0 15px;}
+.mvList .mvListUl li .t-i{ width:120px;height:67px; display:block;}
+.mvList .mvListUl li .t-i img{ width:120px; height:67px; display:block;}
+.mvList .mvListUl li .t-t{ line-height:18px; height:18px; overflow:hidden; display:block; margin-top:3px; font-size:14px;}
+.mvList .mvListUl li .i-t{ line-height:18px;display:block;color:#999;}
+.mvList .mvListUl li .i-t p{ height:18px; overflow:hidden;}
+.mvList .mvListUl li .i-t .mvSinger{ color:#333;}
+
+.rankR{ padding:6px 0 7px 15px;}
+.rankR li{ line-height:30px; height:30px; width:230px; margin:1px 0 0;}
+.rankR em{width:18px;height:14px;line-height:14px; float:left; margin:7px 8px 0 0; display:inline;text-align:center;border:1px solid #f0f0f0;color:#999999;}
+.rankR .top_num{width:20px;height:16px;line-height:16px;color:#fff;font-weight:bold;border:none; background:url(rankBg.png) 0 0 no-repeat;}
+.rankR a{ float:left; width:100px; height:30px; line-height:30px; overflow:hidden; font-size:12px;} 
+.rankR span{ float:left; width:90px; height:30px; line-height:30px; overflow:hidden; text-align:right; color:#999;}
+
+.loadMore{ line-height:56px; height:56px; text-align:center; font-size:14px; background:#fff; border-top:2px solid #eee; background:#f5f5f5; margin-top:10px; cursor:pointer;}
+.loadMore a{ color:#390; width:100%; height:56px; display:block;}
+.loadMore a:hover{ color:#390; background:#fff; font-weight:800; text-decoration:none;}
+
+.playBg{ background:#000; padding:20px 0;}
+.playWrap{ width:960px; height:600px;}
+.playBox{}
+
+.mvShare{ padding:10px 0; overflow:hidden;zoom:1;}
+.mvShare #bdshare{ float:right;}

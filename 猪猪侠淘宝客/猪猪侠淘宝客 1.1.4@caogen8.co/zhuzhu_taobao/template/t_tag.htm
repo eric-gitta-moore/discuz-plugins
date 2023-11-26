@@ -1,0 +1,9 @@
+<!--{if $foot_key}-->
+<div class="wp cl foot_tag">
+	<ul>
+		<!--{loop $foot_key $value}-->
+		<li><a href="plugin.php?id=zhuzhu_taobao&mod=quan&keyword={echo urlencode($value)}" title="$value">$value</a></li>
+		<!--{/loop}-->
+	</ul>
+</div>
+<!--{/if}-->

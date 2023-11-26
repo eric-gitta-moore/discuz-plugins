@@ -1,0 +1,248 @@
+{eval
+$_G['sechashi'] = !empty($_G['cookie']['sechashi']) ? $_G['sechash'] + 1 : 0;
+$sechash = 'S'.($_G['inajax'] ? 'A' : '').$_G['sid'].$_G['sechashi'];
+$sectabindex = !isset($sectabindex) ? 1 : $sectabindex;
+$secshow = !isset($secshow) ? 1 : $secshow;
+$hash = random(5);
+$formid = 'guests_form_'.$_GET['handlekey'].'_'.$hash;
+ob_end_clean();
+ob_start();
+@header("Expires: -1");
+@header("Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0", FALSE);
+@header("Pragma: no-cache");
+@header("Content-type: text/xml; charset=".CHARSET);
+echo '<?xml version="1.0" encoding="'.CHARSET.'"?>'."\r\n";}
+<root><![CDATA[
+<style>
+a.guests_change{color:#369;text-decoration:none;}
+._input_1{height:22px;width:140px;}
+#checkusernameverify{color:#f00;}
+</style>
+<!--script>/*for ie6*/window.onerror=function(){return true}</script-->
+<div id="guests_$_GET['handlekey']_$hash" style="width:400px;">
+<span id="guests_version" style="display:none">3.5</span>
+<form id="$formid" action="/plugin.php?id=guests:login" method="post" target="_blank">
+	<input type="hidden" name="guests_regsubmit" value="yes" />
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<div style="margin:6px 8px">
+		<span><a title="{lang guests:close}" onclick="hideWindow('guests', 0, 1);" class="flbc" href="javascript:;" style="float:right">{lang guests:close}</a></span>
+		<table width="100%">
+			<tr>
+				{if $guests_welcome_path}
+				<td><img src="{$guests_welcome_path}"/></td>
+				{/if}
+				<td style="line-height:20px; padding:10px 10px 8px;color:#0042ff">{$content}</td>
+			</tr>
+		</table>
+	</div>
+	<div style="border:1px solid #ffe49c;margin:0 10px 8px;padding:15px 0px;">
+		<table width="100%">
+			<tr height="34">
+				{if $recommend_username}
+				<td align="right" height="24" width="35%">{lang guests:random_name}</td>
+				<td colspan="2">
+					<input name="_check_username_result" id="_check_username_result" type="hidden" value="-1" />
+					<input type="text" id="guests_username" name="guests_username" onkeydown="return keydown_enter_login(event)" style="display:none" onchange="guests_check_username()" class="px vm _input_1" autocomplete="off"/>
+					<span id="_guests_name"></span>&nbsp;<span id="_checkusernameverify"></span>
+					<a class="guests_change" id="_change_username" href="javascript:;" onclick="guests_change_username()">[{lang guests:change}]</a>
+					<a class="guests_change" id="_cancel_change" href="javascript:;" onclick="guests_cancel_change()" style="display:none">[{lang guests:cancel}]</a>
+				</td>
+				{else}
+				<td align="right" height="24" width="35%">{lang guests:input_username}</td>
+				<td colspan="2">
+					<input name="_check_username_result" id="_check_username_result" type="hidden" value="-1" />
+					<input type="text" id="guests_username" name="guests_username" onkeydown="return keydown_enter_login(event)" onchange="guests_check_username()" class="px vm _input_1" autocomplete="off"/>
+					<span id="_guests_name"></span>&nbsp;<span id="_checkusernameverify"></span>
+				</td>
+				{/if}
+			</tr>
+			<tr height="34">
+				<td align="right" height="24">{lang guests:input_password}</td>
+				<td colspan="2"><input type="password" name="guests_password" class="px vm _input_1" id="guests_password" onkeydown="return keydown_enter_login(event)" autocomplete="off"/></td>
+			</tr>
+			{if $seccodecheck}
+			<tr height="34">
+				<td align="right" height="24">{lang guests:input_seccode}</td>
+				<td colspan="2">
+					<input name="_check_seccode_result" id="_check_seccode_result" type="hidden" value="-1" />
+					<input name="sechash" type="hidden" value="$sechash" />
+					<input name="seccodeverify" class="px vm _input_1" id="seccodeverify_$sechash" type="text" autocomplete="off" style="{if $_G[setting][seccodedata][type] != 1}ime-mode:disabled;{/if}" onblur="guests_checksec('$sechash')" onkeydown="return keydown_enter_login(event)" />
+					<span id="checkseccodeverify_$sechash"></span>
+				</td>
+			</tr>
+			<tr height="34">
+				<td align="right" height="24"></td>
+				<td colspan="2">
+					<span id="_seccode_$sechash"/><img src="{IMGDIR}/loading.gif" width="16" height="16" class="vm" /></span>&nbsp;
+					<a href="javascript:;" id="seccode_change" onclick="guests_updateseccode('$sechash', 0);doane(event);" class="xi2">{lang seccode_change}</a>
+					<script>
+					function guests_checksec(idhash)
+					{
+						var secverify = document.getElementById('seccodeverify_'+idhash).value;
+						var x = new Ajax('XML');
+						document.getElementById('checkseccodeverify_'+idhash).innerHTML = '<img src="{IMGDIR}/loading.gif" width="16" height="16" class="vm" />';
+						x.get('misc.php?mod=seccode&action=check&inajax=1&&idhash='+idhash+'&secverify='+(BROWSER.ie && document.charset == 'utf-8' ? encodeURIComponent(secverify):secverify), function(s){
+							var obj = document.getElementById('checkseccodeverify_'+idhash);
+							if(s.substr(0, 7) == 'succeed') {
+								document.getElementById('_check_seccode_result').value = 1;
+								obj.innerHTML = '<img src="{IMGDIR}/check_right.gif" width="16" height="16" class="vm" />';
+							} else {
+								document.getElementById('_check_seccode_result').value = 0;
+								obj.innerHTML = '<img src="{IMGDIR}/check_error.gif" width="16" height="16" class="vm" />';
+							}
+						});
+					}
+					function guests_updateseccode(idhash, flag)
+					{
+						var seccode = document.getElementById('_seccode_' + idhash);
+						if(seccode) {
+							document.getElementById('seccodeverify_' + idhash).value = '';
+							if(secST['code_' + idhash]) {
+								clearTimeout(secST['code_' + idhash]);
+							}
+							document.getElementById('checkseccodeverify_' + idhash).innerHTML = '<img src="{IMGDIR}/none.gif" width="16" height="16" class="vm" />';
+							var x = new Ajax('XML');
+							x.get('misc.php?mod=seccode&action=update&idhash='+idhash+'&inajax=1', function(s){
+								var start = s.indexOf('<img');
+								if (start) {
+									document.getElementById('_seccode_' + idhash).innerHTML = s.substr(start);
+									if (flag) document.getElementById('seccode_change').style.display = '';
+									secST['code_' + idhash] = setTimeout(function() {document.getElementById('_seccode_' + idhash).innerHTML = '<span class="xi2 cur1" onclick="guests_updateseccode(\''+idhash+'\', 1)">{lang guests:refresh_seccode}</span>';document.getElementById('seccode_change').style.display = 'none';}, 180000);
+								}
+							});
+						}
+					}
+					guests_updateseccode('$sechash', 0);
+					</script>
+				</td>
+			</tr>
+			{/if}
+			<tr height="34">
+				<td align="right"></td>
+				<td colspan="2">
+				<button type="button" class="pn vm" style="height:24px;" onclick="javascript:guests_login()">
+					<em>{lang guests:login_button}</em>
+				</button>
+				{if $qq_login}
+				<span id="guests_qq_logo"><a href="$_G[connect][login_url]&statfrom=login_simple"><img src="{IMGDIR}/qq_login.gif" class="vm" alt="{lang qqconnect:connect_header_login}" /></a></span>
+				{else}
+				<a class="guests_link2" href="{$register_url}">{lang guests:free_register}</a>
+				{/if}
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a href="member.php?mod=logging&action=login">{lang guests:id_login}</a></td>
+			</tr>
+		</table>
+		<script>
+		function guests_change_username()
+		{
+			change_username = document.getElementById('_change_username');
+			change_username.style.display = 'none';
+			cancel_change = document.getElementById('_cancel_change');
+			cancel_change.style.display = '';
+			guests_name = document.getElementById('_guests_name');
+			guests_name.style.display = 'none';
+			guests_username = document.getElementById('guests_username');
+			guests_username.value = guests_name.innerHTML;
+			guests_username.style.display = '';
+			guests_username.select();
+			guests_username.focus();
+		}
+		function guests_cancel_change()
+		{
+			change_username = document.getElementById('_change_username');
+			change_username.style.display = '';
+			cancel_change = document.getElementById('_cancel_change');
+			cancel_change.style.display = 'none';
+			checkusernameverify = document.getElementById('_checkusernameverify');
+			checkusernameverify.style.display = 'none';
+			guests_name = document.getElementById('_guests_name');
+			guests_name.style.display = '';
+			guests_username = document.getElementById('guests_username');
+			guests_username.value = guests_name.innerHTML;
+			guests_username.style.display = 'none';
+			document.getElementById('_check_username_result').value = 1;
+		}
+		function guests_check_username()
+		{
+			var val = document.getElementById('guests_username').value;
+			var x = new Ajax('XML', '_checkusernameverify');
+			x.loading = '';
+			checkusernameverify = document.getElementById('_checkusernameverify');
+			checkusernameverify.innerHTML = '<img src="{IMGDIR}/loading.gif" width="16" height="16" class="vm" />';
+			x.get('/plugin.php?id=guests:name&inajax=1&act=check&name='+(BROWSER.ie && document.charset == 'utf-8' ? encodeURIComponent(val):val), function(s){
+				checkusernameverify.style.display = '';
+				if(parseInt(s)==0) {
+					document.getElementById('_check_username_result').value = 1;
+					checkusernameverify.innerHTML = '<img src="{IMGDIR}/check_right.gif" width="16" height="16" class="vm" />';
+				} else {
+					document.getElementById('_check_username_result').value = 0;
+					checkusernameverify.innerHTML = '<img src="{IMGDIR}/check_error.gif" width="16" height="16" class="vm" />';
+				}
+			});
+		}
+		{if $recommend_username}
+		function guests_get_name()
+		{
+			ajaxget('/plugin.php?id=guests:name', '_guests_name', null);
+		}
+		guests_get_name();
+		{/if}
+		function guests_login()
+		{
+			{if $recommend_username}
+			guests_name = document.getElementById('_guests_name').innerHTML;
+			if (guests_name == '') {
+				return;
+			}
+			{/if}
+			guests_username = document.getElementById('guests_username');
+			if (guests_username.value == '') {
+				{if $recommend_username}
+				guests_username.value = guests_name;
+				{else}
+				guests_username.focus();
+				return;
+				{/if}
+			}
+			if (parseInt(document.getElementById('_check_username_result').value) == 0) {
+				guests_username.focus();
+				return;
+			}
+			guests_password = document.getElementById('guests_password');
+			if (guests_password.value == '') {
+				guests_password.focus();
+				return;
+			}
+			{if $seccodecheck}
+			seccode = document.getElementById('seccodeverify_$sechash');
+			if (seccode.value == '' || parseInt(document.getElementById('_check_seccode_result').value) == 0) {
+				seccode.focus();
+				return;
+			}
+			{/if}
+			ajaxpost('$formid', null, null, 'onerror', null);
+		}
+		function keydown_enter_login(event)
+		{
+			var e = event?event:(window.event?window.event:null);
+			if (e.keyCode == 13) {
+				guests_login();
+			}
+		}
+		{if $recommend_username}
+		if(document.getElementById('guests_password').value=='') {
+			document.getElementById('guests_password').focus();
+		}
+		{else}
+		if(document.getElementById('guests_username').value=='') {
+			document.getElementById('guests_username').focus();
+		}
+		{/if}
+		</script>
+	</div>
+</form>
+</div>
+]]></root>

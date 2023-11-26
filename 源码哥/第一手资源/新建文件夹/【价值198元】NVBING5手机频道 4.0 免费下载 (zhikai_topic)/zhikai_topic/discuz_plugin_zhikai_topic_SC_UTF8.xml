@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-01-13 14:45]]></item>
+	<item id="From"><![CDATA[讯幻网（www.xhkj5.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[NVBING5手机频道]]></item>
+			<item id="identifier"><![CDATA[zhikai_topic]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[zhikai_topic/]]></item>
+			<item id="copyright"><![CDATA[讯幻网（www.xhkj5.com）]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[频道管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[rewrite]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[伪静态规则]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>反馈错误</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[开启伪静态]]></item>
+				<item id="description"><![CDATA[开启伪静态请先放置好伪静态规则]]></item>
+				<item id="variable"><![CDATA[rewrite]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="lang001"><![CDATA[频道不存在]]></item>
+				<item id="lang002"><![CDATA[参数错误]]></item>
+				<item id="lang003"><![CDATA[频道列表]]></item>
+				<item id="lang004"><![CDATA[频道]]></item>
+				<item id="lang005"><![CDATA[操作]]></item>
+				<item id="lang006"><![CDATA[暂无记录]]></item>
+				<item id="lang007"><![CDATA[编辑]]></item>
+				<item id="lang008"><![CDATA[删除]]></item>
+				<item id="lang009"><![CDATA[添加频道]]></item>
+				<item id="lang010"><![CDATA[请输入]]></item>
+				<item id="lang011"><![CDATA[频道名称]]></item>
+				<item id="lang012"><![CDATA[请输入正确的]]></item>
+				<item id="lang013"><![CDATA[英文名称]]></item>
+				<item id="lang014"><![CDATA[英文名称已存在]]></item>
+				<item id="lang015"><![CDATA[头部颜色]]></item>
+				<item id="lang016"><![CDATA[频道调用模块]]></item>
+				<item id="lang017"><![CDATA[频道HTML代码]]></item>
+				<item id="lang018"><![CDATA[只能使用字母、数字]]></item>
+				<item id="lang019"><![CDATA[调用内容形式]]></item>
+				<item id="lang020"><![CDATA[调用模块]]></item>
+				<item id="lang021"><![CDATA[HTML代码]]></item>
+				<item id="lang022"><![CDATA[一行一个模块“内部调用代码”]]></item>
+				<item id="lang023"><![CDATA[SEO标题]]></item>
+				<item id="lang024"><![CDATA[SEO关键词]]></item>
+				<item id="lang025"><![CDATA[SEO描述]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

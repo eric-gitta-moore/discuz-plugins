@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-04-04 17:27]]></item>
+	<item id="From"><![CDATA[源 碼 哥 y   m g 6   .   c o  m]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[①H5視頻播放器]]></item>
+			<item id="identifier"><![CDATA[onexin_html5player]]></item>
+			<item id="description"><![CDATA[為你網站提供video-js的HTML5視頻播放器，可自定義video視頻播放標簽。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[onexin_html5player/]]></item>
+			<item id="copyright"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[3.1.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[onexin_html5player]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[mobile_onexin_html5player]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[onexin_readme]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多說明]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[10]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>聯系作者</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否開啟]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[選擇使用的版塊]]></item>
+				<item id="description"><![CDATA[如選“空”，則開啟所有選項。]]></item>
+				<item id="variable"><![CDATA[usefids]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[自定義標簽名]]></item>
+				<item id="description"><![CDATA[默認為video，示例：[video]視頻網址[/video]]]></item>
+				<item id="variable"><![CDATA[video]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[video]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[轉換flash標簽]]></item>
+				<item id="description"><![CDATA[默認否，視來源站點而定。]]></item>
+				<item id="variable"><![CDATA[flashconvert]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[52]]></item>
+				<item id="title"><![CDATA[自定義播放器代碼]]></item>
+				<item id="description"><![CDATA[支持壓縮的HTML代碼，請刪除代碼中的注釋。]]></item>
+				<item id="variable"><![CDATA[html5code]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<style>.html5video { width: 100%; height: 200px;}@media only screen and (min-width: 360px) {.html5video { width: 100%; height: 160px;}}@media only screen and (min-width: 480px) {.html5video { width: 90%; height: 300px;}}@media only screen and (min-width: 769px) {.html5video { width: 80%; height: 360px;}}@media only screen and (min-width: 1200px) {.html5video { /*width: 550px;*/ height: 400px;}}&nbsp; &nbsp; &nbsp; &nbsp; @media only screen and (min-width: 1600px) {.html5video { width: 960px; height: 540px;}}</style>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

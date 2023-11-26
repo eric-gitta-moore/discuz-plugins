@@ -1,0 +1,17 @@
+.center {text-align:center;}
+.blue {color:#0096C2;}
+.e6_li span {width:33%;display:inline-block;text-align:center;font-weight:normal;}
+.e6_li .n {color:#0096c2;font-weight:bold;}
+.top_title {color:#FF6600;}
+.e6_li {font-weight:normal;}
+#li_title span{font-weight:bold;}
+.withdraw_fee{font-size:16px;padding-top:13px;padding-bottom:20px;margin-bottom:15px;line-height:20px;border-bottom:1px dashed #c5c5c5;}
+.withdraw_money{line-height:25px;margin-bottom:10px;color:#26a4c8;}
+.withdraw_number{line-height:37px;}
+.b_b,.c_c {padding:15px 0px;border-bottom:1px dashed #cdcdcd;}
+.c_c span {width:50%;display:inline-block;text-align:center;font-weight:normal;}
+.task_bottom{padding:0 10px;margin-top:10px;}
+.b_t{padding:15px 0px;border-top:1px dashed #cdcdcd;}
+.no_border{border-bottom:none;}
+.task_text{font-size:16px;padding:0 10px;}
+.e6_ul li{font-weight:normal;}

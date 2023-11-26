@@ -1,0 +1,17 @@
+<!--{template e6_propaganda:header}-->
+<style>
+#nav_list .ui-li-icon {top:0.75em;}
+</style>
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<a href="forum.php" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:title}</h1>
+	</div>
+	<div data-role="content" id="nav_list">
+		<ul data-role="listview" data-inset="true">
+			<!--{loop $e6_nav $key $value}-->  
+			<li><a href="plugin.php?id=e6_propaganda&nav={$key}" data-ajax="false"><img src="source/plugin/e6_propaganda/image/{$key}.png" class="ui-li-icon">{$value}</a></li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,395 @@
+<!--{if $_G['inajax']}-->
+{eval 
+ob_end_clean();
+ob_start();
+@header("Expires: -1");
+@header("Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0", FALSE);
+@header("Pragma: no-cache");
+@header("Content-type: text/xml; charset=".CHARSET);
+echo '<?xml version="1.0" encoding="'.CHARSET.'"?>'."\r\n";
+}
+<root><![CDATA[
+<!--{/if}-->
+<tbody id="show_get_content" style="display:{if $info[content_type] == 2} none {/if}">
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:content_rules_set}</th>
+</tr>
+
+{if $_REQUEST['pmod'] != 'fast_pick'}
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:test_url}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[theme_url_test]" type="text" class="longtxt" id="theme_url_test" value="{$info['theme_url_test']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:input_test_url}</td>
+</tr>
+{/if}
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:title_get_rules}:&nbsp;&nbsp;&nbsp;<a class="insert_a" id="insert_title" style="<{ {if $info[theme_get_type] != 2 || $info[theme_get_type] == 3}>display:none<{/if}>" href="javascript:void(0)"  onclick="insertAtCursor('theme_rules','[title]')">{lang milu_pick:insert_title_area}[title]</a>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);">
+  <li id="li_theme_get_type_1" {if $info[theme_get_type] == 1} class="checked" {/if}><input id="theme_get_type_1" name="set[theme_get_type]" type="radio" class="theme_get_type" onclick="show_hide('tr_get_title','insert_title',1);" value="1"  {if $info[theme_get_type] == 1} checked="checked" {/if}>
+  {lang milu_pick:dom_get}  </li>
+  <li  id="li_theme_get_type_2"  {if $info[theme_get_type] == 2 || !$info[theme_get_type]} class="checked" {/if} ><input  name="set[theme_get_type]" type="radio" class="theme_get_type"  value="2"  id="theme_get_type_2" onclick="show_hide('','insert_title+tr_get_title',2);"  {if $info[theme_get_type] == 2 ||!$info[theme_get_type]}checked="checked" {/if}>
+    {lang milu_pick:str_get}</li>
+	
+	<li  id="li_theme_get_type_3"  {if $info[theme_get_type] == 3 } class="checked" {/if} ><input  name="set[theme_get_type]" type="radio" class="theme_get_type"  value="3"  id="theme_get_type_3" onclick="show_hide('tr_get_title+insert_title','',2);"  {if $info[theme_get_type] == 3 }checked="checked" {/if}>
+    {lang milu_pick:evo_get}</li>
+</ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+<tr id="tr_get_title" {if $info[theme_get_type] == 3}style="display:none"{/if} class="noborder" ><td class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[theme_rules]" id="theme_rules" cols="50" class="tarea w_area" '..'="">{$info['theme_rules']}</textarea>
+</td>
+  <td class="vtop tips2" s="1"><p id="theme_get_type_1" style="{if $info[theme_get_type] == 2 || !$info[theme_get_type]}display:none{/if}">{lang milu_pick:dom_get_notice}</p>
+  <p id="theme_get_type_2" style=" {if $info[theme_get_type] != 2}display:none{/if}">{lang milu_pick:misc_notice}<br>
+  {lang milu_pick:title_notice}</p></td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_format_title}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  <ul onMouseOver="altStyle(this);"><li id="li_is_fiter_title_1" {if $info[is_fiter_title] == 1} class="checked" {/if}><input name="set[is_fiter_title]" type="radio" class="is_fiter_title" id="is_fiter_title_1" onclick="show_hide('title_fiter_replace','',1);" value="1"  {if $info[is_fiter_title] == 1} checked="checked" {/if}>
+&nbsp;{lang milu_pick:yes}</li>
+    <li id="li_is_fiter_title_2" {if $info[is_fiter_title] != 1} class="checked" {/if}><input onclick="show_hide('title_fiter_replace','',2);" name="set[is_fiter_title]" type="radio" id="is_fiter_title_2" class="is_fiter_title" value="2" {if $info[is_fiter_title] != 1} checked="checked" {/if}>
+    {lang milu_pick:no}    </li>
+</ul></td>
+  <td class="vtop tips2" s="1"></td>
+</tr>
+<tbody id="title_fiter_replace" {if $info[is_fiter_title] != 1} style="display:none" {/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:title_replace}:<a href="javascript:void(0)" onclick="insertAtCursor('title_replace_rules','(*)')">{lang milu_pick:insert_var_place}(*)</a></td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[title_replace_rules]" id="title_replace_rules" cols="50" class="tarea w_area" '..'="">{$info['title_replace_rules']}</textarea></td>
+<td class="vtop tips2" s="1"><p>{lang milu_pick:replace_notice}</p>  </td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:title_filter_rules}:</td>
+</tr>
+<tr class="noborder" >
+  <td colspan="2" class="vtop rowform">
+<table width="500" class="tb tb2 tdtable">
+
+<tr class="header"><th width="100">{lang milu_pick:rules_type}</th>
+  <th width="200">{lang milu_pick:rules_body}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <th>{lang milu_pick:op}</th>
+</tr>
+<tbody id="title_filter_rules_tbody">
+{eval echo create_rules_html('title_filter_rules', $info['title_filter_rules']);}
+</tbody><tbody style="display: none" id="n_0">
+</tbody>
+
+<tbody><tr class="hover">
+  <td><a href="javascript:void(0)"   onclick="add_rules('title_filter_rules');">{lang milu_pick:add_one_rules}</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr></tbody><tbody style="display: none" id="n_3">
+</tbody></table></td>
+  </tr>
+</tbody>
+
+<td s="1" class="td27" colspan="2"><a onclick="test_window('theme_get_type', 'is_fiter_title', 'theme_url_test', 'theme_rules', 'title_replace_rules', 'title_filter_rules', 'title')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></td>
+
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform">{lang milu_pick:content_get_rules}:&nbsp;&nbsp;&nbsp;<a id="insert_string_link" style="<{ {if $info[page_get_type] != 2}>display:none<{/if}>" href="javascript:void(0)"  onclick="insertAtCursor('content_rules','[body]')">{lang milu_pick:insert_content}[body]</a>&nbsp;&nbsp;&nbsp;</span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);">
+  <li id="li_content_get_type_1" {if $info[content_get_type] == 1} class="checked" {/if}><input  id="content_get_type_1" name="set[content_get_type]" type="radio" class="content_get_type"  onclick="show_hide('tr_content_rules','',1);" value="1"  {if $info[content_get_type] == 1} checked="checked" {/if}>
+ {lang milu_pick:dom_get}  </li>
+  <li id="li_content_get_type_2"{if $info[content_get_type] == 2 || !$info[content_get_type]} class="checked" {/if} ><input  onclick="show_hide('tr_content_rules','',1);" name="set[content_get_type]" type="radio" class="content_get_type" id="content_get_type_2"  value="2"  {if $info[content_get_type] != 1 ||!$info[content_get_type]}checked="CHECKED" {/if}>
+    {lang milu_pick:str_get}</li>
+	<li id="li_content_get_type_3"{if $info[content_get_type] == 3} class="checked" {/if} ><input onclick="show_hide('tr_content_rules','',2);"  name="set[content_get_type]" type="radio" class="content_get_type" id="content_get_type_3"  value="3"  {if $info[content_get_type] == 3 }checked="CHECKED" {/if}>
+    {lang milu_pick:evo_get}</li>
+</ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+
+<tr id="tr_content_rules" {if $info[content_get_type] == 3} style="display:none"{/if} class="noborder" onmouseover="setfaq(this, 'faq44fcd')"><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[content_rules]" id="content_rules" cols="50" class="tarea w_area" '..'="">{$info['content_rules']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:misc_notice}{lang milu_pick:content_notice}</td>
+</tr>
+</tbody>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_format_body}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  <ul onMouseOver="altStyle(this);"><li {if $info[is_fiter_content] == 1} class="checked" {/if}><input onclick="show_hide('content_fiter_replace','',1);" name="set[is_fiter_content]" type="radio" class="is_fiter_content" value="1"  {if $info[is_fiter_content] == 1} checked="checked" {/if}>
+&nbsp;{lang milu_pick:yes}</li>
+    <li {if $info[is_fiter_content] != 1} class="checked" {/if}><input onclick="show_hide('content_fiter_replace','',2);" name="set[is_fiter_content]" type="radio" class="is_fiter_content" value="2" {if $info[is_fiter_content] != 1} checked="checked" {/if}>
+    {lang milu_pick:no}    </li>
+</ul></td>
+  <td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+<tr >
+<tbody id="content_fiter_replace" {if $info[is_fiter_content] != 1} style="display:none" {/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:body_replace}:<a href="javascript:void(0)" onclick="insertAtCursor('content_replace_rules','(*)')">{lang milu_pick:insert_var_place}(*)</a></td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[content_replace_rules]" id="content_replace_rules" cols="50" class="tarea w_area" '..'="">{$info['content_replace_rules']}</textarea></td>
+<td class="vtop tips2" s="1"><p>{lang milu_pick:replace_notice}</p>  </td>
+</tr>
+{if $_REQUEST['pmod'] != 'system_rules' || $_G['inajax']}
+ <tr>
+  <th  class="td27" colspan="15">{lang milu_pick:format_content}</th>
+</tr>
+<tr  class="noborder">
+  <td class="vtop rowform">
+	{eval echo show_filter_html($info['content_filter_html']);}	</td>
+  <td s="1" class="vtop tips2"><p>{lang milu_pick:clear_html}</p></td>
+</tr>
+{/if}
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:body_filter_rules}:</td>
+</tr>
+<tr class="noborder" >
+  <td colspan="2" class="vtop rowform">
+<table width="500" class="tb tb2 tdtable" >
+
+<tr class="header"><th width="100">{lang milu_pick:rules_type}</th>
+  <th width="200">{lang milu_pick:rules_body}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <th>{lang milu_pick:op}</th>
+</tr>
+
+<tbody id="content_filter_rules_tbody">
+{eval echo create_rules_html('content_filter_rules', $info['content_filter_rules']);}
+</tbody>
+
+<tbody><tr class="hover">
+  <td><a href="javascript:void(0)"   onclick="add_rules('content_filter_rules');">{lang milu_pick:add_one_rules}</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr></tbody>
+<tbody style="display: none" id="n_3">
+</tbody></table></td>
+  </tr>
+</tbody>
+
+<tr >
+    <td s="1" class="td27" colspan="2"><a onclick="test_window('content_get_type', 'is_fiter_content', 'theme_url_test', 'content_rules', 'content_replace_rules', 'content_filter_rules', 'body')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_get_other}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  	 {echo radio_output(array('name' => 'is_get_other', 'int_val' => 2, 'js' => array("show_hide('show_get_other','',1)", "show_hide('show_get_other','',2)"), 'lang' => array('yes', 'no')), $info);}
+ </td>
+  <td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+<tbody id="show_get_other" {if $info['is_get_other'] != 1}style="display:none"{/if}>
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform">{lang milu_pick:from_get_rules}:&nbsp;&nbsp;&nbsp;<a  style="<{ {if $info[from_get_type] != 2}>display:none<{/if}>" href="javascript:void(0)"  onclick="insertAtCursor('from_get_rules','[data]')">{lang milu_pick:insert_data}[data]</a>&nbsp;&nbsp;&nbsp;</span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'from_get_type', 'int_val' => 1, 'lang' => array('dom_get', 'str_get')), $info);}
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+
+<tr class="noborder" onmouseover="setfaq(this, 'faq44fcd')"><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[from_get_rules]" id="from_get_rules" cols="50" class="tarea w_area" '..'="">{$info['from_get_rules']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:misc_notice}</td>
+</tr>
+
+
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform">{lang milu_pick:author_get_rules}:&nbsp;&nbsp;&nbsp;<a  style="<{ {if $info[author_get_type] != 2}>display:none<{/if}>" href="javascript:void(0)"  onclick="insertAtCursor('author_get_rules','[data]')">{lang milu_pick:insert_data}[data]</a>&nbsp;&nbsp;&nbsp;</span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'author_get_type', 'int_val' => 1, 'lang' => array('dom_get', 'str_get')), $info);}
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[author_get_rules]" id="author_get_rules" cols="50" class="tarea w_area" '..'="">{$info['author_get_rules']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:misc_notice}</td>
+</tr>
+
+
+
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform">{lang milu_pick:dateline_get_rules}:&nbsp;&nbsp;&nbsp;<a  style="<{ {if $info[dateline_get_type] != 2}>display:none<{/if}>" href="javascript:void(0)"  onclick="insertAtCursor('dateline_get_rules','[data]')">{lang milu_pick:insert_data}[data]</a>&nbsp;&nbsp;&nbsp;</span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'dateline_get_type', 'int_val' => 1, 'lang' => array('dom_get', 'str_get')), $info);}
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[dateline_get_rules]" id="dateline_get_rules" cols="50" class="tarea w_area" '..'="">{$info['dateline_get_rules']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:misc_notice}</td>
+</tr>
+
+<tr >
+    <td s="1" class="td27" colspan="2"><a onclick="get_other_test();" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></td>
+</tr>
+
+
+
+</tbody>
+
+
+
+
+
+{if $_REQUEST['pmod'] != 'fast_pick' && !VIP}
+
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:reply_get_set}<font style="font-weight:normal">{lang milu_pick:reply_set_notice}</font></th>
+</tr>
+
+<tr >
+    <td colspan="2" class="td27" s="1">{lang milu_pick:reply_get_rules_notice}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform"><label>
+    <input type="checkbox" onclick="show_reply();" name="set[reply_is_extend]" {if $info['reply_is_extend'] == 1}checked="checked"{/if} class="reply_is_extend" value="1" />
+    {lang milu_pick:inher_content}</label></td>
+  <td class="vtop tips2" s="1">{lang milu_pick:inher_notice}</td>
+</tr>
+<tbody id="reply_show" {if $info['reply_is_extend'] == 1} style="display:none"{/if}>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);">
+  <li id="li_reply_get_type_1" {if $info[reply_get_type] == 1} class="checked" {/if}><input id="reply_get_type_1" name="set[reply_get_type]" type="radio" class="reply_get_type"  value="1"  {if $info[reply_get_type] == 1} checked="checked" {/if}>
+  {lang milu_pick:dom_get}  </li>
+  <li id="li_reply_get_type_2"  {if $info[reply_get_type] == 2 || !$info[reply_get_type]} class="checked" {/if} ><input id="reply_get_type_2"  name="set[reply_get_type]" type="radio" class="reply_get_type"  value="2"    {if $info[reply_get_type] == 2 ||!$info[reply_get_type]}checked="CHECKED" {/if}>
+    {lang milu_pick:str_get}</li>
+</ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+
+
+<tr class="noborder" ><td class="vtop rowform">
+    <textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[reply_rules]" id="reply_rules" cols="50" class="tarea" '..'="">{$info['reply_rules']}</textarea>
+    <a href="javascript:void(0)" onclick="insertAtCursor('reply_rules','[reply]')">{lang milu_pick:insert_reply}[reply]</a></td>
+  <td class="vtop tips2" s="1">{lang milu_pick:misc_notice}
+        {lang milu_pick:insert_link_notice}[reply]</td>
+</tr>
+</tbody>
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:format_reply}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  <ul onMouseOver="altStyle(this);"><li {if $info[is_fiter_reply] == 1} class="checked" {/if}><input onclick="show_hide('reply_fiter_replace','',1);" name="set[is_fiter_reply]" type="radio" class="is_fiter_reply" value="1"  {if $info[is_fiter_reply] == 1} checked="checked" {/if}>
+&nbsp;{lang milu_pick:yes}</li>
+    <li {if $info[is_fiter_reply] != 1} class="checked" {/if}><input onclick="show_hide('reply_fiter_replace','',2);" name="set[is_fiter_reply]" type="radio" class="is_fiter_reply" value="2" {if $info[is_fiter_reply] != 1} checked="checked" {/if}>
+    {lang milu_pick:no}    </li>
+</ul></td>
+  <td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+<tr >
+<tbody id="reply_fiter_replace" {if $info[is_fiter_reply] != 1} style="display:none" {/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:reply_replace}:<a href="javascript:void(0)" onclick="insertAtCursor('reply_replace_rules','(*)')">{lang milu_pick:insert_var_place}(*)</a></td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[reply_replace_rules]" id="reply_replace_rules" cols="50" class="tarea w_area" '..'="">{$info['reply_replace_rules']}</textarea></td>
+<td class="vtop tips2" s="1"><p>{lang milu_pick:replace_notice}</p>  </td>
+</tr>
+{if $_REQUEST['pmod'] != 'system_rules' || $_G['inajax']}
+ <tr>
+  <th  class="td27" colspan="15">{lang milu_pick:format_content}</th>
+</tr>
+<tr  class="noborder">
+  <td class="vtop rowform">
+	{eval echo show_filter_html($info['reply_filter_html'], 'reply_filter_html');}	</td>
+  <td s="1" class="vtop tips2"><p>{lang milu_pick:auto_clear_html}</p></td>
+</tr>
+{/if}
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:reply_del_rules}:</td>
+</tr>
+<tr class="noborder" >
+  <td colspan="2" class="vtop rowform">
+<table width="500" class="tb tb2 tdtable" >
+
+<tr class="header"><th width="100">{lang milu_pick:rules_type}</th>
+  <th width="200">{lang milu_pick:rules_body}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <th>{lang milu_pick:op}</th>
+</tr>
+<tbody id="reply_filter_rules_tbody">
+{eval echo create_rules_html('reply_filter_rules', $info['reply_filter_rules']);}
+</tbody>
+
+<tbody><tr class="hover">
+  <td><a href="javascript:void(0)"   onclick="add_rules('reply_filter_rules');">{lang milu_pick:add_one_rules}</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr></tbody>
+</table></td>
+  </tr>
+</tbody>
+{if $_REQUEST['pmod'] != 'system_rules' || $_G['inajax']}
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:max_replies}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[reply_max_num]" type="text" class="txt" id="reply_max_num" value="{$info['reply_max_num']}"></td>
+<td s="1" class="vtop tips2">{lang milu_pick:max_replies_notice}</td>
+</tr>
+{/if}
+
+<tr >
+    <td s="1" class="td27" colspan="2"><a onclick="test_window('reply_get_type', 'is_fiter_reply', 'theme_url_test', 'reply_rules', 'reply_replace_rules', 'reply_filter_rules', 'reply')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></td>
+</tr>
+{/if}
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:page_get_type}<font style="font-weight:normal">{lang milu_pick:page_get_type_notice}</font></th>
+</tr>
+
+
+<tr >
+    <td colspan="2" class="td27" s="1">{lang milu_pick:page_get_rules}:<a href="javascript:void(0)" onclick="insertAtCursor('content_page_rules','[link]')">&nbsp;&nbsp;&nbsp;{lang milu_pick:insert_page}[link]</a></td>
+</tr>
+
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);">
+  <li {if $info[content_page_get_type] == 1 ||!$info[content_page_get_type]} class="checked" {/if}><input name="set[content_page_get_type]" type="radio" class="content_page_get_type"  value="1"  {if $info[content_page_get_type] == 1 ||!$info[content_page_get_type]} checked="checked" {/if}>
+  {lang milu_pick:dom_get}  </li>
+  <li  {if $info[content_page_get_type] == 2 } class="checked" {/if} ><input  name="set[content_page_get_type]" type="radio" class="content_page_get_type"  value="2"   {if $info[content_page_get_type] == 2 }checked="CHECKED" {/if}>
+    {lang milu_pick:str_get}</li>
+</ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:str_get_notice}</td>
+</tr>
+
+
+<tr class="noborder" ><td class="vtop rowform">
+    <textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[content_page_rules]" id="content_page_rules" cols="50" class="tarea" '..'="">{$info['content_page_rules']}</textarea>
+    </td>
+  <td class="vtop tips2" s="1">{lang milu_pick:misc_notice}
+        {lang milu_pick:insert_link_notice}[link].</br>{lang milu_pick:dom_demo}:div[class=pgs mtm mbm cl] div.pg a</td>
+</tr>
+
+<tr >
+    <td colspan="2" class="td27" s="1">{lang milu_pick:page_mode}:</td>
+</tr>
+
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);">
+  <li {if $info[content_page_get_mode] == 1 ||!$info[content_page_get_mode]} class="checked" {/if}><input  name="set[content_page_get_mode]" type="radio" class="page_get_mode"  value="1"  {if $info[content_page_get_mode] == 1 || !$info[content_page_get_mode]} checked="checked" {/if}>
+    {lang milu_pick:all_list_mode}</li>
+  <li  {if $info[content_page_get_mode] == 2 } class="checked" {/if} ><input  name="set[content_page_get_mode]" type="radio" class="page_get_mode"  value="2"    {if $info[content_page_get_mode] == 2 }checked="CHECKED" {/if}>
+    {lang milu_pick:up_down_mode} </li>
+</ul></td>
+<td s="1" class="vtop tips2"></td>
+</tr>
+
+<tr ><td s="1" class="td27" colspan="2"><a onclick="get_content_page();" href="javascript:void(0);">{lang milu_pick:hit_view_page}</a></td>
+</tr>
+<!--{if $_G['inajax']}-->
+]]></root>
+<!--{eval define(FOOTERDISABLED, false);}-->
+<!--{eval exit();}-->
+<!--{/if}-->

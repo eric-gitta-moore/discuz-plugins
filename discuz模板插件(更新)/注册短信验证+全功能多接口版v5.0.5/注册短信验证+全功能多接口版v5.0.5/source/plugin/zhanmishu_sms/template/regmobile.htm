@@ -1,0 +1,66 @@
+{if $isverify >= 1}
+<div class="bm bw0">
+	<h1>{lang zhanmishu_sms:verify_mobile}</h1>
+	<p class="tbms mtm tbms_r">{lang zhanmishu_sms:verify_success}</p>
+	<iframe id="frame_profile" name="frame_profile" style="display: none"></iframe>
+	<form action="home.php?mod=spacecp&amp;ac=profile&amp;op=verify" method="post" enctype="multipart/form-data" autocomplete="off" target="frame_profile" onsubmit="">
+		<input type="hidden" value="ef58aab5" name="formhash">
+		<input type="hidden" value="3" name="vid">
+		<br>
+		<table cellspacing="0" cellpadding="0" class="tfm" id="profilelist">
+			<tbody>
+				<tr>
+					<th>{lang zhanmishu_sms:username}</th>
+					<td>$v['username']</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr id="tr_mobile">
+					<th id="th_mobile">{lang zhanmishu_sms:mobile}</th>
+					<td id="td_mobile">
+						<span>$v['field']['mobile']</span>&nbsp;&nbsp;&nbsp;<span><a class="xi2" style="padding:0 5px;font-size: 14px;line-height: 28px;" href="javascript:;" onclick="showWindow('mobileverify','plugin.php?id=zhanmishu_sms:verify&amp;mobile={$v['field']['mobile']}&amp;act=edit','get','0')">{lang zhanmishu_sms:change_mobile}&gt;&gt;</a></span>
+					</td>
+					<td>
+						<input type="hidden" name="privacy[mobile]" value="3"></td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+{else}
+<style>
+	.mobile{
+		border: 1px solid;
+	    border-color: #848484 #E0E0E0 #E0E0E0 #848484;
+	    background: #FFF url(http://plugin/static/image/common/px.png) repeat-x 0 0;
+	}
+</style>
+<div class="bm bw0">
+	<h1>{lang zhanmishu_sms:verify_mobile}</h1>
+	<p class="tbms mtm ">{lang zhanmishu_sms:please_finish_mobile}</p>
+	<iframe id="frame_profile" name="frame_profile" style="display: none"></iframe>
+	<form action="home.php?mod=spacecp&amp;ac=profile&amp;op=verify" method="post" enctype="multipart/form-data" autocomplete="off" target="frame_profile" onsubmit="">
+		<input type="hidden" value="{FORMHASH}" name="formhash">
+		<input type="hidden" value="3" name="vid">
+		<br>
+		<table cellspacing="0" cellpadding="0" class="tfm" id="profilelist">
+			<tbody>
+				<tr>
+					<th>{lang zhanmishu_sms:username}</th>
+					<td>$v['username']</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr id="tr_mobile">
+					<th id="th_mobile">{lang zhanmishu_sms:mobile}</th>
+					<td id="td_mobile">
+						<input type="text" class="mobile" name="mobile" value="$v['field']['mobile']">&nbsp;&nbsp;&nbsp;<input type="submit" name="profilesubmitbtn" value="{lang zhanmishu_sms:verify_mobile}">
+					</td>
+					<td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+
+{/if}

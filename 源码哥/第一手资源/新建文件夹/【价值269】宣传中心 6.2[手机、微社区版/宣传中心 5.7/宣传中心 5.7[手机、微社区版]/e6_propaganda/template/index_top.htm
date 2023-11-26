@@ -1,0 +1,68 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<table width="100%">
+	<tr>
+		<td width="32%" valign="top">
+			<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt e6_table">
+				<tr class="e6_tr">
+					<td colspan="3"><h2>{lang e6_propaganda:top_user}</h2></td>
+				</tr>
+				<tr class="e6_tr_con">
+					<td nowrap="nowrap">{lang e6_propaganda:order}</td>
+					<td nowrap="nowrap">{lang e6_propaganda:username}</td>
+					<td>{lang e6_propaganda:recommend}</td>
+				</tr>
+				<!--{loop $new_list $k $v}-->
+				<tr>
+					<td class="e6_num">{$v['n']}</td>
+					<td><a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">{$v['username']}</a></td>
+					<td><!--{if $v[fuid1]>0}--><a href="home.php?mod=space&uid={$v['fuid1']}&do=profile" target="_blank">{$v['fusername']}</a><!--{else}-->{lang e6_propaganda:no}<!--{/if}--></td>
+				</tr>
+				<!--{/loop}-->
+			</table>
+		</td>
+		<td width="2%"></td>
+		<td width="32%" valign="top">
+			<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt e6_table">
+				<tr class="e6_tr">
+					<td colspan="3"><h2>{lang e6_propaganda:top_money}</h2></td>
+				</tr>
+				<tr class="e6_tr_con">
+					<td nowrap="nowrap">{lang e6_propaganda:top}</td>
+					<td nowrap="nowrap">{lang e6_propaganda:money}</td>
+					<td>{lang e6_propaganda:username}</td>
+				</tr>
+				<!--{loop $allmoney_list $k $v}-->
+				<tr>
+					<td class="e6_num">{$v['n']}</td>
+					<td>{$v['money']}</td>
+					<td><a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">{$v['username']}</a></td>
+				</tr>
+				<!--{/loop}-->
+			</table>
+		</td>
+		<td width="2%"></td>
+		<td width="32%" valign="top">
+			<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt e6_table">
+				<tr class="e6_tr">
+					<td colspan="3"><h2>{lang e6_propaganda:top_register}</h2></td>
+				</tr>
+				<tr class="e6_tr_con">
+					<td nowrap="nowrap">{lang e6_propaganda:top}</td>
+					<td nowrap="nowrap">{lang e6_propaganda:number}</td>
+					<td>{lang e6_propaganda:username}</td>
+				</tr>
+				<!--{loop $register_list $k $v}-->
+				<tr>
+					<td class="e6_num">{$v['n']}</td>
+					<td>{$v['register']}{lang e6_propaganda:people}</td>
+					<td><a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">{$v['username']}</a></td>
+				</tr>
+				<!--{/loop}-->
+			</table>
+		</td>
+	</tr>
+</table>		
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

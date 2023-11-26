@@ -1,0 +1,132 @@
+<!--{template milu_pick:pick_header}-->
+<form id="form12" name="form12" action="?{PICK_GO}system_rules&myac=rules_edit" method="post"> 
+  <input name="rules_hash" type="hidden" value="{$info['rules_hash']}" />
+<table class="tb tb2 ">
+<tbody><tr>
+  <th colspan="15" class="partition">{lang milu_pick:base_set}</th>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:content_type}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  {echo radio_output(array('name' => 'rules_type', 'int_val' => 1, 'lang' => array('pick_bbs', 'pick_normal') ), $info);}</td>
+  <td class="vtop tips2" s="1"><input name="rid" type="hidden" id="rid"  value="{$info['rid']}"/>
+    <input name="copy" type="hidden" id="copy"  value="{$info['copy']}"/></td></tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:rules_name}:</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[rules_name]" type="text" class="txt" id="rules_name" value="{$info['rules_name']}" >
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:rules_name_notice}</td>
+</tr>
+
+
+<tr >
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:auto_match_set}</th>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:auto_list_id}:</td>
+</tr>
+
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[list_ID]" id="list_ID" cols="50" class="tarea" '..'="">{$info['list_ID']}</textarea>
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:auto_list_id_notice}</td>
+</tr>
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:test_url}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[list_ID_test]" type="text" class="longtxt" id="list_ID_test" value="{$info['list_ID_test']}"></td>
+<td s="1" class="vtop tips2"><a onclick="check_web_type('list_ID','list_ID_test')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a><span id="list_ID_test_show" style="margin-left:5px;"></span></td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:auto_detail_id}:</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[detail_ID]" id="detail_ID" cols="50" class="tarea" '..'="">{$info['detail_ID']}</textarea>
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:auto_list_id_notice}</td>
+</tr>
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:test_url}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<input name="set[detail_ID_test]" type="text" class="longtxt" id="detail_ID_test" value="{$info['detail_ID_test']}"></td>
+<td s="1" class="vtop tips2"><a onclick="check_web_type('detail_ID','detail_ID_test')" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a><span id="detail_ID_test_show" style="margin-left:5px;"></span></td>
+</tr>
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:url_set}</th>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:url_var_set}:<a href="javascript:void(0)" onclick="insertAtCursor('page_url','(*)')">{lang milu_pick:insert_var}</a></td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[page_url]" type="text" class="longtxt"  style="width:500px;" id="page_url"  value="{$info['page_url']}">
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:var_notice}  http://www.baidu.com/s?wd=£¨*£©</td>
+</tr>
+<tr >
+  <td s="1" class="td27" colspan="2"><a onclick="create_variable()" href="javascript:void(0);">{lang milu_pick:create_var_notice}</a></td>
+</tr>
+<tr class="noborder" ><td colspan="2" class="vtop rowform" id="bianliang"<!--{if !$info['url_var']}--> style=" display:none" <!--{/if}-->>
+<table class="tb tb2 tdtable" >
+<tbody>
+<tr>
+  <th colspan="13" class="partition">{lang milu_pick:rules_var_set}</th>
+</tr>
+<tr class="header">
+  <th>{lang milu_pick:var_set_name}</th>
+<th>{lang milu_pick:var_set_type}</th>
+<th> {lang milu_pick:rules_var_ext_set}</th>
+<th>{lang milu_pick:rules_var_detail_notice}</th>
+</tr>
+<tbody id="show_variable">
+   <!--{if $info['url_var']}-->
+   <!--{loop $info['url_var'] $key2 $rs2}-->
+  <tr class="hover"><td><input name="url_var[{$key2}][var_title][$key2]" value="{$rs2['var_title'][$key2]}" type="text" class="shorttxt" id="var_title[]" size="15"></td><td><select onchange="show_var_ext(this.value, {$key2})" name="url_var[{$key2}][var_type][$key2]" id="var_type[]">
+				<option <!--{if $rs2['var_type'][$key2] == 'text'}-->selected="selected"<!--{/if}-->  value="text" selected="">{eval echo milu_lang('text');}(text)</option>
+				<option <!--{if $rs2['var_type'][$key2] == 'textarea'}-->selected="selected"<!--{/if}--> value="textarea">{eval echo milu_lang('textarea');}(textarea)</option>
+				<option <!--{if $rs2['var_type'][$key2] == 'select'}-->selected="selected"<!--{/if}--> value="select">{eval echo milu_lang('select');}(select)</option>
+				<option <!--{if $rs2['var_type'][$key2] == 'selects'}-->selected="selected"<!--{/if}--> value="selects">{eval echo milu_lang('selects');}(selects)</option>
+			</select></td>
+    <td>
+      <label id="var_keyword_{$key2}" <!--{if $rs2['var_type'][$key2] == 'selects' || $rs2['var_type'][$key2] == 'select'}-->style="display:none"<!--{/if}-->>
+      <input<!--{if  $rs2['var_ext_keyword'][$key2] == 1}--> checked="checked" <!--{/if}--> value="1" name="url_var[{$key2}][var_ext_keyword][$key2]" type="checkbox" id="var_ext_keyword[]" value="checkbox" />
+      {eval echo milu_lang('open_keyword');}</label>
+	  <div id="var_select_{$key2}" <!--{if $rs2['var_type'][$key2] != 'selects' && $rs2['var_type'][$key2] != 'select'}-->style="display:none"<!--{/if}-->><textarea style="float:left" rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="url_var[{$key2}][var_ext_select][$key2]" id="var_ext_select[]" cols="50" class="tarea">{$rs2['var_ext_select'][$key2]}</textarea>
+   <span style="float:left"> <em>{eval echo milu_lang('desc_demo');}</em> </span></div></td>
+    <td><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="url_var[{$key2}][var_desc][$key2]" id="var_desc_[$key2]" cols="50" class="tarea">{$rs2['var_desc'][$key2]}</textarea></td>
+  </tr>
+   <!--{/loop}-->
+    <!--{/if}-->
+  </tbody></table>
+</td>
+</tr>
+</tbody>
+
+<!--{template milu_pick:common_get_page}-->
+<!--{template milu_pick:common_get_content}-->
+<tr>
+  <th colspan="15" class="partition"><span class="td27">{lang milu_pick:about_desc}</span></th>
+</tr>
+
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:about_desc}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[rule_desc]" id="rule_desc" cols="50" class="tarea w_area">{$info['rule_desc']}</textarea></td>
+<td s="1" class="vtop tips2">{lang milu_pick:about_desc}</td>
+</tr>
+<tr>
+<td colspan="15"><div class="fixsel"><input type="submit" class="btn" id="submit_addsubmit" name="addsubmit" title="{lang milu_pick:save_notice}" value="{lang milu_pick:submit}"></div></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

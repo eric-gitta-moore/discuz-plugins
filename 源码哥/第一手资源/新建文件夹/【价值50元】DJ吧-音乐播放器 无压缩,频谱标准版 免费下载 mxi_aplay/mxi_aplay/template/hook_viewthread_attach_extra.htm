@@ -1,0 +1,15 @@
+<!--{block block_extra}-->
+
+<!--{if $attach[manulcompress]}-->
+<a href="$attach[manulcompress]" target="_blank">{lang mxi_aplay:manulcompress}</a><!--{/if}-->
+<div style="border:1px dashed #cfcfcf;padding:3px; background:#FFC;">
+  <p>
+  	 <a href="javascript:void(0);" url="{$attach[audition]}" title="{$attach[filename]}" class="pause-item jp-pause_{$attach[aid]}" style="display: none;"></a> 
+  	 <a href="javascript:void(0);" url="{$attach[audition]}" crimp="{$attach[crimp]}" title="{$attach[filename]}" price="$attach[price]" aid="{$attach[aid]}" packaid="{$attach[packaid]}" class="play-item jp-play_{$attach[aid]} cl"></a> 
+  	<!--{if $attach['exif']}-->
+  	{lang mxi_aplay:byte}:$attach[exif][bitrate] Kbs, {lang mxi_aplay:palytimes}: $attach[exif][playtimes]
+  	<!--{/if}-->
+  	 </p>
+  <p style="color:#F00"> $setting[tipthread] </p>
+</div>
+<!--{/block}-->

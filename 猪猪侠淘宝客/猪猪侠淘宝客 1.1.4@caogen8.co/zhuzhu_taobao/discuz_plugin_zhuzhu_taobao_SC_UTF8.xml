@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2018-06-18 13:24]]></item>
+	<item id="From"><![CDATA[CAOGEN8 (http://www.cgzz8.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[猪猪侠淘宝客]]></item>
+			<item id="identifier"><![CDATA[zhuzhu_taobao]]></item>
+			<item id="description"><![CDATA[喜欢就来多提意见哦，我慢慢完善]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[zhuzhu_taobao/]]></item>
+			<item id="copyright"><![CDATA[www.caogen8.co]]></item>
+			<item id="version"><![CDATA[1.1.4]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[zhuzhu_taobao]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[猪猪侠淘宝客]]></item>
+					<item id="url"><![CDATA[plugin.php?id=zhuzhu_taobao]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admincp_brand]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[品牌主题]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admincp_category]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[优惠券分类]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admincp_cat]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[淘宝客分类]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[admincp_seo]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[SEO优化]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[4]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[admincp_rewrite]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[URL静态化]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[rewrite]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[6]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[Appkey]]></item>
+				<item id="description"><![CDATA[通过阿里妈妈推广渠道进行申请]]></item>
+				<item id="variable"><![CDATA[appkey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[23299839]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[Appsecret]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[appsecret]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[d64b0a93eb341c8119a2d0ab1180ca7e]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[阿里妈妈PID]]></item>
+				<item id="description"><![CDATA[格式 mm_xxx_xxx_xxx]]></item>
+				<item id="variable"><![CDATA[adzoneid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[mm_10057687_4196604_83858245]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[PC导航菜单设置]]></item>
+				<item id="description"><![CDATA[按住 CTRL 键进行多选
+未选中则不显示在导航中]]></item>
+				<item id="variable"><![CDATA[nav_show]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[index=首页
+tbk=淘宝精选
+9k9=9块9包邮
+uatm=优品汇
+tqg=淘抢购
+tbrand=品牌特卖
+quan=优惠券直播
+qmenu=快捷导航]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[index]]></item>
+					<item id="1"><![CDATA[tbk]]></item>
+					<item id="2"><![CDATA[9k9]]></item>
+					<item id="3"><![CDATA[uatm]]></item>
+					<item id="4"><![CDATA[tqg]]></item>
+					<item id="5"><![CDATA[tbrand]]></item>
+					<item id="6"><![CDATA[quan]]></item>
+					<item id="7"><![CDATA[qmenu]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[页面色系]]></item>
+				<item id="description"><![CDATA[格式 #FFFFFF]]></item>
+				<item id="variable"><![CDATA[color_style]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[WAP端详情页同类产品推荐启用]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[jump_url_other]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[头部搜索框旁广告]]></item>
+				<item id="description"><![CDATA[请填写图片绝对路径
+尺寸：高度110px 宽度: 310px]]></item>
+				<item id="variable"><![CDATA[search_right_img]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[首页幻灯片(750X340)]]></item>
+				<item id="description"><![CDATA[手机端和电脑端同步
+格式如下：
+图片地址#连接地址#颜色值
+一行一条]]></item>
+				<item id="variable"><![CDATA[index_slide]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[https://img.alicdn.com/tfs/TB1lD97aRDH8KJjSspnXXbNAVXa-750-340.jpg#http://localhost/#47a5eb
+https://img.alicdn.com/tfs/TB1GaDaaL6H8KJjSspmXXb2WXXa-750-340.jpg#http://localhost/#ffb135]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[首页左侧幻灯片(220X340)]]></item>
+				<item id="description"><![CDATA[格式如下：
+图片地址#连接地址
+一行一条]]></item>
+				<item id="variable"><![CDATA[index_left_slide]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[https://img.alicdn.com/tfs/TB1f9HNdBTH8KJjy0FiXXcRsXXa-440-680.jpg#111
+https://img.alicdn.com/tfs/TB1eKnSdv6H8KJjy0FjXXaXepXa-440-680.jpg#222]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[手机版首页广告（三图）]]></item>
+				<item id="description"><![CDATA[三张图片图片宽度一致，第二张和第三张的高度为第一张的1/2
+格式为 图片地址#连接地址]]></item>
+				<item id="variable"><![CDATA[wap_index_baner_3]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[http://img62.ddimg.cn/upload_img/00389/44/1115dingdanye-350X386.jpg#url
+http://img60.ddimg.cn/upload_img/00601/111/fandxbs.jpg#url
+http://img55.ddimg.cn/165850025778775_y.jpg#urll]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[LOGO]]></item>
+				<item id="description"><![CDATA[直接填写LOGO地址
+图片尺寸不高于70px，不宽于310px
+如留空则显示论坛Logo]]></item>
+				<item id="variable"><![CDATA[logo]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[优惠券默认关键词]]></item>
+				<item id="description"><![CDATA[多关键词请以空格间隔]]></item>
+				<item id="variable"><![CDATA[q_key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[婚纱 礼服]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[淘宝客默认关键词]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[t_key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[搜索推荐关键词]]></item>
+				<item id="description"><![CDATA[每个关键词以|间隔]]></item>
+				<item id="variable"><![CDATA[hot_key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[茶几|镜柜|美缝剂|橱柜|文件夹|瑜伽|绿茶|保温杯|北欧|电视柜|花架|燃气灶|音响|沐浴露]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="seo_update_succeed"><![CDATA[SEO设置完成]]></item>
+				<item id="seokeytip"><![CDATA[多个关键词请使用英文逗号间隔，此关键词将显示在页面最底部]]></item>
+				<item id="no_uatm"><![CDATA[未创建淘宝联盟选品库]]></item>
+				<item id="no_rewrite"><![CDATA[<a href="https://www.caogen8.co/t-33648-1-1.html">您还未购买伪静态组件，请到应用中心购买后使用</a>]]></item>
+				<item id="admincp_rewrite_update_succeed"><![CDATA[伪静态设置成功]]></item>
+				<item id="rule"><![CDATA[规则]]></item>
+				<item id="var"><![CDATA[标记]]></item>
+				<item id="page"><![CDATA[页面]]></item>
+				<item id="admincp_rewritestatus"><![CDATA[猪猪侠淘宝客伪静态规则]]></item>
+				<item id="admincp_rewrite_tips"><![CDATA[URL 静态化可以提高搜索引擎抓取，开启本功能需要对 Web 服务器增加相应的 Rewrite 支持，且会轻微增加服务器负担。同时您还可以调整每个页面的静态格式，但不得删除其中的标记，重置静态格式请留空。注意，修改静态格式后您需要修改服务器的 Rewrite 规则设置 <a href="admin.php?action=plugins&operation=config&identifier=zhuzhu_taobao&pmod=admincp_rewrite&ac=rule" style="color:#2366A8;font-weight: bold">查看当前的 Rewrite 规则</a>]]></item>
+				<item id="page_tqg"><![CDATA[淘抢购]]></item>
+				<item id="page_quan"><![CDATA[优惠券]]></item>
+				<item id="page_brand"><![CDATA[淘品牌]]></item>
+				<item id="page_uatm"><![CDATA[优品汇]]></item>
+				<item id="page_tbk"><![CDATA[淘宝客]]></item>
+				<item id="seodescription"><![CDATA[页面描述]]></item>
+				<item id="seokeywords"><![CDATA[页面关键词]]></item>
+				<item id="page_index"><![CDATA[首页]]></item>
+				<item id="seotitle"><![CDATA[页面标题]]></item>
+				<item id="typearr_4"><![CDATA[营销计划]]></item>
+				<item id="typearr_3"><![CDATA[定向招商]]></item>
+				<item id="typearr_2"><![CDATA[鹊桥]]></item>
+				<item id="typearr_1"><![CDATA[通用]]></item>
+				<item id="update_succeed"><![CDATA[编辑成功]]></item>
+				<item id="tb_cat"><![CDATA[淘宝客分类]]></item>
+				<item id="add_cat"><![CDATA[新增淘宝客分类]]></item>
+				<item id="cate_edit_succeed"><![CDATA[分类编辑成功]]></item>
+				<item id="add_subcate"><![CDATA[新增子分类]]></item>
+				<item id="add_cate"><![CDATA[新增分类]]></item>
+				<item id="brand_edit_succeed"><![CDATA[品牌编辑成功]]></item>
+				<item id="big_banner"><![CDATA[详情页顶部横幅]]></item>
+				<item id="banner"><![CDATA[左侧横幅]]></item>
+				<item id="category_id"><![CDATA[分类ID]]></item>
+				<item id="keyword"><![CDATA[关键词]]></item>
+				<item id="brand_update_succeed"><![CDATA[品牌更新成功]]></item>
+				<item id="add_brand"><![CDATA[新增品牌]]></item>
+				<item id="category"><![CDATA[分类]]></item>
+				<item id="displayorder"><![CDATA[排序]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="jump_url_htm_35"><![CDATA[基本信息]]></item>
+				<item id="jump_url_htm_34"><![CDATA[热门搜索]]></item>
+				<item id="jump_url_htm_33"><![CDATA[暂无]]></item>
+				<item id="jump_url_htm_32"><![CDATA[历史搜索]]></item>
+				<item id="quxiao"><![CDATA[取消]]></item>
+				<item id="home_page"><![CDATA[首页]]></item>
+				<item id="jump_url_htm_31"><![CDATA[返利]]></item>
+				<item id="jump_url_htm_30"><![CDATA[长按图片保存到相册]]></item>
+				<item id="enter"><![CDATA[进入]]></item>
+				<item id="jump_url_htm_29"><![CDATA[下载手机淘宝APP]]></item>
+				<item id="jump_url_htm_28"><![CDATA[您也可以下载APP，随时随地买买买]]></item>
+				<item id="jump_url_htm_27"><![CDATA[可以继续浏览购买哦~]]></item>
+				<item id="jump_url_htm_26"><![CDATA[Safari打开]]></item>
+				<item id="jump_url_htm_25"><![CDATA[点击右上角]]></item>
+				<item id="delivery_score"><![CDATA[物流服务]]></item>
+				<item id="item_score"><![CDATA[宝贝描述]]></item>
+				<item id="service_score"><![CDATA[服务态度]]></item>
+				<item id="1jump_url_htm_1"><![CDATA[领券省]]></item>
+				<item id="1jump_url_htm_2"><![CDATA[元]]></item>
+				<item id="1jump_url_htm_3"><![CDATA[收藏]]></item>
+				<item id="1jump_url_htm_4"><![CDATA[已售]]></item>
+				<item id="1jump_url_htm_5"><![CDATA[同类商品推荐]]></item>
+				<item id="1jump_url_htm_6"><![CDATA[首页]]></item>
+				<item id="1jump_url_htm_7"><![CDATA[店铺]]></item>
+				<item id="1jump_url_htm_8"><![CDATA[分享]]></item>
+				<item id="1jump_url_htm_9"><![CDATA[直接领券]]></item>
+				<item id="1jump_url_htm_10"><![CDATA[复制淘口令]]></item>
+				<item id="1jump_url_htm_11"><![CDATA[直接购买]]></item>
+				<item id="1jump_url_htm_12"><![CDATA[复制成功]]></item>
+				<item id="1jump_url_htm_13"><![CDATA[复制失败]]></item>
+				<item id="1scroll_htm_1"><![CDATA[数据加载中]]></item>
+				<item id="1scroll_htm_2"><![CDATA[我是有底线的哦]]></item>
+				<item id="1t_footer_htm_2"><![CDATA[淘抢购]]></item>
+				<item id="1t_footer_htm_3"><![CDATA[淘宝精选]]></item>
+				<item id="1t_footer_htm_4"><![CDATA[淘品牌]]></item>
+				<item id="1t_footer_htm_5"><![CDATA[优惠券]]></item>
+				<item id="1t_header_htm_1"><![CDATA[搜宝贝，这里券都有]]></item>
+				<item id="1t_header_htm_2"><![CDATA[搜券]]></item>
+				<item id="1t_index_htm_1"><![CDATA[已抢]]></item>
+				<item id="1t_index_htm_2"><![CDATA[件]]></item>
+				<item id="1t_index_htm_5"><![CDATA[券后价]]></item>
+				<item id="1t_index_htm_6"><![CDATA[省]]></item>
+				<item id="1t_quan_htm_3"><![CDATA[天猫]]></item>
+				<item id="1t_quan_htm_4"><![CDATA[淘宝]]></item>
+				<item id="1t_quan_htm_5"><![CDATA[领券]]></item>
+				<item id="1t_quan_htm_6"><![CDATA[天内售出]]></item>
+				<item id="1t_quan_htm_7"><![CDATA[全部]]></item>
+				<item id="1t_tbk_htm_2"><![CDATA[默认显示]]></item>
+				<item id="1t_tbk_htm_3"><![CDATA[销量]]></item>
+				<item id="1t_tbk_htm_4"><![CDATA[热度]]></item>
+				<item id="1t_tbk_htm_5"><![CDATA[累计]]></item>
+				<item id="1t_tbk_htm_7"><![CDATA[海外]]></item>
+				<item id="1t_tkl_htm_1"><![CDATA[淘口令复制]]></item>
+				<item id="1t_tkl_htm_2"><![CDATA[点击虚线框区域复制]]></item>
+				<item id="1t_tkl_htm_3"><![CDATA[在点击复制成功后，请打开]]></item>
+				<item id="1t_tkl_htm_4"><![CDATA[购买]]></item>
+				<item id="1t_tkl_htm_5"><![CDATA[注：若复制失败，请长按]]></item>
+				<item id="1t_tkl_htm_6"><![CDATA[内文字]]></item>
+				<item id="1t_tqg_htm_1"><![CDATA[领券拍下立减]]></item>
+				<item id="1t_tqg_htm_3"><![CDATA[年m月d日]]></item>
+				<item id="1t_tqg_htm_4"><![CDATA[准时开抢]]></item>
+				<item id="1t_tqg_htm_7"><![CDATA[即将开始]]></item>
+				<item id="1t_tqg_htm_8"><![CDATA[已抢光]]></item>
+				<item id="1t_tqg_htm_9"><![CDATA[马上抢]]></item>
+				<item id="1t_tqg_htm_10"><![CDATA[抢购进行中]]></item>
+				<item id="1t_tqg_htm_11"><![CDATA[已开抢]]></item>
+				<item id="1t_tqg_htm_12"><![CDATA[即将开场]]></item>
+				<item id="1t_uatm_htm_1"><![CDATA[优选推荐]]></item>
+				<item id="1t_uatm_htm_2"><![CDATA[查看全部138个宝贝]]></item>
+				<item id="header_userstatus_htm_1"><![CDATA[立即注册]]></item>
+				<item id="jump_url_htm_1"><![CDATA[猪猪侠淘宝客]]></item>
+				<item id="jump_url_htm_2"><![CDATA[淘宝精选]]></item>
+				<item id="jump_url_htm_3"><![CDATA[商品详情]]></item>
+				<item id="jump_url_htm_4"><![CDATA[券后价：]]></item>
+				<item id="jump_url_htm_5"><![CDATA[领券省]]></item>
+				<item id="jump_url_htm_6"><![CDATA[元]]></item>
+				<item id="jump_url_htm_7"><![CDATA[价格：]]></item>
+				<item id="jump_url_htm_8"><![CDATA[在售价]]></item>
+				<item id="jump_url_htm_9"><![CDATA[已有]]></item>
+				<item id="jump_url_htm_10"><![CDATA[人购买]]></item>
+				<item id="jump_url_htm_11"><![CDATA[收藏]]></item>
+				<item id="jump_url_htm_12"><![CDATA[复制给朋友]]></item>
+				<item id="jump_url_htm_13"><![CDATA[领券购买]]></item>
+				<item id="jump_url_htm_14"><![CDATA[立即购买]]></item>
+				<item id="jump_url_htm_16"><![CDATA[同类商品推荐]]></item>
+				<item id="jump_url_htm_17"><![CDATA[复制成功，现在可以分享给你的小伙伴咯]]></item>
+				<item id="jump_url_htm_18"><![CDATA[名称：]]></item>
+				<item id="jump_url_htm_23"><![CDATA[原价：]]></item>
+				<item id="jump_url_htm_24"><![CDATA[下单：]]></item>
+				<item id="t_brand_htm_1"><![CDATA[天内售出]]></item>
+				<item id="t_brand_htm_2"><![CDATA[券后价]]></item>
+				<item id="t_brand_htm_3"><![CDATA[天猫]]></item>
+				<item id="t_brand_htm_4"><![CDATA[淘宝]]></item>
+				<item id="t_brand_htm_5"><![CDATA[领券]]></item>
+				<item id="t_brand_htm_8"><![CDATA[品牌特卖]]></item>
+				<item id="t_brand_htm_9"><![CDATA[给你品种安全感]]></item>
+				<item id="t_header_htm_1"><![CDATA[搜宝贝，这里券都有]]></item>
+				<item id="t_header_htm_2"><![CDATA[搜券]]></item>
+				<item id="t_header_htm_3"><![CDATA[首页]]></item>
+				<item id="t_header_htm_5"><![CDATA[块9包邮]]></item>
+				<item id="t_header_htm_6"><![CDATA[优品汇]]></item>
+				<item id="t_header_htm_7"><![CDATA[淘抢购]]></item>
+				<item id="t_header_htm_9"><![CDATA[优惠券直播]]></item>
+				<item id="t_index_htm_1"><![CDATA[欢迎回来，]]></item>
+				<item id="t_index_htm_3"><![CDATA[立刻登录，立刻省钱]]></item>
+				<item id="t_index_htm_4"><![CDATA[用户登录]]></item>
+				<item id="t_index_htm_5"><![CDATA[新用户注册]]></item>
+				<item id="t_index_htm_6"><![CDATA[距离下一场开始还有]]></item>
+				<item id="t_index_htm_7"><![CDATA[更多]]></item>
+				<item id="t_index_htm_8"><![CDATA[已抢]]></item>
+				<item id="t_index_htm_9"><![CDATA[件]]></item>
+				<item id="t_index_htm_10"><![CDATA[库存告急，快快下手抢]]></item>
+				<item id="t_index_htm_11"><![CDATA[！]]></item>
+				<item id="t_quan_htm_8"><![CDATA[全部]]></item>
+				<item id="t_quan_htm_9"><![CDATA[每天独家淘宝、天猫优惠券直播]]></item>
+				<item id="t_quan_htm_10"><![CDATA[上万款内部优惠券等你免费领取、让您享受更多优惠]]></item>
+				<item id="t_quan_htm_11"><![CDATA[不要再拉了呀，这次真的没有了 ！]]></item>
+				<item id="t_tbk_htm_1"><![CDATA[商品分类]]></item>
+				<item id="t_tbk_htm_3"><![CDATA[特价9块]]></item>
+				<item id="t_tbk_htm_4"><![CDATA[精选39块]]></item>
+				<item id="t_tbk_htm_5"><![CDATA[默认显示]]></item>
+				<item id="t_tbk_htm_6"><![CDATA[销量]]></item>
+				<item id="t_tbk_htm_7"><![CDATA[热度]]></item>
+				<item id="t_tbk_htm_8"><![CDATA[累计]]></item>
+				<item id="t_tbk_htm_10"><![CDATA[海外]]></item>
+				<item id="t_tbk_htm_11"><![CDATA[价格范围：]]></item>
+				<item id="t_tbk_htm_12"><![CDATA[清除价格区间]]></item>
+				<item id="t_tqg_htm_1"><![CDATA[领券拍下立减]]></item>
+				<item id="t_tqg_htm_3"><![CDATA[即将开始]]></item>
+				<item id="t_tqg_htm_4"><![CDATA[已抢光]]></item>
+				<item id="t_tqg_htm_5"><![CDATA[马上抢]]></item>
+				<item id="t_tqg_htm_6"><![CDATA[年m月d日]]></item>
+				<item id="t_tqg_htm_7"><![CDATA[准时开抢]]></item>
+				<item id="t_tqg_htm_8"><![CDATA[已抢购]]></item>
+				<item id="t_tqg_htm_11"><![CDATA[抢购进行中]]></item>
+				<item id="t_tqg_htm_12"><![CDATA[已开抢]]></item>
+				<item id="t_tqg_htm_13"><![CDATA[即将开场]]></item>
+				<item id="t_uatm_htm_1"><![CDATA[折后]]></item>
+				<item id="t_uatm_htm_3"><![CDATA[原价]]></item>
+				<item id="t_uatm_htm_4"><![CDATA[天内售出：]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

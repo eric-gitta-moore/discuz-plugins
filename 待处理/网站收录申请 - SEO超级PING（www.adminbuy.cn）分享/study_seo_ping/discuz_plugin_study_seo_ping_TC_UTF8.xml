@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Time"><![CDATA[2014-07-29 02:27]]></item>
+	<item id="From"><![CDATA[訊幻網（www.xhkj5.com）]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[1314]SEO超級ping]]></item>
+			<item id="identifier"><![CDATA[study_seo_ping]]></item>
+			<item id="description"><![CDATA[訊幻網（www.xhkj5.com）]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[study_seo_ping/]]></item>
+			<item id="copyright"><![CDATA[訊幻網（www.xhkj5.com）]]></item>
+			<item id="version"><![CDATA[3.0.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[pinglog]]></item>
+					<item id="menu"><![CDATA[PING記錄]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[feedback]]></item>
+					<item id="menu"><![CDATA[<b style=color:red>問題反饋</b>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[7]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="menu"><![CDATA[<b style=color:red>獲取更多插件</b>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[9]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5,X2,X2.5,X3,X3.1,X3.2,X3.5,X4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[ping方式]]></item>
+				<item id="description"><![CDATA[發帖時自動ping 只支持論壇，其他功能的ping默認采用異步自動ping]]></item>
+				<item id="variable"><![CDATA[ping_way]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1 = 停用自動ping功能
+2 = 發帖時自動ping（同步ping）
+3 = 發帖後再觸發ping（異步ping）]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[異步ping激發條件]]></item>
+				<item id="description"><![CDATA[上邊的 ping方式 選擇 異步ping 時本設置才有效，且一般情況下建議選擇 發帖者激發]]></item>
+				<item id="variable"><![CDATA[asyping_condition]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 發帖者激發
+2 = 發帖者和管理員激發
+3 = 所有用戶激發（不建議）]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[ping的範圍]]></item>
+				<item id="description"><![CDATA[按住 CTRL 多選]]></item>
+				<item id="variable"><![CDATA[ping_range]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[forum = 論壇
+portal = 門戶]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[forum]]></item>
+					<item id="1"><![CDATA[portal]]></item>
+				</item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[啟用的ping類型]]></item>
+				<item id="description"><![CDATA[選擇使用的ping服務]]></item>
+				<item id="variable"><![CDATA[ping_type]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[1314 = 空
+baidu = 百度ping
+google = 谷歌ping]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[baidu]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[自動PING的版塊]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[study_fids]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[是否自定義偽靜態格式]]></item>
+				<item id="description"><![CDATA[如果你使用了第三方偽靜態插件改變了帖子的偽靜態規則，則開啟本功能]]></item>
+				<item id="variable"><![CDATA[study_zdy_rewrite]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[自定義偽靜態格式]]></item>
+				<item id="description"><![CDATA[帖子ID用 {tid}表示，板塊ID用 {fid}，帖子標題用 {subject}
+不建議帖子URL中使用中文標題，可能存在兼容問題]]></item>
+				<item id="variable"><![CDATA[study_rewrite]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[thread-{tid}-1-1.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[自定義偽靜態中文兼容模式]]></item>
+				<item id="description"><![CDATA[偽靜態規則里使用了帖子標題等中文出現無法打開的時候可以嘗試開啟]]></item>
+				<item id="variable"><![CDATA[rewritecompatible]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[【門戶】不ping的分類ID]]></item>
+				<item id="description"><![CDATA[多個用英文逗號分隔
+如︰1,2,3,4]]></item>
+				<item id="variable"><![CDATA[portal_nocatid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="slang_1"><![CDATA[20140130223PgBe2WR2G]]></item>
+				<item id="slang_2"><![CDATA[19257]]></item>
+				<item id="slang_3"><![CDATA[1406685601]]></item>
+				<item id="slang_4"><![CDATA[http://127.0.0.1/]]></item>
+				<item id="slang_5"><![CDATA[http://127.0.0.1/]]></item>
+				<item id="slang_6"><![CDATA[]]></item>
+				<item id="slang_7"><![CDATA[ebec924aa4e23f2c1899457939dd5ae7]]></item>
+				<item id="slang_8"><![CDATA[20140130223PgBe2WR2G192571406685601http://127.0.0.1/http://127.0.0.1/]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+	</item>
+</root>

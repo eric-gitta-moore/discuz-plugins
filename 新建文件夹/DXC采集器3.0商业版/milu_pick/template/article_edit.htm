@@ -1,0 +1,210 @@
+<!--{template milu_pick:pick_header}-->
+<script src="static/js/calendar.js?v={PICK_VERSION}" type="text/javascript" type="text/javascript"></script>
+<script type="text/javascript">
+
+function raid_delete(aid) {
+	var node = $('raid_li_'+aid);
+	var p;
+	if(p = node.parentNode) {
+		p.removeChild(node);
+	}   
+}
+function thumbImg(){
+	return;
+}
+change_public_type({$info['public_type']});
+</script>
+<style>
+
+#ttHtmlEditor #icoImg_image_menu td{ padding:0 !important; height:8px !important;}
+.m_l, .m_r {
+width: 8px;
+}
+#icoImg_imgattachlist{ display:none}
+#forums_show{ float:left; }
+.fwin .cl li {
+margin: 0px;
+float: right;
+}
+#icoImg_btn_www{ float:left}
+.p_opt {
+padding: 10px;
+}
+.tb{ width:auto}
+.tb .y {
+float: right;
+margin-right: 0;
+}
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+.pnc{ margin-top:15px;}
+</style>
+<form id="ttHtmlEditor"  method="post" autocomplete="off" action="?{PICK_GO}picker_manage&myfunc=article_edit&aid={$info['aid']}&pid={$info['pid']}&status={$info['status']}&submit=yes" enctype="multipart/form-data">
+<input name="forum_typeid" id="forum_typeid" type="hidden" value="{$info['forum_typeid']}" />
+<input name="public_flag" id="public_flag" type="hidden" value="0" />
+<input name="old_portal_id" id="old_portal_id" type="hidden" value="{$info['portal_id']}" />
+<input name="old_forum_id" id="old_forum_id" type="hidden" value="{$info['forum_id']}" />
+<input name="old_blog_small_cid" id="old_blog_small_cid" type="hidden" value="{$info['blog_small_cid']}" />
+<input name="old_blog_big_cid" id="old_blog_big_cid" type="hidden" value="{$info['blog_big_cid']}" />
+<input name="old_uid" id="old_uid" type="hidden" value="{$info['uid']}" />
+<input name="old_username" id="old_username" type="hidden" value="{$info['username']}" />
+<input name="old_blog_id" id="old_blog_id" type="hidden" value="{$info['blog_id']}" />
+<input name="is_bbs" id="is_bbs" type="hidden" value="{$info['is_bbs']}" />
+<input name="url_args" id="url_args" type="hidden" value="{$info['url_args']}" />
+
+<span id="thumbImg"></span>
+<div style="float:left; width:1200px;">
+<table class="tb tb2 article" style="float:left; width:600px;  clear:none">
+        <tbody><tr >
+        	<tr>
+              <th colspan="15" class="partition">{lang milu_pick:content_edit}</th>
+            </tr>
+     
+    <tr class="noborder" >
+      <td class="vtop rowform">
+	  <div style="float:left; width:850px; height:25px; line-height:25px; overflow:hidden; ">
+	<div style="float:left; width:auto; height:25px; line-height:25px;"> 
+    <label style="float:left">{lang milu_pick:public_to}:</label>
+	<span style="float:left">
+      <select style="float:left" name="select" onchange="change_public_type(this.value);">
+	  <option {if !$info['public_type']}selected="selected"{/if} value="0">{lang milu_pick:please_select}</option>
+      <option {if $info['public_type'] == 1}selected="selected"{/if} value="1">{lang milu_pick:protal}</option>
+      <option {if $info['public_type'] == 2}selected="selected"{/if}  value="2">{lang milu_pick:bbs}</option>
+      <option {if $info['public_type'] == 3}selected="selected"{/if}  value="3">{lang milu_pick:blog}</option>
+      </select>
+	</span> 
+	</div>
+	<div style="float:left; width:350px;">
+    <span id="portal_show" {if $info['public_type'] != 1}style="display:none"{/if}>{$info['portalselect']}&nbsp;&nbsp;</span>
+    <span id="forums_show"  {if $info['public_type'] != 2}style="display:none"{/if}> <!--{$info['forumselect']}--></span>
+    <span id="blog_show" {if $info['public_type'] != 3}style="display:none"{/if} > {$info['blogselect']}&nbsp;&nbsp;</span>&nbsp;&nbsp;
+	</div>
+	</div>
+	</td></tr>
+	<tr class="noborder" ><td class="vtop rowform">
+	<div style="float:left; line-height:25px; height:25px; width:850px;">
+	<span style="float: left; width:50px;">{lang milu_pick:title}</span>
+	<span style="float:left; width:550px;"><input style="float:left" name="set[title]" value="{$info['title']}" type="text" class="longtxt"></span>
+	</div>
+	</td><td class="vtop tips2" s="1">&nbsp;</td></tr>
+	<tr class="noborder" id="summary" ><td class="vtop rowform"><script type="text/javascript" src="{STATICURL}image/editor/editor_function.js?{VERHASH}"></script>
+			<script type="text/javascript" src="{$_G[setting][jspath]}home_blog.js?{VERHASH}"></script>
+	<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[summary]" id="summary" cols="50" class="tarea w_area">{$info['summary']}</textarea>
+	<label>{lang milu_pick:summary}</label></td><td class="vtop tips2" s="1">&nbsp;</td></tr>
+    <tr class="noborder" ><td class="vtop rowform"><!--{subtemplate home/editor_image_menu}-->
+						 <textarea class="pt" name="message" id="uchome-ttHtmlEditor" style="height:100%;width:100%;display:none;border:0">$info[content]</textarea>
+						<div style="border:1px solid #C5C5C5;height:400px;"><iframe src='home.php?mod=editor&charset={CHARSET}&allowhtml=1&doodle={if $_G['setting']['magicstatus'] && !empty($_G['setting']['magics']['doodle'])}1{/if}' name="uchome-ifrHtmlEditor" id="uchome-ifrHtmlEditor" scrolling="no" border="0" frameborder="0" style="width:100%;height:100%;position:relative;"></iframe></div></td></tr>
+     </tbody>
+	 <tr >
+        <td class="td27" s="1"><div class="exfm" id="exfm">
+<h2>{lang milu_pick:add_about_article} <a id="related_article" href="portal.php?mod=portalcp&ac=related&aid={$info['aid']}" class="xi2" style="text-decoration: underline;" onclick="showWindow(this.id, this.href+'&catid='+$('portal').value, 'get', 0);return false;">{lang milu_pick:select}</a></h2>
+<ul id="raid_div" class="xl">
+{$info['raids_html']}
+</ul>
+</div></td></tr>
+	 <tr class="noborder" ><td class="vtop rowform">
+    <button type="submit" id="issuance" onclick="public_check_save();edit_save();" class="pn pnc"><strong>{lang milu_pick:public_article}</strong></button>
+	<button type="submit" id="issuance" onclick="edit_save();" class="pn pnc"><strong>{lang milu_pick:save_article}</strong></button>
+    <a href="?{PICK_GO}picker_manage&myaction=article_list&pid={$info['pid']}&status={$info['status']}">{eval milu_lang('return_list')}</a>
+	</td></tr>
+	 <tr class="noborder" >
+	   <td class="vtop rowform">&nbsp;</td>
+      </tr>
+    </table>
+    <div style="width:5px;float:left; height:500px; margin-right:5px;"></div>
+    
+    <table class="tb tb2 " style="float:left; width:200px; clear:none; overflow:hidden">
+        <tbody>
+        <tr>
+              <th colspan="14" class="partition">{lang milu_pick:article_set}<span style="font-weight:normal">{lang milu_pick:default_set}</span></th>
+          </tr>
+		 <tbody id="article_portal" >
+    <tr >
+        <td class="td27" s="1"> {lang milu_pick:article_from} :&nbsp;&nbsp;&nbsp;</a></td>
+    </tr>
+    <tr class="noborder" ><td class="vtop rowform">
+    <input name="set[from]" type="text" class="txt" id="from" value="{$info['from']}"></td></tr>
+     <tr >
+        <td class="td27" s="1"> {lang milu_pick:from_url} :&nbsp;&nbsp;&nbsp;</a></td>
+     </tr>
+    <tr class="noborder" ><td class="vtop rowform">
+    <input name="set[fromurl]" value="{$info['fromurl']}" type="text" class="txt"></td></tr>
+    
+     <tr >
+        <td class="td27" s="1">{lang milu_pick:article_tag}:&nbsp;&nbsp;&nbsp;</a></td>
+     </tr>
+    <tr class="noborder" ><td class="vtop rowform">
+    <div class="bm_c">
+        <!--{loop $info['article_tags'] $key $tag}-->
+        <input type="checkbox" name="tag[$key]" id="article_tag_$key" class="pc"{if $info['article_tags'][$key]} checked="checked"{/if} />
+        <label for="article_tag_$key" class="lb">$info['tag_names'][$key]</label>
+        <!--{/loop}-->
+    </div>
+    </td></tr>
+<tr >
+        <td class="td27" s="1">{lang milu_pick:old_author}:&nbsp;&nbsp;&nbsp;</a></td>
+     </tr>
+    <tr class="noborder" ><td class="vtop rowform">
+    <input name="set[author]" value="{$info['author']}" type="text" class="txt" id="author"></td></tr>
+    
+	</tbody>
+     <tr >
+        <td class="td27" s="1">{lang milu_pick:article_public_ahthor}:&nbsp;<span style=" font-weight:normal">{lang milu_pick:add_uid}</span></a></td></tr>
+    <tr class="noborder" ><td class="vtop rowform">
+    <input name="set[uid]" onblur="check_uid(this.value)" id="public_uid" value="{$info['uid']}" type="text" class="txt"></td></tr>
+     <tr >
+        <td class="td27" s="1">{lang milu_pick:article_hits}:&nbsp;&nbsp;&nbsp;</a></td></tr>
+    <tr class="noborder" ><td class="vtop rowform">
+    <input name="set[view_num]" value="{$info['view_num']}" type="text" class="txt"></td></tr>
+    <tr >
+        <td class="td27" s="1">{lang milu_pick:download_img}:&nbsp;</a></td>
+     </tr>
+    <tr  class="noborder"><td class="vtop rowform">
+        <ul onmouseover="altStyle(this);"><li{if $info[is_download_img] == 1 || !$info[is_download_img]} class="checked" {/if}><input {if $info[is_download_img] == 1 || !$info[is_download_img]} checked="checked" {/if} name="set[is_download_img]" type="radio" show="" class="radio" value="1">
+            &nbsp;{lang milu_pick:yes}</li><li {if $info[is_download_img] == 2} class="checked" {/if}><input type="radio" {if $info[is_download_img] == 2} checked="checked" {/if}  value="2"  name="set[is_download_img]" class="radio">
+                &nbsp;{lang milu_pick:no}</li></ul></td>
+    </tr>
+    <tr >
+        <td class="td27" s="1">{lang milu_pick:img_water}:&nbsp;</a></td>
+     </tr>
+      <tr  class="noborder"><td class="vtop rowform">
+          <ul onmouseover="altStyle(this);"><li {if $info[is_water_img] == 1 || !$info[is_download_img]} class="checked" {/if}><input {if $info[is_water_img] == 1 || !$info[is_water_img]} checked="checked" {/if}  name="set[is_water_img]" type="radio" show="" class="radio" value="1">
+              &nbsp;{lang milu_pick:yes}</li><li {if $info[is_water_img] == 2} class="checked" {/if}><input {if $info[is_water_img] == 2} checked="checked" {/if} type="radio" value="2" name="set[is_water_img]" class="radio">
+                  &nbsp;{lang milu_pick:no}</li></ul></td>
+    </tr>
+	 <tr >
+        <td class="td27" s="1">{lang milu_pick:public_time}:&nbsp;&nbsp;&nbsp;</a></td>
+     </tr>
+    <tr class="noborder" ><td class="vtop rowform">
+    <input name="set[public_time]" value="{$info['public_time']}" type="text" class="txt" onclick="showcalendar(event, this, 1)"></td></tr>
+    <tbody id="article_tag" style="display:none">
+    <tr >
+      <td class="td27" s="1">{lang milu_pick:tag}:&nbsp;<span style=" font-weight:normal">{lang milu_pick:tag_notice}</span></td>
+    </tr>
+	<tr class="noborder" ><td class="vtop rowform">
+    <input name="set[article_tag]" id="tag" value="{$info['article_tag']}" type="text" class="txt"  /><input type="hidden" id="subject" name="subject" value="" size="60" onblur="relatekw();" class="px" style="width: 63%;" /><button type="button" name="clickbutton[]" onclick="relatekw();" class="pn vm"><em>{lang milu_pick:auto_get}</em></button></td></tr>
+    </tbody>
+	<tbody id="article_blog" style="display:none">
+	<tr >
+        <td class="td27" s="1">{lang milu_pick:blog_person_class}:&nbsp;&nbsp;&nbsp;</a></td></tr>
+    <tr class="noborder" ><td class="vtop rowform" id="show_blog_class">
+    {$info['show_blog_class']}
+                    </td></tr>
+</tbody>
+<tbody id="article_forum" style="display:none">	
+
+</tbody>
+    <tr class="noborder" >
+      <td class="vtop rowform">&nbsp;</td>
+    </tr>
+	</tbody></table>
+    
+</div>
+</form>
+<script type="text/javascript">
+
+change_public_type({$info['public_type']});
+</script>

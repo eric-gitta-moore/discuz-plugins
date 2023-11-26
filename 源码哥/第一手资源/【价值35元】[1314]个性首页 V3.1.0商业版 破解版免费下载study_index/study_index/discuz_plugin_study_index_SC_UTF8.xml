@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-04-10 18:53]]></item>
+	<item id="From"><![CDATA[讯幻网]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[1314]个性首页]]></item>
+			<item id="identifier"><![CDATA[study_index]]></item>
+			<item id="description"><![CDATA[使用问题请到1314学习网（www.1314study.com）反馈，或直接点击插件设置中的“问题反馈”]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[study_index/]]></item>
+			<item id="copyright"><![CDATA[讯幻网（www.xhkj5.com）]]></item>
+			<item id="version"><![CDATA[3.1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[index]]></item>
+					<item id="menu"><![CDATA[主页]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否开启背景音乐]]></item>
+				<item id="description"><![CDATA[选择是则播放背景音乐，对于背景音乐的格式支持现在大多的主流音乐格式，如WAV、MID、MP3等。如果要顾及到网速较低的浏览者，则可以使用MID音效作为网页的背景音乐，因为MID音乐文件小，这样在网页打开的过程中能很快加载并播放，但是MID也有不足的地方，它只能存放音乐的旋律，没有好听的和声以及唱词。如果你的网速较快，或是觉得MID音乐有些单调，也可以添加MP3的音乐。]]></item>
+				<item id="variable"><![CDATA[study_bgsound]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[站点名称]]></item>
+				<item id="description"><![CDATA[你的站点名称，将显示在浏览器标题栏上]]></item>
+				<item id="variable"><![CDATA[study_index_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1314学习网 - 中国领先的学习交流网站]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[SEO 描述]]></item>
+				<item id="description"><![CDATA[SEO 描述出现在页面头部的 Meta 标签中，用于记录本页面的概要与描述。]]></item>
+				<item id="variable"><![CDATA[study_seo_describe]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1314学习网是国内第一家以学习交流为主的专业网站，提供了交流学习的平台。面向广大学习研究者提供：最新学习资讯、原创内容、开源代码和视频教程等相关内容。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[SEO 关键字]]></item>
+				<item id="description"><![CDATA[SEO 关键字出现在页面头部的 Meta 标签中，用于记录本页面的关键字，多个关键字间请用半角逗号 "," 隔开。]]></item>
+				<item id="variable"><![CDATA[study_seo_keyword]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1314学习网,Discuz!插件]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[logo地址]]></item>
+				<item id="description"><![CDATA[logo地址]]></item>
+				<item id="variable"><![CDATA[study_logo]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/study_index/images/logo.png]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[注册论坛处显示的文字]]></item>
+				<item id="description"><![CDATA[注册论坛处显示的文字，如：加入我们、注册会员等。]]></item>
+				<item id="variable"><![CDATA[study_reg_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[加入我们]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[论坛注册地址]]></item>
+				<item id="description"><![CDATA[你论坛的会员注册地址。DZ默认为：member.php?mod=register]]></item>
+				<item id="variable"><![CDATA[study_reg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[member.php?mod=register]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[登入论坛处显示的文字]]></item>
+				<item id="description"><![CDATA[登入论坛处显示的文字，如：登入论坛、开始闯荡等。]]></item>
+				<item id="variable"><![CDATA[study_log_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[登入论坛]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[论坛登入地址]]></item>
+				<item id="description"><![CDATA[你论坛的会员登入地址。DZ默认为：member.php?mod=logging&action=login]]></item>
+				<item id="variable"><![CDATA[study_log]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[member.php?mod=logging&action=login]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[导航（一）]]></item>
+				<item id="description"><![CDATA[导航显示的名称]]></item>
+				<item id="variable"><![CDATA[study_daohang001]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[广场]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[导航（一）的说明]]></item>
+				<item id="description"><![CDATA[鼠标移到导航上时的提示语]]></item>
+				<item id="variable"><![CDATA[study_explain001]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1314学习网 广场]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[导航（一）的链接]]></item>
+				<item id="description"><![CDATA[导航的链接地址]]></item>
+				<item id="variable"><![CDATA[study_link001]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[portal.php]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[导航（二）]]></item>
+				<item id="description"><![CDATA[导航显示的名称]]></item>
+				<item id="variable"><![CDATA[study_daohang002]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[论坛]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[导航（二）的说明]]></item>
+				<item id="description"><![CDATA[鼠标移到导航上时的提示语]]></item>
+				<item id="variable"><![CDATA[study_explain002]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1314学习网 论坛]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[导航（二）的链接]]></item>
+				<item id="description"><![CDATA[导航的链接地址]]></item>
+				<item id="variable"><![CDATA[study_link002]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[forum.php]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[导航（三）]]></item>
+				<item id="description"><![CDATA[导航显示的名称]]></item>
+				<item id="variable"><![CDATA[study_daohang003]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[微博]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[导航（三）的说明]]></item>
+				<item id="description"><![CDATA[鼠标移到导航上时的提示语]]></item>
+				<item id="variable"><![CDATA[study_explain003]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1314小微博]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[导航（三）的链接]]></item>
+				<item id="description"><![CDATA[导航的链接地址]]></item>
+				<item id="variable"><![CDATA[study_link003]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://addon.1314study.com/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[导航（四）]]></item>
+				<item id="description"><![CDATA[导航显示的名称]]></item>
+				<item id="variable"><![CDATA[study_daohang004]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[导航]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[导航（四）的说明]]></item>
+				<item id="description"><![CDATA[鼠标移到导航上时的提示语]]></item>
+				<item id="variable"><![CDATA[study_explain004]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1314啦 网址导航 - 上网就上1314啦！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[导航（四）的链接]]></item>
+				<item id="description"><![CDATA[导航的链接地址]]></item>
+				<item id="variable"><![CDATA[study_link004]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://addon.1314study.com/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[导航（五）]]></item>
+				<item id="description"><![CDATA[导航显示的名称]]></item>
+				<item id="variable"><![CDATA[study_daohang005]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[工具]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[导航（五）的说明]]></item>
+				<item id="description"><![CDATA[鼠标移到导航上时的提示语]]></item>
+				<item id="variable"><![CDATA[study_explain005]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[我的便民工具箱]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[导航（五）的链接]]></item>
+				<item id="description"><![CDATA[导航的链接地址]]></item>
+				<item id="variable"><![CDATA[study_link005]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://addon.1314study.com/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[导航（六）]]></item>
+				<item id="description"><![CDATA[导航显示的名称]]></item>
+				<item id="variable"><![CDATA[study_daohang006]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[QQ群]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[导航（六）的说明]]></item>
+				<item id="description"><![CDATA[鼠标移到导航上时的提示语]]></item>
+				<item id="variable"><![CDATA[study_explain006]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[我们的学习交流QQ群，欢迎您的加入。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[导航（六）的链接]]></item>
+				<item id="description"><![CDATA[导航的链接地址]]></item>
+				<item id="variable"><![CDATA[study_link006]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://addon.1314study.com/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[导航（七）]]></item>
+				<item id="description"><![CDATA[导航显示的名称]]></item>
+				<item id="variable"><![CDATA[study_daohang007]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[联系]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[导航（七）的说明]]></item>
+				<item id="description"><![CDATA[鼠标移到导航上时的提示语]]></item>
+				<item id="variable"><![CDATA[study_explain007]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[有事请联系QQ：15326940]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[导航（七）的链接]]></item>
+				<item id="description"><![CDATA[导航的链接地址]]></item>
+				<item id="variable"><![CDATA[study_link007]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[mailto:dong@1314study.com]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[底部信息（一）]]></item>
+				<item id="description"><![CDATA[底部导航一的显示名称]]></item>
+				<item id="variable"><![CDATA[study_footer001]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[设为首页]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[底部信息（一）的链接]]></item>
+				<item id="description"><![CDATA[底部信息（一）的链接，可以为任意连接，当填写：javascript:setHomepage('你的站点url') 时，此导航具有设为首页的功能。]]></item>
+				<item id="variable"><![CDATA[study_flink001]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[javascript:setHomepage('http://www.1314study.com')]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[底部信息（二）]]></item>
+				<item id="description"><![CDATA[底部导航一的显示名称]]></item>
+				<item id="variable"><![CDATA[study_footer002]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[添加收藏]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[底部信息（二）的链接]]></item>
+				<item id="description"><![CDATA[底部信息（二）的链接，可以为任意连接，当填写：javascript:addFav(0) 时，此导航具有添加收藏夹的功能。]]></item>
+				<item id="variable"><![CDATA[study_flink002]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[javascript:addFav(0)]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[网站第三方统计代码]]></item>
+				<item id="description"><![CDATA[填写你的统计代码，可以为空，为空为不显示。]]></item>
+				<item id="variable"><![CDATA[study_tongji]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[论坛版权]]></item>
+				<item id="description"><![CDATA[填写你论坛底部的版权]]></item>
+				<item id="variable"><![CDATA[study_copyright]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[&copy; 2010-2013 1314学习网]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[备案信息]]></item>
+				<item id="description"><![CDATA[填写你的备案信息，可以为空，为空为不显示。]]></item>
+				<item id="variable"><![CDATA[study_beian]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[浙ICP备10214163号]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[38]]></item>
+				<item id="title"><![CDATA[是否显示搜索框]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[study_search_radio]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+	</item>
+</root>

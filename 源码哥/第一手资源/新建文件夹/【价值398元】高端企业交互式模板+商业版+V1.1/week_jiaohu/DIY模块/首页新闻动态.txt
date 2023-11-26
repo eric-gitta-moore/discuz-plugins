@@ -1,0 +1,10 @@
+<ul>
+[loop]
+    <li >
+      <dl><dt>{dateline}</dt></dl>
+      <h4><a href="{url}" title="{title}"{target}>{title}</a></h4>
+      <div class="wk_news_des">{summary}...</div>
+      <div class="wk_news_more"><a href="{url}" title="ÔÄ¶Á¸ü¶à"{target}></a></div>
+    </li>
+[/loop]
+ </ul>

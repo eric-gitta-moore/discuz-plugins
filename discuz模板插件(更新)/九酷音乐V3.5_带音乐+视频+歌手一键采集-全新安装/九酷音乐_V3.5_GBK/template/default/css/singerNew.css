@@ -1,0 +1,211 @@
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:underline;color:#55a642;}
+.mb10{ margin-bottom:10px;}
+.crumb{ font-size:12px; font-weight:normal; line-height:36px; height:36px; color:#000;}
+.crumb a{ color:#000;}
+.crumb b{ font-weight:400; color:#666;}
+
+.singerWrap{ border:1px solid #e5e5e5; background:#fff;}
+
+.singerTop{ padding:15px;position:relative;font-family:Microsoft YaHei;}
+.singerTop .jianjieAll{ position:absolute; top:110px; left:200px; height:166px; width:720px; overflow-y:auto; overflow-x:hidden;background:#fff; padding:10px; border:1px solid #e5e5e5; display:none;}
+.singerTop .closeInfo{position:absolute; top:86px; left:890px;height:20px; width:50px; display:none;}
+.singerTop .closeInfo a{ line-height:20px; height:20px; float:right; padding-left:18px;background:url(close.png) 0 4px no-repeat;}
+.singerTop .t-i { float:left; width:170px; height:170px; margin-right:15px;}
+.singerTop .t-i img{ width:160px; height:160px; display:block; padding:4px;border:1px solid #f1f1f1;}
+.singerTop .t-t{ position:relative; height:36px; line-height:36px; overflow:hidden;}
+.singerTop .t-t h1{font-family:Microsoft YaHei; color:#333; font-size:24px; line-height:36px; height:36px; float:left;}
+.singerTop .t-t h1 .bieming{ font-size:16px; color:#666; font-weight:400;}
+.singerTop .t-t .rankIcon{ float:left; padding:0 7px 0 15px; background:url(singerIcon.png) left 0 no-repeat; color:#ffff00; height:24px; line-height:24px; margin:8px 0 0 6px; display:inline;}
+.singerTop .t-t .redu{ position:absolute; right:0; top:0; color:#999; font-size:12px;}
+.singerTop .t-t .redu em{ font-family:Arial; font-size:20px; color:#333;}
+.singerTop .i-t{ margin-top:10px;}
+.singerTop .i-t p{line-height:18px; margin:5px 0 0; color:#666;}
+.singerTop .i-t p.singerJiajie{ height:36px; overflow:hidden;}
+.singerTop .i-t p strong{ color:#999; font-weight:400;}
+.singerTop .i-t p a{ color:#55a642;}
+.singerTop .singerBtn{ margin:10px 0 0;}
+.singerTop .singerBtn a{ line-height:25px; float:left; height:25px; margin-right:10px; display:inline;}
+.singerTop .singerBtn .playSinger{ width:142px; background:url(singerIcon.png) 0 -28px no-repeat;}
+.singerTop .singerBtn .loveSinger{ width:111px;background:url(singerIcon.png) 0 -56px no-repeat;}
+.singerNav{ padding:0 15px 15px;}
+.singerNav ul{background:url(singerNavBg.png) 0 0 repeat-x; width:928px;}
+.singerNav ul li{ float:left; width:191px; height:48px; line-height:48px; text-align:center; font-size:14px;background:url(singerNavBg.png) right 0 no-repeat; }
+.singerNav ul li a{ color:#666; font-size:14px;width:191px;display:block; overflow:hidden;}
+.singerNav ul li a span{ font-size:14px; float:left;cursor:pointer;}
+.singerNav ul li a:hover{ color:#55a642; text-decoration:none;background:url(singerNavBg.png) left -98px no-repeat;}
+.singerNav ul li a em{ width:26px; height:26px; float:left; margin:8px 5px 0 45px; display:inline;cursor:pointer;background:url(singerIcon.png) -999em -999em no-repeat;}
+.singerNav ul li a b{ float:left; font-size:12px; color:#999; font-weight:400; cursor:pointer;}
+.singerNav ul li.singerNav1 a em{ background-position:0 -94px;}
+.singerNav ul li.singerNav2 a em{ background-position:-26px -94px;}
+.singerNav ul li.singerNav3 a em{ background-position:-52px -94px;}
+.singerNav ul li.singerNav4 a em{ background-position:-78px -94px;}
+.singerNav ul li a.active{background:url(singerNavBg.png) left -49px no-repeat;}
+
+.singerMain{ padding:0 20px 30px;font-family:Microsoft YaHei;}
+.singerMusic{width:100%; overflow:hidden;}
+.singerMusic ol{overflow:hidden;zoom:1;width:100%;}
+.singerMusic li{line-height:30px; height:30px; overflow:hidden;padding:5px 0; border-bottom:1px solid #f5f5f5; float:left; width:280px; margin:0 13px; display:inline;}
+.singerMusic li .songNum{ width:30px; height:30px;color:#b1b1b1; float:left; margin-left:10px; display:inline;overflow:hidden;}
+.singerMusic li .topRed{ font-weight:bold; color:#F00;}
+.singerMusic li .songName{ float:left; font-size:16px; width:160px; overflow:hidden;height:30px;zoom:1;}
+.singerMusic li .songName a{ float:left;  margin-right:5px; display:inline-block; color:#000;}
+.singerMusic li .songName a:hover{ color:#55a642;}
+.singerMusic li .songMv{ float:left; width:17px; height:13px; background:url(singerIcon.png) -82px -133px no-repeat; margin-top:9px;}
+/*.singerMusic li .songNew{ float:left; width:25px; height:11px; background:url(singerIcon.png) -103px -133px no-repeat; margin-top:10px;}
+.singerMusic li .songMv{ float:left; width:17px; height:13px; background:url(singerIcon.png) -82px -133px no-repeat; margin-top:9px;}
+.singerMusic li .songVeryGood{ float:right; width:39px; height:15px; margin-right:15px; display:inline; background:url(singerIcon.png) 0 -133px no-repeat; margin-top:8px;}
+.singerMusic li .songGood{ float:right; width:27px; height:15px; margin-right:15px; display:inline; background:url(singerIcon.png) -47px -133px no-repeat; margin-top:8px;}
+.singerMusic li .singerName{ float:left; font-size:12px; width:160px; overflow:hidden;height:30px; color:#999; margin-left:10px; display:inline;}
+.singerMusic li .singerName:hover{ color:#55a642;}
+.singerMusic li .albumName{ float:left; font-size:12px; width:160px; overflow:hidden;height:30px; color:#999; margin-left:10px; display:inline;}
+.singerMusic li .albumName:hover{ color:#55a642;}*/
+.singerMusic li .check{ float:left; margin:10px 4px 0 0;*margin:5px 2px 0 0; display:inline;}
+.singerMusic li .add{background-position:0 -71px; float:right;height:30px;width: 20px; margin-right:5px; display:inline;}
+.singerMusic li .play{background-position:0 -38px; float:right;height:30px;width: 20px;margin-right:5px; display:inline;}
+.singerMusic li .down{background-position:0 -104px; float:right;height:30px;width: 20px;margin-right:5px; display:inline;}
+.singerMusic li .shou{background-position:0 -708px; float:right;height:30px;width: 20px;margin-right:5px; display:inline;}
+
+.lineTitle{ border-bottom:1px solid #e5e5e5;font-family:Microsoft YaHei; font-size:16px; color:#f00; text-indent:10px; line-height:24px; height:24px; overflow:hidden; font-weight:400; padding-bottom:6px;}
+.lineTitle span{ font-size:18px;font-weight:bold;}
+
+.loadMore{ line-height:56px; height:56px; text-align:center; font-size:14px; background:#fff; border-top:2px solid #eee; background:#f5f5f5; margin-top:10px; cursor:pointer;}
+.loadMore a{ color:#390; width:100%; height:56px; display:block;}
+.loadMore a:hover{ color:#390; background:#fff; font-weight:800; text-decoration:none;}
+.singerMain .setPlay{ margin:5px 0; border:0 none;}
+.tuiSingerList{ background:#fff; overflow:hidden;zoom:1; border:1px solid #e5e5e5;}
+.tuiSingerList h2{ float:left; width:20px; height:67px; line-height:14px; float:left; text-align:center; font-size:12px; font-weight:400; padding-top:13px; padding-left:12px;}
+.tuiSingerList ul{ width:925px; height:60px; float:right; padding:10px 0;}
+.tuiSingerList ul li{ width:60px;height:60px; position:relative;float:left; margin:0px 6px 0 10px; display:inline; position:relative;}
+.tuiSingerList ul li a img{ width:60px; height:60px; display:block; position:absolute; top:0; left:0;}
+.tuiSingerList ul li a span{ width:60px; height:20px; display:block; position:absolute; bottom:0; background:#000;opacity:0.6;filter:alpha(opacity=60);left:0;line-height:20px; overflow:hidden; color:#fff; text-align:center;}
+.tuiSingerList ul li a:hover span{ color:#090;}
+
+.RsingerList{ padding:15px;}
+.RsingerList h4{ font-weight:800; border-bottom:1px solid #e5e5e5; padding:0 0 3px;font-family:Microsoft YaHei; font-size:14px;}
+.RsingerList h4 a{ float:right; color:#999;font-weight:400; font-size:12px;}
+.RsingerList h4 a:hover{ color:#090;}
+.RsingerList ul li{ width:60px; float:left; margin:10px 6px 0 7px; display:inline; position:relative;}
+.RsingerList ul li a img{ width:60px; height:60px; display:block;}
+.RsingerList ul li a span{ width:60px; height:20px; display:block; line-height:20px; overflow:hidden; color:#999;}
+.RsingerList ul li a:hover span{ color:#090;}
+.RsingerList ul li .top1{ width:20px; height:20px; line-height:16px;display:block; background:url(singerIcon.png) -1px -248px no-repeat; position:absolute; right:0; top:0; color:#fff; text-align:right;}
+.RsingerList ul li .top2{ width:20px; height:20px; line-height:16px;display:block; background:url(singerIcon.png) -25px -248px no-repeat; position:absolute; right:0; top:0; color:#fff; text-align:right;}
+
+.albumList{width:100%; overflow:hidden;}
+.albumList h3{ color:#333;font-family:Microsoft YaHei;}
+.albumList ul{width:100%;}
+.albumList ul li{ width:150px; margin:15px 15px 0 18px; float:left; display:inline;}
+.albumList ul .t-i img{ width:150px; height:150px; display:block;}
+.albumList ul .t-t{ display:block; width:150px; line-height:18px; height:18px; margin-top:5px;overflow:hidden; color:#0f820c;}
+.albumList ul .i-t{ display:block; width:150px; line-height:18px; height:18px; overflow:hidden;}
+
+.mvList { padding-bottom:11px;}
+.mvList h3{ color:#333;font-family:Microsoft YaHei;}
+.mvList li{ float:left; width:120px; display:inline; margin:15px 10px 0 21px;}
+.mvList li .t-i{ width:120px;height:67px; display:block;}
+.mvList li .t-i img{ width:120px; height:67px; display:block;}
+.mvList li .t-t{ line-height:18px; height:18px; overflow:hidden; display:block; margin-top:3px; font-size:14px;}
+.mvList li .i-t{ line-height:18px;display:block;color:#999;}
+.mvList li .i-t p{ height:18px; overflow:hidden;}
+.mvList li .i-t .mvSinger{ color:#333;}
+
+.photoList li{ margin:15px 10px 0 20px;width:195px; height:195px;float:left; display:inline;}
+.photoList li .t-i{ padding:4px;border:1px solid #f1f1f1; display:block; text-align:center;}
+.photoList li .t-i img{}
+.photoList li .i-t{ margin-top:3px; line-height:18px; height:18px; overflow:hidden; color:#999;}
+
+.photo-view{position:relative; margin:20px auto 0;}
+.photo-view #photoImg{width:630px; height:100%;display:block;margin:auto;overflow:hidden;padding:3px;text-align:center;}
+.photo-view #photoImg img{vertical-align:top;}
+.photo-view #prev,.photo-view #next{ width:319px;height:100%;display:block;position:absolute;top:0;}
+.photo-view #prev a,.photo-view #next a{display:block;height:100%;width:100%;overflow:hidden;background:url(photo-view-bg.png) 0 0 repeat; outline:none;}
+.photo-view #prev{ left:0;}
+.photo-view #next{ right:0;}
+.photo-view #prev a{cursor:url(prev.cur),pointer;outline:none; }
+.photo-view #next a{cursor:url(next.cur),pointer;outline:none; }
+.photo-text{ padding:20px 15px;}
+.photoTop{ text-align:center;}
+.photoTop .back{ float:left; width:100px; text-align:left;}
+.photoTop .page-num{ float:right; width:100px; text-align:right;}
+
+.mvTop{ text-align:center;}
+.mvTop .back{ float:left; width:100px; text-align:left;}
+.mvTop .page-num{ float:right; width:100px; text-align:right;}
+.mvView{ padding:10px 0 20px;}
+.mvView h1{font-family:Microsoft YaHei; font-size:18px; line-height:24px; color:#333; padding:0 0 10px;}
+
+
+.albumWrap{ border:1px solid #e5e5e5; background:#fff url(sBg.png) left 0 repeat-y; position:relative;}
+.albumL{ float:left;width:250px;}
+.albumR{ float:right;width:707px;}
+
+.albumInfo{ width:192px; margin:15px auto;}
+.albumInfo .t-i img{ width:180px; height:180px; padding:5px; display:block; border:1px solid #f1f1f1; background:#fff;}
+.albumInfo .t-t{ line-height:18px; margin:5px 0 0;}
+.albumInfo .t-t span{ color:#999;}
+.albumTop{ padding:15px;position:relative;}
+.albumTop .jianjieAll{ position:absolute; top:67px; left:15px; height:166px; width:660px; overflow-y:auto; overflow-x:hidden;background:#fff; padding:10px; border:1px solid #e5e5e5; display:none;}
+.albumTop .closeInfo{position:absolute; top:47px; left:640px;height:20px; width:50px; display:none;}
+.albumTop .closeInfo a{ line-height:20px; height:20px; float:right; padding-left:18px;background:url(close.png) 0 4px no-repeat;}
+.albumTop .t-t{ position:relative; height:36px; line-height:36px; overflow:hidden;}
+.albumTop .t-t h1{font-family:Microsoft YaHei; color:#333; font-size:24px; line-height:36px; height:36px; float:left;}
+.albumTop .t-t .zhishu{ position:absolute; right:0; top:0; color:#999; font-size:12px;}
+.albumTop .t-t .dianNum{ font-family:Arial; font-size:16px; font-weight:400;line-height:36px; height:36px;color:#333; padding-left:20px; background:url(singerIcon.png) 0 -161px no-repeat; float:left; }
+.albumTop .t-t .loveNum{ font-family:Arial; font-size:16px; font-weight:400; line-height:36px; height:36px; color:#333; padding-left:20px;background:url(singerIcon.png) 0 -197px no-repeat; float:left;margin-left:10px; display:inline;}
+.albumTop .i-t{ margin-top:15px;}
+.albumTop .i-t p{line-height:18px; margin:5px 0 0; color:#666;}
+.albumTop .i-t p.singerJiajie{ height:36px; overflow:hidden;}
+.albumTop .i-t p strong{ color:#999; font-weight:400;}
+.albumTop .i-t p a{ color:#55a642;}
+
+.albumNav{ padding:0 15px 15px;}
+.albumNav ul{ border-bottom:0 none;background:url(singerNavBg2.png) 0 0 no-repeat; width:676px; padding-left:1px;}
+.albumNav ul li{ float:left; width:169px; height:48px; line-height:48px; text-align:center; font-size:12px;background:url(singerNavBg2.png) right 0 no-repeat; }
+.albumNav ul li a{ color:#666;width:169px;display:block; overflow:hidden;}
+.albumNav ul li a span{float:left;cursor:pointer;}
+.albumNav ul li a:hover{ color:#55a642; text-decoration:none;}
+.albumNav ul li a em{ width:18px; height:18px; float:left; margin:15px 5px 0 35px; display:inline;cursor:pointer;background:url(singerIcon.png) -999em -999em no-repeat;}
+.albumNav ul li.albumNav1 a em{ background-position:-122px -60px;}
+.albumNav ul li.albumNav2 a em{ background-position:-141px -60px;}
+.albumNav ul li.albumNav3 a em{ background-position:-160px -60px;}
+.albumNav ul li.albumNav1,.albumNav ul li.albumNav1 a{ width:145px;}
+.albumNav ul li.albumNav2,.albumNav ul li.albumNav2 a{ width:178px;}
+.albumNav ul li.albumNav3,.albumNav ul li.albumNav3 a{ width:156px;}
+
+.albumMain{ padding:0 20px 30px;}
+.albumMain .setPlay{ margin:5px 0; border:0 none;}
+
+.singerMusicAlbum{width:100%; overflow:hidden;}
+.singerMusicAlbum ol{overflow:hidden;zoom:1;width:100%;}
+.singerMusicAlbum li{line-height:30px; height:30px; overflow:hidden;padding:5px 0; border-bottom:1px solid #f5f5f5;}
+.singerMusicAlbum li .songNum{ width:40px; height:30px;color:#b1b1b1; float:left; margin-left:10px; display:inline;overflow:hidden;}
+.singerMusicAlbum li .topRed{ font-weight:bold; color:#F00;}
+.singerMusicAlbum li .songName{ float:left; font-size:14px; width:250px; overflow:hidden;height:30px;zoom:1;}
+.singerMusicAlbum li .songName a{ float:left; margin-right:5px; display:inline-block; color:#2D64B3;}
+.singerMusicAlbum li .songName a:hover{ color:#2D64B3;}
+.singerMusicAlbum li .songNew{ float:left; width:25px; height:11px; background:url(singerIcon.png) -103px -133px no-repeat; margin-top:10px;}
+.singerMusicAlbum li .songMv{ float:left; width:17px; height:13px; background:url(singerIcon.png) -82px -133px no-repeat; margin-top:9px;}
+.singerMusicAlbum li .songVeryGood{ float:right; width:39px; height:15px; margin-right:15px; display:inline; background:url(singerIcon.png) 0 -133px no-repeat; margin-top:8px;}
+.singerMusicAlbum li .songGood{ float:right; width:27px; height:15px; margin-right:15px; display:inline; background:url(singerIcon.png) -47px -133px no-repeat; margin-top:8px;}
+.singerMusicAlbum li .singerName{ float:left; font-size:12px; width:160px; overflow:hidden;height:30px; color:#999; margin-left:10px; display:inline;}
+.singerMusicAlbum li .singerName:hover{ color:#55a642;}
+.singerMusicAlbum li .albumName{ float:left; font-size:12px; width:160px; overflow:hidden;height:30px; color:#999; margin-left:10px; display:inline;}
+.singerMusicAlbum li .albumName:hover{ color:#55a642;}
+.singerMusicAlbum li .check{ float:left; margin:10px 4px 0 0;*margin:5px 2px 0 0; display:inline;}
+.singerMusicAlbum li .add{background-position:0 -71px; float:right;height:30px;width: 20px; margin-right:5px; display:inline;}
+.singerMusicAlbum li .play{background-position:0 -38px; float:right;height:30px;width: 20px;margin-right:5px; display:inline;}
+.singerMusicAlbum li .down{background-position:0 -104px; float:right;height:30px;width: 20px;margin-right:5px; display:inline;}
+.singerMusicAlbum li .shou{background-position:0 -708px; float:right;height:30px;width: 20px;margin-right:5px; display:inline;}
+.loadMore{ line-height:56px; height:56px; text-align:center; font-size:14px; background:#fff; border-top:2px solid #eee; background:#f5f5f5; margin-top:10px; cursor:pointer;}
+.loadMore a{ color:#390; width:100%; height:56px; display:block;}
+.loadMore a:hover{ color:#390; background:#fff; font-weight:800; text-decoration:none;}
+.singerMain .setPlay{ margin:5px 0; border:0 none;}
+
+.albumListAlbum{width:100%; overflow:hidden;}
+.albumListAlbum h3{ color:#333;font-family:Microsoft YaHei;}
+.albumListAlbum ul{width:100%;}
+.albumListAlbum ul li{ width:150px; margin:15px 6px 0 10px; float:left; display:inline;}
+.albumListAlbum ul .t-i img{ width:150px; height:150px; display:block;}
+.albumListAlbum ul .t-t{ display:block; width:150px; line-height:18px; height:18px; margin-top:5px;overflow:hidden; color:#0f820c;}
+.albumListAlbum ul .i-t{ display:block; width:150px; line-height:18px; height:18px; overflow:hidden;}

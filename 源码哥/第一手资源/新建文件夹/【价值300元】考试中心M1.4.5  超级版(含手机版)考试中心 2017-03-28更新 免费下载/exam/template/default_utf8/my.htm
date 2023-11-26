@@ -1,0 +1,47 @@
+<!--{template common/header}-->
+<link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/exam/image/common.css?{VERHASH}" />
+<script type="text/javascript"  src="source/plugin/exam/image/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">var formhash = '$_G[formhash]';var jq = jQuery.noConflict();</script>
+
+<div id="wp" class="wp">
+	<div id="pt" class="bm cl">
+		<div class="z"><a target="_blank" href="./" class="nvhm" title="首页"></a><em>?</em><a href="plugin.php?id=exam">考试中心</a><em>?</em>
+
+			<!--{if $tab=='logs'}-->
+						<a href="plugin.php?id=exam:my&tab=logs">我参与的考试</a>
+			<!--{elseif $tab=='list'}-->
+						<a href="plugin.php?id=exam:my&tab=list">我发布的试卷</a>
+			<!--{elseif $tab=='paper'}--><a href="{$paperurl}{$pid}.html" target="_blank">$paper[title]</a>
+						<em>?</em><a href="plugin.php?id=exam:my&tab=paper&pid=$pid">该试卷考试记录</a>	
+						
+			<!--{elseif $tab=='wrong'}-->
+						<a href="plugin.php?id=exam:my&tab=wrong">我的错题集</a>
+						
+			<!--{elseif $tab=='logs_show'}-->
+						<a href="plugin.php?id=exam&paper=$log[pid].html" target="_blank">$log[title]</a>
+			<!--{/if}-->	
+ 		
+		
+		</div>
+		<div style="float:right"><!--{template exam:'.$template.'/common/nav}--></div>
+	</div>
+ 
+<div id="ct" class="wp cl">
+	<div class="mn" style="width:100%">
+ 
+		<!--{template exam:'.$template.'/common/my_'.$tab.'}-->
+
+
+ 
+	</div>
+ 
+</div>
+
+</div>
+
+
+
+
+
+<!--{template common/footer}-->

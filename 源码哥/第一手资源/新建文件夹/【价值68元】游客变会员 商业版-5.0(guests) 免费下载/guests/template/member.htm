@@ -1,0 +1,36 @@
+<table class="tb tb2 ">
+	<tr>
+		<th colspan="5" class="partition">
+			{lang guests:member_title_1} <span style="color:#f00">{$running}</span> {lang guests:member_title_2} <span style="color:#f00">{$member_count}</span> {lang guests:member_title_3}
+		</th>
+	</tr>
+	<!--{if !empty($guests_members)}-->
+	<tr class="header">
+		<th>{lang guests:member_username}</th>
+		<th>{lang guests:member_reg_time}</th>
+		<th>{lang guests:member_ip}</th>
+		<th>{lang guests:member_referer}</th>
+		<th></th>
+	</tr>
+	<!--{loop $guests_members $row}-->
+	<tr class="hover">
+		<td><a href="home.php?mod=space&uid={$row['uid']}" target="_blank">{$row['username']}</a></td>
+		<td>{$row['ctime']}</td>
+		<td>{$row['ip']}<span style="color:#f00">{$row['location']}</span></td>
+		<td><a href="{$row['referer']}" target="_blank" title="{$row['referer']}">{$row['referer_sub']}</a></td>
+		<td>
+			<a href="admin.php?action=members&operation=group&uid={$row['uid']}" class="act">{lang guests:member_group}</a>
+			<a href="admin.php?action=members&operation=access&uid={$row['uid']}" class="act">{lang guests:member_permission}</a>
+			<a href="admin.php?action=members&operation=credit&uid={$row['uid']}" class="act">{lang guests:member_jifen}</a>
+			<a href="admin.php?action=members&operation=medal&uid={$row['uid']}" class="act">{lang guests:member_xunzhang}</a>
+			<a href="admin.php?action=members&operation=repeat&uid={$row['uid']}" class="act">{lang guests:member_majia}</a>
+			<a href="admin.php?action=members&operation=edit&uid={$row['uid']}" class="act">{lang guests:member_detail}</a>
+			<a href="admin.php?action=members&operation=ban&uid={$row['uid']}" class="act">{lang guests:member_forbid}</a>
+		</td>
+	</tr>
+	<!--{/loop}-->
+	<tr>
+		<td colspan="4">{$page}</td>
+	</tr>
+	<!--{/if}-->
+</table>

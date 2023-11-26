@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document by:Yxeee UI Item - Sea*/
+.hd {width:700px; height:340px; overflow:hidden;}
+#flash { width:700px; height:340px; overflow:hidden; margin:0 auto; clear:both; position:relative }
+#flash .imgalt { width:500px; height:30px; line-height:30px; position:absolute; left:12px; bottom:5px; font-size:20px; color:#fff; z-index:120 }
+#flash a { width:700px; height:340px; display:none }
+#flash a#flash1 { display:block }
+#flash img { width:700px; height:340px }
+.flash_bar { width:180px; padding-left:520px; z-index:69; height:37px; overflow:hidden; position:absolute; padding-top:13px!important; padding-top:12px; bottom:0px; left:0px; background:url(../img/Opacity.png) no-repeat; text-align:center; _background: none;  }
+.flash_bar .dq { display:block; float:left; width:20px; height:20px; margin:5px 10px 0 0; cursor:pointer;text-align:center; line-height:20px;font-size:14px; color:#FFF; }
+.flash_bar .no { display:block; float:left; width:20px; height:20px; margin:5px 10px 0 0; cursor:pointer;background-position:-30px 0;text-align:center; line-height:20px;font-size:14px; color:#FFF;background:rgba(255,255,255,0.5);_color:#666}
+#flashBg { height:393px; overflow:hidden; width:100%; clear:both; margin:0; padding:0 }
+#flashLine { background:url(../img/touming.png) repeat-x center bottom; height:393px; width:100%; clear:both }
+.newDataTit,.newDataBox {width:230px; padding:0 5px; height:30px;}
+.newDataBox li {clear:both;height:30px;}
+.newDataBox{height:auto;}
+.newDataBox li {width:220px; position:relative; padding:0 5px}
+.newDataBox em {float:left; display:block; width:30px; line-height:30px; text-align:center; color:#c5c5c5; font-size:14px; font-weight:bold;font-style: italic; margin-right:5px;}
+.newDataBox li span {display:block; float:left; width:185px; height:30px; line-height:30px; overflow:hidden; font-size:14px;}
+.newDataBox li span i {display:none;}
+.newDataBox .Pic {width:75px; height:100px; float:left; padding-right:10px; display:none;overflow:hidden;}
+.newDataBox li.this {background:#f0f0f0; padding:10px 5px; height:100px;_padding:5px;}
+.newDataBox li.this .Pic {display:block; }
+.newDataBox li.this span {width:100px; height:100px; line-height:20px; position:relative;}
+.newDataBox li.this i {display:block;}
+.ico_xin,.ico_date {height:12px; overflow:hidden;padding-left:14px; position:absolute; bottom:0px; line-height:12px; color:#999; font-size:10px; font-family:"Georgia","Raavi","MV Boli","Arial"}
+.ico_xin {left:0px; background-position:0 -249px; background-color:#f0f0f0}
+.ico_date {right:0px;background-position:0 -270px; background-color:#f0f0f0}
+.newDataBox em.color_1{color:#ff032e;}.newDataBox em.color_2{color:#ff590b;}.newDataBox em.color_3{color:#ffa000;}
+.IndexTopic {width:960px; overfow:hidden;}
+.IndexTopic ul {width:110%;}
+.IndexTopic li {width:180px; height:130px; overflow:hidden; margin:0 15px 15px 0;}
+.IndexTopic .Tradius {display:block; height:130px; width:180px; position:absolute; left:0px; top:0px; background:url(../img/topicBg.png) no-repeat; overflow:hidden; line-height:500px;_display:none;}
+.channelTit {width:100%; overflow:hidden; line-height:50px; height:50px; }
+.channelTit strong,.channelTit h2,.channelTit h3 {display:block; height:50px; line-height:50px; float:left; font-size:26px; color:#f46; font-weight:normal;}
+.channelTit strong a{ color:#f46;}
+.channelTit span {display:block; height:50px; line-height:60px; color:#333;font-family:"Georgia","Raavi","MV Boli","Arial";font-size:16px; float:left; font-weight:bold}
+.channelTit em {float:right;}
+.channelTit em a {padding:0 0 0 10px; color:#f46}
+.channelTit i {display:block; background-position:-32px -170px; width:7px; height:7px; margin:30px 0 0 10px;_margin:30px 0 0 5px;}
+.listBox {width:100%; overflow:hidden; position:relative; margin-top:-20px;}
+.listBox ul {width:110%;}
+.listBox li {width:200px; padding:10px 11px; background:#FFF; border:1px solid #e5e5e5; font-size:14px; margin:16px 16px 0 0;box-shadow: 0 3px 3px #E6E6E6}
+.listBox .picLink {display:block; width:200px; height:auto; position:relative;}
+.listBox .picLink:hover em {display:block; width:200px; height:100%;background:url(../img/picBg.png) no-repeat center center #000; position:absolute; left:0px; top:0px;alpha(opacity=30);opacity:0.3;filter:alpha(opacity=30); -moz-opacity:0.3; -khtml-opacity: 0.3; cursor: pointer;_display:none;}
+.listBox .info {height:26px; line-height:26px; display:block; font-size:12px;color:#999;border-bottom:1px dashed #eee; color:#ccc}
+.listBox .info .l {padding-left:20px; display:block; height:26px; overflow:hidden; background-position:-130px -281px;}
+.listBox .info .r {padding-left:12px; display:block;height:26px; background-position:-136px 7px; width:70px; text-align:right; }
+.listBox .title {font-size:14px; height:32px;line-height:32px; display:block; overflow:hidden;}
+.listBox .type {font-size:12px; height:26px;line-height:26px; display:block; overflow:hidden;}
+.listBox .type .ico_click{padding-left:20px; display:block; height:26px; line-height:26px; background-position:-132px -261px}
+.listBox .tag {height:26px; padding-left:20px; width:180px; overflow:hidden; background-position:-133px -13px; line-height:26px; display:block;}
+.listBox .tag a {font-size:12px; color:#999; display:block; float:left; padding:0 5px;}
+.listBox .tag a:hover {color:#fff; background:#f46;border-radius:3px}
+
+
+
+.listBox .picLink {min-hei--ght:300px;}
+
+.listBox .title {
+    display: block;
+    font-size: 12px;
+    font---weight: normal;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.listBox .picLink span {
+    background-image: url("../img/itemset-numbg.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    bottom: 10px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 5px 0 10px;
+    position: absolute;
+    right: 0;
+    color:#fff;
+    font-family:Trebuchet MS;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+/* ----------------------------------
+CSS file for Discuz! x3.3 By moqu8.com
+(C) moqu8.com
+http://www.moqu8.com
+Design QQ  2575.163.778
+update:2017-01-01 20:06
+---------------------------------- */

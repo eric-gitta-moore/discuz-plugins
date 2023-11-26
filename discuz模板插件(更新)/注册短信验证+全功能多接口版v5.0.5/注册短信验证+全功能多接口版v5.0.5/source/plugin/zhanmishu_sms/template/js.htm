@@ -1,0 +1,271 @@
+{block js}
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type = "text/javascript" src ="source/plugin/zhanmishu_sms/template/static/jQuery.min.js"><\/script>');
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+
+</script>
+
+
+<script type="text/javascript">
+function zmssms(code,mobile,verify,count,codeid,sendid,mobileid,verifyid,nationcode){
+    this.codeid = codeid ? codeid : '';;
+    this.sendid = sendid ? sendid : '';;
+    this.mobileid = mobileid ? mobileid : '';;
+    this.verifyid = verifyid ? verifyid : '';;
+
+    this.code = code ? code : jQuery("#"+this.codeid).val();
+    this.mobile = mobile ? mobile :  jQuery("#"+this.mobileid).val();
+    this.verify = verify ? verify :  jQuery("#"+this.verifyid).val();
+
+    this.count = count ? count : 60;
+    this.curCount = this.count ? count : 60;
+    this.nationcode = nationcode ? nationcode : 86;
+
+}
+zmssms.prototype.sendMessage=function(requesturl,formid,formdata){
+    var obj = this;
+    var SetRemainTime=function(){
+        var curCount;
+        if (obj.curCount == 0) {
+            window.clearInterval(InterValObj);
+            jQuery("#"+obj.sendid).removeAttr("disabled");
+            if (jQuery("#"+obj.sendid).html()) {
+                 jQuery("#"+obj.sendid).html("{lang zhanmishu_sms:resend}"); 
+            }else{
+                 jQuery("#"+obj.sendid).val("{lang zhanmishu_sms:resend}"); 
+            }
+            obj.code = "";
+        }else {
+            obj.curCount--; 
+            curCount = obj.curCount;
+            if (jQuery("#"+obj.sendid).html()) {
+                 jQuery("#"+obj.sendid).html("{lang zhanmishu_sms:input_tips_sec}"); 
+            }else{
+                 jQuery("#"+obj.sendid).val("{lang zhanmishu_sms:input_tips_sec}"); 
+            }
+        }              
+    }
+
+    if(obj.mobile){  
+        code = "";
+        for (var i = 0; i < 6; i++) {  
+            code += parseInt(Math.random() * 10).toString();
+        }
+        jQuery("#"+obj.codeid).val(code);
+        jQuery("#"+obj.sendid).attr("disabled", "true");  
+
+        var InterValObj = window.setInterval(SetRemainTime, 1000);
+        var nation = '';
+        if (obj.nationcode) {
+            nation = '&nationcode=' + obj.nationcode;
+        }
+        jQuery("#"+obj.mobileid).val(obj.mobile)
+        jQuery.ajax({  
+            type: "POST", 
+            dataType: "json", 
+            url: requesturl,   
+            data: jQuery("#" + formid).serialize()+nation,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                jQuery("#"+obj.sendid).removeAttr("disabled");
+                                if (jQuery("#"+obj.sendid).html()) {
+                     jQuery("#"+obj.sendid).html("{lang zhanmishu_sms:resend}"); 
+                }else{
+                     jQuery("#"+obj.sendid).val("{lang zhanmishu_sms:resend}"); 
+                }
+            },  
+            success: function (msg){
+                
+                if (msg.code <= 0) {
+                    showDialog(msg.msg);
+                    window.clearInterval(InterValObj);
+                    jQuery("#"+obj.sendid).removeAttr("disabled");
+                    if (jQuery("#"+obj.sendid).html()) {
+                         jQuery("#"+obj.sendid).html("{lang zhanmishu_sms:resend}"); 
+                    }else{
+                         jQuery("#"+obj.sendid).val("{lang zhanmishu_sms:resend}"); 
+                    }
+                }else{
+                }
+            }  
+        });
+    }else{
+    }  
+}
+zmssms.prototype.checkVerify=function(requesturl,formid,mobile,data){
+    var obj = this;
+    if (!obj.code) {
+        return false;
+    }
+    jQuery.ajax({  
+        type: "POST",
+        dataType: "json", 
+        url: requesturl, 
+        data: jQuery("#"+formid).serialize(),
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            //window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+            if (msg.code <= 0) {
+                showDialog(msg.msg);
+            }
+
+            if (msg.code == 1) {
+
+            }
+
+        }  
+    }); 
+    return false;
+}
+zmssms.prototype.checkmobile=function () {
+    var obj = this;
+    var myreg = {$config['mobilerule']};
+    if(myreg.test(jQuery("#"+obj.mobileid).val())) 
+    { 
+        jQuery("#zhanmishu_sms_tip").attr('style','display:none');
+        jQuery("#zhanmishu_sms_err").attr('style','display:none');
+        return true; 
+    }else{
+        jQuery("#zhanmishu_sms_err").html("{lang zhanmishu_sms:input_tips}");
+        jQuery("#zhanmishu_sms_err").attr('style','display:block');
+        return false;
+    }
+}
+
+
+
+function mobileblur(){
+    s = new zmssms('','','',60,'code','send','mobileverify_mobile','verifycode');
+    jQuery("#zhanmishu_sms_tip").attr('style','display:none');
+    if(!s.checkmobile()) 
+    { 
+        jQuery("#zhanmishu_sms_err").attr('style','display:block');
+        return false; 
+    } 
+}
+function mobilefocus(){
+    jQuery("#zhanmishu_sms_tip").attr('style','display:block;');
+    jQuery("#zhanmishu_sms_err").attr('style','display:none');
+}
+
+function new_mobileblur(){
+    jQuery("#new_zhanmishu_sms_tip").attr('style','display:none');
+    // if(!new_checkmobile()) 
+    // { 
+    //     jQuery("#new_zhanmishu_sms_err").attr('style','display:block');
+    //     return false; 
+    // } 
+}
+function new_mobilefocus(){
+    jQuery("#new_zhanmishu_sms_tip").attr('style','display:block;');
+    jQuery("#new_zhanmishu_sms_err").attr('style','display:none');
+}
+
+
+function verify_sendMessage() {
+
+    // var ntlNumber = jQuery("#mobileverify_mobile").val();
+
+
+    s = new zmssms('','','',60,'code','send','mobileverify_mobile','verifycode','');
+    s.sendMessage('plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method={if $isvid || $_GET[act]=="edit"}editsend{else}send{/if}','mobileverify_form');
+}
+
+function new_sendMessage() {
+    new_s = new zmssms('','','',60,'new_code','new_send','new_mobileverify_mobile','new_verifycode');
+    new_s.sendMessage('plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=new_send','mobileverify_form');
+}  
+
+function verifysms(){
+	var verify = jQuery("#verifycode").val();
+	var code = jQuery("#code").val();
+	jQuery.ajax({
+        type: "POST", 
+        dataType: "json", 
+        url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=verify',
+        data: "verify=" + verify + "&code="+code+"&formhash={FORMHASH}",  
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        	//window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+
+        	if (msg.code < 0) {
+                if (msg.code=='-5') {
+                    showDialog(msg.msg);
+                };
+                jQuery("#sms_verify_tip_wrong").css('display', 'block');
+                jQuery("#sms_verify_tip").removeClass("p_right");
+                if (jQuery("#new_mobileverify_mobile").length > 0 && jQuery("#new_send").length > 0 && jQuery("#new_zhanmishu_sms_tip").length>0) {
+                    jQuery("#new_mobileverify_mobile").attr("disabled","disabled");
+                    jQuery("#new_send").attr("disabled","disabled");
+                    jQuery("#new_send").attr("style","background: #cdcdcd;padding:0 5px;height: 20px;border: 0");
+                    jQuery("#new_zhanmishu_sms_tip").attr("disabled","disabled");
+                    jQuery("#new_verifycode").attr("disabled","disabled");
+                }
+                return false;
+        	}
+
+        	if (msg.code == 1) {
+        		jQuery("#sms_verify_tip").addClass("p_right");
+        		jQuery("#sms_verify_tip_wrong").css('display', 'none');
+                if (jQuery("#new_mobileverify_mobile").length > 0 && jQuery("#new_send").length > 0 && jQuery("#new_zhanmishu_sms_tip").length>0) {
+                    jQuery("#new_mobileverify_mobile").removeAttr("disabled");
+                    jQuery("#new_send").removeAttr("disabled");
+                    jQuery("#new_send").attr("style","padding:0 5px;");
+                    jQuery("#new_zhanmishu_sms_tip").removeAttr("disabled");
+                    jQuery("#new_verifycode").removeAttr("disabled");
+                }
+                return true;
+        	}
+
+        }  
+    }); 
+	return false;
+}
+
+function new_verifysms(){
+    var verify = jQuery("#new_verifycode").val();
+    var oldverify = jQuery("#verifycode").val();
+    var code = jQuery("#new_code").val();
+    var oldcode = encodeURIComponent(jQuery("#code").val());
+    var oldmobile = jQuery("#mobileverify_mobile").val();
+    var mobile = encodeURIComponent(jQuery("#new_mobileverify_mobile").val());
+    jQuery.ajax({  
+        type: "POST",
+        dataType: "json",
+        url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=new_verify',
+        data: "verify=" + verify + "&oldmobile="+oldmobile+"&mobile="+mobile+"&oldverify="+oldverify+"&oldcode="+oldcode+"&code="+code+"&formhash={FORMHASH}",  
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            //window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+            if (msg.code < 0) {
+                if (msg.code=='-5') {
+                    showDialog(msg.msg);
+                };
+                jQuery("#new_sms_verify_tip_wrong").css('display', 'block');
+                jQuery("#new_sms_verify_tip").removeClass("p_right");
+                return false;
+            }
+            if (msg.code == 1) {
+                jQuery("#new_sms_verify_tip").addClass("p_right");
+                jQuery("#new_sms_verify_tip_wrong").css('display', 'none');
+                return true;
+            }
+
+        }  
+    }); 
+    return false;
+}
+
+jQuery(function(){
+    getpasswd = jQuery("[onclick='showWindow(\'login\', \'member.php?mod=logging&action=login&viewlostpw=1\')']");
+    getpasswd.attr("onclick","showWindow('login', 'plugin.php?id=zhanmishu_sms:getpassword')");
+})
+</script>
+<span style="display: none;"><img src="plugin.php?id=zhanmishu_sms:notice" ></span>
+
+{/block}

@@ -1,0 +1,73 @@
+<!--{template zhuzhu_taobao:t_header}-->
+</div>
+
+<link rel="stylesheet" type="text/css" href="./source/plugin/zhuzhu_taobao/static/css/style_uatm.css?LsJ">
+<style id="diy_style" type="text/css"></style>
+
+<div class="cl"><img src="./source/plugin/zhuzhu_taobao/static/image/uatm.jpg" width="1920" /></div>
+
+<!--{if $_GET[favorites_id]}-->
+	<div class="uatmlimit-list wp cl">
+		<ul>
+		<!--{loop $list $v}-->
+		<li>
+		<a href="{$jump_url}$v[num_iid]" target="_blank" class="uatmitem">
+			<div class="uatmimg"><img src="$v[pict_url]" alt="$v[title]" /></div>
+			<h2 class="wrap2">$v[title]</h2>
+			<div class="uatmdetail">
+				<div class="cl">
+					<span>{lang zhuzhu_taobao:t_uatm_htm_1}<b>$v[zk_final_price]</b>{lang zhuzhu_taobao:jump_url_htm_6}</span>
+					<span class="y">{lang zhuzhu_taobao:t_uatm_htm_3}<i>$v[reserve_price]</i></span>
+				</div>
+
+				<div class="link cl">
+					<span>$v[provcity]</span>
+					<span class="y"><img src="./source/plugin/zhuzhu_taobao/static/image/{if $v[user_type]}tmall{else}taobao{/if}.png">$typearr[$v[type]]</span>
+					<div class="link-btn"></div>
+				</div>
+				<div class="foot cl">30{lang zhuzhu_taobao:t_uatm_htm_4}$v[volume]</div>
+			</div>
+		</a>
+		</li>
+		<!--{/loop}-->
+		</ul>
+	</div>
+
+<!--{else}-->
+
+	<!--{loop $uatmlist $v}-->
+	<!--{if $v[list]}-->
+	<div class="uatmlimit-list wp cl">
+		<h2><span class="i1"></span><a href="plugin.php?id=zhuzhu_taobao&mod=uatm&favorites_id=$v[favorites_id]">$v[favorites_title]</a><span class="i1"></span></h2>
+		<ul>
+		<!--{loop $v[list] $v}-->
+		<li>
+		<a href="{$jump_url}$v[num_iid]" target="_blank" class="uatmitem">
+			<div class="uatmimg"><img src="$v[pict_url]" alt="$v[title]" /></div>
+			<h2 class="wrap2">$v[title]</h2>
+			<div class="uatmdetail">
+				<div class="cl">
+					<span>{lang zhuzhu_taobao:t_uatm_htm_1}<b>$v[zk_final_price]</b>{lang zhuzhu_taobao:jump_url_htm_6}</span>
+					<span class="y">{lang zhuzhu_taobao:t_uatm_htm_3}<i>$v[reserve_price]</i></span>
+				</div>
+
+				<div class="link cl">
+					<span>$v[provcity]</span>
+					<span class="y"><img src="./source/plugin/zhuzhu_taobao/static/image/{if $v[user_type]}tmall{else}taobao{/if}.png">$typearr[$v[type]]</span>
+					<div class="link-btn"></div>
+				</div>
+				<div class="foot cl">30{lang zhuzhu_taobao:t_uatm_htm_4}$v[volume]</div>
+			</div>
+		</a>
+		</li>
+		<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{/if}-->
+	<!--{/loop}-->
+
+<!--{/if}-->
+
+<!--{subtemplate zhuzhu_taobao:t_tag}-->
+<div class="wp cl">
+<!--{template common/footer}-->

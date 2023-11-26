@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$_G[charset]" />
+<title>考试中心</title>
+<link rel="stylesheet" type="text/css" href="source/plugin/exam/image/mobi.css" />
+<meta name="viewport" content="width=device-width,height=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<base href="{$_G['siteurl']}" />
+<script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]', CSSPATH = '$_G[setting][csspath]', DYNAMICURL = '$_G[dynamicurl]';</script>
+<script type="text/javascript"  src="static/js/common.js"></script>
+<script type="text/javascript"  src="source/plugin/exam/image/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">var jq = jQuery.noConflict();</script>
+<script type="text/javascript" src="source/plugin/exam/image/mobi.js"></script>
+</head>
+<body oncontextmenu="return false"  <!--{if $isPC}-->style="zoom:70%;"<!--{/if}-->>
+<div class="wp">
+	<div id="ajaxresult" style="display:none"></div><div id="ajaxwaitid" style="display:none"></div><div id="append_parent" style="display:none"></div>
+	<!--{if $cid>0}-->
+			<div class="menu" id="menu"><div class="mct"><img class="y" src="source/plugin/exam/image/home.gif" align="absmiddle" onclick="javascript:window.location.href='plugin.php?id=exam:m&mobile=no&mobi=yes'"><img class="z" src="source/plugin/exam/image/reback.gif" align="absmiddle" onclick="javascript:history.back()"><b>$curcate[name]</b></div></div>
+			<div class="plist" id="plist">
+				<!--{loop $papers $v}-->
+					<dl pid='$v[pid]'><dt class="common">
+						<em><!--{if date('m-d')==date('m-d', $v[edittime])}-->{echo date('H:i', $v[edittime])}<!--{else}-->{echo date("m-d", $v[edittime])}<!--{/if}--></em>
+						<span style="color: $COLOR[$v[color]]">$v[title]</span>
+						<!--{if $v[price]}-->(<span class="xi1">售价: $v[price] $config[extcredit][unit]</span>)<!--{/if}-->
+						</dt>
+						<!--{if trim($v[content])}--><dd>$v[content]</dd><!--{/if}-->
+					</dl>
+				<!--{/loop}-->
+			</div>
+		</div>
+			<!--{if $pages>1}-->
+				<div class="prevnext" id="prevnext">
+					<cite id="prev">上一页</cite>
+					<cite><select id="multpage">{eval for($i=1;$i<=$pages;$i++) echo "<option value ='$i'>第 $i 页</option>";}</select></cite>
+					<cite id="next">下一页</cite>
+				</div>
+			<!--{/if}-->
+			<script type="text/javascript">
+				var max_page = parseInt('$pages');
+				(function(){
+					$('plist').style.top = $('menu').clientHeight + 'px';
+					$('plist').style.height = (window.innerHeight - $('menu').clientHeight - ($('prevnext') ? $('prevnext').clientHeight : 0)) + 'px';
+					
+					var dls = $('plist').getElementsByTagName('dl');
+					for(var i =0; i<dls.length; i++){
+						_attachEvent(dls[i], 'click', 
+							function(){
+								var pid = this.getAttribute('pid');
+								window.location.href = 'plugin.php?id=exam:m&mobile=no&mobi=yes&paper=' + pid
+							}
+						)
+					}
+ 
+					if($('multpage'))
+					{
+						$('multpage').value= '$_GET[page]'==0 ? 1 : '$_GET[page]';
+						_attachEvent($('multpage'), 'change', 
+							function(){
+								window.location.href = 'plugin.php?id=exam:m&mobile=no&mobi=yes&list=$cid&page=' + this.value
+							}
+						)
+						_attachEvent($('prev'), 'click', 
+							function(){
+								var no = Math.max(1, parseInt($('multpage').value) - 1);
+								window.location.href = 'plugin.php?id=exam:m&mobile=no&mobi=yes&list=$cid&page=' + no
+							}
+						)
+						_attachEvent($('next'), 'click', 
+							function(){
+								var no = Math.min(max_page, parseInt($('multpage').value) + 1);
+								window.location.href = 'plugin.php?id=exam:m&mobile=no&mobi=yes&list=$cid&page=' + no
+							}
+						)
+					}
+				})()
+			</script>
+	<!--{elseif $pid>0}-->
+				<div class="menu" id="menu"><div class="mct"><img class="y" src="source/plugin/exam/image/home.gif" align="absmiddle" onclick="javascript:window.location.href='plugin.php?id=exam:m&mobile=no&mobi=yes'"><img class="z" src="source/plugin/exam/image/reback.gif" align="absmiddle" onclick="javascript:history.back()"><b>$paper[title]</b></div></div>
+				<div class="paper" id="paper">
+				<!--{if $checkPaperStatus===true}-->
+						<div id="p_groupct"></div>
+						<div id="p_subject"></div>
+						<div id="p_data"></div>
+						<div id="p_image"></div>
+						<div id="p_msg">
+							<div id="p_icon" class="p_icon"></div>
+							<div id="p_result" class="p_result"></div>
+							<div id="p_note" class="p_note"></div>
+						</div>
+				<!--{else}-->
+						<!--{if $checkPaperStatus=='pwd'}-->
+							<div class="errmsg">	
+								<form method="post" autocomplete="off" onsubmit="" action="">
+									<input value="$_G[formhash]" name="formhash" type="hidden">
+									 <!--{if isset($_POST[pwd]) && strval($paper[pwd])!=strval($_POST[pwd])}--><div class="xi1 mbw">密码错误, 请重试</div><!--{/if}-->
+									试卷密码: &nbsp;<input name="pwd" type="text"> &nbsp;<input value="确定"  type="submit">
+								</form>
+							</div>
+						<!--{else}-->
+							<div class="errmsg">
+								<!--{if $checkPaperStatus=='nopaper'}-->
+									试卷不存在, 请与管理员联系
+								<!--{elseif $checkPaperStatus=='empty'}-->
+									试卷中无试题, 作者正在筹集试题, 请稍等...
+								<!--{elseif $checkPaperStatus=='lock'}-->
+									试卷已经被管理员锁定, 请与管理员联系
+								<!--{elseif $checkPaperStatus=='unpublic'}-->
+									试卷未发布, 作者正在整理试题, 请稍等...
+								<!--{elseif $checkPaperStatus=='friend_group'}-->
+									你不在作者的"朋友组"中,无法使用该试卷,请与他联系
+								<!--{elseif $checkPaperStatus=='starttime'}-->
+									考试开始时间是 {echo date('Y-m-d H&#58;i', $paper['starttime'])}, 请稍后再来!
+								<!--{elseif $checkPaperStatus=='endtime'}-->
+									考试于 {echo date('Y-m-d H&#58;i', $paper['endtime'])} 结束, 欢迎下次再来!
+								<!--{elseif $checkPaperStatus=='twice'}-->
+									该试卷最多只能参与 $paper[twice] 次, 您已超限!
+								<!--{elseif $checkPaperStatus=='delay'}-->
+									<!--{if $paper[lock_time]>86400}-->
+										请在 {echo intval($paper[lock_time]/86400)} 分钟后再次参与
+									<!--{elseif $paper[lock_time]>3600}-->
+										请在 {echo intval($paper[lock_time]/3600)} 小时后再次参与
+									<!--{else}-->
+										请在 {echo intval($paper[lock_time]/60)} 分钟后再次参与
+									<!--{/if}-->
+								<!--{elseif $checkPaperStatus=='exppay'}-->
+									<H2 class="xi1">售价: $paper[price] $config[extcredit][title] $config[extcredit][unit]</H2>
+									<br>
+									你没有购买该试卷或之前购买的时间已经过期
+									<br><br><br>
+									<a href="javascript:;" id="buynow" onclick="_buynow()" url='plugin.php?id=exam:ajax&action=user_paper_payfor&mobile=no&mobi=yes&formhash=$_G[formhash]&pid=$pid'><H2>立即购买</H2></a> 
+									<script type="text/javascript">
+										function _buynow(){
+											var url = $('buynow').getAttribute('url');
+											ajaxget(url+'&'+Math.random(),'ajaxresult','','','',function(){
+												var rt = $('ajaxresult').innerHTML;
+												if(rt=='no_credit'){
+													showDialog('您没有足够的积分购买该套试卷!');
+												}
+												else if(rt=='creditfield'){
+													showDialog('站长没有设置积分交易字段!');
+												}							
+												else if(rt==1)
+													window.location.reload(); 
+												else
+													showDialog('购买试卷失败, 请与管理员联系!');
+											});
+										}
+									</script>
+								<!--{elseif $checkPaperStatus=='groupuse'}-->
+									你所在的用户组无权使用该试卷,请与管理员联系		
+								<!--{elseif $checkPaperStatus=='pwd'}-->
+									哎呀! 密码不对
+								<!--{elseif $checkPaperStatus=='unlogin'}-->
+									<a href="member.php?mod=logging&action=login&mobile=2"><H2>你没有登陆, 立即登陆</H2></a>
+								<!--{elseif $checkPaperStatus=='readgroup'}-->
+									你所在的用户组无权使用该试卷,请与作者联系
+								<!--{/if}-->
+							</div>
+						<!--{/if}-->	
+				<!--{/if}-->	
+			</div>
+		</div>
+		<div class="numbox" id="numbox">
+		<form id="examination_form" method="post" autocomplete="off" onsubmit="" action="plugin.php?id=exam:result&replay=$_GET[replay]&formhash=$_G[formhash]&mobile=no&mobi=yes">
+			<input value="$_G[formhash]" name="formhash" type="hidden">
+			<input value="$_POST[pwd]" name="pwd" type="hidden">
+			<input value="$paper[pid]" name="pid" type="hidden">
+			<div class="summary"><span class="ding_on" id="ding" onclick="ding(this)"></span><span id="summary">总分:{$paper[total_score]}分 及格:{$paper[pass]}分</span> 时间:{$paper[minute]}分钟</span></div>
+			<table id="nobox" cellpadding="0" cellspacing="0">
+			<!--{eval $i=0;}-->
+			<!--{loop $groups $_group}-->
+				<!--{loop $_group[list] $v}-->
+					<!--{if $i++ % 8==0}--><tr align="middle" bgColor="#ffffff"><!--{/if}-->
+					<td id="$v[eid]" class="e" 
+					group="<!--{if $_group[name][0]=='#'}-->{echo str_replace('"','&#34;',$_group[content])}<!--{/if}-->" 
+					type='$v[type]'
+					image='$v[image]' 
+					score='$v[score]' 
+					answer="" 
+					result=""  
+					<!--{if $config[showexam]}-->_result="{echo str_replace('"','&#34;', $v["type"]>3 ? $v["data"] : $v["result"])}" _note="{echo str_replace('"','&#34;', $v["note"])}"<!--{/if}-->  
+					subject="{echo str_replace('"','&#34;',$v[subject])}" 
+					data="<!--{if $v[type]==2 || $v[type]==3}-->{echo str_replace('"','&#34;',$v[data])}<!--{/if}-->" 
+					note="">$i<input value="" name="e_{$v[eid]}[result]" type="hidden"><input value="$v[type]" name="e_{$v[eid]}[type]" type="hidden"></td>
+				<!--{/loop}-->
+			<!--{/loop}-->
+			</table>
+		</form>
+		</div>	
+		<div class="submitbox" id="submitbox">
+			<span class="submit" onclick="submit()"></span>
+		</div>
+		<!--{if $config[showexam]}--><style type="text/css"> .papernav cite{width:19.99%;} </style><!--{/if}-->
+		
+		<div class="papernav" id="papernav">
+			<cite $_W onclick="nv_click('prev')"<!--{if $isPC}--> style="margin-left:-3px"<!--{/if}-->>上题</cite>
+			<cite $_W onclick="nv_click('next')">下题</cite>
+			<!--{if $config[showexam]}--><cite $_W onclick="nv_click('result')">答案</cite><!--{/if}-->
+			<cite $_W onclick="nv_click('no')"><i id="seek">1</i>/$i</cite>
+			<cite $_W id='1000' onclick="nv_click('submit')">交卷</cite>
+		</div>
+		<script type="text/javascript">
+			var pid = '$pid';
+			var formhash = "$_G[formhash]";
+			var _pwd = '$_POST[pwd]';
+
+			var eidArr  = new Array();
+			(function(){
+				var tds = $('nobox').getElementsByTagName('td');
+				for(var i = 0; i<tds.length; i++){
+					_attachEvent(tds[i], 'click', 
+						function(){
+							show_exam(this.id);
+							$('seek').innerHTML = this.innerText;
+							if($('ding').className=='ding_on'){
+								$('numbox').style.display='none'
+							}
+						}
+					)
+					eidArr[i] = tds[i].id;
+				}
+				if(eidArr[0]) show_exam(eidArr[0])
+				
+
+				$('paper').style.top =  $('menu').clientHeight + 'px';
+				$('paper').style.height = (window.innerHeight - $('menu').clientHeight - $('papernav').clientHeight) + 'px';
+
+			})()
+		</script>	
+	<!--{else}-->
+			<div class="menu"><div class="mct"><span class="y"><a href="plugin.php?id=exam&mobile=no&mobi=no" target="_top">网页版</a></span><span class="z"><a href="forum.php?mobile=yes" target="_top">返回论坛</a></span></div></div>
+
+			<div class="logo"><img src="<!--{if empty($config[mobilogo])}-->static/image/common/logo.png<!--{else}-->$config[mobilogo]<!--{/if}-->" border="0"></div>
+			<div id="clist" class="clist">
+				<!--{loop $tree $p}-->
+					<dl>
+					<dt cid='$p[cid]'>$p[name]</dt>
+					<cite>
+					<!--{if empty($p[child])}-->
+						<dd>无</dd>
+					<!--{else}-->
+						{eval $b=0;}
+						<!--{loop $p[child] $c}-->
+							<dd  <!--{if !$c[child]}-->cid='$c[cid]'<!--{/if}--> <!--{if !$b}-->style="border-top:0"<!--{/if}-->>$c[name]</dd>
+							{eval $b=1;}
+								<!--{if $c[child]}-->
+									<cite class="last">
+									<!--{loop $c[child] $v}-->
+										<dd  cid='$v[cid]' style="font-size:1em;padding-left:1em">- $v[name]</dd>
+									<!--{/loop}-->
+									</cite>
+									
+								<!--{/if}-->
+						<!--{/loop}-->
+					<!--{/if}-->
+					</cite>
+					</dl> 
+				<!--{/loop}-->
+				<center style="line-height:1.8em;margin-top:1.5em">
+				<!--{if !$_G[uid]}-->
+				<p><a href="member.php?mod=logging&action=login&mobile=2&referer=plugin.php?id=exam:m">立即登陆, 参与考试</a></p>
+				<p><a href="member.php?mod=register&mobile=2&referer=plugin.php?id=exam:m">没有账号, 马上注册</a></p>
+				<!--{else}-->
+				<p>欢迎您 $_G[username] 回来</p>
+				<!--{/if}-->
+				</center>
+			</div>
+			<!--{if !empty($config[mobiad])}--><div class="adIndex" id="adIndex">$config[mobiad]</div><!--{/if}-->
+			<script type="text/javascript">
+				(function(){
+					var dts = $('clist').getElementsByTagName('dt');
+					for(var i =0; i<dts.length; i++){
+						_attachEvent(dts[i], 'click', 
+							function(){
+								var cite = this.parentNode.getElementsByTagName('cite')[0];
+								cite.style.display = cite.style.display=='block' ? 'none' : 'block';
+							}
+						)
+					}
+					var dds = $('clist').getElementsByTagName('dd');
+					for(var i =0; i<dds.length; i++){
+						_attachEvent(dds[i], 'click', 
+							function(){
+								var cid = this.getAttribute('cid');
+								if(cid>0){
+									window.location.href = 'plugin.php?id=exam:m&mobile=no&mobi=yes&list=' + cid;
+								}
+								else{
+									var div = this.nextSibling;
+									if(div.className=='last')
+										div.style.display = div.style.display=='block' ? 'none' : 'block';
+								}
+							}
+						)
+					}
+					
+					$('clist').style.top =  $('menu').clientHeight + 'px';
+					$('clist').style.height = (window.innerHeight - $('menu').clientHeight - ($('adIndex') ? $('adIndex').clientHeight : 0)) + 'px';
+				})()
+			</script>
+		</div>
+	<!--{/if}-->

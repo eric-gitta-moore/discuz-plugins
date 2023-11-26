@@ -1,0 +1,113 @@
+<form id="log_form" method="post" autocomplete="off" action="$_SERVER[REQUEST_URI]&formhash=$_G[formhash]">
+<input value="$_G[formhash]" name="formhash" type="hidden">
+	<div id="threadlist" class="tl bm bmw">
+		<div class="th">
+			<table cellspacing="0" cellpadding="0" class="log"><tr>
+				<th class="cb"></th>
+				<td class="title"><p style="line-height:5px">&nbsp;</p><p>会员名称</p></td>
+				<td class="score"><p>考生得分</p><p>
+				<a href="plugin.php?id=exam:my&tab=paper&pid=$pid&_pass=$_pass">全</a>&nbsp;<a href="plugin.php?id=exam:my&tab=paper&pid=$pid&_pass=$_pass&_score=1">升</a>&nbsp;<a href="plugin.php?id=exam:my&tab=paper&pid=$pid&_pass=$_pass&_score=-1">降</a></p></td>
+				<td class="score"><p>是否及格</p>
+				<p><a href="plugin.php?id=exam:my&tab=paper&pid=$pid">全</a>&nbsp;<a href="plugin.php?id=exam:my&tab=paper&pid=$pid&_pass=1&_score=$_score">是</a>&nbsp;<a href="plugin.php?id=exam:my&tab=paper&pid=$pid&_pass=-1&_score=$_score">否</a></p>
+				</td>
+				<td class="time"><p style="line-height:5px">&nbsp;</p><p>交卷时间</p></td>
+				<td class="comment"><center><p>给予点评</p><p>(提示:双击打开点评)</p></center></td>
+				<td class="commenttime"></td>
+			</tr></table>
+		</div>
+		<style>
+		#threadlist tbody:hover tr{background-color: #F2F2F2}
+		</style>
+		<!--{if empty($logs)}-->
+			<div style="margin:50px 0 50px 30px"><div class="xi1">未找到相关查询</div></div>
+		<!--{else}-->
+			<div class="bm_c">
+				<table cellspacing="0" cellpadding="0" class="log"  id="paper_log">  
+				<!--{loop $logs $v}-->
+				<tbody>
+					<tr lid="$v[lid]">
+						<td class="cb"><input type="checkbox" name="moderate[]" value="$v[lid]"></td>		
+						<td class="title"><a href="plugin.php?id=exam:my&tab=show&lid=$v[lid]" target="_blank"><!--{if !$v[username]}-->(游客)<!--{else}-->$v[username]<!--{/if}--></a></td>
+						<td class="score"><!--{if $v[score]==intval($v[score])}-->{echo intval($v[score])}<!--{else}-->$v[score]<!--{/if}--></td>
+						<td class="score"><!--{if $v[score] >= $v[pass]}--><a href="plugin.php?id=exam:my&tab=paper&pid=$pid&_pass=1&">及格</a><!--{else}--><a class="nopass" href="plugin.php?id=exam:my&tab=paper&pid=$pid&_pass=-1">不及格</a><!--{/if}--></td>					
+						<td class="time">{eval echo date('m-d H:i',$v['endtime']);}</td>
+						<th  rowspan=2 class="comment">$v[comment]</th>
+						<td  rowspan=2 class="commenttime"><!--{if $v[comment]}-->{eval echo date('m-d H:i',$v['commenttime']);}<!--{/if}--></td>
+					</tr>
+					<!--{if $v[userinfo]}-->
+					<tr><td colspan=5>{echo str_replace("\n",'<br>', $v[userinfo])}</td></tr>
+					<!--{/if}-->
+				</tbody>
+				<!--{/loop}-->
+				</table>
+			</div>
+		<!--{/if}-->
+	</div>
+	<!--{if !empty($logs)}-->
+	<div class="bm bw0 pgs cl">
+		<label style="margin:17px 0 0 10px"><input type="checkbox" name="moderate[]" onclick="log_submit_select()">全选</label> 
+		<button type="submit" onclick="return log_submit(0, 'cp_export')" class="pn pnc" style="padding:0 10px;">导出选定</button> 
+		<button type="submit" onclick="return log_submit(1, 'cp_export')"class="pn pnc" style="padding:0 10px;">导出全部</button> 
+		<button type="submit" onclick="return log_submit(0, 'cp_delete')" class="pn pnc" style="padding:0 10px;">删除选定</button> 
+		<button type="submit" onclick="return log_submit(1, 'cp_delete')"class="pn pnc" style="padding:0 10px;">删除全部</button> 
+		$multipage
+	</div> 
+			<div class="xi1">注意: 删除后不可恢复</div>
+	<!--{/if}-->
+</form>
+<div id="ajaxresult" style="display:none"></div>
+		
+<div id="log_dialog" style="display:none">
+<form method="post" id="paperNameForm" action="plugin.php?id=exam:my&tab=paper&action=cp_comment&pid=$pid&formhash=$_G[formhash]&page=$page" autocomplete="off" onsubmit="this.id='paperNameFormDialog';if($('comment').value.match(/^\s*$/)){showError('请输入点评内容');return false;}">
+<input value="$_G[formhash]" name="formhash" type="hidden">
+<input value="" id="comment_lid" name="comment_lid" type="hidden">
+<div class="c altw" style="padding:10px;border-top:1px solid #CCC">
+<textarea id="comment" name="comment" style="width:340px;height:80px;" maxlength=255></textarea>
+</div>
+<p class="o pns">
+<button value="true" class="pn pnc" type="submit"><strong>确定</strong></button>
+<button value="true" class="pn" onclick="hideMenu('fwin_dialog', 'dialog')"><strong>取消</strong></button>
+</p>
+</form>
+</div> 
+
+<script type="text/javascript">
+	function log_submit_select()
+	{
+		var bSelect = window.event.srcElement.checked;
+		var logs = $('paper_log').getElementsByTagName('input');
+		for(var i = 0; i<logs.length; i++){
+			logs[i].checked = bSelect;
+		}
+	}
+
+	function log_submit(bAll, mode)
+	{
+		$('log_form').action += "&action="+mode;
+		if(bAll==1){
+			$('log_form').action += "&all=1";
+			('log_form').submit();
+		}
+		else{
+			var logs = $('paper_log').getElementsByTagName('input');
+			for(var i = 0; i<logs.length; i++){
+				if(logs[i].checked)return true;
+			}
+			showError("至少选定一项");
+		}
+		return false;
+	}
+	
+ 
+	_attachEvent(window, 'load', function(){
+		var logs = $('paper_log').getElementsByTagName('th');
+		for(var i = 0; i<logs.length; i++){
+			_attachEvent(logs[i], 'dblclick',function(){
+				var lid = this.parentNode.getAttribute('lid');
+				showDialog($('log_dialog').innerHTML,'info','对考生点评',0,1);
+				$('comment').value = this.innerHTML;
+				$('comment_lid').setAttribute('value', lid);
+			});
+		}
+	});
+</script>

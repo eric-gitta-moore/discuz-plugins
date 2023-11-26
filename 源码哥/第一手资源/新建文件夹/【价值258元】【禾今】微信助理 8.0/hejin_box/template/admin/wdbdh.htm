@@ -1,0 +1,112 @@
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.validation.min.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/admincp.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.cookie.js"></script>
+<link href="{HEJIN_PATH}public/admin/css/skin_0.css" rel="stylesheet" type="text/css" id="cssfile2" />
+<link href="{HEJIN_PATH}public/admin/css/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".class_parent").click(function(){
+            if($(this).attr("status") == "open") {
+                $(this).attr("status","close");
+                $(this).attr("src","{HEJIN_PATH}public/allimg/tv-collapsable.gif");
+                $("."+$(this).attr("class_id")).show();
+            } else {
+                $(this).attr("status","open");
+                $(this).attr("src","{HEJIN_PATH}public/allimg/tv-expandable.gif");
+                $("."+$(this).attr("class_id")).hide();
+            }
+        });
+
+        //行内ajax编辑
+        $('span[nc_type="class_sort"]').inline_edit({act: 'store',op: 'update_class_sort'});
+        $('span[nc_type="class_name"]').inline_edit({act: 'store',op: 'update_class_name'});
+
+    });
+</script>
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title">
+<div class="h3" style="width:auto">{lang hejin_box:wsitegl}</div>
+      <ul class="tab-base">
+        <li><a href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex"><span>{lang hejin_box:wfenlei}</span></a></li>
+        <li><a href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=dbdh" class="current"><span>{lang hejin_box:wdaohang}</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 操作说明 -->
+  <table class="table tb-type2" id="prompt">
+    <tbody>
+      <tr class="space odd">
+        <th colspan="12" class="nobg"><div class="title">
+            <h5>{lang hejin_box:cztishi}</h5>
+            <span class="arrow"></span></div></th>
+      </tr>
+      <tr>
+        <td><ul>
+            <li>{lang hejin_box:danhangtsa}</li>
+            <li>{lang hejin_box:danhangtsb}</li>
+			<li>{lang hejin_box:danhangtsc}</li>
+          </ul></td>
+      </tr>
+    </tbody>
+  </table>
+  <form id="list_form" method='post'>
+    <table class="table tb-type2">
+      <thead>
+        <tr class="space">
+          <th colspan="15" class="nobg"></th>
+        </tr>
+        <tr class="thead">
+          <th class="w48"></th>
+          <th class="w48">{lang hejin_box:paixua}</th>
+          <th>{lang hejin_box:dhname}</th>
+          <th class="w200">{lang hejin_box:flpica}</th>
+          <th class="w300">{lang hejin_box:caidanlxa}</th>
+          <th class="w200 align-center">{lang hejin_box:caozuo}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--{loop $wdbdhes $wdbdh}-->
+        <tr class="hover edit">
+          <td>
+            <img class="class_parent" class_id="class_id$wdbdh['id']" status="close" src="{HEJIN_PATH}public/allimg/tv-collapsable.gif"></td>
+          <td class="w48 sort"><span nc_type="class_sort" column_id="$wdbdh['id']" title="" class="editable tooltip">$wdbdh['sort']</span></td>
+          <td class="name"><span nc_type="class_name" title="" class="editable tooltip"><!--{eval echo stripslashes($wdbdh['title']);}--></span> <a class="btn-add-nofloat marginleft" href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=addflc&zid=$wdbdh['id']"><span>{lang hejin_box:addzdbdh}</span></a></td>
+          <td class="w48 sort"><div style=" background-color:#CCC; width:30px; height:30px;"><img width="30" height="30" src="<!--{eval echo stripslashes($wdbdh['pic']);}-->"></div></td>
+          <td class="w48 sort"><a href="<!--{eval echo stripslashes($wdbdh['url']);}-->" target="_blank"><!--{eval echo stripslashes($wdbdh['url']);}--></a></td>
+          <td class="align-center"><a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=editflc&id=$wdbdh['id']">{lang hejin_box:xiugai}</a> | <a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=delfl&id=$wdbdh['id']&formhash={FORMHASH}" onclick="return confirm(&quot;{lang hejin_box:shanchuts}&quot;);">{lang hejin_box:shanchu}</a></td>
+        </tr>
+        <!--{eval $fendhs = C::t('#hejin_box#hjbox_wfl')->fetch_dbdh_zid($wdbdh['id']);}-->
+        	<!--{loop $fendhs $fendh}-->
+				<tr class="hover edit class_id$wdbdh['id']" style="">
+          		<td class="w48"></td>
+          		<td class="w48 sort"><span nc_type="class_sort" column_id="$fendh['id']" title="" class="editable tooltip">$fendh['sort']</span></td>
+         		<td class="name">
+         		<!--  <img src="TEMPLATES_PATH/images/tv-item1.gif"> -->
+          		<span nc_type="class_name" column_id="8" title="" class="editable tooltip"><!--{eval echo stripslashes($fendh['title']);}--></span></td>
+          <td class="w48 sort"><div style=" background-color:#CCC; width:30px; height:30px;"><img width="30" height="30" src="<!--{eval echo stripslashes($fendh['pic']);}-->"></div></td>
+          <td class="w48 sort"><a href="<!--{eval echo stripslashes($fendh['url']);}-->" target="_blank"><!--{eval echo stripslashes($fendh['url']);}--></a></td>
+          		<td class="w200 align-center">
+              	<a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=editflc&id=$fendh['id']">{lang hejin_box:xiugai}</a> | <a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=delfl&id=$fendh['id']&formhash={FORMHASH}" onclick="return confirm(&quot;{lang hejin_box:shanchuts}&quot;);">{lang hejin_box:shanchu}</a>
+         		</td>
+        		</tr>
+            <!--{/loop}-->
+        <!--{/loop}-->                                                                
+        
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                              </tbody>
+            <tfoot>
+        <tr class="tfoot">
+          <td></td>
+          <td id="batchAction" colspan="15"><span class="all_checkbox">
+            
+            </span> <a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=addflc" class="btn"><span>{lang hejin_box:adddbdh}</span></a>
+            <div class="pagination"></div>
+        </tr>
+      </tfoot>
+          </table>
+  </form>
+</div>

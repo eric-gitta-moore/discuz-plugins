@@ -1,0 +1,27 @@
+{subtemplate common/header}
+<div id="pt" class="bm cl">
+    <div class="z">
+        <a href="./" class="nvhm" title="&#x9996;&#x9875;">&#x9996;&#x9875;</a>
+        <em>&raquo;</em>
+        <a href="forum.php">{$_G['setting']['bbname']}</a>
+        <em>&raquo;</em>
+        <a href="plugin.php?id=csu_guarantee">&#x62C5;&#x4FDD;&#x4EA4;&#x6613;</a>
+    </div>
+</div>
+<link href="source/plugin/csu_guarantee/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="source/plugin/csu_guarantee/css/css.css" type="text/css" />
+<style>
+.jyqb {line-height:30px;border:1px solid #E5E5E5;width:701px;font-size:12px}
+.jyqb th {background:#F1F1F1;height:36px;line-height:36px;text-align:center;color:#FD0000}
+.jyqb td {border:solid #E5E5E5;border-widtH:1px 0px 0 1px;background:#fff;padding-left:26px;color:#4B4B4B}
+.jyqb .wt {width:118px;border-left:0;text-align:center;background:#f1f1f1;}
+</style>
+<div id="jy_con">
+  <div class="jy_con_left">
+    <ul>
+      <!--{eval if($_GET['item']=='new') leftmenus(array('new'=>'&#x586B;&#x5199;&#x4EA4;&#x6613;&#x4FE1;&#x606F;'))}-->
+      <!--{eval if($_GET['item']=='detail') leftmenus(array('detail'=>'&#x4EA4;&#x6613;&#x8BE6;&#x60C5;'))}-->
+      <!--{eval leftmenus(array('default'=>'&#x6240;&#x6709;&#x4EA4;&#x6613;','status_1'=>'&#x4EA4;&#x6613;&#x4E2D;','status_2'=>'&#x5DF2;&#x7ED3;&#x675F;','account'=>'&#x6536;&#x6B3E;&#x8D26;&#x6237;','buy'=>'&#x6211;&#x662F;&#x4E70;&#x5BB6;','sell'=>'&#x6211;&#x662F;&#x5356;&#x5BB6;'))}-->
+    </ul>
+    <p style="display:block;width:190px;padding:5px;overflow:hidden;line-height:25px;text-indent:1em;border:1px dotted red;">{$var['tips']}</p>
+  </div>

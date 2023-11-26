@@ -1,0 +1,41 @@
+在数据调用页面的模块分类处选择【帖子模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-横向滑动
+
+必须含图片附件：是
+
+标题最大字节数：26
+
+显示样式：帖子图片列表
+
+缩略图宽度：300
+
+缩略图高度：300
+
+【确定】
+
+
+点击确定后，选择刚才添加的模块的“属性”→“模块模板”，将代码修改为（默认代码删除）：
+
+<div class="n5jj_dtmk cl" style="margin:15px 0 0 0">
+	<div class="n5qj_mkbt cl">
+		<span class="y"><a href="http://app.nvbing5.net/thread-97-1-1.html">更多</a></span>
+		<h2>横向滑动模块</h2>
+	</div>
+	<div class="dtmk_mkzt cl">
+		<div class="dtmk_mkhd cl">
+			<ul>
+			[loop]
+				<li>
+					<a href="{url}"><img src="{pic}" width="{picwidth}" height="{picheight}" alt="{title}" /><h2>{title}</h2></a>
+					<p><span class="y">{views}</span><a href="home.php?mod=space&uid={authorid}&do=profile"><img src="{avatar}">{author}</a></p>
+				</li>
+			[/loop]
+			</ul>
+		</div>
+	</div>
+</div>
+
+修改后选择更新，这个模块添加完成。

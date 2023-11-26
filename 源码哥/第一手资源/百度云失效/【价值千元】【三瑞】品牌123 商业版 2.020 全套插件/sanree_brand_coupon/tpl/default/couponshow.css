@@ -1,0 +1,273 @@
+.albumlist .albumleft .couponshow .ahd{
+	height:48px;
+	border-bottom:1px dashed #CDCDCD;
+	line-height:54px;
+	background-color:#F6F6F6;
+	text-align:right;
+	padding-right:40px;
+	font-size:26px;
+	color:#FF3C00;
+	
+}
+.albumlist .albumleft .couponshow .ahd a{
+	background:url('images/views.jpg');
+	background-repeat:no-repeat;
+	display:block;
+	height:48px;
+	float:right;
+	padding-left:28px;
+	color:#FF3C00;
+	text-decoration:none;
+	text-indent:25px;
+}
+.albumlist .albumleft .couponshow .abd{
+	padding:10px;
+	overflow:hidden;
+	width:700px;
+	position:relative;
+}
+.albumlist .albumleft .couponshow .abd h1{
+	color:#333333;
+	font-size:20px;
+	text-align:left;
+	margin-bottom:20px;
+	padding-right:75px;
+}
+
+.albumlist .albumleft .couponshow .abd .gpicture{
+	width:300px;
+	height:300px;
+	border:8px solid #F6F6F6;
+	float:left;
+}
+.albumlist .albumleft .couponshow .abd .gpicture img{
+	width:300px;
+	height:300px;
+	cursor:pointer
+}
+.albumlist .albumleft .couponshow .abd .ginfo{
+	float:right;
+	width:365px;
+	height:310px;
+	overflow:hidden;
+	padding-top:10px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gprice{
+
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gprice span{
+text-decoration:line-through;
+font-size:15px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gminprice{
+
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gminprice span{
+font-weight:bold;
+color:#FF0C02;
+font-size:20px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gstock {
+margin-top:25px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gstock span{
+color:#AF0006
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gcatename {
+margin-top:4px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gcatename span{
+color:#346599
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gcatename span{
+color:#346599
+}
+
+.albumlist .albumleft .couponshow .abd .ginfo .printarea{
+	bottom:14px;
+	position:absolute;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .printarea .printnum{
+display:none;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .printarea .printbtn{
+	border:1px solid #F3DFBA;
+	height:56px;
+	margin-top:10px;
+	padding:10px;
+	background:#FBF9E7;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .printarea a{
+float:left;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .printarea .srcenter{
+margin:5px auto;
+width:320px;
+overflow:hidden;
+height:45px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .printarea .color{
+	display:block;
+	width:155px;
+	height:45px;
+	background:url('images/btn_color.jpg');
+	background-repeat:no-repeat;	
+}
+.albumlist .albumleft .couponshow .abd .ginfo .printarea .black{
+	display:block;
+	width:155px;
+	height:45px;
+	background:url('images/btn_black.jpg');
+	background-repeat:no-repeat;
+	margin-left:10px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gdateline{
+	margin-top:5px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .gdateline  span{
+	color:#A8A8A8;
+}
+.albumlist .albumleft .couponshow .genddate{
+	height:89px;
+	position:absolute;
+	padding-left:636px;
+}
+.albumlist .albumleft .couponshow .genddate .inbox{
+	width:84px;
+	height:89px;
+	background:url('images/bg3.jpg');
+	background-repeat:no-repeat;
+	float:right;
+}
+.albumlist .albumleft .couponshow .genddate .yearmonth{
+	font-size:14px;
+	color:#FFFFFF;
+	margin-top:19px;
+	text-align:center;
+}
+.albumlist .albumleft .couponshow .genddate .bmday{
+	font-family:Î¢ÈíÑÅºÚ;
+	font:12px/1;
+	font-size:36px;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-align:center;	
+}
+.albumlist .albumleft .couponshow .genddate .yearmonth{
+}
+.albumlist .albumleft .couponshow  .useuser{
+	clear:both;
+	width:680px;
+	margin:0px auto;	
+	border:1px solid #EDEDED;
+	background:#F9F8F9;
+	padding:10px 10px 10px 12px;
+	height:50px;
+	overflow:hidden;
+}
+.albumlist .albumleft .couponshow  .useuser ul {
+	zoom:1;
+	overflow:hidden;
+	width:710px;
+}
+.albumlist .albumleft .couponshow  .useuser ul li {
+	float:left;
+	margin-right:9px;
+	margin-bottom:12px;
+}
+
+.albumlist .albumleft .couponshow .gcontent{
+   clear:both;
+	background:url('images/g01.jpg');
+	background-repeat:no-repeat;
+	height:38px;
+	width:700px;
+	margin:10px auto;
+	
+}
+.albumlist .albumleft .couponshow .gcontenttxt{
+    padding:10px 10px 10px 13px;
+    line-height:20px;
+	white-space: pre-wrap;
+	*white-space: pre;
+	*word-wrap: break-word
+}
+.albumlist .albumleft .couponshow .gcondition{
+   clear:both;
+	background:url('images/g02.jpg');
+	background-repeat:no-repeat;
+	height:38px;
+	width:700px;
+	margin:10px auto;
+	
+}
+.albumlist .albumleft .couponshow .gconditiontxt{
+    padding:10px 10px 10px 13px;
+    line-height:20px;
+	white-space: pre-wrap;
+	*white-space: pre;
+	*word-wrap: break-word
+}
+
+.albumlist .albumleft .couponshow .gpiclist{
+   clear:both;
+	background:url('images/g02.jpg');
+	background-repeat:no-repeat;
+	height:38px;
+	width:700px;
+	margin:10px auto;
+	
+}
+.albumlist .albumleft .couponshow .gpiclisttxt{
+padding:10px;
+line-height:20px;
+text-align:center;
+}
+.albumlist .albumleft .couponshow .gpiclisttxt img{
+margin:10px;
+cursor:pointer;
+}
+
+.albumlist .albumleft .couponshow .abd .ginfo .satisfaction {
+	clear:both;
+	line-height:25px;
+	height:25px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .satisfactiona {
+	width:91px;
+	background:url(images/staroff.gif) no-repeat 0px 3px;
+	float:left;
+	height:19px
+}
+.albumlist .albumleft .couponshow .abd .ginfo .satisfactionb {
+	background:url(images/staron.gif) no-repeat 0px 3px;
+	height:19px
+}
+.albumlist .albumleft .couponshow .abd .ginfo .satisfactionc {
+	float:left;
+	margin-top:3px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .coupon_qq{
+	clear:both;
+	margin-top:25px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .coupon_qq img{
+	vertical-align:middle;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .couponno  span{
+	color:#346599;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .coupon_qq .coupontel114{
+	border-top:1px dotted #dddddd; 
+	margin-top:10px;
+	padding:10px;
+}
+.albumlist .albumleft .couponshow .abd .ginfo .coupon_buy{
+	clear:both;
+	text-align:right;
+	padding-right:10px;
+}
+.albumlist .albumleft .couponshow .tshare {
+	padding-left:25px;
+	padding-top:25px;
+}

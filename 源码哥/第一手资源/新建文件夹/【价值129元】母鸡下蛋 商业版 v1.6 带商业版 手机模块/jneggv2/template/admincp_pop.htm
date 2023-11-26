@@ -1,0 +1,66 @@
+{subtemplate common/header}
+<style type="text/css">
+.com_pop {width:500px; padding-left:20px; padding-right:20px; padding-bottom:20px;}
+.com_pop7 {width:700px; padding-left:20px; padding-right:20px; padding-bottom:20px;}
+</style>
+<!--{if $_GET['do'] == 'checkchic' && $_G['uid'] > '0'}-->
+	<h3 class="flb">
+    <em id="return_sign">{lang jneggv2:jnegg65}</em>
+    <span><a href="javascript:;" onclick="hideWindow('checkchic');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+    <div class="com_pop">
+    <table width="100%" border="1" cellspacing="0" cellpadding="5">
+      <tr><td>ID</td><td>{lang jneggv2:jnegg66}</td><td>{lang jneggv2:jnegg67}</td>{if $g_chicdie == '1'}<td>{lang jneggv2:jnegg68}</td>{/if}<td>{lang jneggv2:jnegg69}</td><td>{lang jneggv2:jnegg47}</td></tr>
+      {loop $chiclist $value}
+      <tr><td>$value[id]</td><td>$value[chickenqty]</td><td>$value[buytime]</td>{if $g_chicdie == '1'}<td>$value[dietime]</td>{/if}<td>{if $g_chicdie == '1'}{if $value[status] == '1'}{lang jneggv2:jnegg71}{else}{lang jneggv2:jnegg70}{/if}{else}{lang jneggv2:jnegg70}{/if}</td><td><a href="javascript:;" onclick="showWindow('checkchic', 'plugin.php?id=jneggv2:admincp&do=editchic&formhash=$_G[formhash]&chickid={$value[id]}&userid={$value[uid]}')">{lang jneggv2:jnegg48}</a> | <a href="javascript:;" onclick="showDialog('{lang jneggv2:jnegg54}', 'confirm', '', function(){	showWindow('deletechick', 'plugin.php?id=jneggv2:admincp&do=deletechick&formhash=$_G[formhash]&chickid={$value[id]}&userid={$value[uid]}');return false;},1)"><font color="#FF0000">{lang jneggv2:jnegg50}</font></a></td></tr>
+      {/loop}
+      <tr><td colspan="6">$multipage</td></tr>
+    </table>
+    </div>
+<!--{/if}-->
+<!--{if $_GET['do'] == 'editchic' && $_G['uid'] > '0'}-->
+	<h3 class="flb">
+    <em id="return_sign">{lang jneggv2:jnegg65}</em>
+    <span><a href="javascript:;" onclick="hideWindow('checkchic');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+    <form id="user" name="user" method="post" action="plugin.php?id=jneggv2:admincp">
+    <div class="com_pop7">
+    <table width="100%" border="1" cellspacing="0" cellpadding="5">
+    {loop $chiclist $value}
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="editchicsubmit" value="yes" />
+    <input type="hidden" name="chickid" value="{$value[id]}" />
+    <input type="hidden" name="referer" value="{echo dreferer();}" />
+    <input type="hidden" name="userid" value="{$value[uid]}" />
+      <tr>
+        <td>ID</td>
+        <td>: {$value[id]}</td>
+      </tr>
+      <tr>
+        <td>UID</td>
+        <td>: $value[username] ($value[uid])</td>
+      </tr>
+      <tr>
+        <td>{lang jneggv2:jnegg66}</td>
+        <td>: <input name="chickenqty" type="text" value="{$value[chickenqty]}" /></td>
+      </tr>
+      <tr>
+        <td>{lang jneggv2:jnegg67}</td>
+        <td>: <input name="buytime" type="text" value="{$value[buytime]}" /> {lang jneggv2:jnegg72}</td>
+      </tr>
+      <tr>
+        <td>{lang jneggv2:jnegg68}</td>
+        <td>: {$value[dietime]}</td>
+      </tr>
+      <tr>
+        <td>{lang jneggv2:jnegg69}</td>
+        <td>: {if $value[status] == '1'}{lang jneggv2:jnegg71}{else}{lang jneggv2:jnegg70}{/if}</td>
+      </tr>
+    {/loop}
+    </table>
+    </div>
+    <p class="o pns">
+<button type="submit" name="signpn" value="true" class="pn pnc"><strong>{lang jneggv2:jnegg32}</strong></button>
+</p></form>
+<!--{/if}-->
+{subtemplate common/footer}

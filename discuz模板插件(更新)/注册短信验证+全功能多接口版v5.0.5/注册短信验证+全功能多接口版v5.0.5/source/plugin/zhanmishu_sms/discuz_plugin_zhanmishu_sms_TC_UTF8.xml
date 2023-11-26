@@ -1,0 +1,1206 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2018-02-07 14:54]]></item>
+	<item id="TiFrom"><![CDATA[186idc (http://www.186idc.net/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[注冊短信驗證]]></item>
+			<item id="identifier"><![CDATA[zhanmishu_sms]]></item>
+			<item id="description"><![CDATA[短信全功能插件，集成手機短信注冊、手機認證、手機找回密碼、回帖短信郵箱提醒、短信群發功能。目前支持阿里大魚、短信寶接口，更多接口支持添加中。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[zhanmishu_sms/]]></item>
+			<item id="copyright"><![CDATA[站秘書(成都智測科技有限公司)]]></item>
+			<item id="version"><![CDATA[全功能多接口版v5.0.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[mobile]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[regmobile]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[綁定手機]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[7]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[send]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[open]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[一鍵設置手機認證]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[templateadmin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[短信模板管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[report]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[查看發送記錄]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[verifyadmin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[手機認證管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="7">
+					<item id="name"><![CDATA[groupsendsms]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[短信群發通知]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[4]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="8">
+					<item id="name"><![CDATA[mobilesend]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[手機號批量群發]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="9">
+					<item id="name"><![CDATA[blackitem]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[黑名單管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[6]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="10">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[插件售後支持]]></item>
+					<item id="url"><![CDATA[http://url.cn/Jt2oC5]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[9]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[阿里雲市場-阿里短信服務Ap ...]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[AppCode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[阿里雲官網accessKeyId]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[accessKeyId]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[LTAICea2n576JmWC]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[阿里雲官網accessKeySecret]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[accessKeySecret]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[阿里雲消息服務Endpoint]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[Endpoint]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://34001808.mns.cn-hangzhou.aliyuncs.com/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[阿里雲消息服務-主題名稱]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[topicName]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[sms.topic-cn-hangzhou]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[阿里大魚AppKey]]></item>
+				<item id="description"><![CDATA[2017年6月後，阿里大魚新用戶將無法申請，只能用阿里雲短信了，底層都是一個接口，價格也一樣。]]></item>
+				<item id="variable"><![CDATA[appkey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[23318359]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[阿里大魚AppSecret]]></item>
+				<item id="description"><![CDATA[2017年6月後，阿里大魚新用戶將無法申請，只能用阿里雲短信了，底層都是一個接口，價格也一樣。]]></item>
+				<item id="variable"><![CDATA[appsecret]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[短信寶用戶名]]></item>
+				<item id="description"><![CDATA[http://www.smsbao.com/去申請獲取，另外可以聯系我們客服QQ:2575163778獲取10元試用優惠券]]></item>
+				<item id="variable"><![CDATA[smsbaousername]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[短信寶密碼]]></item>
+				<item id="description"><![CDATA[http://www.smsbao.com/去申請獲取，另外可以聯系我們客服QQ:2575163778獲取10元試用優惠券]]></item>
+				<item id="variable"><![CDATA[smsbaopassword]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[騰訊雲sdkappid]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[sdkappid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[騰訊雲appkey]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qq_appkey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[台灣mitake賬戶]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mitakeusername]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[台灣mitake密碼]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mitakepwd]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[5337580]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[zrsms展信通賬號]]></item>
+				<item id="description"><![CDATA[http://oa.zrsms.com/自助申請]]></item>
+				<item id="variable"><![CDATA[zrsmsuser]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[jingyuan]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[zrsms展信通密碼]]></item>
+				<item id="description"><![CDATA[http://oa.zrsms.com/自助申請]]></item>
+				<item id="variable"><![CDATA[zrsmspwd]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[123456]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[中國網建Uid]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[webcnuid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[荊視新媒體]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[中國網建Key]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[webcnkey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[29B0A377D0665679]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[是否放開認證]]></item>
+				<item id="description"><![CDATA[放開認證後，認證機制將會變化，只要用戶欄目有手機號即為已認證。用戶欄目沒有的為未認證。清除認證同時候也就是清除手機號]]></item>
+				<item id="variable"><![CDATA[iseasy_verisy]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[手機版三方登錄自定義按鈕  ...]]></item>
+				<item id="description"><![CDATA[手機版可自定義第三方插件或者dz官方插件的微信、qq登錄按鈕。支持HTML代碼，支持變量{referer}]]></item>
+				<item id="variable"><![CDATA[login_html]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<style>.login_button{width:30px;height:30px;line-height: 30px;padding:0 5px;}</style>
+<a href="connect.php?mod=login&op=init&referer={referer}&statfrom=login"><img class="login_button" src="source/plugin/zhanmishu_sms/template/touch/img/qq_login.svg" alt="QQ登錄"></a>
+<a href="plugin.php?id=wechat:login"><img class="login_button" src="source/plugin/zhanmishu_sms/template/touch/img/wechat_login.svg" alt="微信登錄"></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[短信發送API安全KEY]]></item>
+				<item id="description"><![CDATA[主要是為了對接馬甲API，請務必重視，次key不填寫則不會開啟此接口，如填寫，則會開啟此接口，安全key請勿給他人展示，泄露會影響短信安全。]]></item>
+				<item id="variable"><![CDATA[sendsafekey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[AAA123123aaaaa]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[開啟手機歸屬地限制]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[is_area_limit]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[歸屬地白名單]]></item>
+				<item id="description"><![CDATA[填寫省級行政區名稱，如四川重慶。自動匹配，如果發送手機中有此處設置的地區名稱，即通過。]]></item>
+				<item id="variable"><![CDATA[area_limit]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[歸屬地限制後提醒]]></item>
+				<item id="description"><![CDATA[開啟歸屬地限制後，如果用戶被限制不能注冊，給他一個提醒。此提醒可自定義]]></item>
+				<item id="variable"><![CDATA[area_limit_tips]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[您好，由于您手機號歸屬地不屬于我地，因此被限制不能注冊。如有疑問可聯系管理員或者客服。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[每天發送短信最大值 ...]]></item>
+				<item id="description"><![CDATA[由于阿里大魚系統，欠費短期內仍然可以發送短信，為了避免短時間內大量刷短信量，可設置每天一個最大值，超過這個量短信則發送不出去了。]]></item>
+				<item id="variable"><![CDATA[daymaxlimit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[手機認證關聯系統認證設置 ...]]></item>
+				<item id="description"><![CDATA[discuz內置用戶認證系統，此配置自動將系統認證移交給此關聯的認證，方便管理和維護admin.php?action=verify]]></item>
+				<item id="variable"><![CDATA[verifyid]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=verify1
+2=verify2
+3=verify3
+4=verify4
+5=verify5]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[驗證碼有效期（秒） ...]]></item>
+				<item id="description"><![CDATA[設置驗證碼有效期，默認360秒，時間與緩存有關，不一定準確。]]></item>
+				<item id="variable"><![CDATA[verify_life]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[360]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[是否開啟手機號登錄]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mobilelogin]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[PC版是否開啟短信注冊 ...]]></item>
+				<item id="description"><![CDATA[開啟後，pc注冊會出現手機號必填，並驗證驗證碼。如關閉，則pc版本不會有短信驗證功能。對用戶手機認證無影響。]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[是否開啟手機版手機注冊]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ismobileopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[是否開啟手機快速注冊 ...]]></item>
+				<item id="description"><![CDATA[開啟後，手機touch版本中，底部會增加注冊按鈕。點擊可進行手機短信快速注冊。]]></item>
+				<item id="variable"><![CDATA[ismobileregister]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[登錄是否跳轉到單頁]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[login_gotospa]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[手機版是否顯示安全提問]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isquestion]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[手機號正則規則]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mobilerule]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[/^(13[0-9]|15[0-9]|17[0678]|18[0-9]|14[57]|09)[0-9]{8}$/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[pc版驗證碼框默認顯示 ...]]></item>
+				<item id="description"><![CDATA[驗證碼默認顯示，如設置為否，點擊發送短信成功後才會顯示驗證碼輸入框。]]></item>
+				<item id="variable"><![CDATA[isbuttonshow]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[是否同步手機號到會員欄目 ...]]></item>
+				<item id="description"><![CDATA[開啟後，短信注冊用戶成功後，自動同步用戶信息到會員欄目，方便後期擴展插件手機號登錄。]]></item>
+				<item id="variable"><![CDATA[isauto]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[注冊短信驗證碼保護 ...]]></item>
+				<item id="description"><![CDATA[開啟後，注冊短信將強制驗證碼才能發送。這個是防刷最後一道防線了。]]></item>
+				<item id="variable"><![CDATA[regsmssec]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[同一IP每天發送最高限制 ...]]></item>
+				<item id="description"><![CDATA[開啟後，每天單個ip發送手機驗證碼次數不得超過設置次數。]]></item>
+				<item id="variable"><![CDATA[iplimit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[同一手機號每天發送次數限 ...]]></item>
+				<item id="description"><![CDATA[防止惡意用戶頻發發送消耗短信配額。]]></item>
+				<item id="variable"><![CDATA[timeslimit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[900]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="38">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[已存在手機號不允許注冊 ...]]></item>
+				<item id="description"><![CDATA[只允許手機號與用戶一一對應，用戶唯一性，並且為以後使用手機登錄打下基礎。]]></item>
+				<item id="variable"><![CDATA[ismobilelimit]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="39">
+				<item id="displayorder"><![CDATA[38]]></item>
+				<item id="title"><![CDATA[驗證碼最大允許錯誤次數 ...]]></item>
+				<item id="description"><![CDATA[短信寶貴。短信為6位數字，防止暴力刷破解，所以增加此設置可有效保護安全。配合ip限制，dz自帶的安全防護，可有效防止暴力破解。]]></item>
+				<item id="variable"><![CDATA[maxnums]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="40">
+				<item id="displayorder"><![CDATA[39]]></item>
+				<item id="title"><![CDATA[等待時長（單位︰秒） ...]]></item>
+				<item id="description"><![CDATA[當短信發送成功後，會鎖定發送按鈕時長。（單位秒。）]]></item>
+				<item id="variable"><![CDATA[waittime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[60]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="41">
+				<item id="displayorder"><![CDATA[40]]></item>
+				<item id="title"><![CDATA[新版自定義配色]]></item>
+				<item id="description"><![CDATA[新版手機版UI自定義配色]]></item>
+				<item id="variable"><![CDATA[diycolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#12b7f5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="42">
+				<item id="displayorder"><![CDATA[51]]></item>
+				<item id="title"><![CDATA[手機版按鈕顏色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mobilebuttoncolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#12b7f5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="43">
+				<item id="displayorder"><![CDATA[52]]></item>
+				<item id="title"><![CDATA[新用戶手機注冊自動認證]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[auto_verify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="44">
+				<item id="displayorder"><![CDATA[52]]></item>
+				<item id="title"><![CDATA[開啟強制認證]]></item>
+				<item id="description"><![CDATA[由于網絡安全法實施，“網站必須實名認證後才能發布和回復”，因此增加此功能，開啟後，用戶登錄後必須完成手機認證才能進行其他操作（白名單除外）]]></item>
+				<item id="variable"><![CDATA[force_verisy]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="45">
+				<item id="displayorder"><![CDATA[53]]></item>
+				<item id="title"><![CDATA[開啟全局認證提醒]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[verify_tip]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="46">
+				<item id="displayorder"><![CDATA[54]]></item>
+				<item id="title"><![CDATA[認證提醒頻次]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tip_times]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[30]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="47">
+				<item id="displayorder"><![CDATA[55]]></item>
+				<item id="title"><![CDATA[強制發帖認證板塊]]></item>
+				<item id="description"><![CDATA[哪些板塊需要強制手機認證，為空表示都不強制認證。]]></item>
+				<item id="variable"><![CDATA[limit_forums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[38]]></item>
+					<item id="2"><![CDATA[82]]></item>
+					<item id="3"><![CDATA[83]]></item>
+					<item id="4"><![CDATA[39]]></item>
+					<item id="5"><![CDATA[40]]></item>
+					<item id="6"><![CDATA[36]]></item>
+					<item id="7"><![CDATA[87]]></item>
+					<item id="8"><![CDATA[88]]></item>
+					<item id="9"><![CDATA[145]]></item>
+					<item id="10"><![CDATA[144]]></item>
+					<item id="11"><![CDATA[42]]></item>
+					<item id="12"><![CDATA[43]]></item>
+					<item id="13"><![CDATA[44]]></item>
+				</item>
+			</item>
+			<item id="48">
+				<item id="displayorder"><![CDATA[56]]></item>
+				<item id="title"><![CDATA[回帖強制認證板塊]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[reply_limit_forums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[38]]></item>
+					<item id="2"><![CDATA[82]]></item>
+					<item id="3"><![CDATA[83]]></item>
+					<item id="4"><![CDATA[39]]></item>
+					<item id="5"><![CDATA[40]]></item>
+					<item id="6"><![CDATA[36]]></item>
+					<item id="7"><![CDATA[87]]></item>
+					<item id="8"><![CDATA[88]]></item>
+					<item id="9"><![CDATA[145]]></item>
+					<item id="10"><![CDATA[144]]></item>
+					<item id="11"><![CDATA[42]]></item>
+					<item id="12"><![CDATA[43]]></item>
+					<item id="13"><![CDATA[44]]></item>
+				</item>
+			</item>
+			<item id="49">
+				<item id="displayorder"><![CDATA[57]]></item>
+				<item id="title"><![CDATA[認證免打擾用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[no_tip_group]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="50">
+				<item id="displayorder"><![CDATA[58]]></item>
+				<item id="title"><![CDATA[發帖強制認證]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[post_verify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="51">
+				<item id="displayorder"><![CDATA[59]]></item>
+				<item id="title"><![CDATA[是否開啟回帖認證]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[reply_verify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="52">
+				<item id="displayorder"><![CDATA[60]]></item>
+				<item id="title"><![CDATA[認證發帖不受限制用戶組 ...]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[no_limit]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="53">
+				<item id="displayorder"><![CDATA[71]]></item>
+				<item id="title"><![CDATA[認證回帖不受限制用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[reply_nolimit_group]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="54">
+				<item id="displayorder"><![CDATA[73]]></item>
+				<item id="title"><![CDATA[認證系統提醒內容]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[noticetemplate]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[恭喜您，您完成了網站手機認證，您將獲得更高的社區權限和積分。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="55">
+				<item id="displayorder"><![CDATA[74]]></item>
+				<item id="title"><![CDATA[開啟認證獎勵積分]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[openaddextcredit]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="56">
+				<item id="displayorder"><![CDATA[75]]></item>
+				<item id="title"><![CDATA[認證獎勵積分類型]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[extcredit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="57">
+				<item id="displayorder"><![CDATA[76]]></item>
+				<item id="title"><![CDATA[認證後獎勵積分數量]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[addnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="58">
+				<item id="displayorder"><![CDATA[78]]></item>
+				<item id="title"><![CDATA[是否開啟回帖短信提醒]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopensmsnotice]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="59">
+				<item id="displayorder"><![CDATA[79]]></item>
+				<item id="title"><![CDATA[是否開啟回帖郵箱提醒]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopenemailnotice]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="60">
+				<item id="displayorder"><![CDATA[80]]></item>
+				<item id="title"><![CDATA[郵箱提醒板塊]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[emailnoticeforum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[38]]></item>
+					<item id="2"><![CDATA[82]]></item>
+					<item id="3"><![CDATA[83]]></item>
+					<item id="4"><![CDATA[39]]></item>
+					<item id="5"><![CDATA[40]]></item>
+					<item id="6"><![CDATA[36]]></item>
+					<item id="7"><![CDATA[87]]></item>
+					<item id="8"><![CDATA[88]]></item>
+					<item id="9"><![CDATA[145]]></item>
+					<item id="10"><![CDATA[144]]></item>
+					<item id="11"><![CDATA[42]]></item>
+					<item id="12"><![CDATA[43]]></item>
+					<item id="13"><![CDATA[44]]></item>
+				</item>
+			</item>
+			<item id="61">
+				<item id="displayorder"><![CDATA[91]]></item>
+				<item id="title"><![CDATA[短信提醒板塊]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[smsnoticeforum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[38]]></item>
+					<item id="2"><![CDATA[82]]></item>
+					<item id="3"><![CDATA[83]]></item>
+					<item id="4"><![CDATA[39]]></item>
+					<item id="5"><![CDATA[40]]></item>
+					<item id="6"><![CDATA[36]]></item>
+					<item id="7"><![CDATA[87]]></item>
+					<item id="8"><![CDATA[88]]></item>
+					<item id="9"><![CDATA[145]]></item>
+					<item id="10"><![CDATA[144]]></item>
+					<item id="11"><![CDATA[42]]></item>
+					<item id="12"><![CDATA[43]]></item>
+					<item id="13"><![CDATA[44]]></item>
+				</item>
+			</item>
+			<item id="62">
+				<item id="displayorder"><![CDATA[92]]></item>
+				<item id="title"><![CDATA[短信提醒用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[smsnoticegroups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[9]]></item>
+					<item id="2"><![CDATA[10]]></item>
+					<item id="3"><![CDATA[11]]></item>
+					<item id="4"><![CDATA[12]]></item>
+					<item id="5"><![CDATA[13]]></item>
+					<item id="6"><![CDATA[14]]></item>
+					<item id="7"><![CDATA[15]]></item>
+					<item id="8"><![CDATA[20]]></item>
+					<item id="9"><![CDATA[16]]></item>
+					<item id="10"><![CDATA[17]]></item>
+					<item id="11"><![CDATA[18]]></item>
+					<item id="12"><![CDATA[19]]></item>
+					<item id="13"><![CDATA[1]]></item>
+					<item id="14"><![CDATA[2]]></item>
+					<item id="15"><![CDATA[3]]></item>
+					<item id="16"><![CDATA[4]]></item>
+					<item id="17"><![CDATA[5]]></item>
+					<item id="18"><![CDATA[6]]></item>
+					<item id="19"><![CDATA[7]]></item>
+					<item id="20"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="63">
+				<item id="displayorder"><![CDATA[93]]></item>
+				<item id="title"><![CDATA[郵箱提醒用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[emailnoticegroups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[9]]></item>
+					<item id="2"><![CDATA[10]]></item>
+					<item id="3"><![CDATA[11]]></item>
+					<item id="4"><![CDATA[12]]></item>
+					<item id="5"><![CDATA[13]]></item>
+					<item id="6"><![CDATA[14]]></item>
+					<item id="7"><![CDATA[15]]></item>
+					<item id="8"><![CDATA[20]]></item>
+					<item id="9"><![CDATA[16]]></item>
+					<item id="10"><![CDATA[17]]></item>
+					<item id="11"><![CDATA[18]]></item>
+					<item id="12"><![CDATA[19]]></item>
+					<item id="13"><![CDATA[1]]></item>
+					<item id="14"><![CDATA[2]]></item>
+					<item id="15"><![CDATA[3]]></item>
+					<item id="16"><![CDATA[4]]></item>
+					<item id="17"><![CDATA[5]]></item>
+					<item id="18"><![CDATA[6]]></item>
+					<item id="19"><![CDATA[7]]></item>
+					<item id="20"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="64">
+				<item id="displayorder"><![CDATA[94]]></item>
+				<item id="title"><![CDATA[短信單用戶每天最多條數]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[smsnoticedaylimit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[20]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="65">
+				<item id="displayorder"><![CDATA[95]]></item>
+				<item id="title"><![CDATA[郵箱單用戶每天最多條數]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[emailnoticedaylimit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="66">
+				<item id="displayorder"><![CDATA[96]]></item>
+				<item id="title"><![CDATA[短信發送間隔（小時）]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[smstimeslimit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="67">
+				<item id="displayorder"><![CDATA[97]]></item>
+				<item id="title"><![CDATA[郵箱發送間隔（小時）]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[emailtimeslimit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="68">
+				<item id="displayorder"><![CDATA[98]]></item>
+				<item id="title"><![CDATA[短信提醒強制發送]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[smsnoticemustsend]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="69">
+				<item id="displayorder"><![CDATA[99]]></item>
+				<item id="title"><![CDATA[郵箱提醒強制發送]]></item>
+				<item id="description"><![CDATA[開啟後，用戶選擇是否接收郵箱選項將失效。不管用戶是否選擇郵箱提醒，系統都將會發送提醒信息。]]></item>
+				<item id="variable"><![CDATA[emailnoticemustsend]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="70">
+				<item id="displayorder"><![CDATA[111]]></item>
+				<item id="title"><![CDATA[郵箱模板]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[emailnoticetemplateid]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[尊敬的用戶您好，玩站網您的帖子有新回復，請登錄查收。<a href="http://www.playzhan.com/">http://www.playzhan.com/</a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="71">
+				<item id="displayorder"><![CDATA[112]]></item>
+				<item id="title"><![CDATA[開啟發送短信扣減積分數量 ...]]></item>
+				<item id="description"><![CDATA[短信發送成功後，扣減積分。]]></item>
+				<item id="variable"><![CDATA[smsnoticeextcredit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="72">
+				<item id="displayorder"><![CDATA[113]]></item>
+				<item id="title"><![CDATA[開啟郵箱扣減積分數量 ...]]></item>
+				<item id="description"><![CDATA[發送郵件成功後，扣減積分。]]></item>
+				<item id="variable"><![CDATA[emailnoticeextcredit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="sendlog"><![CDATA[發送日志]]></item>
+				<item id="phone_isnot_exists"><![CDATA[請輸入手機號]]></item>
+				<item id="sid"><![CDATA[編號]]></item>
+				<item id="uid"><![CDATA[uid]]></item>
+				<item id="username_not_vailid"><![CDATA[用戶名已存在或者不合法]]></item>
+				<item id="mobile"><![CDATA[手機號]]></item>
+				<item id="issuccess"><![CDATA[是否發送]]></item>
+				<item id="type"><![CDATA[類型]]></item>
+				<item id="dateline"><![CDATA[發送時間]]></item>
+				<item id="set_error"><![CDATA[密碼修改失敗]]></item>
+				<item id="password_too_simple"><![CDATA[密碼太簡單了，長度必須大于6位數]]></item>
+				<item id="changesuccess"><![CDATA[<span style="color:green;">修改密碼成功\</span>]]></item>
+				<item id="changeerror"><![CDATA[<span style="color:#cdcdcd;">未完成</span>]]></item>
+				<item id="nouser"><![CDATA[沒有查找到相應用戶]]></item>
+				<item id="searchuser"><![CDATA[搜索用戶]]></item>
+				<item id="username"><![CDATA[用戶名]]></item>
+				<item id="sendwhy"><![CDATA[發送目的]]></item>
+				<item id="offverify"><![CDATA[解綁(如重新綁定成功\才解綁成功\)]]></item>
+				<item id="reverify"><![CDATA[重新綁定]]></item>
+				<item id="none"><![CDATA[未知]]></item>
+				<item id="condition"><![CDATA[狀態]]></item>
+				<item id="fail"><![CDATA[<span style="color:#cdcdcd;">未完成</span>]]></item>
+				<item id="setsuccess"><![CDATA[設置成功\，您可按照上面提示優化設置]]></item>
+				<item id="change"><![CDATA[更換綁定手機]]></item>
+				<item id="have_verify"><![CDATA[此手機號已經綁定過其他賬號，請更換手機號重試]]></item>
+				<item id="verify_error"><![CDATA[驗證錯誤，請檢查後台驗證設置是否有誤]]></item>
+				<item id="newold_mobile_cannot_same"><![CDATA[新舊手機號不能相同]]></item>
+				<item id="dataeror_or_not"><![CDATA[參數錯誤或者不完整]]></item>
+				<item id="updatesuccess"><![CDATA[修改成功\]]></item>
+				<item id="senderror"><![CDATA[沒有發送成功\]]></item>
+				<item id="verifyerror_verify_notsuccess"><![CDATA[驗證不正確，認證失敗]]></item>
+				<item id="verify_error_please_checksetting"><![CDATA[驗證錯誤，請檢查後台驗證設置是否有誤]]></item>
+				<item id="ip"><![CDATA[ip地址]]></item>
+				<item id="report"><![CDATA[︰總計請求<span style="color:red;">{num}</span>次，發送成功\<span style="color:red;">{send_num}</span>次，成功\注冊<span style="color:red;">{register_num}</span>個會員,<span style="color:red;">除接口不穩定原因造成數據異常外，扣費一般按照“發送成功\”次數扣費。</span>]]></item>
+				<item id="user_register"><![CDATA[用戶注冊]]></item>
+				<item id="user_verify"><![CDATA[手機認證]]></item>
+				<item id="user_getpasswd"><![CDATA[找回密碼]]></item>
+				<item id="other"><![CDATA[其他]]></item>
+				<item id="sendstatus"><![CDATA[發送狀態]]></item>
+				<item id="verifystatus"><![CDATA[認證狀態]]></item>
+				<item id="usestatus"><![CDATA[使用狀態]]></item>
+				<item id="register_success"><![CDATA[已注冊]]></item>
+				<item id="register_unsuccess"><![CDATA[未完成注冊]]></item>
+				<item id="verify_success"><![CDATA[認證成功\]]></item>
+				<item id="verify_unsuccess"><![CDATA[未完成認證]]></item>
+				<item id="colorverify_success"><![CDATA[<span style="color:green;">認證成功\</span>]]></item>
+				<item id="colorverify_unsuccess"><![CDATA[<span style="color:#cdcdcd;">未完成認證</span>]]></item>
+				<item id="getpwd_success"><![CDATA[已修改密碼]]></item>
+				<item id="getpwd_unsuccess"><![CDATA[未完成密碼修改]]></item>
+				<item id="sendsuccess"><![CDATA[<span style="color:green;">已發送</span>]]></item>
+				<item id="sendunsuccess"><![CDATA[<span style="color:#cdcdcd;">未發送</span>]]></item>
+				<item id="too_offen"><![CDATA[您操作太頻繁了，]]></item>
+				<item id="have_register"><![CDATA[您已經注冊賬號了，可直接登錄]]></item>
+				<item id="send_error"><![CDATA[發送失敗，請重試]]></item>
+				<item id="send_success"><![CDATA[發送成功\]]></item>
+				<item id="data_error"><![CDATA[參數錯誤，驗證碼不存在]]></item>
+				<item id="verify_timeout"><![CDATA[驗證失效了，請重試]]></item>
+				<item id="is_used"><![CDATA[驗證碼已經失效]]></item>
+				<item id="servicetiptitle"><![CDATA[溫馨提示]]></item>
+				<item id="search"><![CDATA[搜索]]></item>
+				<item id="verify"><![CDATA[認證]]></item>
+				<item id="mobileverify"><![CDATA[手機認證]]></item>
+				<item id="success"><![CDATA[<span style="color:green;">成功\</span>]]></item>
+				<item id="verifytips"><![CDATA[<li>開啟認證後，會自動關聯用戶欄目手機號至認證信息，也就是會修改系統的設置，同一手機號將只允許\認證一次，如手機號已經完成認證，將提示更換手機號</li>
+    <li>查看認證設置，可在後台“<a style="color:red;font-size16px;font-weight:bold" href="admin.php?frames=yes&action=verify&highlight=%E8%AE%A4%E8%AF%81" target="_blank">用戶認證</a>”查看</li>
+    <li>認證的圖標，需要自行上傳，上傳地址︰“<a style="color:red;font-size16px;font-weight:bold" href="admin.php?frames=yes&action=verify&highlight=%E8%AE%A4%E8%AF%81" target="_blank">點擊這里，然後點擊手機認證設置的編輯</a>”</li>]]></item>
+				<item id="opendone"><![CDATA[<div style="text-align:center; margin-top:20px;"><input onclick="return false;" id="jiesubmit" type="submit" name="jiesubmit" value="已完成開啟" style=" border:none; padding:5px 10px;width:200px;height:40px;text-align:center;font-size:18px;padding:5px; color:#fff;background:#cdcdcd;" /></div>]]></item>
+				<item id="open"><![CDATA[<div style="text-align:center; margin-top:20px;"><input id="jiesubmit" type="submit" name="jiesubmit" value="一鍵開啟手機認證" style=" border:none; padding:5px 10px;width:200px;height:40px;text-align:center;font-size:18px;padding:5px; color:#fff;background:#09C" /></div>]]></item>
+				<item id="dataeror"><![CDATA[參數錯誤。]]></item>
+				<item id="servicetips"><![CDATA[
+    <li>使用幫助手冊（會及時更新遇到的問題和解決方案）︰<a style="color:red;" href="http://www.playzhan.com/p/1400" target="blank" style="color:red;">新手幫助使用文檔</a></li>
+    <li>需求和bug交流（您有新插件需求，功\能擴展需求可提交我們）︰<a style="color:red;" href="http://url.cn/Jt2oC5" target="blank">需求和意見提交</a></li>
+    <li>技術客服qq︰<a style="color:red;" href="tencent://message/?uin=2575163778&site=%E7%8E%A9%E7%AB%99%E7%BD%91&menu=yes">2575163778</a></li>
+  ]]></item>
+				<item id="verify_servicetips"><![CDATA[
+    <li>手機號修改會自動同步安米表，但是取消認證則安米數據不會取消。</li>
+    <li>為了方便管理，此後台是唯一能允許\一個手機號重復認證的地方，如一個手機號多次被綁定，可在此處搜索解綁。</li>
+  ]]></item>
+				<item id="please_verify_before_post"><![CDATA[請完成手機短信認證後再發帖]]></item>
+				<item id="mobile_have_verify"><![CDATA[此手機號已經綁定過其他賬號，請更換手機號重試]]></item>
+				<item id="verifycode"><![CDATA[驗證碼]]></item>
+				<item id="smsnotice"><![CDATA[短信回帖提醒]]></item>
+				<item id="smsgroupnotice"><![CDATA[短信群發]]></item>
+				<item id="user_and_mobile_is_not_exists"><![CDATA[用戶名和手機號不存在或不匹配]]></item>
+				<item id="editpwdsuccess"><![CDATA[恭喜您，您成功\修改了密碼。]]></item>
+				<item id="searchtips"><![CDATA[如用戶名、手機號、ip地址]]></item>
+				<item id="searchtipsnoip"><![CDATA[如用戶名、手機號]]></item>
+				<item id="searchtitle"><![CDATA[搜索關鍵詞︰]]></item>
+				<item id="cat"><![CDATA[搜索關鍵詞︰]]></item>
+				<item id="verifycheck"><![CDATA[選擇認證狀態]]></item>
+				<item id="please_input_mobile"><![CDATA[請輸入11位手機號碼]]></item>
+				<item id="please_input_username"><![CDATA[請輸入用戶名]]></item>
+				<item id="please_input_password"><![CDATA[請輸入密碼]]></item>
+				<item id="please_input_password1"><![CDATA[請輸入重復密碼]]></item>
+				<item id="wrongmobile_number"><![CDATA[手機號碼格式錯誤]]></item>
+				<item id="username_password_wrong"><![CDATA[用戶名或密碼錯誤]]></item>
+				<item id="please_get_verifycode"><![CDATA[請點擊驗證碼，獲取正確的圖片驗證碼]]></item>
+				<item id="please_input_verifycode"><![CDATA[請輸入短信驗證碼]]></item>
+				<item id="username_wrong"><![CDATA[用戶名不得小于3個字符]]></item>
+				<item id="password_wrong"><![CDATA[密碼不得小于6個字符]]></item>
+				<item id="wrongverify"><![CDATA[驗證碼不得為空]]></item>
+				<item id="pwd_is_not_same"><![CDATA[兩次密碼不相同]]></item>
+				<item id="mobile_tips"><![CDATA[請填寫11位手機號]]></item>
+				<item id="choosetip"><![CDATA[請選擇]]></item>
+				<item id="getsmsnotice"><![CDATA[接受短信提醒]]></item>
+				<item id="getemailnotice"><![CDATA[接受郵件提醒]]></item>
+				<item id="please_input_right_info"><![CDATA[請填寫驗證碼]]></item>
+				<item id="fogetpwd_getpasswd_bymobile"><![CDATA[忘記密碼？點擊通過手機號找回密碼]]></item>
+				<item id="fogetemail_getpasswd_bymobile"><![CDATA[忘記手機號？點擊通過郵箱找回密碼]]></item>
+				<item id="fogetmobile_getpasswd_byemail"><![CDATA[忘記郵箱？點擊通過手機號找回密碼]]></item>
+				<item id="please_choose_group"><![CDATA[請選擇您需要搜索的用戶組]]></item>
+				<item id="please_choose_template"><![CDATA[請輸入您當前已經通過阿里大魚審核的群發短信模板id]]></item>
+				<item id="groupsms_addtips"><![CDATA[搜索到{num}個手機號，是否添加到發送短信隊列？]]></item>
+				<item id="add_into_sms"><![CDATA[添加到發送短信隊列]]></item>
+				<item id="add_groupsms_done"><![CDATA[填完完畢，系統已經將發送短信添加入發送隊列]]></item>
+				<item id="step_tips"><![CDATA[當前為第{curpage}批次手機號，一共有{pages}批次手機號]]></item>
+				<item id="templateid"><![CDATA[短信模板ID]]></item>
+				<item id="mobiles"><![CDATA[手機號]]></item>
+				<item id="carrier"><![CDATA[歸屬地]]></item>
+				<item id="mobiles_desc"><![CDATA[輸入需要發送信息的手機號，一行一個]]></item>
+				<item id="templateid_desc"><![CDATA[短信模板ID決定了發送短信的格式，因此必須通過阿里大魚審核後的短信模板才能作為發送的短信。]]></item>
+				<item id="groupid"><![CDATA[用戶組id]]></item>
+				<item id="doact"><![CDATA[操作]]></item>
+				<item id="clear_verify_success"><![CDATA[取消認證成功\]]></item>
+				<item id="edit_verify"><![CDATA[修改認證]]></item>
+				<item id="clear_verify"><![CDATA[清除認證]]></item>
+				<item id="mobile_and_verify_user_is_not_exists"><![CDATA[此用戶手機號與您當前登錄用戶不一致]]></item>
+				<item id="haven_verify_thissuer"><![CDATA[該用戶已經完成了認證]]></item>
+				<item id="sce_verify_error"><![CDATA[手機安全驗證錯誤，請重試]]></item>
+				<item id="you_must_verify_before_tranfer"><![CDATA[您必須先完成手機認證，才能進行積分轉讓]]></item>
+				<item id="verify_before_post"><![CDATA[本版塊要求手機認證用戶才能發帖]]></item>
+				<item id="sms_sce_verify"><![CDATA[安全校驗]]></item>
+				<item id="error_msg"><![CDATA[錯誤原因]]></item>
+				<item id="templatevartips"><![CDATA[<a href="admin.php?action=plugins&operation=config&do=145&identifier=zhanmishu_sms&pmod=templateadmin">添加<span style="color:red;">《短信模板》</span>或者管理<span style="color:red;">《短信模板變量》</span></a>]]></item>
+				<item id="smsbaosendsuccess"><![CDATA[短信發送成功\]]></item>
+				<item id="smsbaosenddataerror"><![CDATA[參數不全]]></item>
+				<item id="smsbaosendservernot_support"><![CDATA[服務器空間不支持,請確認支持curl或者fsocket，聯系您的空間商解決或者更換空間！]]></item>
+				<item id="smsbaosendusernotexists"><![CDATA[賬號不存在]]></item>
+				<item id="smsbaosendpleasecharge"><![CDATA[余額不足]]></item>
+				<item id="smsbaosendpleaseuser_outofdate"><![CDATA[用戶過期]]></item>
+				<item id="smsbaosendpleaseiplimit"><![CDATA[ip地址限制]]></item>
+				<item id="smsbaosendcontent_limit"><![CDATA[敏感詞限制]]></item>
+				<item id="please_finish_templatename"><![CDATA[請填寫短信模板名稱，方便後期識別管理]]></item>
+				<item id="please_finish_templateid"><![CDATA[您選擇的是“阿里大魚”接口，必須填寫模板Id才能發送短信，請填寫模板ID]]></item>
+				<item id="please_finish_templateintro"><![CDATA[您選擇的是“短信寶”接口，必須填寫短信模板內容]]></item>
+				<item id="please_finish_sign"><![CDATA[請填寫短信“簽名”信息，這個是必填的。]]></item>
+				<item id="please_finish_api"><![CDATA[請選擇短信發送api，這個是必須選擇的]]></item>
+				<item id="please_finish_types"><![CDATA[請選擇短短信類別，這個是必須選擇的]]></item>
+				<item id="template_edit_success"><![CDATA[短信模板編輯成功\，請仔細查看是否有需要補全的信息]]></item>
+				<item id="vars_edit_success"><![CDATA[模板變量編輯成功\]]></item>
+				<item id="templateedittips"><![CDATA[<li>短信模板系統可自動匹配的變量︰</li>
+    <li>短信模板ID︰很重要，如果是調用模板發送短信，如阿里大魚，這個模板id設置不正確會導致短信發送失敗</li>
+    <li>短信模板內容︰很重要，接口如調用模板id，以模板id為準，如直接以內容發送短信，則直接按照此模板內容拼接字符發送</li>
+    <li>關聯功\能︰設置短信模板用途，如注冊，則表示此模板用于用戶注冊</li>]]></item>
+				<item id="templateedittips_title"><![CDATA[短信模板，以前在插件的“設置”里面，考慮到後期功\能復雜性，分離出來單獨管理。]]></item>
+				<item id="templateadmin"><![CDATA[短信模板管理]]></item>
+				<item id="delete"><![CDATA[刪除]]></item>
+				<item id="templatename"><![CDATA[模板名稱]]></item>
+				<item id="templateintro"><![CDATA[短信模板內容]]></item>
+				<item id="sign"><![CDATA[短信簽名]]></item>
+				<item id="types"><![CDATA[關聯功\能]]></item>
+				<item id="apis"><![CDATA[接口選擇]]></item>
+				<item id="isopen"><![CDATA[是否啟用]]></item>
+				<item id="addnewtemplate"><![CDATA[添加新模板]]></item>
+				<item id="addnewtemplatevar"><![CDATA[添加新模板變量]]></item>
+				<item id="submit"><![CDATA[提交]]></item>
+				<item id="varsedittips"><![CDATA[<li>請勿在變量中添加特殊符號,不支持空格,如: , . # / : - ，。</li><li>變量格式如${name}，不能使用${email},${mobile},${id},${nick},${site}</li>]]></item>
+				<item id="varsedittips_title"><![CDATA[變量名稱格式必須為"${varname}"格式，如變量值包含此格式，則表示此變量值也包含變量]]></item>
+				<item id="varsadmin"><![CDATA[內置變量管理]]></item>
+				<item id="varname"><![CDATA[變量名稱]]></item>
+				<item id="varvalue"><![CDATA[變量值]]></item>
+				<item id="varintro"><![CDATA[備注說明]]></item>
+				<item id="alidayu"><![CDATA[阿里大魚]]></item>
+				<item id="smsbao"><![CDATA[短信寶]]></item>
+				<item id="mydevelop"><![CDATA[自助開發]]></item>
+				<item id="templatestr1"><![CDATA[，模板配置︰]]></item>
+				<item id="templatestr2"><![CDATA[，傳參︰]]></item>
+				<item id="systemvar1"><![CDATA[系統內置變量為${username},${time},${code}(系統自動隨機生成)，更多變量可自己手動添加，如網站名稱、論壇名稱等]]></item>
+				<item id="systemvar2"><![CDATA[如注冊、認證等短信，自動調用當前登錄用戶名，如訂單、群發等自動調用接受短信一方用戶名]]></item>
+				<item id="systemvar3"><![CDATA[發送時候隨機生成6位數字驗證碼]]></item>
+				<item id="systemvar4"><![CDATA[發送的時間，以短信發送時間而定]]></item>
+				<item id="signleft"><![CDATA[【]]></item>
+				<item id="signright"><![CDATA[】]]></item>
+				<item id="taiwan_sanzhu"><![CDATA[台灣三竹]]></item>
+				<item id="zhanxintong"><![CDATA[展信通]]></item>
+				<item id="webchinses"><![CDATA[中國網建]]></item>
+				<item id="pleabuy"><![CDATA[<h2>檢測到您正在使用盜版，請購買正版支持。</h2><li>盜版可能導致我們放棄更新支持此插件，降低更新插件頻率，降低修復BUG頻率</li><li>太多盜版我們將被迫加密插件進行銷售</li><li>盜版也可能導致網站數據都是、被掛馬被黑等各種安全問題。</li>]]></item>
+				<item id="add_blackmobile_tips_intro"><![CDATA[添加手機號黑名單，黑名單內手機號將無法發送短信]]></item>
+				<item id="add_blackmobile_tips"><![CDATA[手機號黑名單管理]]></item>
+				<item id="add"><![CDATA[添加]]></item>
+				<item id="del"><![CDATA[移除]]></item>
+				<item id="blackitem"><![CDATA[請輸入需要操作的手機號]]></item>
+				<item id="isblack"><![CDATA[黑名單]]></item>
+				<item id="black"><![CDATA[黑名單]]></item>
+				<item id="delblack"><![CDATA[移除黑名單]]></item>
+				<item id="act"><![CDATA[操作]]></item>
+				<item id="mobile_is_in_blacklist"><![CDATA[手機號異常，建議更換其他手機號]]></item>
+				<item id="aliyunsms"><![CDATA[阿里雲市場-阿里短信服務]]></item>
+				<item id="alismsapi"><![CDATA[阿里官網-短信服務]]></item>
+				<item id="this_mobile_is_not_allow_in_area"><![CDATA[此手機號歸屬地不在允許\注冊範圍內，有疑問可聯系管理員或網站客服]]></item>
+				<item id="ali_message_smsapi"><![CDATA[阿里雲-消息服務短信]]></item>
+				<item id="qcloudsms"><![CDATA[騰訊雲-國內接口]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="username"><![CDATA[用戶名]]></item>
+				<item id="password"><![CDATA[密碼]]></item>
+				<item id="mobile_number"><![CDATA[手機號]]></item>
+				<item id="verifycode"><![CDATA[驗證碼]]></item>
+				<item id="smsverifycode"><![CDATA[短信驗證碼]]></item>
+				<item id="getverifycode"><![CDATA[獲取驗證碼]]></item>
+				<item id="registerandlogin"><![CDATA[注冊並登陸]]></item>
+				<item id="safe_mobile_number"><![CDATA[安全手機號]]></item>
+				<item id="close"><![CDATA[關閉]]></item>
+				<item id="please_input_mobile"><![CDATA[請輸入11位手機號碼]]></item>
+				<item id="please_input_username"><![CDATA[請輸入用戶名]]></item>
+				<item id="please_input_password"><![CDATA[請輸入密碼]]></item>
+				<item id="wrongmobile_number"><![CDATA[手機號碼格式錯誤]]></item>
+				<item id="username_password_wrong"><![CDATA[用戶名或密碼錯誤]]></item>
+				<item id="username_wrong"><![CDATA[用戶名不得小于3個字符]]></item>
+				<item id="password_wrong"><![CDATA[密碼不得小于6個字符]]></item>
+				<item id="wrongverify"><![CDATA[驗證碼不得為空]]></item>
+				<item id="mobile_tips"><![CDATA[請填寫11位手機號]]></item>
+				<item id="fastmobileregister"><![CDATA[手機快速注冊(8秒注冊)]]></item>
+				<item id="fastmobileregister_tip"><![CDATA[注冊新用戶(84%的用戶8秒鐘完成注冊)]]></item>
+				<item id="send"><![CDATA[發送]]></item>
+				<item id="mobile_verify"><![CDATA[短信驗證碼]]></item>
+				<item id="input_tips"><![CDATA[請輸入11位手機號碼]]></item>
+				<item id="input_tips_sec"><![CDATA[請在" + curCount + "秒內輸入驗證碼]]></item>
+				<item id="mobile_input_tips_sec"><![CDATA[" + curCount + "秒]]></item>
+				<item id="resend"><![CDATA[重新發送]]></item>
+				<item id="mobile_lable"><![CDATA[手機號:]]></item>
+				<item id="submit_getpwd"><![CDATA[提交找回密碼]]></item>
+				<item id="changemobile"><![CDATA[更換認證手機:]]></item>
+				<item id="mobileverify"><![CDATA[手機認證:]]></item>
+				<item id="mobileverifymobile"><![CDATA[手機認證]]></item>
+				<item id="oldmobile"><![CDATA[舊手機號:]]></item>
+				<item id="oldmobilemobile"><![CDATA[舊手機號]]></item>
+				<item id="newmobile"><![CDATA[新手機號:]]></item>
+				<item id="newmobilemobile"><![CDATA[新手機號]]></item>
+				<item id="submit"><![CDATA[提交]]></item>
+				<item id="getpasswd_bymobile"><![CDATA[手機短信找回密碼]]></item>
+				<item id="newpasswd"><![CDATA[新密碼:]]></item>
+				<item id="renewpasswd"><![CDATA[重復新密碼:]]></item>
+				<item id="mobile"><![CDATA[手機號:]]></item>
+				<item id="fogetemail_getpasswd_bymobile"><![CDATA[忘記手機號？點擊通過郵箱找回密碼]]></item>
+				<item id="fogetmobile_getpasswd_byemail"><![CDATA[忘記郵箱？點擊通過手機號找回密碼]]></item>
+				<item id="getpasswd_byemail"><![CDATA[郵箱找回密碼]]></item>
+				<item id="passwd_not_right"><![CDATA[密碼長度應大于6位]]></item>
+				<item id="newpasswd_not_right"><![CDATA[新密碼長度應大于6位]]></item>
+				<item id="newandold_passwd_not_same"><![CDATA[新舊密碼不相同]]></item>
+				<item id="please_input_passwd"><![CDATA[請輸入正確的手機號]]></item>
+				<item id="passwd_edit_success"><![CDATA[密碼修改正確]]></item>
+				<item id="tips"><![CDATA[提示信息]]></item>
+				<item id="please_input_right_info"><![CDATA[請填寫圖片驗證碼]]></item>
+				<item id="verify_success"><![CDATA[恭喜您，您已完成手機綁定成。]]></item>
+				<item id="verify_mobile"><![CDATA[綁定手機]]></item>
+				<item id="change_mobile"><![CDATA[更換綁定手機]]></item>
+				<item id="please_finish_mobile"><![CDATA[請完成綁定手機號，獲取更高的用戶權限]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

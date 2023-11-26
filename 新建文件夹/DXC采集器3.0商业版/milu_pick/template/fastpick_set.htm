@@ -1,0 +1,92 @@
+<!--{template milu_pick:pick_header}-->
+
+<form id="form12" name="form12" action="?{PICK_GO}fast_pick&myac=fastpick_set" method="post"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+ <table class="tb tb2 " id="tips">
+<tbody>
+</tbody></table>
+<table class="tb tb2 ">
+<tbody>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:open_fastpick}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'fp_open', 'js' => array('show_hide(\'show_open_fastpick\',\'\',1);', 'show_hide(\'show_open_fastpick\',\'\',2);'),  'int_val' => 2, 'lang' => array('yes', 'no')), $info);}</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+
+<tr class="noborder"  id="show_open_fastpick" {if $info['fp_open'] == 2}style="display:none"{/if}>
+  <td class="vtop rowform"><input value="1" {if $info['fp_open_mod'][0]}checked="checked"{/if}  name="set[fp_open_mod][]" type="checkbox" id="fp_open_mod1" />{lang milu_pick:protal}  <input {if $info['fp_open_mod'][1]}checked="checked"{/if}  name="set[fp_open_mod][]" type="checkbox" value="2" id="fp_open_mod2" />{lang milu_pick:bbs}  </td>
+  <td class="vtop tips2" s="1"><p>{lang milu_pick:show_open_fastpick_notice}</p></td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:use_usergroup}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{eval echo user_group_select('set[fp_usergroup]', $info['fp_usergroup']);} </td>
+<td s="1" class="vtop tips2"> {lang milu_pick:use_usergroup_notice}</td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:use_fid}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">{$info['forumselect']}</td>
+<td s="1" class="vtop tips2"> {lang milu_pick:use_usergroup_notice} </td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:open_from}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'fp_article_from', 'int_val' => 2, 'lang' => array('yes', 'no')), $info);}</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+
+
+{if !VIP}
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_word_replace}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'fp_word_replace_open', 'int_val' => 2, 'lang' => array('yes', 'no')), $info);}</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+{/if}
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:open_evo_get}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'fp_open_auto', 'int_val' => 2, 'lang' => array('yes', 'no')), $info);}</td>
+<td s="1" class="vtop tips2">{lang milu_pick:evo_get_notice}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:auto_learn}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'fp_open_evo', 'int_val' => 2, 'lang' => array('yes', 'no')), $info);}</td>
+<td s="1" class="vtop tips2">{lang milu_pick:learn_notice}</td>
+</tr>
+
+
+<tr  class="noborder"><td class="vtop rowform"><div class="fixsel">
+<button type="submit" value="1" name="submit" class="button">{lang milu_pick:submit}</button>
+</div></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<td colspan="15"></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

@@ -1,0 +1,98 @@
+<!--{template common/header}-->
+<!--[name]{Week_Design_list_commodity_wide}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<style>
+.ct2 { border:0; padding-bottom:30px;} 
+.wk_pro_main {width:280px;}
+.wk_pro_img img{width:260px;}
+.wk_pro_main_name{ width:240px; }
+</style>
+
+</div>
+<div class="wk_list_box wk_list_box2">
+    <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+    <div class="bm_h">
+        <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]">{lang article_publish}</a>
+    </div>
+    <!--{/if}-->
+</div>
+<div class="wk_blog_tab">
+	<ul>
+    <!--{if $wk_menu}-->
+        <!--{if $cat[others]}-->
+            <!--{loop $cat[others] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{/if}-->
+    <!--{else}-->
+        <!--{if $cat[subs]}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[others] $value}-->
+                <!--{if $value['catid'] == $cat['catid']}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" class="a">$week_lang[58]</a></li>
+                <!--{/if}-->
+                <!--{/loop}-->
+            <!--{/if}-->
+            <!--{loop $cat[subs] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{else}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[ups] $value}--><!--{if $value['catid'] == $cat['upid']}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]">$week_lang[58]</a></li><!--{/if}--><!--{/loop}-->
+                <!--{loop $cat[others] $value}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                <!--{/loop}-->
+            <!--{/if}-->
+        <!--{/if}-->
+    <!--{/if}-->
+    </ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="wk_ymbg">
+<div id="wp" class="wp">
+
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl">
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+        <div class="wk_content_right_m">
+            <div class="wk_pro_m">
+            	<!--{eval $wt=1}-->
+                <!--{loop $list['list'] $value}-->
+                <!--{eval $highlight = article_title_style($value);}-->
+                <!--{eval $article_url = fetch_article_url($value);}-->
+                <div class="wk_pro_main" {if is_int($wt/4)}style="margin-right:0;"{/if}>
+                    <div class="wk_pro_img"><a href="$article_url" target="_blank"><!--{if $value[pic]}--><img src="$value[pic]" alt="$value[title]" /><!--{else}--><img src="$_G['style']['imgdir']/nophoto.gif" alt="$value[title]" /><!--{/if}--></a></div>
+                    <div class="wk_pro_main_name">
+                        <span class="wk_pro_main_name2"><a href="$article_url" title="$value[title]" target="_blank">$value[title]</a></span>
+                    </div>
+                    <div class="wk_pro_main_cnt">
+                        <span class="wk_pro_main_cnt2">{echo cutstr($value[summary],136)}</span>
+                    </div>
+                    <div class="wk_pro_main_more"><a href="$article_url" title="$week_lang[74]" target="_blank">$week_lang[74]</a> </div>
+                </div>
+                <!--{eval $wt++}-->	
+                <!--{/loop}-->  
+            </div>
+        </div>
+        <div class="clear"></div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}-->
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+</div>
+</div>
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

@@ -1,0 +1,28 @@
+ <!--{block return}-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type = "text/javascript" src ="source/plugin/zhanmishu_sms/template/static/jQuery.min.js"><\/script>');
+</script>
+<script type="text/javascript">
+   jQuery(function(){
+        tr1 = jQuery('form[name="transferform"] table tr:first');
+
+        addinput = '<tr><th><span class="rq">*</span>{lang zhanmishu_sms:safe_mobile_number}</th><td><input type="text"  class="intel_mobile"  id="mobile" name="mobile" class="px" value="{$mobile}" readonly="readonly"><input type="hidden" id="code" name="code" value=""></td></tr>';
+        addinput += '<tr><th><span class="rq">*</span>{lang zhanmishu_sms:smsverifycode}</th><td><input style="width:80px;" type="text" id="smsverify" name="smsverify" class=" px" value="" onchange="verifysec();" autocomplete="off"><input style="width:1px;height:1px;display:block;float:left;border:0;padding:0;margin:0;" id="zmsnodis" type="text" name="username" value=""><button id="sendsec" style="80px;padding-left:20px;" onclick="sendsms();return false;">{lang zhanmishu_sms:getverifycode}</button></td></tr>';
+        tr1.after(addinput);
+        jQuery("#smsverify").val('');
+        //jQuery("#zmsnodis").remove();
+   });
+   function sendsms(){
+        s = new zmssms('','','',60,'code','sendsec','mobile','smsverify');
+        s.sendMessage('plugin.php?id=zhanmishu_sms:transfer&no_submit=no_submit&method=send','transferform');
+   }
+   function verifysec(){
+        v = new zmssms('','','',60,'code','sendsec','mobile','smsverify');
+        v.checkVerify('plugin.php?id=zhanmishu_sms:transfer&no_submit=no_submit&method=verify','transferform');
+   }
+
+
+</script>  
+{template zhanmishu_sms:js}
+
+<!--{/block}-->

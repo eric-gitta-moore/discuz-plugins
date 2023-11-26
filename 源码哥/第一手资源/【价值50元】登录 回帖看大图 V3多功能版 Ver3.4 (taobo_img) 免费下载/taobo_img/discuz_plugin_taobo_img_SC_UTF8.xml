@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-04-10 19:01]]></item>
+	<item id="From"><![CDATA[源 码   哥 y  m g   6   .  c o m]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[登录/回帖看大图]]></item>
+			<item id="identifier"><![CDATA[taobo_img]]></item>
+			<item id="description"><![CDATA[使用本插件后只有在用户登录/回复主题后才可查看大图。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[taobo_img/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[Ver3.4]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[taobo_img]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>更多插件</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[不使用本插件的版块]]></item>
+				<item id="description"><![CDATA[注：选中的版块将不在使用本插件所有功能（包括登录看大图+回帖看大图）]]></item>
+				<item id="variable"><![CDATA[disforums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否关闭回帖看大图]]></item>
+				<item id="description"><![CDATA[选择是否不使用回帖查看大图，不影响登录看大图。]]></item>
+				<item id="variable"><![CDATA[closedneedreply]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[不使用回帖看大图的版块]]></item>
+				<item id="description"><![CDATA[选择哪些版块无需回帖即可查看正常大图！]]></item>
+				<item id="variable"><![CDATA[disneedreplyforums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[不使用回帖看大图的用户组]]></item>
+				<item id="description"><![CDATA[选择哪些用户组无需回帖即可查看正常大图！]]></item>
+				<item id="variable"><![CDATA[disneedreplygroups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[缩略图宽度]]></item>
+				<item id="description"><![CDATA[帖内缩略图的宽度！]]></item>
+				<item id="variable"><![CDATA[imgwidth]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[缩略图高度]]></item>
+				<item id="description"><![CDATA[帖内缩略图的高度！]]></item>
+				<item id="variable"><![CDATA[imgheight]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[页底游客登录提示]]></item>
+				<item id="description"><![CDATA[选择是否开启页底游客登录提示]]></item>
+				<item id="variable"><![CDATA[autopen]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0 = 关闭页底登录提示
+1 = 含图片帖子页提示
+2 = 所有帖子页均提示]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[页底登录提示缓冲时间]]></item>
+				<item id="description"><![CDATA[0为立即提示，设置进入主题内容页后多少秒打开游客登录提示。]]></item>
+				<item id="variable"><![CDATA[autopentime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[帖内游客登录提示]]></item>
+				<item id="description"><![CDATA[选择是否开启帖内游客登录提示]]></item>
+				<item id="variable"><![CDATA[loginnoticeflag]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[帖内游客登录提示文字]]></item>
+				<item id="description"><![CDATA[帖内游客登录提示的文字说明。]]></item>
+				<item id="variable"><![CDATA[loginnotice]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[马上注册，结交更多好友，享用更多功能，让你轻松玩转社区。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[多账号登录]]></item>
+				<item id="description"><![CDATA[添加其他账号登录的链接，支持HTML。]]></item>
+				<item id="variable"><![CDATA[otherlogintxt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="onclick_tips1"><![CDATA[登录/注册后可看大图]]></item>
+				<item id="onclick_tips2"><![CDATA[回帖后可查看大图]]></item>
+				<item id="has_account_number"><![CDATA[已有账号？]]></item>
+				<item id="onclick_login"><![CDATA[点击登录]]></item>
+				<item id="or"><![CDATA[或者]]></item>
+				<item id="qqconnect"><![CDATA[用QQ帐号登录]]></item>
+				<item id="have_a_look"><![CDATA[逛了这许久，何不进去看看？]]></item>
+				<item id="input_username"><![CDATA[输入用户名/邮箱]]></item>
+				<item id="input_password"><![CDATA[请输入密码]]></item>
+				<item id="login"><![CDATA[登录]]></item>
+				<item id="reglinkname"><![CDATA[新用户注册]]></item>
+				<item id="forgotpw"><![CDATA[忘记密码？]]></item>
+				<item id="login_permanent"><![CDATA[下次自动登录]]></item>
+				<item id="other_account"><![CDATA[用其他账号登录：]]></item>
+			</item>
+		</item>
+	</item>
+</root>

@@ -1,0 +1,59 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+		<form action="{$nav_url}" name="form" method="post">
+		<input type="hidden" value="{FORMHASH}" name="formhash">
+		<ul class="e6_ul">
+			<!--{if $e6_propaganda['withdraw_money']}-->
+			<li>{lang e6_propaganda:small_withdraw}<span class="e6_yellow">{$e6_propaganda['withdraw_money']} {$money_list[$e6_propaganda['withdraw_type']]}</span></li>
+			<!--{/if}-->
+			<li>{lang e6_propaganda:have_withdraw}<span class="e6_yellow">{$e6_user['extcredits'.$e6_propaganda['withdraw_type']]} {$money_list[$e6_propaganda['withdraw_type']]}</span></li>
+			<!--{if is_array($e6_propaganda['withdraw_profile'])}-->
+			<li>
+				{lang e6_propaganda:withdraw_info}  
+				<!--{loop $e6_propaganda['withdraw_profile'] $v}-->
+					<!--{if $user_profile[$v]}-->
+						<span class="e6_yellow">{$profile_title[$v]['title']}:</span> {$user_profile[$v]}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<!--{else}-->
+						<span class="e6_yellow">{$profile_title[$v]['title']}:</span> <a href="home.php?mod=spacecp" class="e6_blue">{lang e6_propaganda:profile_site}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<!--{/if}-->
+				<!--{/loop}-->
+			</li>
+			<!--{/if}-->
+			<li style="margin-top:10px;">
+				{lang e6_propaganda:withdraw_money}: 
+				<input type="text" class="px vm" value="{$e6_propaganda['withdraw_money']}" size="15" name="money"/> 
+				<button type="submit" class="pn vm"><em>{lang e6_propaganda:withdraw_submit}</em></button> 
+				<font color="blue">{$fee_content}</font>
+			</li>
+		</ul>
+		</form>
+	</div>
+</div>
+<div class="bm">
+	<div class="bm_h cl">
+		<h2>{lang e6_propaganda:withdraw_log}</h2>
+	</div>
+	<div class="bm_c bid">
+		<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+			<tr class="e6_yellow">
+				<td>ID</td>
+				<td>{lang e6_propaganda:money_withdraw}</td>
+				<td>{lang e6_propaganda:fee}</td>
+				<td>{lang e6_propaganda:withdraw_date}</td>
+				<td>{lang e6_propaganda:withdraw_state}</td>
+				<td>{lang e6_propaganda:check_date}</td>
+			</tr>
+			<!--{loop $withdraw_list $v}-->
+			<tr>
+				<td>{$v['n']}</td>
+				<td>{$v['money']}</td>
+				<td>{$v['feemoney']}</td>
+				<td>{$v['date']}</td>
+				<td>{$v['ok']}</td>
+				<td>{$v['okdate']}</td>
+			</tr>
+			<!--{/loop}-->
+		</table>		
+		<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

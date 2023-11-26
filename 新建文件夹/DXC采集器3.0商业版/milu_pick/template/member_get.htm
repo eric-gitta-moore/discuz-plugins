@@ -1,0 +1,33 @@
+<!--{template milu_pick:pick_header}-->
+
+<form id="form12" name="form12" action="?{PICK_GO}member&myac=member_get" method="post"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+<div id="run_box"> 
+	<div id="run_bar" class="code-box">
+		<div class="wait_time"><span id="wait_time"></span><span id="wait_count"></span><span id="memory"></span></div>
+		<div id="loading"><div></div><p class="show_status_info">{lang milu_pick:realy}</p></div>
+		<div class="show_button">
+			<span>
+			<!--{if $_REQUEST['submit']}-->
+			<button type="button" id="stop_button" onclick="stopPage('?{PICK_GO}member&myac=member_get&submit=1&formhash={FORMHASH}');" value="1" name="submit"  class="button">{lang milu_pick:just_stop}</button>
+			<button type="button" value="1" name="submit" onclick="location.href = '?{PICK_GO}member&myac=member_get&clear=1'"  class="button">{lang milu_pick:cancel}</button>
+			<!--{else}-->
+				<!--{if !$info['save_data']}-->
+				<button type="submit" value="1" name="submit"  class="button">{lang milu_pick:run_picker}</button>
+				<!--{else}-->
+				<button type="submit" value="1" name="submit"  class="button">{lang milu_pick:go_last}</button>
+				<button type="submit" value="2" name="submit"  class="button">{lang milu_pick:go_picker}</button>
+				<!--{/if}-->
+			 <!--{/if}-->
+		</span>
+		</div> 
+	</div> 
+	 <!--{if $_REQUEST['submit']}-->
+	<div id="run_status" class="code-box">
+		{eval member_get(1);}
+	</div>
+	 <!--{/if}-->
+</div>
+
+       
+</form>

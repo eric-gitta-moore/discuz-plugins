@@ -1,0 +1,74 @@
+#floatmenu{
+    clear:both;
+	position:fixed;
+	z-index:2;
+	background:url('images/hd9.jpg');
+	background-repeat:repeat-x;
+	bottom:0px;
+	width:100%;
+	left:0px;
+	height:43px;
+	line-height:48px;
+	padding-left:10px;
+	color:#FFFFFF;
+	visibility: visible;
+	display:block;
+	padding:0px;
+}
+#floatmenu .uw960{
+	margin:0 auto;
+	width:960px;
+	height:43px;
+	zoom:1;
+}
+
+#floatmenu .uw960 ul{
+	float:left;
+	width:960px;
+	zoom:1;
+}
+#floatmenu .uw960 ul li{
+	float:left;
+	margin-right:10px;
+	width:50px;
+}
+#floatmenu .uw960 ul .nky{
+	background:url('images/hd10.jpg');
+	background-repeat:no-repeat;
+	height:29px;
+	width:67px;
+	margin-top:10px;
+}
+#floatmenu .uw960 ul .cright{
+	float:right;
+	width:100px;		
+}
+#floatmenu .uw960 ul .cright .addbutton {
+	margin-top:12px;
+}
+#floatmenu .uw960 ul .cright .addbutton a {
+	width:110px;
+	height:24px;
+	background:url('images/hd11.jpg');
+	background-repeat:no-repeat;
+	text-indent:50px;
+	display:block;
+}
+
+#floatmenu .uw960 ul .bf_menu a:link{
+	text-indent:12px;
+	display:block;
+	color:#FFFFFF;
+	font-family:"ËÎÌו";
+	font-weight:bold;
+}
+.ie6 #floatmenu{ 
+	position: absolute; 
+	right:-10px;
+	bottom: auto; 
+	clear: both; 
+	width:expression(documentElement.clientWidth);
+	top:expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ? 
+	  documentElement.scrollTop +(documentElement.clientHeight-this.clientHeight) +5 
+	: document.body.scrollTop +(document.body.clientHeight-this.clientHeight) +5); 
+}

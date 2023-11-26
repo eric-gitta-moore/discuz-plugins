@@ -1,0 +1,35 @@
+<!--{block return}-->
+
+<a style="text-indent:0; background:none;padding:0;height:auto;margin:0 2px;" href="javascript:;" onclick="set_ckplayer()">
+<img src="{$PLSTATIC}img/ckplayer.png" width=20></a>
+
+		<script>
+		function set_ckplayer() {
+			var msg = '<span title="{$lev_lang['jiexiurl']}({$lev_lang['vurl1']})">{$lev_lang['vurl']}: <br><input type=text name=vurl id=vurl class=px style="width:240px;"></span>'+
+					  '<br>{$lev_lang['webw']}:<br> <input type=text name=webw id=webw class=px value="$webw" style="width:240px;">'+
+					  '<br>{$lev_lang['ckdh']}:<br> <input type=text name=ckdh id=ckdh class=px value=540 style="width:240px;">';
+			showDialog(msg, 'confirm', '{$lev_lang['ckplayer']}!', 'ckinserttotext()', 0);
+		}
+		function ckinserttotext() {
+			var vurl = $('vurl').value;
+			var _webw = $('webw').value;
+			var _dh = $('ckdh').value;
+			if (!vurl) return false;
+			var str = '[levckplayer]url='+encodeURI(vurl)+'&h='+_dh+'&webw='+_webw+'[/levckplayer]';
+			insertText(str, strlen(str));
+		}
+		
+		function set_ckplayer() {
+			art.dialog({id:'ifrid', padding:0, 
+				content:'<iframe width="960" height=678 frameborder="0" marginheight="0" src="plugin.php?id=levckplayer:addv&ifr=fadd&webw=$webw" scrolling="no"></iframe>'});
+		}
+		</script>
+
+<!--{/block}-->
+
+
+
+
+
+
+

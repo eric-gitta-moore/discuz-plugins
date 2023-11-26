@@ -1,0 +1,300 @@
+<!--{template common/header}-->
+<style>
+.keke_chongzhi{ font-family:Microsoft Yahei;margin:15px 0px}
+.side{float:left;width:200px; background:#FFF;}
+.main{ margin-left:220px;background:#FFF; position:relative}
+.clearfix:after {clear: both;}
+.clearfix:before, .clearfix:after {content: " ";display: table;}
+.sidebar{min-height:700px;border:1px solid #eee;background-color:#fff;font-size:14px}
+.sidebar>li{height:48px;border-bottom:1px solid #eee;line-height:48px}
+.sidebar>li>a{display:block;margin-left:15px;text-decoration:none; }
+.sidebar>li.active>a{text-decoration:none;color:#FFF}
+.sidebar>li.active{background-color:#fc4e53;color:#fff}
+ 
+.mylist{border:1px solid #eee; padding:30px 40px; box-sizing:border-box}
+.mylist ul{ padding:10px 20px}
+.mylist ul li{ width:100%;  line-height:20px; font-size:14px; margin:0px auto; padding:10px 0px;  border-bottom:1px solid #EEE}
+.mylist ul li .pup{ font-size:16px;}
+.mylist ul li .dow{ font-size:12px; color:#999}
+.mylist ul li span{ float:right}
+.noorder{ font-size:16px; text-align:center; color:#999}
+
+.chargebox{border:1px solid #eee; padding-top:30px}
+.chargebox .row{padding:15px 0; float:left; width:100%;}
+.chargebox .label{float:left;width:180px;color:#959595;text-align:right}
+
+.chargebox .package-list{margin-left:-7px}
+.chargebox .package-list li{float:left;margin:7px;padding:8px;width:120px;border:1px solid #d7d7d7;border-radius:3px;text-align:center;cursor:pointer}
+.chargebox .package-list li>a{text-decoration:none}
+.chargebox .package-list li>a:hover{color:#313131}
+.chargebox .package-list li span{ font-weight:bold}
+.chargebox .package-list li h4{color:#959595}
+.chargebox .package-list li.on{border-color:#fc4e53;background:url(source/plugin/keke_chongzhi/template/images/jb.png) right bottom no-repeat}
+.chargebox .package-list li.on .amount,.chargebox .package-list li.on .price{color:#fc4e53}
+
+.chargebox .charge-custom{height:32px;line-height:32px}
+.chargebox .charge-custom .content{width:400px;white-space:nowrap}
+.chargebox .charge-custom input[name=moneyQuantity]{width:100px;height:32px;outline:0;border:1px solid #d7d7d7;text-align:center}
+.chargebox .content{float:left;padding-left:20px;width:450px;text-align:left}
+.chargebox .user-info .balance-label{float:right}
+.chargebox .charge-source-list{margin-left:-10px}
+.chargebox .charge-source-list>li{position:relative;float:left;margin:5px 0 5px 10px;padding:8px 5px;width:130px;height:36px;border:1px solid #d7d7d7;border-radius:3px;text-align:center;cursor:pointer}
+.chargebox .charge-source-list>li.active{border-color:#fc4e53}
+.chargebox .charge-source-list>li.active:before{position:absolute;top:0;left:0;z-index:1;display:block;width:100%;height:100%;background:url(source/plugin/keke_chongzhi/template/images/jb.png) 100% 100% no-repeat;content:''}
+.chargebox .charge-source-list>li img{max-width:100%}
+.labelt{ color:#999}
+.chargebox .charge-submit .content{margin-left:180px;width:650px}
+.btn{display:inline;padding:13px 90px;border-radius:3px;color:#fff;text-align:center;text-decoration:none;font-size:16px;line-height:45px;background-color: #fc4e53;}
+.btn:hover{background-color:#ff7579;color:#fff;text-decoration:none}
+#ewm{ margin-top:15px;}
+#ewm img{ border:1px solid #EAEAEA; padding:3px;}
+.remind{ line-height:20px; text-align:left; color:#999}
+.czred{ color:#fc4e53; font-size:14px}
+.credittype{ position:relative;float:left; padding-left:20px; }
+.credittype input[type="radio"] {opacity: 0;width: 20px;height: 20px;z-index: 9; position:absolute; left:0px; margin:0px;}	
+.credittype input[type="radio"]:checked + label i {background-position: -16px 0;}
+.credittype label{float:left; margin-right:15px;}
+.credittype i{display: block;width: 16px;height: 16px; margin-right:5px;background: url(source/plugin/keke_chongzhi/template/images/icon-iptr.png) 0 0 no-repeat;background-size: 32px auto;position:absolute; left:0px;}
+.czsmbox{ width:100%; margin:10px auto;  float:left; }
+.czsmbox .czsm{ width:80%; margin:0 auto;border-top:1px #eee solid; padding:15px 0px; line-height:25px;}
+</style>
+
+<div class="wp clearfix keke_chongzhi">
+        <div class="side">
+            <ul class="sidebar">
+                <li {if !$_GET['p']}class="active"{/if}>
+                    <a href="plugin.php?id=keke_chongzhi">{lang keke_chongzhi:langt18}</a>
+                </li>
+                <li {if $_GET['p']}class="active"{/if}>
+                    <a href="plugin.php?id=keke_chongzhi&p=my">{lang keke_chongzhi:langt19}</a>
+                </li>
+                {if file_exists('source/plugin/keke_tixian/keke_tixian.inc.php')}
+                <li {if (!$_GET['p']) && $_GET['id']==keke_tixian}class="active"{/if}>
+                    <a href="plugin.php?id=keke_tixian">{lang keke_tixian:langt36}</a>
+                </li>
+                <li {if $_GET['p'] && $_GET['id']==keke_tixian}class="active"{/if}>
+                    <a href="plugin.php?id=keke_tixian&p=my">{lang keke_tixian:langt39}</a>
+                </li>
+                {/if}
+                
+            </ul>
+        </div>
+        <div class="main clearfix">
+        
+        	{if $_GET['p']==my}
+            <ul class="mylist fix">
+                <ul>
+                    {if $list}{$list}{else}<div class="noorder">{lang keke_chongzhi:langt20}</div>{/if}
+                </ul>
+                {$multipage}
+            </ul>
+			{else}
+            <form name="alipayment" action="plugin.php" method="get"  id="alipayment">
+            <input type="hidden" name="id" value="keke_chongzhi:payapi" >
+            <input type="hidden" name="formhash" value="{FORMHASH}" >
+            <ul class="chargebox clearfix">
+                <li class="step1 active clearfix">
+					<div class="row user-info clearfix">
+                        <div class="label">
+                            {lang keke_chongzhi:langt21}
+                        </div>
+                        <div class="content clearfix">
+                            <span class="nowcredit"><b class="czred">{$firstnowcredit}</b> {$firstcreditname}</span>
+                        	<span class="balance-label">{lang keke_chongzhi:langt22}<b class="czred">{$allmoney}</b> {lang keke_chongzhi:langt09}</span>
+                        </div>
+                        
+					</div>
+                    
+                    <div class="row user-info clearfix" {if !$n || $n==1}style="display:none"{/if}>
+                        <div class="label">
+                            {lang keke_chongzhi:langt30}
+                        </div>
+                        <div class="content clearfix ">
+                        	{$credittype}
+                        </div>
+                        
+					</div>
+                    
+                    
+                    <div class="row charge-select clearfix">
+                        <div class="label">
+                            {lang keke_chongzhi:langt23}
+                        </div>
+                        <div class="content">
+                            <ul id="package-list" class="package-list clearfix">
+                            	{$preval}
+                                <li class="zdy"><span>{lang keke_chongzhi:langt24}</span><h4>{lang keke_chongzhi:langt25}</h4></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row charge-custom clearfix" style="display: none;">
+                        <div class="label">
+                            {lang keke_chongzhi:langt26}
+                        </div>
+                        <div class="content">
+                            <input type="text" name="moneyQuantity" id="moneyQuantity" value="{$preset[0]}" maxlength="10" autocomplete="off">
+                            <span class="labelt zdybl"> [ {lang keke_chongzhi:langt08}{$bl}{$firstcreditname} ] </span>
+                        </div>
+                    </div>
+                    <div class="row charge-cost clearfix">
+                        <div class="label">
+                            {lang keke_chongzhi:langt27}
+                        </div>
+                        <div class="content">
+                            <b class="cost czred">{$preset[0]}</b> {lang keke_chongzhi:langt09}
+                        </div>
+                    </div>
+                    <div class="row charge-source clearfix">
+                        <div class="label">
+                            {lang keke_chongzhi:langt28}
+                        </div>
+                        <div class="content">
+                            <ul id="charge-source-list" class="charge-source-list clearfix">
+                            	{if $alipayoff}
+                                <li class="item alipay active" source="1">
+                                    <a href="javascript:void(0);">
+                                        <img src="source/plugin/keke_chongzhi/template/images/pay_02.jpg">
+                                    </a>
+                                </li>
+                                {/if}{if $wxpayoff}
+                                <li class="item weixin" source="2">
+                                    <a href="javascript:void(0);">
+                                        <img src="source/plugin/keke_chongzhi/template/images/pay_01.jpg">
+                                    </a>
+                                </li>
+                                {/if}{if !$alipayoff && !$wxpayoff}
+                                <div class="remind">
+                                    {lang keke_chongzhi:langt15}
+                                </div>
+                                {/if}
+                               
+                            </ul>
+                            <div id="ewm"></div>
+                        </div>
+                        <input type="hidden" name="zftype" id="zftype" {if $alipayoff}value="1"{elseif $wxpayoff}value="2"{/if}>
+                    </div>
+                    <div class="row charge-submit clearfix">
+                        <div class="content">
+                            <a class="btn btn-submit" id="Submit" href="javascript:;">{lang keke_chongzhi:langt16}</a>
+                        </div>
+                    </div>
+                   
+                    <div class="czsmbox">
+                    	<div class="czsm">{$keke_chongzhi['sm']}</div>
+                    </div>
+                </li>
+                
+            </ul>
+            
+            
+            </form>
+            <script type="text/javascript" src="source/plugin/keke_chongzhi/js/jquery.js"></script>
+			<script>jQuery.noConflict();</script>
+            <script>
+            jQuery(function() {
+                var recharge=jQuery(".charge-custom");
+                var moneyQuantity=jQuery("#moneyQuantity");
+                var cost=jQuery(".cost");
+				
+				jQuery("input[name=credittype]").on("click", function() {
+					var credittype=jQuery('input:radio[name="credittype"]:checked').val();
+					var creditname=jQuery(this).attr("data-creditname");
+					var bili=jQuery(this).attr("data-bili");
+					var nowcredits=jQuery(this).attr("data-now");
+					jQuery('.nowcredit').html('<b class="czred">'+ nowcredits +'</b> '+creditname);
+					jQuery("#package-list li").each(function() {
+						var money=jQuery(this).attr("money");
+						var text=(parseFloat(money)*bili) + creditname;
+						var nn=jQuery(this).hasClass("zdy");
+						if(nn){
+							jQuery(".zdybl").html('{lang keke_chongzhi:langt08}'+ bili + creditname);
+						}else{
+                        	jQuery(this).children('span').html(text);
+						}
+						
+                    });
+					
+									
+				 });
+                jQuery("#package-list li").on("click", function() {
+                            jQuery(this).siblings().removeClass("on");
+                            jQuery(this).addClass("on");
+                            var nn=jQuery(this).hasClass("zdy");
+                            if(nn){
+                                recharge.show();
+                                moneyQuantity.attr("value","");
+                                jQuery('#moneyQuantity').bind('input propertychange',function(){
+                                    cost.html(jQuery('#moneyQuantity').val());
+                                } );
+                            }else{
+                                recharge.hide();
+                                var money=jQuery(this).attr("money");
+                                moneyQuantity.attr("value",money);
+                                cost.html(money);
+                            };
+                            
+                        });
+                jQuery("#charge-source-list li").on("click", function() {
+                            jQuery(this).siblings().removeClass("active");
+                            jQuery(this).addClass("active");
+                               
+                                var source=jQuery(this).attr("source");
+                                if(source==1){
+                                    jQuery("#ewm").hide().html('');
+									jQuery("#Submit").html('{lang keke_chongzhi:langt16}');
+									
+                                }else{
+                                    jQuery("#ewm").show();
+                                }
+                                jQuery("#zftype").attr("value",source);
+                                cost.html(money);
+                        });
+                
+                jQuery("#Submit").on("click", function() {
+						if(jQuery("#ewm").html()!=''){
+							window.location.href = 'plugin.php?id=keke_chongzhi&p=my';
+							return false;
+						}
+                        var zftype=jQuery('#zftype').val();
+                        if(!zftype){
+                            return false;
+                        }
+                        if(parseFloat($keke_chongzhi['zuidi'])>jQuery("#moneyQuantity").val()){
+                            alert('{lang keke_chongzhi:langt17}'+ parseFloat($keke_chongzhi['zuidi']) +'{lang keke_chongzhi:langt09}');
+                            return false;
+                        }
+						
+						var credittypea=jQuery('input:radio[name="credittype"]:checked').val();
+						if(!credittypea){
+							alert('{lang keke_chongzhi:langt32}');
+                            return false;
+						}
+                        if(zftype==1){
+                            jQuery('#alipayment').submit();
+                        }else{
+							jQuery('#ewm').html('<img src="source/plugin/keke_chongzhi/template/images/loading.gif" />');
+                            jQuery.get('{$_G[siteurl]}plugin.php?id=keke_chongzhi:payapi', {
+                                 zftype:zftype,moneyQuantity:jQuery("#moneyQuantity").val(),credittype:credittypea
+                            },function (data){
+                                if(data.err){
+                                    alert(data.err);
+                                }else if(data.ewmurl){
+                                    jQuery('#ewm').html(data.ewmurl);
+									jQuery("#Submit").html('{lang keke_chongzhi:langt29}');
+                                }
+                            }, "json");
+                        }	
+                
+                        });
+                        
+            });
+            
+                
+            </script>
+            	
+        {/if}
+        </div>
+</div>
+    
+    
+<!--{template common/footer}-->

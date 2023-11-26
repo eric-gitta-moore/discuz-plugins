@@ -1,0 +1,123 @@
+<!--{block return}-->
+<style>
+	#zhanmishu_reg .p_tip,#zhanmishu_reg .p_chk,#zhanmishu_reg input{display: inline-block;margin-right: 10px;max-width: 300px;float: left;}
+    #mobile {    border: 1px solid;border-color: #848484 #E0E0E0 #E0E0E0 #848484;}
+	#zhanmishu_sms_err,#zhanmishu_sms_tip{margin-left: 50px;}
+	.ie6 #zhanmishu_sms_err,#zhanmishu_sms_tip{margin-left: 25px;}
+</style>
+  <div class="rfm">
+    <table id="zhanmishu_reg">
+        <tbody>
+            <tr>
+            <th><span class="rq">*</span><label>{lang zhanmishu_sms:mobile_lable}</label></th>
+            <td><input type="text" name="mobile" id="mobile" size="25" tabindex="1" class="intel_mobile" required></td>
+        	<td><input class="pn pnc" style="height:20px;padding:0 5px;" type="button" id="send" value="{lang zhanmishu_sms:send}" onclick="javascript:sendMessage();">
+        		<i class="" id="zhanmishu_sms_tip" style="display:none;">{lang zhanmishu_sms:mobile_tips}</i>
+        		<kbd id="zhanmishu_sms_err" class="p_chk" style="display: none;"></kbd>
+        		<i style="display:none;" id="zhanmishu_showid"></i>
+                <input type="hidden" name="code" id="code" value="" required>
+        	</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="rfm" id="div_sms_verify"{if !$config['isbuttonshow']} style="display:none;"{/if}>
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          <span class="rq">*</span>
+          {lang zhanmishu_sms:mobile_verify}
+        </th>
+        <td>
+          <input name="sms_verify" id="sms_verify" type="text" required autocomplete="off" style="ime-mode:disabled;width:100px" class="txt px vm" onblur="register_verifysms();">
+        </td>
+        <td class="tipcol" id="sms_verify_tip">
+            <span id="sms_verify_tip_wrong" style="display:none;"><img src="static/image/common/check_error.gif" width="16" height="16" class="vm"></span>
+            <kbd id="chk_papo8p" class="p_chk"></kbd></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<span style="display: none;" id="jqueryherezms"></span>
+
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type = "text/javascript" src ="source/plugin/zhanmishu_sms/template/static/jQuery.min.js"><\/script>');
+</script>
+
+
+<script type="text/javascript">
+jQuery.noConflict();
+
+
+</script>
+<script type="text/javascript">
+
+    jQuery("#mobile").blur(function(){
+        jQuery("#zhanmishu_sms_tip").attr('style','display:none');
+        if(!checkmobile()) 
+        { 
+            return false; 
+        } 
+    });
+    jQuery("#mobile").focus(function(){
+        jQuery("#zhanmishu_sms_tip").attr('style','');
+        jQuery("#zhanmishu_sms_err").attr('style','display:none');
+
+    });
+
+    jQuery("#registerform :input[name='seccodeverify']").change(function(){
+        alert('aaa');
+        jQuery("#registerform :input[name='seccodeverify']").removeClass('er');
+    });
+
+    function zmschecksec(){
+         //{if !$config['regsmssec'] || !$config['seccodecheck']}
+        return true;
+        //{/if}
+       seccodeverify = jQuery("#registerform :input[name='seccodeverify']").val();
+       if (seccodeverify) {
+        return true;
+       }else{
+        return false;
+       }
+    }
+
+    function checkmobile(){
+        myreg = {$config['mobilerule']};
+        if(myreg.test(jQuery("#mobile").val())) 
+        { 
+            return true; 
+        }else{
+            jQuery("#zhanmishu_sms_err").html("{lang zhanmishu_sms:input_tips}");
+            jQuery("#zhanmishu_sms_err").attr('style','display:block');
+            return false;
+        }
+    }
+    function sendMessage() {
+        if (!zmschecksec()) {
+            showDialog('{lang zhanmishu_sms:please_input_right_info}');
+            jQuery("#registerform :input[name='seccodeverify']").addClass('er');
+            return false;
+        }
+        if (!checkmobile()) {
+            return false;
+        };
+
+        
+        //var ntlNumber = jQuery("#mobile").val();
+
+
+        s = new zmssms('','','',60,'code','send','mobile','sms_verify','');
+        s.sendMessage('plugin.php?id=zhanmishu_sms:send&no_submit=no_submit&method=send','registerform');
+
+    }  
+
+    function register_verifysms(){
+        v = new zmssms('','','',60,'code','send','mobile','sms_verify');
+        v.checkVerify('plugin.php?id=zhanmishu_sms:send&no_submit=no_submit&method=verify','registerform');
+    }
+
+</script>  
+
+<!--{/block}-->

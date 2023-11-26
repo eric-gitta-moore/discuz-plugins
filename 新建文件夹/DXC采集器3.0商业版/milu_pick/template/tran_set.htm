@@ -1,0 +1,179 @@
+<!--{template milu_pick:pick_header}-->
+<script>
+if(PICK_URL) var RPC_URL = PICK_URL+'picker_manage&tpl=no&myac=rpcServer&inajax=1';
+function tran_api_test(){
+	showDialog('', 'info', loading_html('{lang milu_pick:_watting}'));
+	var api_type = jq(".tran_api_type:radio:checked").val();
+	var tran_open_par = jq(".tran_open_par:radio:checked").val();
+	var tran_open_user_words = jq(".tran_open_user_words:radio:checked").val();
+	var api_key = api_type == 1 ? jq("#baidu_app_key").val() : jq("#google_app_key").val();
+	var tran_words = format_url(jq("#tran_api_test_words").val());
+	var tran_user_words = format_url(jq("#tran_user_words").val());
+	if(tran_open_user_words == 2) tran_user_words = '';
+	
+	var rpcClient = getRpcClient();
+	var rpcCallback = function (result, args, output, warning) {
+		if (!(result instanceof PHPRPC_Error)) {
+			if (result == false) {
+				
+			} else {
+				hideMenu('fwin_dialog', 'dialog');
+				show_html_window('bb', '{lang milu_pick:tran_result}', 650, 430, output);
+			}
+		}
+	}
+	rpcClient.tran_api_test(api_type, api_key, tran_open_par, tran_user_words, tran_words, rpcCallback);
+}
+</script>
+<form id="form12" name="form12" action="?{PICK_GO}picker_manage&myac=tran_set" method="post"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+  <input type="hidden" name="ajax_url" id="ajax_url" value="dcgdf" />
+  <span id="ajaxwaitid"></span>
+ <table class="tb tb2 " id="tips">
+<tbody>
+</tbody></table>
+<table class="tb tb2 ">
+<tbody>
+
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:open_tran}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo pickOutput::radio(array('name' => 'tran_is_open', 'int_val' => 2, 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}</td>
+<td s="1" class="vtop tips2">{lang milu_pick:open_tran_desc}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:tran_user_picker}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo pickOutput::pick_search_select('tran_aplay_picker[]', $info['tran_aplay_picker'], 0, 1);}</td>
+<td s="1" class="vtop tips2">{lang milu_pick:use_usergroup_notice}</td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:open_tran_par}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo pickOutput::radio(array('name' => 'tran_open_par', 'int_val' => 2, 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}</td>
+<td s="1" class="vtop tips2">{lang milu_pick:open_tran_par_desc}</td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:title_show_mode}:</td>
+</tr>
+   <tr class="noborder" >
+ <td class="vtop rowform">{eval echo pickOutput::select_output(array(milu_lang('tran_new_title'), milu_lang('tran_old_title'), milu_lang('tran_old_new_title') ), '', 'set[tran_title_mode]', $info['tran_title_mode'], 1);}</td>
+ <td align="left" valign="middle" class="vtop tips2" s="1">{lang milu_pick:tran_title_desc}</td>
+</tr>
+<!--
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:tran_reply}:</td>
+</tr>
+   <tr class="noborder" >
+ <td class="vtop rowform">{echo pickOutput::radio(array('name' => 'tran_reply', 'int_val' => 2, 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}</td>
+ <td align="left" valign="middle" class="vtop tips2" s="1"></td>
+</tr>
+-->
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:open_tran_user_words}:</td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo pickOutput::radio(array('name' => 'tran_open_user_words', 'js' => array('show_hide(\'show_open_user_words\',\'\',1);', 'show_hide(\'show_open_user_words\',\'\',2);'),  'int_val' => 2, 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}</td>
+<td s="1" class="vtop tips2">{lang milu_pick:open_tran_user_words_desc}</td>
+</tr>
+<tbody  id="show_open_user_words" {if $info['tran_open_user_words'] != 1}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:tran_user_words}:</td>
+</tr>
+
+<tr class="noborder" >
+  <td class="vtop rowform"><textarea style="width:300px;" rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[tran_user_words]" id="tran_user_words"  cols="50" class="warea" '..'="">{$info['tran_user_words']}</textarea></td>
+  <td class="vtop tips2" s="1"><p>{lang milu_pick:tran_user_words_desc}</p></td>
+</tr>
+</tbody>
+
+
+<tr><th colspan="15" class="partition">{lang milu_pick:tran_api_set}</th></tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:fanyi_min_length}:</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="set[fanyi_min_length]" type="text" class="txt" id="fanyi_min_length"value="{$info['fanyi_min_length']}" >
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:fanyi_min_length_notice}</td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:tran_api_type}:</td>
+</tr>
+<tr  class="noborder">
+
+<td class="vtop rowform">
+<!--
+{echo pickOutput::radio(array('name' => 'tran_api_type',  'js' => array('show_hide(\'tran_api_type_baidu\',\'tran_api_type_google\',1);', 'show_hide(\'tran_api_type_baidu\',\'tran_api_type_google\',2);'),  'int_val' => 1, 'lang_arr' => array(milu_lang('baidu'), milu_lang('google'))), $info);}
+-->
+<ul onmouseover="altStyle(this);"><li class="checked"><input onclick="show_hide('tran_api_type_baidu','tran_api_type_google',1);" checked="checked" name="set[tran_api_type]" type="radio" class="tran_api_type" id="tran_api_type_1" value="1">
+&nbsp;°Ù¶È</li></ul>
+</td>
+<td s="1" class="vtop tips2"></td>
+</tr>
+
+
+<tbody id="tran_api_type_baidu" {if $info['tran_api_type'] == 2}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">API key:</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="tran_api_key[baidu][app_key]" type="text" id="baidu_app_key" class="txt"  value="{$info['tran_api_key']['baidu']['app_key']}" >
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:baidu_app_key_desc}</td>
+</tr>
+</tbody>
+
+<tbody id="tran_api_type_google" {if $info['tran_api_type'] != 2}style="display:none"{/if}>
+<tr>
+  <td colspan="2" class="td27" s="1">API key:</td>
+</tr>
+<tr class="noborder" ><td class="vtop rowform">
+<input name="tran_api_key[google][app_key]" type="text" class="txt" id="google_app_key"value="{$info['tran_api_key']['google']['app_key']}" >
+</td>
+<td class="vtop tips2" s="1">{lang milu_pick:google_app_key_desc}</td>
+</tr>
+</tbody>
+
+
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:tran_api_test}:</td>
+</tr>
+
+<tr class="noborder" >
+  <td class="vtop rowform"><textarea style="width:300px;" rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[tran_api_test_words]" id="tran_api_test_words" cols="50" class="warea" '..'="">{$info['tran_api_test_words']}</textarea></td>
+  <td class="vtop tips2" s="1"><p>{lang milu_pick:tran_api_test_desc}</p></td>
+</tr>
+
+<tr  class="noborder"><td class="vtop rowform"><a onclick="tran_api_test()" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a><span id="theme_url_test_show" style="margin-left:5px;"></span></td>
+<td s="1" class="vtop tips2"></td>
+</tr>
+
+
+<tr  class="noborder"><td class="vtop rowform"><div class="fixsel">
+<button type="submit" value="1" name="submit" class="button">{lang milu_pick:submit}</button>
+</div></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<td colspan="15"></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

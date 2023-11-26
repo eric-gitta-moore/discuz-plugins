@@ -1,0 +1,140 @@
+<!--{if $_GET[inajax]}-->
+<!--{template common/header}-->
+	<!--{eval $i = 1;}-->
+	<!--{loop $list $v}-->
+		<li class="y2">
+			<i class="q_new"></i>
+			<a href="{$jump_url}$v[num_iid]" target="_blank">
+				<img {if $i > 10}src="" zhuzhu-{/if}src="$v[pict_url]">
+			</a>
+			<h2 class="wrap2"><img src="./source/plugin/zhuzhu_taobao/static/image/{if $v[user_type]}tmall{else}taobao{/if}.png" alt="$v[title]" />$v[title]</h2>
+			<div class="cl">
+				<span class="y">$v[provcity]</span>
+				<span class="q_price">&yen; <i>$v[zk_final_price]</i></span>
+			</div>
+		</li>
+	<!--{eval $i ++}-->
+	<!--{/loop}-->
+	<!--{template common/footer}-->
+<!--{else}-->
+<!--{template zhuzhu_taobao:t_header}-->
+<style id="diy_style" type="text/css"></style>
+
+<style type="text/css">
+<!--{if $ac == '9k9'}-->
+body {background: #0574C6 url('./source/plugin/zhuzhu_taobao/static/image/9k9bg.jpg') center 200px no-repeat;}
+#hd {margin-bottom: 220px;}
+<!--{else}-->
+body {background: #C0CFDC  url('./source/plugin/zhuzhu_taobao/static/image/tbk_bg.jpg') center 200px no-repeat;}
+#hd {margin-bottom: 245px;}
+<!--{/if}-->
+</style>
+
+<div class="tbk_cate cl" id="tbk_cate">
+	<h2>{lang zhuzhu_taobao:t_tbk_htm_1}</h2>
+	<ul class="wp cl">
+		<!--{loop $_G[cache][zhuzhu_taobao_cat] $value}-->
+		<li id="$value[tb_cat]"{if $_GET[cat] == $value[tb_cat]} class="cur"{/if}><a href="plugin.php?id=zhuzhu_taobao&mod=tbk&cat=$value[tb_cat]">$value[name]</a></li>
+		<!--{/loop}-->
+	</ul>
+</div>
+<div class="tbk_sort cl">
+	<span class="y">
+		<!--{eval $get[ac] = 0;$get[start_price] = 0;$get[end_price] = 0;$theurl = 'plugin.php?'.page_url($get);}-->
+		<a href="$theurl"{if empty($ac)} class="cur"{/if}>{lang zhuzhu_taobao:t_quan_htm_8}</a>
+		<a href="$theurl&ac=9k9"{if $ac == '9k9'} class="cur"{/if}>{lang zhuzhu_taobao:t_tbk_htm_3}9</a>
+		<a href="$theurl&ac=39k9"{if $ac == '39k9'} class="cur"{/if}>{lang zhuzhu_taobao:t_tbk_htm_4}9</a>
+		<!--{eval $get[ac] = $_GET[ac];$get[start_price] = $_GET[start_price];$get[end_price] = $_GET[end_price];}-->
+	</span>
+	<div class="sort_desc">
+		<ul>
+			<li{if empty($_GET[sort])} class="cur"{/if}><a href="$url">{lang zhuzhu_taobao:t_tbk_htm_5}</a></li>
+			<!--{eval $get[sort] = 0;$theurl = 'plugin.php?'.page_url($get);}-->
+			<li{if $_GET[sort] == "total_sales_asc" ||  $_GET[sort] == "total_sales_des"} class="cur"{/if}><a href="$theurl&sort=total_sales{if $_GET[sort] == 'total_sales_asc'}_des{else}_asc{/if}">{lang zhuzhu_taobao:t_tbk_htm_6}<em{if $_GET[sort] == 'total_sales_asc'} class="asc"{elseif $_GET[sort] == 'total_sales_des'} class="des"{/if}></em></a></li>
+
+			<li{if $_GET[sort] == "tk_total_sales_asc" ||  $_GET[sort] == "tk_total_sales_des"} class="cur"{/if}><a href="$theurl&sort=tk_total_sales{if $_GET[sort] == 'tk_total_sales_asc'}_des{else}_asc{/if}">{lang zhuzhu_taobao:t_tbk_htm_7}<em{if $_GET[sort] == 'tk_total_sales_asc'} class="asc"{elseif $_GET[sort] == 'tk_total_sales_des'} class="des"{/if}></em></a></li>
+
+			<!--li{if $_GET[sort] == "tk_rate_asc" ||  $_GET[sort] == "tk_rate_des"} class="cur"{/if}><a href="$theurl&sort=tk_rate{if $_GET[sort] == 'tk_rate_asc'}_des{else}_asc{/if}">{lang zhuzhu_taobao:t_tbk_htm_8}<em{if $_GET[sort] == 'tk_rate_asc'} class="asc"{elseif $_GET[sort] == 'tk_rate_des'} class="des"{/if}></em></a></li-->
+			<!--{eval $get[sort] = $_GET[sort];}-->
+
+			<!--{eval $get[is_tmall] = 0;$theurl = 'plugin.php?'.page_url($get);}-->
+			<li><a href="$theurl{if !$_GET[is_tmall]}&is_tmall=1{/if}"{if $_GET[is_tmall]} class="cur"{/if}><i></i>{lang zhuzhu_taobao:t_brand_htm_3}</a></li>
+			<!--{eval $get[is_tmall] = $_GET[is_tmall];}-->
+
+			<!--{eval $get[is_overseas] = 0;$theurl = 'plugin.php?'.page_url($get);}--> 
+			<li><a href="$theurl{if !$_GET[is_overseas]}&is_overseas=1{/if}"{if $_GET[is_overseas]} class="cur"{/if}><i></i>{lang zhuzhu_taobao:t_tbk_htm_10}</a></li>
+			<!--{eval $get[is_overseas] = $_GET[is_overseas];}-->
+
+			<li>
+				<form id="search" method="get" action="plugin.php">
+					<input type="hidden" name="id" value="zhuzhu_taobao">
+					<input type="hidden" name="mod" value="tbk">
+					<input type="hidden" name="sort" value="$_GET[sort]">
+					<input type="hidden" name="is_tmall" value="$_GET[is_tmall]">
+					<input type="hidden" name="is_overseas" value="$_GET[is_overseas]">
+					<input type="hidden" name="cat" value="$_GET[cat]">
+					<div class="searchbox cl">
+						<span>{lang zhuzhu_taobao:t_tbk_htm_11}</span>
+						<input type="text" name="start_price" value="$_GET[start_price]"> -
+						<input type="text" name="end_price" value="$_GET[end_price]">
+						<button type="submit">{lang search}</button>
+						<!--<a href="$theurl">{lang zhuzhu_taobao:t_tbk_htm_12}</a>-->
+					</div>
+				</form>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="tbk_item">
+	<ul class="cl" id="tk-limit-list">
+	</ul>
+</div>
+
+<script type="text/javascript">
+	loadmore();
+	window.onscroll = function(){
+		var scrollT = document.documentElement.scrollTop||document.body.scrollTop;
+		var scrollH = document.documentElement.scrollHeight||document.body.scrollHeight;
+		var clientH = document.documentElement.clientHeight||document.body.clientHeight;
+
+		if(scrollT == scrollH - clientH){
+			loadmore();
+		}else if(scrollT > 300){
+			document.getElementById("tbk_cate").setAttribute("style", "position: fixed;top: 0;z-index: 302;left: 0;width: 100%;box-shadow: 0 0 5px #8E8E8E;opacity: .96;");
+		}else if(scrollT < 300){
+			document.getElementById("tbk_cate").setAttribute("style", "");
+		}
+		
+		var aImg = document.querySelectorAll('img');
+        var len = aImg.length;
+        var n = 0;
+		for (var i = n; i < len; i++) {
+			if (aImg[i].offsetTop < clientH + scrollT) {
+				if (aImg[i].getAttribute('src') == '') {
+					aImg[i].src = aImg[i].getAttribute('zhuzhu-src');
+				}
+				n = i + 1;
+			}
+		}
+	}
+	
+	var page = 1;
+	function loadmore() {
+		var x = new Ajax();
+		x.get('{$theurl}&inajax=1&page=' + page, function(s){
+			page ++;
+			if(s){
+				$("tk-limit-list").innerHTML += s;
+			}else{
+				$("tk-limit-list").innerHTML = '<div class="dataend">{lang zhuzhu_taobao:t_quan_htm_11}</div>';
+				return false;
+			}
+		});
+	}
+
+</script>
+
+<!--{subtemplate zhuzhu_taobao:t_tag}-->
+<!--{subtemplate common/footer}-->
+<!--{/if}-->

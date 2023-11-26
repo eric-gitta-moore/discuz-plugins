@@ -1,0 +1,615 @@
+<!--{template common/header}-->
+<link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/exam/image/common.css?{VERHASH}" />
+ 
+<div id="wp" class="wp">
+	<div id="pt" class="bm cl">
+		<div class="z"><a target="_blank" href="./" class="nvhm" title="首页"></a><em>?</em><a href="plugin.php?id=exam">考试中心</a>
+		<em>?</em>帮助中心
+		</div>
+		<div style="float:right"><!--{template exam:'.$template.'/common/nav}--></div>
+	</div>
+	<div class="sd" style="float:left;width:220px;">
+		<div class="bm">
+			<div class="bm_h cl"><h2>帮助</h2></div>
+			<div class="bm_c" id="side_ct" >
+			<ul class="xl xl1">
+				<li><a href="plugin.php?id=exam:help"  class="<!--{if !isset($_GET[tab])}-->xi1<!--{/if}-->">1. 关于考试中心</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=20" class="<!--{if $tab==20}-->xi1<!--{/if}-->">2. 试卷结构</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=21" class="<!--{if $tab==21}-->xi1<!--{/if}-->">2.1. 基本题型</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=22" class="<!--{if $tab==22}-->xi1<!--{/if}-->">2.2. 组合题一</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=23" class="<!--{if $tab==23}-->xi1<!--{/if}-->">2.3. 组合题二</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=30" class="<!--{if $tab==30}-->xi1<!--{/if}-->">3. 试卷操作</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=31" class="<!--{if $tab==31}-->xi1<!--{/if}-->">3.1. 试题批量导入</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=32" class="<!--{if $tab==32}-->xi1<!--{/if}-->">3.2. 试卷发布</a></li>
+				<!--{if $_G[adminid]==1}-->
+				<li><a href="plugin.php?id=exam:help&tab=rewrite" class="<!--{if $tab==rewrite}-->xi1<!--{/if}-->">4. 伪静态</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=js" class="<!--{if $tab==js}-->xi1<!--{/if}-->">5. 外部调取考试中心数据</a></li>
+				<!--{/if}-->
+			</ul> 
+			</div>
+		</div>
+	</div>
+	
+	<div id="ct" class="ct2 wp cl" style="margin-left: 235px;margin-right: 0;">
+		<div class="mn" id="main">
+			<div class="bm bml pbn">
+				<span class="y"></span>
+				<div class="bm_h cl">
+					<h1 class="xs2">
+						<!--{if !isset($_GET[tab])}-->1. 考试中心多用户版本说明
+						<!--{elseif $tab==20}-->2. 试卷结构
+						<!--{elseif $tab==21}-->2.1. 基本题型
+						<!--{elseif $tab==22}-->2.2. 组合题一
+						<!--{elseif $tab==23}-->2.3. 组合题二
+						<!--{elseif $tab==30}-->3.  试卷操作
+						<!--{elseif $tab==31}-->3.1. 试题批量导入
+						<!--{elseif $tab==32}-->3.2. 试卷发布
+						<!--{elseif $tab==23}-->2.3. 组合题二
+						<!--{elseif $tab==rewrite}-->4. 伪静态
+						<!--{elseif $tab==js}-->5. 外部调取考试中心数据
+						<!--{/if}-->
+					</h1>
+				</div>
+				
+<style type="text/css">
+<!--
+.hbox {padding:10px;background:#F5F7FA;border:1px solid #e5e5e5}
+.precode {padding:10px;background:#F5F7FA;border:1px solid #e5e5e5;font-size:12px;margin-top:2px}
+-->
+</style>
+				
+				<div class="bm_c cl xs2">
+						<!--{if !isset($_GET[tab])}-->
+						<pre>
+							(1).支持判断题、单选题、多选题、填空题、问答题
+							    单选题和多选题支持26个选项
+							(2).支持试题批量导入
+							(3).支持PC版本和手机版本	
+							(4).支持伪静态规则	
+							(5).多用户参与，任何人都可以制作、发布试卷和参与考试
+							(6).外部程序可以调用考试动态	
+							(7).可以将试题、考试结果推送到板块或动态
+							(8).交卷后可以动态答题，即时判分，方便用户考试体验
+							(9).可以全局设置试卷的发布组或使用组权限
+							(10).管理员可以对试卷作批量审核或锁定
+							(11).管理员可以设置试卷列表中标题的颜色
+							(12).管理员可以设置试卷置顶
+							(13).作者可以设置试卷的出售价格		
+							(14).作者可以设置试卷的访问密码
+							(15).作者可以设置试卷的考试开始时间和考试过程时间
+							(16).作者可以设置每一个会员参与考试次数及每次时间间隔
+							(17).作者可以设置仅限自己的某个朋友组参与考试
+							(18).作者可以设置试题使用继承分值或单题分值
+							(19).作者可以查看和导出试卷的考试记录
+							(20).会员可以查看我的考试记录、错题集，并可以导出考试结果
+							(21).会员可以回放考试记录
+							(22).内置使用帮助
+						</pre>
+						<!--{elseif $tab==20}--><pre>试卷中的题目是由题组来管理的,其结构关系为“试卷->题组->试题”，试题是存放在题组中的，题组可以看作是试卷中的一个基本容器，同一题组中可以添加不同的类型的题目，如下图：</pre><img src="source/plugin/exam/image/help/papertree.jpg" border=0 ondragstart="return false;">
+						<!--{elseif $tab==21}-->基本题型包括:<br>判断题<br>单选题(支持26个选项)<br>多选题(支持26个选项)<br>填空题<br>问答题<br><br>注:1.对于单选题和多选题两种类型，如果选项的内容全为空，则在模拟考试中以横排的方式显示;<br>　 2.如果填空题中要求有下拉列表项，那么可将选项用＂|＂连接，并放在大括号里面，如: <span class="xi1">{北京|南京|天津|上海}	</span>			
+						<!--{elseif $tab==22}-->　　如果想发布一个描述性试题，该题目下有多个子题目，可以这样操作：新建一个题组，在题组中添加描述性内容（即大标题），然后在该题组中添加其子题目，如下样例：<br><br><img src="source/plugin/exam/image/help/type_ex1.jpg" border=0 ondragstart="return false;">
+						<!--{elseif $tab==23}-->　　如果想发布一个描述性试题，并提供了多个备选项，让下面几道题从备选项中选择答案，可以这样操作：新建一个题组，在题组中添加描述性内容（即大标题）和备选项，然后在该题组中添加题目，如下样例：<br><br><img src="source/plugin/exam/image/help/type_ex2.jpg" border=0 ondragstart="return false;">
+						<!--{elseif $tab==30}-->
+							<li><a href="plugin.php?id=exam:help&tab=31">3.1. 试题批量导入</a></li>
+							<li><a href="plugin.php?id=exam:help&tab=32">3.2. 试卷发布</a></li>
+						<!--{elseif $tab==31}-->
+						<pre>
+						    本程序支持试题的批量导入, 导入前需将试题按一定格式整理, 试题的导入格式是有一定规律, 与平常试卷相似。
+						
+						3.1.1 每个试题由4~5个部分组成：题目、选项、图片、答案、解析，其中题目和选项没有指令:
+						<p class="xs1 hbox"><题目>       ----  必选,在填空题的题目中必须包含下划线“____”或括号“(    )”，其中下划线至少4个，括号中的空格至
+						                   少4个,在问答题的题目中不能还有这些, 题目内容可换行, 
+						<选项>       ----  可选,这个是用于单选择题和多选择题,以A-Z大写单字母开头,该字母后跟一个冒号或点号,一行一个选项
+						图片:<网址>  ----  可选,导入图片指令,必须以“<em class="xi1">图片:</em>”开头(含冒号),后跟图片网址, 不可换行
+						答案:<内容>  ----  必选,导入答案指令,必须以“<em class="xi1">答案:</em>”开头(含冒号),后跟答案内容, 内容可换行
+						解析:<内容>  ----  可选,导入解析指令,必须以“<em class="xi1">解析:</em>”开头(含冒号),后跟解析内容, 内容可换行</p>
+						3.1.2 为了能够一次性导入多个试题组，这里又引入了一个题组指令(或题干,题干可看作是题组的别名)，如下：
+						<p class="xs1 hbox">题组[题干]:<题组名称>  ----  可选,如果查询到当前试卷中含有该题组,则将该题组切换为当前状态,若无,则创建题组并切换
+						<题组的内容说明>       ----  可选,紧接下一行或多行为该题组的说明内容</p>
+						3.1.3 每个试题之间必须至少有一个空行
+						
+						3.1.4 下面以具体案例来解释<em class="xi1">(红色为注释)</em>:
+							<p class="xs1 hbox">1.AutoCAD无法实现类似Word的文字查找或者替换功能<em class="xi1">(判断题)</em>
+							答案:错误 <em class="xi1">(答案类型可以为:正确,对,是,√,错误,错,否,×)</em>
+							图片:static/image/common/logo.png
+							解析:可这样操错打开查找和替换窗口: 菜单-->编辑-->查找
+
+							2.搜索引擎是一个用来搜索查询世界各地 Internet 网路资源的<em class="xi1">(单选题)</em>
+							A:网页
+							B:域名网址
+							C:Web服务器
+							D:邮箱
+							答案:C
+							 
+							3.下面那些是图片类型的扩展名?<em class="xi1">(多选题)</em>
+							A:gif
+							B:jpg
+							C:bmp
+							D:exe
+							答案:ABC
+
+							4.下面哪些不是图片类型的扩展名?<em class="xi1">(多选题)</em>
+							A:gif
+							B:jpg
+							C:bmp
+							D:exe
+							答案:D# <em class="xi1">(如果是不定项多选题的题型,而答案只有一个选项, 那么必须在末尾补充#字符)</em>
+
+							5.我国的首都是____, 我国有____个少数民族.<em class="xi1">(填空题)</em>
+							答案:北京 56  <em class="xi1">(各个项之间以空格分开)</em>
+							 
+							6.什么是微商?并简要描述其优点<em class="xi1">(问答题)</em>
+							答案:<em class="xi1">(答案内容可接在这行,也可以换行)</em>
+							    微商目前尚无统一认知的定义。一般是指以“个人”为单位的、利用web3.0时代所衍生的载体渠道，将传统方式与互联网相结合，不存在区域限制，且可移动性地实现销售渠道新突破的小型个体行为。简单的说，微商就是资源整合。
+							    投入小、门槛低、传播范围广、足不出户便可推广与销售、只需个体行为等特点，满足了大多数有意愿自己做点生意，却不敢轻易尝试实体性创业，亦没有太多资本投入，也不熟悉企业运营的个体。
+							</p>	
+							3.1.5 在整理试题的时候,请务必防止试题的内容与指令冲突							
+						</pre>
+						<!--{elseif $tab==32}--><pre>
+							试卷的发布需要做两步操作:
+							1.试卷作者在试卷中设置该卷为发布状态
+							2.管理员在试卷列表的浏览页面进行审核
+							
+						</pre>
+						<img src="source\plugin\exam\image\help\pfabu.jpg" border=0 ondragstart="return false;"><br><br><br><br>
+
+						<!--{elseif $tab=='rewrite'}-->
+							<pre>
+								本插件支持伪静态,要使用伪静态功能必须做到两点:
+								1.在论坛后台的应用中心开启伪静态: Discuz后台-->应用中心-->考试中心-->是否开启伪静态
+								2.根据服务器类型将下面一种合适的规则添加到服务器的伪静态文件中
+								<em class="xs1">注: 建议将此规则放在Discuz规则之前, 以防止与Discuz最后一条通用规则冲突</em>
+							</pre>
+							<em>Apache Web Server(独立主机用户):</em>
+							<pre class="precode">
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/m/?$ $1/plugin.php?id=exam:m&mobile=no&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/exam([0-9]*)\.html$ $1/plugin.php?id=exam&paper=$2.html&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/test([0-9]*)\.html#?(\d*)$ $1/plugin.php?id=exam&test=$2.html#$3&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/list([0-9]*)-?([0-9]*)\.html$ $1/plugin.php?id=exam&list=$2-$3.html&%1
+							</pre>
+							
+							<em>Apache Web Server(虚拟主机用户):</em>
+							<pre class="precode">
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^m/?$ plugin.php?id=exam:m&mobile=no&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^exam([0-9]*)\.html$ plugin.php?id=exam&paper=$1.html&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^test([0-9]*)\.html#?(\d*)$ plugin.php?id=exam&test=$1.html#$2&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^list([0-9]*)-?([0-9]*)\.html$ plugin.php?id=exam&list=$1-$2.html&%1
+							</pre>
+							
+							<em>IIS Web Server(独立主机用户):</em>
+							<pre class="precode">
+								RewriteRule ^(.*)/m/?\?(.*)*$ $1/plugin\.php\?id=exam:m&mobile=no&$2
+								RewriteRule ^(.*)/exam([0-9]*)\.html\?(.*)*$ $1/plugin\.php\?id=exam&paper=$2.html&$3
+								RewriteRule ^(.*)/test([0-9]*)\.html#?(\d*)\?(.*)*$ $1/plugin\.php\?id=exam&test=$2.html#$3&$4
+								RewriteRule ^(.*)/list([0-9]*)-?([0-9]*)\.html\?(.*)*$ $1/plugin\.php\?id=exam&list=$2-$3.html&$4
+							</pre>
+							
+							<em>IIS7 Web Server(独立主机用户):</em>
+							<pre class="precode">
+								&lt;rule name="exam_m"&gt;
+								    &lt;match url="^(.*/)*m/?$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam:m&amp;amp;mobile=no" /&gt;
+								&lt;/rule&gt;
+								&lt;rule name="exam_paper"&gt;
+								    &lt;match url="^(.*/)*exam([0-9]*).html\?*(.*)$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam&amp;amp;paper={R:2}.html&amp;amp;{R:3}" /&gt;
+								&lt;/rule&gt;
+								&lt;rule name="exam_test"&gt;
+								    &lt;match url="^(.*/)*test([0-9]*).html#?(\d*)\?*(.*)$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam&amp;amp;test={R:2}.html#{R:3}&amp;amp;{R:4}" /&gt;
+								&lt;/rule&gt;
+								&lt;rule name="exam_list"&gt;
+								    &lt;match url="^(.*/)*list([0-9]*)-?([0-9]*).html#?(\d*)\?*(.*)$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam&amp;amp;list={R:2}-{R:3}.html{R:4}&amp;amp;{R:5}" /&gt;
+								&lt;/rule&gt;
+							</pre>
+							
+							<emx>Zeus Web Server:</em>
+							<pre class="precode">
+								match URL into $ with ^(.*)/m/?$
+								if matched then
+								    set URL = $1/plugin.php?id=exam:m&mobile=no
+								endif
+								match URL into $ with ^(.*)/exam([0-9]*)\.html\?*(.*)$
+								if matched then
+								    set URL = $1/plugin.php?id=exam&paper=$2.html&$3
+								endif
+								match URL into $ with ^(.*)/test([0-9]*)\.html#?(\d*)\?*(.*)$
+								if matched then
+								    set URL = $1/plugin.php?id=exam&test=$2.html#$3&$4
+								endif
+								match URL into $ with ^(.*)/list([0-9]*)-?([0-9]*)\.html\?*(.*)$
+								if matched then
+								    set URL = $1/plugin.php?id=exam&list=$2-$3.html&$4
+								endif
+							</pre>
+							
+							<em>Nginx Web Server:</em>
+							<pre class="precode">
+								rewrite ^([^\.]*)/m/?$ $1/plugin.php?id=exam:m last;
+								rewrite ^([^\.]*)/exam([0-9]*)\.html$ $1/plugin.php?id=exam&paper=$2.html last;
+								rewrite ^([^\.]*)/test([0-9]*)\.html#?(\d*)$ $1/plugin.php?id=exam&test=$2.html#$3 last;
+								rewrite ^([^\.]*)/list([0-9]*)-?([0-9]*)?\.html$ $1/plugin.php?id=exam&list=$2-$3.html last;
+							</pre>		
+						<!--{elseif $tab=='js'}-->
+							<pre>
+								本程序支持外部网页调用考试中心的数据, 只需将js代码嵌入外部HTML网页中即可,调取方法如下:
+							</pre>	
+							调取最新考试试卷列表: 
+							<pre class="precode">
+							&lt;script type="text/javascript"  src="http://$_SERVER[HTTP_HOST]/plugin.php?id=exam:js:paper:<模板>:<数量>:<栏目>"&gt;&lt;/script&gt;
+							</pre>	
+							调取最新考试日志列表: 
+							<pre class="precode">
+							&lt;script type="text/javascript"  src="http://$_SERVER[HTTP_HOST]/plugin.php?id=exam:js:log:<模板>:<数量>"&gt;&lt;/script&gt;
+							</pre>	
+	
+							<pre>
+								参数说明:
+								<模板>  ---- 文件夹 source/plugin/exam/template/js/ 里面的 *.htm 的文件名,不含扩展名, 
+								<数量>  ---- 获取的最大列表数量, 1~50
+								<栏目>  ---- 获取指定栏目中得试卷, 可以省略
+								
+								
+							
+								附录:
+							</pre>
+ 
+							试卷列表模板可用变量:
+							<pre class="precode">
+								<i class="xi2">$</i>list[pid]              试卷ID
+								<i class="xi2">$</i>list[title]            试卷标题
+								<i class="xi2">$</i>list[cid]              试卷分类ID
+								<i class="xi2">$</i>list[uid]              作者ID
+								<i class="xi2">$</i>list[username]         作者用户名
+								<i class="xi2">$</i>list[submit]           参与考试次数
+								<i class="xi2">$</i>list[minute]           考试时长(分钟)
+								<i class="xi2">$</i>list[pass]             及格分数
+								<i class="xi2">$</i>list[price]            积分售价
+								<i class="xi2">$</i>list[last_time]        最后一次参与考试时间
+								<i class="xi2">$</i>list[last_user]        最后一次参与考试用户名
+								<i class="xi2">$</i>list[pv]               试卷浏览量
+								<i class="xi2">$</i>list[time]             试卷创作时间
+							</pre>
+							考试日志列表模板可用变量:
+							<pre class="precode">
+								<i class="xi2">$</i>list[lid]              日志ID
+								<i class="xi2">$</i>list[pid]              试卷ID
+								<i class="xi2">$</i>list[title]            试卷标题
+								<i class="xi2">$</i>list[total]            试卷总分
+								<i class="xi2">$</i>list[pass]             及格分数
+								<i class="xi2">$</i>list[uid]              用户ID
+								<i class="xi2">$</i>list[username]         用户名
+								<i class="xi2">$</i>list[score]            得分
+								<i class="xi2">$</i>list[time]             时间		
+							</pre>	
+						<!--{/if}-->
+				</div>
+			</div>
+	</div>
+ 
+</div>
+<script type="text/javascript">
+		_attachEvent(window, 'load', function(){
+			if($('side_ct').clientHeight <  $('main').clientHeight-65)
+				$('side_ct').style.height =$('main').clientHeight -65+ 'px';
+		}, document);
+</script>
+
+<!--{template common/footer}--><!--{template common/header}-->
+<link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/exam/image/common.css?{VERHASH}" />
+ 
+<div id="wp" class="wp">
+	<div id="pt" class="bm cl">
+		<div class="z"><a target="_blank" href="./" class="nvhm" title="首页"></a><em>?</em><a href="plugin.php?id=exam">考试中心</a>
+		<em>?</em>帮助中心
+		</div>
+		<div style="float:right"><!--{template exam:'.$template.'/common/nav}--></div>
+	</div>
+	<div class="sd" style="float:left;width:220px;">
+		<div class="bm">
+			<div class="bm_h cl"><h2>帮助</h2></div>
+			<div class="bm_c" id="side_ct" >
+			<ul class="xl xl1">
+				<li><a href="plugin.php?id=exam:help"  class="<!--{if !isset($_GET[tab])}-->xi1<!--{/if}-->">1. 关于考试中心</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=20" class="<!--{if $tab==20}-->xi1<!--{/if}-->">2. 试卷结构</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=21" class="<!--{if $tab==21}-->xi1<!--{/if}-->">2.1. 基本题型</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=22" class="<!--{if $tab==22}-->xi1<!--{/if}-->">2.2. 组合题一</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=23" class="<!--{if $tab==23}-->xi1<!--{/if}-->">2.3. 组合题二</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=30" class="<!--{if $tab==30}-->xi1<!--{/if}-->">3. 试卷操作</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=31" class="<!--{if $tab==31}-->xi1<!--{/if}-->">3.1. 试题批量导入</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=32" class="<!--{if $tab==32}-->xi1<!--{/if}-->">3.2. 试卷发布</a></li>
+				<!--{if $_G[adminid]==1}-->
+				<li><a href="plugin.php?id=exam:help&tab=rewrite" class="<!--{if $tab==rewrite}-->xi1<!--{/if}-->">4. 伪静态</a></li>
+				<li><a href="plugin.php?id=exam:help&tab=js" class="<!--{if $tab==js}-->xi1<!--{/if}-->">5. 外部调取考试中心数据</a></li>
+				<!--{/if}-->
+			</ul> 
+			</div>
+		</div>
+	</div>
+	
+	<div id="ct" class="ct2 wp cl" style="margin-left: 235px;margin-right: 0;">
+		<div class="mn" id="main">
+			<div class="bm bml pbn">
+				<span class="y"></span>
+				<div class="bm_h cl">
+					<h1 class="xs2">
+						<!--{if !isset($_GET[tab])}-->1. 考试中心多用户版本说明
+						<!--{elseif $tab==20}-->2. 试卷结构
+						<!--{elseif $tab==21}-->2.1. 基本题型
+						<!--{elseif $tab==22}-->2.2. 组合题一
+						<!--{elseif $tab==23}-->2.3. 组合题二
+						<!--{elseif $tab==30}-->3.  试卷操作
+						<!--{elseif $tab==31}-->3.1. 试题批量导入
+						<!--{elseif $tab==32}-->3.2. 试卷发布
+						<!--{elseif $tab==23}-->2.3. 组合题二
+						<!--{elseif $tab==rewrite}-->4. 伪静态
+						<!--{elseif $tab==js}-->5. 外部调取考试中心数据
+						<!--{/if}-->
+					</h1>
+				</div>
+				
+<style type="text/css">
+<!--
+.hbox {padding:10px;background:#F5F7FA;border:1px solid #e5e5e5}
+.precode {padding:10px;background:#F5F7FA;border:1px solid #e5e5e5;font-size:12px;margin-top:2px}
+-->
+</style>
+				
+				<div class="bm_c cl xs2">
+						<!--{if !isset($_GET[tab])}-->
+						<pre>
+							(1).支持判断题、单选题、多选题、填空题、问答题
+							    单选题和多选题支持26个选项
+							(2).支持试题批量导入
+							(3).支持PC版本和手机版本	
+							(4).支持伪静态规则	
+							(5).多用户参与，任何人都可以制作、发布试卷和参与考试
+							(6).外部程序可以调用考试动态	
+							(7).可以将试题、考试结果推送到板块或动态
+							(8).交卷后可以动态答题，即时判分，方便用户考试体验
+							(9).可以全局设置试卷的发布组或使用组权限
+							(10).管理员可以对试卷作批量审核或锁定
+							(11).管理员可以设置试卷列表中标题的颜色
+							(12).管理员可以设置试卷置顶
+							(13).作者可以设置试卷的出售价格		
+							(14).作者可以设置试卷的访问密码
+							(15).作者可以设置试卷的考试开始时间和考试过程时间
+							(16).作者可以设置每一个会员参与考试次数及每次时间间隔
+							(17).作者可以设置仅限自己的某个朋友组参与考试
+							(18).作者可以设置试题使用继承分值或单题分值
+							(19).作者可以查看和导出试卷的考试记录
+							(20).会员可以查看我的考试记录、错题集，并可以导出考试结果
+							(21).会员可以回放考试记录
+							(22).内置使用帮助
+						</pre>
+						<!--{elseif $tab==20}--><pre>试卷中的题目是由题组来管理的,其结构关系为“试卷->题组->试题”，试题是存放在题组中的，题组可以看作是试卷中的一个基本容器，同一题组中可以添加不同的类型的题目，如下图：</pre><img src="source/plugin/exam/image/help/papertree.jpg" border=0 ondragstart="return false;">
+						<!--{elseif $tab==21}-->基本题型包括:<br>判断题<br>单选题(支持26个选项)<br>多选题(支持26个选项)<br>填空题<br>问答题<br><br>注:1.对于单选题和多选题两种类型，如果选项的内容全为空，则在模拟考试中以横排的方式显示;<br>　 2.如果填空题中要求有下拉列表项，那么可将选项用＂|＂连接，并放在大括号里面，如: <span class="xi1">{北京|南京|天津|上海}	</span>			
+						<!--{elseif $tab==22}-->　　如果想发布一个描述性试题，该题目下有多个子题目，可以这样操作：新建一个题组，在题组中添加描述性内容（即大标题），然后在该题组中添加其子题目，如下样例：<br><br><img src="source/plugin/exam/image/help/type_ex1.jpg" border=0 ondragstart="return false;">
+						<!--{elseif $tab==23}-->　　如果想发布一个描述性试题，并提供了多个备选项，让下面几道题从备选项中选择答案，可以这样操作：新建一个题组，在题组中添加描述性内容（即大标题）和备选项，然后在该题组中添加题目，如下样例：<br><br><img src="source/plugin/exam/image/help/type_ex2.jpg" border=0 ondragstart="return false;">
+						<!--{elseif $tab==30}-->
+							<li><a href="plugin.php?id=exam:help&tab=31">3.1. 试题批量导入</a></li>
+							<li><a href="plugin.php?id=exam:help&tab=32">3.2. 试卷发布</a></li>
+						<!--{elseif $tab==31}-->
+						<pre>
+						    本程序支持试题的批量导入, 导入前需将试题按一定格式整理, 试题的导入格式是有一定规律, 与平常试卷相似。
+						
+						3.1.1 每个试题由4~5个部分组成：题目、选项、图片、答案、解析，其中题目和选项没有指令:
+						<p class="xs1 hbox"><题目>       ----  必选,在填空题的题目中必须包含下划线“____”或括号“(    )”，其中下划线至少4个，括号中的空格至
+						                   少4个,在问答题的题目中不能还有这些, 题目内容可换行, 
+						<选项>       ----  可选,这个是用于单选择题和多选择题,以A-Z大写单字母开头,该字母后跟一个冒号或点号,一行一个选项
+						图片:<网址>  ----  可选,导入图片指令,必须以“<em class="xi1">图片:</em>”开头(含冒号),后跟图片网址, 不可换行
+						答案:<内容>  ----  必选,导入答案指令,必须以“<em class="xi1">答案:</em>”开头(含冒号),后跟答案内容, 内容可换行
+						解析:<内容>  ----  可选,导入解析指令,必须以“<em class="xi1">解析:</em>”开头(含冒号),后跟解析内容, 内容可换行</p>
+						3.1.2 为了能够一次性导入多个试题组，这里又引入了一个题组指令(或题干,题干可看作是题组的别名)，如下：
+						<p class="xs1 hbox">题组[题干]:<题组名称>  ----  可选,如果查询到当前试卷中含有该题组,则将该题组切换为当前状态,若无,则创建题组并切换
+						<题组的内容说明>       ----  可选,紧接下一行或多行为该题组的说明内容</p>
+						3.1.3 每个试题之间必须至少有一个空行
+						
+						3.1.4 下面以具体案例来解释<em class="xi1">(红色为注释)</em>:
+							<p class="xs1 hbox">1.AutoCAD无法实现类似Word的文字查找或者替换功能<em class="xi1">(判断题)</em>
+							答案:错误 <em class="xi1">(答案类型可以为:正确,对,是,√,错误,错,否,×)</em>
+							图片:static/image/common/logo.png
+							解析:可这样操错打开查找和替换窗口: 菜单-->编辑-->查找
+
+							2.搜索引擎是一个用来搜索查询世界各地 Internet 网路资源的<em class="xi1">(单选题)</em>
+							A:网页
+							B:域名网址
+							C:Web服务器
+							D:邮箱
+							答案:C
+							 
+							3.下面那些是图片类型的扩展名?<em class="xi1">(多选题)</em>
+							A:gif
+							B:jpg
+							C:bmp
+							D:exe
+							答案:ABC
+
+							4.下面哪些不是图片类型的扩展名?<em class="xi1">(多选题)</em>
+							A:gif
+							B:jpg
+							C:bmp
+							D:exe
+							答案:D# <em class="xi1">(如果是不定项多选题的题型,而答案只有一个选项, 那么必须在末尾补充#字符)</em>
+
+							5.我国的首都是____, 我国有____个少数民族.<em class="xi1">(填空题)</em>
+							答案:北京 56  <em class="xi1">(各个项之间以空格分开)</em>
+							 
+							6.什么是微商?并简要描述其优点<em class="xi1">(问答题)</em>
+							答案:<em class="xi1">(答案内容可接在这行,也可以换行)</em>
+							    微商目前尚无统一认知的定义。一般是指以“个人”为单位的、利用web3.0时代所衍生的载体渠道，将传统方式与互联网相结合，不存在区域限制，且可移动性地实现销售渠道新突破的小型个体行为。简单的说，微商就是资源整合。
+							    投入小、门槛低、传播范围广、足不出户便可推广与销售、只需个体行为等特点，满足了大多数有意愿自己做点生意，却不敢轻易尝试实体性创业，亦没有太多资本投入，也不熟悉企业运营的个体。
+							</p>	
+							3.1.5 在整理试题的时候,请务必防止试题的内容与指令冲突							
+						</pre>
+						<!--{elseif $tab==32}--><pre>
+							试卷的发布需要做两步操作:
+							1.试卷作者在试卷中设置该卷为发布状态
+							2.管理员在试卷列表的浏览页面进行审核
+							
+						</pre>
+						<img src="source\plugin\exam\image\help\pfabu.jpg" border=0 ondragstart="return false;"><br><br><br><br>
+
+						<!--{elseif $tab=='rewrite'}-->
+							<pre>
+								本插件支持伪静态,要使用伪静态功能必须做到两点:
+								1.在论坛后台的应用中心开启伪静态: Discuz后台-->应用中心-->考试中心-->是否开启伪静态
+								2.根据服务器类型将下面一种合适的规则添加到服务器的伪静态文件中
+								<em class="xs1">注: 建议将此规则放在Discuz规则之前, 以防止与Discuz最后一条通用规则冲突</em>
+							</pre>
+							<em>Apache Web Server(独立主机用户):</em>
+							<pre class="precode">
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/m/?$ $1/plugin.php?id=exam:m&mobile=no&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/exam([0-9]*)\.html$ $1/plugin.php?id=exam&paper=$2.html&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/test([0-9]*)\.html#?(\d*)$ $1/plugin.php?id=exam&test=$2.html#$3&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^(.*)/list([0-9]*)-?([0-9]*)\.html$ $1/plugin.php?id=exam&list=$2-$3.html&%1
+							</pre>
+							
+							<em>Apache Web Server(虚拟主机用户):</em>
+							<pre class="precode">
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^m/?$ plugin.php?id=exam:m&mobile=no&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^exam([0-9]*)\.html$ plugin.php?id=exam&paper=$1.html&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^test([0-9]*)\.html#?(\d*)$ plugin.php?id=exam&test=$1.html#$2&%1
+								RewriteCond %{QUERY_STRING} ^(.*)$
+								RewriteRule ^list([0-9]*)-?([0-9]*)\.html$ plugin.php?id=exam&list=$1-$2.html&%1
+							</pre>
+							
+							<em>IIS Web Server(独立主机用户):</em>
+							<pre class="precode">
+								RewriteRule ^(.*)/m/?\?(.*)*$ $1/plugin\.php\?id=exam:m&mobile=no&$2
+								RewriteRule ^(.*)/exam([0-9]*)\.html\?(.*)*$ $1/plugin\.php\?id=exam&paper=$2.html&$3
+								RewriteRule ^(.*)/test([0-9]*)\.html#?(\d*)\?(.*)*$ $1/plugin\.php\?id=exam&test=$2.html#$3&$4
+								RewriteRule ^(.*)/list([0-9]*)-?([0-9]*)\.html\?(.*)*$ $1/plugin\.php\?id=exam&list=$2-$3.html&$4
+							</pre>
+							
+							<em>IIS7 Web Server(独立主机用户):</em>
+							<pre class="precode">
+								&lt;rule name="exam_m"&gt;
+								    &lt;match url="^(.*/)*m/?$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam:m&amp;amp;mobile=no" /&gt;
+								&lt;/rule&gt;
+								&lt;rule name="exam_paper"&gt;
+								    &lt;match url="^(.*/)*exam([0-9]*).html\?*(.*)$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam&amp;amp;paper={R:2}.html&amp;amp;{R:3}" /&gt;
+								&lt;/rule&gt;
+								&lt;rule name="exam_test"&gt;
+								    &lt;match url="^(.*/)*test([0-9]*).html#?(\d*)\?*(.*)$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam&amp;amp;test={R:2}.html#{R:3}&amp;amp;{R:4}" /&gt;
+								&lt;/rule&gt;
+								&lt;rule name="exam_list"&gt;
+								    &lt;match url="^(.*/)*list([0-9]*)-?([0-9]*).html#?(\d*)\?*(.*)$" /&gt;
+								    &lt;action type="Rewrite" url="{R:1}/plugin.php\?id=exam&amp;amp;list={R:2}-{R:3}.html{R:4}&amp;amp;{R:5}" /&gt;
+								&lt;/rule&gt;
+							</pre>
+							
+							<emx>Zeus Web Server:</em>
+							<pre class="precode">
+								match URL into $ with ^(.*)/m/?$
+								if matched then
+								    set URL = $1/plugin.php?id=exam:m&mobile=no
+								endif
+								match URL into $ with ^(.*)/exam([0-9]*)\.html\?*(.*)$
+								if matched then
+								    set URL = $1/plugin.php?id=exam&paper=$2.html&$3
+								endif
+								match URL into $ with ^(.*)/test([0-9]*)\.html#?(\d*)\?*(.*)$
+								if matched then
+								    set URL = $1/plugin.php?id=exam&test=$2.html#$3&$4
+								endif
+								match URL into $ with ^(.*)/list([0-9]*)-?([0-9]*)\.html\?*(.*)$
+								if matched then
+								    set URL = $1/plugin.php?id=exam&list=$2-$3.html&$4
+								endif
+							</pre>
+							
+							<em>Nginx Web Server:</em>
+							<pre class="precode">
+								rewrite ^([^\.]*)/m/?$ $1/plugin.php?id=exam:m last;
+								rewrite ^([^\.]*)/exam([0-9]*)\.html$ $1/plugin.php?id=exam&paper=$2.html last;
+								rewrite ^([^\.]*)/test([0-9]*)\.html#?(\d*)$ $1/plugin.php?id=exam&test=$2.html#$3 last;
+								rewrite ^([^\.]*)/list([0-9]*)-?([0-9]*)?\.html$ $1/plugin.php?id=exam&list=$2-$3.html last;
+							</pre>		
+						<!--{elseif $tab=='js'}-->
+							<pre>
+								本程序支持外部网页调用考试中心的数据, 只需将js代码嵌入外部HTML网页中即可,调取方法如下:
+							</pre>	
+							调取最新考试试卷列表: 
+							<pre class="precode">
+							&lt;script type="text/javascript"  src="http://$_SERVER[HTTP_HOST]/plugin.php?id=exam:js:paper:<模板>:<数量>:<栏目>"&gt;&lt;/script&gt;
+							</pre>	
+							调取最新考试日志列表: 
+							<pre class="precode">
+							&lt;script type="text/javascript"  src="http://$_SERVER[HTTP_HOST]/plugin.php?id=exam:js:log:<模板>:<数量>"&gt;&lt;/script&gt;
+							</pre>	
+	
+							<pre>
+								参数说明:
+								<模板>  ---- 文件夹 source/plugin/exam/template/js/ 里面的 *.htm 的文件名,不含扩展名, 
+								<数量>  ---- 获取的最大列表数量, 1~50
+								<栏目>  ---- 获取指定栏目中得试卷, 可以省略
+								
+								
+							
+								附录:
+							</pre>
+ 
+							试卷列表模板可用变量:
+							<pre class="precode">
+								<i class="xi2">$</i>list[pid]              试卷ID
+								<i class="xi2">$</i>list[title]            试卷标题
+								<i class="xi2">$</i>list[cid]              试卷分类ID
+								<i class="xi2">$</i>list[uid]              作者ID
+								<i class="xi2">$</i>list[username]         作者用户名
+								<i class="xi2">$</i>list[submit]           参与考试次数
+								<i class="xi2">$</i>list[minute]           考试时长(分钟)
+								<i class="xi2">$</i>list[pass]             及格分数
+								<i class="xi2">$</i>list[price]            积分售价
+								<i class="xi2">$</i>list[last_time]        最后一次参与考试时间
+								<i class="xi2">$</i>list[last_user]        最后一次参与考试用户名
+								<i class="xi2">$</i>list[pv]               试卷浏览量
+								<i class="xi2">$</i>list[time]             试卷创作时间
+							</pre>
+							考试日志列表模板可用变量:
+							<pre class="precode">
+								<i class="xi2">$</i>list[lid]              日志ID
+								<i class="xi2">$</i>list[pid]              试卷ID
+								<i class="xi2">$</i>list[title]            试卷标题
+								<i class="xi2">$</i>list[total]            试卷总分
+								<i class="xi2">$</i>list[pass]             及格分数
+								<i class="xi2">$</i>list[uid]              用户ID
+								<i class="xi2">$</i>list[username]         用户名
+								<i class="xi2">$</i>list[score]            得分
+								<i class="xi2">$</i>list[time]             时间		
+							</pre>	
+						<!--{/if}-->
+				</div>
+			</div>
+	</div>
+ 
+</div>
+<script type="text/javascript">
+		_attachEvent(window, 'load', function(){
+			if($('side_ct').clientHeight <  $('main').clientHeight-65)
+				$('side_ct').style.height =$('main').clientHeight -65+ 'px';
+		}, document);
+</script>
+
+<!--{template common/footer}-->

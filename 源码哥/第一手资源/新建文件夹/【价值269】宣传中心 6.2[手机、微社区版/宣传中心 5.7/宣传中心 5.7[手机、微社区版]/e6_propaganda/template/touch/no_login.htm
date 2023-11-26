@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="{if $_G['setting']['mobile'][mobilecachetime] > 0}{$_G['setting']['mobile'][mobilecachetime]}{else}no-cache{/if}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content="{if !empty($metakeywords)}{echo dhtmlspecialchars($metakeywords)}{/if}" />
+<meta name="description" content="{if !empty($metadescription)}{echo dhtmlspecialchars($metadescription)} {/if},$_G['setting']['bbname']" />
+<title><!--{if !empty($navtitle)}-->$navtitle - <!--{/if}--><!--{if empty($nobbname)}--> $_G['setting']['bbname'] - <!--{/if}--> {lang waptitle}</title>
+</head>
+<body class="bg">
+<!--{hook/global_header_mobile}-->
+<link rel="stylesheet" href="source/plugin/e6_propaganda/css/mobile.css">
+<script src="source/plugin/e6_propaganda/js/j.js"></script>
+<script src="source/plugin/e6_propaganda/js/mobile.js"></script>
+<link rel="stylesheet" href="source/plugin/e6_propaganda/css/mobile_custom.css">
+<!--{if $e6_propaganda['wechat_open'] == 1}-->
+<script type="text/javascript" src="http://wsq.discuz.qq.com/cdn/discuz/js/openjs.js"></script>
+<script>
+WSQ.initPlugin({name:'{$navtitle}'});
+var opts = {
+	'img': 'http://www.ymg6.com/gg/addon.php?/resource/plugin/e6_propaganda.png',
+	'title': '{$_G['setting']['bbname']}',
+	'pluginid': 'e6_propaganda',
+	'param': 'x={$_G['uid']}'
+};
+WSQ.initShareWx(opts);
+WSQ.hideBtmBar();
+<!--{if empty($_G['uid'])}-->
+WSQ.login({pluginid: 'e6_propaganda',param: ''});
+<!--{/if}-->
+</script>
+<!--{/if}-->
+</body>
+</html>

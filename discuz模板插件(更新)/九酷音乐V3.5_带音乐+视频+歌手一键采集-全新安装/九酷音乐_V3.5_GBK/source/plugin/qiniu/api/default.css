@@ -1,0 +1,164 @@
+html,body{
+	margin:0px;
+	padding:0px
+}
+body{
+	font-size:12px;
+	font-family:Arial
+}
+ul,ul li,h3{
+	margin:0px;
+	padding:0px;
+	list-style:none
+}
+.progressWrapper{
+	overflow:hidden
+}
+.progressContainer{
+	overflow:hidden;
+	position:relative;
+	z-index:5
+}
+.message{
+	margin:1em 0;
+	padding:10px 20px;
+	background-color:#FFFFCC;
+	overflow:hidden
+}
+.red{
+	background-color:#FFEBEB
+}
+.blue{
+	border:solid 1px #CEE2F2
+}
+.progressName{
+	font-size:8pt;
+	font-weight:700;
+	color:#555;
+	text-align:left;
+	white-space:nowrap;
+	overflow:hidden
+}
+.progresshidden{
+	display:none
+}
+.progressBarComplete,.progressBarComplete,.progressBarError{
+	font-size:0;
+	width:0%;
+	background-color:#4C94DC
+}
+.progressBarInProgress{
+	width:0%;
+	background-color:#4C94DC;
+	position:absolute !important;
+	left:0px;
+	top:0px;
+	z-index:1
+}
+.progressBarComplete{
+	width:100%;
+	visibility:hidden
+}
+.progressBarError{
+	width:100%;
+	background-color:red;
+	visibility:hidden
+}
+.progressBarStatus{
+	width:200px;
+	font-size:13px;
+	;
+	font-family:Arial;
+	text-align:left;
+	white-space:nowrap;
+	float:left;
+	height:24px;
+	line-height:24px;
+	position:absolute;
+	left:35%;
+	top:3px;
+	z-index:3
+}
+a.progressCancel{
+	font-size:0;
+	display:none;
+	height:16px;
+	width:16px;
+	background-repeat:no-repeat;
+	background-position:0 4px;
+	float:right
+}
+a.progressCancel:hover{
+	background-position:0 bottom
+}
+.white,.white a{
+	color:#fff
+}
+.blue,.blue a{
+	color:#004499
+}
+.gray4,a.gray4{
+	color:#999
+}
+.red,.red a,a.red{
+	color:red
+}
+.green{
+	color:#444
+}
+.green .progressName{
+	color:#eeeeee !important
+}
+.hidden{
+	display:none
+}
+.invisible{
+	visibility:hidden
+}
+.swfupload{
+	vertical-align:top
+}
+.addnew{
+	background:url(swfBnt.png) no-repeat;
+	float:left;
+	margin-left:2px;
+	margin-right:5px;
+	width:75px;
+	height:28px;
+	line-height:28px;
+	font-weight:700;
+	color:#fff
+}
+#btupload{
+	background:url(swfBnt.png) no-repeat;
+	float:left;
+	margin-right:2px;
+	width:75px;
+	height:28px;
+	line-height:28px;
+	font-weight:700;
+	color:#fff
+}
+#btupload{
+	vertical-align:middle;
+	border:none;
+	cursor:hand;
+	!important;
+	cursor:pointer
+}
+.addnew{
+	background-position:left bottom
+}
+.attachment-list{
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	color:#444;
+	font-size:14px
+}
+.attachment-list a{
+	color:#0055FF;
+	text-decoration:none
+}
+.attachment-list a:hover{
+	color:#0000FF;
+	text-decoration:underline
+}

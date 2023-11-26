@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="spacecss"><![CDATA[#frameLf34vM { border:0px !important;margin:0px !important;}#frameV3nNns { border:0px !important;margin:0px !important;}#portal_block_24 { border:0px !important;margin:0px !important;}#portal_block_24 .dxb_bc { margin:0px !important;}#portal_block_25 { border:0px !important;margin:0px !important;}#portal_block_25 .dxb_bc { margin:0px !important;}]]></item>
+	<item id="layoutdata">
+		<item id="wk_about_jobdiy1">
+			<item id="frame`frameV3nNns">
+				<item id="attr">
+					<item id="name"><![CDATA[frameV3nNns]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`frameV3nNns_left">
+					<item id="attr">
+						<item id="name"><![CDATA[frameV3nNns_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_24">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_24]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="wk_about_jobdiy2">
+			<item id="frame`frameLf34vM">
+				<item id="attr">
+					<item id="name"><![CDATA[frameLf34vM]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`frameLf34vM_left">
+					<item id="attr">
+						<item id="name"><![CDATA[frameLf34vM_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_25">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_25]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="diy1"><![CDATA[]]></item>
+		<item id="listcontenttop"><![CDATA[]]></item>
+		<item id="diycontentbottom"><![CDATA[]]></item>
+		<item id="diy3"><![CDATA[]]></item>
+	</item>
+	<item id="blockdata">
+		<item id="block">
+			<item id="24">
+				<item id="bid"><![CDATA[24]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[ÈË²ÅÕÐÆ¸1]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="top">
+		<h1>ÕÐÆ¸Ö°Î»</h1>
+		¼ÓÈëÎÒÃÇ·¢ÏÖ¸ü¾«²ÊµÄÉè¼ÆÖ®ÂÃ
+	</div>
+	<div class="con">
+		<div class="list">
+			<div class="pic">
+				<img src="template/week_jiaohu/images/about/job_05.jpg">
+			</div>
+			<ul>
+				<li>
+				<h2>UIÉè¼Æ</h2>
+				</li>
+				<li><strong>ÄãµÄ¹¤×÷Ö°Ôð£º</strong></li>
+				<li>1¡¢»¥ÁªÍø²úÆ·½çÃæµÄÊÓ¾õÉè¼Æ£¨UI£©£»</li>
+				<li>2¡¢¸ºÔðÊÖ»ú¶Ë£¨IOSºÍAndriod£©ºÍweb¶ËUIÉè¼Æ¹¤×÷;</li>
+				<li>3¡¢Ð­Öú½»»¥Éè¼ÆÊ¦Íê³É¼òµ¥½»»¥ÄÚÈÝ£¬²ÎÓë½»»¥ÌÖÂÛ£¬ºËÐÄ½çÃæ½»»¥²¼¾Ö£»</li>
+				<li>4¡¢ÓëÉè¼ÆÖ÷¹Ü½»Á÷Éè¼ÆÒâ¼ûÒÔ¼°´´ÐÂË¼Â·µÄÉè¼ÆÑÐ¾¿¡£</li>
+				<li>5¡¢²úÆ·ÊÓ¾õ±ê×¼¡¢ÓÃ»§ÌåÑéÉè¼ÆÖ¸ÄÏ/¹æ·¶µÄ½¨Á¢ºÍÎ¬»¤¡£</li>
+				<li><strong>ÎÒÃÇÏ£ÍûÄã£º</strong></li>
+				<li>1¡¢ÓÐ½ÏÇ¿µÄÃÀÊõ¹¦µ×¡¢Ã½ÌåÒâÊ¶¡¢´´ÐÂÒâÊ¶ºÍÉóÃÀ¹Û£¬ÓÐÁ¼ºÃµÄ¹µÍ¨ÄÜÁ¦£»</li>
+				<li>2¡¢ÁË½â»¥ÁªÍø²úÆ·Éè¼Æ¼°¿ª·¢¹¤×÷Á÷³Ì£»</li>
+				<li>3¡¢ÔÚUIÉè¼Æ·½ÃæÓÐ³ÉÊìµÄ×÷Æ·¡£</li>
+				<li>4¡¢ÈÈ°®Éè¼Æ£¬ÓÐÁ¼ºÃµÄÔðÈÎÐÄºÍÍÅ¶ÓºÏ×÷ÒâÊ¶¡£</li>
+			</ul>
+		</div>
+		<div class="list">
+			<div class="pic">
+				<img src="template/week_jiaohu/images/about/job_07.jpg">
+			</div>
+			<ul>
+				<li>
+				<h2>Éè¼ÆÖúÀí£¨ÊµÏ°£©</h2>
+				</li>
+				<li><strong>ÄãµÄ¹¤×÷Ö°Ôð£º</strong></li>
+				<li>1¡¢»ùÓÚÊÓ¾õÉè¼Æ¹æ·¶ºÍ·ç¸ñ½øÐÐÉè¼ÆÖ´ÐÐ£¬Íê³É²úÆ·½çÃæÉè¼Æ¹¤×÷£»</li>
+				<li>2¡¢°´ÕÕÏîÄ¿¼Æ»®ÍÆ½øÉè¼ÆÈÎÎñ£¬²¢·´À¡ºÍ´¦ÀíÎÊÌâ£»</li>
+				<li>3¡¢ÆäËûÉè¼Æ¹¤×÷µÄÖ´ÐÐÓë¸ú×Ù¡£</li>
+				<li><strong>ÎÒÃÇÏ£ÍûÄã£º</strong></li>
+				<li>1¡¢ÒÕÊõ¡¢Éè¼Æ×¨Òµ±³¾°£¬¾ßÓÐÁ¼ºÃµÄ´´Òâ±í´ïÄÜÁ¦£»</li>
+				<li>2¡¢ÉÆÓÚÐ­×÷Óë¹µÍ¨£¬¾ß±¸Á¼ºÃµÄÍÅ¶ÓºÏ×÷ÒâÊ¶£»</li>
+				<li>3¡¢¶ÔÓÃ»§ÌåÑéÓÐÁË½âºÍÈÏÊ¶£¬¶ÔÓÃ»§½çÃæµÄÇé¸ÐÉè¼ÆÓÐ¼«ÖÂ×·Çó£»</li>
+				<li>4¡¢¶Ô»¥ÁªÍøÓÐÇ¿ÁÒÐËÈ¤¡£</li>
+			</ul>
+		</div>
+		<div class="list last">
+			<div class="pic">
+				<img src="template/week_jiaohu/images/about/job_09.jpg">
+			</div>
+			<ul>
+				<li>
+				<h2>PHP¿ª·¢¹¤³ÌÊ¦</h2>
+				</li>
+				<li><strong>ÄãµÄ¹¤×÷Ö°Ôð£º</strong></li>
+				<li>1¡¢¾«Í¨PHP+MySQL£¬ÄÜ¹»¶ÀÁ¢±àÐ´ÖÐµÈ¹æÄ£PHPÓ¦ÓÃ³ÌÐò£»</li>
+				<li>2¡¢ÊìÏ¤TP¿ò¼Ü,ÉÃ³¤¸÷ÀàPHPÍøÕ¾³ÌÐò¿ª·¢(ÓÐµçÉÌÀà¿ª·¢¾­Ñé) £¬ ÊìÁ·¸÷¿ª·¢ºÍÔËÐÐ»·¾³²¢ÓÐµÚÈý·½½Ó¿Ú¿ª·¢¾­Ñé£»</li>
+				<li>3¡¢ÊìÏ¤HTML¡¢ JavaScript¡¢CSS¡¢XMLµÈÏà¹Ø¼¼Êõ£¬ÊìÏ¤Linux¡¢Apache£»</li>
+				<li>4¡¢ÓÐÁ¼ºÃµÄ±àÂëÏ°¹ß£¬½á¹¹ÇåÎú£¬ÃüÃû¹æ·¶£¬Âß¼­ÐÔÇ¿£»</li>
+				<li>5¡¢ÓÐÁ¼ºÃµÄ±í´ïÄÜÁ¦£¬ÉÆÓÚ¹µÍ¨¡£</li>
+				<li><strong>ÎÒÃÇÏ£ÍûÄã£º</strong></li>
+				<li>1¡¢×¨¿ÆÒÔÉÏÑ§Àú£¬¼ÆËã»úÈí¼þµÈÏà¹Ø×¨Òµ±ÏÒµ£¬1ÄêÒÔÉÏ¿ª·¢¹¤×÷¾­Ñé£»</li>
+				<li>2¡¢Ç¿ÁÒµÄÔðÈÎÐÄºÍÁ¼ºÃµÄÍÅ¶ÓºÏ×÷¾«Éñ£¬½ÏºÃµÄ¹µÍ¨¡¢Ð­µ÷ÄÜÁ¦£»</li>
+				<li>3¡¢¾ßÓÐºÜÇ¿µÄ·ÖÎöÎÊÌâºÍ½â¾öÎÊÌâµÄÄÜÁ¦,¹¥¹ØÒÉÄÑÎÊÌâµÄÇ¿ÁÒÐËÈ¤£»</li>
+				<li>4¡¢ÉÆÓÚÑ§Ï°¡£</li>
+			</ul>
+		</div>
+	</div>
+	<div class="bottom">
+		<p>
+			¼òÀúÇëÍ¶ÖÁ
+		</p>
+		<a href="mailto:discuz@fx8.cc">discuz@fx8.cc</a>
+	</div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"top\">
+		<h1>ÕÐÆ¸Ö°Î»</h1>
+		¼ÓÈëÎÒÃÇ·¢ÏÖ¸ü¾«²ÊµÄÉè¼ÆÖ®ÂÃ
+	</div>
+	<div class=\"con\">
+		<div class=\"list\">
+			<div class=\"pic\">
+				<img src=\"template/week_jiaohu/images/about/job_05.jpg\">
+			</div>
+			<ul>
+				<li>
+				<h2>UIÉè¼Æ</h2>
+				</li>
+				<li><strong>ÄãµÄ¹¤×÷Ö°Ôð£º</strong></li>
+				<li>1¡¢»¥ÁªÍø²úÆ·½çÃæµÄÊÓ¾õÉè¼Æ£¨UI£©£»</li>
+				<li>2¡¢¸ºÔðÊÖ»ú¶Ë£¨IOSºÍAndriod£©ºÍweb¶ËUIÉè¼Æ¹¤×÷;</li>
+				<li>3¡¢Ð­Öú½»»¥Éè¼ÆÊ¦Íê³É¼òµ¥½»»¥ÄÚÈÝ£¬²ÎÓë½»»¥ÌÖÂÛ£¬ºËÐÄ½çÃæ½»»¥²¼¾Ö£»</li>
+				<li>4¡¢ÓëÉè¼ÆÖ÷¹Ü½»Á÷Éè¼ÆÒâ¼ûÒÔ¼°´´ÐÂË¼Â·µÄÉè¼ÆÑÐ¾¿¡£</li>
+				<li>5¡¢²úÆ·ÊÓ¾õ±ê×¼¡¢ÓÃ»§ÌåÑéÉè¼ÆÖ¸ÄÏ/¹æ·¶µÄ½¨Á¢ºÍÎ¬»¤¡£</li>
+				<li><strong>ÎÒÃÇÏ£ÍûÄã£º</strong></li>
+				<li>1¡¢ÓÐ½ÏÇ¿µÄÃÀÊõ¹¦µ×¡¢Ã½ÌåÒâÊ¶¡¢´´ÐÂÒâÊ¶ºÍÉóÃÀ¹Û£¬ÓÐÁ¼ºÃµÄ¹µÍ¨ÄÜÁ¦£»</li>
+				<li>2¡¢ÁË½â»¥ÁªÍø²úÆ·Éè¼Æ¼°¿ª·¢¹¤×÷Á÷³Ì£»</li>
+				<li>3¡¢ÔÚUIÉè¼Æ·½ÃæÓÐ³ÉÊìµÄ×÷Æ·¡£</li>
+				<li>4¡¢ÈÈ°®Éè¼Æ£¬ÓÐÁ¼ºÃµÄÔðÈÎÐÄºÍÍÅ¶ÓºÏ×÷ÒâÊ¶¡£</li>
+			</ul>
+		</div>
+		<div class=\"list\">
+			<div class=\"pic\">
+				<img src=\"template/week_jiaohu/images/about/job_07.jpg\">
+			</div>
+			<ul>
+				<li>
+				<h2>Éè¼ÆÖúÀí£¨ÊµÏ°£©</h2>
+				</li>
+				<li><strong>ÄãµÄ¹¤×÷Ö°Ôð£º</strong></li>
+				<li>1¡¢»ùÓÚÊÓ¾õÉè¼Æ¹æ·¶ºÍ·ç¸ñ½øÐÐÉè¼ÆÖ´ÐÐ£¬Íê³É²úÆ·½çÃæÉè¼Æ¹¤×÷£»</li>
+				<li>2¡¢°´ÕÕÏîÄ¿¼Æ»®ÍÆ½øÉè¼ÆÈÎÎñ£¬²¢·´À¡ºÍ´¦ÀíÎÊÌâ£»</li>
+				<li>3¡¢ÆäËûÉè¼Æ¹¤×÷µÄÖ´ÐÐÓë¸ú×Ù¡£</li>
+				<li><strong>ÎÒÃÇÏ£ÍûÄã£º</strong></li>
+				<li>1¡¢ÒÕÊõ¡¢Éè¼Æ×¨Òµ±³¾°£¬¾ßÓÐÁ¼ºÃµÄ´´Òâ±í´ïÄÜÁ¦£»</li>
+				<li>2¡¢ÉÆÓÚÐ­×÷Óë¹µÍ¨£¬¾ß±¸Á¼ºÃµÄÍÅ¶ÓºÏ×÷ÒâÊ¶£»</li>
+				<li>3¡¢¶ÔÓÃ»§ÌåÑéÓÐÁË½âºÍÈÏÊ¶£¬¶ÔÓÃ»§½çÃæµÄÇé¸ÐÉè¼ÆÓÐ¼«ÖÂ×·Çó£»</li>
+				<li>4¡¢¶Ô»¥ÁªÍøÓÐÇ¿ÁÒÐËÈ¤¡£</li>
+			</ul>
+		</div>
+		<div class=\"list last\">
+			<div class=\"pic\">
+				<img src=\"template/week_jiaohu/images/about/job_09.jpg\">
+			</div>
+			<ul>
+				<li>
+				<h2>PHP¿ª·¢¹¤³ÌÊ¦</h2>
+				</li>
+				<li><strong>ÄãµÄ¹¤×÷Ö°Ôð£º</strong></li>
+				<li>1¡¢¾«Í¨PHP+MySQL£¬ÄÜ¹»¶ÀÁ¢±àÐ´ÖÐµÈ¹æÄ£PHPÓ¦ÓÃ³ÌÐò£»</li>
+				<li>2¡¢ÊìÏ¤TP¿ò¼Ü,ÉÃ³¤¸÷ÀàPHPÍøÕ¾³ÌÐò¿ª·¢(ÓÐµçÉÌÀà¿ª·¢¾­Ñé) £¬ ÊìÁ·¸÷¿ª·¢ºÍÔËÐÐ»·¾³²¢ÓÐµÚÈý·½½Ó¿Ú¿ª·¢¾­Ñé£»</li>
+				<li>3¡¢ÊìÏ¤HTML¡¢ JavaScript¡¢CSS¡¢XMLµÈÏà¹Ø¼¼Êõ£¬ÊìÏ¤Linux¡¢Apache£»</li>
+				<li>4¡¢ÓÐÁ¼ºÃµÄ±àÂëÏ°¹ß£¬½á¹¹ÇåÎú£¬ÃüÃû¹æ·¶£¬Âß¼­ÐÔÇ¿£»</li>
+				<li>5¡¢ÓÐÁ¼ºÃµÄ±í´ïÄÜÁ¦£¬ÉÆÓÚ¹µÍ¨¡£</li>
+				<li><strong>ÎÒÃÇÏ£ÍûÄã£º</strong></li>
+				<li>1¡¢×¨¿ÆÒÔÉÏÑ§Àú£¬¼ÆËã»úÈí¼þµÈÏà¹Ø×¨Òµ±ÏÒµ£¬1ÄêÒÔÉÏ¿ª·¢¹¤×÷¾­Ñé£»</li>
+				<li>2¡¢Ç¿ÁÒµÄÔðÈÎÐÄºÍÁ¼ºÃµÄÍÅ¶ÓºÏ×÷¾«Éñ£¬½ÏºÃµÄ¹µÍ¨¡¢Ð­µ÷ÄÜÁ¦£»</li>
+				<li>3¡¢¾ßÓÐºÜÇ¿µÄ·ÖÎöÎÊÌâºÍ½â¾öÎÊÌâµÄÄÜÁ¦,¹¥¹ØÒÉÄÑÎÊÌâµÄÇ¿ÁÒÐËÈ¤£»</li>
+				<li>4¡¢ÉÆÓÚÑ§Ï°¡£</li>
+			</ul>
+		</div>
+	</div>
+	<div class=\"bottom\">
+		<p>
+			¼òÀúÇëÍ¶ÖÁ
+		</p>
+		<a href=\"mailto:discuz@fx8.cc\">discuz@fx8.cc</a>
+	</div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[3600]]></item>
+				<item id="cachetimerange"><![CDATA[]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1462718102]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="25">
+				<item id="bid"><![CDATA[25]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[ÈË²ÅÕÐÆ¸_¹Ø×¢ÎÒÃÇ]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<h1>¹Ø×¢ÎÒÃÇ</h1>
+        <ul>
+            <li><img src="template/week_jiaohu/images/about/follow_03.jpg" width="120" height="120"></li>
+            <li><a href="#" target="_blank"><img src="template/week_jiaohu/images/about/follow_05.jpg" width="120" height="120"></a></li>
+            <li><a href="#" target="_blank"><img src="template/week_jiaohu/images/about/follow_07.jpg" width="120" height="120"></a></li>
+            <li><a href="#" target="_blank"><img src="template/week_jiaohu/images/about/follow_09.jpg" width="120" height="120"></a></li>
+        </ul>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<h1>¹Ø×¢ÎÒÃÇ</h1>
+        <ul>
+            <li><img src=\"template/week_jiaohu/images/about/follow_03.jpg\" width=\"120\" height=\"120\"></li>
+            <li><a href=\"#\" target=\"_blank\"><img src=\"template/week_jiaohu/images/about/follow_05.jpg\" width=\"120\" height=\"120\"></a></li>
+            <li><a href=\"#\" target=\"_blank\"><img src=\"template/week_jiaohu/images/about/follow_07.jpg\" width=\"120\" height=\"120\"></a></li>
+            <li><a href=\"#\" target=\"_blank\"><img src=\"template/week_jiaohu/images/about/follow_09.jpg\" width=\"120\" height=\"120\"></a></li>
+        </ul>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[3600]]></item>
+				<item id="cachetimerange"><![CDATA[]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1462718097]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+		</item>
+		<item id="style">
+		</item>
+	</item>
+</root>

@@ -1,0 +1,99 @@
+.crumb{ font-size:12px; font-weight:normal; line-height:36px; height:36px; color:#000;}
+.crumb a{ color:#000;}
+.crumb b{ font-weight:400; color:#666;}
+.boxW{border:1px solid #e5e5e5; width:960px; margin:0 auto;}
+.boxW h2{ font-size:24px; font-weight:normal; background-color:#fbfbfb; height:34px;padding:0 10px 0 15px; line-height:34px; color:#000;}
+.bangBox{ width:960px; margin:0 auto;}
+.bangL{ float:left; width:200px;}
+.bangR{ float:right; width:750px;}
+.bangNavHd{ width:200px; height:44px; text-align:center; color:#fff; overflow:hidden; background:#f34f34;font:800 24px/44px Microsoft YaHei;}
+.bangNavHd img{ display:block;}
+.bangNavBd{ border:1px solid #f34f34; border-top:0 none; background:#fff;}
+.bangNavList{ padding:10px 0;}
+.bangNavList li{ line-height:34px;height:34px;}
+.bangNavList li a{ width:198px;line-height:34px; height:34px; font-size:14px; text-indent:40px; display:block;}
+.bangNavList li a:hover{ background:#aaa;color:#fff;}
+.bangNavList li .icoHot{ width:19px; height:14px; background:url(bang.png) -302px -134px no-repeat; display:inline-block;*display:inline;zoom:1; margin:0 0 3px 8px;} 
+.bangNavList li.current a,.bangNavList li.current a:hover{color:#fff; font-weight:800; background:#f34f34 url(bang.png) right 0 no-repeat;}
+.bangNavList li.current .icoHot{ display:none;}
+.bangNavListGray li a{ color:#999;} 
+.bangNavListGray li a:hover{ color:#fff;background:#aaa;}
+.bangNavListGray li.current a,.bangNavListGray li.current a:hover{color:#fff; font-weight:800; background:#f34f34 url(bang.png) right 0 no-repeat;}
+.bangNavLine{ width:180px; margin:0 auto; line-height:0; overflow:hidden; font-size:0; height:1px; background:#f2cdc7;}
+.bangNavLineGray{ width:180px; margin:0 auto; line-height:0; overflow:hidden;font-size:0; height:1px; background:#e0e0e0;}
+.mdBox{ border:1px solid #e5e5e5;}
+.mdBoxHd{background:#fbfbfb; line-height:33px; height:33px; padding:0 12px;}
+.mdBoxHdTit{ font-size:14px;}
+.gengxinTime{ font-size:12px; font-weight:400; color:#f47373; padding:0 10px;}
+.mdBoxHd .fr{ color:#999;}
+.mdBangHd{ line-height:44px; height:44px;}
+.mdBangHd .mdBoxHdTit{ color:#333;}
+.bangPlayAll{ height:41px; line-height:41px; text-align:center; padding:20px 0 15px; font-size:14px;margin:0 15px;}
+.bangPlayAll .buXuan{ display:inline-block; *display:inline;zoom:1; color:#f14848;}
+.bangPlayAll .playFast{ display:inline-block; *display:inline;zoom:1; width:265px; height:41px; line-height:41px; text-indent:60px; color:#fff; background:url(bang.png) 0 -132px no-repeat; text-align:left;}
+.bangPlayAll .playFast:hover{ color:#fff;}
+.bangPlayAll .allNum{ display:inline-block; *display:inline;zoom:1; color:#999;}
+.songList{ padding:10px 0; width:100%; overflow:hidden;}
+.songList ol{overflow:hidden;zoom:1;width:100%;}
+.songList li{width:210px; line-height:30px; height:30px; overflow:hidden;margin-bottom:5px;float:left;display:inline; margin:0 18px -1px 21px; padding:3px 0 3px; border-bottom:1px solid #f5f5f5;}
+.songList li .songNum{ width:30px; height:30px;color:#b1b1b1; float:left; overflow:hidden;}
+.songList li .topRed{ font-weight:bold; color:#F00;}
+.songList li .songName{ float:left; font-size:14px; width:135px; overflow:hidden;height:30px;}
+.songList li .check{ float:left; margin:10px 4px 0 0;*margin:5px 2px 0 0; display:inline;}
+.songList li .add{background-position:0 -71px; float:right;height:30px;width: 20px;}
+.loadMore{ line-height:56px; height:56px; text-align:center; font-size:14px; background:#fff; border-top:2px solid #eee; background:#f5f5f5; margin-top:10px; cursor:pointer;}
+.loadMore a{ color:#390; width:100%; height:56px; display:block;}
+.loadMore a:hover{ color:#390; background:#fff; font-weight:800; text-decoration:none;}
+/*good*/
+.goodNav .bangNavHd img{ margin:-44px 0 0;}
+.goodNav .bangNavBd{ border:1px solid #b79461; border-top:0 none;}
+.goodNav li.current a,.goodNav li.current a:hover{background:#b79461 url(bang.png) right 0 no-repeat;}
+.goodText{ padding:10px 25px 0; color:#666;}
+.goodText a{ color:#390; text-decoration:underline; margin:0 5px;}
+/*tao*/
+.taoNav .bangNavHd img{ margin:-88px 0 0;}
+.taoNav .bangNavBd{ border:1px solid #537eb9; border-top:0 none;}
+.taoNav li.current a,.taoNav li.current a:hover{background:#537eb9 url(bang.png) right 0 no-repeat;}
+.taoTagNav{ background:#fff; border:1px solid #e5e5e5; margin-top:10px; padding:5px 10px;}
+.taoTagNav h3{ font-size:12px; color:#f47373; padding:5px 5px;}
+.taoTagNavList{ padding:0 0 5px;}
+.taoTagNavList li{ font-size:12px;float:left;line-height:24px; height:24px;margin:0 5px; display:inline;text-align:center;white-space:nowrap;}
+.taoTagNavList li a{ color:#6d92c4;}
+.taoTagNavList li a:hover{ color:#f34f34;}
+.taoTagNavList .allTag a,.taoTagNavList .allTag a:hover{ color:#f47373;}
+.taoList{ padding:5px 20px;}
+.taoList li{ padding:15px 0; border-bottom:1px dashed #ddd;}
+.taoList .taoPic{ width:108px; height:108px; float:left;}
+.taoList .taoPic .t-i{ width:100px; height:100px; display:block; padding:3px; border:1px solid #e8e8e8;}
+.taoList .taoPic .t-i:hover{ background:#fff; border:1px solid #f34f34;}
+.taoText{ float:left; width:580px; margin:0 0 0 10px; display:inline;}
+.taoText h3{ line-height:24px; height:24px; overflow:hidden; width:100%; margin:0 0 6px;}
+.taoText h3 .t-t{display:inline-block;color:#537eb9; font-weight:800;line-height:24px; height:24px;}
+.taoText h3 .t-t:hover{ color:#f34f34;}
+.taoText h3 .t-play{display:inline-block; font-size:12px;line-height:24px; height:24px; font-weight:400;color:#f47373; padding-left:21px; background:url(bang.png) 0 -266px no-repeat; margin:0 0 0 10px;}
+.taoText h3 .t-play:hover{ color:#f47373;}
+.taoText p{ margin-top:2px; line-height:18px; height:18px; overflow:hidden;}
+.taoText p .taoNum{ padding-left:20px;}
+.taoText p a{ color:#6d92c4; padding:0 8px 0 0; text-decoration:underline;}
+.taoText p a:hover{ color:#f34f34;}
+.taoText p.i-t{ line-height:18px; height:36px; color:#999;}
+.taoTag{ padding:15px 20px;}
+.taoTag li{ float:left; width:130px; margin-left:10px; display:inline; overflow:hidden;}
+.taoTag li a{ font-size:12px;line-height:36px; height:36px;margin-right:8px;text-align:center;white-space:nowrap; color:#666; font-size:14px;}
+.taoTag li a:hover{ color:#f34f34;}
+/*songtaste*/
+.songList{ padding:10px 0; width:100%; overflow:hidden;}
+.songList ol.songTaste{ width:708px;float:none; display:block;border:0 none;margin:0;padding:0 20px; overflow:hidden;zoom:1; }
+.songList ol.songTaste li{ width:708px;line-height:30px; height:30px; overflow:hidden;margin:0 0 5px 0;padding:0;border:0 none; display:block; float:left;}
+.songList ol.songTaste li .songName{width:620px;}
+/*ÅÅÐÐ°ñÊ×Ò³*/
+.bangIndex .mdBox{ float:left; width:241px; margin-left:10px; display:inline;}
+.bangIndex .mdBox .mdBangHd .mdBoxHdTit{font-family:Microsoft YaHei; font-size:20px;}
+.bangIndex .songList{ padding:6px 0; width:100%; overflow:hidden;}
+.bangIndex .songList ol{ width:213px; display:inline;float:left; overflow:hidden;zoom:1; margin:0;padding:0 12px 0 15px; border:0 none;}
+.bangIndex .songList li{ width:213px; line-height:30px; height:30px; overflow:hidden;border:0 none;margin:0 0 5px 0;padding:0; display:block; float:left;}
+.bangIndex .songList li .songName{width:155px;}
+.bangIndex .setPlay{ margin:0; padding:10px 0 15px; width:240px;}
+.bangIndex .setPlay a.setPlayPlay{ background-position:0 -198px; width:84px; padding-left:15px; text-indent:0; text-align:center;}
+.setPlay .seeAll{ color:#390; text-indent:0; text-decoration:underline;}
+.setPlay .seeAll:hover{ color:#390; text-decoration:underline;}

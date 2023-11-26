@@ -1,0 +1,346 @@
+{block register}
+<link rel="stylesheet" type="text/css" href="source/plugin/zhanmishu_sms/template/touch/css/style.css" />
+<style>
+	.cd-form label {max-width: 20px;max-height: 20px;}
+	.cd-form input.button-width {
+	  width: 30%;padding: 12px 0 12px 0;background: {$config['mobilebuttoncolor']};color: #fff;
+	}
+	.cd-form input[type=submit] {
+	  padding: 16px 0;
+	  cursor: pointer;
+	  background: {$config['mobilebuttoncolor']};
+	  color: #FFF;
+	  font-weight: bold;
+	  border: none;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  -ms-appearance: none;
+	  -o-appearance: none;
+	  appearance: none;
+	}
+	.main_nav li{float:left; width:289px; /*margin-right:10px;*/ font-size:16px;  
+	  padding:0;
+	  height: 46px;
+	  line-height: 46px;
+	  font-weight: bolder;
+	  border-radius: 0.5em;
+	  background: {$config['mobilebuttoncolor']};
+	  text-align:center
+	}
+</style>
+<script type="text/javascript" src="source/plugin/zhanmishu_sms/template/touch/js/main.js"></script>
+   <!--  <a id="fast_reg_button" class="cd-signup" href="javascript:;">{lang zhanmishu_sms:fastmobileregister}</a> -->
+	{if $show == '1' && $config['ismobileregister']}
+	<div class="zmslogin">
+		<nav class="main_nav">
+			<ul>
+				<li><a class="cd-signup" href="javascript:;">{lang zhanmishu_sms:fastmobileregister}</a></li>
+			</ul>
+		</nav>
+	</div>
+	{/if}
+	
+	<div class="cd-user-modal"> 
+		<div class="cd-user-modal-container">
+			<ul class="cd-switcher">
+				<li><a href="javascript:;">{lang zhanmishu_sms:fastmobileregister_tip}</a></li>
+			</ul>
+			<div id="cd-signup"> 
+				<form class="cd-form" autocomplete="off">
+					<input type="hidden" name="code" id="code" value="">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-mobile">{lang zhanmishu_sms:username}</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="{lang zhanmishu_sms:username}">
+					</p>
+					<p class="fieldset">
+						<label class="image-replace cd-mobile" for="signup-mobile">{lang zhanmishu_sms:mobile_number}</label>
+						<input class="full-width has-padding has-border" id="signup-mobile" type="text" placeholder="{lang zhanmishu_sms:mobile_number}">
+					</p>
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">{lang zhanmishu_sms:password}</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="{lang zhanmishu_sms:password}">
+					</p>
+					<!--{if $secqaacheck || $seccodecheck}-->
+					<p class="fieldset">
+							<!--{template common/seccheck}-->
+					</p>
+					<!--{/if}-->
+					<p class="fieldset">
+						<label class="image-replace cd-verifycode" for="signup-verifycode">{lang zhanmishu_sms:smsverifycode}</label>
+						<input class="verify-width has-padding has-border" id="signup-verifycode" type="verifycode" placeholder="{lang zhanmishu_sms:verifycode}">
+						<input class="button-width has-padding has-border" id="send" type="button" value="{lang zhanmishu_sms:getverifycode}">
+
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width2" type="submit" id="registersubmit" value="{lang zhanmishu_sms:registerandlogin}">
+					</p>
+				</form>
+			</div>
+
+			<a href="javascript:;" class="cd-close-form">{lang zhanmishu_sms:close}</a>
+		</div>
+	</div> 
+<script type="text/javascript">
+jQuery(function(){
+	//{if $_GET['mod'] == $_G[setting][regname]}
+	//add input
+	var mobileinput = '<li><input id="regmobile" type="text" value="" tabindex="1" class="px p_fre" size="30" autocomplete="off" value="" name="mobile" placeholder="{lang zhanmishu_sms:mobile_number}" fwin=""><input id="zmssend" type="button" name="getsms" value="{lang zhanmishu_sms:getverifycode}"  onclick="javascript:sendMessage();return false;"></li><li class="bl_none answerli"><input type="text" name="sms_verify" id="sms_verify" class="px p_fre" size="30" placeholder="{lang zhanmishu_sms:smsverifycode}"></li><input type="hidden" name="code" id="code" value="" required>';
+	jQuery("#btn_register").before(mobileinput);
+	//{/if}
+	jQuery("#signup-password").click(function() {
+		if ($(this).attr("type") == "text") $(this)[0].type = "password";
+	});
+
+	var reg = jQuery("#fast_reg_button");
+		reg.removeAttr('style');
+	var jQueryform_modal = jQuery('.cd-user-modal'),
+		jQueryform_signup = jQueryform_modal.find('#cd-signup'),
+		jQueryform_modal_tab = jQuery('.cd-switcher'),
+		jQuerytab_login = jQueryform_modal_tab.children('li').eq(0).children('a'),
+		jQuerytab_signup = jQueryform_modal_tab.children('li').eq(1).children('a'),
+		jQuerymain_nav = jQuery('.main_nav');
+	//open alert
+	reg.on('click', function(event){
+
+		if( jQuery(event.target).is(jQuerymain_nav) ) {
+			// on mobile open the submenu
+			jQuery(this).children('ul').toggleClass('is-visible');
+		} else {
+			// on mobile close submenu
+			jQuerymain_nav.children('ul').removeClass('is-visible');
+			//show modal layer
+			jQueryform_modal.addClass('is-visible');	
+			//show the selected form
+			jQueryform_signup.addClass('is-selected');
+			jQuerytab_login.removeClass('selected');
+			jQuerytab_signup.addClass('selected');
+		}
+
+	});
+
+})
+jQuery("#send").click(function() {
+	return mobilefastreg_sendMessage();
+	return false;
+});
+jQuery("#registersubmit").click(function() {
+	mobilefastreg_register();
+	return false;
+
+});
+jQuery("#signup-mobile").blur(function(){
+	if(!checkmobile()) 
+	{ 
+	    return false; 
+	} 
+});
+jQuery("#signup-mobile").focus(function(){
+	return ;
+});
+
+/*-------------------------------------------*/  
+var InterValObj; 
+var count = {$config['waittime']};
+var curCount;
+var code = ""; 
+var codeLength = 6;
+function zmschecksec(){
+	//{if !$config['regsmssec'] || !$config['seccodecheck']}
+	return true;
+	//{/if}
+   seccodeverify = jQuery("#registerform :input[name='seccodeverify']").val();
+   if (seccodeverify) {
+    return true;
+   }else{
+    return false;
+   }
+}
+function sendMessage() {
+    curCount = count;  
+    phone=jQuery("#regmobile").val();
+    if (!zmschecksec()) {
+    	popup.open('{lang zhanmishu_sms:please_input_right_info}', 'alert');
+    }
+    if (!checkmobile(phone)) {
+    	popup.open('{lang zhanmishu_sms:please_input_passwd}', 'alert');
+        return false;
+    };
+    if(phone != ""){  
+        code = 0;
+        for (var i = 0; i < codeLength; i++) {  
+            code += parseInt(Math.random() * 10).toString();
+        }
+        jQuery("#code").val(code);
+        jQuery("#send").attr("disabled", "true");  
+        jQuery("#send").val("{lang zhanmishu_sms:input_tips_sec}");  
+
+        InterValObj = window.setInterval(zmsSetRemainTime, 1000);
+       
+        jQuery.ajax({  
+            type: "POST", 
+            dataType: "json", 
+            url: 'plugin.php?id=zhanmishu_sms:send&no_submit=no_submit&method=send',   
+            data: jQuery("#registerform").serialize(),
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                window.clearInterval(InterValObj);
+                popup.open('{lang zhanmishu_sms:please_input_right_info}', 'alert');
+                jQuery("#zmssend").removeAttr("disabled");
+            },  
+            success: function (msg){
+                if (msg.code < 1) {
+                    popup.open(msg.msg, 'alert');
+                    window.clearInterval(InterValObj);
+                    jQuery("#zmssend").val(msg.msg);
+                    jQuery("#zmssend").removeAttr("disabled");
+                }else{
+
+                }
+            }  
+        });
+    }else{  
+        jQuery("#zhanmishu_sms_err").html("{lang zhanmishu_sms:input_tips}");
+        jQuery("#zhanmishu_sms_err").attr('style','display:block');
+    }  
+}  
+function checkmobile(mobile){
+	var myreg ={$config['mobilerule']};
+	mobile = mobile ? mobile : jQuery("#signup-mobile").val();
+	if(myreg.test(mobile)) 
+	{ 
+	    return true; 
+	}else{
+		return false;
+	}
+}
+function mobilefastreg_sendMessage() {
+
+    curCount = count;  
+    phone=jQuery("#signup-mobile").val();
+	username=jQuery("#signup-username").val();
+	passwd = jQuery("#signup-password").val();
+	if (!username || username.length < 3) {
+		if (!username) {
+			popup.open('{lang zhanmishu_sms:please_input_username}', 'alert');
+		}else{
+			popup.open('{lang zhanmishu_sms:username_wrong}', 'alert');
+		}
+		return false;
+	}
+	if (!checkmobile()) {
+		if (!phone) {
+			popup.open('{lang zhanmishu_sms:please_input_mobile}', 'alert');
+		}else{
+			popup.open('{lang zhanmishu_sms:wrongmobile_number}', 'alert');
+		}
+		
+		return false;
+	};
+	if (!passwd || passwd.length < 6) {
+		if (!passwd) {
+			popup.open('{lang zhanmishu_sms:please_input_password}', 'alert');
+		}else{
+			popup.open('{lang zhanmishu_sms:password_wrong}', 'alert');
+		}
+		return false;
+	}
+    if(phone != ""){  
+
+        code = 0;
+        for (var i = 0; i < codeLength; i++) {  
+            code += parseInt(Math.random() * 10).toString();
+        }
+        jQuery("#code").val(code);
+        jQuery("#send").attr("disabled", "true");  
+        jQuery("#send").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+
+        InterValObj = window.setInterval(mobilefastreg_SetRemainTime, 1000); 
+        jQuery.ajax({  
+            type: "POST", 
+            dataType: "json", 
+            url: 'plugin.php?id=zhanmishu_sms:send&no_submit=no_submit&method=send&from=fastmobilesendreg',   
+            data: "phone=" + phone + "&code=" + code +"&formhash={FORMHASH}",  
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+            	window.clearInterval(InterValObj);
+            	jQuery("#send").val(msg.msg);
+            	jQuery("#send").removeAttr("disabled");
+            },  
+            success: function (msg){
+            	if (msg.code < 0) {
+                    popup.open(msg.msg, 'alert');
+                    window.clearInterval(InterValObj);
+                    jQuery("#send").removeAttr("disabled");
+                }else{
+                    
+                }
+            }  
+        });
+    }
+}  
+function mobilefastreg_SetRemainTime() {  
+    if (curCount == 0) {                  
+        window.clearInterval(InterValObj); 
+        jQuery("#send").removeAttr("disabled");
+        jQuery("#send").val("{lang zhanmishu_sms:resend}");  
+        code = "";     
+    }  
+    else {  
+        curCount--;  
+        jQuery("#send").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+    }  
+}
+
+function zmsSetRemainTime() {  
+    if (curCount == 0) {                  
+        window.clearInterval(InterValObj); 
+        jQuery("#zmssend").removeAttr("disabled");
+        jQuery("#zmssend").val("{lang zhanmishu_sms:resend}");  
+        code = "";     
+    }  
+    else {  
+        curCount--;  
+        jQuery("#zmssend").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+    }  
+}
+
+
+function mobilefastreg_register(){
+	var mobile=jQuery("#signup-mobile").val();
+	var username=jQuery("#signup-username").val(); 
+	var verify = jQuery("#signup-verifycode").val();
+	var passwd = jQuery("#signup-password").val();
+	var code = jQuery("#code").val();
+	if (!mobile || !username || !verify || !passwd || !code ) {
+		popup.open('{lang zhanmishu_sms:wrongverify}', 'alert');
+		return false;
+	}
+
+	jQuery.ajax({  
+        type: "POST",
+        dataType: "json", 
+        url: 'plugin.php?id=zhanmishu_sms:send&registersubmit=yes&method=register', //
+
+        data: "verify=" + verify + "&passwd=" + passwd + "&username="+ username +"&mobile=" + mobile + "&code="+code+"&formhash={FORMHASH}",  
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        	return false;
+        },  
+        success: function (msg){
+        	if (msg.code < 1) {
+        		popup.open(msg.msg, 'alert');
+        		jQuery("#send").removeAttr("disabled");
+        		jQuery("#send").val("{lang zhanmishu_sms:resend}");
+        		
+        		return false;
+
+        	}else if(msg.code == '1') {
+        		jQueryform_modal = jQuery('.cd-user-modal');
+        		jQueryform_modal.removeClass('is-visible');
+        		window.location.href = msg.msg;
+                return true;
+        	}
+
+        }  
+    }); 
+}
+</script>  
+{/block}

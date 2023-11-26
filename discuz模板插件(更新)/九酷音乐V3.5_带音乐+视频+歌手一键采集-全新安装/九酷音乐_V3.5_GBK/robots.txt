@@ -1,0 +1,14 @@
+#
+# robots.txt for QianWei Music
+#
+
+User-agent: *
+Disallow: /api/
+Disallow: /client/
+Disallow: /data/
+Disallow: /install/
+Disallow: /source/
+Disallow: /static/
+Disallow: /admin.php
+Disallow: /avatar.php
+Disallow: /plugin.php

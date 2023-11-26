@@ -1,0 +1,74 @@
+<link href="{HEJIN_PATH}public/admin/css/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.validation.min.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/admincp.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.cookie.js"></script>
+<link href="{HEJIN_PATH}public/admin/css/skin_0.css" rel="stylesheet" type="text/css" id="cssfile2" />
+
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+      <div class="h3" style="width:auto;">{lang hejin_box:textreply}</div>
+      <ul class="tab-base">
+        <li><a href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=replytext&model=addtext" class="current"><span>{lang hejin_box:addtextreply}</span></a></li>
+      </ul>
+    </div>
+  </div>
+ 
+<table class="table tb-type2" id="prompt">
+    <tbody>
+      <tr style="background: none repeat scroll 0% 0% rgb(255, 255, 255);" class="space odd">
+        <th colspan="12" class="nobg"><div class="title">
+            <h5>{lang hejin_box:cztishi}</h5>
+            <span class="arrow"></span></div></th>
+      </tr>
+      <tr style="background: none repeat scroll 0% 0% rgb(255, 255, 255);" class="odd">
+        <td><ul>
+            <li>{lang hejin_box:replytsd}</li>
+          </ul></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <form id="list_form" method='post'>
+    <input id="class_id" name="class_id" type="hidden" />
+    <table class="table tb-type2">
+      <thead>
+        
+        <tr class="thead">
+           <th style="width:2%"></th>
+         <th style="width:16%">{lang hejin_box:keyword}</th>
+          <th style="width:46%">{lang hejin_box:contenta}</th>
+		  <th style="width:8%">{lang hejin_box:state}</th>
+		  <th style="width:8%">{lang hejin_box:paixu}</th>
+		  <th style="width:20%; text-align:center">{lang hejin_box:caozuo}</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <!--{loop $replyes $reply}-->
+                        <tr class="hover edit">
+           <td></td>
+		  <td><!--{eval echo stripslashes($reply['keywords']);}--></td>
+		  <td><!--{eval echo stripslashes($reply['content']);}--></td>
+		  <td>{if $reply['state']}{lang hejin_box:qiyong}{else}<font color="#FF0000">{lang hejin_box:jinyong}</font>{/if}</td>
+		  <td>$reply['sort']</td>
+		  <td class='align-center'>
+		  	<a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=replytext&model=edittext&rid=$reply['id']">{lang hejin_box:xiugai}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=replytext&model=del&rid=$reply['id']&formhash={FORMHASH}" onclick="return confirm(&quot;{lang hejin_box:shanchuts}&quot;);">{lang hejin_box:shanchu}</a>
+		  </td>
+        </tr>
+         <!--{/loop}-->                   
+                
+                      </tbody>
+            <tfoot>
+        <tr class="tfoot">
+          <td>
+          </td>
+          <td id="batchAction" colspan="15">
+            <div class="pagination"><ul>$page_string</ul></div></td>
+        </tr>
+      </tfoot>
+          </table>
+  </form>
+</div>

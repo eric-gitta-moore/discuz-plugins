@@ -1,0 +1,34 @@
+在数据调用页面的模块分类处选择【帖子模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-头条列表
+
+标题最大字节数：34
+
+日期格式：01-18
+
+【确定】
+
+
+点击确定后，选择刚才添加的模块的“属性”→“模块模板”，将代码修改为（默认代码删除）：
+
+<div class="n5jj_ttmk cl" style="margin:15px 0 0 0">
+	<div class="ttmk_tt cl">
+	[index=1]
+		<a href="{url}">
+		<h1>{title}</h1>
+		<p>{summary}...</p>
+		</a>
+	[/index]
+	</div>
+    <div class="ttmk_lb cl">
+		<ul>
+			[loop]
+			<li><i>{dateline}</i><a href="{url}"><span>[{forumname}]</span>{title}</a></li>
+			[/loop]
+		</ul>
+	</div>
+</div>
+
+修改后选择更新，这个模块添加完成。

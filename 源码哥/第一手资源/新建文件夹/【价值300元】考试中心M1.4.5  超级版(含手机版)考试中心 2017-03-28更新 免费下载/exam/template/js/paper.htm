@@ -1,0 +1,8 @@
+<div class="jslist">
+<!--{loop $list $v}-->
+	<li>
+		<a class="y xi2" href="plugin.php?id=exam&paper={$v[pid]}.html" target="_BLANK">$v[title]</a>
+		(<a href="home.php?mod=space&uid=$v[uid]" target="_BLANK">$v[username]</a> {echo date("m-d H:i", $v[time]);})
+	</li>
+<!--{/loop}-->
+</div>

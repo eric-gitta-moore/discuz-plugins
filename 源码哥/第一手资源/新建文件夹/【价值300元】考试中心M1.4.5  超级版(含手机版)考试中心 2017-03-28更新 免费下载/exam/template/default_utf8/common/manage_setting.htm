@@ -1,0 +1,104 @@
+		<script src="static/js/calendar.js?{VERHASH}" type="text/javascript"></script>
+		<form id="testform" method="post" autocomplete="off" action="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab&formhash=$_G[formhash]" onsubmit="$('e_textarea').value = wysiwyg ? html2bbcode(getEditorContents()) : $('e_textarea').value">
+		<input value="$_G[formhash]" name="formhash" type="hidden">
+		<div class="exfm">
+		<style>
+			.multgroup label{display:block;width:132px}		
+			.multgroup input{width:20px}
+		</style>
+		<table cellpadding="0" cellspacing="0" class="table-set" border=0>
+			<tr><td width=60>试卷名称</td><td colspan=6><input class="px w" name="title" id="title" value="$paper[title]" maxlength=80></td>
+				<td  width=160><label><input class="cb" type="checkbox" value=1 name="public" <!--{if $paper[public]}-->checked<!--{/if}-->>发布试卷</label></td>
+			</tr>
+			<tr>
+			<td width=60>考试用时</td><td width=100><input class="px n" name="minute" value="<!--{if $paper[minute]}-->$paper[minute]<!--{/if}-->" maxlength=4> 分钟</td>
+			<th width=60>参与密码</th><td width=108><input class="px n" name="pwd" value="$paper[pwd]" maxlength=6></td>
+			<th width=50>售　价</th><td><input class="px n" name="price" value="<!--{if $paper[price]}-->$paper[price]<!--{/if}-->" maxlength=4> <span title="$config[extcredit][title]"><!--{if $config[extcredit][unit]}-->$config[extcredit][unit]<!--{else}-->$config[extcredit][title]<!--{/if}--></span></td>			
+			<th width=70>开考时间是</th><td class="hasd cl"><input type="text" value="<!--{if $paper[starttime]>0}-->$paper[starttime]<!--{/if}-->" name="starttime" id="starttime" class="px" onclick="showcalendar(event, this, true)" autocomplete="off" value="" tabindex="1"><a href="javascript:;" class="dpbtn" onclick="showselect(this, 'starttime')"></a></td>
+			</tr>
+			
+			<tr>
+			<td>及格分数</td><td><input class="px n" name="pass" value="<!--{if $paper[pass]}-->$paper[pass]<!--{/if}-->" maxlength=3> 分</td>
+			<th >允考次数</th><td><input class="px n" name="twice" value="<!--{if $paper[twice]}-->$paper[twice]<!--{/if}-->" maxlength=4> 次/人</td>			
+			<th rowspan=2>购　买<br>有效期</th><td><input class="px n" name="long1" value="<!--{if $paper[long]}-->{echo intval($paper[long]/86400)}<!--{/if}-->" maxlength=3> 天</td>
+			<th width=70>朋友组权限</th><td>
+				<select name="fgid" class="ps">
+					<option value="0" <!--{if !$paper[fgid]}-->selected="selected"<!--{/if}-->>无</option>
+					<!--{loop $friend_group_list $k $v}-->
+						<!--{if $k>0}-->
+						<option value="$k" <!--{if $k==$paper[fgid]}-->selected="selected"<!--{/if}-->>$v</option>
+						<!--{/if}-->
+					<!--{/loop}-->
+				</select>
+				<a href="home.php?mod=space&do=friend" target="_blank">查看</a>
+			</td>
+			</tr>
+　
+			<tr>
+			<td>交卷限时</td><td><input class="px n" name="wait" value="<!--{if $paper[wait]}-->$paper[wait]<!--{/if}-->" maxlength=4> 分钟</td>
+			<th>每次间隔</th><td><input class="px n" name="delay" value="<!--{if $paper[delay]}-->$paper[delay]<!--{/if}-->" maxlength=6> 分钟</td>				
+			<td><input class="px n" name="long2" value="<!--{if $paper[long]}-->{echo intval($paper[long]%86400/3600)}<!--{/if}-->" maxlength=4> 小时</td>
+			<th width=70>考试组权限</th><td  class="hasd cl">
+				<input type="text" id="select_mg"  class="px" autocomplete="off" value="<!--{if !empty($paper[readgroup])}-->已选中 {echo count($paper[readgroup])} 个组<!--{/if}-->" mg="1"><a mg="1" href="javascript:;" class="dpbtn"></a>
+				<div class="multgroup" id="multgroup">
+					<label mg="3"><input mg="2" type="checkbox" value="-1">全部</label>
+					<!--{loop $usergroup $v}-->
+						<label mg="3"><input mg="2" type="checkbox" name="readgroup[]" value="$v[groupid]" <!--{if in_array($v[groupid], $paper[readgroup])}-->checked<!--{/if}-->>$v[grouptitle]</label>
+					<!--{/loop}-->
+				</div>
+			</td>
+			</tr>
+
+		</table>
+		</div>
+		{eval $editor['value']= $paper['content'];}
+		<!--{template exam:'.$template.'/common/editor}-->
+		<div style="clear:both"></div>
+		<input type="submit" class="pn pnc pp" id="testsubmit" style="margin-top:15px" value="确定" onclick="if($('name').value.trim()==''){alert('题组名称不能为空');return false;}">
+		</form>
+		
+		<script type="text/javascript">
+		_attachEvent(window.document, 'click', function(){
+			var o = window.event.srcElement;
+			var mg= o.getAttribute('mg');
+			if(mg==1){
+				var mg = $('multgroup');
+				mg.style.display = mg.style.display!='block' ? 'block' : ''	
+			}else if(mg==2){
+				var inputs = $('multgroup').getElementsByTagName('input');
+				if(o.value==-1){
+					var cur = inputs[0].checked;
+					for(var i=1;i<inputs.length;i++){
+						inputs[i].checked = cur
+					}
+					$('select_mg').value = cur ? '已选中 ' + (inputs.length-1) + ' 个组' : '';
+				}else{
+					var ii = 0;
+					for(var i=0;i<inputs.length;i++){
+						if(inputs[i].checked)
+							ii++;
+					}
+					$('select_mg').value = ii ? '已选中 ' +ii+ ' 个组' : '';
+				}
+			}else if(!mg){
+				var mg = $('multgroup');
+				mg.style.display = 'none'	
+			}
+		});
+ 
+		</script>
+
+ 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="{CHARSET}">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{$hlang['021']}</title>
+    <link href="{APP_DIR}/static/css/main.css?{VERHASH}" rel="stylesheet" type="text/css" media="all">
+    <link href="{APP_DIR}/static/font/iconfont.css" rel="stylesheet" type="text/css" media="all">
+    <script src="plugin.php?id={APP_ID}:javascript_language&charset={CHARSET}"></script>
+    <script src="{APP_DIR}/static/js/jquery-2.1.1.min.js"></script>
+    <script src="{APP_DIR}/static/js/exif.js"></script>
+    <script src="{APP_DIR}/static/js/MegaPixImage.js"></script>
+    <script src="{APP_DIR}/static/js/hammer.js"></script>
+    <script src="{APP_DIR}/static/js/iscroll-zoom.js"></script>
+    <script src="{APP_DIR}/static/js/jquery.photoClip.js"></script>
+    <script>
+    var jsvar=[];
+        jsvar['siteurl'] = '{$_G[siteurl]}';
+        jsvar['appurl'] = '{APP_URL}';
+        jsvar['avatar_big'] = '{$profile[avatar_big]}';
+        jsvar['formhash'] = '{FORMHASH}';
+    </script>
+    <script src="{APP_DIR}/static/js/script1.js"></script>
+    <style>
+        nav{background-color: {$config[back_color]}}
+        #main>button{background-color: {$config[upload_color]}}
+    </style>
+</head>
+
+<body>
+<nav><a href="javascript:history.go(-1);">{$hlang['021']}</a></nav>
+<header>
+<div>
+<img src="{$profile['avatar']}"><a href="javascript:;" class="head_portrait"></a>
+<h3>{$profile['username']}</h3>
+</div>
+</header>
+<section id="main">
+    <button class="head_portrait">{$hlang['001']}</button>
+</section>
+<!-- /#main -->
+<section id="reset_avatar">
+    <div id="canvas_fullscreen" style="display: none;position:absolute;bottom:0px;left:0px;">
+        <div class="canvas_lump">
+            <div class="canvas_top">
+                <a href="javascript:;" class="cancel" onclick="$('#canvas_fullscreen').hide();$('html,body').removeClass('hidden');">{$hlang['024']}</a>
+                {$hlang['026']}
+                <span>
+                    <button type="button" id="finish">{$hlang['027']}</button>
+                </span>
+            </div>
+        </div>
+
+        <div id="canvas_content">
+
+            <div class="canvas_edit">
+                <div id="canvas_area"></div>
+                <div class="canvas_opera">
+                    <button id="positive-rotate"><i class="icon iconfont">&#xe6ea;</i></button>
+                    <button id="inverse-rotate"><i class="icon iconfont">&#xe6eb;</i></button>
+                    <button id="reduction"><i class="icon iconfont">&#xe622;</i></button>
+                    <button id="magnification"><i class="icon iconfont">&#xe621;</i></button>
+                </div>
+            </div>
+
+            <input type="file" id="file" accept="image/*">
+            <img fileName="" id="canvas_view" class="hide">
+            <canvas id="canvas_preview"></canvas>
+
+        </div>
+
+    </div>
+
+    <div class="canvas_lazy_tip hide"><span>1%</span><div class="spinner"></div></div>
+    <div class="canvas_lazy_cover hide"></div>
+
+</section>
+<!-- /#reset_avatar -->
+
+<script src="{APP_DIR}/static/js/script2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+.diange{border:1px solid #ededed;padding:15px 20px;}
+.diangeHd{ border-bottom:2px solid #dcdcdc; }
+.diangeLogo{ width:189px; height:50px; overflow:hidden;font:400 30px/50px "Microsoft YaHei",simhei; float:left; margin-bottom:10px;}
+.diangeLogo a{ color:#80c824;}
+.diangeNav{ float:left; width:630px; float:left; padding-left:80px;}
+/*singer-add*/
+.step-nav {padding:10px 0; color:#777;}
+.step-nav li{ float:left;font:500 18px/32px "Microsoft YaHei",simhei,\5b8b\4f53; height:32px; }
+.step-nav li span{ float:left;}
+.step-nav li span.stepnum { width:32px; height:32px; background:url(diangePub.png) 0 0 no-repeat; margin:0 8px; display:inline;}
+.step-nav li span.stepnum01{ background-position:0 -32px;}
+.step-nav li span.stepnum02{ background-position:-32px -32px;}
+.step-nav li span.stepnum03{ background-position:-64px -32px;}
+.step-nav li span.stepnum04{ background-position:-96px -32px;}
+.step-nav li.current span.stepnum01{ background-position:0 0;}
+.step-nav li.current span.stepnum02{ background-position:-32px 0;}
+.step-nav li.current span.stepnum03{ background-position:-64px 0;}
+.step-nav li.current span.stepnum04{ background-position:-96px 2;}
+.step-nav li.current span{ color:#390; font-weight:800;}
+.step-nav li span.arrow{ background:url(diangePub.png) 0 -64px no-repeat; width:8px; height:16px; margin:8px 0 0 12px; display:inline; overflow:hidden;}
+/*pub*/
+.diange .Ibox{ border:1px solid #ebebeb; background:#fff;}
+.diange .Ibox .hd{ background:#f5f5f5; height:30px; line-height:30px;}
+.diange .Ibox .hd h2{ font-size:12px; color:#666; padding-left:10px;}
+/*step 01*/
+.diange .icon-gifts{ width:45px;background:url(diangePub.png) 0 -89px no-repeat;display:inline-block;height:18px;margin-right:3px;vertical-align:-15%; line-height:20px;/*行高必设 否则ie6换行*/ cursor:pointer;}
+.diange .step01 .Ibox .hd p{ padding-right:12px;}
+.diange .step01 .Ibox .hd p .icon-gifts{width:44px;background:url(diangePub.png) 0 -89px no-repeat;}
+.step01 .search-box{padding:30px 12px 0 170px; }
+.step01 .search-box strong{ float:left; width:80px; text-align:right; height:32px; line-height:32px; color:#999; font-size:14px;}
+.step01 .search-box .search-input{ width:350px; float:left;background:url(form-line.png) 0 0 repeat-x;line-height:20px; height:20px; border:1px solid #d2d2d2; padding:5px; width:300px; font-size:12px;word-break:break-all;word-wrap:break-word;color:#666;}
+.step01 .search-box .search-btn{ width:116px; height:32px; float:left; overflow:hidden;background:url(diangePub.png) 0 -112px no-repeat; border:0 none; cursor:pointer; text-indent:-9999px;}
+.step01 .search-box p{ padding:8px 0 0 80px; color:#999;}
+.diange .step01 .Ibox{ width:850px; margin:30px auto 10px; padding-bottom:15px;}
+.diange .step01 .Ibox .hd h2 strong{ color:#FB2F00;}
+.diange .songList{ padding:10px 0; width:100%; overflow:hidden;}
+.diange .songList ol{ width:385px; display:inline;float:left; overflow:hidden;zoom:1; margin:0 18px 0 -1px; padding:0 0 0 20px ; border-left:1px dashed #ccc; }
+.diange .songList li{ width:385px; line-height:30px; height:30px; overflow:hidden;margin-bottom:5px; display:block; float:left;}
+.diange .songList li .songNum{ width:30px; height:30px;color:#b1b1b1; float:left; overflow:hidden;}
+.diange .songList li .topRed{ font-weight:bold; color:#F00;}
+.diange .songList li .songName{ float:left; font-size:14px; width:165px; overflow:hidden;height:30px; padding-left:22px;background:url(tingBtn.png) left 5px no-repeat;}
+.diange .songList li .songer{ float:left; font-size:14px; width:90px; overflow:hidden;height:30px; color:#999; font-size:12px;}
+.diange .songList li .check{ float:left; margin:10px 4px 0 0;*margin:5px 2px 0 0; display:inline;}
+.diange .songList li .dianBtn{ float:right; margin-top:6px;  display:inline-block; text-indent:-999em; cursor:pointer;}
+.diange .songList li a em{ color:#FB2F00;}
+/*step 02*/
+.diange .step02{ padding:20px 0 0;}
+/*form public*/
+.diangeFrom {color:#666;font-size:14px;overflow:hidden; zoom:1;}
+.diangeFrom .form-item{ padding-top:18px;}
+.diangeFrom .input{ line-height:20px; height:20px; border:1px solid #d2d2d2; padding:5px; width:400px; font-size:12px;word-break:break-all;word-wrap:break-word; background:url(form-line.png) 0 0 repeat-x;color:#666;}
+.diangeFrom .readOnly{ background:#e8e8e8; cursor:default;}
+.diangeFrom .label{ float:left;width:120px; text-align:right; height:20px; line-height:20px; padding:5px 0;}
+.diangeFrom .label em{color:#f00; font-family:\5b8b\4f53; padding-right:2px;}
+.diangeFrom .tips{ display:inline-block;*display:inline; zoom:1; padding-left:5px; color:#b1b1b1; font-size:12px;}
+.diangeFrom select{ padding:5px;border:1px solid #d2d2d2;background:url(form-line.png) 0 0 repeat-x;color:#666;}
+.diangeFrom textarea{border:1px solid #d2d2d2; width:400px; height:100px; font-size:12px; color:#666; padding:5px;line-height:20px;word-break:break-all;word-wrap:break-word;background:url(form-line.png) 0 0 repeat-x;resize:none}
+.diangeFrom .textarea-words {font-size:12px; color:#b1b1b1; line-height:28px; height:28px;}
+.diangeFrom .textarea-words strong{font-family:Georgia,Tahoma,Arial;font-size:18px;}
+.diangeFrom .notice{ margin:20px;}
+.diangeFrom .error{ border:1px solid #ff967e; background:#ffe2db; padding:2px 10px; font-size:12px; line-height:20px; color:#f00;}
+.diangeFrom .success{border:1px solid #a9d76d;background:#eaffce; padding:2px 10px; font-size:12px; line-height:20px; color:#690;}
+.diange .step02 .label{ width:250px;}
+.diange .step02 .input{ font-size:12px;}
+.diange .step02 .tips a{ font-size:12px; text-decoration:underline;}
+.diange .step02 .byPhone{ font-size:12px;}
+.diange .step02 .byPhone label{ color:#f00;}
+.diange .step02 .byPhoneInfo{ padding-top:10px; display:none;}
+.diange .step02 .byPhoneInfo .input{ width:295px;}
+.diange .step02 .noShow{ padding-top:10px; font-size:12px;}
+.diange .step02 .byRealName{ display:none;}
+#popDiangeText{}
+#textWrap{ position:relative; padding:20px 20px; width:520px;}
+#textWrap dl{ overflow:hidden;zoom:1;}
+#textWrap dt{ cursor:pointer; float:left; text-align:center; width:75px; height:24px; line-height:24px; background:#eee; color:#666; margin-bottom:1px;}
+#textWrap dd{ display:none;}
+#textWrap dd p{ line-height:24px; height:24px; padding:2px 5px; border-bottom:1px dashed #ccc;}
+#textWrap .current dt{ background:#666; color:#fff;font-weight:800;}
+#textWrap .current dd{ display:block; float:left; width:420px; position:absolute; top:15px; left:110px;}
+#textWrap .current dd p.hover{ background:#f2f2f2; cursor:pointer;}
+#textWrap .current dd a{ color:#666;}
+.seeOther{ padding:5px 0 5px 250px;}
+.seeOther a{ color:#f00;}
+/*step 03*/
+.diange .step03 { padding-bottom:30px;}
+.diange .step03 .diangeFrom{ padding:20px 0 10px;}
+.IboxL{ float:left; width:675px;}
+.IboxR{ float:left; width:229px; margin-left:10px; display:inline;}
+.IboxR .bd{ padding:20px 0 20px 20px; height:420px;}
+.IboxL .bd{ padding:0 0 10px;height:450px;}
+.IboxL .bd h3{ font-size:12px; font-weight:400; padding:12px 20px;}
+.IboxL .bd h3 a{ padding:0 5px;}
+.IboxL .bd h3 a.active{background:#390; color:#fff; font-weight:800;}
+.IboxL .bd .p-l { padding-left:10px;}
+.IboxL .bd .p-l li{ width:148px; float:left; padding:0 2px 10px 12px; position:relative;}
+.IboxL .bd .p-l li a.i-t{ width:142px; height:82px; display:block; padding:2px; border:1px solid #ccc;}
+.IboxL .bd .p-l li img{ width:142px; height:82px;}
+.IboxL .bd .p-l li a.t-t{ height:24px; line-height:24px; font-size:12px; text-align:center; overflow:hidden; display:block;}
+.IboxL .bd .turn-page{ padding:10px 10px 0px;}
+.skinList #skinOk{ width:22px; height:22px; display:block; position:absolute; right:13px; top:55px; background:url(ok.png) 0 0 no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='ok.png');}
+#setleftphoto{ height:420px;}
+.sDian1,.sDian2{float:left;margin-left:10px; display:inline;font-size:14px; height:31px; line-height:31px; text-align:center;background:#999; color:#fff;}
+.sDian1{ background:url(dianz.png) 0 0 no-repeat; width:108px;}
+.sDian2{ background:url(dianz.png) 0 -31px no-repeat; width:80px;}
+.sDian1:hover,.sDian2:hover{ color:#fff;}
+/*inside-nav*/
+.insideNav{ position:relative;background:#f5f5f5; height:34px; line-height:34px;}
+.insideNav h2{ float:left; width:150px; font-size:18px; position:relative; text-align:center; color:#666;font-family:Microsoft YaHei;}
+.insideNav h2 .love-icon{ display:block; position:absolute; left:13px; top:9px;width:13px; height:12px; line-height:12px; overflow:hidden; background:url(pub.png) -31px -93px no-repeat;}
+.insideNav ul{ float:left; border-left:1px solid #eaeaea; margin-left:-2px;}
+.insideNav ul li{ float:left; width:110px; text-align:center; border-right:1px solid #eaeaea;}
+.insideNav ul li.current{ background:url(pub.png) 0 -497px repeat-x;  border-right:1px solid #7aaf1b; font-weight:800; font-size:14PX;}
+.insideNav ul li a{ color:#5b6778; display:block;}
+.insideNav ul li a:hover{ color:#61a7ed;}
+.insideNav ul li.current a{ color:#fff;}
+.insideNav ul li.current a:hover{ color:#fff;}
+/*diange*/
+.diangeL{ width:850px; margin:20px auto 10px; border:1px solid #ebebeb;}
+.right-btn a{ width:255px; height:50px; display:block;}
+.right-btn a.diange-add{ background:url(diange-add.png) 0 0 no-repeat; margin-bottom:15px;}
+.diangeTongji{ float:right; width:300px; text-align:right; padding-right:10px; color:#999;}
+.diangeTongji strong{ color:#FB2F00;}
+.diange-list{ padding:20px;}
+.diange-list li{border-bottom:1px dashed #ccc; overflow:hidden;padding:10px 0; font-size:14px;}
+.diange-list li a{ color:#666; padding:0 5px;}
+.diange-list li a strong{ color:#666;}
+.diange-list li a span{color:#390;}
+.diange-list li a span.music-icon{ padding-left:5px;}
+.diange-list li a:hover{color:#61a7ed;}
+.diange-list li p{ color:#999; padding:5px 0; font-size:12px;}
+.diange-list li .control{ float:right;}
+.diange-list li .control a{ float:left;margin-left:10px; display:inline;font-size:12px; height:24px; line-height:24px; text-align:center;background:#999; color:#fff;}
+.diange-list li .control a.diangeView{ background:url(dianz.png) 0 0 no-repeat; width:40px;}
+.diange-list li .control a.diangeDian{background:url(dianz.png) 0 -31px no-repeat; width:60px;}
+.diange-list .diangeA li{ line-height:24px; height:auto;border-bottom:1px dotted #ccc;overflow:auto; padding:5px 0px; font-size:12px;}
+.diange-list .diangeA li a{ font-size:12px; padding:0;}
+.diange-list .diangeA li a span,.diange-list .diangeA li a strong{ font-size:12px;}
+.diange-list .diangeA li p{}
+.diange-list .diangeA li .control{ float:none; margin:0;}
+.diange-list .diangeA li .control li{ border:0 none;}
+.diange-list .diangeA li .control li a span{ font-size:12px;}
+#mypage{ width:100%; background:#fff; line-height:50px; height:50px; text-align:center; margin-top:20px; border:1px solid #d9d9d9; background:#f5f5f5; font-size:12px; color:#999;}
+#mypage a{ display:block; width:100%; height:50px; font-size:14px; font-weight:800; color:#390}
+#mypage img{ display:inline-block; vertical-align:middle; height:16px; width:16px;}

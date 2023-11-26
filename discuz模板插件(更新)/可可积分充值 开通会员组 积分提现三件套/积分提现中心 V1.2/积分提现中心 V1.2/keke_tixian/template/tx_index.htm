@@ -1,0 +1,401 @@
+<!--{template common/header}-->
+<style>
+.keke_tixian{ font-family:Microsoft Yahei;margin:15px 0px}
+.side{float:left;width:200px; background:#FFF;}
+.main{ margin-left:220px;background:#FFF; position:relative}
+.clearfix:after {clear: both;}
+.clearfix:before, .clearfix:after {content: " ";display: table;}
+.sidebar{min-height:700px;border:1px solid #eee;background-color:#fff;font-size:14px}
+.sidebar>li{height:48px;border-bottom:1px solid #eee;line-height:48px}
+.sidebar>li>a{display:block;margin-left:15px;text-decoration:none; }
+.sidebar>li.active>a{text-decoration:none;color:#FFF}
+.sidebar>li.active{background-color:#fc4e53;color:#fff}
+ 
+.mylist{border:1px solid #eee; padding:30px 40px 50px 40px; box-sizing:border-box}
+.mylist ul{ padding:10px 20px}
+.mylist ul li{ width:100%;  line-height:20px; font-size:14px; margin:0px auto; padding:10px 0px;  border-bottom:1px solid #EEE}
+.mylist ul li .pup{ font-size:16px;}
+.mylist ul li .dow{ font-size:12px; color:#999}
+.mylist ul li span{ float:right}
+.mylist ul li span{ float:right; font-size:14px}
+.mylist ul li .pup i{ font-style:normal; font-size:12px; margin-left:10px;color:#999; background:#F6F6F6; padding:0 2px 0px 0px}
+.mylist ul li .rred{ font-weight:500; color:#C30; margin:0 5px;}
+.mylist .gl{ font-weight:500;color:#0C3; }
+.mylist .yl{ font-weight:500;color:#F93;}
+.mylist .sep{ margin:0px 7px; color:#ccc; font-weight:500}
+.mylist .pg{ float:left; margin:10px 5px;}
+.mylist .pg a.nxt{ background:none}
+.mylist .pg label{ display:none}
+.mylist .pg a,.mylist .pg strong{ color:#333;  display:block; border:1px solid #e14546; height:15px; line-height:15px; padding:3px 6px; border-radius:3px; float:left; margin:0px 5px;}
+.mylist .pg strong{ color:#FFF; background:#e14546}
+
+.noorder{ font-size:16px; text-align:center; color:#999}
+.chargebox{border:1px solid #eee; padding-top:30px}
+.chargebox .row{padding:15px 0; float:left; width:100%;}
+.chargebox .label{float:left;width:180px;color:#959595;text-align:right}
+
+.chargebox .package-list{margin-left:-7px;float:left}
+.chargebox .package-list li{float:left;margin:-10px 7px 7px 7px;padding:1px;border:1px solid #eee;border-radius:3px;text-align:center; cursor:pointer; font-size:14px}
+.chargebox .package-list li>a{text-decoration:none}
+.chargebox .package-list li>a:hover{color:#313131}
+.chargebox .package-list li span{ font-weight:bold}
+.chargebox .charge-custom{height:32px;line-height:32px}
+.chargebox .charge-custom .content{width:450px;white-space:nowrap}
+.chargebox .charge-custom input[name=moneyQuantity]{width:200px;height:32px;outline:0;border:1px solid #d7d7d7;text-align:center; font-size:14px}
+.chargebox .content{float:left;padding-left:20px;width:450px;text-align:left}
+.chargebox .user-info .balance-label{float:right}
+.labelt{ color:#999}
+.chargebox .charge-submit .content{margin-left:180px;width:650px}
+.btn{display:inline;padding:13px 90px;border-radius:3px;color:#fff;text-align:center;text-decoration:none;font-size:16px;line-height:45px;background-color: #fc4e53;}
+.btn:hover{background-color:#ff7579;color:#fff;text-decoration:none}
+.remind{ line-height:20px; text-align:left; color:#999; margin-left:20px;}
+.czred{ color:#fc4e53; font-size:14px}
+.czsmbox{ width:100%; margin:10px auto;  float:left; }
+.czsmbox .czsm{ width:80%; margin:0 auto;border-top:1px #eee solid; padding:15px 0px; line-height:25px;}
+.zhanghu .txzh .zhname{ float:left; background:#f6f6f6; color:#333; padding:0px 15px; margin-right:15px; line-height:35px; font-weight:bold;border-radius:3px; font-size:14px}
+.zhanghu .txzh .cardon{ font-weight:500; margin-right:15px;line-height:35px; color:#666}
+.xz{ line-height:20px; margin-left:10px; }
+.mask {position: fixed;z-index:999;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;opacity: .6; display:none}
+.selecredit li{ text-align:center; cursor:pointer;  margin-right:16px; font-size:12px; float:left;background: url(source/plugin/keke_tixian/template/images/wxz.png) 0 0px no-repeat;background-size: 16px auto; padding-left:20px;}
+.selecredit li.on{background: url(source/plugin/keke_tixian/template/images/xz.png) 0 0px no-repeat;background-size: 16px auto; }
+.keke_warning{ display:none;position: fixed;left:0; width:200px; right:0;margin: 0 auto;z-index: 9999; top:300px;padding: 10px;color: #FFFFFF;background: rgba(0, 0, 0, 0.6);font-size: 14px;text-align: center;border-radius: 4px;}
+</style>
+<script type="text/javascript" src="source/plugin/keke_tixian/js/jquery.js"></script>
+<script>jQuery.noConflict();</script>   
+<div class="wp clearfix keke_tixian">
+        <div class="side">
+            <ul class="sidebar">
+            	{if file_exists('source/plugin/keke_chongzhi/keke_chongzhi.inc.php')}
+            	<li {if (!$_GET['p']) && $_GET['id']=='keke_chongzhi'}class="active"{/if}>
+                    <a href="plugin.php?id=keke_chongzhi">{lang keke_chongzhi:langt18}</a>
+                </li>
+                <li {if $_GET['p'] && $_GET['id']==keke_chongzhi}class="active"{/if}>
+                    <a href="plugin.php?id=keke_chongzhi&p=my">{lang keke_chongzhi:langt19}</a>
+                </li>
+                {/if}
+           		<li {if (!$_GET['p']) && $_GET['id']==keke_tixian}class="active"{/if}>
+                    <a href="plugin.php?id=keke_tixian">{lang keke_tixian:langt36}</a>
+                </li>
+                <li {if $_GET['p'] && $_GET['id']==keke_tixian}class="active"{/if}>
+                    <a href="plugin.php?id=keke_tixian&p=my">{lang keke_tixian:langt39}</a>
+                </li>
+            	
+               
+            </ul>
+        </div>
+        <div class="main clearfix">
+        
+        	{if $_GET['p']==my}
+            <ul class="mylist fix">
+                <ul>
+                    {if $mylist}{$mylist}{else}<div class="noorder">{lang keke_tixian:langt40}</div>{/if}
+                </ul>
+                {$multipage}
+            </ul>
+			{elseif $_GET['p']==card}
+            <div class="cardlist clearfix">
+               
+                <ul class="adddel fix">
+                    <li class="add"><div style="border-right:5px solid #f4f4f4"><img src="source/plugin/keke_tixian/template/images/add.png" width="15" height="15">{lang keke_tixian:langt06}</div></li>
+                    <li class="del"><div style="border-left:5px solid #f4f4f4"><img src="source/plugin/keke_tixian/template/images/del.png" width="15" height="15"><span id="deltext">{lang keke_tixian:langt07}</span></div></li>
+                </ul>
+                
+                <div style="float:left; width:100%;  border-left:10px solid #f4f4f4; border-right:10px solid #f4f4f4; box-sizing:border-box">
+                    <ul class="mycardlist">
+                    {loop $carddata $val}
+                        <li class="zhanghu" cardid="{$val['id']}" ctype="{$val['type']}">
+                            <i class="icos"></i>
+                            <div class="txzh">
+                                <p>{if $val['type']==1}{lang keke_tixian:langt08}{elseif $val['type']==2}{lang keke_tixian:langt09}{else}{$bank[$val['bank']]}{/if}</p>
+                                <p class="cardon">{$val['cardon']} / {$val['usname']}</p>
+                            </div>
+                        </li>
+                    {/loop}
+                    </ul>
+                </div>
+            </div>
+            <input type="hidden" id="isdel" name="isdel" value="0" >
+            <style>
+			.cardlist{ border:1px solid #eee; padding:0px 100px; }
+			.cardlist ul li.zhanghu{  line-height:59px; font-size:18px; border-bottom:10px solid #f4f4f4; padding:10px 0px 10px 20px;cursor:pointer}
+		.cardlist ul li .icos{ font-style:normal; margin:18px 20px 0px 0px; width: 10px;height: 15px; float:right;background: url(source/plugin/keke_tixian/template/images/j.png) 0 0 no-repeat;}
+		.cardlist ul li .delicos{ font-style:normal; margin:18px 20px 0px 0px; width: 20px;height:20px; float:right;background: url(source/plugin/keke_tixian/template/images/dels.png) 0 0 no-repeat;}
+		.cardlist ul li.zhanghu .txzh{line-height:23px; font-size:16px; color:#666; }
+		.cardlist ul li.zhanghu .txzh p.cardon{ font-size:14px; color:#999; }
+		.cardlist .adddel{ margin:50px 0px 0px 0px;border-top:13px solid #f4f4f4; float:left; width:100%;border-left:10px solid #f4f4f4; border-right:10px solid #f4f4f4; box-sizing:border-box}
+		.cardlist .adddel li{ width:50%; float:left; text-align:center; height:50px; line-height:50px; font-size:15px; font-size: line-height:35px; border-bottom:10px solid #f4f4f4; color:#C30}
+		.cardlist .adddel li.add{ cursor:pointer}
+		.cardlist .adddel li.del{cursor:pointer}
+		.cardlist .adddel li img{ margin-right:10px;}
+			
+            .addcard{position: fixed; border:10px solid #999; padding:20px 10px;left:auto; right:auto; top:250px; display:none; width:100%; width:500px; background:#FFF; z-index:9999}
+            .addcard p{ margin: 0 20px 0px 0px;border-bottom: 1px solid #eee; padding: 8px 0 8px 0;font-size:16px;-webkit-box-sizing: border-box;display: block;position: relative;padding-left:90px;}
+            .addcard input,.addcard select{ background:none; font-size:16px; width:100%;border: 0 none;outline: none;box-sizing: border-box;}
+            .btnul{ margin:20px 20px 0px 0px;}
+            .btnul li{ font-size:16px; width:50%; box-sizing:border-box; float:left; text-align:center; color:#FFF; line-height:45px; height:45px; background:#CCC}
+            .btnul li.tj{ background:#fc4e53;cursor:pointer}
+            .btnul li.qx{ background:#515151;cursor:pointer}
+            .box .form_label {vertical-align: top;color: #888;width: 80px;text-align:left;display: block;position: absolute;left: 0;top: 10px; }
+            .box .form_control {color: #888;display: block;word-break: break-all;}
+			
+            </style>
+            <div class="addcard">
+                <p class="box"><span class="form_label">{lang keke_tixian:langt10}</span><span class="form_control">
+                <select name="cardtype" id="cardtype"  onChange="gradeChange()">
+       	      <option value="0" selected>{lang keke_tixian:langt47}</option>
+					{if $keke_tixian['wxtx']}<option value="1">{lang keke_tixian:langt11}</option>{/if}
+					{if $keke_tixian['zfbtx']}<option value="2">{lang keke_tixian:langt12}</option>{/if}
+					{if $keke_tixian['yhtx']}<option value="3">{lang keke_tixian:langt13}</option>{/if}
+                </select></span></p>
+                <p class="box" id="kh" style="display:none"><span class="form_label">{lang keke_tixian:langt15}</span><span class="form_control">
+                <select name="bank" id="bank" >
+                    <!--{loop $bank $k $v}-->
+                        <option value="{$k}">{$v}</option>
+                    <!--{/loop}-->
+                </select></span></p>
+                <p class="box"><span class="form_label">{lang keke_tixian:langt16}</span><span class="form_control"><input type="text" placeholder="{lang keke_tixian:langt17}" name="truename" id="truename" value=""></span></p>
+                <p class="box"><span class="form_label">{lang keke_tixian:langt18}</span><span class="form_control"><input type="text" placeholder="{lang keke_tixian:langt17}" name="cardon" id="cardon"></span></p>
+                <ul class="btnul fix">
+                    <li class="tj" id="tj">{lang keke_tixian:langt19}</li>
+                    <li class="qx">{lang keke_tixian:langt20}</li>
+                </ul>
+            </div>
+            <script>
+            jQuery(function() {
+                var mask=jQuery("#mask");
+                jQuery(".mycardlist li").on("click", function() {
+                            var isdel=jQuery("#isdel").val();
+                            var cardid=jQuery(this).attr("cardid");
+							var ctype=jQuery(this).attr("ctype");
+                            if(isdel==1){
+                                if(confirm("{lang keke_tixian:langt21}")){
+                                    jQuery.get('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+                                     formhash:"{FORMHASH}",ac:"del",cardid:cardid
+                                    },function (data){
+                                        if(data.err){
+                                            alert(data.err);
+                                        }else{
+                                             location.reload();
+                                        }
+                                    }, "json");
+                                }
+                            }else{
+								var wxtx="{$keke_tixian['wxtx']}";
+								var zfbtx="{$keke_tixian['zfbtx']}";
+								var yhtx="{$keke_tixian['yhtx']}";
+								if((wxtx==0 && ctype==1) || (zfbtx==0 && ctype==2) || (yhtx==0 && ctype==3)){
+									alert("{lang keke_tixian:langt48}");
+									return false;
+								}
+                                window.location.href = 'plugin.php?id=keke_tixian&c='+cardid;
+                            }
+                            
+                        });
+                
+                jQuery(".add").on("click", function() {
+                            mask.show();
+                            jQuery('.addcard').fadeIn();
+                        });
+                jQuery(".del").on("click", function() {
+                            var isdel=jQuery("#isdel").val();
+                            if(isdel==0){
+                                jQuery(".mycardlist i").removeClass("icos").addClass("delicos");
+                                jQuery("#isdel").val("1");
+                                jQuery("#deltext").text("{lang keke_tixian:langt22}");
+                            }else{
+                                jQuery(".mycardlist i").removeClass("delicos").addClass("icos");
+                                jQuery("#isdel").val("0");
+                                jQuery("#deltext").text("{lang keke_tixian:langt23}");
+                            }
+                        });
+                jQuery(".qx").on("click", function() {
+							 jQuery('.addcard').fadeOut();
+                        });
+                jQuery("#tj").on("click", function() {
+                            jQuery.post('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+                                 formhash:"{FORMHASH}",ac:"addcard",cardtype:jQuery("#cardtype").val(),bank:jQuery("#bank").val(),truename:jQuery("#truename").val(),cardon:jQuery("#cardon").val()
+                            },function (data){
+                                if(data.err){
+                                    alert(data.err);
+                                }else{
+                                    jQuery(".addcard").animate({'top':'-250px'},100,function(){
+                                     location.reload();
+                                    
+                            });
+                                }
+                            }, "json");
+                            
+                        });
+                
+                
+            });
+            
+                function gradeChange(){
+                    var type=jQuery('#cardtype').val();
+                    if(type!=3){
+                        jQuery('#kh').hide();
+                    }else{
+                        jQuery('#kh').show();
+                    }
+                }
+            </script>			
+            {else}
+            
+            <input type="hidden" name="formhash" value="{FORMHASH}" >
+            <ul class="chargebox clearfix">
+                <li class="step1 active clearfix">
+				<input type="hidden" name="credittype" id="credittype" value="{$firstcarditid}">
+                <div class="keke_warning"></div>
+                <div class="mask" id="mask"></div>
+				  <div class="row user-info clearfix">
+                        <div class="label">
+                            {lang keke_tixian:langt41}
+                        </div>
+                        <div class="content clearfix">
+                        	<span class="balance-label">{lang keke_tixian:langt42} <b class="czred">{$totaltx}</b> {lang keke_tixian:langt43}</span>
+                            <span class="nowcredit"><b id="nowcredit" class="czred">{$nowcredits}</b> <span id="nowcredits">{$firstcarditname}</span></span>
+                        </div>
+                        
+				  </div>
+                    
+                    <div class="row charge-select clearfix" style=" margin-top:30px;">
+                        <div class="label">
+                            {lang keke_tixian:langt24} :  
+                      </div>
+                        <div class="content" style="width:500px;">
+                            <ul id="package-list" class="package-list clearfix">
+                                <li class="zhanghu" >
+                                
+                                <a href="plugin.php?id=keke_tixian&p=card">
+                                {if $cardid && $cardata}
+                                <i class="icos"></i>
+                                <div class="txzh">
+                                    <span class="zhname">{$cardtype}</span><span class="cardon">{$cardata['cardon']} / {$cardata['usname']}</span>
+                                </div>
+                                {else}
+                                <i class="icos"></i>
+                               <div class="txzh">
+                                    <span class="zhname">{lang keke_tixian:langt25}</span><span class="cardon">{$cardata['cardon']} / {$cardata['usname']}</span>
+                                </div>
+                                {/if}
+                                </a>
+                				</li>
+                            </ul><span class="xz"><a href="plugin.php?id=keke_tixian&p=card">{lang keke_tixian:langt45}</a></span>
+                             
+                        </div>
+                    </div>
+                    
+                    <div class="row user-info clearfix">
+                        <div class="label">
+                            {lang keke_tixian:langt46}
+                        </div>
+                        <div class="content clearfix selecredit">
+                        	<ul>{$craditlist}</ul>
+                        </div>
+					</div>
+                    
+                    <div class="row charge-custom clearfix">
+                        <div class="label">
+                            {lang keke_tixian:langt26} :  
+                      </div>
+                        <div class="content">
+                            <input type="number" placeholder="{lang keke_tixian:langt27}" name="moneyQuantity" id="moneyQuantity" value="{$preset[0]}"><span class="remind"></span>
+                        </div>
+                    </div>
+                    <div class="row charge-cost clearfix">
+                        <div class="label">
+                            {lang keke_tixian:langt37}
+                        </div>
+                        <div class="content reminds">
+                           
+    	 {lang keke_tixian:langt38} <span class="czred">1{$_G['setting']['extcredits'][$firstcarditid]['title']} = {$creditdata[$firstcarditid]['bili']}</span>{lang keke_tixian:langt29}<span class="czred">{$creditdata[$firstcarditid]['min']}</span> {$_G['setting']['extcredits'][$firstcarditid]['title']} / {lang keke_tixian:langt30} <span class="czred">{$creditdata[$firstcarditid]['sxf']}%</span> 
+
+                        </div>
+                    </div>
+                 
+                    <div class="row charge-submit clearfix">
+                        <div class="content">
+                            <a class="btn btn-submit" id="Submit" href="javascript:;">{lang keke_tixian:langt31}</a>
+                        </div>
+                    </div>
+                    <input type="hidden" name="zftype" id="zftype" value="1">
+				</li>
+            </ul>
+    <script>
+jQuery(function() {
+	var mask=jQuery("#mask");
+	var selecredit=jQuery(".selecredit");
+	<!--{if $d>1}-->
+	jQuery(".selecredit li").on("click", function() {
+				var creditname=jQuery(this).html();
+				var creditid=jQuery(this).attr("creditid");
+				jQuery(this).siblings().removeClass("on");
+				jQuery(this).addClass("on");
+				jQuery('#credit').html(jQuery(this).html());
+				jQuery('#nowcredits').html(jQuery(this).html());
+				jQuery('#nowcredit').html(jQuery(this).attr("data-nowcredit"));
+				jQuery('#credittype').attr("value",creditid);
+				var sxf='';
+				if(jQuery(this).attr("data-sxf")){
+					sxf=" / {lang keke_tixian:langt30}<span class='czred'>"+ jQuery(this).attr("data-sxf") +"%</span>";
+				}
+				jQuery('.reminds').html("{lang keke_tixian:langt38} <span class='czred'>1"+ creditname + " = "+jQuery(this).attr("data-bili") +"</span>{lang keke_tixian:langt29}<span class='czred'>"+ jQuery(this).attr("data-min") + creditname +" </span>"+sxf);
+				
+				
+			});
+	<!--{/if}-->
+	var text=jQuery('.remind').html();
+	jQuery('#moneyQuantity').bind('input propertychange', function(){
+			if(jQuery('#moneyQuantity').val()==''){
+				jQuery('.remind').html(text);
+			}else{
+				jQuery.get('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+					 formhash:"{FORMHASH}",ac:"check",moneyQuantity:jQuery("#moneyQuantity").val(),credittype:jQuery("#credittype").val()
+				},function (data){
+					if(data.err){
+						jQuery('.remind').html(data.msg);
+					}
+				}, "json");
+			}
+	}); 
+	
+	jQuery("#Submit").on("click", function() {
+		var cardid="{$cardid}";
+		if(cardid==0){
+			warning("{lang keke_tixian:langt32}");
+			return false;
+		}
+		if((jQuery('#moneyQuantity').val())==0){
+			warning("{lang keke_tixian:langt33}");
+			return false;
+		}
+		
+		jQuery.post('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+						 formhash:"{FORMHASH}",ac:"add",cardtype:"{$cardtype}",cardon:"{$cardata['cardon']}",cardname:"{$cardata['usname']}",moneyQuantity:jQuery("#moneyQuantity").val(),credittype:jQuery("#credittype").val()
+					},function (data){
+						if(data.err){
+							warning(data.msg);
+							return false;
+						}else{
+							warning("{lang keke_tixian:langt35}");
+							setTimeout(function() {window.location.href = 'plugin.php?id=keke_tixian&p=my';}, 2000);
+						}
+					}, "json");
+	});
+			
+});
+
+
+function warning(text){
+	jQuery('.keke_warning').show().html(text);
+	setTimeout(function() {jQuery('.keke_warning').fadeOut();}, 2000);
+}
+</script>
+          
+            	
+        {/if}
+	</div>
+</div>
+    
+    
+<!--{template common/footer}-->

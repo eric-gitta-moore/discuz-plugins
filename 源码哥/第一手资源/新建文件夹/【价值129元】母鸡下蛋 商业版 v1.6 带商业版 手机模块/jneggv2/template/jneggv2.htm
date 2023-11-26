@@ -1,0 +1,312 @@
+{subtemplate common/header}
+<style type="text/css">
+<!--
+.jn_egg_banner {
+	height:200px;
+	background-image:url(source/plugin/jneggv2/template/images/bg.jpg);
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+.button_jneggv2 {
+	margin-top:10px;
+    background-color: #FF0000 ;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	border-radius: 8px;
+}
+.jn_egg_notice{
+	margin-top:10px;
+	border-top:1px #DEDEDE solid;
+	border-bottom:1px #DEDEDE solid;
+	padding:10px;
+	font-size:14px;
+}
+.jn_egg_latest{
+	font-size:13px;
+}
+.cl{
+	padding:0px;
+}
+.dt{
+	border-top: none;
+	border-bottom: 1px solid #CECECE;
+}
+.h2_left_jneggv2 {
+	padding-left:15px;
+	width:729px;
+	height:45px;
+	background-image: url(source/plugin/jneggv2/template/images/h2_left_bg_jneggv2.png);
+	background-repeat: no-repeat;
+	color:#FFFFFF;
+	font-size:15px;
+
+}
+.h2_right_jneggv2 {
+	margin-top:-2px;
+	padding-left:10px;
+	width:220px;
+	height:33px;
+	background-image: url(source/plugin/jneggv2/template/images/h2_right_bg_jneggv2.png);
+
+}
+.table_title_jneggv2 {
+	font-weight:700;
+	color:#003366;
+	text-align:center; 
+}
+.dt td{
+	text-align:center; 
+}
+.margintop_jneggv2{
+	margin-top:10px;
+	border:none;
+}
+.input_text_jneggv2{
+		width:50px;
+		border-bottom:1px dotted gray; 
+		border-left:0; 
+		border-top:0; 
+		border-right:0;
+		text-align:center;
+		color:red;
+		background-color:#E5EDF2;
+}
+.padding_jneggv2{
+		padding:5px 8px 5px 8px;
+}
+.margin_jneggv2{
+		margin:10px 0 10px 20px;;
+}
+.tr_jneggv2{
+		border:1px solid #E7F0F7; 
+		background-color:#E7F0F7; 
+		height:20px;
+}
+.b_jneggv2{
+		font-weight:700;
+		background-color:#FFFFFF;
+}
+.topline_jneggv2{
+		border-bottom:1px #E6E7E1 solid;
+		height:30px;
+		line-height:30px;
+}
+.bottomline_jneggv2{
+		height:30px;
+		line-height:30px;
+}
+.brline_jneggv2{
+
+		background-color:#E6E7E1;	
+}
+.w3c { min-height: 250px; position: relative; width: 100%; margin-bottom:10px; height:300px;}
+.w3c > div { display: inline; }
+.w3c > div > a { margin-left: -1px; position: relative; left: 1px; text-decoration: none; color: black; background: white; display: block; float: left; padding: 5px 10px; border: 1px solid #ccc; border-bottom: 1px solid white; }
+.w3c > div:not(:target) > a { border-bottom: 0; background: -moz-linear-gradient(top, white, #eee); }	
+.w3c > div:target > a { background: white; }	
+.w3c > div > div { background: white; z-index: -2; left: 0; top: 30px; bottom: 0; right: 0; padding: 20px; border: 1px solid #ccc; }	
+.w3c > div:not(:target) > div { position: absolute }
+.w3c > div:target > div { position: absolute; z-index: -1; }
+.cls_container{width:500px;font-size:12px;height:260px;overflow:hidden;}
+.cls_container ul{list-style-type:none;margin:0;padding:0;margin-left:10px;}
+.cls_container ul li{height:26px;line-height:26px;width:auto;float:left;display:inline;}
+-->
+</style>
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="forum.php">{$_G[setting][navs][2][navname]}</a>
+		<em>&rsaquo;</em><a href="plugin.php?id=jneggv2">{lang jneggv2:MJXD}</a> 
+	</div>
+</div>
+<!--[diy=diyt1]--><div id="diyt1" class="area"></div><!--[/diy]-->
+<div id="ct" class="ct2 wp cl">
+    <div class="mn">
+        <div class="t"><!--[diy=diyt2]--><div id="diyt2" class="area"></div><!--[/diy]-->
+            <div class="jn_egg_banner"></div>
+            {if $g_bonusof == '1'}<div class = "jn_egg_notice">{$yesterday} {lang jneggv2:jnegg1} {if !$Ypro}0{else}{$Ypro1}{/if} {lang jneggv2:jnegg2}, {$todaydate} {lang jneggv2:jnegg3} {$bonusP}% !</div>{/if}
+        {if !$_GET['do']}
+        <div class="bm margintop_jneggv2"><!--[diy=diyt3]--><div id="diyt3" class="area"></div><!--[/diy]-->
+        <div class="bm_h cl">
+			<h2 class="h2_left_jneggv2">{lang jneggv2:jnegg4}</h2>
+		</div>
+        {if $qEgglistC > '10'}
+		<div id="myscroll" class="cls_container">
+            <ul class="list"> 
+            {loop $Egglist $value}
+			<li><div class = "jn_egg_latest">{$value[timestamp]} - <font color="#0066CC">{$value[username]}</font> {$value[desc]}</div></li>
+			{/loop}
+            </ul> 
+        </div>
+		<div id="showhint"></div>
+        {else}
+        <div class="bm_c cl">
+			<div><table width="100%" border="0" cellspacing="0" cellpadding="5">
+				{loop $Egglist $value}
+				<tr><td><div class = "jn_egg_latest">{$value[timestamp]} - <font color="#0066CC">{$value[username]}</font> {$value[desc]}</div></td></tr>
+                {/loop}
+				</table>
+			</div>
+		</div>
+        {/if}
+        </div>
+        
+        
+        <div class="bm margintop_jneggv2"><!--[diy=diyt4]--><div id="diyt4" class="area"></div><!--[/diy]-->
+            <div class="bm_h cl">
+            <h2 class="h2_left_jneggv2">{lang jneggv2:jnegg5}</h2>
+            </div>
+            <div class="bm_c cl">
+                <div><script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script><!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>-->
+	<script type="text/javascript">
+	var jq = jQuery.noConflict(); 
+    jq(function(){
+	    jq("#paysubmitbtn").click(function(){
+                jq("#error").text("({lang jneggv2:jnegg6}: "+parseInt(jq("#comount").val()*$g_egg)+"$g_eggexttitle ,{lang jneggv2:jnegg7}: "+Math.round(((jq("#comount").val()*$g_egg)/$g_eggextratio)*10000)/10000+"{$g_eggcreditext})");
+        });
+    });
+</script><table width="100%" border="0" cellspacing="0" cellpadding="5">
+                      <tr>
+                        <td width="100">{lang jneggv2:jnegg8}:</td><td width="210"><input name="comount" type="text" id="comount" value="$chicext"/> <button type="submit" name="paysubmitbtn" id="paysubmitbtn" value="true" class="pn pnc"><strong>{lang jneggv2:jnegg9}</strong></button></td><td> <span id="error" style=" color:#ff0000;"></span></td>
+                      </tr>
+                    </table></div>
+            </div><!--[diy=diyt5]--><div id="diyt5" class="area"></div><!--[/diy]-->
+        </div>
+        {/if}
+        </div>
+    </div>
+
+
+<div class="sd">
+	<!--[diy=diyt16]--><div id="diyt16" class="area"></div><!--[/diy]-->
+    <div class="bm">
+		<div class="bm_h cl">
+			<h2 class="h2_right_jneggv2">{lang jneggv2:jnegg10}</h2>
+		</div>
+		<div class="bm_c">{if !$_G[uid]}<a href="member.php?mod=logging&amp;action=login" onclick="showWindow('login', this.href)" class="xi2"><span>{lang jneggv2:jnegg11}</span></a>{else}<!--{avatar($_G[uid],middle)}-->
+			<ul class="xl xl2 cl" style="line-height:10px;">
+               	<li style="width:100%; color:red;">{lang jneggv2:jnegg12}: $_G['username'] (ID:$_G['uid'])</li>
+               	<li style="width:100%; color:red;">{lang jneggv2:jnegg13}: $_G['member']['credits']</li>
+                <!--{loop $person[extcredits] $value}-->
+		 		<li style="width:100%;">{$value[title]}: {$value[value]} {$value[unit]}</li>
+		  		<!--{/loop}-->
+			</ul>
+            $admincpbtn
+           {/if}
+		</div>
+	</div>
+    <!--[diy=diyt17]--><div id="diyt17" class="area"></div><!--[/diy]-->
+    {if $_G[uid] > 0}
+    <div class="bm">
+		<div class="bm_h cl">
+			<h2 class="h2_right_jneggv2">{lang jneggv2:jnegg14}</h2>
+		</div>
+		<div class="bm_c">
+			{if $nJoin == '0'}<div align="center"><a href="javascript:;" onclick="showDialog('{lang jneggv2:jnegg15}', 'confirm', '', function(){	showWindow('joincom', 'plugin.php?id=jneggv2:jneggv2&do=openaccount&formhash=$_G[formhash]');return false;},1)"><span class="button_jneggv2">{lang jneggv2:jnegg16}</span></a></div>{else}{loop $usermat $value}{lang jneggv2:jnegg17}<br/> {lang jneggv2:jnegg2} : {$g_eggext}{lang jneggv2:jnegg18} <a href="javascript:;" onclick="showWindow('changeout', 'plugin.php?id=jneggv2:jneggv2&do=changeegg')"><font color="#FF0000"><u>{lang jneggv2:jnegg19}</u></font></a><br/> {lang jneggv2:jnegg20} : {$g_goldext}{lang jneggv2:jnegg18} <a href="javascript:;" onclick="showWindow('changeout', 'plugin.php?id=jneggv2:jneggv2&do=changeout')"><font color="#FF0000"><u>{lang jneggv2:jnegg19}</u></font></a><br/> {if $g_luck == '1'}{lang jneggv2:jnegg21} : {$g_luckext}/2000<br/>{/if}{lang jneggv2:jnegg22} <a href="javascript:;" onclick="showWindow('changeout', 'plugin.php?id=jneggv2:jneggv2&do=viewchic')">{if !$chicext}0{else}{$chicext}{/if}</a> {lang jneggv2:jnegg23}.<br/>{lang jneggv2:jnegg24}: {$productnow} {if $g_bonusof == '1'}(+{$extrabonus}){/if}{lang jneggv2:jnegg2}.<br/>{lang jneggv2:jnegg25} {$estimate} {lang jneggv2:jnegg18}{lang jneggv2:jnegg2}<br/><a href="javascript:;" onclick="showDialog('{lang jneggv2:jnegg26}{$g_maxget}{lang jneggv2:jnegg26_1}', 'confirm', '', function(){	showWindow('changeout', 'plugin.php?id=jneggv2:jneggv2&do=getegg&formhash=$_G[formhash]');return false;},1)"><span class="button_jneggv2">{lang jneggv2:jnegg27}</span></a> <a href="javascript:;" onclick="showWindow('changeout', 'plugin.php?id=jneggv2:jneggv2&do=buychic')"><span class="button_jneggv2">{lang jneggv2:jnegg28}</span></a>{/loop}{/if}
+		</div>
+	</div>
+    {/if}
+        <div class="w3c">
+            <div id="tab16">
+                <a href="plugin.php?id=jneggv2#tab16">{lang jneggv2:jnegg57}</a>
+                    <div class="bm_c">
+                        <ol class="xl xl1">
+                            {loop $ChickRank $value}
+                            <li><em>{$value[chicken1]}{lang jneggv2:jnegg60}</em><a href="home.php?mod=space&uid={$value[uid]}" target="_blank">{$value[username]}</a></li>
+                            {/loop}
+                        </ol>
+                     </div>
+            </div>
+            <div id="tab17">
+                <a href="plugin.php?id=jneggv2#tab17">{lang jneggv2:jnegg58}</a>
+                    <div class="bm_c">
+                        <ol class="xl xl1">
+                            {loop $TQRank $value}
+                            <li><em>{$value[qty]}{lang jneggv2:jnegg18}</em><a href="home.php?mod=space&uid={$value[uid]}" target="_blank">{$value[username]}</a></li>
+                            {/loop}
+                        </ol>
+                     </div>
+            </div>
+            <div id="tab18">
+                <a href="plugin.php?id=jneggv2#tab18">{lang jneggv2:jnegg59}</a>
+                    <div class="bm_c">
+                        <ol class="xl xl1">
+                            {loop $JindanRank $value}
+                            <li><em>{$value[jindan]}{lang jneggv2:jnegg18}</em><a href="home.php?mod=space&uid={$value[uid]}" target="_blank">{$value[username]}</a></li>
+                            {/loop}
+                        </ol>
+                     </div>
+            </div>
+        </div>
+    <style id="diy_style" type="text/css"></style>
+    <!--[diy=diyt18]--><div id="diyt18" class="area"></div><!--[/diy]-->
+</div>
+{if $qEgglistC > '10'}
+<script>
+JQ = $;
+function JQ(element){
+	if(arguments.length>1){
+		for(var i=0,length=arguments.length,elements=[];i<length;i++){
+	elements.push(JQ(arguments[i]));
+	}
+	return elements;
+	}
+	if(typeof element=="string"){
+		return document.getElementById(element);
+	}else{
+		return element;
+	}
+}
+var Class={
+	create:function(){
+		return function(){
+			this.initialize.apply(this,arguments);
+		}
+	}
+}
+Function.prototype.bind=function(object){
+	var method=this;
+	return function(){
+		method.apply(object,arguments);
+	}
+}
+var Scroll=Class.create();
+Scroll.prototype={
+	initialize:function(element,height){
+		this.element=JQ(element);
+		this.element.innerHTML+=this.element.innerHTML;
+		this.height=height;
+		this.maxHeight=this.element.scrollHeight/2;
+		this.counter=0;
+		this.scroll();
+		this.timer="";
+		this.element.onmouseover=this.stop.bind(this);
+		this.element.onmouseout=function(){this.timer=setTimeout(this.scroll.bind(this),1000);}.bind(this);
+	},
+	scroll:function(){
+		if(this.element.scrollTop<this.maxHeight){
+			this.element.scrollTop++;
+			this.counter++;
+		}else{
+			this.element.scrollTop=0;
+			this.counter=0;
+		}
+		if(this.counter<this.height){
+			this.timer=setTimeout(this.scroll.bind(this),22);
+		}else{
+			this.counter=0;
+			this.timer=setTimeout(this.scroll.bind(this),3126);
+		}
+	},
+	stop:function(){
+		clearTimeout(this.timer);
+	}
+}
+var myscroll=new Scroll("myscroll",26);
+</script>
+{/if}
+{subtemplate common/footer}

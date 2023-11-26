@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[music:classname] - [qianwei:webname]</title>
+<meta name="Keywords" content="[music:classname]" />
+<meta name="Description" content="[music:classname],[qianwei:webname]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/bang.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:tempurl]js/topcommon.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+[qianwei:head]
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a class="active" href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box musicBus mt bgWrite">
+   <ul class="clearfix directNew">
+   {qianwei:class sort=turn order=asc}<li><a class="directName" target="_blank" href="[class:link]">[class:name]</a><a class="directPlay" target="_blank" href="[class:link]"></a></li>{/qianwei:class}
+  </ul>
+</div>
+<div class="box">
+ <h2 class="crumb">当前位置 &gt; [music:classname]</h2>
+</div>
+<div class="bangBox clearfix">
+ <div class="bangL">
+  <div class="bangNav taoNav bgWrite">
+   <h2 class="bangNavHd"><img src="[qianwei:tempurl]css/bang.png" /></h2>
+   <div class="bangNavBd">
+    <ul class="bangNavList">
+{qianwei:class classid=2,3,4 sort=turn order=asc}<li class="album[class:id]"><a href="[class:link]">[class:name]</a></li>{/qianwei:class}
+<style type="text/css">
+.taoNav li.album[music:classid] a,.taoNav li.album[music:classid] a:hover{background:#537eb9 url([qianwei:tempurl]css/bang.png) right 0 no-repeat;}
+.bangNavList li.album[music:classid] a,.bangNavList li.album[music:classid] a:hover{color:#fff; font-weight:800;}
+</style>
+    </ul>
+    <div class="bangNavLineGray"></div>
+    <ul class="bangNavList">
+{qianwei:class sort=turn order=asc}<li><a href="[class:link]">[class:name]</a></li>{/qianwei:class}
+    </ul>
+    <div class="bangNavLineGray"></div>
+    <ul class="bangNavList">
+{qianwei:class classid=5,6,7,8,9,10,11,12 sort=turn order=asc}<li><a href="[class:link]">[class:name]</a></li>{/qianwei:class}
+    </ul>
+   </div>
+  </div>
+ </div>
+ <div class="bangR">
+  <div class="mdBox bgWrite">
+   <div class="mdBoxHd mdBangHd">
+    <div class="fr"></div>
+    <h1 class="mdBoxHdTit">[music:classname]<span class="gengxinTime">(共{qianwei:pagedata}张)</span></h1>
+   </div>
+   <div class="mdBoxBd">
+    <div class="taoMusic">
+    <ul class="taoList" id="body">{qianwei:special pagesize=10 sort=hits}
+	<li class="clearfix">
+    <div class="taoPic"><a href="[special:link]" class="t-i" target="_blank"><img width="100" height="100" src="[special:pic]" title="[special:name]" /></a></div>
+    <div class="taoText">
+    <h3><a href="[special:link]" class="t-t" target="_blank">[special:name]</a><a href="[special:link]" class="t-play" target="_blank">播放</a></h3>
+    <p>浏览人气：[special:hits]<span class="taoNum">发行公司：[special:gongsi]</span></p>
+    <p>创建人：<a href="[special:userlink]" target="_blank">[special:user]</a></p>
+    <p class="i-t">简介：[special:intro len=80]</p>
+    </div>
+    </li>
+    {/qianwei:special}</ul>
+    </div>
+    <div class="loadMore clearfix"><a href="{qianwei:pagedown}" class="loadMoreBtn">---------加载更多淘歌专辑---------</a></div>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="footer clearfix">
+  <div class="box">
+    <p><font style="color:000;"><a href="mailto:[qianwei:mail]">本站所有音乐均来自互联网搜集，版权为原作者所有，如有侵犯权益，请联系我们删除！</a></font> -- <a href="http://www.miitbeian.gov.cn/" target="_blank">[qianwei:icp]</a> [qianwei:webstat]<br></p>
+    <p>Copyright &copy; [qianwei:copytime] <a href="http://[qianwei:weburl]" target="_blank">[qianwei:weburl]</a> .All Rights Reserved. <a href="http://[qianwei:httphost][qianwei:path]" target="_blank">[qianwei:webname]</a> 版权所有</p>
+  </div>
+</div>
+</body>
+</html>

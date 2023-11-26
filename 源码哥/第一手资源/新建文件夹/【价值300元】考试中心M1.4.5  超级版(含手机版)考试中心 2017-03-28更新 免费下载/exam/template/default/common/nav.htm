@@ -1,0 +1,11 @@
+<div class="y">
+	<div style="float:left;display:inline;margin-left:10px">
+	<!--{if !$config[groupadd] || in_array($_G[groupid],$config[groupadd]) || $_G[adminid]==1}--><a class="<!--{if $_GET[tab]=='list'}-->xi1<!--{/if}-->" href="plugin.php?id=exam:my&tab=list">我发布的试卷</a> | <!--{/if}-->
+	<a class="<!--{if $_GET[tab]=='logs'}-->xi1<!--{/if}-->" href="plugin.php?id=exam:my&tab=logs">我参与的考试</a> |
+	<a class="<!--{if $_GET[tab]=='wrong'}-->xi1<!--{/if}-->" href="plugin.php?id=exam:my&tab=wrong">我的错题集</a> |
+	<a class="<!--{if $_GET[id]=='exam:help'}-->xi1<!--{/if}-->" href="plugin.php?id=exam:help">试卷帮助</a>  &nbsp;
+	</div>
+
+	<div class="bdsharebuttonbox" style="float:left;display:inline;width:140px"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+	<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>

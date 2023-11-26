@@ -1,0 +1,154 @@
+<!--{template milu_pick:pick_header}-->
+<script>
+function showbirthday(){
+	var el = $('birthday');
+	var birthday = el.value;
+	el.length=0;
+	el.options.add(new Option('{lang milu_pick:day}', ''));
+	for(var i=0;i<28;i++){
+		el.options.add(new Option(i+1, i+1));
+	}
+	if($('birthmonth').value!="2"){
+		el.options.add(new Option(29, 29));
+		el.options.add(new Option(30, 30));
+		switch($('birthmonth').value){
+			case "1":
+			case "3":
+			case "5":
+			case "7":
+			case "8":
+			case "10":
+			case "12":{
+				el.options.add(new Option(31, 31));
+			}
+		}
+	} else if($('birthyear').value!="") {
+		var nbirthyear=$('birthyear').value;
+		if(nbirthyear%400==0 || (nbirthyear%4==0 && nbirthyear%100!=0)) el.options.add(new Option(29, 29));
+	}
+	el.value = birthday;
+}
+</script>
+<style>
+.vtop .td27{ margin-right:10px; padding:0; width:90px; display:inline; float:left}
+.tb td { line-height:25px;}
+</style>
+<form name="cpform" method="post" autocomplete="off" action="?{PICK_GO}member&myac=member_edit" id="cpform" enctype="multipart/form-data"><input type="hidden" name="formhash" value="{FORMHASH}"><input type="hidden" id="formscrolltop" name="scrolltop" value=""><input type="hidden" name="uid" value="{$info['uid']}">
+<table class="tb tb2 ">
+<tbody>
+<tr>
+  <th colspan="17" class="partition">{lang milu_pick:base_set}</th>
+</tr>
+
+<tr class="noborder" ><td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:user_name}:</span>{$info['username']}</td>
+  <td width="361" class="vtop " s="1"><span class="td27">Email:</span>{$info['email']}</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:oltime}:</span>{$info['oltime']}</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:reg_ip}:</span>{$info['regip']}</td>
+</tr>
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:lastpost}:</span>{$info['lastpost']}</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:reg_dateline}:</span>{$info['regdate']}</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:lastactivity}:</span>{$info['lastactivity']}</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:lastvisit}:</span>{$info['lastvisit']}</td>
+</tr>
+
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:gender}:</span><select name="set[gender]" id="gender" class="ps" tabindex="1">
+<option value="{lang milu_pick:baomi}" {if $info['gender'] == '{lang milu_pick:baomi}' || !$info['gender']}selected="selected"{/if}>{lang milu_pick:baomi}</option>
+<option value="{lang milu_pick:man}" {if $info['gender'] == '{lang milu_pick:man}' }selected="selected"{/if}>{lang milu_pick:man}</option><option value="{lang milu_pick:men}" {if $info['gender'] == '{lang milu_pick:men}' }selected="selected"{/if}>{lang milu_pick:men}</option></select></td>
+  <td colspan="2" class="vtop " s="1"><span class="td27">{lang milu_pick:b_day}:</span><select name="set[birthyear]" id="birthyear" class="ps" onchange="showbirthday();" tabindex="1">{$info['yearselect']}</select>&nbsp;&nbsp;
+<select name="set[birthmonth]" id="birthmonth" class="ps" onchange="showbirthday();" tabindex="1">{$info['monthselect']}</select>
+&nbsp;&nbsp;<select name="set[birthday]" id="birthday" class="ps" tabindex="1">{$info['dayselect']}</select></td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:lastip}:</span>{$info['lastip']}</td>
+</tr>
+
+
+
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:_height}:</span><input type="text" name="set[height]" class="px" value="{$info['height']}" tabindex="1"> 
+ CM </td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:_weight}:</span><input type="text" name="set[weight]" class="px" value="{$info['weight']}" tabindex="1">
+  KG</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:telephone}:</span><input type="text" name="set[telephone]" class="px" value="{$info['telephone']}" tabindex="1"></td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:mobile}:</span><input type="text" name="set[mobile]" class="px" value="{$info['mobile']}" tabindex="1"></td>
+</tr>
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:idcardtype}:</span><select name="set[idcardtype]" class="ps" tabindex="1">
+<option value="{lang milu_pick:id_card}" {if $info['idcardtype'] == '{lang milu_pick:id_card}' || !$info['idcardtype']}selected="selected" {/if}>{lang milu_pick:id_card}</option><option value="{lang milu_pick:huzhao}" {if $info['idcardtype'] == '{lang milu_pick:huzhao}' }selected="selected" {/if}>{lang milu_pick:huzhao}</option><option {if $info['idcardtype'] == '{lang milu_pick:car_id}' }selected="selected" {/if} value="{lang milu_pick:car_id}">{lang milu_pick:car_id}</option></select></td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:send_address}:</span><input type="text" name="set[address]" class="px" value="{$info['address']}" tabindex="1"></td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:zipcode}:</span><input type="text" name="set[zipcode]" class="px" value="{$info['zipcode']}" tabindex="1"></td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:graduateschool}:</span><input type="text" name="set[graduateschool]" class="px" value="{$info['graduateschool']}" tabindex="1"></td>
+</tr>
+<tr class="noborder" >
+  <td colspan="4" class="vtop rowform">
+ <span class="td27">{lang milu_pick:birthprovince}:</span>{$info['birthprovince']} {$info['birthcity']} {$info['birthdist']} {$info['birthcommunity']}&nbsp;(<a href="javascript:;" onclick="showdistrict('birthdistrictbox', ['set[birthprovince]', 'set[birthcity]', 'set[birthdist]', 'set[birthcommunity]'], 4, '', 'birth'); return false;">{lang milu_pick:modify}</a>)<p id="birthdistrictbox"></p> </td>
+  </tr>
+
+<tr class="noborder" >
+  <td colspan="4" class="vtop rowform">
+ <span class="td27">{lang milu_pick:resideprovince}:</span>{$info['resideprovince']} {$info['residecity']} {$info['residedist']} {$info['residecommunity']}&nbsp;(<a href="javascript:;" onclick="showdistrict('residedistrictbox', ['set[resideprovince]', 'set[residecity]', 'set[residedist]', 'set[residecommunity]'], 4, '', 'reside'); return false;">{lang milu_pick:modify}</a>)<p id="residedistrictbox"></p> </td>
+  </tr>
+
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:graduateschool}:</span>
+ <input type="text" name="set[graduateschool]" class="px" value="{$info['graduateschool']}" tabindex="1" />
+ </td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:education}:</span>{$info['education_select']}</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:company}:</span><input type="text" name="set[company]" class="px" value="{$info['company']}" tabindex="1"></td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:occupation}:</span><input type="text" name="set[occupation]" class="px" value="{$info['occupation']}" tabindex="1"></td>
+</tr>
+
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:position}: </span>
+ <input type="text" name="set[position]2" class="px" value="{$info['position']}" tabindex="1" />
+</td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:revenue}:</span>
+    <input type="text" name="set[revenue]2" class="px" value="{$info['revenue']}" tabindex="1" />  </td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:affectivestatus}:</span>
+    <input type="text" name="set[affectivestatus]" class="px" value="{$info['affectivestatus']}" tabindex="1"></td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:lookingfor}:</span>
+    <input type="text" name="set[lookingfor]" class="px" value="{$info['lookingfor']}" tabindex="1"></td>
+</tr>
+
+
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:bloodtype_select}:</span>
+ {$info[bloodtype_select]} </td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:alipay}:</span>
+    <input type="text" name="set[alipay]" class="px" value="{$info['alipay']}" tabindex="1">  </td>
+  <td width="361" class="vtop " s="1"><span class="td27">QQ:</span>
+    <input type="text" name="set[qq]" class="px" value="{$info['qq']}" tabindex="1"></td>
+  <td width="361" class="vtop " s="1"><span class="td27">MSN:</span>
+    <input type="text" name="set[msn]" class="px" value="{$info['msn']}" tabindex="1"></td>
+</tr>
+
+<tr class="noborder" >
+  <td width="297" class="vtop rowform">
+ <span class="td27">{lang milu_pick:taobao}:</span><input type="text" name="set[taobao]" class="px" value="{$info['taobao']}" tabindex="1"> </td>
+  <td width="361" class="vtop " s="1"><span class="td27">{lang milu_pick:site}:</span>
+    <input type="text" name="set[site]" class="px" value="{$info['site']}" tabindex="1">  </td>
+  <td width="361" class="vtop " s="1">&nbsp;</td>
+  <td width="361" class="vtop " s="1">&nbsp;</td>
+</tr>
+
+<tr onmouseover="setfaq(this, 'faq7c19')"><td colspan="4" class="td27" s="1">{lang milu_pick:bio}:</td></tr>
+<tr class="noborder" onmouseover="setfaq(this, 'faq7c19')"><td class="vtop rowform">
+<textarea name="set[bio]" id="bio" class="pt" rows="3" cols="40" tabindex="1">{$info['bio']}</textarea><div class="rq mtn" id="showerror_bio"></div></td>
+  <td class="vtop " s="1"></td>
+  <td class="vtop " s="1"></td>
+  <td class="vtop " s="1"></td></tr>
+<tr onmouseover="setfaq(this, 'faq66e2')"><td colspan="4" class="td27" s="1">{lang milu_pick:love_action}:</td></tr>
+<tr class="noborder" onmouseover="setfaq(this, 'faq66e2')"><td class="vtop rowform">
+<textarea name="set[interest]" id="interest" class="pt" rows="3" cols="40" tabindex="1">{$info['interest']}</textarea><div class="rq mtn" id="showerror_interest"></div></td>
+  <td class="vtop " s="1"></td>
+  <td class="vtop " s="1"></td>
+  <td class="vtop " s="1"></td></tr><tr><td colspan="17"><div class="fixsel"><input type="submit" class="btn" id="submit_editsubmit" name="editsubmit" title="{lang milu_pick:save_notice}" value="{lang milu_pick:submit}"></div></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'editsubmit'); });</script></tbody></table>
+</form>

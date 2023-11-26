@@ -1,0 +1,53 @@
+/*
+[name]青春绿[/name]
+[iconbgcolor]#aac238[/iconbgcolor]
+Author:NVBING5
+Website:www.nvbing5.net
+Qq:2474414433
+*/
+
+/* 统一背景色 */
+.nbg,.n5gr_plrz .plrz_fbbq .pn,.n5gr_hdtx .hdtx_qhcd .a a,.n5sq_qhzt .n5sq_bkbf li .btdb span,.n5ht_htsx li .selected,.n5ht_lbfl .a a,.n5qj_wbys .qjyw_fbxx i {background: #aac238;}
+.small {background: rgba(170, 194, 56, 0.7);}
+
+/* 按钮背景色 */
+.n5sq_qhzt .n5sq_bkbf li .n5sq_bkgz,.n5sq_ztfb .ztfb_fban .btn_pn_blue,.n5gr_pbtx .pns .pn,.n5gr_xxsz .xxsz_tjan .pn,.n5gr_fxan .btn_pn_blue,.n5gr_fgxz .fgxz_kjfg .kjfg_fgqr .button,.n5-ksft .n5-fq,.n5gr_fbrz .fbrz_fban .pn,
+.n5gr_tjhm .pn,.n5gr_wdjf .jfzz_zzan .pn,.n5gr_wdjf .jfzz_zzan .pn,.n5gr_mmaq .mmaq_mmnr .mmnr_tjan .pn, .n5gr_grzl .grzl_tjan .pn,.jump_c a,.n5gr_xxsr .xxsr_fban .pn,.n5gr_bjxc .bjxc_qdbc .pn,.n5gr_bjxc .bjxc_qrcz .qrcz_czan .pn,
+.n5sq_jwhy .pn,.n5ss_ssys .ssys_ssqr .button2,.n5sq_lcdp .pns .pn, .n5sq_lcdp .pns a,.n5bq_bqss .bqss_qrss .pn,.n5dl_dlnr .pn,.n5sq_bkjm .bkjm_mmsr .mmsrqr, .n5sq_bkjm .bkjm_mmsr .mmsrqrs,.jump_c .pn,
+.tjht_tjlb .tjlb_jrht,.n5ht_cjht .pn,.n5ht_tjqr,.n5ht_zrqr .pn,.n5ht_shcy .pn {background-color: #fcad30;}
+
+/* 按钮灰色 */
+.n5sq_qhzt .n5sq_bkbf li .n5sq_bkgzs {background: #D8D8D8;}
+
+/* 文字颜色 */
+.n5sq_qhzt .n5sq_fqbf li.active a,.n5gr_fgxz .hd li.on a,.ztfl_fllb ul li.a a,.n5sq_ztqh .a,.hykj_kjdh li.a a,.n5dl_dlnr .n5dl_zczh a,.n5sq_ztqh,.n5ht_tjht .tjht_btys li.a a,.n5ht_htsx li a,.n5qj_wbys .on,.n5qj_wbys .on i {color: #aac238;}
+
+/* 下划线 */
+.n5ht_tjht .tjht_btys li.a {border-bottom: 1px solid #aac238;}
+.n5sq_qhzt .n5sq_fqbf li.active {border-left: 2px solid #aac238;}
+.ztfl_fllb ul li.a,.n5gr_fgxz .hd li.on,.hykj_kjdh li.a {border-bottom: 2px solid #aac238;}
+
+.n5ht_htsx li .sx1,.n5ht_htsx li .sx2 {border-bottom: 1px solid #aac238;border-top: 1px solid #aac238;border-left: 1px solid #aac238;}
+.n5ht_htsx li .sx3 {border: 1px solid #aac238;}
+
+/* 空间背景 */
+.n5gr_hykj {background: url(hykj_bg.jpg) no-repeat 0 0;background-size: cover;}
+
+/* 空间签名 */
+.n5gr_hykj .hykj_hyxx .huxx_hyjs p {color: #E4F882;}
+
+/* 提示 */
+.jump_c .n5qj_tstp {background: url(chat.png) no-repeat;background-position: center;background-size: 120px auto;}
+.n5sq_bkjm .n5sq_jmsm {background: url(n5sq_bkjm.png) no-repeat;background-position: center;background-size: 120px auto;}
+.n5sq_bkjm .n5sq_bksf {background: url(n5sq_bksf.png) no-repeat;background-position: center;background-size: 120px auto;}
+.n5gr_ysts .ysts_ystb {background: url(yssz.png) no-repeat;background-position: center;background-size: 80px auto;}
+
+/* 注册登录 */
+.n5dl_dlnr .n5dl_dlxm .n5dl_zh {background: #eaeaea url(n5dl_zh.png) no-repeat;background-position: center;background-size: 20px auto;}
+.n5dl_dlnr .n5dl_dlxm .n5dl_mm {background: #eaeaea url(n5dl_mm.png) no-repeat;background-position: center;background-size: 20px auto;}
+.n5dl_dlnr .n5dl_dlxm .n5dl_wt {background: #eaeaea url(n5dl_wt.png) no-repeat;background-position: center;background-size: 21px auto;}
+.n5dl_dlnr .n5dl_dlxm .n5dl_da {background: #eaeaea url(n5dl_da.png) no-repeat;background-position: center;background-size: 21px auto;}
+.n5dl_dlnr .n5dl_dlxm .n5dl_yx {background: #eaeaea url(n5dl_yx.png) no-repeat;background-position: center;background-size: 21px auto;}
+.n5dl_dlnr .n5sq_ftyzm {background: #eaeaea url(n5dl_yz.png) no-repeat;background-position: 4.5%;background-size: 23px auto;}
+.n5dl_kjdl .kjdl_qqdl {background:url(qqdl.png) no-repeat;background-position: center;background-size: 35px auto;}
+.n5dl_kjdl .kjdl_wxdl {background:url(wxdl.png) no-repeat;background-position: center;background-size: 40px auto;}

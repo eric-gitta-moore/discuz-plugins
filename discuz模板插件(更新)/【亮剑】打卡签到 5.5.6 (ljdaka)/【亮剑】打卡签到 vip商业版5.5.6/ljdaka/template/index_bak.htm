@@ -1,0 +1,218 @@
+{template common/header}
+<link href="source/plugin/ljdaka/css/come.css" rel="stylesheet">
+<script type="text/javascript" src="source/plugin/ljdaka/js/jquery.js"></script>
+<script type="text/javascript">
+var jq=jQuery.noConflict();
+</script>
+<style type="text/css">
+	h4{margin:0px;}
+</style>
+<div class="body_content"> 
+    <div class="lineA clearfix">
+        <div class="fright">
+            <span class="fir">{lang ljdaka:new_1}{$firstname}</span>
+            <span class="sec">{lang ljdaka:new_2}{$ms}{lang ljdaka:new_3}</span>
+        </div>
+    </div>
+    <!--{eval $t=gmdate('Y-m-d',$userdata['timestamp']+8*3600);}-->
+    <!--{eval $t1=gmdate('Y-m-d',$_G['timestamp']+8*3600);}-->
+    <div class="lineB clearfix">
+        <div class="qdleft">
+            {if $t==$t1}
+            <span class="btn btnvisted"></span>
+            {else}
+            <a id="qdDailyBut" class="qdBtn" href="http://www.moqu8.com"onclick='showWindow("ljdaka","{if $check}plugin.php?id=ljdaka:daka&action=tips&formhash={FORMHASH}{else}plugin.php?id=ljdaka:daka&action=showWindow&formhash={FORMHASH}{/if}");'><b style="font-size:25px;">{lang ljdaka:new_4}</b></a>
+            {/if}
+            <div class="paiming clearfix">
+                <input type="hidden" value="0" id="qiandaobtnnum" class="hidnum">
+                {if $t=$t1}
+                <div id="qdfonts" class="font">{lang ljdaka:new_5}</div><div style="" id="qdbn2" class="pics J_numpic clearfix J_animation">
+                    {loop $rarr $r}
+                    <span class="$nc[$r]"></span>
+                    {/loop}
+                </div>
+                {else}<div id="qdfonts" class="font">{lang ljdaka:new_6}</div>{/if}
+                <div style="display:none;" id="qdbn2" class="pics J_numpic clearfix J_animation"><span class="zero"></span></div>
+            </div>
+        </div>
+        <div class="qdright">
+            <div class="content">
+                <h3 class="mainCon">
+                    <div class="user">
+                        <img onerror="this.onerror=null;this.src='{eval echo avatar($_G['uid'],'small',true);}';" class="headimg" src="{eval echo avatar($_G['uid'],'small',true);}">
+                        <a class="author" href="home.php?mod=space&uid={$_G['uid']}">{$_G['username']}</a>
+                    </div>
+                    <span class="jtitle">{lang ljdaka:new_7}</span>
+                    <div class="jingju J_xyline">
+                        <span class="xyart J_xyfont" id="bigpower">{$config['tips']}</span>
+                    </div>
+                   
+                </h3>
+
+                <ul class="countqian clearfix">
+                    <li>
+                        <h4 >{lang ljdaka:new_8}</h4>
+                        <p>
+                            <input type="hidden" value="0" id="lxdays" class="hidnum">
+                            <b style="height:23px;" class="pics J_numpic clearfix J_animation">
+                                {loop str_split($userdata['day']) $r}
+                                <span class="$nc[$r]"></span>
+                                {/loop}
+                            </b>
+                            <b class="qiandao">{lang ljdaka:new_9}</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>{lang ljdaka:new_10}</h4>
+                        <p>
+                            <input type="hidden" value="1" id="lxreward" class="hidnum">
+                            <b style="height:26px;" class="pics J_numpic clearfix J_animation">
+                                {loop str_split($userdata['fen']) $r}
+                                <span class="$nc[$r]"></span>
+                                {/loop}
+                            </b>
+                            <b>{$_G['setting']['extcredits'][$config['leixing']]['title']}</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>{lang ljdaka:new_11}</h4>
+                        <p>
+                            <input type="hidden" value="0" id="lxreward" class="hidnum">
+                            <b style="height:23px;" class="pics J_numpic clearfix J_animation">
+                                {loop str_split($userdata['money']) $r}
+                                <span class="$nc[$r]"></span>
+                                {/loop}
+                            </b>
+                            <b>{$_G['setting']['extcredits'][$config['leixing']]['title']}</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>{lang ljdaka:new_12}</h4>
+                        <p>
+                            <input type="hidden" value="0" id="lxtdays" class="hidnum">
+                            <b style="height:23px;" class="pics J_numpic clearfix J_animation">
+                                {loop str_split($userdata['allday']) $r}
+                                <span class="$nc[$r]"></span>
+                                {/loop}
+                            </b>
+                            <b>{lang ljdaka:new_13}</b>
+                        </p>
+                    </li>
+                </ul>
+                <div class="weather_p">
+                    <div class="con">
+                        $count<span>{lang ljdaka:new_14}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lineC clearfix" style="width:960px;">
+        <div class="lineC_left">
+            <div class="left_tit">
+                <ul class="paihang J_phbtn clearfix">
+                    <li {if empty($_GET['mod'])}class="active"{/if}><a href="plugin.php?id=ljdaka:ranklist">{lang ljdaka:new_15}</a></li>
+                      <li {if $_GET['mod']=='z'}class="active"{/if}><a href="plugin.php?id=ljdaka:ranklist&mod=z">{lang ljdaka:new_18}</a></li>
+                    <li {if $_GET['mod']=='y'}class="active"{/if}><a href="plugin.php?id=ljdaka:ranklist&mod=y">{lang ljdaka:new_16}</a></li>
+                    <li {if $_GET['mod']=='all'}class="active"{/if}><a href="plugin.php?id=ljdaka:ranklist&mod=all">{lang ljdaka:new_17}</a></li>
+                </ul>
+            </div>
+            <div class="arr_detail">
+
+                <table id="J_list_detail">
+                    <tbody>
+{if $_GET['mod']=='z'}
+<tr>
+<td width="25%"><b>{lang ljdaka:daka12}</b></td>
+<td width="25%"><b>{lang ljdaka:daka13}</b></td>
+<td width="25%"><b>{lang ljdaka:daka39}</b></td>
+<td width="25%"><b>{lang ljdaka:daka40}</b></td>
+</tr>
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_z $key=>$rank}-->
+<tr align="center">
+<td height="35"> $sign</td>
+<td >
+<a href="home.php?mod=space&uid={$rank['uid']}">
+$rank['username']</a></em></div></td>
+<td>$rank[zhouday]</td>
+<td>$rank[zhoumoney]</td>
+
+</tr>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+<script type="text/javascript" src="plugin.php?id=ljdaka:paihang"></script>
+{elseif $_GET['mod']=='y'}
+<tr>
+<td width="25%"><b>{lang ljdaka:daka12}</b></td>
+<td width="25%"><b>{lang ljdaka:daka13}</b></td>
+<td width="25%"><b>{lang ljdaka:daka41}</b></td>
+<td width="25%"><b>{lang ljdaka:daka42}</b></td>
+</tr>
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_y $key=>$rank}-->
+<tr align="center">
+<td height="35"> $sign</td>
+<td >
+<a href="home.php?mod=space&uid={$rank['uid']}">
+$rank['username']</a></em></div></td>
+<td>$rank[yueday]</td>
+<td>$rank[yuemoney]</td>
+</tr>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+<script type="text/javascript" src="plugin.php?id=ljdaka:paihang&act=y"></script>
+{elseif $_GET['mod']=='cs'}
+<tr>
+<td width="25%"><b>uid</b></td>
+<td width="25%"><b>{lang ljdaka:daka47}</b></td>
+<td width="25%"><b>{lang ljdaka:daka48}</b></td>
+<td width="25%"><b>{lang ljdaka:daka49}</b></td>
+</tr>
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_cs $key=>$rank}-->
+<tr align="center">
+<td height="35"><a href="home.php?mod=space&uid={$rank['uid']}"> $rank['uid']</a></td>
+<td >
+<!--{eval echo gmdate('Y-m-d H:i:s',$rank['timestamp']+3600*8);}--></td>
+<td>$rank[jinbi]</td>
+<td>$rank[alldays]</td>
+</tr>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+{else}
+<tr>
+	<th style="width:70px;"><b>{lang ljdaka:new_19}</b></th>
+	<th style="width:70px;"><b>{lang ljdaka:new_20}</b></th>
+	<th style="width:70px;"><b>{lang ljdaka:new_21}</b></th>
+	<th style="width:70px;"><b>{lang ljdaka:new_22}</b></th>
+	<th style="width:120px;"><b>{lang ljdaka:new_23}</b></th>
+	<th style="width:70px;"><b>{lang ljdaka:new_24}</b></th>
+	<th style="width:70px;"><b>{lang ljdaka:new_25}</b></th>
+	<th style="width:120px;"><b>{lang ljdaka:new_26}</b></th>
+</tr>
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_all $key=>$rank}-->
+<tr>
+<td> $sign</td>
+<td ><a href="home.php?mod=space&uid={$rank['uid']}">
+$rank['username']</a></em></div></td>
+<td>$rank['day']</td>
+<td>$rank['allday']</td>
+<td>$rank['fen']</td>
+<td>$rank['money']</td>
+<!--{eval $today=date('Y-m-d',$rank['timestamp']);}-->
+<!--{eval $todays=date('Y-m-d',$_G['timestamp']);}-->
+<td><!--{if $today==$todays}--><font color="green">{lang ljdaka:new_28}</font><!--{else}--><a href="http://www.moqu8.com" onclick='showWindow("ljdaka","{if $check}plugin.php?id=ljdaka:daka&action=tips&formhash={FORMHASH}{else}plugin.php?id=ljdaka:daka&action=showWindow&formhash={FORMHASH}{/if}");'><font color="#CCCCCC">{lang ljdaka:new_29}</font></a><!--{/if}--></td>
+<td><!--{eval echo dgmdate($rank['timestamp']);}--></td>
+</tr>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+{/if}
+                    </tbody></table>
+                   <div style="clear:both;margin-top:10px;">$paging</div>
+            </div>
+        </div>
+    </div>
+</div>
+{template common/footer}

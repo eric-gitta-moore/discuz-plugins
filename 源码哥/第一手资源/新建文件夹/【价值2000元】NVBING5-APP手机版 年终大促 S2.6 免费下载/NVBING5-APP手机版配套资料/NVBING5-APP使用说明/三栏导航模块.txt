@@ -1,0 +1,17 @@
+在数据调用页面的模块分类处选择【静态模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-三栏导航
+
+数据来源：自定义HTML
+
+HTML代码：
+
+<div class="n5jj_sldh cl">
+	<a href="#" class="sldh_ybl"><h2 style="color:#ff6600">我要爆料</h2><span>发爆料赚金币</span></a>
+	<a href="#" class="sldh_ybl"><h2 style="color:#20b4ff">说说</h2><span>想说啥就说啥</span></a>
+	<a href="#"><h2 style="color:#88ce5a">发现 +</h2><span>发现更多好玩的</span></a>
+</div>
+
+选择确定，这个模块添加完成。

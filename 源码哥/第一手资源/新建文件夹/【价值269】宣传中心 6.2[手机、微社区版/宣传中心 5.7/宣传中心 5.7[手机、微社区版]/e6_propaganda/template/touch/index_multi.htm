@@ -1,0 +1,51 @@
+<!--{template e6_propaganda:header}-->
+<script>
+e6(function(){
+	e6('#more').on("click",function(event){
+		var page = e6(this).attr("page");
+		page = parseInt(page) + 1;
+		e6.post('plugin.php?id=e6_propaganda&nav=multi&num={$num}', {page:page}, function(data) {
+			data = data.replace(/(^\s+)|(\s+$)/g,"");
+			if (data) {
+				e6("#multi_list").append(data).listview('refresh');
+				e6("#more").attr("page", page);
+			} else {
+				e6("#more").hide();
+			}
+		});
+	});
+});
+</script>
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{$e6_nav_name}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" id="multi_list">
+			<li data-role="list-divider" data-theme="c">{$nums}{lang e6_propaganda:user_list}</li>
+			<li class="e6_li top_title"><span>{lang e6_propaganda:username}</span><span>{lang e6_propaganda:group}</span><span>{lang e6_propaganda:regdate}</span></li>
+			<!--{loop $multi_list $v}-->
+			<li class="e6_li"><span>$v[username]</span><span>$v[groupid]</span><span>$v[date]</span></li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{if $my_multi}-->
+	<div data-role="footer" class="ui-btn" data-theme="b">
+		<!--{if $count > count($multi_list)}-->
+		<h1 id="more" page="1">{lang e6_propaganda:more} >></h1>
+		<!--{/if}-->
+		<div data-role="navbar">
+			<ul>
+			<!--{eval for ($n = 1; $n <= $my_multi; $n++):}-->
+				<li><a href="plugin.php?id=e6_propaganda&nav=multi&num={$n}" data-ajax="false" {$css_arr[$n]}>{$n}{lang e6_propaganda:level}</a></li>
+				<!--{if $n == 5}-->
+				</ul><ul>
+				<!--{/if}-->
+			<!--{eval endfor;}-->
+			</ul>
+		</div>
+	</div>
+	<!--{/if}-->
+</div>
+<!--{template common/footer}-->

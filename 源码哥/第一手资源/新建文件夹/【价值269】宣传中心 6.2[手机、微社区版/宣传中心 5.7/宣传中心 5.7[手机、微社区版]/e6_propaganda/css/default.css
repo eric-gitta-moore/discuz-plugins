@@ -1,0 +1,24 @@
+.dt td, .dt th{padding: 7px 5px;
+border-bottom: 1px solid #CDCDCD;}
+.e6_prompt{color: red;font-weight: normal;padding-left: 200px;}
+.e6_ul li{margin-bottom: 10px;}
+.e6_ul li div{padding-left: 15px;}
+.e6_ul li div span{display: block;margin-top: 5px;color: #FF6600;}
+.e6_ul li tr td{color: #FF6600;}
+.e6_ul li .e6_td1{padding-left: 15px;padding-top: 5px;}
+.e6_ul li .e6_td2{padding: 0 20px;}
+.no_padding{padding-top: 0px;padding-bottom: 0px;}
+.e6_red{color:red;}
+.e6_yellow{color: #FF6600;}
+.e6_table tr{border-left: 1px solid #CDCDCD;border-right: 1px solid #CDCDCD;text-align: center;}
+.e6_tr{color: #0096C2;background: none repeat scroll 0 0 #F2F2F2;}
+.e6_tr td{font-szie: 20px;font-weight: bold;text-align: center;}
+.e6_num{font-size: 18px;color: #0096C2;text-align: center;}
+.e6_tr_con{color: #FF6600;}
+.e6_blue{color: blue;}
+.e6_black{color: #000;}
+.e6_botton{background: #0096C2;padding: 0px 10px;display: inline-block;height: 28px;line-height: 28px;color: #fff;border-radius: 3px;cursor: pointer;font-size:13px;margin-left: 105px;}
+.task_botton{background: #0096C2;padding: 0px 10px;display: inline-block;height: 25px;line-height: 25px;color: #fff;border-radius: 3px;cursor: pointer;font-size:13px;margin-left:23px;}
+.multi_table td{border-bottom:none;padding:0px;}
+.multi_table td a{height: 18px;line-height: 18px;font-weight:normal;display:inline-block;color:#FFF;background: #0096C2;padding:2px 4px;border-radius:3px;}
+.e6_left10{padding-left:10px;}

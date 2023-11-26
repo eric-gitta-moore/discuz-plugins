@@ -1,0 +1,53 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<!--{if empty($_GET['status'])}-->
+<script src="source/plugin/e6_propaganda/js/j.js" type="text/javascript"></script>
+<script src="source/plugin/e6_propaganda/js/multi.js" type="text/javascript"></script>
+<link href="source/plugin/e6_propaganda/css/multi.css" rel="stylesheet" type="text/css">
+<div class="e6_left10">
+	<ul class="simpleTree">
+		<li class="root" id="{$_G['uid']}"><span>{$_G['username']} {$all_num}</span>
+			<ul>
+				<!--{loop $multi_list $v}-->
+				<li id="{$v['uid']}"><span>{$v['username']}</span>
+					<!--{if $v['register'] > 0}-->
+					<ul class="ajax">
+						<li id="{$v['uid']}">{url:$nav_url&uid=$v[uid]}</li>
+					</ul>
+					<!--{/if}-->
+				</li>
+				<!--{/loop}-->
+			</ul>
+		</li>
+	</ul>
+</div>
+<!--{else}-->
+<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+	<tr class="e6_tr">
+		<td colspan="7"><table class="multi_table" width="100%">
+		<tr>{$pro_header}</tr>
+		</table></td>
+	</tr>
+    <tr class="e6_yellow">
+    	<td>ID</td>
+    	<td>{lang e6_propaganda:username}</td>
+		<td>{lang e6_propaganda:group}</td>
+        <td>{lang e6_propaganda:regdate}</td>
+		<td>{lang e6_propaganda:posts}</td>
+		<td>{lang e6_propaganda:oltime}</td>
+    </tr>
+    <!--{loop $multi_list $v}-->
+	<tr>
+		<td>$v[n]</td>
+		<td>$v[username]</td>
+		<td>$v[groupid]</td>
+        <td>$v[regdate]</td>
+       	<td>$v[posts] {lang e6_propaganda:post}</td>
+		<td>$v[oltime] {lang e6_propaganda:hour}</td>
+	</tr>
+    <!--{/loop}-->
+</table>
+<div class="pgs cl mtm"><!--{if $multi}-->$multi<!--{/if}--></div>
+<!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

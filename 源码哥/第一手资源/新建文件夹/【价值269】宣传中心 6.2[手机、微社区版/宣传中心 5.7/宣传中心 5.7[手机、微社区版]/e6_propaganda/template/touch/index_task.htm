@@ -1,0 +1,47 @@
+<!--{template e6_propaganda:header}-->
+<!--{if intval($_GET['taskid'])}-->
+<div data-role="page">	
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:task}: {$task['name']}</h1>
+	</div>
+	<div data-role="content">
+		<div class="task_text">
+			<div class="b_b">{lang e6_propaganda:start_date}: {$task['starttime']}</div>
+			<div class="b_b">{lang e6_propaganda:end_date}: {$task['overtime']}</div>
+			<div class="b_b blue">{lang e6_propaganda:task_claim}: {$task['claim_text']}</div>
+			<div class="b_b">{lang e6_propaganda:task_reward}: {$task['reward_text']}</div>
+			<div class="b_b no_border">{lang e6_propaganda:task_group}: $group_limit</div>
+			<!--{if $task_ok}-->
+			<div class="b_t">{lang e6_propaganda:task_state}: $task_ok</div>
+			<!--{/if}-->
+		</div>
+		<div class="task_bottom">{$taskimg}</div>
+	</div>
+</div>
+<!--{else}-->
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:top_nav}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true">
+			<li data-role="divider">{$mobile_title_arr[$task]}</li>
+			<!--{loop $task_list $v}-->
+			<li><a href="plugin.php?id=e6_propaganda&nav=task&taskid={$v['id']}" data-ajax="false"><img src="source/plugin/e6_propaganda/task/{$v['icon']}"><h2>{$v['name']}</h2><p>{$v['claim_text']}</p></a></li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="plugin.php?id=e6_propaganda&nav=task&task=all" {$task_all}>{lang e6_propaganda:task_all}</a></li>
+				<li><a href="plugin.php?id=e6_propaganda&nav=task&task=yes" {$task_yes}>{lang e6_propaganda:task_yes}</a></li>
+				<li><a href="plugin.php?id=e6_propaganda&nav=task&task=no" {$task_no}>{lang e6_propaganda:task_no}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

@@ -1,0 +1,64 @@
+<?PHP exit('QQÈº£º550494646');?>
+<div class="acon">
+	<div class="dashedtip cl">
+		<h2><!--{if $keyword && empty($searchstring[2])}-->{lang search_group_result_keyword}  <!--{if empty($viewgroup) && !empty($grouplist)}--><a href="search.php?mod=group&searchid=$searchid&orderby=$orderby&ascdesc=$ascdesc&searchsubmit=yes&viewgroup=1">{lang search_group_viewgroup}</a><!--{/if}--><!--{elseif $viewgroup}-->{lang search_group_result}<!--{else}-->{lang search_result}<!--{/if}--></h2>
+	</div>
+	<!--{ad/search/y mtw}-->
+<!--{if $viewgroup}-->
+	<!--{if empty($grouplist)}-->
+		<p class="emp xs2 xg2">{lang search_nomatch}</p>
+	<!--{else}-->
+		<div class="slst cl">
+			<!--{loop $grouplist $group}-->
+				<dl class="xld xld_a" style="">
+					<dd class="m"><a href="forum.php?mod=group&fid=$group[fid]"><img src="$group[icon]" alt="" /></a></dd>
+					<dt><a href="forum.php?mod=group&fid=$group[fid]">$group[name]</a><!--{if $group['gviewperm'] == 1}-->({lang public})<!--{/if}--></dt>
+					<dd>{lang member}: $group[membernum], {lang threads}: $group[threads]</dd>
+					<dd>{lang credits}: $group[commoncredits], {lang creating_time}: $group[dateline]</dd>
+				</dl>
+			<!--{/loop}-->
+		</div>
+		<!--{if !empty($multipage)}--><div class="pgs cl mbm">$multipage</div><!--{/if}-->
+	<!--{/if}-->
+<!--{else}-->
+	<!--{if !empty($grouplist) && $page < 2}-->
+		<div class="slst cl">
+			<!--{loop $grouplist $group}-->
+				<dl class="xld xld_a" style="">
+					<dd class="m"><a href="forum.php?mod=group&fid=$group[fid]"><img src="$group[icon]" alt="" /></a></dd>
+					<dt><a href="forum.php?mod=group&fid=$group[fid]">$group[name]</a><!--{if $group['gviewperm'] == 1}-->({lang public})<!--{/if}--></dt>
+					<dd>{lang member}: $group[membernum], {lang threads}: $group[threads]</dd>
+					<dd>{lang credits}: $group[commoncredits], {lang creating_time}: $group[dateline]</dd>
+				</dl>
+			<!--{/loop}-->
+		</div>
+	<!--{/if}-->
+	<!--{if !empty($threadlist)}-->
+		<div class="slst cl">
+			<ul>
+				<!--{loop $threadlist $thread}-->
+				<li class="pbw">
+					<h3 class="xs3"><a href="forum.php?mod=viewthread&tid=$thread[tid]&highlight=$index[keywords]" $thread[highlight]>$thread[subject]</a></h3>
+					<p class="xg1">$thread[replies] {lang a_comment_thread} - $thread[views] {lang a_visit}</p>
+					<p>$thread[message]</p>
+					<p class="info">
+						<span>$thread[dateline]</span>
+						 -
+						<span>
+							<!--{if $thread['authorid'] && $thread['author']}-->
+								<a href="home.php?mod=space&uid=$thread[authorid]">$thread[author]</a>
+							<!--{else}-->
+								<!--{if $_G['forum']['ismoderator']}--><a href="home.php?mod=space&uid=$thread[authorid]">{lang anonymous}</a><!--{else}-->{lang anonymous}<!--{/if}-->
+							<!--{/if}-->
+						</span>
+						 -
+						<span><a href="forum.php?mod=forumdisplay&fid=$thread[fid]" class="xi1">$thread[forumname]</a></span>
+					</p>
+				</li>
+				<!--{/loop}-->
+			</ul>
+		</div>
+	<!--{/if}-->
+	<!--{if !empty($multipage)}--><div class="pgs cl mbm">$multipage</div><!--{/if}-->
+<!--{/if}-->
+</div>

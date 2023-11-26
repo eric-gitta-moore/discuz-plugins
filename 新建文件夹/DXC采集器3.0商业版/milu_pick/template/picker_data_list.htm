@@ -1,0 +1,61 @@
+﻿<!--{if $_G['inajax']}-->
+{eval 
+ob_end_clean();
+ob_start();
+@header("Expires: -1");
+@header("Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0", FALSE);
+@header("Pragma: no-cache");
+@header("Content-type: text/xml; charset=".CHARSET);
+echo '<?xml version="1.0" encoding="utf-8"?>'."\r\n";
+}
+<root><![CDATA[
+<!--{/if}-->
+
+  <!--{loop $data[$rs_c['cid']] $key $rs}-->
+	   
+	   <tr class="hover">
+	     <td >&nbsp;</td>
+	      <td class="td25">
+			<input type="checkbox" name="pid[]" value="{$rs['pid']}"  class="checkbox">
+	        </td>
+	      <td class="td25"><input type="text" value="{$rs['displayorder']}" name="pick_setarr[{$rs['pid']}][displayorder]" class="txt"></td>
+          <td><div class="board"><span title="{$rs['old_name']}">{$rs['name']}</span><input type="hidden" class="txt" value="{$rs['name']}" name="name[{$rs['pid']}]"></div></td>
+          <td >{$rs['url_count']}</td>
+	       <td >{$rs['no_import_count']}/{$rs['article_count']}</td>
+   <td ><a id="g_up{$rs['pid']}" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});">{$rs['is_cron_show']}</a><div id="g_up{$rs[pid]}_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">{if $rs['is_auto_pick'] > 0}{if $rs['pick_lastrun_show'] || $rs['pick_nextrun_show']}{lang milu_pick:lastrun}:{$rs['pick_lastrun_show']} <br />{lang milu_pick:nextrun}:{$rs['pick_nextrun_show']}{else}{$rs['pick_wait_run']}{/if}{/if}</div>
+</td>
+   <td ><a id="timing_g_up{$rs['pid']}" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});">{$rs['is_timing_show']}</a><div id="timing_g_up{$rs[pid]}_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">{if $rs['is_auto_timing'] > 0}{if $rs['timing_lastrun_show'] || $rs['timing_nextrun_show']}{lang milu_pick:lastrun}:{$rs['timing_lastrun_show']} <br />{lang milu_pick:nextrun}:{$rs['timing_nextrun_show']}{else}{$rs['timing_wait_run']}{/if}{/if}</div></td>
+   <!--<td class="td32">{$rs['status_msg']}</td>-->
+    <td >
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=get_article">{lang milu_pick:pick}</a>
+	<a class="act" href="?{PICK_GO}picker_create&pid={$rs[pid]}&add=copy">{lang milu_pick:copy}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&myaction=edit_pick&pid={$rs[pid]}">{lang milu_pick:edit}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=pick_del">{lang milu_pick:del_op}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=export&pid={$rs[pid]}">{lang milu_pick:export}</a>
+	<a class="act" href="?{PICK_GO}picker_manage&pid={$rs[pid]}&myaction=pick_empty">{lang milu_pick:empty}</a>
+	
+	
+	<a class="act" href="?{PICK_GO}picker_manage&myac=article_manage&pid={$rs[pid]}&p=1">{lang milu_pick:view_article}</a>  
+	<a class="pick_addtr" href="javascript:void(0);" onclick="show_more('more_op_{$rs['pid']}')">{lang milu_pick:more_op}</a>
+	</br>
+	<span id="more_op_{$rs['pid']}" style="display:none">
+	<a class="act" href="javascript:void(0);" onclick="picker_share('{$rs[pid]}', '{eval echo str_replace('\'','\\\'', $rs[name]);}')" >{lang milu_pick:share}</a>
+	<a class="act" href="javascript:void(0)" onclick="rules_trun('{$rs['pid']}', 'picker')">{lang milu_pick:trun}</a>
+	<a class="act" href="javascript:void(0);" onclick="pick_log('{$rs[pid]}')" >{lang milu_pick:log}</a>
+    <a class="act" href="?{PICK_GO}picker_manage&myac=pick_data_trans&pid={$rs[pid]}">{eval echo milu_lang('pick_data_trans')}</a>
+	 
+	 
+	   </span>	   </td>
+	     </tr>
+	   <!--{/loop}-->
+	    <tr>
+	     <td class="td25"></td>
+	      <td class="td25"></td>
+	      <td class="td25"></td><td colspan="3"><div class="lastboard"><a href="?{PICK_GO}picker_create&pick_cid={$rs_c['cid']}" class="addtr">{lang milu_pick:add_picker}</a></div></td>
+	     </tr>
+         
+<!--{if $_G['inajax']}-->
+]]></root>
+<!--{eval define(FOOTERDISABLED, false);}-->
+<!--{eval exit();}-->
+<!--{/if}-->

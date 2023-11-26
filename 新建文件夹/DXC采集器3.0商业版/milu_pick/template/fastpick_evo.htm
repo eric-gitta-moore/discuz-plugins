@@ -1,0 +1,54 @@
+<!--{template milu_pick:pick_header}-->
+<script language="javascript" type="text/javascript">
+
+function fastpick_evo_test(id){
+	showWindow('kk', PICK_URL+'fast_pick&myac=ajax_func&inajax=1&af=fastpick_evo_test&tpl=no&id='+id);
+}
+</script>
+<form id="cpform" action="?{PICK_GO}fast_pick&myac=fastpick_evo_del" autocomplete="off" method="post" name="cpform">
+<input type="hidden" value="4e816df0" name="formhash"><input type="hidden" value="" name="scrolltop" id="formscrolltop">
+   </p>
+    <table width="50" class="tb tb2 ">
+	<tr>
+	  <th colspan="19" class="partition">{lang milu_pick:evo_rules_list}</th>
+	</tr>
+<tbody><tr class="header">
+  <th></th>
+<th width="120">{lang milu_pick:bbname}</th>
+  <th width="220">{lang milu_pick:test_url}</th>
+  <th width="200">{lang milu_pick:evo_ID}</th>
+  <th width="120">{lang milu_pick:title_get_rules}</th>
+  <th width="120">{lang milu_pick:content_get_rules}</th>
+  <th width="80">{lang milu_pick:hit_num}</th>
+  <th width="150">{lang milu_pick:evo_dateline}</th>
+  <th width="120">{lang milu_pick:op}</th>
+</tr></tbody>
+  <tbody id="">
+  <!--{if $info['rs']}-->
+   <!--{loop $info['rs'] $key $rs}-->
+<tr class="hover">
+  <td class="td25"><input type="checkbox" name="id[]" value="{$rs['id']}" class="checkbox"></td>
+  <td width="120">{$rs['domain']}</td>
+  <td width="220"><a href="{$rs['detail_ID_test']}" target="_blank">{$rs['show_detail_ID_test']}</a></td>
+  <td width="200">{$rs['detail_ID']}</td>
+  <td width="120"><a title="{$rs['full_theme_rules']}">{$rs['theme_rules']}</a></td>
+   <td width="120"><a title="{$rs['full_content_rules']}">{$rs['content_rules']}</a></td>
+    <td width="80">{$rs['hit_num']}</td>
+  <td width="150">{$rs['dateline']}</td>
+  <td width="120">
+  &nbsp;<a href="javascript:void(0)" onclick="fastpick_evo_test('{$rs['id']}')">{lang milu_pick:test}</a>
+  &nbsp;<a href="javascript:void(0)" onclick="rules_trun('{$rs['id']}', 'evo')">{lang milu_pick:trun}</a>
+  &nbsp;<a href="?{PICK_GO}fast_pick&myac=fastpick_evo_del&id={$rs[id]}&tpl=1">{lang milu_pick:del_op}</a>  </td>
+</tr>
+   <!--{/loop}-->
+   <!--{else}-->
+  <tr class="hover"><td colspan="8" align="center" class="td25">{lang milu_pick:no_data}</td></tr>
+  <!--{/if}-->
+  </tbody><tbody style="display: none" id="subnav_6"></tbody>
+<tbody></tbody><tbody><tr><td colspan="19">
+<div class="fixsel"><input type="checkbox" name="chkall" id="chkall" class="checkbox" onclick="checkAll('prefix', this.form, 'id')"><label for="chkall">{lang milu_pick:all_select}</label>&nbsp;
+      
+  <input style="float:none" type="submit" class="btn" name="articlesubmit" value="{lang milu_pick:del}"><div class="cuspages right">{$info['multipage']}</div></div>
+
+  </td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'submit'); });</script></tbody></table>
+</form>

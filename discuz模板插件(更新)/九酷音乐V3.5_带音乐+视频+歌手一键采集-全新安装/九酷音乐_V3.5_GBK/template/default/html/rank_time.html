@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[music:classname] - [qianwei:webname]</title>
+<meta name="Keywords" content="[music:classname]" />
+<meta name="Description" content="[music:classname],[qianwei:webname]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:tempurl]css/bang.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:tempurl]js/topcommon.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+[qianwei:head]
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a class="active" href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box musicBus mt bgWrite">
+   <ul class="clearfix directNew">
+   {qianwei:class sort=turn order=asc}<li><a class="directName" target="_blank" href="[class:link]">[class:name]</a><a class="directPlay" target="_blank" href="[class:link]"></a></li>{/qianwei:class}
+  </ul>
+</div>
+<div class="box">
+ <h2 class="crumb">当前位置 &gt; [music:classname]</h2>
+</div>
+<div class="bangBox clearfix">
+ <div class="bangL">
+  <div class="bangNav bgWrite">
+   <h2 class="bangNavHd"><img src="[qianwei:tempurl]css/bang.png" />音乐排行榜</h2>
+   <div class="bangNavBd">
+    <ul class="bangNavList">
+{qianwei:class classid=5,6,7,8,9,10,11,12 sort=turn order=asc}<li class="rank[class:id]"><a href="[class:link]">[class:name]</a></li>{/qianwei:class}
+<style type="text/css">
+.bangNavList li.rank[music:classid] a,.bangNavList li.rank[music:classid] a:hover{color:#fff; font-weight:800; background:#f34f34 url([qianwei:tempurl]css/bang.png) right 0 no-repeat;}
+</style>
+    </ul>
+    <div class="bangNavLine"></div>
+    <ul class="bangNavList">
+{qianwei:class classid=2,3,4 sort=turn order=asc}<li><a href="[class:link]">[class:name]</a></li>{/qianwei:class}
+    </ul>
+    <div class="bangNavLine"></div>
+    <ul class="bangNavList">
+{qianwei:class sort=turn order=asc}<li><a href="[class:link]">[class:name]</a></li>{/qianwei:class}
+    </ul>
+   </div>
+  </div>
+ </div>
+ <form name="form" action="[qianwei:path]play.php?id=" method="get">
+ <div class="bangR bangIndex clearfix">
+<div class="mdBox bgWrite" style="margin-left:0;">
+   <div class="mdBoxHd mdBangHd">
+    <h1 class="mdBoxHdTit" style="color:#f00">[music:classname]Top90</h1>
+   </div>
+   <div class="mdBoxBd">
+    <div class="bangMusic">
+     <div class="songList clearfix">
+      <ol id="f1">
+{qianwei:music loop=3 sort=time start=1}<li><input style="display:none;" class="check" type="checkbox" name="Url" value="{song}[music:id]" /><span class="songNum topRed">[music:i].</span><a class="songName" href="[music:link]" target="_blank">[music:name]</a><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}
+{qianwei:music loop=27 sort=time start=4}<li><input style="display:none;" class="check" type="checkbox" name="Url" value="{song}[music:id]" /><span class="songNum"><script type="text/javascript">var a=[music:i];var b=3;var c=a+b;document.write(c);</script>.</span><a class="songName" href="[music:link]" target="_blank">[music:name]</a><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}
+      </ol>
+     </div>
+     <div class="setPlay"><a class="setPlayPlay" href="javascript:void(0)" onclick="javascript:playallquanxuan('f1');lbplay();quanxuan('f1');">全部播放</a></div>
+    </div>
+   </div>
+  </div>
+  <div class="mdBox bgWrite">
+   <div class="mdBoxHd mdBangHd">
+    <h1 class="mdBoxHdTit" style="color:#090">Top二</h1>
+   </div>
+   <div class="mdBoxBd">
+    <div class="bangMusic">
+     <div class="songList clearfix">
+      <ol id="f2">
+{qianwei:music loop=2 sort=time start=31}<li><input style="display:none;" class="check" type="checkbox" name="Url" value="{song}[music:id]" /><span class="songNum topRed"><script type="text/javascript">var a=[music:i];var b=30;var c=a+b;document.write(c);</script>.</span><a class="songName" href="[music:link]" target="_blank">[music:name]</a><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}
+{qianwei:music loop=28 sort=time start=33}<li><input style="display:none;" class="check" type="checkbox" name="Url" value="{song}[music:id]" /><span class="songNum"><script type="text/javascript">var a=[music:i];var b=32;var c=a+b;document.write(c);</script>.</span><a class="songName" href="[music:link]" target="_blank">[music:name]</a><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}
+      </ol>
+     </div>
+     <div class="setPlay"><a class="setPlayPlay" href="javascript:void(0)" onclick="javascript:playallquanxuan('f2');lbplay();quanxuan('f2');">全部播放</a></div>
+    </div>
+   </div>
+  </div>
+    <div class="mdBox bgWrite">
+   <div class="mdBoxHd mdBangHd">
+    <h1 class="mdBoxHdTit" style="color:#333">Top三</h1>
+   </div>
+   <div class="mdBoxBd">
+    <div class="bangMusic">
+     <div class="songList clearfix">
+      <ol id="f3">
+{qianwei:music loop=1 sort=time start=61}<li><input style="display:none;" class="check" type="checkbox" name="Url" value="{song}[music:id]" /><span class="songNum topRed"><script type="text/javascript">var a=[music:i];var b=60;var c=a+b;document.write(c);</script>.</span><a class="songName" href="[music:link]" target="_blank">[music:name]</a><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}
+{qianwei:music loop=29 sort=time start=62}<li><input style="display:none;" class="check" type="checkbox" name="Url" value="{song}[music:id]" /><span class="songNum"><script type="text/javascript">var a=[music:i];var b=61;var c=a+b;document.write(c);</script>.</span><a class="songName" href="[music:link]" target="_blank">[music:name]</a><a class="add" onclick="Addplay('{song}[music:id]')" title="加入列表">加入列表</a></li>{/qianwei:music}
+      </ol>
+     </div>
+     <div class="setPlay"><a class="setPlayPlay" href="javascript:void(0)" onclick="javascript:playallquanxuan('f3');lbplay();quanxuan('f3');">全部播放</a></div>
+    </div>
+   </div>
+  </div>
+ </div>
+ </form>
+</div>
+<script type="text/javascript">
+function Addplay(url){
+var ifplay= GetCookie("jk_ifplay");
+if(ifplay=="1"){
+var now = new Date();
+var ss = now.getTime();
+now.setTime(ss + 12*60*60*1000);//12 hours
+document.cookie = "jk_addplay="+(url)+";domain=[qianwei:weburl];path=[qianwei:path];expires="+ now.toGMTString();
+asyncbox.tips("恭喜，已经添加到连续播放列表！", "success", 1500);
+}else{if(url.split(",").length-1>1){sendplayer(url);}else{sendplayer(url);}}}
+var old="";
+function quanxuan(obj){
+	if(old!=obj.toString()){
+		document.form.reset();
+		old = obj.toString();
+	}	
+	with(document.getElementById(obj)){
+		var ins = getElementsByTagName("input");
+		for(var i=0;i<ins.length;i++){
+				ins[i].checked=!ins[i].checked;
+		}
+	}
+}
+function playallquanxuan(obj){
+	document.form.reset();
+	with(document.getElementById(obj)){
+		var ins = getElementsByTagName("input");
+		for(var i=0;i<ins.length;i++){
+				ins[i].checked=true;
+		}
+	}
+}
+function lbplay(){
+	var newx="",firstid="";
+	var ok=false;
+	var lens=eval("document.form.Url").length;
+	if(lens==undefined){lens=1}
+	if(lens>1){
+		for (var i=0;i<lens;i++) 
+		{
+	
+		var temp=eval("document.form.Url["+i+"]");
+			if(temp.checked){
+				if(temp.value.replace("@","")!=""&&temp.value.replace("@","")!="0"){
+					if(firstid=="")firstid=temp.value.replace("@","");
+					newx=newx+temp.value.replace("@","")+",";
+					ok=true;
+				}
+			}
+		}
+	}else{
+		ok=true;
+		if(document.form.Url.value.replace("@","")!=""&&document.form.Url.value.replace("@","")!="0"){
+			newx=document.form.Url.value.replace("@","")+",";
+		}
+	}
+	if(ok){	
+		if(newx.length>2009){
+			asyncbox.tips("您选择的太多，请保持在60首以内，以便达到最佳效果！", "wait", 1000);
+		}else{
+			if(newx.split(",").length-1>1)
+			window.open("[qianwei:path]play.php?id="+newx+"");
+			else
+			window.open("[qianwei:path]play.php?id="+newx+"");
+		}
+	}else{
+		asyncbox.tips("请选择后再播放！", "wait", 1000);
+	}
+}
+</script>
+[qianwei:bottom]
+</body>
+</html>

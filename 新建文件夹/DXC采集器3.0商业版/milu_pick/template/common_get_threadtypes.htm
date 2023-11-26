@@ -1,0 +1,31 @@
+{if VIP}
+
+{eval echo pickOutput::show_title(milu_lang('get_threadtypes_info'));}
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_get_threadtypes}:</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+  	 {echo pickOutput::radio(array('name' => 'is_get_threadtypes', 'int_val' => 2, 'js' => array("show_hide('show_get_threadtypes+show_threadtypes_html','',1)", "show_hide('show_get_threadtypes+show_threadtypes_html','',2)"), 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}
+ </td>
+  <td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+
+<tbody id="show_get_threadtypes" {if $info['is_get_threadtypes'] != 1} style="display:none"{/if}>
+{eval $rules_id_type = $info['pid'] ? 'picker' : ($info['rid'] ? 'system' : 'fastpick');}
+{eval $rules_id = $info['pid'] ? $info['pid'] : ($info['rid'] ? $info['rid'] : $info['id']);}
+{eval $sort_select_output =  pickOutput::select(array('flag' => 2, 'name' => 'forum_threadtype_id', 'set_name' => 1, 'class' => 'forum_threadtype', 'id' =>'forum_threadtype', 'js' => 'onchange="forum_threadtype_select(this.value, \'show_threadtypes_html\', \'forum\', \''.$rules_id_type.'\', \''.$rules_id.'\')"', 'option_arr' => forum_threadtype_list(1)), $info);}
+{eval echo pickOutput::add_tr(array('td' => 2), $sort_select_output.$info['threadtype_select_notice']);}
+
+
+
+<tbody id="show_threadtypes_html" {if $info['is_get_threadtypes'] != 1} style="display:none"{/if}>
+
+{eval echo pickOutput::show_threadtypes_html('forum', $info);}
+
+</tbody>
+
+
+</tbody>
+
+{/if}

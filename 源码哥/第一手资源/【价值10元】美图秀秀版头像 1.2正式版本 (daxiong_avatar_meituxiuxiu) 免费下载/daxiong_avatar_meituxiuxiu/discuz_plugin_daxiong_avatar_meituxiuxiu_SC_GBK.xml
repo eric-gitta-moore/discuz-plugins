@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-04-10 16:41]]></item>
+	<item id="From"><![CDATA[Ô´ Âë ¸ç  y   m  g 6  . c o   m]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[ÃÀÍ¼ÐãÐã°æÍ·Ïñ]]></item>
+			<item id="identifier"><![CDATA[daxiong_avatar_meituxiuxiu]]></item>
+			<item id="description"><![CDATA[ÃÀÍ¼ÐãÐã°æÍ·Ïñ]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[daxiong_avatar_meituxiuxiu/]]></item>
+			<item id="copyright"><![CDATA[Ô´Âë¸ç£¨www.ymg6.com£©]]></item>
+			<item id="version"><![CDATA[1.2ÕýÊ½°æ]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[daxiong_avatar_meituxiuxiu]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>Ãâ·Ñ×ÊÔ´</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[¿ªÆô]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="price_yza"><![CDATA[&#x8fd9;&#x4e2a;&#x63d2;&#x4ef6;&#x662f;&#x76d7;&#x5356;&#x4efd;&#x5b50;&#x8f6c;&#x8f7d;&#x4e8e;<a href="]]></item>
+				<item id="free_yza"><![CDATA[&#x8fd9;&#x4e2a;&#x63d2;&#x4ef6;&#x3010;&#x514d;&#x8d39;&#x3011;&#x5206;&#x4eab;&#x4e8e;<a href="]]></item>
+				<item id="common_yzb"><![CDATA[">&#x6e90;&#x7801;&#x54e5;</a>&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="]]></item>
+				<item id="common_yzc"><![CDATA[">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x4e0b;&#x8f7d;</a>&#x8fd9;&#x4e2a;&#x63d2;&#x4ef6;]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="previous_page"><![CDATA[·µ»ØÉÏÒ»Ò³]]></item>
+				<item id="setting_avatar_message"><![CDATA[Èç¹ûÄú»¹Ã»ÓÐÉèÖÃ×Ô¼ºµÄÍ·Ïñ£¬ÏµÍ³»áÏÔÊ¾ÎªÄ¬ÈÏÍ·Ïñ£¬ÄúÐèÒª×Ô¼ºÉÏ´«Ò»ÕÅÐÂÕÕÆ¬À´×÷Îª×Ô¼ºµÄ¸öÈËÍ·Ïñ ]]></item>
+				<item id="setting_my_new_avatar"><![CDATA[ÉèÖÃÎÒµÄÐÂÍ·Ïñ]]></item>
+				<item id="setting_my_new_avatar_message"><![CDATA[ÇëÑ¡ÔñÒ»¸öÐÂÕÕÆ¬½øÐÐÉÏ´«±à¼­¡£<br />Í·Ïñ±£´æºó£¬Äú¿ÉÄÜÐèÒªË¢ÐÂÒ»ÏÂ±¾Ò³Ãæ(°´F5¼ü)£¬²ÅÄÜ²é¿´×îÐÂµÄÍ·ÏñÐ§¹û ]]></item>
+				<item id="tip"><![CDATA[Í·ÏñÉèÖÃÌáÊ¾ÐÅÏ¢]]></item>
+				<item id="success"><![CDATA[Í¼Æ¬ÉÏ´«³É¹¦]]></item>
+				<item id="err_phpallow"><![CDATA[ÄúÉÏ´«µÄÍ¼Æ¬¸ñÊ½²»¶Ô]]></item>
+				<item id="err_sizeallow"><![CDATA[ÄúÉÏ´«µÄÍ¼Æ¬´óÐ¡ÊÜÏÞ]]></item>
+				<item id="err_onlytype"><![CDATA[ÄúÉÏ´«µÄÍ¼Æ¬ÀàÐÍÊÜÏÞ]]></item>
+				<item id="err_nofile"><![CDATA[Ã»ÓÐÉÏ´«Í¼Æ¬Å¶]]></item>
+				<item id="err_fail"><![CDATA[¶Ô²»ÆðÉÏ´«Ê§°Ü]]></item>
+				<item id="err_noknow"><![CDATA[ÉÏ´«Ê§°Ü£¬Î´ÖªÔ­Òò]]></item>
+				<item id="current_my_space"><![CDATA[µ±Ç°ÎÒµÄÍ·Ïñ]]></item>
+			</item>
+		</item>
+	</item>
+</root>

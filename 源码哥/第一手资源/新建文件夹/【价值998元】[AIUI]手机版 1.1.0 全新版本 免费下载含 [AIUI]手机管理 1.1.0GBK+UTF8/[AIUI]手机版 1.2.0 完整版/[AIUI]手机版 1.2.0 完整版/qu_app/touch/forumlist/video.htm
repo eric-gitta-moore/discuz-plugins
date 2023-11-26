@@ -1,0 +1,84 @@
+<style>
+.ainuo_newsnav{ height:40px; line-height:40px;}
+.ainuo_newsnav li{ float:left; width:auto; font-size:15px;}
+.ainuo_newsnav li a{ display:block; padding:0 10px;}
+.ainuo_newsnav li.a a{ color:#f23030; border-bottom:1px solid #f23030;}
+.ainuo_piclist{}
+.ainuo_piclist li{ border-bottom:1px solid #eee; background:#fff;}
+.ainuo_piclist li a{ display:block; color:#111;padding:12px 0;}
+.ainuo_piclist li .avideo{ margin-top:5px;}
+.ainuo_piclist li .author{font-size:12px; color:#999;  display:block; margin-top:7px; padding:0 10px;}
+.ainuo_piclist li .author .pip{ margin:0 3px;}
+.ainuo_piclist li .asub{ position:relative;}
+.ainuo_piclist li .asub .atitle{ font-size:17px; line-height:1.5;max-height:50px; padding:0 10px; overflow:hidden;}
+.ainuo_piclist li .afenlei{  padding:0 10px; height:30px;}
+.ainuo_piclist li .afenlei em{font-size:0;}
+.ainuo_piclist li .afenlei em a{font-size: 12px;display: inline;background: #eee;padding: 3px 10px;border-radius: 20px;color: #666;}
+</style>
+<header class="header" id="page-header">
+	<div class="nav">
+        <a class="back z" href="#"><i class="iconfont icon-back_light"></i></a>		
+        <span class="name">$_G['forum'][name]</span>
+        <a href="javascript:;" class="ashare y"><i class="iconfont icon-fenxiang"></i></a>
+    </div>
+</header>
+<!--{template common/top_fix}-->
+
+<!--{if ($_G['forum']['threadtypes'] && $_G['forum']['threadtypes']['listable']) || count($_G['forum']['threadsorts']['types']) > 0}-->
+<div class="ainuo_newsnav cl">
+    <div id="ainuo_newsnav" class="swiper-container-horizontal swiper-container-free-mode">
+        <ul class="swiper-wrapper">
+        	<li {if !$_GET['typeid'] && !$_GET['sortid']}class="swiper-slide a"{else}class="swiper-slide"{/if}><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_G['forum']['threadsorts']['defaultshow']}&filter=sortall&sortall=1{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">{lang all}</a></li>
+            <!--{if $_G['forum']['threadtypes']}-->
+                <!--{loop $_G['forum']['threadtypes']['types'] $id $name}-->
+                    <!--{if $_GET['typeid'] == $id}-->
+                    <li class="swiper-slide a"><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_GET['sortid']}&filter=sortid&sortid=$_GET['sortid']{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">$name</a></li>
+                    <!--{else}-->
+                    <li class="swiper-slide"><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=typeid&typeid=$id$forumdisplayadd[typeid]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">$name</a></li>
+                    <!--{/if}-->
+                <!--{/loop}-->
+            <!--{/if}-->
+        </ul>
+    </div>
+</div>
+<div class="grey_line cl"></div>
+
+<script type="text/javascript">
+
+if($("#ainuo_newsnav .a").length > 0) {
+	var ainuo_first = $("#ainuo_newsnav .a").offset().left + $("#ainuo_newsnav .a").width() >= $(window).width() ? $("#ainuo_newsnav .a").index() : 0;
+}else{
+	var ainuo_first = 0;
+}	
+mySwiper = new Swiper('#ainuo_newsnav', {
+	freeMode : true,
+	slidesPerView : 'auto',
+	initialSlide : ainuo_first,
+});
+</script>
+<!--{/if}-->
+
+<!--{hook/forumdisplay_top_mobile}-->
+
+
+<!--{if empty($_G['forum']['sortmode'])}-->
+    
+    <!--{if $_G['forum_threadcount']}-->
+    <div class="ainuo_piclist cl">
+        <ul id="ainuoloadmore" class="ainuoloadmore">
+			<!--{subtemplate forumlist/video_list}-->
+        </ul>
+    </div>
+    <!--{else}-->
+    <div class="ainuoemp">{lang forum_nothreads}</div>
+    <!--{/if}-->
+
+<!--{else}-->
+    <!--{subtemplate forum/forumdisplay_sort}-->
+<!--{/if}-->
+<div id="ainuoloadempty"></div>
+<!--{if $_G[forum][threads] && ($_G[forum][threads] > $_G[tpp])}-->
+<div id="loading" class="loading G-animate-load-wrap">
+	<div class="load-loading"><span class="loading02"></span> <span class="load-word">$alang_loading</span></div>
+</div>
+<!--{/if}-->

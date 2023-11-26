@@ -1,0 +1,64 @@
+<!--{template common/header}-->
+<!--[name]{Week_Design_list_about_job_wide}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<link href="$_G['style']['styleimgdir']/about/about.css" rel="stylesheet" type="text/css" />
+
+</div>
+<div class="wk_list_box wk_list_box16">
+</div>
+<div class="wk_blog_tab">
+	<ul>
+    <!--{if $wk_menu}-->
+        <!--{if $cat[others]}-->
+            <!--{loop $cat[others] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{/if}-->
+    <!--{else}-->
+        <!--{if $cat[subs]}-->
+            <!--{loop $cat[subs] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{else}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[others] $value}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                <!--{/loop}-->
+            <!--{/if}-->
+        <!--{/if}-->
+    <!--{/if}-->
+    </ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<div class="week_job">
+	<!--[diy=wk_about_jobdiy1]--><div id="wk_about_jobdiy1" class="area"></div><!--[/diy]-->
+</div>
+<div class="clear"></div>
+<div class="week_follow">
+	<div class="week_follow_kd">
+    	<!--[diy=wk_about_jobdiy2]--><div id="wk_about_jobdiy2" class="area"></div><!--[/diy]-->
+    </div>
+</div>
+
+<div class="clear"></div>
+<div id="wp" class="wp">
+
+    <div class="wp"><!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]--></div>
+    <!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+    <!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+    <div class="clear"></div>
+    <!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+    <!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

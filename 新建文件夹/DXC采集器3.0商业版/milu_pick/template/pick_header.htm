@@ -1,0 +1,13 @@
+<script type="text/javascript">
+var PICK_URL = 'admin.php?{PICK_GO}';
+var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]';
+var is_lan = '{$info[is_lan]}';var bbname = '{eval echo str_replace('\'', '\\\'', $_G[setting][bbname]);}';
+</script>
+<script language="javascript"  charset="gbk" type="text/javascript" src="{PICK_URL}static/jquery-1.6.2.min.js?v={PICK_VERSION}"></script>
+<script language="javascript" charset="gbk" type="text/javascript" src="{PICK_URL}static/phprpc_client.js?v={PICK_VERSION}"></script>
+<script language="javascript"  charset="gbk" type="text/javascript" src="{PICK_URL}static/inc.js?v={PICK_VERSION}"></script>
+<link href="{PICK_URL}static/style.css?v={PICK_VERSION}" rel="stylesheet" type="text/css" />
+
+{$info['header']}
+{if $info['evn_msg']}{$info['evn_msg']}{eval exit();}{/if}
+{if $info['tips']}{$info['tips']}{/if}

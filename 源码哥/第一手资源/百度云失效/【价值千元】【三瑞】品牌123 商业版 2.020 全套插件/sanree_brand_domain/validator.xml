@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin Validator]]></item>
+	<item id="Version"><![CDATA[X2.5]]></item>
+	<item id="Data">
+		<item id="0"><![CDATA[source/plugin/sanree_brand_domain/admincp/index.htm]]></item>
+		<item id="1"><![CDATA[source/plugin/sanree_brand_domain/admincp/sanree_brand_domain/index.htm]]></item>
+		<item id="2"><![CDATA[source/plugin/sanree_brand_domain/admincp/sanree_brand_domain/sanree_brand_domain_base.php]]></item>
+		<item id="3"><![CDATA[source/plugin/sanree_brand_domain/admincp/sanree_brand_domain/sanree_brand_domain_brand2domain.php]]></item>
+		<item id="4"><![CDATA[source/plugin/sanree_brand_domain/admincp/sanree_brand_domain/sanree_brand_domain_list.php]]></item>
+		<item id="5"><![CDATA[source/plugin/sanree_brand_domain/admincp.inc.php]]></item>
+		<item id="6"><![CDATA[source/plugin/sanree_brand_domain/check.php]]></item>
+		<item id="7"><![CDATA[source/plugin/sanree_brand_domain/config.inc.php]]></item>
+		<item id="8"><![CDATA[source/plugin/sanree_brand_domain/discuz_plugin_sanree_brand_domain_SC_GBK.xml]]></item>
+		<item id="9"><![CDATA[source/plugin/sanree_brand_domain/discuz_plugin_sanree_brand_domain_SC_UTF8.xml]]></item>
+		<item id="10"><![CDATA[source/plugin/sanree_brand_domain/discuz_plugin_sanree_brand_domain_TC_BIG5.xml]]></item>
+		<item id="11"><![CDATA[source/plugin/sanree_brand_domain/discuz_plugin_sanree_brand_domain_TC_UTF8.xml]]></item>
+		<item id="12"><![CDATA[source/plugin/sanree_brand_domain/function/function_core.php]]></item>
+		<item id="13"><![CDATA[source/plugin/sanree_brand_domain/function/index.htm]]></item>
+		<item id="14"><![CDATA[source/plugin/sanree_brand_domain/hook/index.htm]]></item>
+		<item id="15"><![CDATA[source/plugin/sanree_brand_domain/hook/index.php]]></item>
+		<item id="16"><![CDATA[source/plugin/sanree_brand_domain/hook/X2.5/hook.class.php]]></item>
+		<item id="17"><![CDATA[source/plugin/sanree_brand_domain/hook/X2.5/index.htm]]></item>
+		<item id="18"><![CDATA[source/plugin/sanree_brand_domain/hook.class.php]]></item>
+		<item id="19"><![CDATA[source/plugin/sanree_brand_domain/index.html]]></item>
+		<item id="20"><![CDATA[source/plugin/sanree_brand_domain/install.php]]></item>
+		<item id="21"><![CDATA[source/plugin/sanree_brand_domain/module/index.htm]]></item>
+		<item id="22"><![CDATA[source/plugin/sanree_brand_domain/module/sanree_brand_domain/index.htm]]></item>
+		<item id="23"><![CDATA[source/plugin/sanree_brand_domain/module/sanree_brand_domain/sanree_brand_domain_buydomain.php]]></item>
+		<item id="24"><![CDATA[source/plugin/sanree_brand_domain/module/sanree_brand_domain/sanree_brand_domain_editdomain.php]]></item>
+		<item id="25"><![CDATA[source/plugin/sanree_brand_domain/module/sanree_brand_domain/sanree_brand_domain_mydomain.php]]></item>
+		<item id="26"><![CDATA[source/plugin/sanree_brand_domain/module/sanree_brand_domain/sanree_brand_domain_mydomain_list.php]]></item>
+		<item id="27"><![CDATA[source/plugin/sanree_brand_domain/sanree_brand_domain.inc.php]]></item>
+		<item id="28"><![CDATA[source/plugin/sanree_brand_domain/table/index.htm]]></item>
+		<item id="29"><![CDATA[source/plugin/sanree_brand_domain/table/table_sanree_brand_domain.php]]></item>
+		<item id="30"><![CDATA[source/plugin/sanree_brand_domain/table/table_sanree_brand_domain_brand2domain.php]]></item>
+		<item id="31"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/buydomain.tpl.php]]></item>
+		<item id="32"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/copyright.xml]]></item>
+		<item id="33"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/editdomain.tpl.php]]></item>
+		<item id="34"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/images/copyright.jpg]]></item>
+		<item id="35"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/images/index.htm]]></item>
+		<item id="36"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/images/mydomain.png]]></item>
+		<item id="37"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/index.htm]]></item>
+		<item id="38"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/js/index.htm]]></item>
+		<item id="39"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/js/msg.js]]></item>
+		<item id="40"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/js/msg_utf8.js]]></item>
+		<item id="41"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/mydomain_list.tpl.php]]></item>
+		<item id="42"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/preview.jpg]]></item>
+		<item id="43"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/preview_large.jpg]]></item>
+		<item id="44"><![CDATA[source/plugin/sanree_brand_domain/tpl/default/sanree_brand_domain.css]]></item>
+		<item id="45"><![CDATA[source/plugin/sanree_brand_domain/tpl/index.htm]]></item>
+		<item id="46"><![CDATA[source/plugin/sanree_brand_domain/uninstall.php]]></item>
+		<item id="47"><![CDATA[source/plugin/sanree_brand_domain/userdomain.php]]></item>
+		<item id="48"><![CDATA[source/plugin/sanree_brand_domain/userdomainindex.php]]></item>
+		<item id="49"><![CDATA[source/plugin/sanree_brand_domain/validator.xml]]></item>
+	</item>
+</root>

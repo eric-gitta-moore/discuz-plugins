@@ -1,0 +1,38 @@
+<!--{block sreturn}-->
+<!--{if $allbrand}-->
+<div class="tabtn"><a onclick="sanreeshowwin('{$post[pid]}_tabrand_menu')" title="{$brandtitle}"></a></div>
+<div class="tabrandbox" id="{$post[pid]}_tabrand_menu" style="display: none" unselectable="on">
+  <TABLE class=fwin cellSpacing=0 cellPadding=0 width="100%">
+    <TBODY>
+      <TR>
+        <TD class=t_l></TD>
+        <TD class=t_c></TD>
+        <TD class=t_r></TD>
+      </TR>
+      <TR>
+        <TD class=m_l>&nbsp;&nbsp;</TD>
+        <TD class=m_c><DIV class=mtm>
+            <UL style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; CURSOR: move" class="tb tb_s cl">
+              <LI class=y><SPAN class=flbc onclick="$('{$post[pid]}_tabrand_menu').style.display='none'">{lang close}</SPAN></LI>
+              <LI class=current><A hideFocus href="javascript:;">{$brandtitle}({$brandcount})</A></LI>
+            </UL>
+            <DIV class=p_opt unselectable="on">
+				<ul class="tabrand">
+				<!--{loop $allbrand $brand}-->
+				<li><a href="{$brand[url]}" target="_blank" style="color:{$brand[color]}">{$brand[name]}</a></li>
+				<!--{/loop}-->
+				</ul>
+            </DIV>
+          </DIV></TD>
+        <TD class=m_r></TD>
+      </TR>
+      <TR>
+        <TD class=b_l></TD>
+        <TD class=b_c></TD>
+        <TD class=b_r></TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+</DIV>	
+<!--{/if}-->
+<!--{/block}-->

@@ -1,0 +1,150 @@
+    <div class="jy_con_right">
+<form id="new" method="post" autocomplete="off" >
+      <div class="jy_con_righta">
+      	<div class="topADtu"><img src="source/plugin/csu_guarantee/css/a52.jpg" width="700" height="166" /></div>
+        <h2>&#x586B;&#x5199;&#x4EA4;&#x6613;&#x4FE1;&#x606F;</h2>
+      </div>
+      <div class="h8"></div>
+      <div class="h8"></div>
+      <div class="h8"></div>
+      <!--div class="mn"-->
+          <div id="postbox"> 
+            <div class="pbt cl">
+<div class="specialpost s_clear"><div class="jy_con_righsa"><ul><li> <span class="sa_a">&#x4EA4;&#x6613;&#x7C7B;&#x578B;&#xFF1A;</span> <span class="sa_b" style="width:400px;"><!--{eval mold()}--></span> </li>
+				  	<li> <span class="sa_a">&#x6211;&#x7684;QQ&#xFF1A;</span> <span class="sa_b">
+					  <input type="text"  class="text" tabindex="4" id="vkfQQ" name="contact[qq]">
+					  </span> <span class="sa_c"><em>*</em>&#x8BF7;&#x586B;&#x5199;QQ&#x53F7;&#x7801;</span> </li>
+					<li> <span class="sa_a">&#x8054;&#x7CFB;&#x624B;&#x673A;&#xFF1A;</span> <span class="sa_b">
+					  <input type="text"  class="text" tabindex="6" id="vkftel" name="contact[mobile]">
+					  </span> <span class="sa_c"><em>*</em>&#x8BF7;&#x586B;&#x5199;&#x624B;&#x673A;&#x53F7;&#x7801;</span> </li>
+					<li> <span class="sa_a">&#x4E70;&#x5356;&#x5173;&#x7CFB;&#xFF1A;</span> <span class="sa_b">
+					  <input type="radio" name="trade_type" class="ieradio" style="padding-top:2px;" onclick="get_trade_type_desc()" value="1" />&#x5356;(&#x6211;&#x662F;&#x6536;&#x6B3E;&#x65B9;)<input type="radio" name="trade_type" class="ieradio" onclick="get_trade_type_desc()" value="2" />&#x4E70;(&#x6211;&#x662F;&#x4ED8;&#x6B3E;&#x65B9;)
+					  </span> <span class="sa_c" id="trade_type_desc"><em>*</em>&#x9009;&#x62E9;&#x4EA4;&#x6613;&#x7684;&#x4E70;&#x5356;&#x5173;&#x7CFB;</span> </li>
+					<li> <span class="sa_a">&#x5BF9;&#x65B9;&#x7528;&#x6237;&#x540D;&#xFF1A;</span> <span class="sa_b">
+					  <input type="text" tabindex="1" class="text" value="" id="vkfname" name="other_side" />
+					  </span> <span class="sa_c"><em>*</em>&#x586B;&#x5199;&#x5BF9;&#x65B9;{$var['name']}&#x7528;&#x6237;&#x540D;</span> </li>
+					<li> <span class="sa_a">&#x4EA4;&#x6613;&#x91D1;&#x989D;&#xFF1A;</span> <span class="sa_b">
+					  <input type="text" tabindex="3" class="text" value="0" onKeyUp="value=value.replace(/[^\d(\.\d{0,2})?]/g,'')" onfocus="if(this.value<=0){ this.value=''; }" onblur="if(this.value==''){ this.value=0; }" name="price" id="vkfprice" onchange="get_amount()">
+					  </span> <span class="sa_c"><em>*</em>&#x586B;&#x5199;&#x4EA4;&#x6613;&#x91D1;&#x989D;</span> </li>
+					<li> <span class="sa_a">&#x4E2D;&#x4ECB;&#x8D39;{$var[sale]}%&#xFF1A;</span> <span class="sa_b">
+					  <input type="radio" name="deduct_type" class="ieradio" onclick="get_amount()" value="2" checked="checked" />&#x4E70;&#x5BB6;&#x652F;&#x4ED8;
+					  <input type="radio" name="deduct_type" class="ieradio" onclick="get_amount()" value="1" />&#x5356;&#x5BB6;&#x652F;&#x4ED8;
+					  <input type="radio" name="deduct_type" class="ieradio" onclick="get_amount()" value="3" />&#x53CC;&#x65B9;&#x5E73;&#x644A;
+					  </span> <span class="sa_c"><em>*</em></span> </li>
+					<li> <span class="sa_aa">&#x4E70;&#x5BB6;&#x5E94;&#x4ED8;&#xFF1A;</span> <span class="sa_bb"><strong>&#xFFE5;</strong><i id="order_amount">0&#x5143;</i></span> <span class="sa_aa">&#x5356;&#x5BB6;&#x6240;&#x5F97;&#xFF1A;</span> <span class="sa_bb"><strong>&#xFFE5;</strong><i id="sale_gains">0&#x5143;</i></span>  </li></ul>
+				</div>
+				<div class="jy_con_righsb">
+				  <h2>&#x5BA2;&#x670D;&#x4E2D;&#x5FC3;</h2>
+					{$var['kefucode']}
+				</div>
+				<div class="clear"></div>
+				<div class="obottom">
+					<div id="buyuserName" class="jy_con_righsa" style="display:none;"><ul><li> <span class="sa_a">&#x771F;&#x5B9E;&#x59D3;&#x540D;&#xFF1A;</span> <span class="sa_b"><input type="text" name="contact[name]" class="text" id="buyuserNameText"  /></span> <span class="sa_c"><em>*</em></span></li><li> <span class="sa_a">&#x6536;&#x8D27;&#x5730;&#x5740;&#xFF1A;</span> <span class="sa_b"><input type="text" name="contact[address]" class="text" id="buyuserNameText"  /></span> <span class="sa_c"><em>&#x82E5;&#x4E0D;&#x9700;&#x8BF7;&#x7559;&#x7A7A;</em></span></li></ul></div>
+					<div id="yinghang_tr" style="display:none;">&#x8D26;&#x53F7;:(<font color="red">&#x63A8;&#x8350;&#x5DE5;&#x884C;&#x7B49;&#x94F6;&#x884C;,&#x5230;&#x8D26;&#x5FEB;&#x901F;</font>)
+						<select name="contact[bank_name]">
+						  <option value="">&#x9009;&#x62E9;&#x6211;&#x7684;&#x6536;&#x6B3E;&#x94F6;&#x884C;</option>
+{$salemoney}						</select>
+						&#x5E10;&#x53F7;
+						<input type="text" name="contact[bank_idnum]" class="text" size="28" id="vkfidnum" value="" />
+						&#x59D3;&#x540D;
+						<input type="text" name="contact[bank_username]" class="text" id="vkfbrankname" value="" />
+						<font color="red">*</font>
+				  </div>
+					<div class="jy_con_righsa">
+						<ul>
+						<li> <span class="sa_d">&#x4EA4;&#x6613;&#x5185;&#x5BB9;&#x548C;&#x5177;&#x4F53;&#x8981;&#x6C42;&#xFF1A;</span> <span class="sa_e">
+					  <input type="checkbox" checked="checked" class="ieradio" />
+					  </span> <span class="sa_f"><a href="{$var['rule']}" target="_blank"><u>&#x6211;&#x540C;&#x610F;{$var['name']}&#x7EA0;&#x7EB7;&#x5904;&#x7406;&#x89C4;&#x5219;</u></a></span>
+					  </li>
+					  </ul>
+					   </div>
+				</div>
+				<script type="text/javascript">
+		function get_trade_type_desc(){
+			var el = document.getElementsByTagName('input');
+			var len = el.length;
+			trade_type_val = "";
+			for(var i=0; i<len; i++)
+			{
+				if((el[i].type=="radio") && (el[i].name=='trade_type') && (el[i].checked==true))
+				{
+					trade_type_val = el[i].value;
+				}
+			}
+
+			if(trade_type_val==2){
+				$("trade_type_desc").innerHTML = "<em>*</em>&#x4E70;&#x5BB6;&#x6216;&#x53D1;&#x5E03;&#x65B9;";
+				$("buyuserName").style.display="block";
+				$("yinghang_tr").style.display="none";
+			}else if(trade_type_val==1){
+				$("trade_type_desc").innerHTML = "<em>*</em>&#x5356;&#x5BB6;&#x6216;&#x627F;&#x63A5;&#x65B9;";
+				$("buyuserName").style.display="none";
+				$("yinghang_tr").style.display="block";
+			}else{
+				$("trade_type_desc").innerHTML = "<em>*</em>&#x9009;&#x62E9;&#x4F60;&#x7684;&#x4EA4;&#x6613;&#x8EAB;&#x4EFD;";
+				$("buyuserName").style.display="none";
+				$("yinghang_tr").style.display="none";
+			}
+		}
+		function get_amount() {
+			price = parseInt($("vkfprice").value);	 var deduct_new = new Array(2,2,2,2,2,2,2);
+			var minvalue = $var[min];
+			var deduct_news=$var[sale];
+			var deduct=2;
+			var el = document.getElementsByTagName('input');
+			var len = el.length;
+			for(var i=0; i<len; i++)
+			{
+				if((el[i].type=="radio") && (el[i].name=='deduct_type') && (el[i].checked==true))
+				{
+					deduct = el[i].value;
+				}
+				if((el[i].type=="radio") && (el[i].name=='mold') && (el[i].checked==true))
+				{
+					deduct_news = deduct_new[el[i].value-1];
+				}
+			}
+
+			if(deduct == 1) {
+				amount = price;
+				if(price > 100) {
+					gains = price - price * deduct_news / 100;
+				} else {
+					gains = price- minvalue;
+				}
+			} else if(deduct == 2) {
+				if(price > 100) {
+					amount = price + price * deduct_news / 100;
+				} else {
+					amount = price+minvalue;
+				}
+				gains = price;
+			} else {
+				if(price > 100) {
+					amount = price + price * deduct_news / 200;
+					gains = price - price * deduct_news / 200;
+				} else {
+					gains = price-minvalue / 2;
+					amount = price+minvalue / 2;
+				}
+			}
+			$("order_amount").innerHTML = amount+"&#x5143;";
+			$("sale_gains").innerHTML = gains+"&#x5143;";
+		}
+		</script></div>
+            <div class="clear"></div>
+            <div class="area">
+                <textarea name="message" id="message" class="pt" tabindex="1" rows="15" cols="130">$editor[value]</textarea>
+            </div>
+              <div class="mtm mbm pnpost jy_con_righsd">
+             <input type="hidden" id="formhash" name="formhash" value="{FORMHASH}" />
+              <button type="submit" class="newsubmit" id="newsubmit" value="true" name="newsubmit"> 
+              <span>&#x7533;&#x8BF7;&#x62C5;&#x4FDD;</span> 
+              </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      <!--/div-->
+</form>
+    </div>

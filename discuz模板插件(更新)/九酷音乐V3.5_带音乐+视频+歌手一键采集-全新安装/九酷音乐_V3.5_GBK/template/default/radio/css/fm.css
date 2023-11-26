@@ -1,0 +1,123 @@
+@charset "gb2312";
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,a,b,em,img,sub,sup,dl,dt,dd,ol,ul,li,form,input,button,label,textarea,table,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;}
+body{font:normal 400 12px/1.5 "Microsoft Yahei",Arial;color:#333; background:#e5e5e5;}
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:underline;color:#333;}
+h1,h2,h3,h4,h5,h6,strong{font-weight:800;font-size:100%;}
+label,input,select,textarea{vertical-align:middle; font-family:Arial,sans-serif;}
+img,button{background:none;border:none;}
+ol,ul,li{list-style:none;}
+*{outline:none}
+.clearfix:after{ content:""; display:block;visibility:hidden; height:0; clear:both;}
+.clearfix {zoom:1;}
+.fl{ float:left;}
+.fr{ float:right;}
+/**/
+#radiobg{overflow:hidden;margin:0;padding:0;top:0;left:0;position:absolute;_position:absolute;_top:expression(documentElement.scrollTop);z-index:1;}
+#radiobg img{position:relative;margin:0; border:0 none;}
+#headerbg{width:100%;height:59px;background:#000;opacity:0.45;filter:alpha(opacity=45);left:0;top:0;position:absolute;_position:absolute;_top:expression(documentElement.scrollTop);z-index:3;}
+#footerbg{width:100%;height:22px;background:#000;opacity:0.20;filter:alpha(opacity=20);left:0;bottom:0;position:fixed;_position:absolute;z-index:3;}
+#footertext{width:100%;height:22px;line-height:22px;left:0;bottom:0;position:fixed;_position:absolute;z-index:3;color:#fff;text-align:center; font-family:Arial;}
+#footertext a{color:#fff;margin:0 10px 0 10px;}
+#wrap{position:absolute;top:0;margin:0 auto; z-index:5;width:100%;}
+#header {height:59px;width:960px;margin:0 auto;top:0;border:0;position:relative;}
+.logoWrap{float:left;display:inline;padding:7px 0 0 0;}
+.logo{float:left;width:176px;height:42px;background:url(logo.png) 0 0 no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="logo.png" ,sizingMethod="crop"); outline:none;}
+.toptext{float:left;display:inline;width:190px;height:59px;line-height:59px; overflow:hidden;margin:0 0 0 130px;color:#f5f5f5; font-size:16px; font-weight:400;}
+.toptext img{}
+.toptext span{padding:0px 0 0 5px;display:inline;height:59px;line-height:59px; font-weight:400;_display:inline-block;}
+.topnav{position:absolute;display:inline;top:0;right:0;height:59px;line-height:59px;margin:0 0 0 0px;z-index:2;}
+.topnav a.tool {display:inline; float:left;width:93px;padding:0;text-align:center;color:#ccc;font-size:14px;position:relative;text-decoration:none;margin:0 1px 0 0;}
+.topnavbg1{width:93px;height:59px;background:#000;opacity:.1;filter:alpha(opacity=10);right:1px;top:0;position:absolute;_position:absolute;_top:expression(documentElement.scrollTop);z-index:1;}
+.topnavbg2{width:93px;height:59px;background:#000;opacity:.1;filter:alpha(opacity=10);right:95px;top:0;position:absolute;_position:absolute;_top:expression(documentElement.scrollTop);z-index:1;}
+.topnav a.tool:hover{background-color:#000;opacity:.4;filter:alpha(opacity=40);padding:0;margin:0 1px 0 0; color:#fff;}
+.topnav a.tool b {position:absolute;right:7px;top:27px;display:inline-block;width:5px;height:3px;font-size:0;background:url(triangle.gif) no-repeat;-webkit-transition:-webkit-transform .2s ease-in;-moz-transition:-moz-transform .2s ease-in;-o-transition:-o-transform .2s ease-in;transition:transform .2s ease-in;}
+.topnav a.active b {background:ddurl(triangle.gif) no-repeat 0 0; -moz-transform:rotate(180deg);-moz-transform-origin:50% 50%;-webkit-transform:rotate(180deg);-webkit-transform-origin:50% 50%; -o-transform:rotate(180deg); -o-transform-origin:50% 50%; transform:rotate(180deg);transform-origin:50% 50%;filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);top:27px\9;} 
+.topnav a.active {background-color:#000;font-weight:bold;}
+#fmDivWrap {position:relative;width:960px;margin:0 auto;}
+/*播放器*/
+#fmPlayer {position:relative;width:678px;margin:0 auto; padding-top:60px;}
+.fmPlayer-top{height:295px}
+.fmPlayer-bottom{height:130px}
+.fmPlayer-left, .fmPlayer-mid, .fmPlayer-right{position:absolute}
+.fmPlayer-left{}
+.fmPlayer-mid{left:144px;width:248px}
+.fmPlayer-right{left:410px;margin:0;width:290px}
+#backFm{position:absolute;top:187px;width:110px;height:110px;cursor:pointer;}
+#backFm-img{position:absolute;padding:4px;width:100px;height:100px;background:transparent url(fm.png) no-repeat 4px -406px;}
+#backFm-bg{position:absolute;width:108px;height:108px;background-color:#000;opacity:0.2;filter:alpha(opacity=20);}
+#backFm-overlay{position:absolute;padding:4px;width:100px;height:100px}
+#backFm-overlay-bg{position:absolute;width:100px;height:100px;background-color:#fff;opacity:0.6;filter:alpha(opacity=60);}
+#backFm-overlay-text{position:absolute;display:block;width:100px;height:100px;color:#333;text-align:center;font-size:16px;line-height:100px}
+#jq-tooltip {background:#fff;padding:2px 6px 2px 6px; color:#666; line-height:27px; width:130px; height:24px; line-height:24px; overflow:hidden; position:absolute; z-index:1999; bottom:-32px; left:0; border:1px solid #aaa;opacity:0.6;filter:alpha(opacity=60);}
+#fmAlbum{margin:0 auto;width:248px;height:294px}
+#fmAlbum-bg{width:248px;height:293px;border:1px solid #CCC5BF;background-color:#fff;opacity:0.65;-moz-opacity:0.65;filter:alpha(opacity=65);}
+#albumPicWrap{position:absolute;top:1px;left:1px}
+#albumPic{margin:4px 4px 0 4px;width:240px;height:240px;background:url(fm.png) no-repeat 0 -0px;cursor:pointer;_background:transparent url(fm.png) no-repeat -132px -0px; display:block; text-align:center;}
+#albumPic img{ display:block;}
+.lisBox{position:absolute;top:244px;margin:0 5px 4px;width:240px;height:45px;background-color:#fff}
+.fmPlayer-volume{overflow:hidden; float:left;position:relative; margin:13px 0 0 10px; display:inline;}
+.fmPlayer-volume li{display:inline;float: left;}
+.fmPlayer-volume a{display:block;overflow:hidden;text-indent:-9999px;}
+.fmPlayer-volume .jp-mute,.fmPlayer-volume .jp-unmute{ width:20px;height:20px;}
+.fmPlayer-volume .jp-mute{background:url(fm.png) 0 -250px no-repeat;}
+.fmPlayer-volume .jp-unmute{background:url(fm.png) -21px -250px  no-repeat;}
+.fmPlayer-volume .volume-bar-wrap{ margin:8px 0 0 5px;}
+.fmPlayer-volume .jp-volume-bar{width:70px;height:4px;cursor:pointer; background:#ccc;display:block; overflow:hidden;}
+.fmPlayer-volume .jp-volume-bar-value{background:#999;width:0px;height:4px; cursor:pointer;overflow:hidden;}
+.playing-time{ float:left;font-family:Arial; color:#999;margin:13px 0 0 15px; display:inline;}
+.downMusic{ float:right; width:20px; height:20px;text-indent:-9999px;background:url(fm.png) -42px -250px no-repeat; display:inline; margin:13px 10px 0 0;}
+.playing-song{font:normal 400 26px/40px "Microsoft Yahei"; height:40px; overflow:hidden;}
+.playing-singer{font:normal 400 20px/24px "Microsoft Yahei"; height:24px; overflow:hidden;}
+.playing-album{font:normal 400 14px/22px "Microsoft Yahei"; height:22px; overflow:hidden; text-indent:-5px;}
+.lrcBox{ margin-top:15px;}
+#lyric{}
+#lyric p {height:26px; line-height:26px;overflow:hidden; font-size:14px;}
+#lyric p a,#lyric p a:hover{ color:#fff; text-decoration:none;}
+#lyric #LR1 a,#lyric #LR1 a:hover{ color:#666;}
+#lyric #LR2 a,#lyric #LR2 a:hover{ color:#444;}
+#lyric #LR3 a,#lyric #LR3 a:hover{ color:#222;}
+#lyric #LR4,#lyric #LR4 a,#lyric #LR4:hover{ font-size:16px; line-height:26px; height:26px; font-weight:600; color:#000;}
+#lyric #LR5 a,#lyric #LR5 a:hover{ color:#222;}
+#lyric #LR6 a,#lyric #LR6 a:hover{ color:#444;}
+#lyric #LR7 a,#lyric #LR7 a:hover{ color:#666;}
+#txtword{ width:280px; height:190px; overflow-x:hidden; overflow-y:auto;}
+.jp-controls{overflow:hidden; width:250px; height:50px; float:right; margin:15px 0 0;}
+.jp-controls li{display:inline;float:left;}
+.jp-controls a{display:block;overflow:hidden;text-indent:-9999px; margin-left:10px;}
+.jp-love,.jp-unlove,.jp-play,.jp-pause,.jp-next,.jp-loveed{width:50px;height:50px; background:url(fm.png) -999em -999em no-repeat;}
+.jp-love{ background-position:-66px -291px;}
+.jp-unlove{ background-position:-133px -291px;}
+.jp-play{ background-position:-265px -291px;}
+.jp-pause{ background-position:0 -291px;}
+.jp-next{ background-position:-199px -291px;}
+.jp-loveed{ background-position:-331px -291px;}
+.jp-love:hover{ background-position:-66px -341px;}
+.jp-unlove:hover{ background-position:-133px -341px;}
+.jp-play:hover{background-position:-265px -341px;}
+.jp-pause:hover{background-position:0 -341px;}
+.jp-next:hover{ background-position:-199px -341px;}
+.jp-loveed:hover{ background-position:-331px -341px;}
+.fmShare{margin:25px 0 0;height:45px;vertical-align:middle}
+/*频道列表*/
+#channelDiv{ display:none;width:960px;margin:30px auto 0;}
+.channel-cate{float:left;margin:0 15px;display:inline}
+.channel-cate-name{width:160px;text-align:center;margin:0;font-size:14px;color:#fff;}
+.channel-btn{position:relative;width:160px;height:40px;margin:10px 0 20px}
+.channel-btn-bg{position:absolute;width:160px;height:40px;background-color:#000;display:block;opacity:0.3;filter:alpha(opacity=30);}
+.channel-btn-inner{position:absolute}
+.channel-btn-icon{position:absolute;width:25px;height:25px;left:10px;top:8px}
+.channel-btn-inner a{position:absolute;color:#eee;font-size:20px;text-decoration:none;line-height:40px;width:160px;height:40px;display:block;text-align:center;}
+.channel-btn-current .channel-btn-inner a{color:#FFF}
+.channel-btn-hover .channel-btn-inner a{color:#FFF;}
+.channel-btn-hover .channel-btn-bg{opacity:0.65;filter:alpha(opacity=65);}
+.channel-btn-current .channel-btn-icon{background:transparent url(channel-current.gif) no-repeat center center;}
+.channel-btn-current .channel-btn-bg{opacity:0.65;filter:alpha(opacity=65);}
+/*皮肤列表*/
+#skinDiv{width:222px; position:absolute; right:0;top:20px; display:none;}
+.skinList{ width:222px;}
+.skinList li{ width:101px; height:65px; float:left; margin:10px 0 0 10px; display:inline; position:relative;}
+.skinList li a{ width:95px; height:58px; padding:3px; background:#fff; display:block;opacity:0.8;filter:alpha(opacity=80);}
+.skinList li img{ width:95px; height:58px; display:block;}
+.skinList .skinSelect a{ background:#fff;opacity:1;filter:alpha(opacity=100);}
+#bgSelectFlag{position:absolute;width:22px;height:22px;right:8px;bottom:8px;float:left;background:url(right.png) repeat-x 0 0; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="right.png" ,sizingMethod="crop");}

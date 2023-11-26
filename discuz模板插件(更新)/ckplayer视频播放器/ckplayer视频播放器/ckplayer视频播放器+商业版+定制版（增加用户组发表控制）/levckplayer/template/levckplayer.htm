@@ -1,0 +1,631 @@
+{if $_GET[ifr]}
+{template common/header_common}
+{else}
+{template common/header}
+{/if}
+{template levckplayer:js}
+
+<link rel="stylesheet" href="{$PLSTATIC}css/global.css" type="text/css">
+<link rel="stylesheet" href="{$PLSTATIC}css/setting.css" type="text/css">
+<title>{$vd[title]}</title>
+
+<div id="threadlevckplayerbox0" style="width:100%;margin:auto;">
+{if !$_GET[ifr]}
+<div id="pt" class="bm cl">
+    <div class="z">
+        <a class="nvhm" href="./"></a>
+        <em>›</em><a href="./">{$lev_lang[dindex]}</a>
+        <em>›</em><a href="{$PLURL}:levckplayer">{$lev_lang[conte]}</a>
+        <em>›</em><a href="{$PLURL}:levckplayer&k={$vdtp}">{$vdtypes[$vdtp][1]}</a>
+        <em>›</em>{$vd[title]}</div>
+    </div>
+{/if}
+<style type="text/css">
+#playerbox{position:relative;z-index: 100;width:100%;min-height:100px;}
+.t_f a {text-decoration: none;}
+</style>
+
+<style>
+#wp .wp, .wp, .play-window {width:{eval echo 960 - $webv}px;}
+.play-window {margin:auto;overflow:hidden;height:{eval echo $h+41+44}px}
+.playerbox {height:{eval echo $h+41}px;position: relative;}
+.danmu-container {width:{eval echo 620 - $webv}px;}
+.danmu-bar-input-text {width:{eval echo 417 - $webv}px;}
+#playerbox{width:{eval echo 620 - $webv}px;height:{$h}px;background:#000;}
+.tanmubox {width:{eval echo 620 - $webv}px;height:145px;position:absolute;top:0;left:0;z-index:99999;display:none;color:#fff;font-size:16px;overflow:hidden;padding-top:5px;}
+.tanmubox marquee span {padding-right:30px;}
+.video_nav_close .open_bar {font-size:12px;height:316px;}
+.video_nav_close .open_bar,
+.play-window .relate_right {height:{eval echo $h+41}px;}
+.play-window .relate_right .related-box--otherV {height:{eval echo $h-6}px;overflow: hidden;{if count($xgvd) >5}overflow-y: scroll;{/if}}
+.play-window .relate_right .scroll_wrap{position:relative;width:100%;-webkit-overflow-scrolling:touch;zoom:1;scrollbar-base-color:#1B1B1B;scrollbar-arrow-color:#000;scrollbar-face-color:#4C4C4C;scrollbar-3dlight-color:#4C4C4C;scrollbar-highlight-color:#4C4C4C;scrollbar-shadow-color:#4C4C4C;scrollbar-darkshadow-color:#4C4C4C;scrollbar-track-color:#3A3A3A}
+.play-window .relate_right .scroll_wrap::-webkit-scrollbar{width:12px;border-radius:4px;background:#3a3a3a}
+.play-window .relate_right .scroll_wrap::-webkit-scrollbar-track-piece{background:transparent}
+.play-window .relate_right .scroll_wrap::-webkit-scrollbar-button{display:none}
+.play-window .relate_right .scroll_wrap::-webkit-scrollbar-thumb{background:#666;border-radius:5px}
+
+#diy_item a {
+    color: #777;
+    cursor: pointer;
+}
+#diy_item a:hover {
+    color: #ff8e08;
+    color: #999;
+}
+.relate_right .J_nav h3:hover.selectedhor {
+    border-bottom: 2px solid #ff9600;
+    color: #999;
+    cursor: pointer;
+}
+.mod_player_title {
+    clear: both;
+    color: #2a2a2a;
+    display: block;
+    font-family: 'hiragino sans gb,microsoft yahei';
+    font-size: 18px;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+    max-width: 800px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:10px 0;
+}
+.tanmubox .string {
+        width:300px;
+        height: 30px;
+        position: absolute;
+        overflow: hidden;
+        color:#FFF;
+        font-size: 20px;
+        line-height: 30px;
+        cursor: pointer;
+        white-space:nowrap;
+        display:block;
+    }
+.danmu-bar .danmu-bar-input.stopspeak, .danmu-bar .danmu-bar-input:hover {background:#333;}
+
+#swf-logo {position:absolute;width:100%;z-index:9999;overflow:hidden;text-align:center;height:78px;color:#fff;margin-top:-{eval echo intval($h/2)+56}px;}
+#swf-logo p {padding-top:5px;}
+</style>
+<div class="play-window video_nav_close wp">
+
+{if $vd[title]}
+	<style>.play-window .relate_right, .video_nav_close .open_bar {top:44px;}</style>
+	<h1 id="h1_title" title="{$vd[title]}" class="mod_player_title">{$vd[title]}</h1>
+{/if}
+
+<div class="playerbox">
+<div id="playerbox"></div>
+
+<div id="tanmubox" class=tanmubox>
+</div>
+
+<div style="position: relative; top: 0px; left: 0px;" class="danmu-container">
+<div class="danmu-bar">
+<a title="{$lev_lang[tanmu1]}" class="danmu-bar-btn danmu-bar-enable" onclick="danmubarenable(1)" href="javascript:;" style="display: none;">&nbsp;</a> 
+<a title="{$lev_lang[tanmu2]}" class="danmu-bar-btn danmu-bar-disable" onclick="danmubarenable()" href="javascript:;">&nbsp;</a> 
+<a title="{$lev_lang[tanmu3]}" class="danmu-bar-btn danmu-bar-setting" href="javascript:;" onclick="showMenu({'ctrlid':'c1'})">&nbsp;</a> 
+<span class="danmu-bar-input"> <span class="danmu-bar-input-wrapper"><input maxlength="199" class="danmu-bar-input-text" id="speaks" disabled></span> 
+<a class="danmu-bar-input-submit" onclick="tanmu('{$vd[id]}', this)" href="javascript:;">{$lev_lang[tanmu4]}<i></i></a>
+</span></div><span style="position: absolute; z-index: 301; left: 251px; top: 352.4px; display: none;" id="c1_menu" initialized="true">
+<input type="hidden" onchange="updatecolorpreview('c1')" name="info[color]" value="{$ono[2]}" style="float:left;" class="txt" id="c1_v"> 
+<iframe width="210" height="148" frameborder="0" scrolling="no" src="" name="c1_frame"></iframe></span>
+</div>
+
+</div>
+<div id="right_tab" class="relate_right">
+<div id="diy_item" class="J_nav">
+<h3 class="selected">{$lev_lang[rtab0]}</h3>
+{if $_PLG[rtab1]}<h3 class="selectedhor"><a href="{$_PLG[rtab1]}" target=_blank>{$lev_lang[rtab1]}</a></h3>{/if}
+{if $_PLG[rtab2]}<h3 class="selectedhor"><a href="{$_PLG[rtab2]}" target=_blank>{$lev_lang[rtab2]}</a></h3>{/if}
+{if $_PLG[rtab3]}<h3 class="selectedhor"><a href="{$_PLG[rtab3]}" target=_blank>{$lev_lang[rtab3]}<em class="hot-video"></em></a></h3>{/if}
+</div>
+<div class="J_content">
+<div id="relateRight" class="related-box--otherV scroll_wrap">
+<div id="videoRelate" class="otherV-group">
+
+{loop $xgvd $r}
+<div class="otherV-list {if ($r[id] && $r[id] ==$vdid) || ($r[url] && $r[url] ==$_GET[url])}onlive{/if}">
+<div class="vdw-v-link J_mask">
+<a href="{$PLURL}:{$PLNAME}&ifr={$_GET[ifr]}&vdid={$r[id]}&webw={$_GET[webw]}&url={$r[url]}&title={$r[title]}&sectime={$r[sectime]}&k=$vdtp&play1=1"><img alt="{$r[title]}" src="{$r[imgsrc]}"></a>
+<span class="time">{$r[sectime]}</span> 
+<a href="{$PLURL}:{$PLNAME}&ifr={$_GET[ifr]}&vdid={$r[id]}&webw={$_GET[webw]}&url={$r[url]}&title={$r[title]}&sectime={$r[sectime]}&k=$vdtp&play1=1"></a>
+<a class="v-mask" href="{$PLURL}:{$PLNAME}&vdid={$r[id]}&ifr={$_GET[ifr]}&webw={$_GET[webw]}&url={$r[url]}&title={$r[title]}&sectime={$r[sectime]}&k=$vdtp&play1=1"></a></div>
+<div class="vdw-info--vlist">
+<a class="title" href="{$PLURL}:{$PLNAME}&ifr={$_GET[ifr]}&vdid={$r[id]}&webw={$_GET[webw]}&url={$r[url]}&title={$r[title]}&sectime={$r[sectime]}&k=$vdtp&play1=1">{$r[title]}</a>
+<div class="number"><span class="icon-play"><i></i>{$r[hitnum]}</span> <span class="icon-comment"><i></i>{$r[cmnum]}</span></div>
+</div>
+</div>
+{/loop}
+
+</div>
+</div>
+
+
+
+
+
+<!-- no use -->
+<div id="relateRight2" class="related-box--otherV hide">
+<!--<div class="play-author-info"><img
+	style="width: 50px; height: 50px" class="play-author-img"
+	src="">
+<p class="play-author-name">sunny</p>
+<blockquote class="play-author-video">共1328 <em></em> 个视频</blockquote>
+<a data-uid="1331596571" data-js="subscribe" class="vdw_dingyue _play_dingyue diy_uid" href="javascript:;"><i></i>订阅</a>
+</div>-->
+<div class="otherV-group">
+<div class="otherV-list  ">
+<div class="vdw-v-link J_mask"><a data-ckstat="play_user_relate0" data-dwclick="dwclick" href=""><img alt="" src=""></a>
+<span class="time"> 02:30</span> <a data-ckstat="play_user_relate0" data-dwclick="dwclick" class="vdw-play-icon-sml" href=""></a><a class="v-mask" href=""></a></div>
+<div class="vdw-info--vlist"><a data-ckstat="play_user_relate0" data-dwclick="dwclick" class="title" href="">1231232222</a>
+<div class="number"><span class="icon-play"><i></i>1,932</span> <span class="icon-comment"><i></i>0</span></div>
+<!--  <span class="date">2016-05-03 11:19</span> --></div>
+</div>
+
+</div>
+</div>
+<!-- 相关直播{-->
+<div id="relateRight3" class="related-box--otherV hide"
+	style="display: none;"></div>
+<!-- 相关直播}--> <!-- 天天福利{-->
+<div id="relateRight4" class="related-box--otherV hide">
+<div class="otherV-group">
+<div class="otherV-list">
+<div class="vdw-v-link J_mask"><a data-ckstat="play_video_fuli0" data-dwclick="dwclick" href=""><img alt="" src=""></a>
+<span class="time">06:29</span> <a data-ckstat="play_video_fuli0" data-dwclick="dwclick" class="vdw-play-icon-sml" href=""></a>
+<a data-ckstat="play_video_fuli0" data-dwclick="dwclick" class="v-mask" href=""></a></div>
+<div class="vdw-info--vlist"><a data-ckstat="play_video_fuli0" data-dwclick="dwclick" class="title" href="">123123</a>
+<div class="number"><span class="icon-play"><i></i>990</span> <span class="icon-comment"><i></i>2</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 天天福利}-->
+
+<!-- no use end -->
+
+
+
+
+
+
+</div>
+
+<div class="relate_switch" id="bar_btn_open" onclick="rightcol(1)"><i></i></div>
+
+</div>
+<div class="open_bar" id="bar_btn_close" onclick="rightcol()"> {$lev_lang[vdlistbtn]}<i></i></div>
+</div>
+
+<script type="text/javascript" src="{$PLSTATIC}ckplayer67/js/offlights.js" charset="utf-8"></script>
+<script type="text/javascript" src="{$PLSTATIC}ckplayer67/ckplayer/ckplayer.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+
+function ckcpt() {
+    var cpt = '';
+    cpt += 'right.swf,2,1,0,0,2,0|'; //右边开关灯，调整，分享按钮的插件
+    {if $_PLG[isshare]}cpt += 'share.swf,1,1,-180,-100,3,0|'; //分享插件{/if}
+    cpt += 'adjustment.swf,1,1,-180,-100,3,0|'; //调整大小和颜色的插件
+    return cpt;
+}
+function ckstyle() { //定义总的风格
+    var ck = {
+        cpath: 'source/plugin/levckplayer/statics/ckplayer67/ckplayer/style.swf',
+        language: '',
+        flashvars: '',
+        //                                  1 1 1 1   1 1 1 1 1 1 2 2 2  2 2 2 2 2    2 2 3 3 3 3 3 3 3 3 3   3 4  4 4 4
+		//	    1 2 3 4 5 6 7           8 9 0 1 2 3   4 5 6 7 8 9 0 1 2  3 4 5 6 7    8 9 0 1 2 3 4 5 6 7 8   9 0  1 2 3
+        setup: '1,1,1,1,1,2,{$_PLG[s7]},1,2,0,0,1,200,0,2,1,0,1,1,1,2,10,3,0,1,2,3000,0,0,0,0,1,1,1,1,1,1,250,0,90,0,0,0',
+        pm_bg: '0x000000,100,230,180',
+        mylogo: '{$_PLG[mylogo]}',//logo.swf
+        pm_mylogo: '1,1,-100,-55',
+        logo: '{$_PLG[logo]}',
+        pm_logo: '2,0,-100,20',
+        control_rel: 'related.swf,source/plugin/levckplayer/statics/ckplayer67/ckplayer/related.xml,0',
+        control_pv: 'Preview.swf,105,2000',
+        pm_repc: '',
+        pm_spac: '|',
+        pm_fpac: 'file->f',
+        pm_advtime: '2,0,-110,10,0,300,0',
+        pm_advstatus: '1,2,2,-200,-40',
+        pm_advjp: '1,1,2,2,-100,-40',
+        pm_padvc: '2,0,-10,-10',
+        pm_advms: '2,2,-46,-56',
+        pm_zip: '1,1,-20,-8,1,0,0',
+        //pm_advmarquee: '1,2,50,-60,50,18,0,0x000000,50,0,20,1,15,2000',
+		pm_advmarquee: '1,2,50,-60,50,20,0,0x000000,50,0,20,1,30,2000',
+		pm_glowfilter:'0,0x01485d, 100, 6, 3, 10, 1, 0, 0',
+        advmarquee: escape(''),//function ckmarqueeadv(){return '{$advmar}';}
+		mainfuntion:'',
+		flashplayer:'',
+		calljs:'ckplayer_status,ckadjump,playerstop,ckmarqueeadv',
+        myweb: escape(''),
+        cpt_lights: '{$_PLG[lights]}',
+        cpt_share: '{if $_PLG[isshare]}source/plugin/levckplayer/statics/ckplayer67/ckplayer/share.xml{/if}',
+        cpt_list: ckcpt()
+    }
+    return ck;
+}
+function ckmarqueeadv(){return '{$advmar}';}
+</script>
+
+<script type="text/javascript">
+
+var flashvars={
+{if $s==4}
+	f:'{$_G[siteurl]}{$PLSTATIC}ckplayer67/m3u8-v2.0/m3u8.swf',//视频地址
+	a:encodeURIComponent('{$videourl}'),//调用时的参数，只有当s>0的时候有效
+{else}
+	f:'{$videourl}',
+{/if}
+	s:'{$s}',//调用方式，0=普通方法（f=视频地址），1=网址形式,2=xml形式，3=swf形式(s>0时f=网址，配合a来完成对地址的组装)
+	c:'0',//是否读取文本配置,0不是，1是
+//	x:'',//调用配置文件路径，只有在c=1时使用。默认为空调用的是ckplayer.xml
+	i:'{eval echo $video[img] ? $video[img] : $_PLG[i]}',//初始图片地址
+	d:'{$_PLG[d]}',//暂停时播放的广告，swf/图片,多个用竖线隔开，图片要加链接地址，没有的时候留空就行
+	u:'{$_PLG[u]}',//暂停时如果是图片的话，加个链接地址
+	l:'{$_PLG[l]}',//前置广告，swf/图片/视频，多个用竖线隔开，图片和视频要加链接地址
+	r:'{$_PLG[r]}',//前置广告的链接地址，多个用竖线隔开，没有的留空
+	t:'{$_PLG[t]}',//视频开始前播放swf/图片时的时间，多个用竖线隔开
+//	y:'',//这里是使用网址形式调用广告地址时使用，前提是要设置l的值为空
+	z:'{$_PLG[z]}',//缓冲广告，只能放一个，swf格式
+	e:'{$_PLG[e]}',//视频结束后的动作，0是调用js函数，1是循环播放，2是暂停播放并且不调用广告，3是调用视频推荐列表的插件，4是清除视频流并调用js功能和1差不多，5是暂停播放并且调用暂停广告
+	v:'{$_PLG[v]}',//默认音量，0-100之间
+	p:'{$_PLG[p]}',//视频默认0是暂停，1是播放，2是不加载视频
+	h:'2',//播放http视频流时采用何种拖动方法，=0不使用任意拖动，=1是使用按关键帧，=2是按时间点，=3是自动判断按什么(如果视频格式是.mp4就按关键帧，.flv就按关键时间)，=4也是自动判断(只要包含字符mp4就按mp4来，只要包含字符flv就按flv来)
+//	q:'',//视频流拖动时参考函数，默认是start
+	m:'{$_PLG[m]}',//让该参数为一个链接地址时，单击播放器将跳转到该地址
+	o:'{$video[seconds]}',//当p=2时，可以设置视频的时间，单位，秒
+//	w:'',//当p=2时，可以设置视频的总字节数
+//	g:'',//视频直接g秒开始播放
+//	j:'300',//跳过片尾功能，j>0则从播放多少时间后跳到结束，<0则总总时间-该值的绝对值时跳到结束
+	k:'{$_PLG[k]}',//提示点时间，如 30|60鼠标经过进度栏30秒，60秒会提示n指定的相应的文字
+	n:'{$_PLG[n]}',//提示点文字，跟k配合使用，如 提示点1|提示点2
+	wh:'{$_PLG[wh]}',//宽高比，可以自己定义视频的宽高或宽高比如：wh:'4:3',或wh:'1080:720'
+	loaded:'loadedHandler',//当播放器加载完成后发送该js函数loaded
+	//调用播放器的所有参数列表结束
+	//以下为自定义的播放器参数用来在插件里引用的
+    my_title:encodeURIComponent(document.title),
+   // my_pic:'',
+	my_url:encodeURIComponent(window.location.href),//本页面地址
+	lv:'0'//是否是直播流，=1则锁定进度栏
+	//调用自定义播放器参数结束
+	};
+var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};//这里定义播放器的其它参数如背景色（跟flashvars中的b不同），是否支持全屏，是否支持交互
+
+var video=['{$videourl}->video/mp4'];
+
+{if $_PLG[html5] && $_PLG[flash] ==2 && lev_class::html5ext($videourl) || checkmobile()}
+var isckchtml5 = true;
+{else}
+var isckchtml5 = false;
+{/if}
+
+CKobject.embed('{$PLSTATIC}ckplayer67/ckplayer/ckplayer.swf','playerbox','ckplayer_playerbox', '{$w}', '{$h}', isckchtml5, flashvars, video, params);
+
+//开关灯
+var box = new LightBox('playerbox');
+function closelights(){//关灯
+	box.Show();
+	//CKobject._K_('playerbox').style.width='940px';
+	//CKobject._K_('playerbox').style.height='550px';
+	//CKobject.getObjectById('ckplayer_playerbox').width=940;
+	//CKobject.getObjectById('ckplayer_playerbox').height=550;
+}
+function openlights(){//开灯
+	box.Close();
+	//CKobject._K_('playerbox').style.width='600px';
+	///CKobject._K_('playerbox').style.height='400px';
+	///CKobject.getObjectById('ckplayer_playerbox').width=600;
+	//CKobject.getObjectById('ckplayer_playerbox').height=400;
+}
+
+function loadedHandler(){
+	{if $vd[isvip]}viptime();{/if}
+
+	gettoaltime();
+	addListener();
+};
+
+var __doint = 3;
+function gettoaltime() {
+	var _arr = CKobject.getObjectById('ckplayer_playerbox').getStatus();
+	if (_arr['byte'] && _arr['totalBytes'] && _arr['speed']) {
+		var _byte = parseInt(parseInt(_arr['byte']) / 1024);
+		var _totalb = parseInt(parseInt(_arr['totalBytes']) / 1024);
+		var _speed = parseInt(parseInt(_arr['speed']) / 1024) *4;
+		var _v_load = parseInt(_byte/_totalb) *10000;
+		__doint += levrandom(1, 3);
+		if (__doint >99) __doint = 99;
+		if (_arr['totalTime'] >=0) __doint = 100;
+		jQuery('#swf-logo p').html(_speed +'{$lev_lang[vdloadsec]}'+ __doint +'%');
+	}
+	if (_arr['totalTime']) {
+		window.setTimeout(function(){jQuery('#swf-logo').remove();}, 100);
+		var strtime = formatSeconds(_arr['totalTime']);
+		parent.jQuery('#sectime').val(strtime);
+	}else{
+		window.setTimeout("gettoaltime()", 1000);
+	}
+	return _arr['totalTime'];
+}
+function formatSeconds(value) {
+    var theTime = parseInt(value);// 秒
+    var theTime1 = 0;// 分
+    var theTime2 = 0;// 小时
+    if(theTime > 60) {
+        theTime1 = parseInt(theTime/60);
+        theTime = parseInt(theTime%60);
+        if(theTime1 > 60) {
+            theTime2 = parseInt(theTime1/60);
+            theTime1 = parseInt(theTime1%60);
+        }
+    }
+    theTime = parseInt(theTime);
+    theTime = theTime <10 ? "0"+ theTime : theTime;
+    theTime1 = parseInt(theTime1);
+    theTime1 = theTime1 <10 ? "0"+ theTime1 : theTime1;
+    theTime2 = parseInt(theTime2);
+    theTime2 = theTime2 <10 ? "0"+ theTime2 : theTime2;
+    return theTime2 +':'+ theTime1 +':'+ theTime;
+}
+
+
+function addListener(){
+	if(CKobject.getObjectById('ckplayer_playerbox').getType()){//说明使用html5播放器
+		CKobject.getObjectById('ckplayer_playerbox').addListener('play',playHandler);
+	}else {
+		CKobject.getObjectById('ckplayer_playerbox').addListener('play','playHandler');
+	}
+}
+function playHandler(){
+	var _arr = CKobject.getObjectById('ckplayer_playerbox').getStatus();
+	if (!isNaN(parseInt(_arr['time']))) {
+		removeListener();
+	}else {
+		setswflogo();
+	}
+}
+function removeListener(){//删除监听事件
+	if(CKobject.getObjectById('ckplayer_playerbox').getType()){//说明使用html5播放器
+		CKobject.getObjectById('ckplayer_playerbox').removeListener('play',playHandler);
+	}else {
+		CKobject.getObjectById('ckplayer_playerbox').removeListener('play','playHandler');
+	}
+}
+
+function viptime(artwin) {
+{if $vd[isvip] && $vip[viplv] <$vd[isvip]}
+	var _arr = CKobject.getObjectById('ckplayer_playerbox').getStatus();
+	if (_arr['time'] >300) {
+		setswflogo();
+		CKobject.getObjectById('ckplayer_playerbox').videoClear();
+		art.dialog({id:'isvipvd', title:false, content:'Lv.{$vd[isvip]} {$lev_lang[isvipvd]}'});
+		jQuery('#ckplayer_playerbox').attr('src', '');
+	}else {
+		window.setTimeout("viptime(1)", 1000);
+	}
+	if (!artwin) {
+		art.dialog({id:'isvipvd', title:false, content:'Lv.{$vd[isvip]} {$lev_lang[isvipvd]}'});
+	}
+{/if}
+}
+
+function setswflogo() {
+{if $_PLG[logo55] && !checkmobile()}
+	jQuery('#playerbox').append('<div id=swf-logo><img height=55 src="{$_PLG[logo55]}"><p></p></div>');
+{/if}
+}
+</script>
+
+{if $_G[uid] <1}
+<script type="text/javascript">
+function ckadjump() {
+	art.dialog.tips('{$lev_lang[noad]}', 3);
+}
+</script>
+{else}
+<script type="text/javascript">
+function ckadjump() {
+{if $vip}
+	CKobject.getObjectById('ckplayer_playerbox').frontAdUnload();
+{else}
+	art.dialog.tips('{$lev_lang[vipad]}');
+{/if}
+}
+</script>
+{/if}
+
+<script>
+
+{if (960 -$webv)<800}rightcol(1);{/if}
+function rightcol(type) {
+	jQuery('#right_tab').toggle(100, function(){
+		if (type) {
+			jQuery('#playerbox, .danmu-container, #tanmubox').animate({'width':'{eval echo 932 - $webv}px'}, 200, function(){
+				jQuery('#bar_btn_open').hide();
+				jQuery('#bar_btn_close').show();
+			});
+			jQuery('input.danmu-bar-input-text').animate({'width':'{eval echo 750 - $webv}px'}, 100);
+		}else {
+			jQuery('#playerbox, .danmu-container, #tanmubox').animate({'width':'{eval echo 620 - $webv}px'}, 100, function(){
+				jQuery('#bar_btn_close').hide();
+				jQuery('#bar_btn_open').show();
+			});
+			jQuery('input.danmu-bar-input-text').animate({'width':'{eval echo 410 - $webv}px'}, 100);
+		}
+	});
+}
+
+
+function danmubarenable(type) {
+	if (type) {
+		jQuery('.danmu-bar-enable').hide();
+		jQuery('.danmu-bar-disable').show();
+		jQuery('#tanmubox').hide();
+		if (__ispeaks) window.clearInterval(__ispeaks);
+		jQuery('input.danmu-bar-input-text').attr('disabled', true);
+	}else{
+		jQuery('.danmu-bar-enable').show();
+		jQuery('.danmu-bar-disable').hide();
+		jQuery('#tanmubox').show();
+		getspeaks();
+		jQuery('input.danmu-bar-input-text').removeAttr('disabled');
+	}
+}
+
+var __tanmued = [];
+var __ispeaks = null;
+
+function tanmu(videoid, obj) {
+	if (jQuery(obj).find('i').html()) return '';
+	var speak = jQuery('#speaks').val();
+	if (speak) {
+		jQuery('#speaks').val('');
+		jQuery('span.danmu-bar-input').addClass('stopspeak');
+		stopspeak('{$_PLG[wttime]}', obj);
+		jQuery.get('{$lm}_tanmu', {videoid:videoid, speak:speak}, function(data){
+			if (parseInt(data) >0) {
+				dotanmu(speak);
+			}else {
+				art.dialog.tips(data);
+			}
+		});
+	}else {
+		art.dialog.tips('{$lev_lang[nospeak]}');
+		jQuery('#speaks').focus();
+	}
+}
+function stopspeak(wttime, obj) {
+	var wttime = parseInt(wttime);
+	if (wttime >=1) {
+		jQuery(obj).find('i').html('('+ wttime +')');
+		window.setTimeout(function(){stopspeak(wttime-1, obj)}, 1200);
+	}else {
+		jQuery(obj).find('i').html('');
+		jQuery('span.danmu-bar-input').removeClass('stopspeak');
+	}
+}
+
+function getspeaks() {
+	jQuery.get('{$lm}_tanmu._data.{$vd[id]}', {}, function(data){
+		dotanmus(data);
+		if (__ispeaks) window.clearInterval(__ispeaks);
+	});
+}
+	function dotanmus(data) {
+		if (data && data.indexOf('<>') >0 && data.indexOf('()') >0) {
+			var _arr = data.split('<>');
+			var _len = _arr.length;
+			var _is = false;
+			for (i=0; i<_len; i++) {
+				if (_arr[i]) {
+					var _ida = _arr[i].split('()');
+					if (!__tanmued[_ida[1]]) {
+						dotanmu(_ida[0], data);
+						__tanmued[_ida[1]]= _arr[i];
+						_is = true;
+						break;
+					}
+				}
+			}
+			if (!_is && !__ispeaks) {
+				getspeaks();
+				__ispeaks = window.setInterval(function(){getspeaks()}, 1000*5);
+			}
+		}
+	}
+	var __random = 6;
+	function dotanmu(text, data) {
+        var pageW=parseInt(jQuery('#tanmubox').width());
+        var pageH=24;//parseInt(jQuery('#tanmubox').height());
+        var boxDom=jQuery("#tanmubox");
+        var btnDom=jQuery(".danmu-bar-input-submit");
+        var Top,Right;
+        var width;
+        width=pageW;//alert(pageW + '--' + pageH);
+        var colorArr = ["#cfaf12","#12af01","#981234","#adefsa","#db6be4","#f5264c","#d34a74"];
+        var creSpan = jQuery("<span class='string' id='"+ Math.random() +"'></span>");
+        var text = text ? text : jQuery("#speaks").val();
+        creSpan.text(text);
+        var random = levrandom(1, 6) -1;
+        if (random ==__random) {
+            switch (random) {
+            case 0:
+            	random = levrandom(2, 5);
+            	break;
+            case 1:
+            	random = levrandom(3, 5);
+            	break;
+            case 2:
+            	random = levrandom(4, 5);
+            	break;
+            case 3:
+            	random = levrandom(1, 2) -1;
+            	break;
+            case 4:
+            	random = levrandom(1, 3) -1;
+            	break;
+            case 5:
+            	random = levrandom(1, 4) -1;
+            	break;
+            }
+        }
+        __random = random;
+        Top=parseInt(pageH*random);
+        var num=parseInt(colorArr.length*(Math.random()));
+        creSpan.css({"top":Top,"right":-300,"color":getRandomColor()});
+        boxDom.append(creSpan);
+        var spanDom=jQuery("#tanmubox>span:last-child");
+        spanDom.stop().animate({"right":pageW+300},6000,"linear",function(){
+                    jQuery(this).remove();
+        });
+
+        function getRandomColor(){
+            return '#' + (function(h){
+                return new Array(7 - h.length).join("0") + h
+            })((Math.random() * 0x1000000 << 0).toString(16));
+        }
+        if (data) {
+            window.setTimeout(function(){dotanmus(data)}, 290);
+        }
+   }
+
+    document.onkeydown=function(e){
+        if(e.keyCode == 13){
+        	tanmu('{$vd[id]}', '.danmu-bar-input-submit');
+        }
+    }
+</script>
+
+</div>
+{if $_GET[ifr]}
+
+<style>#pt, #ft, #hd, #toptb, #diy_btn_box {display:none;} body {background:none;} #wp.wp {width:auto;} </style>
+<script>
+
+	{if $_GET[ifr] !='viewv'}parent.window.document.getElementById('levckplayerifr_{$_GET[ifr]}').style.height = '{eval echo $h+41+44}px';{/if}
+
+</script>
+{if checkmobile()}
+{template common/footer}
+{else}
+{subtemplate common/footer_common}
+{/if}
+{else}
+{template common/footer}
+{/if}
+
+
+
+
+
+
+
+
+

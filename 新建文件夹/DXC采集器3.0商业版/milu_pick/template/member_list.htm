@@ -1,0 +1,81 @@
+<!--{template milu_pick:pick_header}-->
+
+<form onkeydown="javascript: search_submit(event,this);" id="form12" name="form12"  action="?{PICK_GO}member&myac=member_list" method="post"> 
+   <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="submit_type" id="submit_type" value="search" />
+  <div class="itemtitle">
+  <p style="float:left; margin-top:10px; width:90%;">
+  	<select name="search_type" style="float:left">
+	<option {if $info['search_type'] == 0}selected="selected"{/if} value="0">{lang milu_pick:s_username}</option>
+	<option {if $info['search_type'] == 1}selected="selected"{/if} value="1">{lang milu_pick:s_uid}</option>
+	<option {if $info['search_type'] == 2}selected="selected"{/if} value="2">{lang milu_pick:s_email}</option>
+    </select> 
+	<input type="text" style="float:left; margin-left:10px; width:175px" name="s"  value="{$info['s']}" id="srchforumipt" class="txt">
+	<select name="type" style="float:left">
+	<option {if $info['type'] == 0}selected="selected"{/if} value="0">{lang milu_pick:all}</option>
+	<option {if $info['type'] == 1}selected="selected"{/if} value="1">{lang milu_pick:no_import}</option>
+	<option {if $info['type'] == 2}selected="selected"{/if} value="2">{lang milu_pick:imported}</option>
+    </select>
+	<select name="perpage" style="float:left">
+	<option {if $info['perpage'] == 0 || $info['perpage'] == 30}selected="selected"{/if} value="30">{eval echo milu_lang('per_page_show', array('n' => 30));}</option>
+	<option {if $info['perpage'] == 50}selected="selected"{/if} value="50">{eval echo milu_lang('per_page_show', array('n' => 50));}</option>
+	<option {if $info['perpage'] == 100}selected="selected"{/if} value="100">{eval echo milu_lang('per_page_show', array('n' => 100));}</option>
+	<option {if $info['perpage'] == 350}selected="selected"{/if} value="350">{eval echo milu_lang('per_page_show', array('n' => 350));}</option>
+	</select>
+	<input name="submit"  style="float:left;  margin:0 0 0 10px; padding:1px 5px; height:23px;" type="submit" class="btn" value="{lang milu_pick:search}" id="submit_editsubmit">   
+	<span style="padding-left:10px;"><a href="javascript:void(0)" onclick="show_more('tipslis');">{lang milu_pick:more_op}</a></span>
+	<span>{lang milu_pick:imported_data_notice}</span>
+	</p>
+	<ul id="tipslis" class="tipsblock" style=" float:left; margin-top:10px; display:none;">
+	<li style="float:left; width:650px;">1 <a href="?{PICK_GO}member&myac=member_export">{lang milu_pick:export_all}</a></span><span class="tips">{lang milu_pick:export_notice}</span></li>
+	
+	<li style="float:left; width:650px;">2 <a href="?{PICK_GO}member&myac=member_import_online&tpl=no">{lang milu_pick:import_member}</a></span><span class="tips">{lang milu_pick:import_DXC_userdata}</span></li>
+	<!--<li>3、<a href="?{PICK_GO}member&myac=member_export">删除所有已导入的会员</a></span><span class="tips">删除所有已导入到discuz和uc中的会员资料，但是不会删除采集器里面的会员数据</span></li>-->
+	</ul>
+	</div>
+</form>
+<form id="cpform" action="?{PICK_GO}member&myac=member_list" autocomplete="off" method="post" name="cpform">
+     <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+<table class="tb tb2 ">
+<tbody><tr><th colspan="19" class="partition">{lang milu_pick:member_list} <span style="font-weight:normal">{lang milu_pick:gong}<strong> {$info['count']} </strong>{lang milu_pick:_the_user}</span><!--共搜索到<strong> 4972 </strong>名符合条件的用户<a href="admin.php?action=members&amp;operation=search" class="act lightlink normal">重新搜索</a>--></th></tr>
+<tr class="header"><th></th>
+  {if $info['type'] == 2}<th>{lang milu_pick:avatar}</th>{/if}
+  <th>{lang milu_pick:user_name}</th>
+  <th> Email </th>
+  <th>{lang milu_pick:gender}</th>
+  <th>{lang milu_pick:oltime}</th>
+  <!--{loop $info['credits_list'] $key_c $rs_c}-->
+  <th>{$rs_c['title']}</th>
+  <!--{/loop}-->
+  <th>{lang milu_pick:add_dateline}</th>
+ {if $info['type'] == 2} <th>{lang milu_pick:reg}uid</th>
+  <th>{lang milu_pick:import_dateline}</th>{/if}
+  <th>{lang milu_pick:op}</th>
+</tr>
+ <!--{if $info['list']}-->
+   <!--{loop $info['list'] $key $rs}-->
+<tr class="hover"><td class="td25"><input type="checkbox" name="uidarray[]" value="{$rs['uid']}"  class="checkbox"></td>
+ {if $info['type'] == 2} <td><a target="_blank" href="home.php?mod=space&uid={$rs['data_uid']}&do=profile"><img src="uc_server/avatar.php?uid={$rs['data_uid']}&size=small" /></a></td>{/if}
+  <td><a href="{$rs['get_url']}" target="_blank"> {$rs['username']}</a></td>
+  <td >{$rs['email']}</td>
+  <td >{$rs['gender']}</td>
+  <td >{$rs['oltime']}</td>
+    <!--{loop $info['credits_list'] $key_c $rs_c}-->
+  <td >{$rs[$rs_c['name']]}</td>
+   <!--{/loop}-->
+  <td >{$rs['show_get_dateline']}</td>
+ {if $info['type'] == 2} <td>{if $rs['data_uid'] > 0}<a target="_blank" href="home.php?mod=space&uid={$rs['data_uid']}&do=profile">{$rs['data_uid']}</a>{else}{lang milu_pick:no_import}{/if}</td>
+  <td><p>{$rs['show_public_dateline']}</p>    </td>{/if}
+  <td><a href="?{PICK_GO}member&myac=member_edit&uid={$rs['uid']}" class="act">{lang milu_pick:detail}</a>
+  <a href="?{PICK_GO}member&myac=member_del&uid={$rs['uid']}" class="act">{lang milu_pick:del}</a>  </td>
+</tr>
+ <!--{/loop}-->
+   <!--{else}-->
+  <tr class="hover"><td colspan="18" align="center" class="td25">{lang milu_pick:no_data}</td></tr>
+  <!--{/if}-->
+  
+<tr><td colspan="19"><div class="cuspages right">{$info['multipage']}</div><div class="fixsel" style="height:30px; line-height:30px;"><input type="checkbox" name="chkall" onclick="checkAll('prefix', this.form, 'uidarray')" class="checkbox">
+  {lang milu_pick:select_all} &nbsp;
+  <input style="float:none" type="submit" class="btn" id="submit_submit" name="submit"  value="{lang milu_pick:del}"> 
+  &nbsp;<a href="?{PICK_GO}member&myac=member_export"></a>&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;  </div></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'submit'); });</script></tbody></table>
+</form>

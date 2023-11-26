@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-03-17 22:32]]></item>
+	<item id="From"><![CDATA[源 码  哥  y   m  g  6  .  c o   m]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[弹性有横幅拉幕广告]]></item>
+			<item id="identifier"><![CDATA[rsf_elasticity_pull_screen_adv]]></item>
+			<item id="description"><![CDATA[弹性展开大广告图，然后自动收缩显示小横幅。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[rsf_elasticity_pull_screen_adv/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.3]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[rsf_elasticity_pull_screen_adv]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>应用中心</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否开启拉幕动作]]></item>
+				<item id="description"><![CDATA[选择“是”则开启全套的弹性拉幕动作，
+选择“否”则只静态地展示横幅广告，无拉幕动作。]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_start]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[广告宽度选择]]></item>
+				<item id="description"><![CDATA[广告的宽度选择，有：宽屏（自适应宽度）与 窄屏（固定宽度 = 960像素） 两种规格，主要起强制性规定广告宽度的作用。]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_width]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 宽屏（自适应页面宽度）
+2 = 窄屏（960像素固定宽度）]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[等待时间]]></item>
+				<item id="description"><![CDATA[设置延迟广告大图开始出现的时间，数字越大，延迟越久，单位为“秒”。]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_delay_time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[展开的速度]]></item>
+				<item id="description"><![CDATA[设置广告大图展开的速度，数字越大，展开速度越慢，单位为“秒”。]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_show_speed]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[停留展示的时间]]></item>
+				<item id="description"><![CDATA[设置广告大图完全展开后展示的时间，数字越大，展示越久，单位为“秒”。]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_show_time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[广告大图链接地址和图片地 ...]]></item>
+				<item id="description"><![CDATA[广告大图链接地址和图片地址中间用竖线“|”隔开，所有地址最好都填写完整，以保障地址的有效性，
+例如：http：//www.xxx.com/|http://www.xxx.com/xxx/xxx.jpg]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_link]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[是否开启横幅展示]]></item>
+				<item id="description"><![CDATA[开启则有横幅展示，关闭则无横幅展示。]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_banner_start]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[--横幅链接地址和图片地址 ...]]></item>
+				<item id="description"><![CDATA[注：横幅开关开启，本横幅才可见，否则不可见。
+横幅链接地址和图片地址中间用竖线“|”隔开，所有地址最好都填写完整，以保障地址的有效性，
+例如：http：//www.xxx.com/|http://www.xxx.com/xxx/xxx.jpg ... ...]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_banner_link]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[拉幕次数(vip功能)]]></item>
+				<item id="description"><![CDATA[设置对一个客户相隔多长时间允许重置拉幕，单位为（分钟），默认为一分钟重置一次。
+（即拉幕一次后，在设置时间内刷新、关闭、或重新打开浏览器在同一频道内浏览页面都不会拉幕）。]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_show_frequency]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[30]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[显示广告的频道]]></item>
+				<item id="description"><![CDATA[选择需要显示广告的频道（按住Ctrl键再用鼠标点击可多选）]]></item>
+				<item id="variable"><![CDATA[rsf_epsa_play_channel]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[1 = 论坛频道
+2 = 门户
+3 = 家园频道
+4 = 群组频道
+5 = 用户
+6 = 第三方插件
+7 = 首页]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+					<item id="2"><![CDATA[3]]></item>
+					<item id="3"><![CDATA[4]]></item>
+					<item id="4"><![CDATA[5]]></item>
+					<item id="5"><![CDATA[6]]></item>
+					<item id="6"><![CDATA[7]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="rsf_replay_btn"><![CDATA[重播]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="rsf_replay_btn"><![CDATA[重播]]></item>
+			</item>
+			<item id="installlang">
+				<item id="rsf_replay_btn"><![CDATA[重播]]></item>
+			</item>
+		</item>
+	</item>
+</root>

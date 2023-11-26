@@ -1,0 +1,26 @@
+<h3 class="flb" id="fctrl_guarantee_status" style="cursor: move;"> <em id="return_guarantee_status" fwin="guarantee_status">&#x4E2D;&#x4ECB;&#x4EA4;&#x6613; &#x300B; &#x540C;&#x610F;&#x4EA4;&#x6613;</em> 
+  <span><a href="javascript:;" onclick="hideWindow('csu_guarantee_status');" class="flbc" title="&#x5173;&#x95ED;">&#x5173;&#x95ED;</a></span> 
+</h3>
+<div id="main_messaqge" fwin="guarantee_status">
+  <div id="layer_login" fwin="guarantee_status">
+    <div class="postbox" style="border:2px solid orange;padding:10px;">
+      <form method="post" class="s_clear" action="plugin.php?id=csu_guarantee:csu_guarantee">
+        <input type="hidden" name="formhash" value="{FORMHASH}">
+        <input type="hidden" name="gid" value="{$_GET['gid']}">
+        <h1><a href="plugin.php?id=csu_guarantee&item=detail&gid={$_GET['gid']}" target="_blank">[{$order['price']}&#x5143;]&nbsp;&nbsp;[&#x4E70;&#x65B9;:{$buyandsell['buy']['username']}]    [&#x5356;&#x65B9;:{$buyandsell['sell']['username']}]</a></h1>
+         
+        <br>
+         
+        <table cellspacing="0" cellpadding="0" class="guaranteetable"><tbody>
+					  <tr><th>&#x53D1;&#x8D27;&#x65B9;&#x5F0F;</th><td>
+						{$kuaidi}   <font color="red">*</font></td>
+					  		<th>&#x5FEB;&#x9012;&#x53F7;</th><td><input type="text" name="contact[sendid]" size="35" class=""> </td>
+					  </tr></tbody></table>        <p class="fsubmit s_clear" style="text-align:center;padding-top:10px;">
+          <button type="submit" class="bottonC" name="den" value="yes">&#x786E;&#x8BA4;&#x53D1;&#x8D27;</button>
+          &nbsp;
+          <button type="button" class="bottonDD" onclick="hideWindow('csu_guarantee_status');" value="yes">&#x53D6;&#x6D88;</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div id="threadlist" class="tl bm bmw">
+	<div class="th">
+		<table cellspacing="0" cellpadding="0" class="log"><tr>
+			<th class="title">我参与的考试</th>
+			<td class="score">作者</td>
+			<td class="score">得分/总分</td>			
+			<td class="time">考试时间</td>	
+			<td class="time" width=120px>管理</td>
+		</tr></table>
+	</div> 
+ 
+	<div class="bm_c">
+		<table cellspacing="0" cellpadding="0" class="log"  id="paper_log">
+		<!--{loop $logs $v}-->
+		<tbody>
+			<tr lid="$v[lid]">
+				<th class="title"><span><!--{if !$v[title]}--><i class="xi1">作者已经删除该试卷<i><!--{else}-->$v[title]<!--{/if}--></span></th>
+				<td class="score">$logs_user[$v[uid]][username]</td>				
+				<td class="score">$v[score]/$v[total]</td>
+				<td class="time">{echo date('Y-m-d H:i',$v['endtime']);}</td>
+				<td class="time">
+					<a href="plugin.php?id=exam:my&tab=show&lid=$v[lid]" target="_blank">详情</a>&nbsp;
+					<a href="plugin.php?id=exam:my&formhash=$_G[formhash]&tab=logs&action=replay&lid=$v[lid]" target="_blank">回放</a>&nbsp;
+					<a href="plugin.php?id=exam:my&formhash=$_G[formhash]&tab=logs&action=redo&lid=$v[lid]" target="_blank">重考</a>&nbsp;
+					<a href="javascript:;" onclick="DeleteYesOK($v[lid]);">删除</a>
+				</td>				
+			</tr>
+		</tbody>
+		<!--{/loop}-->
+		</table>
+	</div>
+	<div class="pg mtm mbm">$multipage</div>
+</div>
+<script type="text/javascript">
+ 	window.onload = function(){
+		var logs = $('paper_log').getElementsByTagName('tr');
+		for(var j=0;j<logs.length;j++){
+			logs[j].onmouseover = function(e){
+				var menu = $('editlog_menu');
+				menu.setAttribute('lid', this.getAttribute('lid'));
+				menu.style.marginLeft = this.clientWidth - 140 + 'px';
+				menu.style.marginTop  = this.offsetTop + 'px';
+				menu.style.height     = this.clientHeight -2 + 'px';
+				menu.style.lineHeight = this.clientHeight -2 + 'px';
+				menu.style.display = "block";
+			}
+		}
+	}
+	function DeleteYesOK(lid)
+	{
+		showDialog("是否删除该记录？", 'confirm','警告',function(){
+			window.location.href = 'plugin.php?id=exam:my&formhash='+formhash+'&tab=logs&action=delete&lid='+lid;
+		});
+	}
+</script>

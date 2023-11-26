@@ -1,0 +1,88 @@
+<style>
+.ainuo_piclist{ padding-bottom:5px;}
+.ainuo_piclist .grid-item{}
+.ainuo_piclist .grid-item a{ display:block;}
+.ainuo_piclist .grid-item a.lione{ padding:0 10px 10px 10px; background:#e2e2e2;}
+.ainuo_piclist .grid-item a.litwo{ padding:0; position:relative;}
+.ainuo_piclist .grid-item .author{ height:24px; line-height:24px; font-size:12px; color:#999;}
+.ainuo_piclist .grid-item .author .aleft{ float:left;}
+.ainuo_piclist .grid-item .author .aleft .ava{ float:left; margin-right:5px;}
+.ainuo_piclist .grid-item .author .aleft .ava img{ width:24px; height:24px;border-radius:50%;}
+.ainuo_piclist .grid-item .author .aright{ float:right;}
+.ainuo_piclist .grid-item .author .aright i{ position:relative; font-size:14px !important;}
+.ainuo_piclist .grid-item .asub .abadge{color: white;background-color: #fe7c51;font-size:12px;padding: 2px 5px; border-radius:2px;}
+.ainuo_piclist .grid-item .asub .leixing{background-color:#A8C500;}
+.ainuo_piclist .grid-item .asub{  position:relative; padding:10px;background:#e2e2e2;}
+.ainuo_piclist .grid-item .asub .atitle{ font-size:16px; line-height:1.5; display:block; width:100%;}
+.ainuo_piclist .grid-item .asub img{ width:100%;}
+.ainuo_piclist .grid-item .apic{ margin-top:5px;}
+.ainuo_piclist .grid-item .apic img{ width:100%;}
+.ainuo_piclist .grid-item .afenlei{  padding:0 10px; height:30px; position:absolute; left:0px; top:15px; z-index:10;}
+.ainuo_piclist .grid-item .afenlei em{font-size:0;}
+.ainuo_piclist .grid-item .afenlei em a{font-size: 12px;display: inline;background:rgba(0,0,0,0.5);padding: 3px 10px;border-radius: 1px;color: #fff;}
+.ainuogrid {position: relative;width: 99.5%;margin:0 auto;}
+.ainuogrid .grid-item {position: absolute;width:48.5%; height:auto; left:0; top:0;-webkit-transition: .3s ease-in-out;-o-transition: .3s ease-in-out;transition: .3s ease-in-out;}
+</style>
+
+<header class="header" id="page-header">
+	<div class="nav">
+        <a class="back z" href="#"><i class="iconfont icon-back_light"></i></a>		
+        <a href="javascript:;" class="ashare y"><i class="iconfont icon-fenxiang"></i></a>
+    </div>
+</header>
+<!--{template common/top_fix}-->
+
+
+<div class="cl">
+<ul class="ainuo_forumtop cl">
+    <li>
+    	<!--{if $_G['forum'][icon]}--><img src="data/attachment/common/$_G['forum'][icon]"><!--{/if}-->
+        <div class="abody">
+            <!--{eval $isfav = DB::result_first("SELECT favid FROM ".DB::table('home_favorite')." where id=".$_G[fid]." and idtype='fid' and uid='$_G[uid]'");}-->
+            <!--{if !$isfav || !$_G[uid]}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum" id="a_favorite" class="afa_fav">$alang_gz</a>
+            <!--{else}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum&formhash={FORMHASH}" class="afa_fav gy">$alang_yiguanzhu</a>
+            <!--{/if}-->
+            <h4 style="font-weight:400;">$_G['forum'][name]</h4>
+            <p>
+            {lang index_today}: <em>$_G[forum][todayposts]</em>
+            {lang index_threads}: <em>$_G[forum][threads]</em>
+            <!--{if $_G[forum][rank]}-->{lang rank}: <em>$_G[forum][rank]</em><!--{/if}-->
+            </p>
+            
+        </div>
+    </li>
+</ul>
+</div>
+
+<!--{hook/forumdisplay_top_mobile}-->
+<!--{if $quicksearchlist && !$_GET['archiveid']}-->
+	<!--{subtemplate forum/search_sortoption}-->
+<!--{else}-->
+	<!--{subtemplate forum/type}-->
+<!--{/if}-->
+<!--{subtemplate forum/zd}-->
+
+<div id="ispbl"></div>
+<!--{if empty($_G['forum']['sortmode'])}-->
+    
+    <!--{if $_G['forum_threadcount']}-->
+    <div class="ainuo_piclist cl">
+        <ul id="ainuoloadmore" class="ainuoloadmore ainuogrid">
+			<!--{subtemplate forumlist/pbl_list}-->
+        </ul>
+    </div>
+    <!--{else}-->
+    <div class="ainuoemp">{lang forum_nothreads}</div>
+    <!--{/if}-->
+
+<!--{else}-->
+    <!--{subtemplate forum/forumdisplay_sort}-->
+<!--{/if}-->
+<div id="ainuoloadempty"></div>
+<!--{if $_G[forum][threads] && ($_G[forum][threads] > $_G[tpp])}-->
+<div id="loading" class="loading G-animate-load-wrap">
+	<div class="load-loading"><span class="loading02"></span> <span class="load-word">$alang_loading</span></div>
+</div>
+<!--{/if}-->

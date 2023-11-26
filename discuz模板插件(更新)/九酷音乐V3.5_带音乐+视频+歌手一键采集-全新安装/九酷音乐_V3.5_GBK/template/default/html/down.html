@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>[music:name] - 下载 - [qianwei:webname]</title>
+<meta name="Keywords" content="下载_[music:name]" />
+<meta name="Description" content="下载_[music:name],[qianwei:webname]" />
+<link href="[qianwei:tempurl]css/base.css" rel="stylesheet" type="text/css" />
+<link href="[qianwei:path]source/plugin/asynctips/asynctips.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.crumb{ font-size:12px; font-weight:normal; line-height:36px; height:36px; color:#000;}
+.crumb a{ color:#000;}
+.crumb b{ font-weight:400; color:#666;}
+.geciBox{border:1px solid #e5e5e5; width:960px; margin:0 auto;}
+.mb10{ margin-bottom:10px;}
+.geci{ padding:20px 50px 30px;}
+.geci .fl{ float:left; width:370px;}
+.geci .fr{ float:right; width:450px;}
+.geci h1{ font:800 28px/36px Microsoft YaHei; color:#333;}
+.geci h2{ font:800 16px/26px Microsoft YaHei; color:#333; margin:8px 0 0; height:40px;}
+.geci h1 a{font:800 16px/26px Microsoft YaHei; color:#333; margin:0 0 0 10px; color:#090; text-decoration:underline;}
+.geci h2 a{ color:#090; text-decoration:underline;}
+.sDian1,.sDian2{float:none;margin:10px 0; display:inline;font-size:14px; height:31px; line-height:31px; text-align:center;background:#999; color:#fff;}
+.sDian1{ background:url([qianwei:tempurl]css/dianz.png) 0 0 no-repeat; width:108px;}
+.sDian2{ background:url([qianwei:tempurl]css/dianz.png) 0 -31px no-repeat; width:80px;}
+.sDian1:hover,.sDian2:hover{ color:#fff;}
+</style>
+<script type="text/javascript" src="[qianwei:tempurl]js/lib.js"></script>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/jquery.min.js"></script>
+<script type="text/javascript">var root_url="[qianwei:path]"; var temp_url="[qianwei:tempurl]";</script>
+<script type="text/javascript">
+$ = function(em) {
+    if (document.getElementById){ return document.getElementById(em); }
+    else if (document.all){ return document.all[em]; }
+    else if (document.layers){ return document.layers[em]; }
+    else{ return null; }
+}
+function editMe(o){
+	o.style.border="1px #febb00 solid";
+	o.style.backgroundColor="#fffbe7";
+}
+function blurMe(o){
+	o.style.border="1px solid #cccccc";
+	o.style.backgroundColor="transparent";
+}
+doRe=function(strReg,intType,oTd){
+	if(intType==1){
+		if(oTd.value==""){
+			editMe(oTd);
+			$(strReg).innerHTML="<img src='[qianwei:tempurl]css/check_error.gif' />&nbsp;验证码不能为空！";
+		}else{
+			if(oTd.value.length!=4){
+				editMe(oTd);
+				$(strReg).innerHTML="<img src='[qianwei:tempurl]css/check_error.gif' />&nbsp;请输入四位验证码！";
+			}else{
+				var xmlHttp;
+				if(window.ActiveXObject){
+					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}else if(window.XMLHttpRequest){
+					xmlHttp = new XMLHttpRequest();
+				}
+				xmlHttp.open("get",temp_url+"source/ajax.php?ac=download&seccode="+oTd.value);
+				xmlHttp.onreadystatechange=function(){
+					if(xmlHttp.readyState == 4){
+						if(xmlHttp.status == 200){
+							$("Re_1").innerHTML = unescape(xmlHttp.responseText);
+						}
+					}
+				}
+				xmlHttp.send(null);
+				blurMe(oTd);
+			}
+		}
+	}
+}
+doDown=function(){
+	var t = true;
+	for(i=1;i<2;i++){
+		try{
+			doRe("Re_"+i,i,$("ReI_"+i));
+		}catch(e){}
+		if((($("Re_"+i).innerHTML).indexOf("right"))<0) t = false;
+	}
+	return t;
+}
+function updateseccode() {
+	var img = temp_url+'source/ajax.php?ac=seccode&rand='+Math.random();
+	if($('img_seccode')) {
+		$('img_seccode').src = img;
+	}
+}
+</script>
+</head>
+<body>
+<script type="text/javascript" src="[qianwei:path]source/plugin/asynctips/asyncbox.v1.4.5.js"></script>
+<div class="top-bar">
+<div class="box clearfix">
+<script type="text/javascript">
+function setHomepage(){
+if (document.all){
+document.body.style.behavior='url(#default#homepage)';
+document.body.setHomePage(window.location.href);
+}else if (window.sidebar){
+if(window.netscape){
+try{
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+}catch (e){
+asyncbox.tips("该操作被浏览器拒绝，请使用浏览器菜单手动设置！", "error", 3000);
+}
+}
+var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+prefs.setCharPref('browser.startup.homepage',window.location.href);
+}else{
+asyncbox.tips("您的浏览器不支持，请使用浏览器菜单手动设置！", "wait", 3000);
+}
+}
+function addFavorite(){
+if (document.all){
+try{
+window.external.addFavorite(window.location.href,document.title);
+}catch(e){
+asyncbox.tips("加入收藏失败，请使用“Ctrl+D”进行添加！", "wait", 3000);
+}
+}else if (window.sidebar){
+window.sidebar.addPanel(document.title, window.location.href, "");
+}else{
+asyncbox.tips("加入收藏失败，请使用“Ctrl+D”进行添加！", "error", 3000);
+}
+}
+</script>
+<div class="fl topBarLink"><a class="topBarLink01" style="cursor:pointer;" onclick="setHomepage();">设为首页</a>&nbsp;&nbsp;<a class="topBarLink02" style="cursor:pointer;" onclick="addFavorite();">加入收藏</a></div>
+<div class="fr" id="userinfo"><script type="text/javascript">getlogin();</script></div>
+</div>
+</div>
+<div class="headerWrap">
+<div class="box header clearfix">
+  <div class="logo"><a href="[qianwei:path]"><img src="[qianwei:tempurl]css/logo.png" /></a></div>
+  <div class="logoSide clearfix">
+  <div class="search clearfix">
+<script type="text/javascript">
+function s(){
+var k=document.getElementById("ww").value;
+if(k==""){asyncbox.tips("请输入歌曲或者用户名称！", "error", 1000);document.getElementById("ww").focus();return false;}else{document.formsearchbox.submit();}
+}
+</script>
+      <div class="search-bar">
+        <form name="formsearchbox" method="get" action="[qianwei:path]search.php" target="_blank">
+        <div class="clearfix" style="z-index:1005; zoom:1;">
+        <input class="search-txt input-value" x-webkit-speech type="text" id="ww" value="" name="key" />
+        <button class="search-btn" type="button" onclick="s()">搜索</button>
+        </div>
+      </form>
+      </div>
+  </div>
+  </div>
+</div>
+</div>
+<div class="navWrap">
+<div class="nav clearfix">
+  <ul class="navList clearfix">
+<li><a href="[qianwei:path]">首 页</a></li>
+{qianwei:class loop=1 sort=turn order=asc}<li><a href="[class:link]">好听的歌</a></li>{/qianwei:class}
+{qianwei:class classid=5,6,7,8,9,10,11,12 loop=1 sort=turn order=asc}<li><a href="[class:link]">音乐排行榜</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]radio" target="_blank">随心听</a></li>
+{qianwei:class classid=2,3,4 loop=1 sort=turn order=asc}<li><a href="[class:link]">淘歌专辑</a></li>{/qianwei:class}
+{qianwei:class classid=1}<li><a href="[class:link]">歌手大全</a></li>{/qianwei:class}
+<li><a href="[qianwei:mod]diangetai">点歌台</a></li>
+{qianwei:videoclass loop=1 sort=turn order=asc}<li><a href="[videoclass:link]">高清MV</a></li>{/qianwei:videoclass}
+<li><a href="[qianwei:userpath]">会员中心</a></li>
+  </ul>
+ </div>
+</div>
+<div class="box musicBus mt bgWrite">
+   <ul class="clearfix directNew">
+   {qianwei:class sort=turn order=asc}<li><a class="directName" target="_blank" href="[class:link]">[class:name]</a><a class="directPlay" target="_blank" href="[class:link]"></a></li>{/qianwei:class}
+  </ul>
+</div>
+<div class="box">
+ <h2 class="crumb">当前位置 &gt; 下载：<font color="#FF6969">[music:name]</font></h2>
+</div>
+<div class="geciBox bgWrite mb10">
+<div class="geci clearfix">
+<div class="fl">
+<h1>下载歌词</h1>
+<div class="clearfix" style="text-align:center; margin:10px 0;line-height:160%;font-size:14px; border:1px dashed #ccc; padding:10px 15px; background:#f8f8f8;">
+<button type="button" onclick="window.location.href=temp_url+'ajax_down.php?ac=lrc&id=[music:id]';" class="sDian2" style="cursor:pointer;">免费下载</button>
+</div>
+<div style="margin:10px 0;line-height:160%;font-size:14px; border:1px dashed #999; padding:10px 15px; background:#fff;">
+[music:words]
+ </div>
+</div>
+<div class="fr">
+<h1>下载音乐</h1>
+<div id="download" style="text-align:center; margin:10px 0;line-height:160%;font-size:14px; border:1px dashed #ccc; padding:10px 15px; background:#f8f8f8;">
+<script type="text/javascript">getdown([music:id]);</script>
+ </div>
+</div>
+</div>
+</div>
+<div class="footer clearfix">
+  <div class="box">
+    <p><font style="color:000;"><a href="mailto:[qianwei:mail]">本站所有音乐均来自互联网搜集，版权为原作者所有，如有侵犯权益，请联系我们删除！</a></font> -- <a href="http://www.miitbeian.gov.cn/" target="_blank">[qianwei:icp]</a> [qianwei:webstat]<br></p>
+    <p>Copyright &copy; [qianwei:copytime] <a href="http://[qianwei:weburl]" target="_blank">[qianwei:weburl]</a> .All Rights Reserved. <a href="http://[qianwei:httphost][qianwei:path]" target="_blank">[qianwei:webname]</a> 版权所有</p>
+  </div>
+</div>
+</body>
+</html>

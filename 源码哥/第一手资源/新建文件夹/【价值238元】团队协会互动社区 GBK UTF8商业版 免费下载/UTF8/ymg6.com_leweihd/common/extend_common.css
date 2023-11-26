@@ -1,0 +1,1462 @@
+.wp {
+	width: 1200px;
+}
+.lw-memberr {
+	height: 28px;
+}
+.lw-memberr {
+	float: right;
+}
+
+#diy-tg {
+	background-position: 100% 5px!important;
+}
+.lewei_qc .p_pop {
+	padding: 4px 10px;
+	text-align: center;
+	border: 1px solid;
+	min-width: 60px;
+	border-color: #0D9EB9;
+	background: #0D9EB9;
+}
+.lewei_qc .p_pop li a:hover {
+	background-color: #39BDD6;
+	color: #fff!important;
+	text-decoration: none;
+}
+.lewei_qc .p_pop li a {
+	color: #fff!important;
+	display: block;
+	padding: 3px 5px;
+	border-bottom: 1px solid #0D9EB9;
+	white-space: nowrap;
+}
+#toptb {
+	min-width: 1200px;
+	width: 100%;
+	background: #f8f8f8;
+	line-height: 32px;
+}
+#toptb a {
+	float: left;
+	padding: 0 4px;
+	height: 32px;
+}
+#toptb a#sslct, .switchwidth, #toptb a.switchblind {
+	margin-top: 7px;
+}
+
+
+.hdc {
+	min-height: 105px;
+}
+.leweif_qc {
+	padding: 0!important;
+}
+#nv {
+	height: 50px;
+	background: #39BDD6;
+	width: 100%;
+	margin: 0 auto;
+}
+#nv li {
+	height: 50px;
+	background: none;
+	font-weight: 500;
+	font-size: 16px;
+	margin-right: -1px;
+}
+#nv li a {
+	height: auto;
+	line-height: 50px;
+	text-decoration: none;
+	color: #fff;
+	margin-right: -1px;
+	text-align: center;
+	min-width: 65px;
+}
+#nv li.a a {
+	color: #fff;
+	margin-right: -1px;
+	height: auto;
+}
+#nv li a:hover, #nv li.hover a:hover {
+}
+.lewei_nv {
+	height: 50px;
+}
+.qq_bind {
+	margin-top: 6px!important;
+}
+.lewei_le_weilt {
+	padding: 0px 15px 0px 15px;
+}
+.lewei_mr {
+	width: 320px;
+	float: right;
+	background: #fff;
+	margin: 10px 0 10px 0;
+	padding: 10px 0 0;
+	border: 1px solid #DEDEDE;
+}
+.lewei_mrs {
+	width: 398px;
+	float: right;
+	background: #fff;
+	margin: 0px 0 10px 0;
+	padding: 5px 0 0;
+}
+.lewei_mbbs {
+	width: 258px;
+	float: right;
+	background: #fff;
+	margin: 10px 0 0px 0;
+	padding: 10px 0 0;
+	text-align: center;
+}
+.lewei_ztj .lewei_al a {
+	font-size: 15px;
+	font-weight: 500;
+	color: #0E0E0E;
+	height: 20px;
+	overflow: hidden;
+	display: inline-block;
+	width: 250px;
+}
+.lewei_ztj .lewei_al a:hover {
+	color: #0D9EB9;
+}
+.lewei_ztj .cl {
+	width: 365px;
+	height: 118px;
+	float: left;
+	margin-right: 28px;
+	overflow: hidden;
+}
+.lewei_ztj .lewei_ak {
+	font-size: 13px;
+	line-height: 23px;
+	height: 45px;
+	overflow: hidden;
+	color: #797979;
+}
+.lewei_ztj .lewei_aks {
+	font-size: 13px;
+	overflow: hidden;
+}
+.lewei_ztj .lewei_aks a {
+}
+.array1 {
+	color: #0D9EB9!important;
+}
+.array2 {
+	color: #0D9EB9!important;
+}
+.array3 {
+	color: #0D9EB9!important;
+}
+.lewei_hots {
+	margin-top: 5px;
+}
+.lewei_hots li {
+	height: 35px;
+	line-height: 35px;
+	overflow: hidden;
+	font-size: 15px;
+	font-weight: 500;
+}
+.lewei_hots li em {
+	height: 35px;
+	line-height: 35px;
+	width: 22px;
+	float: left;
+	text-align: center;
+	margin-right: 5px;
+	color: #9D9D9D;
+	font-size: 18px;
+	font-family: "georgia", "STHeiti", "Microsoft YaHei", "simsun", "sans-serif", Arial;
+}
+.lewei_hot li em {
+	height: 25px;
+	line-height: 25px;
+	width: 25px;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	color: #9D9D9D;	font-family: "georgia", "STHeiti", "Microsoft YaHei", "simsun", "sans-serif", Arial;
+}
+.lewei_395 {height:395px;overflow:hidden;}
+.lewei_hot li {
+	height: 29px;
+	line-height: 29px;
+	overflow: hidden;
+	font-size: 15px;
+	font-weight: 500;
+}
+.lewei_pt p {
+	height: 42px;
+	overflow: hidden;
+	font-size: 13px;
+	line-height: 23px;
+	color: #797979;
+}
+.lewei_pt {
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #CCC;
+}
+.lewei_qc #mu {
+	margin-top: 0px;
+}
+.lewei_qc #mu a {
+	float: left;
+	display: inline;
+	margin: 5px 0;
+}
+.lewei_qc #mu li {
+	background-color: #fff;
+	margin: 5px 5px 5px 0;
+	border: #E8E8E7 1px solid;
+}
+.lewei_qc #mu ul {
+	background: none;
+	width:1200px!important;
+}
+.lewei_qc #mu a:hover {
+	border: none;
+	background: none;
+	color: #0D9EB9;
+}
+.lewei_pt h3 {
+	overflow: hidden;
+}
+.lewei_pt h3 a {
+	font-size: 15px;
+	font-weight: 500;
+	color: #0E0E0E;
+	height: 28px;
+	line-height: 28px;
+	overflow: hidden;
+	display: block;
+}
+.lewei_pt h3 a:hover {
+	color: #0D9EB9;
+}
+.lewei_main {
+	margin: 10px 0 10px 0;
+	padding: 5px 0 0 0;
+	width: 790px;
+ *padding: 10px 0 12px 0;
+	float: right;
+	background: #fff;
+}
+.lewei_box {
+	width: 379px;
+	float: left;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	display: inline;
+}
+.lewei_title {
+	border-bottom: 1px solid #E4E4E4;
+	line-height: 30px;
+}
+a.more {
+	float: right;
+	font-weight: normal;
+	margin-right: 5px;
+}
+.lewei_text {
+	width: 205px;
+	float: left;
+}
+.lewei_title h2 {
+	position: relative;
+	bottom: -1px;
+	float: left;
+	font-size: 16px;
+	font-weight: 500;
+	border-bottom: solid 1px #0D9EB9;
+	color: #333;
+}
+.lewei_box .bd {
+	padding: 12px 0 0;
+}
+
+.lewei_img {
+	width: 160px;
+	height: 205px;
+	overflow: hidden;
+	margin-right: 10px;
+	float: left;
+	display: inline;
+	position: relative;
+}
+.lewei_img a img {
+	-moz-transition: all 0.6s;
+	-webkit-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+}
+.lewei_img a:hover img {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.lewei_img img {
+	width: 160px;
+	height: 205px;
+	display: block;
+}
+.lewei_imgtxt a:link, .lewei_img a:visited {
+	color: #fff;
+}
+.lewei_imgtxt a:link, .lewei_img a:visited {
+	color: #fff;
+}
+.lewei_clear {
+	clear: both;
+}
+.lewei_qc {
+	padding: 0!important;
+}
+
+a.scrolltopa:hover {
+	background-position: -50px 0px !important;
+}
+a:hover {
+	color: #0D9EB9;
+	text-decoration: none;
+}
+a.returnlist:hover, a.returnboard:hover {
+	background-position: -50px -100px !important;
+}
+a.replyfast:hover {
+	background-position: -50px -50px !important;
+}
+a.returnlist, a.returnboard {
+	background-position: 0 -100px !important;
+}
+#scrolltop {
+	visibility: hidden;
+	position: fixed;
+	bottom: 100px;
+	display: block;
+	margin: -30px 0 0 10px;
+	width: 50px;
+	background: #ffffff;
+	border: 0px #cdcdcd solid;
+	border-top: 0;
+	cursor: pointer;
+	right: 10px!important;
+}
+a.replyfast {
+	background-position: 0 -50px !important;
+}
+#lewei_focus li a p {
+	width: 790px;
+	padding: 10px 0;
+	color: #fff;
+	font-size: 16px;
+	line-height: 35px;
+	height: 30px;
+	position: absolute;
+	text-align: center;
+	z-index: 100;
+	bottom: 0px;
+*left:0px;
+}
+.lewei_tpp a:hover img {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.lewei_tpp img {
+	-moz-transition: all 0.6s;
+	-webkit-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+}
+.lewei_tpp {
+	height: 360px;
+	overflow: hidden;
+}
+.lewei_tpp li {
+	height: 115px;
+	overflow: hidden;
+	margin-bottom: 7px;
+}
+.lewei_tpp p a {
+	color: #fff;
+}
+.lewei_bxx {
+	float: left;
+	width: 190px;
+	height: 360px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.lewei_picg {
+	float: left;
+	background: #fff;
+	width: 1200px;
+	padding: 5px 0 0;
+}
+.lewei_tq {
+	width: 1200px;
+	position: relative;
+	margin: 0 auto;
+}
+.lewei_tq li {
+	width: 286px;
+	height: 180px;
+	float: left;
+	display: inline;
+	overflow: hidden;
+	position: relative;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+.lewei_tq li img {
+	-moz-transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	transition: all 0.8s;
+}
+.lewei_tq li:hover img {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.lewei_tq li h3 {
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	font-weight: normal;
+}
+.lewei_tq li h3 a {
+	color: #FFF;
+	font-size: 14px;
+}
+.lewei_tq li p {
+	line-height: 24px;
+	color: #BBB;
+}
+.scbar_icon_td {
+	width: 8px;
+	background: none;
+}
+.scbar_txt_td, .scbar_type_td {
+	background: none;
+}
+#scbar_txt {
+	width: 200px!important;
+	border: 1px solid #FFF;
+	outline: none;
+}
+#scbar_type {
+	display: block;
+*padding-left:0;
+	text-align: center;
+	text-decoration: none;
+}
+#scbar_type_menu {
+	margin-top: -2px;
+}
+.scbar_btn_td .pnc {
+*width: 28px;
+*display:block;
+*float:right;
+*height:36px;
+}
+#scbar {
+	overflow: hidden;
+	float: right;
+	background: #FFFEFE;
+	width: 280px;
+	margin-top: 20px;
+	line-height: 38px;
+*line-height: 38px;
+	line-height: 35px\9;
+	height: 35px;
+	border: 2px solid #39BDD6;
+}
+.scbar_type_td {
+	padding-left: 0px;
+}
+.scbar_type_td .xg1 {
+	color: #101010!important;
+}
+.lewei_qc .p_pop {
+	min-width: 85px!important;
+}
+.lewei_hylist {
+	float: left;
+	margin-bottom: 10px;
+}
+.lewei_hylist li {
+	float: left;
+	width: 78px;
+	text-align: center;
+	margin: 0 8px;
+	overflow: hidden;
+}
+.lewei_hylist li a img {
+	border-radius: 35px
+}
+.lewei_qs .bm_h {
+	background: none;
+}
+.lewei_forumlist .notabs {
+	border-bottom: none!important;
+	float: none;
+}
+/*lewei_bbslist*/
+.lewei_bbs {
+	float: left;
+	width: 262px;
+	overflow: hidden;
+}
+.lewei_rm {
+	float: right;
+	width: 930px;
+}
+.lewei_title1 {
+	line-height: 30px;
+}
+.lewei_1198 {
+	width: 1198px;
+}
+.lewei_pd10 {
+	margin-top: 10px;
+	padding: 0
+}
+.lewei_790 {
+	margin-top: 10px;
+	width: 829px;
+	float: left;
+	overflow: hidden;
+}
+.lewei_wp {
+	width: 1200px;
+	float: left;
+	margin-top: 10px;
+}
+.mt0 {
+	margin-top:0!important;
+}
+
+.mb0 {
+	margin-bottom:0!important;
+}
+
+.mgd {
+	margin: 0;
+}
+.mgd0 {
+	margin-bottom: 0;
+}
+.mgd10 {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.mg5 {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+.mgt10 {
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+.mgt15 {
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+.mgt1010 {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 0
+}
+.pnc, a.pnc {
+	border-color: #0D9EB9;
+	background: #0D9EB9;
+	color: #FFF !important;
+}
+.lewei_mg010 {
+	margin-bottom: 0px;
+	margin-top: 10px;
+	padding: 0
+}
+.lewei_ft {
+	position: relative;
+	height: 140px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	color: #0A879E;
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+.lewei_ft a {
+	color: #5F5F5F;
+}
+.lewei_ft a:hover {
+	color: #5FD0EF;
+}
+.weixin1 {
+	width: 112px;
+	height: 140px;
+	position: absolute;
+	left: 20px;
+}
+.weixin1 img {
+	width: 112px;
+	height: 110px;
+}
+.lewei_footer img {
+	border: 0;
+	display: block;
+	vertical-align: top;
+	margin: 0;
+	background: #39BDD6;
+}
+.weixin1 span {
+	display: block;
+	line-height: 30px;
+*line-height: 20px;
+	text-align: center;
+	color: #333;
+	font-size: 15px;
+}
+.weixin1.weixin3 {
+	position: absolute;
+	left: 150px;
+}
+.weixin1 a {
+	display: block;
+	line-height: 30px;
+*line-height: 20px;
+	text-align: center;
+	font-size: 15px;
+}
+.lewei_ft_big {
+	margin-left: 300px;
+	float: left;
+	display: inline-block;
+	width: 690px;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-right: 1px solid #C7C7C1;
+}
+.lewei_ft_big dl {
+	box-sizing: border-box;
+	width: 110px;
+	float: left;
+	display: inline-block;
+	margin-right: 24px;
+	text-align: center;
+	padding: 0;
+}
+.lewei_ft_big dl {
+	margin-bottom: 10px;
+}
+.lewei_ft_big dt {
+	padding-bottom: 10px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	color: #0E0E0E;
+}
+.lewei_ft_big dt {
+	padding-bottom: 10px;
+	text-align: center;
+}
+.lewei_ft_big dd {
+	padding-bottom: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.lewei_ft_call {
+	float: left;
+	display: inline-block;
+	margin-left: 36px;
+}
+.lewei_ft_call h4 {
+	font-size: 16px;
+	margin-top: 15px;
+	color: #565656;
+}
+.lewei_ft_call span {
+	line-height: 30px;
+}
+.lewei_footer {
+	width: 100%;
+	min-width: 1200px;
+	background: #fff;
+	margin-top: 5px;
+}
+.weixin1 img {
+	background: #fff;
+	padding: 3px;
+}
+.lewei_footer_c p a {
+	color: #eee;
+}
+.lewei_footer_c {
+	margin: 0 auto;
+	text-align: center;
+	background: #39BDD6;
+	line-height: 35px;
+	border-bottom: none;
+}
+#ft {
+	padding: 20px 0 20px;
+	border-top: 2px solid #39BDD6;
+	line-height: 1.8;
+	color: #666;
+	background: none;
+}
+
+#nv_search #ft {
+	margin: 0!important;
+}
+
+.lewei_footer .cl a {
+	color: #333;
+}
+.lewei_m {
+	float: left;
+	margin: 0 10px 0 0;
+}
+.lewei_t {
+	font-size: 16px;
+	font-weight: 600;
+}
+.lewei_bbss {
+	width: 830px;
+}
+.lewei_383 {
+	height: 383px;
+	overflow: hidden;
+	width: 1200px;
+*height:370px;
+}
+.lewei_360 {
+	width: 360px;
+}
+.lewei_h536 {
+	height: 535px;
+	overflow: hidden;
+}
+.lewei_h407 {
+	height: 407px;
+	overflow: hidden;
+}
+.lewei_bbss li {
+	position: relative;
+	width: 255px;
+	height: 95px;
+	border: 1px solid #E2E2E2;
+	overflow: hidden;
+	float: left;
+	margin: 0px 10px 15px 0;
+*margin: 0px 10px 10px 0;
+}
+.lewei_bbss li:hover {
+	border: 1px solid #C5C5C5;
+	background-color: #F5F5F5;
+}
+.lewei_bbss li:hover i {
+	color: #217086!important;
+}
+.lewei_bbss i {
+	float: left;
+	height: 95px;
+	width: 60px;
+	color: #0D9EB9;
+	font-size: 33px;
+	text-align: center;
+	line-height: 95px;
+	line-height: 90px\9;
+	font-style: italic;
+	font-family: "georgia", "STHeiti", "Microsoft YaHei", "simsun", "sans-serif", Arial;
+}
+.lewei_bbss .lewei_sti {
+	height: 50px;
+	width: 183px;
+	float: left;
+	font-size: 20px;
+	line-height: 50px;
+	margin-left: 10px;
+}
+.lewei_lvy {
+	position: relative;
+	float: left;
+	width: 335px;
+	margin-top: 15px;
+*margin-top:13px;
+	margin-bottom: 2px;
+*margin-bottom:0px;
+}
+.lewei_zt {
+	float: left;
+	margin-left: 10px;
+	font-size: 14px;
+	color: #585858;
+}
+.lewei_bbss .lewei_zt em {
+	color: #E00000;
+	font-style: bold;
+}
+.lewei_lvy h3 {
+	font-size: 15px;
+	margin-bottom: 5px;
+	font-weight: 500;
+	height: 20px;
+	overflow: hidden;
+}
+.lewei_lvy h3 a {
+	height: 20px;
+	overflow: hidden;
+	display: inline-block;
+	color: #0E0E0E;
+}
+.lewei_lvy h3 a:hover {
+	color: #0D9EB9;
+}
+.lewei_lvy .lewei_sum {
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	font-size: 14px;
+}
+.lewei_lvy p {
+	font-size: 13px;
+	line-height: 23px;
+}
+.lewei_lvy em {
+	color: #F77B0B;
+	font-weight: 600;
+}
+.lewei_lvy p b {
+	color: #127A96;
+	font-weight: 500;
+}
+.lewei_lvy span {
+	position: absolute;
+	padding: 2px 8px;
+	background: #55C5DA;
+	right: 0px;
+	top: 45px;
+}
+.lewei_lvy span:hover {
+	background: #0D9EB9;
+}
+.lewei_lvy span a {
+	color: #fff;
+	font-size: 14px;
+}
+/*lewei_bbs*/
+
+
+.post_lw {
+	background: #0D9EB9;
+	border-radius: 3px;
+	border-bottom: 3px solid #348DA5;
+	box-shadow: inset 0px 0px 3px #419AB3;
+}
+.bm {
+	border: 1px solid #E8E8E8;
+}
+.lewei_qc {
+	border: none;
+	background: none;
+}
+.lewei_qc .bm {
+	margin-bottom: 10px;
+	border: none;
+	padding: 5px 10px;
+}
+.lewei_qc .bm_h {
+	border-top: none;
+	border-bottom: 1px solid #E4E4E4;
+	overflow: visible;
+}
+.lewei_qs {
+	border: none;
+}
+.lewei_lj {
+	border: none;
+	padding-bottom: 5px;
+
+}
+.lewei_forumlng_n {
+}
+.lw-memberr {
+	height: 28px;
+}
+.lw-memberr {
+	float: right;
+}
+
+.lewei_mr_bbslist {
+	width: 260px;
+	float: right;
+	background: #fff;
+	margin: 0px 0 10px 0;
+	padding: 10px 0 0;
+}
+.lewei_sds {
+	float: left!important;
+	width: 260px!important;
+	overflow: hidden!important;
+	}
+
+.lewei_bbs .bm {
+	border: none;
+}
+.lewei_mr_bbslist .lewei_hot span {
+	float: right;
+	color: #0085AB;
+}
+.lewei_mr_bbslist .lewei_hot a {
+*float:left;
+}
+.lewei_mr_bbslist dl {
+	height: 100px;
+	overflow: hidden;
+	float: left;
+	width: 230px;
+}
+.lewei_mr_bbslist .lewei_hot .m {
+	float: left;
+	width: 80px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	overflow: hidden;
+	margin-right: 6px;
+}
+.lewei_mr_bbslist .lewei_hot dt {
+	float: left;
+	width: 138px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	font-weight: 600;
+	color: #666
+}
+.lewei_mr_bbslist .lewei_hot1 span {
+	float: right;
+	color: #0085AB;
+}
+.lewei_mr_bbslist .lewei_hot1 a {
+*float:left;
+}
+.lewei_mr_bbslist .lewei_hot1 .m {
+	float: left;
+	width: 80px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	overflow: hidden;
+	height: 80px;
+	margin-right: 6px;
+}
+.lewei_mr_bbslist .lewei_hot1 dt {
+	float: left;
+	width: 138px;
+	height: 25px;
+	line-height: 25px;
+	overflow: hidden;
+	font-weight: 500;
+	color: #666;
+	font-size: 15px;
+}
+.lewei_mr_bbslist .lewei_hot1 dd {
+	line-height: 19px;
+	color: #797979;
+	height: 40px;
+	overflow: hidden;
+	float: left;
+	width: 138px;
+}
+
+.lewei_content {
+	float: left;
+	width: 930px!important;
+}
+.pls .avatar img {
+	border-radius: 65px;
+}
+.bui .m img {
+	border-radius: 65px;
+}
+.lewei_forumlng_n {
+	padding: 0 0px 0 510px;
+	position: relative;
+	background: none;
+}
+.lewei_forumlng_n .lewei_forumlng_l, .lewei_forumlng_n .lewei_forumlng_r {
+	height: 313px;
+	overflow: hidden;
+	background: #fff;
+	margin-bottom: 10px;
+}
+.lewei_forumlng_n .lewei_forumlng_l .frame-tab .tb-c {
+	height: 265px;
+	overflow: hidden;
+	background: #fff;
+	padding: 0 10px 0 0;
+	border-radius: 5px;
+}
+.lewei_forumlng_n .lewei_forumlng_l .frame-title, .frametitle, .tab-title {
+	background: none;
+	border: none;
+}
+.lewei_forumlng_n .lewei_forumlng_l .title {
+	height: 32px;
+	line-height: 32px;
+}
+.lewei_forumlng_n .lewei_forumlng_l .tb li {
+	width: 85px;
+	height: 32px;
+	line-height: 32px;
+	margin-right: 5px;
+	background: url({STYLEIMGDIR}/tab_list.png) no-repeat;
+	text-align: center;
+}
+.lewei_forumlng_n .lewei_forumlng_l .tb .a a {
+	color: #FFFFFF;
+	font-weight: 600;
+	background-color: #0D9EB9!important;
+}
+.lewei_forumlng_r3 .tb .a a {
+	color: #41A300;
+	border-bottom: 2px solid #41A300;
+	font-weight: 600;
+}
+.lewei_forumlng_n .lewei_forumlng_l .tb a {
+	width: 85px;
+	padding: 0;
+	font-weight: normal;
+}
+.lewei_forumlng_n .lewei_forumlng_l .tb li, .lewei_forumlng_n .lewei_forumlng_l .tb li a {
+	border: none;
+}
+.lewei_forumlng_n .lewei_forumlng_l .tab-title {
+	width: 90% !important;
+	height: 34px;
+	overflow: hidden;
+}
+.lewei_forumlng_n .lewei_forumlng_l .module {
+	background: #fff;
+	border-radius: 5px
+}
+.lewei_forumlng_n .lewei_forumlng_l .module li {
+	width: 99%;
+	padding: 6px 5px 4px 0px;
+	font-size: 14px;
+}
+.lewei_forumlng_n .lewei_forumlng_l .module li .org {
+	color: #0085AB;
+}
+.lewei_forumlng_n .lewei_forumlng_r {
+	width: 480px;
+	height: 293px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	_left: -390px;
+	padding: 10px;
+}
+.lewei_forumlng_n .lewei_forumlng_r .slideshow span.title {
+	width: 340px;
+	text-indent: 0;
+	text-align: center;
+}
+#lewei_forumlng_n1 .tb li a {
+	background: #EFEFEF;
+}
+#lewei_forumlng_n1 .frame-tab .tb {
+	padding-left: 0;
+}
+.leweis1 {
+	color: #ce0000;
+}
+.leweis2 {
+	color: #02A233;
+}
+.leweis3 {
+	color: #A29E0C;
+}
+.lewei_sili {
+	position: relative;
+	overflow: hidden;
+	width: 480px;
+	height: 290px;
+}
+.lewei_sili .lewei_silib {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.lewei_silib a, .lewei_silib a:visited {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+}
+.lewei_silib a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+.lewei_silib img {
+	width: 100%;
+	height: 100%;
+}
+.lewei_sili .slideshow li:hover img {
+	opacity: 1.0;
+	-moz-opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+.lewei_silib span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 40px;
+	text-indent: 10px;
+	line-height: 40px;
+filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#66000000', endColorstr='#66000000');
+	background: rgba(0,0,0,0.4);
+	overflow: hidden;
+}
+.lewei_page {
+	position: absolute;
+	right: 0;
+	bottom: 13px;
+}
+.lewei_sili .lewei_page a, .lewei_sili .lewei_page a:visited {
+	float: left;
+	margin-right: 5px;
+	padding-top: 2px;
+	width: 10px;
+	height: 10px;
+	box-shadow: inset 1px 1px 1px #000;
+	text-align: center;
+	font: 700 12px/15px Simsun;
+	text-indent: 1000px;
+	background: #FFF;
+	overflow: hidden;
+}
+.lewei_sili .lewei_page .on, .lewei_sili .lewei_page .on:visited {
+	text-decoration: none;
+	color: #FFF;
+	background: #0085AB;
+}
+/*hd*/
+.lewei_footer_c img {
+	display: inline!important;
+	vertical-align: middle!important;
+}
+
+#lewei_sliders {
+	margin: 0px auto;
+	width: 830px;
+	overflow: hidden;
+}
+#lewei_imgsw {
+	position: relative;
+}
+#lewei_imgsw, #lewei_imgsw_img {
+	width: 700px;
+	height: 395px;
+	overflow: hidden;
+	float: right;
+}
+#lewei_imgsw_img li {
+	width: 700px;
+	height: 395px;
+	overflow: hidden;
+	float: left;
+	display: none;
+}
+#lewei_imgsw_img img {
+	width: 700px;
+	height: 395px;
+}
+#lewei_imgsw_tx {
+	left: 0px;
+	width: 700px;
+	bottom: 0px;
+	position: absolute;
+	height: 90px;
+	overflow: hidden;
+}
+#lewei_imgsw_tx li {
+	background: url({STYLEIMGDIR}/lewei_imgsw_bg.png) repeat;
+	padding: 10px 30px;
+	height: 70px;
+	color: #fff;
+	display: none;
+}
+#lewei_imgsw_tx li a {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+}
+#lewei_imgsw_tx li a:hover {
+	text-decoration: underline;
+}
+#lewei_imgsw_tx li h3 {
+	margin: 8px 0;
+*margin:8px 0 15px;
+}
+#lewei_imgsw_tx li p {
+	color: #ccc;
+	line-height: 16px;
+	height: 16px;
+	overflow: hidden;
+	font-size: 15px;
+}
+#lewei_btns {
+	width: 119px;
+	height: 395px;
+	color: #111;
+	float: left;
+	overflow: hidden;
+}
+#lewei_btns li {
+    overflow: hidden;
+	cursor: pointer;margin-bottom:10px;*margin-bottom:4px;
+	border-left: 2px solid transparent;padding-left:2px;
+}
+#lewei_btns li:hover {
+	background-color: #ECECEC;
+	border-left: 2px solid #0D9EB9;
+}
+#lewei_btns li.current {
+	background-color: #ECECEC;
+	border-left: 2px solid #0D9EB9;
+}
+#lewei_btns li.current:hover {
+	background-color: #ECECEC;
+	border-left: 2px solid #0D9EB9;
+}
+#lewei_btns a {
+	color: #000;
+}
+#lewei_btns img {
+
+	width: 100%;
+	height: 71px;
+	float: left;
+}
+#lewei_btns .lewei_select_text {
+	height: 20px;
+	font-size: 16px;
+	overflow: hidden;
+	display: block;
+}
+#lewei_btns .lewei_select_text:hover {
+	text-decoration: underline;
+}
+#lewei_btns .lewei_select_date {
+	height: 23px;
+	line-height: 23px;
+	overflow: hidden;
+	display: block;
+	font-size: 13px;
+	overflow: hidden;
+	margin-top: 5px;
+	color: #333;
+}
+/*hd*/
+.pbg {
+	height: 15px!important;}
+.lewei_ztj {
+	margin-top: 5px;
+}
+.lewei_tts dt {
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 500;
+	width: 410px;
+	float: left;
+}
+.lewei_tts dt h2 {
+	float: left;
+	width: 310px;
+}
+.lewei_tts dt h2 a {
+	font-weight: 500;
+	float: left
+}
+.lewei_tts dt {
+	margin: 0px 10px;
+}
+.lewei_tts {
+	border-top: 1px dashed #e4e4e4;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+.lewei_tts dt em {
+	float: right;
+	color: #797979;
+}
+.lewei_tops li {
+	margin: 7px 10px;
+	width: 410px;
+	float: left;
+	overflow: hidden;
+}
+.lewei_tops li h2 a {
+	height: 32px;
+	line-height: 32px;
+	font-size: 17px;
+	font-weight: 500;
+	overflow: hidden;
+	text-align: center;
+	color: #3DA3BF;
+	margin-left: 5px;
+}
+.lewei_tops li h2 {
+	text-align: center;
+}
+.lewei_tops li p {
+	font-size: 14px;
+	height: 20px;
+	overflow: hidden;
+	line-height: 20px;
+	color: #666;
+}
+.lewei_zhd {
+	float: left;
+	width: 385px;
+	height: 340px;
+	margin-right: 13px;
+	overflow: hidden;
+}
+.lewei_topz {
+	float: left;
+	width: 430px;
+	height: 340px;
+	overflow: hidden;
+	background: #fff
+}
+.lewei_hys {
+	position: relative;
+}
+.lewei_hys p a:hover {
+	color: #3DA3BF
+}
+.lewei_hys a img {
+	float: left;
+	margin: 0 20px 0 0;
+	border-radius: 25px;
+}
+.lewei_hys li {
+	float: left;
+	width: 330px;
+	margin: 12px 0 12px 0;
+*margin:12px 0 12px 0
+}
+.lewei_hys span {
+	background: #55C5DA;
+	padding: 3px 5px;
+	position: absolute;
+	right: 0;
+	margin-top: -10px;
+}
+.lewei_hys p a {
+	font-size: 15px;
+	font-weight: 500;
+	color: #000
+}
+.lewei_hys span a {
+	color: #fff;
+	font-weight: 500!important;
+	font-size: 14px!important;
+}
+.lewei_hys span:hover {
+	background: #3DA3BF;
+}
+.lewei_hys em {
+	color: #ce0000;
+	margin: 0 10px 0 0;
+}
+.lewei_rem .lewei_al a {
+	font-size: 15px;
+	font-weight: 500;
+	padding: 0;
+	color: #0E0E0E;
+}
+
+.lewei_rem .lewei_al a:hover {
+	
+	color:#0D9EB9;
+}
+.lewei_rem .lewei_al {
+	padding: 0;
+	margin-top: 8px;
+	line-height: 25px;
+	height: 25px;
+	overflow: hidden;
+	width: 242px;
+}
+.lewei_rem .lewei_al, lewei_rem .lewei_aks, .lewei_rem .lewei_ak {
+*float:left;
+}
+.lewei_rem .m {
+	margin: 6px 8px 0px 0;
+*float:left;
+*height:80px;
+*width:80px;
+}
+.lewei_rem .cl {
+	height: 88px;
+*margin:8px 0;
+}
+.lewei_rem .lewei_aks {
+	margin-bottom: 6px;
+*margin-bottom:0px;
+}
+.lewei_rem .lewei_ak {
+	color: #797979;
+	margin-bottom: 3px;
+}
+#nv_search #toptb {
+	padding: 0!important;
+}
+.fastlg {
+	display: inline-flex;
+	float: right;
+	line-height: 32px;
+}
+.fastlg td {
+	display: inline-flex;
+	padding: 0;
+}
+
+.lw-member img {
+	height: 18px;
+	width: 18px;
+}
+#lw-big, .vwmy {
+	padding-left: 16px;
+	background-position: 0 10px;
+	float: left;
+}
+#flk {
+	text-align: center;
+}

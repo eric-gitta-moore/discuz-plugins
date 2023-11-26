@@ -1,0 +1,32 @@
+{template common/header_ajax}
+<h3 class="flb">
+	<em>{lang ljdaka:daka2}</em>
+		<span><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>
+	
+</h3>
+<div class="f_c" style="width:350px;height:70px;margin:10px;" id="window">
+
+		<style>
+		.qdsmilea{padding:3px;margin:auto;float:left;list-style:none;float:left}
+		.qdsmilea li{float: left;padding:5px .4em;border:2px #fff solid;}
+		.qdsmilea li img{margin-bottom:5px;}
+		.qdsmilea li:hover{cursor:pointer;}
+		.alert_info {
+    background-image: url($dizhi);
+}
+		</style>
+		<div class="c altw"><div class="alert_info">
+		<!--{if $check&&empty($_GET['rid'])}-->
+		<p>{lang ljdaka:daka3}</p>
+		<!--{elseif !$checksql}-->
+		<p>{lang ljdaka:daka4}</p>
+		<p><a href="$url">{lang ljdaka:daka5}</a></p>
+		<!--{else}-->
+		<p>{lang ljdaka:daka6}{$myall}{lang ljdaka:daka7}{lang ljdaka:daka10}{$biglang}{$jljifen2}.</p>
+		<p>{lang ljdaka:daka8}{if $biglang}{$biglang}{else}{$small}-{/if}{$mall}{$_G['setting']['extcredits'][$config['leixing']]['title']}.</p>
+		<!--{/if}--></div></div>
+		
+	
+</div>
+<p class="o pns"><span class="z xg1"><a style="color:#369 !important;text-decoration: underline !important;" target="_blank" href="$url">$wenzi</a></span><button class="pn pnc" value="true" onclick="window.location.href='plugin.php?id=ljdaka:ranklist'"><strong>{lang ljdaka:daka9}</strong></button></p>
+{template common/footer_ajax}

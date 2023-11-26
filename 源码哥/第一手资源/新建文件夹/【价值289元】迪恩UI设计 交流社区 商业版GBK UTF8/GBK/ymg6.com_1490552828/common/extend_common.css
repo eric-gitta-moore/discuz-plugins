@@ -1,0 +1,263 @@
+@charset "utf-8";
+/*模板版权：威海迪恩网络有限公司*/
+/*公司网址：http://www.ymg6.com*/
+/*联系客服QQ：1589787930，客服QQ：2573759829*/
+/*版本：vision1.0*/
+/*----------公共样式-------------*/
+@keyframes pop{
+0%{opacity:0;transform:scale(0.2);-ms-transform:scale(0.2);}
+60%{opacity:0.75;transform:scale(1.1);-ms-transform:scale(1.1);}
+100%{opacity:1;transform:scale(1);-ms-transform:scale(1);}
+}
+@-moz-keyframes pop{
+0%{opacity:0;-moz-transform:scale(0.2);}
+60%{opacity:0.75;-moz-transform:scale(1.1);}
+100%{opacity:1;-moz-transform:scale(1);}
+}
+@-webkit-keyframes pop{
+0%{opacity:0;-webkit-transform:scale(0.2);}
+60%{opacity:0.75;-webkit-transform:scale(1.1);}
+100%{opacity:1;-webkit-transform:scale(1);}
+}
+@-o-keyframes pop{
+0%{opacity:0;-o-transform:scale(0.2);}
+60%{opacity:0.75;-o-transform:scale(1.1);}
+100%{opacity:1;-o-transform:scale(1);}
+}
+@keyframes fastr{
+0%{opacity:0;transform:translate(0,60px);}
+100%{opacity:1;transform:translate(0,0);}
+}
+@-webkit-keyframes fastr{
+0%{opacity:0;-webkit-transform:translate(0,60px);}
+100%{opacity:1;-webkit-transform:translate(0,0);}
+}
+@-moz-keyframes fastr{
+0%{opacity:0;-moz-transform:translate(0,60px);}
+100%{opacity:1;-moz-transform:translate(0,0);}
+}
+@-o-keyframes fastr{
+0%{opacity:0;-o-transform:translate(0,60px);}
+100%{opacity:1;-o-transform:translate(0,0);}
+}
+@keyframes afastr{
+0%{opacity:0;transform:translate(0,-60px);}
+67%{opacity:1;transform:translate(0,0);}
+86%{opacity:1;transform:translate(0,-2px);}
+100%{opacity:1;transform:translate(0,0);}
+}
+@-webkit-keyframes afastr{
+0%{opacity:0;-webkit-transform:translate(0,-60px);}
+67%{opacity:1;-webkit-transform:translate(0,0);}
+86%{opacity:1;-webkit-transform:translate(0,-2px);}
+100%{opacity:1;-webkit-transform:translate(0,0);}
+}
+@-moz-keyframes afastr{
+0%{opacity:0;-moz-transform:translate(0,-60px);}
+67%{opacity:1;-moz-transform:translate(0,0);}
+86%{opacity:1;-moz-transform:translate(0,-2px);}
+100%{opacity:1;-moz-transform:translate(0,0);}
+}
+@-o-keyframes afastr{
+0%{opacity:0;-o-transform:translate(0,-60px);}
+67%{opacity:1;-o-transform:translate(0,0);}
+86%{opacity:1;-o-transform:translate(0,-2px);}
+100%{opacity:1;-o-transform:translate(0,0);}
+}
+.fwinmask{animation-duration:0.2s;-webkit-animation-duration:0.2s;animation-name:pop;-webkit-animation-name:pop;}
+.p_pop{animation-duration:0.2s;-webkit-animation-duration:0.2s;animation-name:afastr;-webkit-animation-name:afastr;}
+.fastpreview{animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-name:afastr;-webkit-animation-name:afastr;}
+.pct{animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-name:fastr;-webkit-animation-name:fastr;}
+#hd h2{animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-name:afastr;-webkit-animation-name:afastr;}
+#um,#toptb,.pns{animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-name:afastr;-webkit-animation-name:afastr;}
+.avt{transition:all .15s ease-out;-webkit-transition:all .15s ease-out;-moz-transition:all .15s ease-out;-o-transition:all .15s ease-out;}
+.avt:hover{transform:scale(1.07);-webkit-transform:scale(1.07);-moz-transform:scale(1.07);-o-transform:scale(1.07);}
+a{transition:all 0.2s linear;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;}
+#ls_username,#ls_password{transition:all 0.25s ease;-webkit-transition:all 0.25s ease;-moz-transition:all 0.25s ease;-o-transition:all 0.25s ease;}
+#ls_username:focus,#ls_password:focus{transform:scale(1.1);-webkit-transform:scale(1.1);-moz-transform:scale(1.1);-o-transform:scale(1.1);}
+.frame-1 { background-color:transparent !important; background-image:none !important; border:0 none !important; margin:0 !important; padding:0 !important; border-width:0px; height: auto }
+.frame-1-c { background-color:transparent !important; background-image:none !important; border:0 none !important; margin:0 !important; padding:0 !important; border-width:0px; height: auto; }
+.move-span{ background-color:transparent !important; background-image:none !important; border:0 none !important; margin:0 !important; padding:0 !important; border-width:0px; height:auto;}
+.move-span .content{ background-color:transparent !important; background-image:none !important; border:0 none !important; margin:0 !important; padding:0 !important; border-width:0px; height:auto;}
+.deangsinfos{animation-duration:0.8s;-webkit-animation-duration:1.4s;animation-name:afastr;-webkit-animation-name:afastr;}
+/*公共样式*/
+a{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+*{ padding:0px;margin:0px;}
+ul li{list-style:none;}
+img{ border:none;}
+.clear{ clear:both;}
+body{ font-family:Microsoft yahei; background:#fff;}
+.w1180{ width:1180px; margin:0 auto;}
+#hd .wp{ padding:0;}
+.hdc{min-height:0;}
+#toptb{ border-bottom:0!important;}
+.wp,#wp{ width:1180px; margin:0 auto;}
+.ct2_a .mn{ width:1010px!important;}
+body#space .block{margin: 0 5px 10px!important;border: 1px solid #DDD!important;background: #FFF;}
+.move-span{ background:none;}
+.tdats .tfxf{ width:865px!important;}
+#hd{ background:#fff;}
+.tdats{ width:1100px;}
+.bm_c ul.xl2{ background:none;}
+.bm_c ul.xl2 li{width: 48%; padding-left:1%:}
+hr.da{ border-top:0;}
+
+.tbn { background: #f3f3f3;}
+.appl li { display: block;  height: 50px; line-height: 50px; white-space: nowrap; word-wrap: normal; font-size: 14px; text-overflow: ellipsis; overflow: hidden;margin: 0 5px;  border-bottom: 1px solid #e6e6e6;}
+.tbn ul a { display: block; height: 50px; line-height: 50px;}
+.tbn li.a { border-left: 3px solid #44A6F2; color: #666;}
+.notice_pm, .notice_mypost, .notice_interactive, .notice_system, .notice_manage, .notice_app{margin: 18px 5px 5px 0;}
+/*快捷导航*/
+.jump_bdl .a a, .jump_bdl .a a:hover{ background:#17A0E8; color:#fff;}
+#qmenu_menu ul.nav a:hover{ background-color:#fff;}
+/*字体颜色*/
+.xi2, .xi2 a, .xi3 a{ color:#288CE6;}
+.bdl dd.bdl_a a,.t_f a{ color:#288CE6!important;}
+.ptg a{ color:#999!important;}
+/*导航部分*/
+#deanheader{ background:#fff; width:100%; min-width:1180px;  top: 0;  left: 0;}
+#deanheader_top{ width:100%; height:48px; line-height:48px; min-width:1180px; background:#036FD3;}
+.deannav{ width:1100px; height:48px; line-height:48px; overflow:hidden; float:left; }
+.deannav ul li{ float:left;}
+.deannav ul li a{display: block; height:48px;line-height: 48px;padding: 0 33px;font-size: 14px; font-weight:normal;color: #fff;  }
+.deannav ul li.a a{text-decoration: none; background:#005FB6;color:#fff;  }
+.deannav ul li a:hover{text-decoration: none;color:#fff; background:#005FB6; }
+.deannav span{ display:none;}
+.deannav ul li.hover a{text-decoration: none;background:#005FB6;color:#fff;  }
+.deansubnav{ float:right;}
+
+.deanheader_bottom{ height:100px; width:100%; min-width:1180px; background:#1886E3;height:50px; padding:25px 0;}
+.deanlogo{ width:316px; height:50px; float:left;    margin-right: 95px;}
+.deansearch{ float:left;}
+/*二级导航*/
+.p_pop a:hover{ background:#fff;}
+#hd .p_pop{ background:#005FB6;color:#555;padding:0!important; border:0; opacity:0.95; filter:alpha(opacity=95); min-width: 150px; }
+#hd .p_pop a{color: #fff; display: block; font-size: 14px; line-height: 24px; padding: 8px 20px; width: 120px;     border-bottom: 1px solid #118bf3;}
+#hd .p_pop a:hover{ color:#fff!important; background:#1886E3;}
+#mu{ border-left:0!important; border-right:0!important; background:#fff; width:1180px; margin:0 auto;}
+#mu ul{ background:#fff!important; background-color:#fff!important; border-bottom:0!important; width:1180px!important; margin:10px auto!important;}
+#mu a{ border:1px solid #fff;color:#555;}
+#mu a:hover{ border:1px solid #fff; background:#F1F1F1;margin: 5px 6px;color:#555; }
+
+/*footer*/
+.deanfooter{ width:100%; min-width:1180px; margin-top:30px; }
+.deanfttop{ padding:42px 0; background:#232426; width:100%; min-width:1180px; height: 123px;}
+.design_f_logo { width: 183px; height: 83px; border-right: 1px solid #37383a; padding: 40px 0 0 0; float: left;}
+.design_f_menu { width: 335px; height: 123px; border-right: 1px solid #37383a; padding: 0 35px; float: left;}
+.design_fm { width: 90px; height: 123px; float: left; padding-left: 20px;}
+.design_fm h2 { font-size: 12px; font-weight: bold; line-height: 38px; display: block; color: #c1c1c1;}
+.design_fm a { font-size: 12px; line-height: 26px; display: block; color: #888;}
+.design_fm a:hover{ color:#4ba9fa;}
+.design_f_about { width: 560px; height: 123px; float: right;}
+.design_f_about h2 { font-size: 12px; font-weight: bold; line-height: 38px; display: block; color: #c1c1c1;}
+.design_f_about p {font-size: 12px; line-height: 20px; display: block; color: #888;}
+
+.deanftbottom{ width:100%; min-width:1180px; background:#0B0C0C; padding:10px 0;}
+.deanftbottom p{font-size:12px; color:#999; height:30px; line-height:30px;}
+.deanftbottom p span{font-size:12px; color:#999;}
+.deanftbottom p a{ font-size:12px; color:#999;}
+.deanftbottom p a:Hover{ color:#288CE6;}
+
+
+/*快捷导航*/
+#qmenu{ padding-top: 12px; width: 32px; height:32px; padding-right:0; margin:0;cursor: pointer;position: relative;background:url({STYLEIMGDIR}/setting.png) center no-repeat;}
+#qmenu.a{ background:url({STYLEIMGDIR}/setting.png) center no-repeat;}
+/*搜索*/
+#scbar{line-height:normal; border:0; background:#fff;  height: 42px; float: left; overflow: hidden; zoom: 1; width:482px; margin: 4px 0;}
+#scbar_txt{ width:430px!important; padding-left:10px; font-family:Microsoft Yahei; color:#666!important;height: 42px;line-height: 42px;font-size: 12px;border:0; background:rgba(255,255,255,0.5); font-weight:normal;}
+#scbar_btn{background:#0062BD url({STYLEIMGDIR}/header/search.png) center no-repeat; border: 0; width: 42px; height: 42px; line-height:42px;}	
+/*登录*/
+#diy-tg{ position:absolute; height:25px; left:-238px; top:10px;}
+/*未登录*/
+.deanunlogin{ float:right; height:41px; line-height:41px; font-size:14px; font-family:microsoft yahei;}
+.deandenglu{ float:right;  width:230px; height:50px;}
+.deandl_before{ text-align:right;margin: 5px 0 0 0; width: 139px; overflow:hidden; float: right;}
+.deanqqs{ float:left;display:inline-block; width:34px; height:34px; line-height:34px; border-radius:100%; border:3px solid #fff;text-align: center; font-size: 12px;  color: #fff; margin-right: 5px; background:#036FD3 url({STYLEIMGDIR}/usermenu/qq.png) center no-repeat; }
+.deandengluanniu{float:left; display:inline-block; width:34px; height:34px; line-height:34px; border-radius:100%; border:3px solid #fff;text-align: center; font-size: 12px;  color: #fff; margin-right: 5px; background:#036FD3; }
+.deanzhuceanniu{float:left;display:inline-block;width:34px; height:34px; line-height:34px; border-radius:100%; border:3px solid #fff; text-align: center;font-size: 12px; background:#036FD3;color:#fff;  }
+.deandengluanniu:hover{ background:#288CE6; color:#fff;}
+.deanzhuceanniu:hover{ background:#fff; color:#288CE6;}
+/*登录*/
+.deanmemberinfo:hover .deanmembercontent{ display:block;}
+.deanmemberinfo{ position:absolute; text-align:center; right:0; top:3px; padding:0; width:170px; z-index:121; height:68px; line-height:50px; font-size:12px; }
+.deanmemberinfo i{width: 9px; height: 5px; display: inline-block; background: url({STYLEIMGDIR}/usermenu/header-down-arrow-w.png) no-repeat; vertical-align: 2px; position: absolute;top: 23px;right: 50px;}
+.deanquit_top{ font-size:14px; float:right; color:#fff;}
+.deanmembercontent{width:237px;position: absolute;top: 58px;padding: 0 10px;padding-top: 10px; display:none;
+right: 0;_right: 84px;background: #FFF;font-size: 12px;font-weight: normal;z-index: 311;border: 1px solid #f1f1f1;
+border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);box-shadow: 0 6px 12px rgba(0,0,0,.175);animation-duration:0.2s;-webkit-animation-duration:0.2s;animation-name:afastr;-webkit-animation-name:afastr;}	
+.deanmembercontent i{position: absolute;top: -13px;left: 192px; height:136px; width:22px; height:13px; background:url({STYLEIMGDIR}/header_login_ico.png) center no-repeat;}
+.deanmc_top{overflow: hidden;margin-bottom: 6px;}	
+.deanmc_tavator{ width:50px; float:left; margin-right:10px;}
+.deanmc_username{ width:100px; float:right;}	
+.deanvwmy1{width: 50px;height: 50px;overflow: hidden;display: block;font-size: 0;line-height: 0;margin-right: 11px;}	
+.deanvwmy1 img{ width:100%; border:0;}		
+.deanmc_username{width: 176px;height: auto;overflow: hidden;position: relative;line-height: 120%;}
+.deanmc_welcome{ width:164px; height:15px; border:1px solid #44A6F2; padding:5px; line-height:15px; font-size:14px; color:#44A6F2; overflow:hidden;}
+.deanmc_un{ width:100%; height:23px; line-height:23px; margin-top: 3px;}
+.deanmc_un span{ display:block; float:left;}
+.deanmc_un a{ font-size:12px; color:#288CE6;}
+.deanmc_un a.deanhyname{ font-size:12px; text-align:left; color:#7b7b7b; display:block; float:left; width:70px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;line-height:23px;}
+.deanmc_un a:hover{ color:#288CE6; }
+
+.deanmc_middle{margin-bottom: 10px; width:237px; height:16px;}
+.deanmc_middle ul li{border-left: #F5F5F5 1px dashed; padding:0 6px 0 0;height: auto;text-align: center;float: left;line-height: 140%;}
+.deanmypost{ background:url({STYLEIMGDIR}/usermenu/new_post.png) left center no-repeat; font-size:12px; color:#7b7b7b; padding-left:20px;line-height: 140%;}
+.deanmypost:hover{ background:url({STYLEIMGDIR}/usermenu/new_post1.png) left center no-repeat; color:#288CE6;}
+.deanmycollection{background:url({STYLEIMGDIR}/usermenu/collection.png) left center no-repeat; font-size:12px; color:#7b7b7b; padding-left:20px;line-height: 140%;}
+.deanmycollection:hover{background:url({STYLEIMGDIR}/usermenu/collection1.png) left center no-repeat; color:#288CE6;}
+.deanfriend{background:url({STYLEIMGDIR}/usermenu/friend.png) left center no-repeat; font-size:12px; color:#7b7b7b; padding-left:20px;line-height: 140%;}
+.deanfriend:hover{background:url({STYLEIMGDIR}/usermenu/friend1.png) left center no-repeat; color:#288CE6; }
+
+.deanmc_bottom{border-top: #F5F5F5 1px solid; width:237px; height:50px; }
+.deanmc_bottom_c{padding-top: 5px;}
+.deanmc_bottom_c a p{ height:20px; line-height:20px;}
+/*消息*/
+.dean_icon1{display: inline-block;width: 16px;height: 17px;margin-bottom: 2px;background: url({STYLEIMGDIR}/usermenu/new_post.png) center no-repeat;}
+.deannewinfo{display: block;float: left;text-align: center;width: 40px;margin-right: 7px;position: relative;color: #7b7b7b; font-size:12px;}
+.deannewinfo:hover{ color:#288CE6; }
+.deannewinfo:hover .dean_icon1{background: url({STYLEIMGDIR}/usermenu/new_post1.png) center no-repeat;}
+/*@我*/
+.deanatme{display: block;float: left;text-align: center;width: 40px;margin-right: 13px;position: relative;color: #7b7b7b; font-size:12px;}
+.dean_icon2{display: inline-block;width: 16px;height: 17px;background:url({STYLEIMGDIR}/usermenu/tongzhi.png) center no-repeat;margin-bottom: 2px;}
+.deanatme:hover{ color:#288CE6; }
+.deanatme:hover .dean_icon2{background: url({STYLEIMGDIR}/usermenu/tongzhi1.png) center no-repeat;}
+/*回复*/
+.deanhuifume{display: block;float: left;text-align: center;width: 26px;margin-right: 26px;position: relative;color: #7b7b7b; font-size:12px;}
+.dean_icon3{display: inline-block;width: 16px;height: 17px;margin-bottom: 2px;background: url({STYLEIMGDIR}/usermenu/huifu.png) center no-repeat;}
+.deanhuifume:hover{ color:#288CE6; }
+.deanhuifume:hover .dean_icon3{background:url({STYLEIMGDIR}/usermenu/huifu1.png) center no-repeat;}
+/*管理*/
+.deanguanli{display: block;float: left;text-align: center;width: 26px;margin-right: 26px;position: relative;color: #7b7b7b; font-size:12px;}
+.dean_icon4{display: inline-block;width: 16px;height: 17px;background:url({STYLEIMGDIR}/usermenu/shezhi.png) center no-repeat;margin-bottom: 2px;}
+.deanguanli:hover{ color:#288CE6;  }
+.deanguanli:hover .dean_icon4{background: url({STYLEIMGDIR}/usermenu/shezhi1.png) center no-repeat;}
+/*退出*/
+.deanquit{display: block;float: left;text-align: center;width: 26px;position: relative;color: #7b7b7b; font-size:12px;}
+.dean_icon5{display: inline-block;width: 16px;height: 17px;background: url({STYLEIMGDIR}/usermenu/tuichu.png) center no-repeat;margin-bottom: 2px;}
+.deanquit:hover{ color:#288CE6;  }
+.deanquit:hover .dean_icon5{background:url({STYLEIMGDIR}/usermenu/tuichu1.png) center no-repeat;}
+/*信息*/
+.deanmc_subs{width: 235px;height: auto;border-top: #F5F5F5 1px solid; padding-top:6px;}
+.deanmc_subs ul{ width:277px;}
+.deanmc_subs ul li{width: 30px;height: auto;float: left;margin-right:39px;text-align: center;padding-bottom: 10px;padding-top: 4px;}
+.deanmc_subs ul li img{display: block;margin: 0 auto 3px auto;}
+.deanmc_subs ul li a{color: #7b7b7b; font-size:12px;}
+.deanmc_subs ul li a:hover{ color:#382822;}
+.deanmc_subs ul li a:hover img{ opacity:0.8;}
+.deanadmin{height: 50px;float: left;width: 45px; font-size:14px;display: block; overflow:hidden; line-height:50px;margin-left: 7px; white-space:nowrap; text-overflow:ellipsis; color:#fff;}
+.deanvwmy{float:left;}
+.deanvwmy img{ width: 42px;height: 42px;border-radius: 100%; border:3px solid #fff;}
+#um dl dd{ float:left; margin-right:5px;}
+
+/**portal::list,portal::list,portal::view,forum::forumdisplay,forum::viewthread,forum::index**/
+#pt{ }
+.nvhm { width:20px;background:url({STYLEIMGDIR}/home.png) no-repeat 0 5px; *margin-top:5px; _margin-top:5px; }
+#pt .z em {background:url({STYLEIMGDIR}/embg.png) no-repeat 3px 10px; }
+.ie8 #pt .z{ line-height:35px;}
+.ie8{background:url({STYLEIMGDIR}/embg.png) no-repeat 3px 0px; }
+.ie8 .nvhm,.ie9 .nvhm,.ie10 .nvhm{background:url({STYLEIMGDIR}/home.png) no-repeat 0 8px;}
+.chart { padding-left: 32px; background: url({STYLEIMGDIR}/chart.png) no-repeat 0 50%; color: #666;}
+#pt .z a,#pt .z{ color:#898787; font-size:14px;}
+#pt .z a:hover{ color:#288CE6; }
+/**end**/

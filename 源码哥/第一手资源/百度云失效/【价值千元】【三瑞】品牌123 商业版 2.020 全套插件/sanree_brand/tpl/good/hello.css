@@ -1,0 +1,1614 @@
+.sanree_brand_newindexbody {
+	width:960px;
+	margin:0 auto;
+}
+.sanree_brand_newindexbody .smallflash{
+	width:960px;
+	height:125px;
+	overflow:hidden;
+	background:#FFFFFF;
+}
+.sanree_brand_newindexbody .smallflash .flashleft{
+	width:731px;
+	height:125px;
+	overflow:hidden;
+	float:left;
+}
+.sanree_brand_newindexbody .smallflash .flashleft .slidebar{
+	display:none;
+}
+.sanree_brand_newindexbody .smallflash .flashright{
+	width:220px;
+	height:125px;
+	overflow:hidden;
+	float:right;
+}
+.sanree_brand_newindexbody .smallflash .flashright .addbutton a {
+	width:219px;
+	height:57px;
+	display:block;
+	background:url('images/hello_add1.gif');
+	background-repeat:no-repeat;
+}
+.sanree_brand_newindexbody .smallflash .flashright .managebtn a {
+	width:219px;
+	height:57px;
+	display:block;
+	background:url('images/hello_manage1.gif');
+	background-repeat:no-repeat;
+	margin-top:10px;
+}
+.sanree_brand_newindexbody .topie6{
+	width:960px;
+	height:300px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .topie6 .flashbar {
+	width:1051px;
+	height:304px;
+	margin-left:-45px;
+	position:absolute;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_left {
+	float:left;
+	width:45px;
+	height:300px;
+	background:url('images/hello_flash_left.gif');
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_right {
+	float:right;
+	width:45px;
+	height:300px;
+	background:url('images/hello_flash_right.gif');
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main {
+	float:left;
+	width:960px;
+	height:300px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .falshad {
+	position:relative;
+	left:0px;
+	width:960px;
+	overflow:hidden
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .falshad ul {
+	zoom:1;
+	width:4800px;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .falshad ul li {
+	float:left;
+	width:960px;
+	height:300px;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .falshad ul li img {
+	width:960px;
+	height:300px;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .filterdiv {
+	filter:alpha(opacity=30);
+	-moz-opacity:0.30;
+	opacity:0.30;
+	width:100%;
+	background:#4C4C4C;
+	height:220px;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox {
+	width:248px;
+	height:220px;
+	margin-left:675px;
+	position:relative;
+	top:-300px;
+	margin-top:32px;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .fshow {
+	position:absolute;
+	top:20px;
+	left:0px;
+	width:100%;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .addbutton {
+	width:199px;
+	height:57px;
+	margin-left:24px;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .addbutton a {
+	width:199px;
+	height:57px;
+	display:block;
+	background:url('images/hello_add.gif');
+	background-repeat:no-repeat;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .managebtn {
+	width:199px;
+	height:57px;
+	margin-left:24px;
+	margin-top:22px;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .managebtn a {
+	width:199px;
+	height:57px;
+	display:block;
+	background:url('images/hello_manage.gif');
+	background-repeat:no-repeat;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .total {
+	margin-left:24px;
+	margin-top:24px;
+	font-size:14px;
+	color:#FFFFFF;
+}
+.sanree_brand_newindexbody .topie6 .flashbar .flash_main .topbox .total span {
+	font-weight:bold;
+	font-size:16px;
+	color:#FF6800;
+}
+.sanree_brand_newindexbody .recommend{
+	background:#FFFFFF;
+	background-image:none;
+}
+.sanree_brand_newindexbody .recommend .hd {
+	width:960px;
+	margin-top:10px;
+	border-bottom:2px solid #444444;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .recommend .hd .ntitle {
+	zoom:1;
+	overflow:hidden;
+	float:left;
+	width:500px;
+}
+.sanree_brand_newindexbody .recommend .hd .ntitle li {
+	font-size:16px;
+	float:left;
+	line-height:23px;
+	margin-right:42px;
+	padding:5px;
+	color:#ADADAD;
+	cursor:pointer;
+	border-bottom:4px solid #FFFFFF;
+}
+.sanree_brand_newindexbody .recommend .hd .ntitle .on {
+	font-size:24px;
+	float:left;
+	color:#444444;
+	border-bottom:4px solid #256DBE;
+}
+.sanree_brand_newindexbody .recommend .hd .ntitle li a{
+	color:#ADADAD;
+	text-decoration:none;
+}
+.sanree_brand_newindexbody .recommend .hd .ntitle .on a{
+	color:#444444;
+	text-decoration:none;
+}
+.sanree_brand_newindexbody .recommend .hd .npage {
+	overflow:hidden;
+	float:right;
+	width:100px;
+	margin-top:10px;
+}
+.sanree_brand_newindexbody .recommend .hd .npage a{
+	color:#A7A7A7;
+}
+
+.sanree_brand_newindexbody .recommend .bd {
+	width:960px;
+	height:138px;
+	padding-top:12px;
+	clear:both;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .recommend .bd .hideitem {
+	display:none;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist {
+	width:2925px;
+	overflow:hidden;
+	zoom:1;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li {
+	float:left;
+	margin-right:15px;
+	height:139px;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_image {
+	position:absolute;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_image img{
+	width:180px;
+	height:135px;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_title {
+	top:108px; 
+	height:27px;
+	line-height:27px;	
+	background:#444444;	
+	width:170px;
+	padding-left:5px;
+	padding-right:5px;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;	
+	position:relative; 	
+	text-align:center; 		
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_title a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li:hover .rec_title {
+	top:103px; 
+	height:32px;
+	line-height:32px;
+	background:#3A7BEC;	
+}
+.sanree_brand_newindexbody .recommend .bd .goodsm li {
+	margin-right:15px;
+}
+.sanree_brand_newindexbody .recommend .bd .couponsm li {
+	margin-right:15px;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .recgoods_image {
+	position:absolute;
+	width:180px;
+	height:135px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .recgoods_image img{
+	width:180px;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .recgoods_sprice {
+	top:108px; 
+	height:27px;
+	line-height:27px;	
+	background:#FF6600;	
+	width:170px;
+	padding-left:5px;
+	padding-right:5px;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;	
+	position:relative; 	
+	text-align:center;
+	visibility:visible;
+	color:#F2F7F5;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .recgoods_sprice a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li:hover .recgoods_sprice {
+	visibility:hidden;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .recgoods_title {
+	top:69px; 
+	height:39px;
+	line-height:20px;
+	background:#444444;	
+	width:170px;
+	padding-left:5px;
+	padding-right:5px;
+	overflow:hidden;
+	position:relative; 	
+	text-align:left;
+	visibility:hidden;
+	color:#F2F7F5;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .recgoods_title a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li:hover .recgoods_title {
+	visibility:visible;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .reccoupon_image {
+	position:absolute;
+	width:180px;
+	height:135px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .reccoupon_image img{
+	width:180px;
+
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .reccoupon_sprice {
+	top:108px; 
+	height:27px;
+	line-height:27px;	
+	background:#3A7BED;	
+	width:170px;
+	padding-left:5px;
+	padding-right:5px;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;	
+	position:relative; 	
+	text-align:center;
+	visibility:visible;
+	color:#F5F5F5;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .reccoupon_sprice a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li:hover .reccoupon_sprice {
+	visibility:hidden;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .reccoupon_title {
+	top:69px; 
+	height:39px;
+	line-height:20px;
+	background:#444444;	
+	width:170px;
+	padding-left:5px;
+	padding-right:5px;
+	overflow:hidden;
+	position:relative; 	
+	text-align:center;
+	visibility:hidden;
+	color:#F5F5F5;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .reccoupon_title a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li:hover .reccoupon_title {
+	visibility:visible;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .tmpleft{
+	float:left;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .tmpright{
+	float:right;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news_bar{
+	width:960px;
+	height:135px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news{
+	width:455px;
+	height:135px;
+	overflow:hidden;	
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news dl{
+	width:280px;
+	height:135px;
+	overflow:hidden;
+	float:left;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news dt{
+	height:25px;
+	line-height:25px;
+	font-size:16px;
+	font-weight:bold;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;		
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news dt a{
+	color:#666666;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news dd{
+	height:28px;
+	line-height:28px;
+	padding-left:10px;
+	background:url(images/square2.jpg) 2px 13px;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;		
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news dd a{
+	color:#676767;
+	font-size:14px;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news .news_image{
+	width:170px;
+	height:135px;
+	overflow:hidden;
+	float:right;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news .news_image .news_img{
+	width:170px;
+	height:75px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news .news_image .news_img img{
+	width:80px;
+	height:60px;
+	float:left;	
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news .news_image .news_img .newsname{
+	float:right;
+	width:80px;
+	height:60px;
+	overflow:hidden;
+	line-height:20px;	
+}
+.sanree_brand_newindexbody .recommend .bd .recommendlist li .rec_news .news_image .news_img .newsname a{
+	color:#676767;
+}
+.sanree_brand_newindexbody .catebar {
+	width:960px;
+	clear:both;
+	margin-top:8px;
+}
+.sanree_brand_newindexbody .catebar .hd {
+	width:960px;
+	height:42px;
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .catebar .hd .mleft {
+	width:57px;
+	height:42px;
+	background:#E3E3E3;
+	float:left;
+}
+.sanree_brand_newindexbody .catebar .hd .sanree_brand_searchbar {
+	width:368px;
+	height:35px;
+	padding-top:7px;
+	float:right;
+}
+.sanree_brand_newindexbody .catebar .hd .sanree_brand_searchbar .mykeyword {
+	width:256px;
+	height:28px !important;	
+	*height:28px !important;
+	height:23px;	
+	line-height:26px !important;
+	*line-height:26px !important;
+	line-height:23px;
+	margin-right:7px !important;
+	*margin-right:7px !important;
+	margin-right:5px;
+	vertical-align:top;
+	color:#B2B2B2;
+	padding:0px 0px 0px 5px;
+	border:none;	
+}
+.sanree_brand_newindexbody .catebar .bd {
+	overflow:hidden;
+	background:#FFFFFF;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar {
+	width:940px;
+	padding:17px 10px 0px 10px;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade {
+	clear:both;
+	overflow:hidden;
+	zoom:1;
+	margin-bottom:5px;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .stitle {
+	float:left;
+	padding-right:10px;
+	line-height:25px;
+	color:#333333;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul {
+	zoom:1;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul li {
+	line-height:25px;
+	float:left;
+	margin-left:2px;
+	margin-right:2px;
+	display:inline;
+	white-space:nowrap;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul li a {
+	padding:2px 7px 0px 7px;
+	display:block;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul .a a {
+	display:block;
+	color:#FFFFFF;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul .cateon a {
+	display:block;
+	color:#FFFFFF;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .subcate {
+	margin-top:6px;
+	margin-bottom:5px;
+	padding:5px 0px 3px 0px;
+	border-top:1px dashed #EEEEEE;
+	zoom:1;
+	float:left;
+	clear:both;
+	width:100%;	
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .subcate li {
+	display:inline;
+	white-space:nowrap;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .pd10 {
+	padding-top:5px;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .slist {
+	overflow:hidden;
+	float:right;
+	width:894px;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .dsubcate {
+	padding-bottom:5px;
+	padding-top:5px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .dsubcate ul {
+	zoom:1;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .dshow2 {
+	border-top:1px dashed #EEEEEE;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .dshow3 {
+	border-top:1px dashed #EEEEEE;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .dshow4 {
+	border-top:1px dashed #EEEEEE;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul li a {
+	color:#676767;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul .a a {
+	background:#3A7BEC;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade ul .cateon a {
+	background:#3A7BEC;
+}
+.sanree_brand_newindexbody .catebar .bd .sortedbar .strade .dshow {
+	border-top:1px dashed #EEEEEE;
+}
+.sanree_brand_newindexbody .indexmainbody{
+	clear:both;
+	width:960px;
+	margin:10px auto;
+	color:#757575;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft{
+	width:660px;
+	float:left;
+	border-top:4px solid #3A7CED;
+	overflow:hidden;
+	background:#FFFFFF;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .option{
+	width:100%;
+	height:43px;
+	background:#F8F8F8;
+} 
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort{
+	padding:0;
+	margin:0;
+	list-style:none;
+	float:left;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort li{
+	padding:0;
+	margin:0;
+	list-style:none;
+	float:left;
+	width:46px;
+	height:28px;
+	padding-left:18px;
+	padding-top:15px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .ordertime{
+	border-right:1px solid #EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .ordertimeon{
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .ordertimeon a{
+	font-weight:bold;
+	color:#434343;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderview{
+	border-left:1px solid #FFFFFF;
+	border-right:1px solid #EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderviewon{
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderviewon a{
+	font-weight:bold;
+	color:#434343;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderrecommend{
+	border-left:1px solid #FFFFFF;
+	border-right:1px solid #EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderrecommendon{
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderrecommendon a{
+	font-weight:bold;
+	color:#434343;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderdiscount{
+	border-left:1px solid #FFFFFF;
+	border-right:1px solid #EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderdiscounton{
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderdiscounton a{
+	font-weight:bold;
+	color:#434343;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderclick{
+	border-left:1px solid #FFFFFF;
+	border-right:1px solid #EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderclickon{
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderclickon a{
+	font-weight:bold;
+	color:#434343;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderexponent{
+	border-left:1px solid #FFFFFF;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderexponenton{
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .orderexponenton a{
+	font-weight:bold;
+	color:#434343;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .sort .clear_border{
+	border-right:none;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .listmode{
+	padding:0;
+	margin:0;
+	list-style:none;
+	float:right;
+	margin-top:6px;
+	margin-right:8px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .listmode li{
+	float:left;
+	width:25px;
+	height:24px;
+	margin-right:1px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .listmode li img{
+	width:25px;
+	height:24px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items{
+	zoom:1;
+	width:675px;
+	margin-top:11px;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li{
+	float:left;
+	margin-bottom:13px;
+	margin-right:15px;
+	width:322px;
+	height:170px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .businestop{
+	width:322px;
+	height:170px;
+	position:absolute;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items .dtop .businestop em {
+	position:absolute;
+	width:37px;
+	display:block;
+    background:url("images/emtop.png") !important;
+    *background:url("images/emtop.png") !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand/tpl/good/images/emtop.png",sizingMethod="scale");
+	height:34px;
+	right:0px;
+	top:0px;
+	z-index:10;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items .drec .businestop em {
+	position:absolute;
+	width:37px;
+	display:block;
+    background:url("images/emrec.png") !important;
+    *background:url("images/emrec.png") !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand/tpl/good/images/emrec.png",sizingMethod="scale");
+	height:34px;
+	right:0px;
+	top:0px;
+	z-index:10;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .businestop .brlogo{
+	width:322px;
+	height:242px;
+	background:url('images/loading.gif') no-repeat center 40px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .onedata1{
+	width:322px;
+	height:270px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .onedata1 .businesinfobar{
+	top:142px;
+	height:30px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .businesinfobar{
+	width:100%;
+	position:relative;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .businesinfobar .bfilterdiv {
+	filter:alpha(opacity=80);
+	-moz-opacity:0.80;
+	opacity:0.80;
+	width:100%;
+	background:#4f4f4f;
+	height:80px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .businesinfobar .bfshow {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#FFFFFF;
+	line-height:25px;
+	padding-top:5px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .businesinfobar .bfshow .sbusinesname {
+	width:310px;
+	height:25px;
+	overflow:hidden;
+	padding-left:10px;
+	padding-right:10px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .businesinfobar .bfshow a{
+	color:#FFFFFF;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate{
+	height:25px;
+	padding:5px 6px 3px 6px;
+	line-height:25px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .nstart{
+	float:right;
+	width:92px;
+	height:17px;
+	background:url('images/okstar2.gif');
+	background-repeat:no-repeat;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .okstar{
+	height:17px;
+	background:url('images/okstar1.gif');
+	background-repeat:no-repeat;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .wt0{
+	width:0px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .wt1{
+	width:20%;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .wt2{
+	width:40%;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .wt3{
+	width:80%;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .wt4{
+	width:80%;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate .wt5{
+	width:100%;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate a{
+	width:25px;
+	height:18px;
+	overflow:hidden;
+	display:block;
+	float:left;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .operate img{
+	vertical-align:top;
+	width:18px;
+	height:18px;
+	margin-right:4px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .onedata2{
+	width:322px;
+	height:293px;
+	overflow:hidden;
+	position:absolute;
+	z-index:11;
+	background:#ffffff;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .onedata2 .businesinfobar{
+	top:230px;
+	height:60px;
+	overflow:hidden;
+	background:#676767;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist2 .items li .onedata2 .businestop{
+	width:322px;
+	height:242px;
+}
+/****************************************************************/
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items{
+	zoom:1;
+	width:675px;
+	margin-top:1px;
+	overflow:hidden;
+	padding-bottom:20px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li{
+	width:655px;
+	height:115px;	
+	overflow:hidden;
+	border-bottom:1px dashed #EFEFEF;
+	padding-top:15px;
+	overflow:hidden;
+	padding-left:5px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li:hover{
+	background:#F8F8F8;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .itemlogo{
+	width:130px;
+	height:130px;
+	overflow:hidden;
+	float:left;
+	position:absolute;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items .dtop .itemlogo em {
+	position:absolute;
+	width:37px;
+	display:block;
+    background:url("images/emtop2.png") !important;
+    *background:url("images/emtop2.png") !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand/tpl/good/images/emtop2.png",sizingMethod="scale");
+	height:34px;
+	left:0px;
+	top:0px;
+	z-index:10;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items .drec .itemlogo em {
+	position:absolute;
+	width:37px;
+	display:block;
+    background:url("images/emrec2.png") !important;
+    *background:url("images/emrec2.png") !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand/tpl/good/images/emrec2.png",sizingMethod="scale");
+	height:34px;
+	left:0px;
+	top:0px;
+	z-index:10;
+}
+
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .itemlogo img{
+	width:130px;
+	height:98px;
+	background:url('images/loading.gif') no-repeat center;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .exponent{
+	float:right;
+	width:90px;
+	height:130px;
+	line-height:100px;
+	color:#D9D9D9;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .exponent .eavl_ft22{
+	font-size:22px;
+	font-weight:bold;
+	font-style:italic;
+	color:#FB6705;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .exponent .eavl_ft14{
+	font-size:14px;
+	font-weight:bold;
+	font-style:italic;
+	color:#FB6705;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .businesinfobar{
+	float:right;
+	width:425px;
+	height:130px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .businesinfobar .sbusinesname{
+	font-size:14px;
+	font-weight:bold;
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+}
+
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .businesinfobar .stele{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .businesinfobar .saddress{
+	height:30px;
+	line-height:25px;
+	overflow:hidden;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .businesinfobar .operate{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist1 .items li .businesinfobar .operate img{
+	vertical-align:top;
+	margin-right:5px;
+}
+/****************************************************************/
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items{
+	zoom:1;
+	width:675px;
+	margin-top:11px;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li{
+	width:210px;
+	height:257px;
+	margin-bottom:16px;
+	float:left;
+	margin-right:15px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .itemlogo{
+	width:210px;
+	height:158px;
+	position:absolute;
+	overflow:hidden;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items .dtop .itemlogo em {
+	position:absolute;
+	width:37px;
+	display:block;
+    background:url("images/emtop.png") !important;
+    *background:url("images/emtop.png") !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand/tpl/good/images/emtop.png",sizingMethod="scale");
+	height:34px;
+	right:0px;
+	top:0px;
+	z-index:10;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items .drec .itemlogo em {
+	position:absolute;
+	width:37px;
+	display:block;
+    background:url("images/emrec.png") !important;
+    *background:url("images/emrec.png") !important;
+    background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="source/plugin/sanree_brand/tpl/good/images/emrec.png",sizingMethod="scale");
+	height:34px;
+	right:0px;
+	top:0px;
+	z-index:10;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .itemlogo img{
+	width:210px;
+	height:158px;
+	background:url('images/loading.gif') no-repeat center;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar{
+	width:100%;
+	height:80px;
+	position:relative;
+	top:158px;
+}
+
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .iteminfo{
+	width:210px;
+	height:56px;
+	overflow:hidden;
+	background:#F8F8F8;
+	padding-top:7px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .iteminfo .sbusinesname{
+	padding-left:7px;
+	line-height:25px;
+	display:block;	
+	width:195px;
+	height:25px;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;	
+	color:#434343;		
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .iteminfo .sbusinesname a{
+	color:#434343;
+	font-size:13px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .iteminfo .stele{
+	padding-left:7px;
+	line-height:25px;
+	display:block;	
+	width:195px;
+	height:25px;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	color:#434343;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .operate{
+	height:27px;
+	overflow:hidden;
+	background:#EDEDED;
+	padding-left:6px;
+	padding-top:9px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .operate img{
+	vertical-align:top;
+	margin-right:4px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .operate .nstart{
+	float:right;
+	width:50px;
+	color:#444444;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .operate .nstart .eavl_ft16{
+	font-size:16px;
+	font-weight:bold;
+	font-style:italic;
+	color:#FB6705;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyleft .businesslist3 .items li .businesinfobar .operate .nstart .eavl_ft9{
+	font-size:9px;
+	font-weight:bold;
+	font-style:italic;
+	color:#FB6705;
+}
+/*************************************************************/
+.sanree_brand_newindexbody .indexmainbody .bodyleft .pager{
+	clear:both;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright{
+	float:right;
+	border-top:4px solid #E3E3E3;
+	width:290px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .new_brand{
+	width:290px;
+	background:#F8F8F8;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .new_brand .hd{
+	font-size:18px;
+	color:#3A7CED;
+	padding-left:15px;
+	border-bottom:1px solid #E7E7E7;
+	padding-top:8px;
+	height:34px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .new_brand .bd ul{
+	padding-top:6px;
+	padding-left:32px;
+	overflow:hidden;
+	border-top:1px solid #FFFFFF;
+	zoom:1;
+	width:247px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .new_brand .bd ul li{
+	line-height:30px;
+	padding-left:10px;
+	margin-left:5px;
+	list-style-type:square;
+	list-style-image:url(images/square.jpg);
+	height:30px;
+	white-space:nowrap;
+	word-wrap:normal;
+	font-size:13px;
+}
+
+.sanree_brand_newindexbody .indexmainbody .bodyright .new_brand .bd ul .top2{
+	list-style-type:square;
+	list-style-image:url(images/square_blue.jpg);	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .hot_brand{
+	width:290px;
+	background:#F8F8F8;
+	overflow:hidden;
+	padding-bottom:20px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .hot_brand .hd{
+	padding:0;
+	margin:0;
+	font-size:18px;
+	color:#3A7CED;
+	padding-top:6px;
+	padding-left:15px;
+	padding-bottom:10px;
+	border-bottom:1px solid #E7E7E7;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .hot_brand .bd{
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .hot_brand .bd ul{
+	padding-top:6px;
+	padding-left:32px;
+	border-top:1px solid #FFFFFF;
+	overflow:hidden;
+	zoom:1;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .hot_brand .bd ul .top2{
+	list-style-type:square;
+	list-style-image:url(images/square_blue.jpg);	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .hot_brand .bd ul li{
+	line-height:30px;
+	padding-left:10px;
+	margin-left:5px;
+	list-style-type:square;
+	list-style-image:url(images/square.jpg);
+	height:30px;
+	white-space:nowrap;
+	word-wrap:normal;
+	font-size:13px;		
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .indexmadv{
+	margin-top:10px;
+	width:290px;
+	height:182px;
+	overflow:hidden;
+	clear:both;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .indexmadv img{
+	width:290px;
+	height:182px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab{
+	margin-top:10px;
+	width:290px;
+	color:#898989;
+	overflow:hidden;
+	background:#FFFFFF;
+	overflow:hidden;	
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabHead{
+	font-size:14px;
+	width:291px;
+	height:34px;
+	list-style:none;
+	zoom:1;
+	background:#EDEDED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabHead li{
+	float:left;
+	height:34px;
+	width:96px;
+	line-height:36px;
+	text-align:center;
+	font-weight:bold;
+	background:#EDEDED;
+	border-left:1px solid #FFFFFF;
+	cursor:pointer;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabHead .c_active{
+	background:#3A7CED;
+	color:#FFFFFF;
+	border-left:1px solid #3A7CED;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody{
+	width:290px;
+	margin-top:6px;
+	list-style:none;
+	padding:5px 0px 0px 0px;
+	margin:0;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list{
+	width:290px;
+	display:none;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_current{
+	display:block;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	width:290px;
+	zoom:1;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li{
+	width:290px;
+	padding:6px 3px 6px 0px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_img{
+	float:left;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_img img{
+	width:80px;
+	height:80px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li:hover .prod_img img{
+	width:80px;
+	height:80px;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.50;
+	opacity:0.50;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_desc{
+	width:195px;
+	height:80px;
+	float:right;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_title {
+	display:block;
+	width:195px;
+	padding-right:5px;
+	height:40px;
+	font-size:12px;
+	line-height:20px;
+	overflow:hidden;
+	font-size:13px;		
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_title a{
+	color:#888888;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .news_title{
+	height:20px;
+	padding-left:32px;
+	background:url(images/square1.jpg) 15px 7px;
+	background-repeat:no-repeat;
+	line-height:20px;
+	overflow:hidden;
+	word-wrap:normal;
+	white-space:nowrap;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;	
+}
+
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .news_title a{
+	color:#8A8A8A;
+	font-size:14px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_price{
+	color:#898989;
+	text-decoration:line-through;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_minprice{
+	color:#FF6702;
+	font-weight:bold;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .coupon_price{
+	color:#898989;
+	text-decoration:line-through;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .coupon_minprice{
+	color:#FF6702;
+	font-weight:bold;
+	margin-left:10px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .coupon_enddate{
+	color:#CFCFCF;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .modtab .c_tabBody .c_list ul li .prod_tele{
+	display:block;
+	width:200px;
+	height:24px;
+	margin-top:4px;
+	font-size:12px;
+	line-height:24px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service{
+	width:290px;
+	margin-top:10px;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service h1{
+	padding:0;
+	margin:0;
+	background-color:#3A7CED;
+	color:#FFFFFF;
+	font-size:14px;
+	font-weight:bold;
+	line-height:40px;
+	text-align:left;
+	text-indent:12px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service .serv_info{
+	width:276px;
+	height:86px;
+	background-color:#F9F9F9;
+	padding-top:14px;
+	padding-left:14px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service .serv_info .nqq{
+	vertical-align:middle;
+	margin-right:5px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service .serv_info .ntime{
+	margin-right:5px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service .serv_info .mta5{
+	margin-top:3px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service .serv_info img{
+	vertical-align:middle;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .service p{
+	padding:0;
+	margin:0;
+	color:#4C4C4C;
+	line-height:24px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .orange14{
+	color:#FF7800;
+	font-size:18px;
+	margin-left:5px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright{
+	width:290px;
+	height:86px;
+	font-size:12px;
+	margin-top:10px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright p{
+	margin-top:10px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright .copylogo{
+	width:70px;
+	float:left;
+	border-right:1px solid #D0D0D0;
+	text-align:center;
+	padding:0 8px;
+	background:#E5E5E5;
+	height:86px;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright .brand{
+	width:188px;
+	height:86px;
+	float:left;
+	padding-left:14px;
+	line-height:16px;
+	background-color:#F6F6F6;
+	border-left:1px solid #FFFFFF;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright .brand a{
+	color:#A8A8A8;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright .pcolor{
+	color:#3A7CED;
+	font-weight:bold;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright .pcolor1{
+	color:#FD0095;
+	font-weight:bold;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright .pcolor2{
+	color:#04679E;
+	font-weight:bold;
+}
+.sanree_brand_newindexbody .indexmainbody .bodyright .copyright .pcolor3{
+	color:#A8A8A8;
+	height:22px;
+	line-height:22px;
+}
+.nobusinesses{
+	margin-top:11px;
+}
+.bigPage {
+	clear:both;
+}
+.bigPage A {
+	POSITION:relative;
+	TEXT-ALIGN:center;
+	LINE-HEIGHT:37px;
+	MARGIN:0px 5px;
+	WIDTH:37px;
+	DISPLAY:inline-block;
+	BACKGROUND:url(images/bigPage.png) no-repeat left top;
+	HEIGHT:37px;
+	COLOR:#7f7f7f;
+	FONT-SIZE:14px;
+	FONT-WEIGHT:bold;
+	TEXT-DECORATION:none
+}
+.bigPage A.selected {
+	BACKGROUND:url(images/bigPage.png) no-repeat left -111px;
+	COLOR:#fff;
+	CURSOR:default
+}
+.bigPage A.selected:hover {
+	BACKGROUND:url(images/bigPage.png) no-repeat left -111px;
+	COLOR:#fff;
+	CURSOR:default
+}
+.bigPage B {
+	LINE-HEIGHT:37px;
+	MARGIN:0px 5px;
+	DISPLAY:inline-block
+}
+.bigPage A:hover {
+	BACKGROUND:url(images/bigPage.png) no-repeat left -37px
+}
+.bigPage A.down {
+	BACKGROUND:url(images/bigPage.png) no-repeat left -74px
+}
+.pagePrev B {
+	BORDER-BOTTOM:#F5F5F5 6px solid;
+	POSITION:absolute;
+	BORDER-LEFT:#F5F5F5 6px solid;
+	LINE-HEIGHT:0;
+	WIDTH:0px;
+	HEIGHT:0px;
+	FONT-SIZE:0px;
+	BORDER-TOP:#F5F5F5 6px solid;
+	TOP:12px;
+	CURSOR:pointer;
+	BORDER-RIGHT:#4e4e4e 6px solid;
+	LEFT:9px
+}
+.pageNext B {
+	BORDER-BOTTOM:#F5F5F5 6px solid;
+	POSITION:absolute;
+	BORDER-LEFT:#4e4e4e 6px solid;
+	LINE-HEIGHT:0;
+	WIDTH:0px;
+	HEIGHT:0px;
+	FONT-SIZE:0px;
+	BORDER-TOP:#F5F5F5 6px solid;
+	TOP:12px;
+	CURSOR:pointer;
+	BORDER-RIGHT:#F5F5F5 6px solid;
+	LEFT:16px
+}
+.bigPage A.pageDisabled {
+	BACKGROUND:url(images/bigPage.png) no-repeat left -148px;
+	COLOR:#c1c1c1;
+	CURSOR:default
+}
+.bigPage A.pageDisabled.pageNext B {
+	BORDER-BOTTOM-COLOR:#F0F0F0;
+	BORDER-TOP-COLOR:#F0F0F0;
+	BORDER-RIGHT-COLOR:#F0F0F0;
+	BORDER-LEFT-COLOR:#c1c1c1;
+	CURSOR:default
+}
+.bigPage A.pageDisabled.pagePrev B {
+	BORDER-BOTTOM-COLOR:#F0F0F0;
+	BORDER-TOP-COLOR:#F0F0F0;
+	BORDER-RIGHT-COLOR:#c1c1c1;
+	BORDER-LEFT-COLOR:#F0F0F0;
+	CURSOR:default
+}
+.isTxtBig {
+	BORDER-BOTTOM:#c1c1c1 1px solid;
+	BORDER-LEFT:#c1c1c1 1px solid;
+	PADDING-BOTTOM:0px;
+	LINE-HEIGHT:35px;
+	PADDING-LEFT:5px;
+	PADDING-RIGHT:5px;
+	BACKGROUND:url(images/inputbg.gif) #fbfbfb repeat-x left top;
+	HEIGHT:35px;
+	COLOR:#333;
+	BORDER-TOP:#c1c1c1 1px solid;
+	BORDER-RIGHT:#c1c1c1 1px solid;
+	PADDING-TOP:0px
+}
+.focus.isTxtBig {
+	BACKGROUND-COLOR:#fff;
+	COLOR:#000
+}
+.w30 {
+	width:30px;
+}
+.center {
+	TEXT-ALIGN:center
+}
+.vm * {
+	DISPLAY:inline-block;
+	VERTICAL-ALIGN:middle
+}
+.vm OPTION {
+	DISPLAY:block
+}
+.pt20 {
+	PADDING-TOP:6px
+}
+.pb30 {
+	PADDING-BOTTOM:15px
+}
+.bigPage A {
+	POSITION: relative; TEXT-ALIGN: center; LINE-HEIGHT: 37px; MARGIN: 0px 5px; WIDTH: 37px; DISPLAY: inline-block; BACKGROUND: url(images/skin1.gif) no-repeat -183px top; HEIGHT: 37px; COLOR: #7f7f7f; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.bigPage A.selected {
+	BACKGROUND: url(images/skin1.gif) no-repeat -183px -111px; COLOR: #fff; CURSOR: default
+}
+.bigPage A.selected:hover {
+	BACKGROUND: url(images/skin1.gif) no-repeat -183px -111px; COLOR: #fff; CURSOR: default
+}
+.bigPage A:hover {
+	BACKGROUND: url(images/skin1.gif) no-repeat  -183px -37px
+}
+.bigPage A.down {
+	BACKGROUND: url(images/skin1.gif) no-repeat  -183px -74px
+}
+.bigPage A.pageDisabled {
+	BACKGROUND: url(images/skin1.gif) no-repeat  -183px -148px; COLOR: #c1c1c1; CURSOR: default
+}
+.sanree_brand_newindexbody .helpbar{
+	width:960px;
+	clear:both;
+	margin:10px auto 10px auto;
+	height:155px;
+	line-height:24px;
+	color:#8B8B8B;
+	background-color:#F9F9F9;
+	overflow:hidden;
+}
+.sanree_brand_newindexbody .helpbar a{
+	color:#8C8C8C;
+}
+.sanree_brand_newindexbody .helpbar ul li{
+	float:left;
+}
+.sanree_brand_newindexbody .helpbar ul li dl{
+	list-style:none;
+	margin-top:17px;
+}
+.sanree_brand_newindexbody .helpbar ul li dl dt{
+	font-size:14px;
+	font-weight:bold;
+	padding:9px 0px;
+}
+.sanree_brand_newindexbody .helpbar ul li .h_intro{
+	background:url(images/intro.jpg) no-repeat;
+	width:150px;
+	padding-left:28px;
+	margin-left:25px;
+}
+
+.sanree_brand_newindexbody .helpbar ul li .h_rank{
+	background:url(images/rank.jpg) no-repeat;
+	width:150px;
+	padding-left:40px;
+	margin-left:15px;
+}
+.sanree_brand_newindexbody .helpbar ul li .h_help{
+	background:url(images/help.jpg) no-repeat;
+	width:150px;
+	padding-left:38px;
+	margin-left:8px;
+}
+.sanree_brand_newindexbody .helpbar ul li .h_recommend{
+	width:150px;
+	background:url(images/recommend.jpg) no-repeat;
+	padding-left:35px;
+	margin-left:14px;
+}
+.sanree_brand_newindexbody .helpbar ul li .h_join{
+	background:url(images/join.jpg) no-repeat;
+	width:120px;
+	padding-left:32px;
+}

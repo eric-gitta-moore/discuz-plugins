@@ -1,0 +1,142 @@
+
+/**********common**********/
+/*去除A标签点击后的虚线框 begin*/
+a {
+	outline: none;
+}
+
+a:active {
+	star: expression(this.onFocus = this.blur () );
+}
+
+:focus {
+	outline: 0;
+}
+
+/*end*/ /*透明背景*/
+.lev_opcty {
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+/*end*/
+.lev_ie6fixed {
+	position: fixed;
+	_position: absolute;
+	_top: expression(eval(document.documentElement.scrollTop +  
+		document.documentElement.scrollTop *   0) );
+}
+pre p.pre {
+	height: auto;
+	overflow: hidden;
+	text-align: justify;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.imghor .sa a {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	border: 2px solid #FFF;
+	text-align:center;
+	margin:2px;
+}
+.imghor .sa a img {border:1px solid #ddd;}
+.imghor .sa a:hover {border: 2px solid #006A92;}
+.imghor .sa a.simg {border: 2px solid #006A92;}
+.imghor .sa a.simg em {
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+	overflow: hidden;
+	background: url(temper_120718.gif) no-repeat;
+}
+
+/**********common**********/
+
+.rfm.myform_box {width:auto;}
+.myform_box th, 
+.myform_box td {padding:6px 2px;}
+.myform_box th {padding-right:6px;}
+.tips-1 {color:#888;display:block;}
+
+.checkbox-1 input, 
+.radio-1 input {
+    margin-right: 0;
+    margin-top:0;
+    vertical-align: middle;
+}
+.dspblock {display:block;}
+.textarea-1 textarea {height:70px;}
+
+
+.checkbox {
+    vertical-align: middle;
+}
+.checkbox.ckall {margin-left:15px;}
+
+
+.infos-1 {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 5px;
+}
+
+pre {
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.order_css {float:left;color:#f60;font-size:14px;padding-right:5px;}
+
+.pn.pnc {
+    padding: 0px 8px;
+}
+
+#pt {margin:auto;}
+
+.form_bigbox {width:640px;overflow:hidden;background:rgb(0, 102, 0);margin:2px auto 25px;}
+
+.form_box_2, .form_box_1 {margin:20px;overflow:hidden;background:#fff;}
+
+.form_box_1 {box-shadow:0 1px 5px rgba(35, 25, 25, 0.5);}
+.form_box_2 {box-shadow:0 1px 5px rgba(35, 25, 25, 0.5);margin-top:0;}
+.form_top_d {height:35px;background:rgb(51, 153, 0)}
+.form_top_d2 {padding:0 10px 10px;}
+
+.formname {font-size:24px;font-weight:bold;}
+
+/* ----------------------------------
+CSS file for Discuz! x3.3 By moqu8.com
+(C) moqu8.com
+http://www.moqu8.com
+Design QQ  2575.163.778
+update:2017-01-01 20:06
+---------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

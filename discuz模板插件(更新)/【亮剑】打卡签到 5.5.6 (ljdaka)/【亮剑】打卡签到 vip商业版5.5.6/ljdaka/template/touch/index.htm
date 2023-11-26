@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+ <meta name="MobileOptimized" content="320">
+ <title>{lang ljdaka:m1}_{$_G['setting']['bbname']}_{lang ljdaka:m2}</title>
+ <meta name="keywords" content="{lang ljdaka:m1},{$_G['setting']['bbname']},{lang ljdaka:m2}">
+ <meta name="description" content="{lang ljdaka:m1}_{$_G['setting']['bbname']}_{lang ljdaka:m2}">
+ <link rel="stylesheet" href="{STATICURL}image/mobile/style.css" type="text/css" media="all">
+ <script type="text/javascript" src="source/plugin/ljdaka/js/jquery.js"></script>
+ <script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]';</script>
+ <script src="{STATICURL}js/mobile/common.js?{VERHASH}" charset="{CHARSET}"></script>
+<link rel="stylesheet" type="text/css" href="source/plugin/ljdaka/css/mobile.css">
+<link rel="stylesheet" type="text/css" href="source/plugin/ljdaka/css/profile.css">
+<style type='text/css'>
+.g-submit.exchange-now {
+  background-color: green;
+  cursor: pointer;
+}
+.g-submit {
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  font-size: 28px;
+  height: 41px;
+  line-height: 41px;
+  margin-top: 0px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+.avatar {
+	display: inline-block;
+	vertical-align: top;
+}
+.avatar .pic {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	vertical-align: top;
+	background-image: url({eval echo avatar($_G['uid'],'middle',true);});
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.ft {
+margin: 2px 0 2px 2px;
+padding: 1px;
+}
+
+p {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+.footer {
+text-align: center;
+line-height: 2em;
+color: #A5A5A5;
+padding: 10px 0 0 0;
+}
+</style>
+<script type="text/javascript">
+function tips(txt, fun) {
+	$('.tips').remove();
+	var div = $('<div style="background: url(source/plugin/ljdaka/images/tips.png);max-width: 85%;min-height: 77px;min-width: 270px;position: absolute;left: -1000px;top: -1000px;text-align: center;border-radius:10px;"><span style="color: #ffffff;line-height: 77px;font-size: 23px;">' + txt + '</span></div>');
+	$('body').append(div);
+	div.css('zIndex', 9999999);
+	div.css('left', parseInt(($(window).width() - div.width()) / 2));
+	var top = parseInt($(window).scrollTop() + ($(window).height() - div.height()) / 2);
+	div.css('top', top);
+	setTimeout(function() {
+	div.remove();
+	if (fun) {
+	fun();
+	}
+	}, 3000);
+	}
+</script>
+ </head>
+<body>
+<div class="profile" data-hook="mine-cover" style="background-image: url({$config['bg']}); background-size: cover;">           <div class="txt">        <div class="infos">            <span class="col">                <b class="name">{$_G['username']}</b>                            </span>        </div>    </div>   <div class="img">        <div class="avatar">        <b class="pic loaded" style="background-image: url({eval echo avatar($_G['uid'],'middle',true);});"></b>        </div>    </div>    </div>
+
+<nav class="profile-nav">        <a>            {lang ljdaka:m3}<em style="margin-top:3px;font-size:16px">{if $ranklist_br[$_G['uid']]['rank_br']}$ranklist_br[$_G['uid']]['rank_br']{else}0{/if}</em>        </a>        <a>            <i class="split-l"></i><i class="split-r"></i>            {lang ljdaka:m4}            <em style="margin-top:3px;font-size:16px">{if $userdata['money']}$userdata['money']{else}0{/if}</em>        </a>        <a>            <i class="split-l"></i><i class="split-r"></i>            {lang ljdaka:m5}            <em style="margin-top:3px;font-size:16px">{if $count}$count{else}0{/if}</em>        </a>        <a>            <i class="split-l"></i><i class="split-r"></i>            {lang ljdaka:m6}            
+<em style="margin-top:3px;font-size:16px">
+{if $userdata['fen']}$userdata['fen']{else}0{/if}
+</em>        </a>    </nav>
+
+
+<div class="pr_show_btn" style="margin-top:10px;margin-bottom:10px;">
+<div  class="g-submit exchange-now" id="exchange-submit-btn" onclick="$.get('plugin.php?id=ljdaka:newmobile&newmobile=1',function(msg){tips(msg);})">{lang ljdaka:m7}</div>
+</div>
+
+<div class="mod-con bangdan">
+<ul class="mod-tag">
+<li class="hotBang {if empty($_GET['mod'])}on{/if}"><a {if empty($_GET['mod'])}style="color:#FF8800"{/if} href="plugin.php?id=ljdaka:ranklist">{lang ljdaka:m8}</a></li>
+<li class="newBang {if $_GET['mod'] == 'y'}on{/if}"><a {if $_GET['mod'] == 'y'}style="color:#FF8800"{/if}href="plugin.php?id=ljdaka:ranklist&mod=y">{lang ljdaka:m9}</a></li>
+</ul>
+{if $_GET['mod'] == 'y'}
+<div class="bang-list" id="newBangList">
+<ul class="bang-head">
+<li>{lang ljdaka:m10}</li>
+<li>{lang ljdaka:m11}</li>
+<li>{lang ljdaka:m12}</li>
+<li>{lang ljdaka:m13}</li>
+</ul>
+<ol class="bang-con data-top">
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_y $key=>$rank}-->
+<li><span class="num">$sign</span><a href="http://www.moqu8.com"><span class="name">$rank['username']</span><span class="status">$rank[yueday]</span><span class="count">$rank[yuemoney]</span></a></li>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+</ol>
+</div>
+{else}
+<div class="bang-list" id="hotBangList" style="">
+<ul class="bang-head">
+<li>{lang ljdaka:m10}</li>
+<li>{lang ljdaka:m11}</li>
+<li>{lang ljdaka:m14}</li>
+<li>{lang ljdaka:m15}</li>
+</ul>
+<ol class="bang-con data-top">
+<!--{eval $sign=(($currpage-1)*$perpage)+1;}-->
+<!--{loop $query_all $key=>$rank}-->
+<li><span class="num">$sign</span><a href="http://www.moqu8.com"><span class="name">$rank['username']</span><span class="status">$rank['allday']</span><span class="count"><!--{eval echo gmdate('H:i',$rank['timestamp']+8*3600);}--></span></a></li>
+<!--{eval $sign++;}-->
+<!--{/loop}-->
+</ol>
+{/if}
+<div style="clear:both">$paging</div>
+</div>
+</div>
+<script type="text/javascript" src="plugin.php?id=ljdaka:paihang"></script>
+
+
+<!--{hook/global_footer_mobile}-->
+<!--{eval $useragent = strtolower($_SERVER['HTTP_USER_AGENT']);$clienturl = 'http://www.discuz.net/mobile.php?platform=android';}-->
+<!--{if strpos($useragent, 'iphone') !== false || strpos($useragent, 'ios') !== false}-->
+<!--{eval $clienturl = 'http://www.discuz.net/mobile.php?platform=ios';}-->
+<!--{elseif strpos($useragent, 'android') !== false}-->
+<!--{eval $clienturl = 'http://www.discuz.net/mobile.php?platform=android';}-->
+<!--{elseif strpos($useragent, 'windows phone') !== false}-->
+<!--{eval $clienturl = 'http://www.discuz.net/mobile.php?platform=windowsphone';}-->
+<!--{/if}-->
+
+<div id="mask" style="display:none;"></div>
+<!--{if !$nofooter}-->
+<div class="footer">
+	<div>
+		<!--{if !$_G[uid]}-->
+		<a href="forum.php">{lang mobilehome}</a> | <a href="member.php?mod=logging&action=login" title="{lang login}">{lang login}</a> | <a href="<!--{if $_G['setting']['regstatus']}-->member.php?mod={$_G[setting][regname]}<!--{else}-->javascript:;" style="color:#D7D7D7;<!--{/if}-->" title="{$_G['setting']['reglinkname']}">{lang register}</a>
+		<!--{else}-->
+		<a href="home.php?mod=space&uid={$_G[uid]}&do=profile&mycenter=1">$_G[username]</a> , <a href="member.php?mod=logging&action=logout&formhash={FORMHASH}" title="{lang logout}" class="dialog">{lang logout}</a>
+		<!--{/if}-->
+	</div>
+    <div>
+		<a href="{$_G['setting']['mobile']['simpletypeurl'][0]}">{lang no_simplemobiletype}</a> |  
+		<a href="javascript:;" style="color:#D7D7D7;">{lang mobile2version}</a> | 
+		<a href="{$_G['setting']['mobile']['nomobileurl']}">{lang nomobiletype}</a> | 
+		<a href="$clienturl">{lang clientversion}</a>
+    </div>
+	<p>&copy; &#x9B54;&#x8DA3;&#x5427;</p>
+</div>
+<!--{/if}-->
+</body>
+</html>
+<!--{eval updatesession();}-->
+<!--{if defined('IN_MOBILE')}-->
+	<!--{eval output();}-->
+<!--{else}-->
+	<!--{eval output_preview();}-->
+<!--{/if}-->

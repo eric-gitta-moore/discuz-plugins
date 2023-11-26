@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-01-06 16:59]]></item>
+	<item id="From"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源碼哥_【三瑞】123幫助模塊]]></item>
+			<item id="identifier"><![CDATA[sanree_brand_help]]></item>
+			<item id="description"><![CDATA[用于【三瑞品牌123】的幫助模塊，此模塊不能單獨使用，必須先安裝【三瑞品牌123】方能正常使用。品牌123的幫助插件。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[sanree_brand_help/]]></item>
+			<item id="copyright"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.005]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>應用中心</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="menu"><![CDATA[幫助管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否開啟]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[幫助分類]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[helpsort]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[0=請選擇分類
+1=品牌123介紹
+2=商家等級
+3=幫助中心
+4=推薦商家
+5=商家加盟]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推薦一個dz商</span><span style="color:#4C33E5;">業插件模版下載的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">網站給大家</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">源碼哥分享吧</span></a><span style="color:#4C33E5;">（www.ymg6.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">這</span><span style="color:#E53333;">是一個</span><span style="color:#E53333;">dz商業</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">資源破解分享的網站，而且還有很多精品的網站源碼下載</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他們資源每天更新，并且很多都是他們自己出錢在應用中心購買后破解分享出來的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不過還是替他們說一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他們站下載的資源只限于自己學習研究內含的設計思想和原理 請勿有任何商業盈利行為</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介紹也介紹完了，給大家做個小導航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dz商業破解插件下載</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dz商業風格模版下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">精品網站源碼下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">工具素材下載</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">精選教程區</a></span> 
+</h3> ]]></item>
+				<item id="header"><![CDATA[安裝步驟]]></item>
+				<item id="helpmanage"><![CDATA[幫助管理]]></item>
+				<item id="isbusiness"><![CDATA[您的當前版本無此功能,需要此功能請商業購買！]]></item>
+				<item id="succeed"><![CDATA[操作成功]]></item>
+				<item id="help"><![CDATA[幫助管理]]></item>
+				<item id="addhelp"><![CDATA[添加新幫助]]></item>
+				<item id="edithelp"><![CDATA[編輯幫助]]></item>
+				<item id="helptitle"><![CDATA[幫助標題]]></item>
+				<item id="helpurl"><![CDATA[幫助鏈接]]></item>
+				<item id="error_helptitle"><![CDATA[請輸入幫助標題]]></item>
+				<item id="helpcate"><![CDATA[幫助分類]]></item>
+				<item id="helpcate0"><![CDATA[請選擇分類]]></item>
+				<item id="helpcate1"><![CDATA[品牌123介紹]]></item>
+				<item id="helpcate2"><![CDATA[商家等級]]></item>
+				<item id="helpcate3"><![CDATA[幫助中心]]></item>
+				<item id="helpcate4"><![CDATA[推薦商家]]></item>
+				<item id="helpcate5"><![CDATA[商家加盟]]></item>
+				<item id="sanree"><![CDATA[三瑞出品]]></item>
+				<item id="searchbar"><![CDATA[搜索]]></item>
+				<item id="skeyword"><![CDATA[關鍵字：]]></item>
+				<item id="search"><![CDATA[搜索]]></item>
+				<item id="status"><![CDATA[狀態]]></item>
+				<item id="showorder"><![CDATA[顯示排序]]></item>
+				<item id="dateline"><![CDATA[發布時間]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="header"><![CDATA[安裝步驟]]></item>
+			</item>
+			<item id="installlang">
+				<item id="header"><![CDATA[安裝步驟]]></item>
+				<item id="error_install"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123，正在跳轉請稍后...]]></item>
+				<item id="Error_Install_brand"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123.]]></item>
+				<item id="plugin_error_version"><![CDATA[您需安裝【三瑞】品牌123 v1.430及以上版本方可安裝.]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件不能單獨安裝使用，必須安裝【三瑞】品牌123主程序，方能安裝使用。
+[*]下載安裝【三瑞】品牌123主程序：[url=http://www.fx8.cc/?@sanree_brand.plugin]下載[/url]
+[*]本插件版權歸屬插件作者所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發布/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]淮南市三瑞網絡科技有限公司 www.ymg6.Com
+[*][b]作品簡介:[/b]本插件將在系統中安裝品牌123的幫助功能。
+[*][b]發布地址:[/b][url]http://www.fx8.cc/forum-64-1.html[/url]
+[*]如有任何關于使用上的疑問,請至[url]http://www.fx8.cc/forum-64-1.html[/url]提出.
+[*][color=Red]請您在安裝前閱讀三瑞科技軟件產品最終用戶通用授權協議[/color]，地址：[url]http://www.ymg6.Com/xieyi.html[/url].
+[*][color=Red]如果您愿意資助我們,請至[url]http://www.ymg6.Com/tel114/Donation.aspx[/url]對我們進行贊助.[/color]
+[*]最后,感謝您使用我們的插件,也希望您能夠給我們提供更好的意見([url=http://www.ymg6.Com/]請點擊這里進入三瑞科技官方站點[/url]).
+[/list]]]></item>
+	</item>
+</root>

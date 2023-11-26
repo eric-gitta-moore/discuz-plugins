@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2017-08-28 17:51]]></item>
+	<item id="From"><![CDATA[Ô´Âë¸ç£¨www.ymg6.com£©]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[0]]></item>
+			<item id="name"><![CDATA[Ô´Âë¸ç_ÐÂÌûËæ»ú¸ßÁÁÑÕÉ«]]></item>
+			<item id="identifier"><![CDATA[llx_threadhighlight]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[llx_threadhighlight/]]></item>
+			<item id="copyright"><![CDATA[Ô´Âë¸ç£¨www.ymg6.com£©]]></item>
+			<item id="version"><![CDATA[2.0]]></item>
+			<item id="__modules">
+				<item id="14">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>×ÊÔ´ÖÐÐÄ</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[app]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<span style = "color: #F00;">¸ü¶àÃâ·Ñ²å¼þ</span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[¿ªÆôµÄ°æ¿é]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[fids]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[37]]></item>
+					<item id="1"><![CDATA[36]]></item>
+					<item id="2"><![CDATA[2]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[¿ªÆôµÄÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[gids]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[20]]></item>
+					<item id="7"><![CDATA[16]]></item>
+					<item id="8"><![CDATA[17]]></item>
+					<item id="9"><![CDATA[18]]></item>
+					<item id="10"><![CDATA[19]]></item>
+					<item id="11"><![CDATA[1]]></item>
+					<item id="12"><![CDATA[2]]></item>
+					<item id="13"><![CDATA[3]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="license"><![CDATA[[list]
+		Ç×°®µÄÕ¾³¤:
+		·Ç³£¸ÐÐ»ÄúÑ¡Ôñ²¢Ê¹ÓÃ±¾²å¼þ£¡Ï£ÍûÎÒÃÇµÄ²å¼þÄÜÎªÄúÌá¹©¸ü·á¸»µÄ¹¦ÄÜºÍ¸üºÃµÄÓÃ»§ÌåÑé¡£
+		ÔÚ°²×°Ê¹ÓÃ±¾²å¼þÇ°ÇëÈÏÕæÔÄ¶Á¡¾×îÖÕÓÃ»§ÊÚÈ¨Ð­Òé¡¿
+		[b]×îÖÕÓÃ»§ÊÚÈ¨Ð­Òé[/b]			
+		[1]Î´¾­²å¼þ×÷ÕßÐí¿É£¬ÈÎºÎÈË²»µÃÒÔÈÎºÎÐÎÊ½·´±àÒë¡¢ÐÞ¸Ä¡¢·¢²¼¡¢×ªÈÃ¼°ÏúÊÛ±¾²å¼þµÄÔ­°æ¼°ÆäÑÜÉúµÄÐÞ¸Ä°æ¡£
+		[2]Ê¹ÓÃÕßÊ¹ÓÃ±¾²å¼þËù·¢ÉúµÄÈÎºÎËðÊ§ºÍÔðÈÎ£¬ÓÉ²å¼þÊ¹ÓÃÈË³Ðµ££¬²å¼þ¿ª·¢Õß²»³Ðµ£ÈÎºÎÔðÈÎ¡£
+		[3]ÄúÐèÒªÍ¨¹ýÕý¹æÍ¾¾¶»ñÈ¡¡¢Ê¹ÓÃ±¾²å¼þ£¬ÎÒÃÇ±£Áô×·¾¿·Ç·¨»ñÈ¡±¾²å¼þµÄÊ¹ÓÃÕßºÍ·Ç·¨·¢²¼±¾²å¼þµÄ·¢²¼ÕßµÄÇÖÈ¨ÔðÈÎ¡£
+		[4]±¾Ð­ÒéÊÇ±¾²å¼þ²»¿É·Ö¸îµÄÒ»²¿·Ö£¬±¾Ð­Òé¿ÉÄÜËæÊ±¸üÐÂ£¬Äú¿ÉÒÔËæÊ±ÁË½âµ½±¾Ð­ÒéµÄ×îÐÂ°æ±¾¡£
+		[5]Äú°²×°Ê¹ÓÃ±¾²å¼þÊ±£¬¼´ÊÓÎªÍêÈ«Àí½â²¢½ÓÊÜ±¾Ð­ÒéµÄ¸÷ÏîÌõ¿î¡£
+		[6]ÐÏÌ¨ÍøÂçÔÚÏßÓµÓÐ¶Ô±¾ÊÚÈ¨Ð­ÒéµÄ×îÖÕ½âÊÍÈ¨¡£²¢±£Áô×·¾¿Ò»ÇÐÇÖÈ¨ÔðÈÎµÄÈ¨Á¦¡£
+		[b]ÁªÏµÎÒÃÇ[/b]
+		[1]¿Í·þQQ: 3170222460
+		[2]¹Ù·½QQÈº: 321133952
+		[b]ÓÅ»ÝÐÅÏ¢[/b]
+		[1]¼ÓÈë¹Ù·½QQÈº£¬¼´¿É»ñÈ¡Ò»ÕÅ5Ôª¶Ò»»È¯£¬Âú30Ôª¼´¿ÉÊ¹ÓÃ¡£
+		[/list]]]></item>
+	</item>
+</root>

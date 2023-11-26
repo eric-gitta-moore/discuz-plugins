@@ -1,0 +1,249 @@
+{if $_GET[ifr]}
+{template common/header_common} 
+{else}
+{subtemplate common/header} 
+{/if}
+{template levckplayer:js}
+
+<style>
+.order_css {
+	color: #F60;
+	float: left;
+	padding-right: 2px;
+}
+
+.dspblock {
+	display: block;
+	float: left;
+}
+
+.form_bigbox {
+	overflow: hidden;
+	background: rgb(0, 102, 0);
+	margin: 2px auto 25px;
+}
+
+.form_box_2,.form_box_1 {
+	margin: 20px;
+	overflow: hidden;
+	background: #fff;
+}
+
+.form_box_1 {
+	box-shadow: 0 1px 5px rgba(35, 25, 25, 0.5);
+}
+
+.form_box_2 {
+	box-shadow: 0 1px 5px rgba(35, 25, 25, 0.5);
+	margin-top: 0;
+}
+
+.form_top_d {
+	height: 35px;
+	background: rgb(51, 153, 0)
+}
+
+.form_top_d2 {
+	padding: 0 10px 10px;
+}
+
+.formname {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#threadlist div.th .by {
+	width: 105px;
+}
+
+.rfm.myform_box td {
+	border-bottom: 1px solid #f9f9f9;
+}
+
+.form_bigbox {
+	background: #ff6600 none repeat scroll 0 0;
+	width:auto;
+}
+
+.form_top_d {
+	background: #ff9900 none repeat scroll 0 0;
+}
+</style>
+
+<div class="form_bigbox">
+
+{if $_GET[ifr] !='fadd'}
+<div class="form_box_1">
+<!--[diy=levckplayer156]--><div class="area" id="levckplayer156"></div><!--[/diy]-->
+</div>
+{else}
+<style> .form_box_2 {margin:10px;} .form_top_d {height:0;}</style>
+{/if}
+
+<div class="form_box_2">
+<div class="form_top_d"></div>
+<div class="form_top_d2">
+<div style="width: auto;" class="rfm">
+<table width="98%">
+	<tbody>
+		<tr>
+			<td align="center"><h1>{$lev_lang[addv1]}</h1></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div id="myform_box2" class="rfm myform_box">
+{if $_GET[ifr]}
+<table width=98%><tr><th>
+<b>{$lev_lang[addv2]}</b></th><td><input type=text class=px value='{$lev_lang[srhkey1]}' id='srhkeyvd' onfocus='this.value=""'> 
+<input type=button value="$lev_lang[srh]" onclick="dosrh()" class="pn pnc">
+</td></tr></table>
+{/if}
+<form action="" method="post" enctype="multipart/form-data" id="myform_2" name="myform_2">
+<table width="98%">
+<tr><td width=400>
+<table width="400">
+	<tbody>
+		<tr>
+			<th><b><font color="red">*</font>{$lev_lang[addv3]}</b></th>
+			<td>{eval echo lev_module::ismodule2('x_selects', 'x_selects', array($_PLG[vdtype], 'vdtype'));}
+				<input type=hidden value='{$r[vdtype]}' id='value_vdtype' name='vdtype'>
+				{eval echo lev_module::ismodule2('x_selects', 'valstr', array($_PLG[vdtype], $r[vdtype]));}
+				</td>
+		</tr>
+		<tr>
+			<th><b><font color="red">*</font>{$lev_lang[addv4]}</b></th>
+			<td>
+			<input type="text" class="px" value="{$r[videourl]}" name="videourl" id="videourl" onchange='viewvd(this)'> &nbsp;&nbsp;&nbsp;&raquo;&raquo;
+			<iframe width="280" height=105 frameborder="0" marginheight="0" src="{$lm}x_upload._form" scrolling="no"></iframe>
+			</td>
+		</tr>
+		<tr>
+			<th><b><font color="red">*</font>{$lev_lang[addv5]}</b></th>
+			<td><input type="text"class="px" value="{$r[title]}" name="title"> <span class="tips-1">{$lev_lang[videourl3]}</span></td>
+		</tr>
+		<tr>
+			<th><b><font color="red">*</font>{$lev_lang[addv6]}</b></th>
+			<td>
+			<input type="file" name="imgsrc_file">
+			<input type="text" class="px" value="{$r[imgsrc]}" name="imgsrc">
+			</td>
+		</tr>
+		<tr>
+			<th><b>{$lev_lang[addv7]}</b></th>
+			<td>
+			<input type="text" class="px" value="{$r[sectime]}" name="sectime" id="sectime">
+			</td>
+		</tr>
+		<tr>
+			<th><b>{$lev_lang[addv8]}</b></th>
+			<td><input type="text" class="px" value="{$sets[webw]}" id="webw" name="sets[webw]">px<span class="tips-1"></span></td>
+		</tr>
+		<tr>
+			<th><b>{$lev_lang[addv9]}</b></th>
+			<td><input type="text" class="px" value="{$r[isvip]}" id="isvip" name="isvip" style='width:40px'>
+			{if !is_file(DISCUZ_ROOT.'source/plugin/levvip/lev_base.php')}
+			<a href=https://0x9.me/h6Rgc target=_blank title='{$lev_lang[addv10]}'>{$lev_lang[addv11]}</a>
+			{else}
+			<span style="color:#888">{$lev_lang[addv10]}</span>
+			{/if}
+			</td>
+		</tr>
+		<tr>
+			<th><b>{$lev_lang[addv12]}</b></th>
+			<td><textarea class="px" name="contents" style="height:83px;">{$r[contents]}</textarea><span class="tips-1"></span></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><input type="hidden" name="fh" value="{FORMHASH}"> 
+			<input type="hidden" name="formhash" value="{FORMHASH}"> 
+			<input type="submit" class="pn pnc" value=" {$lev_lang[subt]} " onclick="ajaxdosubmit();return false;" name="dosubmit" id="dosubmit"> 
+</td>
+		</tr>
+
+	</tbody>
+</table>
+</td>
+<td>
+<div style='padding:42px 0 3px;'><input type=button value='{$lev_lang[viewv]}' class='pn pnc' onclick='viewvd("#videourl")'></div>
+<iframe id=viewvd width="470" height=425 frameborder="0" marginheight="0" src="" scrolling="no"></iframe>
+</td>
+</tr></table>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+function viewvd(obj) {
+	var vdurl = jQuery(obj).val();
+	if (vdurl.indexOf('.swf') >0) {
+		art.dialog.tips('{$lev_lang[videourl2]}');
+		return false;
+	}
+	if (vdurl) {
+		jQuery('#viewvd').attr('src', 'plugin.php?id=levckplayer&ifr=viewv&webw=498&h=425&url='+ encodeURI(jQuery(obj).val()));
+	}else {
+		art.dialog.tips('{$lev_lang[wvurl]}');
+		jQuery(obj).focus();
+	}
+}
+
+function dosrh() {
+	art.dialog({id:'srhkeyrs'}).close();
+	var _srhkey = jQuery('#srhkeyvd').val();
+	jQuery.get('{$lm}_vd', {srhkey:_srhkey}, function(data){
+		art.dialog({id:'srhkeyrs', title:'{$lev_lang[ctovd]}', content:data});
+	});
+}
+
+function ajaxdosubmit() {
+	jQuery('#dosubmit').attr('disabled');
+	var options = {
+	    url:'{$PLURL}:addv&vdid={$vdid}&dosubmit=1',
+	    type:'POST', 
+	    success: function(data){
+			jQuery('#dosubmit').removeAttr('disabled');
+			art.dialog({id:'msg'}).close();
+			if (parseInt(data) >0) { 
+				art.dialog.tips('{$lev_lang[succeed]}', 3);
+				setckplayer(parseInt(data));
+			}else if (data.indexOf('<html') >=0) {
+				art.dialog.tips('{$lev_lang[error]}system'+ data);
+			}else {
+				art.dialog.tips(data, 5);
+			}
+		},
+		error: function(data) {
+			jQuery('#dosubmit').removeAttr('disabled');
+			art.dialog({id:'msg'}).close();
+			art.dialog.tips('{$lev_lang[error]}'+ data.status +" "+ data.statusText, 5);
+		}
+	}; 
+	art.dialog({id:'msg', content:'{$lev_lang[locktips]}', lock:true, title:false});
+	jQuery('#myform_2').ajaxSubmit(options);
+	return false;
+}
+function setckplayer(vdid, _webw, obj) {
+	var webw = _webw ? _webw : jQuery('#webw').val();
+	var str = '[levckplayer]vdid='+ vdid +'&webw='+ webw +'[/levckplayer]';
+	parent.insertText(str, strlen(str));
+	if (!obj) {
+		parent.art.dialog({id:'ifrid'}).close();
+	}else {
+		jQuery(obj).parent().parent().fadeOut();
+	}
+}
+</script>
+
+{eval echo lev_module::ismodule2('x_selects', 'jsinit');}
+{if $_GET[ifr]}
+{subtemplate common/footer_common}
+{else}
+{subtemplate common/footer}
+{/if}
+<script type="text/javascript" src="{$PLSTATIC}jquery.form.min.js"></script>
+
+
+

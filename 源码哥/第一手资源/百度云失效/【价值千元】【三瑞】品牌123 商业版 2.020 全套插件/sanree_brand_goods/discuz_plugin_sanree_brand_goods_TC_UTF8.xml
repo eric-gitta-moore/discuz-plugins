@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-01-06 16:58]]></item>
+	<item id="From"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源碼哥_【三瑞】123商品模塊]]></item>
+			<item id="identifier"><![CDATA[sanree_brand_goods]]></item>
+			<item id="description"><![CDATA[用于【三瑞品牌123】的商品模塊，此模塊不能單獨使用，必須先安裝【三瑞品牌123】方能正常使用。品牌123的商品插件。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[sanree_brand_goods/]]></item>
+			<item id="copyright"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.020]]></item>
+			<item id="__modules">
+				<item id="37">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>資源中心</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[sanree_brand_goods]]></item>
+					<item id="menu"><![CDATA[商品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="menu"><![CDATA[商品管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否啟用]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[首頁顯示商品數量]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[shownum]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[12]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[是否啟用偽靜態]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[is_rewrite]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[商品首頁偽靜態]]></item>
+				<item id="description"><![CDATA[商品偽靜態規則
+默認：goods.html]]></item>
+				<item id="variable"><![CDATA[urlgoodsmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[goods.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[用戶商品首頁偽靜態]]></item>
+				<item id="description"><![CDATA[{tid}：商家ID
+默認：
+goods-usergoods-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlgoodsusermode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[goods-usergoods-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[商品內容頁規則]]></item>
+				<item id="description"><![CDATA[{tid}：商品ID
+默認：goods-goodsshow-{tid}.html]]></item>
+				<item id="variable"><![CDATA[urlitemmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[goods-goodsshow-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[商品列表頁格式]]></item>
+				<item id="description"><![CDATA[{tid}：分類ID
+默認：
+goods-index-{tid}-{did}-{filter}-{listmode}.html]]></item>
+				<item id="variable"><![CDATA[urllistmode]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[goods-index-{tid}-{did}-{filter}-{listmode}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[允許訪問的用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[allowgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+					<item id="13"><![CDATA[7]]></item>
+				</item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[頁面標題]]></item>
+				<item id="description"><![CDATA[seo 
+商品列表頁標題]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[品牌商品 - 三瑞出品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[keywords]]></item>
+				<item id="description"><![CDATA[SEO
+商品列表頁關鍵字]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[品牌商家,同城好網店,好商家,名優品牌]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[description]]></item>
+				<item id="description"><![CDATA[SEO
+商品列表頁描述]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[品牌商家,相信品牌的力量，提升企業品牌形象，就選擇【三瑞品牌123】.請記住我們的網址:http://www.fx8.cc。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[發布商品需要審核]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isshen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[首頁搜索關鍵詞]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[searchword]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[自定義關鍵詞
+三瑞品牌123
+寶貝家族
+大衛裝飾
+化妝品
+女裝 ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[發布商品審核提醒]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[chksendtip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[感謝您的參與，我們會盡快審核您提交的商品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[不需要審核的用戶組]]></item>
+				<item id="description"><![CDATA[此類用戶發布商品不需要審核。]]></item>
+				<item id="variable"><![CDATA[nochkgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+					<item id="2"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[綁定版塊]]></item>
+				<item id="description"><![CDATA[單選。
+選擇一個用于同步生成帖子的商品版塊。
+建議不要和品牌商家的版塊相同。]]></item>
+				<item id="variable"><![CDATA[bindingforum]]></item>
+				<item id="type"><![CDATA[forum]]></item>
+				<item id="value"><![CDATA[37]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[綁定版塊標題標志]]></item>
+				<item id="description"><![CDATA[防止綁定錯誤建立此標志。
+比如：綁定版塊的標題是“三瑞品牌123的商品區”，這里可以設置為“商品區”]]></item>
+				<item id="variable"><![CDATA[haveforumtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[123商品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[商品模版]]></item>
+				<item id="description"><![CDATA[商品展示頁面使用的模版
+默認為default
+小鳥模板為bird
+模版存放目錄：source\plugin\sanree_brand\tpl]]></item>
+				<item id="variable"><![CDATA[template]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[bird]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[帖子標題模版]]></item>
+				<item id="description"><![CDATA[同步生成的帖子標題模版]]></item>
+				<item id="variable"><![CDATA[forumtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[[{catename}]{name}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[帖子內容模版]]></item>
+				<item id="description"><![CDATA[同步生成的帖子內容模版]]></item>
+				<item id="variable"><![CDATA[forumbody]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[[fieldset]
+[legend]商品：[/legend][logo]{logo}[/logo]
+[label][b]商品名稱：[/b][/label][color=Red]{goodsname}[/color]
+[label][b]商品價格：[/b][/label]{priceunit}{price}
+[label][b]會員價：[/b][/label]  {priceunit}{minprice}
+[label][b]聯系QQ：[/b][/label]  [qq]{qq}[/qq]
+[label][b]所屬品牌：[/b][/label]  {brandinfo}
+[label][b]商品分類：[/b][/label] {catename}
+[/fieldset]
+[fieldset]
+[legend]商品描述：[/legend]{content}
+[/fieldset] 
+[img]static/image/common/sigline.gif[/img]]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[帖子提醒]]></item>
+				<item id="description"><![CDATA[同步生成的帖子提醒用戶不要發帖。
+可為空。]]></item>
+				<item id="variable"><![CDATA[forumwarning]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<br /><strong><font color=red>此帖子由【<a href="http://www.fx8.cc/" target="_blank">三瑞品牌123</a>】自動生成,請勿手動編輯。</font></strong>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[允許發布用戶組]]></item>
+				<item id="description"><![CDATA[可以發布商品的用戶組，
+只有此組的用戶可以發布商品。]]></item>
+				<item id="variable"><![CDATA[addgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[禁止發布提醒]]></item>
+				<item id="description"><![CDATA[不在允許發布商品用戶組的提醒。]]></item>
+				<item id="variable"><![CDATA[stopaddtip]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您所在的用戶組無法發布商品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[允許瀏覽商品的用戶組]]></item>
+				<item id="description"><![CDATA[可以瀏覽查看商品的用戶組。]]></item>
+				<item id="variable"><![CDATA[viewgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+					<item id="13"><![CDATA[7]]></item>
+				</item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[禁止瀏覽提醒]]></item>
+				<item id="description"><![CDATA[不允許查看商品的用戶組提醒。]]></item>
+				<item id="variable"><![CDATA[stopviewtip]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您所在的用戶組無法瀏覽商品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[發布新商品標題]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[djtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[編輯商品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[首頁默認小圖模式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isindexlist]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[允許商品評論]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[allowfastpost]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[價格單位列表]]></item>
+				<item id="description"><![CDATA[發布商品價格單位，例如: 
+0 = ￥
+1 = $
+2 = &amp;#8364;]]></item>
+				<item id="variable"><![CDATA[selectpriceunit]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[0 = ￥
+1 = $
+2 = &amp;#8364;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[品牌菜單名稱]]></item>
+				<item id="description"><![CDATA[模塊在品牌商家菜單中顯示名稱。]]></item>
+				<item id="variable"><![CDATA[modulemenuname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[商品]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[首頁廣告圖片地址1]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[indexadimgurl1]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/sanree_brand_goods/tpl/default/images/goods_ad.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[首頁廣告鏈接1]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[indexadlinkurl1]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://www.fx8.cc/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[發布商品消費積分值]]></item>
+				<item id="description"><![CDATA[0為免費發布商品。默認
+只能大于等于0]]></item>
+				<item id="variable"><![CDATA[addprice]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[余額不足提醒內容]]></item>
+				<item id="description"><![CDATA[{addprice} 為發布商品需要的積分。]]></item>
+				<item id="variable"><![CDATA[nonepricetip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[發布商品需要積分：<strong><font color="red">{addprice}</font></strong>，您的余額不足，請充值。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[是否顯示購買鏈接]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isbuylink]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[購買按鈕圖片地址]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[buyimage]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/sanree_brand_goods/tpl/default/images/buy.gif]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[購買聲明]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[purchasestatement]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[購買聲明：購買前請認真辨別商品的真偽。<br>
+由此造成的損失，本站概不負責。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推薦一個dz商</span><span style="color:#4C33E5;">業插件模版下載的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">網站給大家</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">源碼哥分享吧</span></a><span style="color:#4C33E5;">（www.ymg6.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">這</span><span style="color:#E53333;">是一個</span><span style="color:#E53333;">dz商業</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">資源破解分享的網站，而且還有很多精品的網站源碼下載</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他們資源每天更新，并且很多都是他們自己出錢在應用中心購買后破解分享出來的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不過還是替他們說一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他們站下載的資源只限于自己學習研究內含的設計思想和原理 請勿有任何商業盈利行為</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介紹也介紹完了，給大家做個小導航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dz商業破解插件下載</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dz商業風格模版下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">精品網站源碼下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">工具素材下載</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">精選教程區</a></span> 
+</h3> ]]></item>
+				<item id="yijing"><![CDATA[品牌管理]]></item>
+				<item id="sanree_brand_goods"><![CDATA[品牌123-商品]]></item>
+				<item id="isbusiness"><![CDATA[您的當前版本無此功能,需要此功能請商業購買！]]></item>
+				<item id="goodsnew"><![CDATA[待審商品]]></item>
+				<item id="addgoods"><![CDATA[發布新商品]]></item>
+				<item id="editgoods"><![CDATA[編輯新商品]]></item>
+				<item id="manage_nav_pluginshow_goods"><![CDATA[前臺商品]]></item>
+				<item id="sanree"><![CDATA[三瑞出品]]></item>
+				<item id="addcate"><![CDATA[添加分類]]></item>
+				<item id="catename"><![CDATA[分類名稱]]></item>
+				<item id="showorder"><![CDATA[排序]]></item>
+				<item id="count"><![CDATA[統計]]></item>
+				<item id="succeed"><![CDATA[操作成功]]></item>
+				<item id="category"><![CDATA[分類管理]]></item>
+				<item id="goods"><![CDATA[商品管理]]></item>
+				<item id="status"><![CDATA[狀態]]></item>
+				<item id="addsubcate"><![CDATA[增加子分類]]></item>
+				<item id="newsubcate"><![CDATA[新子分類]]></item>
+				<item id="searchbar"><![CDATA[搜索]]></item>
+				<item id="skeyword"><![CDATA[關鍵字：]]></item>
+				<item id="search"><![CDATA[搜索]]></item>
+				<item id="smallpic"><![CDATA[商品小圖]]></item>
+				<item id="bigpic"><![CDATA[商品大圖]]></item>
+				<item id="pselect"><![CDATA[選擇分類]]></item>
+				<item id="content"><![CDATA[商品介紹]]></item>
+				<item id="introduction"><![CDATA[商品簡介]]></item>
+				<item id="price"><![CDATA[價格]]></item>
+				<item id="minprice"><![CDATA[會員價格]]></item>
+				<item id="maxprice"><![CDATA[市場價格]]></item>
+				<item id="reserveprice"><![CDATA[商品郵費]]></item>
+				<item id="stock"><![CDATA[庫存]]></item>
+				<item id="sales"><![CDATA[已售出]]></item>
+				<item id="displayorder"><![CDATA[排序]]></item>
+				<item id="dateline"><![CDATA[時間]]></item>
+				<item id="audited"><![CDATA[狀態]]></item>
+				<item id="istop"><![CDATA[置頂]]></item>
+				<item id="isrecommend"><![CDATA[推薦]]></item>
+				<item id="ishot"><![CDATA[熱門]]></item>
+				<item id="goodsno"><![CDATA[商品編號]]></item>
+				<item id="allowreply"><![CDATA[允許評論]]></item>
+				<item id="startdate"><![CDATA[開始日期]]></item>
+				<item id="enddate"><![CDATA[結束日期]]></item>
+				<item id="memo"><![CDATA[備注]]></item>
+				<item id="grade"><![CDATA[打分]]></item>
+				<item id="attribute"><![CDATA[屬性]]></item>
+				<item id="brandname"><![CDATA[所屬品牌]]></item>
+				<item id="error_bid"><![CDATA[沒有此品牌商家]]></item>
+				<item id="goodsname"><![CDATA[商品名稱]]></item>
+				<item id="error_cateid"><![CDATA[請選擇分類]]></item>
+				<item id="error_nametip"><![CDATA[請填寫名稱]]></item>
+				<item id="error_brandnametip"><![CDATA[請輸入所屬品牌]]></item>
+				<item id="error_smallpic"><![CDATA[請輸入商品小圖]]></item>
+				<item id="ishavegoodsno"><![CDATA[商品編號重復]]></item>
+				<item id="errorgoodsno"><![CDATA[商品編號只能是數字或字母]]></item>
+				<item id="reply"><![CDATA[評論]]></item>
+				<item id="yes"><![CDATA[√]]></item>
+				<item id="no"><![CDATA[×]]></item>
+				<item id="batchshen"><![CDATA[批量審核]]></item>
+				<item id="batchdel"><![CDATA[批量刪除]]></item>
+				<item id="delorhen"><![CDATA[審/刪?]]></item>
+				<item id="confirmationdel"><![CDATA[此操作無法撤銷，您確定要刪除嗎?]]></item>
+				<item id="nobindingforum"><![CDATA[請先設置“綁定版塊”]]></item>
+				<item id="warningforumtitle"><![CDATA[綁定的版塊標題中必須要包含字符  {haveforumtitle}]]></item>
+				<item id="zanwustr"><![CDATA[暫無]]></item>
+				<item id="isshow"><![CDATA[顯示]]></item>
+				<item id="mygoods"><![CDATA[商品管理]]></item>
+				<item id="post_new_goods"><![CDATA[發布新商品]]></item>
+				<item id="edit_new_goods"><![CDATA[編輯保存]]></item>
+				<item id="nogid"><![CDATA[沒有此商品或正在審核中]]></item>
+				<item id="itemgoods"><![CDATA[商品]]></item>
+				<item id="inputpicture"><![CDATA[請上傳商品圖片]]></item>
+				<item id="okmessage"><![CDATA[發布新商品成功]]></item>
+				<item id="post_picture"><![CDATA[商品圖片：]]></item>
+				<item id="upload"><![CDATA[上傳]]></item>
+				<item id="description"><![CDATA[描述]]></item>
+				<item id="post_ishome"><![CDATA[封面]]></item>
+				<item id="e_attach_insert"><![CDATA[點擊圖片文件名添加到商品內容中]]></item>
+				<item id="cancel"><![CDATA[取消上傳]]></item>
+				<item id="error_install"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123，正在跳轉請稍后...]]></item>
+				<item id="pass"><![CDATA[通過]]></item>
+				<item id="refuse"><![CDATA[拒絕]]></item>
+				<item id="ishavecom"><![CDATA[請勿登記重復商品]]></item>
+				<item id="goods_pass"><![CDATA[用戶: {user} 發布的商品【{brand}】,已經上線。 時間:{time}]]></item>
+				<item id="goods_adminpass"><![CDATA[用戶: {user} 發布的商品【{brand}】,已經上線。審核操作人：{adminuser}。 時間:{time}]]></item>
+				<item id="goods_pending"><![CDATA[用戶: {user} 發布的商品【{brand}】，正在審核。 時間:{time}]]></item>
+				<item id="goods_refuse"><![CDATA[用戶: {user} 發布的商品【{brand}】被拒絕。審核操作人：{adminuser}。<br>原因：{reason}。 時間:{time}]]></item>
+				<item id="name"><![CDATA[商品名稱]]></item>
+				<item id="refusereason"><![CDATA[拒絕原因]]></item>
+				<item id="reason"><![CDATA[原因]]></item>
+				<item id="nofastpostcontrol"><![CDATA[<div class="nofastpostcontrol">該品牌尚未開啟品牌評論</div>]]></item>
+				<item id="all"><![CDATA[全部商品分類]]></item>
+				<item id="defaultkeyword"><![CDATA[例：火鍋\木地板]]></item>
+				<item id="slide"><![CDATA[幻燈管理]]></item>
+				<item id="slide_img"><![CDATA[幻燈圖片地址]]></item>
+				<item id="slide_link"><![CDATA[幻燈連接地址]]></item>
+				<item id="slideimgtip"><![CDATA[圖片尺寸：775*341]]></item>
+				<item id="bitian"><![CDATA[<span color="red">*必填項</span>]]></item>
+				<item id="selectbrand"><![CDATA[選擇品牌]]></item>
+				<item id="selected"><![CDATA[選擇]]></item>
+				<item id="listtip"><![CDATA[點擊品牌行即可選擇]]></item>
+				<item id="nogoods"><![CDATA[此品牌的商品模塊處于關閉中。]]></item>
+				<item id="nogoodsshow"><![CDATA[無此商品或正在審核中]]></item>
+				<item id="goodsshow"><![CDATA[商品展示]]></item>
+				<item id="priceunit"><![CDATA[價格單位]]></item>
+				<item id="inputprice"><![CDATA[請輸入商品價格]]></item>
+				<item id="inputminprice"><![CDATA[請輸入商品會員價格]]></item>
+				<item id="erroruser"><![CDATA[請勿非法操作]]></item>
+				<item id="notisshow"><![CDATA[此商品已下架]]></item>
+				<item id="showyes"><![CDATA[已上架]]></item>
+				<item id="notshow"><![CDATA[<span style="color:red">已下架</span>]]></item>
+				<item id="pleaseaddbrand"><![CDATA[請先入住至少一個品牌商家才能發布商品.]]></item>
+				<item id="stopallowtip"><![CDATA[您所在的用戶組無法訪問]]></item>
+				<item id="stopviewtip"><![CDATA[您所在的用戶組無法瀏覽商品]]></item>
+				<item id="ismaxgoods"><![CDATA[您的商品數量已經達到上限,請聯系管理員擴容.]]></item>
+				<item id="editbusi"><![CDATA[修改商品]]></item>
+				<item id="addbusi"><![CDATA[添加商品]]></item>
+				<item id="telcate"><![CDATA[分類管理]]></item>
+				<item id="editcate"><![CDATA[編輯分類]]></item>
+				<item id="auditstatus"><![CDATA[狀態]]></item>
+				<item id="blockclass_catename"><![CDATA[所屬分類]]></item>
+				<item id="blockclass_sanree"><![CDATA[【三瑞出品】類]]></item>
+				<item id="fixbranddiy"><![CDATA[校正商品DIY]]></item>
+				<item id="blockclass_index_styletexttitle"><![CDATA[[內置]品牌123_商品文字模式]]></item>
+				<item id="blockclass_index_styleimgtitle"><![CDATA[[內置]品牌123_商品圖文模式]]></item>
+				<item id="blockclass_brandname"><![CDATA[123商品]]></item>
+				<item id="blockstyle_create_succeed"><![CDATA[校正商品DIY成功]]></item>
+				<item id="blockclass_starttitle"><![CDATA[開始行數]]></item>
+				<item id="blockclass_ordertitle"><![CDATA[商品排序方式]]></item>
+				<item id="blockclass_gid"><![CDATA[商品ID]]></item>
+				<item id="blockclass_orderby"><![CDATA[顯示順序]]></item>
+				<item id="blockclass_showid"><![CDATA[顯示排序]]></item>
+				<item id="blockclass_dateline"><![CDATA[創建時間]]></item>
+				<item id="blockclass_views"><![CDATA[瀏覽量]]></item>
+				<item id="blockclass_ordersctitle"><![CDATA[排序]]></item>
+				<item id="blockclass_orderscdown"><![CDATA[降序]]></item>
+				<item id="blockclass_orderscup"><![CDATA[升序]]></item>
+				<item id="blockclass_bid"><![CDATA[品牌ID]]></item>
+				<item id="blockclass_showfilter"><![CDATA[顯示條件]]></item>
+				<item id="blockclass_zuixin"><![CDATA[最新商品]]></item>
+				<item id="blockclass_zhiding"><![CDATA[置頂商品]]></item>
+				<item id="blockclass_tuijian"><![CDATA[推薦商品]]></item>
+				<item id="blockclass_brand_field_title"><![CDATA[商品名稱]]></item>
+				<item id="blockclass_brand_field_gid"><![CDATA[商品ID]]></item>
+				<item id="blockclass_brand_field_url"><![CDATA[商品鏈接]]></item>
+				<item id="blockclass_brand_field_pic"><![CDATA[商品LOGO]]></item>
+				<item id="blockclass_brand_field_price"><![CDATA[商品價格]]></item>
+				<item id="blockclass_brand_field_minprice"><![CDATA[會員價格]]></item>
+				<item id="blockclass_brand_field_priceunit"><![CDATA[價格單位]]></item>
+				<item id="blockclass_brand_field_views"><![CDATA[瀏覽量]]></item>
+				<item id="blockclass_brand_field_goodsno"><![CDATA[商品編號]]></item>
+				<item id="blockclass_brand_field_cateid"><![CDATA[商品所屬分類ID]]></item>
+				<item id="blockclass_brand_field_catename"><![CDATA[商品所屬分類名稱]]></item>
+				<item id="blockclass_brand_field_brandname"><![CDATA[商品所屬品牌名稱]]></item>
+				<item id="blockclass_brand_field_bid"><![CDATA[商品所屬品牌ID]]></item>
+				<item id="diymanage"><![CDATA[DIY管理]]></item>
+				<item id="diyconfig"><![CDATA[DIY設置]]></item>
+				<item id="diytemplate"><![CDATA[DIY模版]]></item>
+				<item id="diystyle"><![CDATA[DIY樣式]]></item>
+				<item id="addstyle"><![CDATA[添加新樣式]]></item>
+				<item id="editstyle"><![CDATA[修改樣式]]></item>
+				<item id="stylename"><![CDATA[樣式名稱]]></item>
+				<item id="stylenametip"><![CDATA[必須已字母開頭，只能是字母、數字或者下劃線組成，<br>樣式名稱具有唯一性，不能重復]]></item>
+				<item id="stylecontent"><![CDATA[樣式內容]]></item>
+				<item id="stylecontenttip"><![CDATA[DIY調用樣式內容中 stylename 將自動替換成定義的樣式名稱。]]></item>
+				<item id="error_stylenametip"><![CDATA[樣式名稱不能為空]]></item>
+				<item id="ishavestylename"><![CDATA[樣式名重復]]></item>
+				<item id="error_stylecontenttip"><![CDATA[樣式內容不能為空]]></item>
+				<item id="operationuser"><![CDATA[添加人]]></item>
+				<item id="errorstylename"><![CDATA[樣式名稱只能是a-z、A-Z、0-9、下劃線(_)，且必須以字母開頭]]></item>
+				<item id="addtemplate"><![CDATA[添加新模塊模版]]></item>
+				<item id="edittemplate"><![CDATA[修改模版]]></item>
+				<item id="templatename"><![CDATA[DIY模版名稱]]></item>
+				<item id="templatecontent"><![CDATA[DIY模版內容]]></item>
+				<item id="error_templatenametip"><![CDATA[DIY模版名稱不能為空]]></item>
+				<item id="error_templatecontenttip"><![CDATA[DIY模版內容不能為空]]></item>
+				<item id="system"><![CDATA[系統]]></item>
+				<item id="copynewtemplate"><![CDATA[復制]]></item>
+				<item id="copysucceed"><![CDATA[復制成功]]></item>
+				<item id="copyfuben"><![CDATA[副本]]></item>
+				<item id="neizhi"><![CDATA[[內置]]]></item>
+				<item id="copynewstyle"><![CDATA[復制]]></item>
+				<item id="fixdiytip"><![CDATA[您確認校正DIY區塊設置嗎？]]></item>
+				<item id="allcate"><![CDATA[所有分類]]></item>
+				<item id="unit"><![CDATA[商品單位]]></item>
+				<item id="unittip"><![CDATA[顯示在價格后面，例如：個，平米，克，kg，顯示為：/個，/平米，/克，/kg]]></item>
+				<item id="more"><![CDATA[更多]]></item>
+				<item id="show_price"><![CDATA[市場價]]></item>
+				<item id="show_minprice"><![CDATA[會員價]]></item>
+				<item id="pubtip_price"><![CDATA[▲ 發布每個商品需要收取您 <span class="srred">{addprice}</span> {creditunitname}]]></item>
+				<item id="error_brand_pub"><![CDATA[此商家沒有發布商品的權限]]></item>
+				<item id="buylink"><![CDATA[購買鏈接]]></item>
+				<item id="GRD"><![CDATA[發布商品消耗]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="post_new_goods"><![CDATA[發布新商品]]></item>
+				<item id="edit_new_goods"><![CDATA[編輯保存]]></item>
+				<item id="addtime"><![CDATA[發布時間]]></item>
+				<item id="description"><![CDATA[描述]]></item>
+				<item id="readperm"><![CDATA[閱讀權限]]></item>
+				<item id="e_attach_insert"><![CDATA[點擊圖片文件名添加到商品內容中]]></item>
+				<item id="post_ajax_error"><![CDATA[內部錯誤，無法顯示此內容]]></item>
+				<item id="post_remind"><![CDATA[友情提醒：表單支持Tab換行]]></item>
+				<item id="post_goodsname"><![CDATA[商品名稱：]]></item>
+				<item id="post_goodscate"><![CDATA[商品分類：]]></item>
+				<item id="post_keywords"><![CDATA[SEO關鍵詞：]]></item>
+				<item id="post_description"><![CDATA[SEO介紹：]]></item>
+				<item id="post_introduction"><![CDATA[商品簡介：]]></item>
+				<item id="upload"><![CDATA[上傳]]></item>
+				<item id="post_ishome"><![CDATA[封面]]></item>
+				<item id="post_content"><![CDATA[商品介紹：]]></item>
+				<item id="post_price"><![CDATA[市場價格：]]></item>
+				<item id="post_minprice"><![CDATA[會員價格：]]></item>
+				<item id="post_picture"><![CDATA[商品圖片：]]></item>
+				<item id="post_maxprice"><![CDATA[市場價格：]]></item>
+				<item id="post_reserveprice"><![CDATA[商品郵費：]]></item>
+				<item id="post_stock"><![CDATA[庫存量：]]></item>
+				<item id="post_startdate"><![CDATA[開始時間：]]></item>
+				<item id="post_enddate"><![CDATA[結束時間：]]></item>
+				<item id="post_displayorder"><![CDATA[排序：]]></item>
+				<item id="post_isshow"><![CDATA[顯示：]]></item>
+				<item id="post_yew"><![CDATA[是]]></item>
+				<item id="post_no"><![CDATA[否]]></item>
+				<item id="mode_goods"><![CDATA[商品列表]]></item>
+				<item id="nogoods"><![CDATA[暫無商品]]></item>
+				<item id="cancel"><![CDATA[取消上傳]]></item>
+				<item id="error_install"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123，正在跳轉請稍后...]]></item>
+				<item id="inputbid"><![CDATA[請選擇所屬品牌]]></item>
+				<item id="inputgoodsname"><![CDATA[請輸入商品名稱]]></item>
+				<item id="inputcontent"><![CDATA[請輸入商品介紹]]></item>
+				<item id="hotgoods"><![CDATA[熱門商品]]></item>
+				<item id="discount"><![CDATA[會員折扣：]]></item>
+				<item id="price"><![CDATA[價格]]></item>
+				<item id="goodsname"><![CDATA[商品名稱]]></item>
+				<item id="brandname"><![CDATA[所屬品牌]]></item>
+				<item id="mode_goods_show"><![CDATA[商品展示]]></item>
+				<item id="sendstar"><![CDATA[點擊星星給商品打分：]]></item>
+				<item id="notclickstar"><![CDATA[您未對商品評分]]></item>
+				<item id="pleasestarstr"><![CDATA[您對商品的評分為：]]></item>
+				<item id="pleasestar"><![CDATA[請給商品評分!]]></item>
+				<item id="inputprice"><![CDATA[請輸入商品價格]]></item>
+				<item id="inputminprice"><![CDATA[請輸入商品會員價格]]></item>
+				<item id="priceunit"><![CDATA[價格單位：]]></item>
+				<item id="show_price"><![CDATA[市場價：]]></item>
+				<item id="show_minprice"><![CDATA[會員價：]]></item>
+				<item id="show_qq"><![CDATA[聯系商家：]]></item>
+				<item id="post_dateline"><![CDATA[上架時間：]]></item>
+				<item id="post_goodsno"><![CDATA[商品編號：]]></item>
+				<item id="delete"><![CDATA[刪除]]></item>
+				<item id="deleteask"><![CDATA[刪?]]></item>
+				<item id="deletetip"><![CDATA[您確認刪除此商品嗎？此操作不可撤銷]]></item>
+				<item id="no_related_goods"><![CDATA[暫無商品]]></item>
+				<item id="satisfaction"><![CDATA[用戶評分：]]></item>
+				<item id="fen"><![CDATA[分]]></item>
+				<item id="show_buy"><![CDATA[聯系購買：]]></item>
+				<item id="status"><![CDATA[狀態]]></item>
+				<item id="isshow"><![CDATA[是否上架：]]></item>
+				<item id="goods123"><![CDATA[【三瑞品牌123】<span>商品模塊</span>]]></item>
+				<item id="unit"><![CDATA[商品單位：]]></item>
+				<item id="unittip"><![CDATA[ 例如：個，平米，克，kg]]></item>
+				<item id="inputcate"><![CDATA[請選擇商品分類]]></item>
+				<item id="post_buylink"><![CDATA[購買鏈接：]]></item>
+				<item id="post_buylinktip"><![CDATA[請輸入商品購買鏈接。]]></item>
+				<item id="view_buyclicktip"><![CDATA[點擊購買此商品]]></item>
+			</item>
+			<item id="installlang">
+				<item id="header"><![CDATA[安裝步驟]]></item>
+				<item id="defaultcate1"><![CDATA[餐飲美食]]></item>
+				<item id="defaultcate2"><![CDATA[酒店賓館]]></item>
+				<item id="defaultcate3"><![CDATA[家居裝飾]]></item>
+				<item id="defaultcate4"><![CDATA[美容化妝]]></item>
+				<item id="defaultcate5"><![CDATA[服裝服飾]]></item>
+				<item id="defaultcate6"><![CDATA[數碼家電]]></item>
+				<item id="defaultcate7"><![CDATA[母嬰用品]]></item>
+				<item id="defaultcate8"><![CDATA[圖書音像]]></item>
+				<item id="defaultcate9"><![CDATA[旅行社]]></item>
+				<item id="defaultcate10"><![CDATA[鮮花禮品]]></item>
+				<item id="defaultcate11"><![CDATA[休閑娛樂]]></item>
+				<item id="defaultcate12"><![CDATA[房產租房]]></item>
+				<item id="defaultcate13"><![CDATA[網絡公司]]></item>
+				<item id="defaultcate14"><![CDATA[教育培訓]]></item>
+				<item id="error_install"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123，正在跳轉請稍后...]]></item>
+				<item id="Error_Install_brand"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123.]]></item>
+				<item id="isgoods"><![CDATA[是否啟用商品模塊]]></item>
+				<item id="maxgoods"><![CDATA[允許發布的商品數目]]></item>
+				<item id="plugin_error_version"><![CDATA[您需安裝【三瑞】品牌123 v2.007及以上版本方可安裝.]]></item>
+				<item id="blockclass_index_styletexttitle"><![CDATA[123商品_文字模式]]></item>
+				<item id="blockclass_index_styleimgtitle"><![CDATA[123商品_商品圖文模式]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件不能單獨安裝使用，必須安裝【三瑞】品牌123主程序，方能安裝使用。
+[*]下載安裝【三瑞】品牌123主程序：[url=http://www.fx8.cc/?@sanree_brand.plugin]下載[/url]
+[*]本插件版權歸屬插件作者所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發布/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]淮南市三瑞網絡科技有限公司 www.ymg6.Com
+[*][b]作品簡介:[/b]本插件將在系統中安裝品牌123的商品功能。本插件將提供品牌管理自己的商品，管理員后臺管理品牌商品。
+[*][b]發布地址:[/b][url]http://www.fx8.cc/forum-64-1.html[/url]
+[*]如有任何關于使用上的疑問,請至[url]http://www.fx8.cc/forum-64-1.html[/url]提出.
+[*][color=Red]請您在安裝前閱讀三瑞科技軟件產品最終用戶通用授權協議[/color]，地址：[url]http://www.ymg6.Com/xieyi.html[/url].
+[*][color=Red]如果您愿意資助我們,請至[url]http://www.ymg6.Com/tel114/Donation.aspx[/url]對我們進行贊助.[/color]
+[*]最后,感謝您使用我們的插件,也希望您能夠給我們提供更好的意見([url=http://www.ymg6.Com/]請點擊這里進入三瑞科技官方站點[/url]).
+[/list]]]></item>
+	</item>
+</root>

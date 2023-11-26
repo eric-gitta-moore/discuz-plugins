@@ -1,0 +1,136 @@
+<!--{if $_GET[loadmore]}-->
+	<!--{loop $list $v}-->
+	<li>
+	<a href="{$jump_url}$v[num_iid]&t_url={echo urlencode($v[click_url])}" class="qg-item {if $_G[timestamp] < $v[start]}qg-will{else}{if $v[sold_num] == $v[total_amount]}qg-done{else}qg-ing{/if}{/if}">
+		<div class="qg-img"><img data-original="$v[pic_url]" src="{$img}nopic.png" class="lazy" /></div>
+		<div class="qg-detail">
+			<div class="name">
+				<p class="des">$v[title]</p>
+				<p class="subtitle">{lang zhuzhu_taobao:1t_tqg_htm_1}{echo $v[reserve_price]-$v[zk_final_price]}{lang zhuzhu_taobao:1jump_url_htm_2}</p>
+			</div>
+
+			<div class="process">
+				<div class="{if $_G[timestamp] < $v[start]}process-text-tips{else}process-text{/if}">
+					{if $_G[timestamp] < $v[start]}
+					<span>{echo dgmdate($v[start], 'Y{lang zhuzhu_taobao:1t_tqg_htm_3} H:s')}{lang zhuzhu_taobao:1t_tqg_htm_4}</span>
+					{else}
+					<span class="percent">{lang zhuzhu_taobao:1t_index_htm_1}$v[sold_num]{lang zhuzhu_taobao:1t_index_htm_2}</span>
+					<span class="num">{echo round($v[sold_num]/$v[total_amount]*100, 2)}%</span>
+					{/if}
+				</div>
+				
+				{if $_G[timestamp] > $v[start]}
+				<div class="process-bar"><span style="width: {echo $v[sold_num]/$v[total_amount]*100}%;"></span></div>
+				{/if}
+			</div>
+
+			<div class="link">
+				<div class="link-btn">{if $_G[timestamp] < $v[start]}{lang zhuzhu_taobao:1t_tqg_htm_7}{else}{if $v[sold_num] == $v[total_amount]}{lang zhuzhu_taobao:1t_tqg_htm_8}{else}{lang zhuzhu_taobao:1t_tqg_htm_9}{/if}{/if}</div>
+				<div class="price">
+					<span class="promo-price">&yen;<em>$v[zk_final_price]</em></span>
+					<span class="original-price">&yen;<i>$v[reserve_price]</i></span>
+				</div>
+			</div>
+		</div>
+	</a>
+	</li>
+	<!--{/loop}-->
+<!--{else}-->
+<!--{template zhuzhu_taobao:header}-->
+<link type="text/css" rel="stylesheet" href="./source/plugin/zhuzhu_taobao/static/css/style_touch.css">
+<link rel="stylesheet" type="text/css" href="source/plugin/zhuzhu_taobao/static/js/swiper.min.css">
+<script src="source/plugin/zhuzhu_taobao/static/js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="source/plugin/zhuzhu_taobao/static/css/style_m_tqg.css">
+<script src="source/plugin/zhuzhu_taobao/static/js/amazeui.lazyload.js"></script>
+
+<div id="topNav" class="swiper-container top_flex">
+  <div class="swiper-wrapper">  
+	<!--{loop $datearr $key=>$v}-->
+		{eval $key2 = $key + 1;}
+		<!--{if $key < 13}-->
+		<div class="swiper-slide{if $v < $Now && $Now < $datearr[$key2] || $v == $Now} active{/if}" now-id='$key'>
+			<a href="javascript:;">
+				<p class="time">$v</p>
+				<p class="text">{if $v < $Now && $Now < $datearr[$key2] || $v == $Now}{lang zhuzhu_taobao:1t_tqg_htm_10}{elseif $v < $Now}{lang zhuzhu_taobao:1t_tqg_htm_11}{else}{lang zhuzhu_taobao:1t_tqg_htm_12}{/if}</p>
+			</a>
+		</div>
+		<!--{/if}-->
+		{if $v < $Now && $Now < $datearr[$key2] || $v == $Now}
+		{eval $k = $key-2}
+		{/if}
+	<!--{/loop}-->
+	</div>
+</div>
+
+
+<div class="cl zhuzhu_tgq wp">
+	<ul class="qg-limit-list z cl" id="qg-limit-list">
+	</ul>
+</div>
+
+<input type="hidden" id="dateid" value="" />
+
+<script type="text/javascript">
+	window.onload = function() {
+		load_more();
+	}
+	function load_more(dateid) {
+		popup.open('<img src="' + IMGDIR + '/imageloading.gif">');
+		var dateid = document.getElementById("dateid").value;
+		ajax({ 
+			type:'get',
+			url: 'plugin.php?id=zhuzhu_taobao&mod=tqg&loadmore=1&page='+page+'&date=' + dateid,
+			dataType:'text',
+			success:function(msg){
+				$('#qg-limit-list').append(msg);
+				popup.close();
+				page ++;
+				$("img.lazy").lazyload({effect: "fadeIn"});
+			}
+		})		
+	}
+
+	var mySwiper = new Swiper('#topNav', {
+		freeMode: true,
+		freeModeMomentumRatio: 0.5,
+		slidesPerView: 'auto',
+		initialSlide :$k,
+		onClick: function(swiper){
+		  document.getElementById("dateid").value=$('.active').attr('now-id');
+		  page = 1;
+		  document.getElementById('qg-limit-list').innerHTML = "";
+		  load_more($('.active').attr('now-id'));
+		}
+	});
+
+	swiperWidth = mySwiper.container[0].clientWidth
+	maxTranslate = mySwiper.maxTranslate();
+	maxWidth = -maxTranslate + swiperWidth / 2
+
+	$(".swiper-container").on('touchstart', function(e) {
+		e.preventDefault()
+	})
+
+	mySwiper.on('tap', function(swiper, e) {
+		slide = swiper.slides[swiper.clickedIndex]
+		slideLeft = slide.offsetLeft
+		slideWidth = slide.clientWidth
+		slideCenter = slideLeft + slideWidth / 2
+		mySwiper.setWrapperTransition(300)
+
+		if (slideCenter < swiperWidth / 2) {		
+			mySwiper.setWrapperTranslate(0)
+		} else if (slideCenter > maxWidth) {		
+			mySwiper.setWrapperTranslate(maxTranslate)
+		} else {
+			nowTlanslate = slideCenter - swiperWidth / 2
+			mySwiper.setWrapperTranslate(-nowTlanslate)
+		}
+		$("#topNav .active").removeClass('active')
+		$("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+	})
+</script>
+
+<!--{subtemplate zhuzhu_taobao:t_footer}-->
+<!--{subtemplate zhuzhu_taobao:footer}-->
+<!--{/if}-->

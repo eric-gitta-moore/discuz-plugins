@@ -1,0 +1,107 @@
+<!--{subtemplate common/header}-->
+	<!--{subtemplate home/spacecp_header}-->
+			<!--{hook/spacecp_avatar_top}-->
+			<script type="text/javascript">
+				function updateavatar() {
+					window.location.href = document.location.href.replace('&reload=1', '') + '&reload=1';
+				}
+				<!--{if !$reload}-->
+				saveUserdata('avatar_redirect', document.referrer);
+				<!--{/if}-->
+			</script>
+			<form method="post" autocomplete="off" action="home.php?mod=spacecp&ac=avatar&ref">
+				<table cellspacing="0" cellpadding="0" class="tfm">
+					<caption>
+						<span id="retpre" class="y xi2"></span>
+						<h2 class="xs2">{lang daxiong_avatar_meituxiuxiu:current_my_space}</h2>
+						<p>{lang daxiong_avatar_meituxiuxiu:setting_avatar_message}</p>
+					</caption>
+					<tr>
+						<td>
+							<!--{avatar($space[uid],big)}-->
+						</td>
+					</tr>
+				</table>
+
+				<table cellspacing="0" cellpadding="0" class="tfm">
+					<caption>
+						<h2 class="xs2">{lang daxiong_avatar_meituxiuxiu:setting_my_new_avatar}</h2>
+						<p>{lang daxiong_avatar_meituxiuxiu:setting_my_new_avatar_message}</p>
+					</caption>
+					<tr>
+						<td>
+						<script src="source/plugin/daxiong_avatar_meituxiuxiu/template/xiuxiu.js" type="text/javascript"></script>
+							<script type="text/javascript">
+							xiuxiu.embedSWF("altContent",5,660,440);
+							xiuxiu.setUploadURL("$_G['siteurl']plugin.php?id=daxiong_avatar_meituxiuxiu:uploadavatar");
+							xiuxiu.setUploadType(2);
+							xiuxiu.setLaunchVars ("scrollTrap", 1);
+							xiuxiu.setUploadArgs({uid:$_G['uid']});
+							xiuxiu.onInit = function ()
+							{  
+								//xiuxiu.loadPhoto("http://open.web.meitu.com/sources/images/1.jpg");
+							}
+							
+							xiuxiu.onUploadResponse = function (data)
+							{
+								if(data=='success'){
+									showDialog('{lang daxiong_avatar_meituxiuxiu:success}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+										window.location.href = window.location.href;
+									}, 0, null, '', '', '', '', 3);
+								}else if(data=='phpallow'){
+									showDialog('{lang daxiong_avatar_meituxiuxiu:err_phpallow}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+										window.location.href = window.location.href;
+									}, 0, null, '', '', '', '', 3);
+								}else if(data=='sizeallow'){
+									showDialog('{lang daxiong_avatar_meituxiuxiu:err_sizeallow}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+										window.location.href = window.location.href;
+									}, 0, null, '', '', '', '', 3);
+								}else if(data=='onlytype'){
+									showDialog('{lang daxiong_avatar_meituxiuxiu:err_onlytype}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+										window.location.href = window.location.href;
+									}, 0, null, '', '', '', '', 3);
+								}else if(data=='nofile'){
+									showDialog('{lang daxiong_avatar_meituxiuxiu:err_nofile}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+										window.location.href = window.location.href;
+									}, 0, null, '', '', '', '', 3);
+								}else if(data=='fail'){
+									showDialog('{lang daxiong_avatar_meituxiuxiu:err_fail}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+										window.location.href = window.location.href;
+									}, 0, null, '', '', '', '', 3);
+								}else if(data=='xml'){
+										showDialog('{lang daxiong_avatar_meituxiuxiu:err_xml}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+											window.location.href = window.location.href;
+										}, 0, null, '', '', '', '', 3);
+								}else{
+									showDialog('{lang daxiong_avatar_meituxiuxiu:err_noknow}', 'right', '{lang daxiong_avatar_meituxiuxiu:tip}', function(){
+										window.location.href = window.location.href;
+									}, 0, null, '', '', '', '', 3);
+								}
+								
+							}
+						
+							
+						</script>
+						
+						<div id="altContent"></div>
+				   </td>
+					</tr>
+				</table>
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+			</form>
+			<!--{hook/spacecp_avatar_bottom}-->
+		</div>
+	</div>
+	<script type="text/javascript">
+		var redirecturl = loadUserdata('avatar_redirect');
+		if(redirecturl) {
+			$('retpre').innerHTML = '<a href="' + redirecturl + '">{lang daxiong_avatar_meituxiuxiu:previous_page}</a>';
+		}
+	
+	</script>
+	<div class="appl">
+		<!--{subtemplate home/spacecp_footer}-->
+	</div>
+</div>
+
+<!--{subtemplate common/footer}-->

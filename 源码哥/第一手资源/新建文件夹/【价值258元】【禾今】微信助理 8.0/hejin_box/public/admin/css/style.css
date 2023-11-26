@@ -1,0 +1,101 @@
+.tophead{background: none repeat scroll 0% 0% #474C4F;
+text-align: left;
+width: 100%;
+height: 95px;
+position: relative;
+z-index: 1;}
+.toplogo{background: url('../images/sky/shopnc_logo.png') no-repeat scroll 0% 0% transparent;
+width: 161px;
+height: 95px;}
+.topnav {
+    height: 95px;
+    left: 200px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+.topnav ul {
+    height: 95px;
+	list-style-image: none;
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+}
+.topnav ul li {
+    display: inline;
+    float: left;
+    font-size: 14px;
+    height: 95px;
+    padding: 0px 10px;
+    text-align: center;
+	list-style-image: none;
+list-style-type: none;
+}
+.topnav ul li.actived {
+    background: none repeat scroll 0% 0% #606568;
+    height: 95px;
+    float: left;
+}
+.topnav ul li i {
+    width: 70px;
+    height: 25px;
+    display: block;
+    background: url('../images/sky/m_icon.gif') no-repeat scroll 0% 0% transparent;
+    margin-top: 20px;
+}
+.topnav ul li i.i01 {
+    background-position: -15px 0px;
+}
+.topnav ul li.actived i.i01 {
+    background-position: -119px 0px;
+}
+.topnav ul li a {
+    color: #FFF;
+    line-height: 40px;
+	text-decoration: none;
+}
+.topnav ul li.actived a {
+    color: #FFC065;
+}
+.topnav ul li.actived i.i05 {
+    background-position: -118px -134px;
+}
+.topnav ul li i.i05 {
+    background-position: -14px -134px;
+}
+.topnav ul li.actived i.i02 {
+    background-position: -114px -30px;
+}
+.topnav ul li i.i02 {
+    background-position: -10px -30px;
+}
+.topnav ul li.actived i.i03 {
+    background-position: -118px -60px;
+}
+.topnav ul li i.i03 {
+    background-position: -14px -60px;
+}
+.topnav ul li.actived i.i08 {
+    background-position: -118px -205px;
+}
+.topnav ul li i.i08 {
+    background-position: -14px -205px;
+}
+.topnav ul li.actived i.i07 {
+    background-position: -118px -170px;
+}
+.topnav ul li i.i07 {
+    background-position: -14px -170px;
+}
+.topnav ul li.actived i.i10 {
+    background-position: -116px -305px;
+}
+.topnav ul li i.i10 {
+    background-position: -14px -305px;
+}
+.topnav ul li.actived i.i09 {
+    background-position: -118px -237px;
+}
+.topnav ul li i.i09 {
+    background-position: -14px -237px;
+}

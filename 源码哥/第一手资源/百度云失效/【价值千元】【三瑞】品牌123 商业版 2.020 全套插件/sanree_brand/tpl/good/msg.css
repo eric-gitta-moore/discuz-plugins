@@ -1,0 +1,37 @@
+.msgbody_notajax{
+	margin:10px auto;
+	border:2px solid #cccccc;
+}
+.msgbody{
+	width:407px;
+	height:270px;
+	overflow:hidden;
+}
+.msgbody h3 {
+	height:23px;
+	background-color:#e8eaed;
+	border-bottom:1px solid #ffffff;
+	line-height:30px;
+}
+.msgbody .errorbox{
+	margin-left:10px;
+	margin-right:10px;
+}
+.msgbody .errorbox .hd{
+	height:30px;
+	border-bottom:1px dashed #00f;
+	line-height:30px;
+}
+.msgbody .errorbox .bd{
+	margin-top:10px;
+}
+.msgbody .errorbox .bd .errorword{
+	margin-top:10px;
+	width:380px; 
+	height:100px;
+}
+.msgbody .errorbox .bd .tjline{
+	margin-top:10px; 
+	text-align:right;
+	margin-right:10px;
+}

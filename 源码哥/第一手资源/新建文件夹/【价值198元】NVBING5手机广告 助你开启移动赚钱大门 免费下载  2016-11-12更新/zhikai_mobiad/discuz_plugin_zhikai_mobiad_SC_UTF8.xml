@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-01-13 14:46]]></item>
+	<item id="From"><![CDATA[讯幻网（www.xhkj5.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[NVBING5手机广告]]></item>
+			<item id="identifier"><![CDATA[zhikai_mobiad]]></item>
+			<item id="description"><![CDATA[NVBING5手机广告插件!]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[zhikai_mobiad/]]></item>
+			<item id="copyright"><![CDATA[讯幻网（www.xhkj5.com）]]></item>
+			<item id="version"><![CDATA[v1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[ad]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[nvb]]></item>
+					<item id="param"><![CDATA[telgo=1]]></item>
+					<item id="menu"><![CDATA[广告位]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[nvb]]></item>
+					<item id="param"><![CDATA[telgo=2]]></item>
+					<item id="menu"><![CDATA[所有广告]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>更多插件</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否开启]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[navkg]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[选择不需要显示广告的用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[navyh]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="zhikai_mobiad_adwms"><![CDATA[通用广告位支持嵌入点正确的所有手机触屏版以及NVBING5手机模版<br />N5手机专用广告位只适用于<a href="http://addon.discuz.com/?@zhikai_n5mobi.template" target="_blank"><b>NVBING5手机模版</b></a><br />所有广告位支持文字、图片、代码、flash广告形式<br />使用过程中遇到任何问题请及时联系NVBING5客服QQ：QQ群550494646]]></item>
+				<item id="telheader_name"><![CDATA[全局页头广告]]></item>
+				<item id="telheader_fids"><![CDATA[投放版块]]></item>
+				<item id="telheader_desc"><![CDATA[自由选择投放范围及指定版块]]></item>
+				<item id="telheader_index"><![CDATA[首页]]></item>
+				<item id="telfooter_name"><![CDATA[全局页尾广告]]></item>
+				<item id="telfooter_fids"><![CDATA[投放版块]]></item>
+				<item id="telfooter_desc"><![CDATA[]]></item>
+				<item id="telfooter_index"><![CDATA[首页]]></item>
+				<item id="forumheader_name"><![CDATA[论坛首页头部广告]]></item>
+				<item id="forumheader_desc"><![CDATA[]]></item>
+				<item id="forumfooter_name"><![CDATA[论坛首页底部广告]]></item>
+				<item id="forumfooter_desc"><![CDATA[]]></item>
+				<item id="forumdisplayfooter_name"><![CDATA[帖子列表底部广告]]></item>
+				<item id="forumdisplayfooter_fids"><![CDATA[投放版块]]></item>
+				<item id="forumdisplayfooter_desc"><![CDATA[]]></item>
+				<item id="forumdisplayheader_name"><![CDATA[帖子列表头部广告]]></item>
+				<item id="forumdisplayheader_fids"><![CDATA[投放版块]]></item>
+				<item id="forumdisplayheader_desc"><![CDATA[]]></item>
+				<item id="viewthreadfooter_name"><![CDATA[帖子页底部广告]]></item>
+				<item id="viewthreadfooter_fids"><![CDATA[投放版块]]></item>
+				<item id="viewthreadfooter_desc"><![CDATA[]]></item>
+				<item id="viewthreadheader_name"><![CDATA[帖子页头部广告]]></item>
+				<item id="viewthreadheader_fids"><![CDATA[投放版块]]></item>
+				<item id="viewthreadheader_desc"><![CDATA[]]></item>
+				<item id="loginfooter_name"><![CDATA[登录底部广告]]></item>
+				<item id="loginfooter_fids"><![CDATA[投放版块]]></item>
+				<item id="loginfooter_desc"><![CDATA[]]></item>
+				<item id="viewthreadfastpost_name"><![CDATA[回复底部广告]]></item>
+				<item id="viewthreadfastpost_fids"><![CDATA[投放版块]]></item>
+				<item id="viewthreadfastpost_desc"><![CDATA[仅支持手机触屏版Discuz! X3.1以上版本]]></item>
+				<item id="postfooter_name"><![CDATA[发帖底部广告]]></item>
+				<item id="postfooter_fids"><![CDATA[投放版块]]></item>
+				<item id="postfooter_desc"><![CDATA[仅支持手机触屏版Discuz! X3.1以上版本]]></item>
+				<item id="viewthreadtoparr_name"><![CDATA[帖间通栏广告上]]></item>
+				<item id="viewthreadtoparr_fids"><![CDATA[投放版块]]></item>
+				<item id="viewthreadtoparr_desc"><![CDATA[]]></item>
+				<item id="viewthreadtoparr_pnumber"><![CDATA[广告显示楼层]]></item>
+				<item id="viewthreadbottomarr_name"><![CDATA[帖间通栏广告下]]></item>
+				<item id="viewthreadbottomarr_fids"><![CDATA[投放版块]]></item>
+				<item id="viewthreadbottomarr_desc"><![CDATA[]]></item>
+				<item id="viewthreadbottomarr_pnumber"><![CDATA[广告显示楼层]]></item>
+				<item id="forumdisplayarr_name"><![CDATA[帖子列表帖位广告]]></item>
+				<item id="forumdisplayarr_fids"><![CDATA[投放版块]]></item>
+				<item id="forumdisplayarr_desc"><![CDATA[]]></item>
+				<item id="forumdisplayarr_pnumber"><![CDATA[广告显示列表位]]></item>
+				<item id="zhikai_mobiad_copyright"><![CDATA[<a href="http://www.nvbing5.net" target="_blank">NVBING5</a>]]></item>
+				<item id="error_noadv"><![CDATA[您暂无广告位!]]></item>
+				<item id="guidetop_name"><![CDATA[话题头部广告]]></item>
+				<item id="guidetop_desc"><![CDATA[添加后广告将显示在话题页面主导航与话题切换菜单中间]]></item>
+				<item id="guidelist_name"><![CDATA[话题列表广告]]></item>
+				<item id="guidelist_desc"><![CDATA[]]></item>
+				<item id="guidelist_pnumber"><![CDATA[选择投放范围]]></item>
+				<item id="kuaifa_name"><![CDATA[快速发布头部广告]]></item>
+				<item id="kuaifa_desc"><![CDATA[]]></item>
+				<item id="kuaifad_name"><![CDATA[快速发布底部广告]]></item>
+				<item id="kuaifad_desc"><![CDATA[]]></item>
+				<item id="jujiao_name"><![CDATA[聚焦头部广告]]></item>
+				<item id="jujiao_desc"><![CDATA[]]></item>
+				<item id="jujiaod_name"><![CDATA[聚焦底部广告]]></item>
+				<item id="jujiaod_desc"><![CDATA[]]></item>
+				<item id="geren_name"><![CDATA[个人中心头部广告]]></item>
+				<item id="geren_desc"><![CDATA[]]></item>
+				<item id="gerenzj_name"><![CDATA[个人中心头像下广告]]></item>
+				<item id="gerenzj_desc"><![CDATA[]]></item>
+				<item id="gerendb_name"><![CDATA[个人中心底部]]></item>
+				<item id="gerendb_desc"><![CDATA[]]></item>
+				<item id="kongjian_name"><![CDATA[会员空间广告]]></item>
+				<item id="kongjian_desc"><![CDATA[]]></item>
+				<item id="qunzu_name"><![CDATA[群组首页头部广告]]></item>
+				<item id="qunzu_desc"><![CDATA[]]></item>
+				<item id="qunzudb_name"><![CDATA[群组首页底部广告]]></item>
+				<item id="qunzudb_desc"><![CDATA[]]></item>
+				<item id="qunzulb_name"><![CDATA[群组列表头部广告]]></item>
+				<item id="qunzulb_desc"><![CDATA[]]></item>
+				<item id="bkwdgz_name"><![CDATA[版块我的关注广告]]></item>
+				<item id="bkwdgz_desc"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

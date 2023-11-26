@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-08-18 15:53]]></item>
+	<item id="From"><![CDATA[源码哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源码哥_加载进度条]]></item>
+			<item id="identifier"><![CDATA[x520_loading]]></item>
+			<item id="description"><![CDATA[一款极其简约，小清新，轻巧，14主题、自定义颜色及可控高度的进度条加载插件。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[x520_loading/]]></item>
+			<item id="copyright"><![CDATA[源码哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.0.2]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>免费资源</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[loadingadmin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[【联系作者及说明】]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[loadingindex]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[风格主题]]></item>
+				<item id="description"><![CDATA[挑选自己喜欢的一款风格吧。推荐小极简，弹跳球，纯色加载，居中小线条加载。切换颜色时，请确保背景颜色非邻近则体验效果最佳，否则完全看不见嘛]]></item>
+				<item id="variable"><![CDATA[x520_theme]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 小极简式加载
+2 = 弹跳球
+3 = 居中小线条加载
+4 = 右上角三角加载
+5 = 右上角百分比加载
+6 = 背景式覆盖加载
+7 = 动态条加载
+8 = 原子效果
+9 = 圆翻转效果
+10 = 雷达旋转
+11 = 小圆圈极简加载 (淘宝同款)
+12 = 纯色加载
+13 = 百分比的居中加载
+14 = mac风格加载]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[开启]]></item>
+				<item id="description"><![CDATA[必须开启插件，才能看到效果]]></item>
+				<item id="variable"><![CDATA[x520_onoff]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[颜色]]></item>
+				<item id="description"><![CDATA[选择喜欢的颜色]]></item>
+				<item id="variable"><![CDATA[x520_fg]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 时尚黑
+2 = 简约蓝
+3 = 青苹果
+4 = 冰力橙
+5 = 妹纸粉
+6 = 紫罗兰
+7 = 淡红色
+8 = 质感灰
+9 = 极简白
+10 = 淡黄色]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[自定义，开关]]></item>
+				<item id="description"><![CDATA[体验个性diy，开启此项以下设置才会生效]]></item>
+				<item id="variable"><![CDATA[x520_onoffs]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[选择]]></item>
+				<item id="description"><![CDATA[颜色值任性随便选。推荐：紫#9933CC 橙#FF723D]]></item>
+				<item id="variable"><![CDATA[x520_fgs]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#9933CC]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[尺寸1]]></item>
+				<item id="description"><![CDATA[默认值为2，推荐取值范围1 - 30之间。 支持的主题风格：小极简式加载、小圆圈极简加载 (淘宝同款)]]></item>
+				<item id="variable"><![CDATA[x520_size1]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[尺寸2]]></item>
+				<item id="description"><![CDATA[默认值为5，推荐取值范围1 - 30之间。 支持的主题风格：动态条加载、mac风格加载]]></item>
+				<item id="variable"><![CDATA[x520_size2]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[尺寸3]]></item>
+				<item id="description"><![CDATA[默认值为2，推荐取值范围1 - 30之间。 支持的主题风格：纯色加载]]></item>
+				<item id="variable"><![CDATA[x520_size3]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

@@ -1,0 +1,27 @@
+在数据调用页面的模块分类处选择【静态模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-图文导航
+
+数据来源：自定义HTML
+
+HTML代码：
+
+<div class="n5_mhfldh cl" style="margin:0">
+	<div class="fldhdp z cl">
+		<a href="#"><h2>商家点评</h2><p>线下消费线上点评</p></a>
+	</div>
+	<div class="fldhfc z cl">
+		<a href="#"><h2>房产频道</h2><p>房屋租售楼盘信息</p></a>
+	</div>
+	<div class="fldhzp z cl">
+		<a href="#"><h2>招聘求职</h2><p>找工作其实很容易</p></a>
+	</div>
+	<div class="fldhsh z cl">
+		<a href="#"><h2>跳蚤市场</h2><p>闲置物品变废为宝</p></a>
+	</div>
+</div>
+
+
+选择确定，这个模块添加完成。

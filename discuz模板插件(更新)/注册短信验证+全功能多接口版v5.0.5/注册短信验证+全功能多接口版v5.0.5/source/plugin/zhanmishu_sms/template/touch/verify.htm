@@ -1,0 +1,285 @@
+<!--{template common/header}-->
+<!--{if !$_GET['infloat']}-->
+
+<!-- header start -->
+<header class="header">
+    <div class="nav">
+        <a href="javascript:;" onclick="history.go(-1)" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png" /></a>
+		<span>{lang zhanmishu_sms:mobileverifymobile}</span>
+    </div>
+</header>
+<!-- header end -->
+<!--{/if}-->
+<div id="mobileverify" class="loginbox " fwin="mobileverify">	
+	<div id="mobileverify_box" class="login_from" fwin="mobileverify">
+		<form method="post" autocomplete="off" id="mobileverify_form" class="cl" action="plugin.php?id=zhanmishu_sms:verify&amp;{if $_GET['act']=='edit'}method=edit{else}method=submit{/if}&amp;form=mobileverify" fwin="mobileverify">
+			<div class="c cl">
+				<input type="hidden" name="formhash" value="{FORMHASH}">
+				<!--{eval $dreferer = str_replace('&amp;', '&', dreferer());}-->
+				<input type="hidden" name="referer" value="$dreferer" />
+
+				<li>
+
+					<input type="text" name="mobile" id="mobileverify_mobile" size="30" value="{$mobile}" tabindex="1" class="px p_fre" fwin="mobileverify"   placeholder="{if $_GET['act']=='edit'}{lang zhanmishu_sms:oldmobilemobile}{else}{lang zhanmishu_sms:mobile}{/if}" {if $_GET['act']=='edit'} readonly="readonly" {/if}><input class="px p_fre" style="height:20px;padding:0 5px;" type="button" id="send" value="{lang zhanmishu_sms:send}" onclick="javascript:sendMessage();">
+			        <input type="hidden" name="code" id="code" value="" required>
+				</li>
+				<li>
+					<input type="text" id="verifycode" name="verifycode" id="mobileverify_verifycode" size="30" value="" tabindex="1" class="p_fre" fwin="mobileverify" onblur="verifysms();"  placeholder="{lang zhanmishu_sms:verifycode}">
+				</li>
+				{if $_GET['act']=='edit'}
+				<li>
+					<input type="text" name="new_mobile" id="new_mobileverify_mobile" size="30" value="" tabindex="1" class=" p_fre" fwin="mobileverify" onblur="javascript:new_mobileblur();" disabled="disabled"   placeholder="{lang zhanmishu_sms:newmobilemobile}">
+					<input style="background: #cdcdcd;padding:0 5px;height: 20px;border: 0" class="pn pnc" style="height:20px;padding:0 5px;" type="button" id="new_send" value="{lang zhanmishu_sms:send}" onclick="javascript:new_sendMessage();" disabled="disabled">
+							        <input type="hidden" name="new_code" id="new_code" value="" required>
+					
+				</li>
+				<li>
+					<input type="text" id="new_verifycode" name="new_verifycode" id="new_mobileverify_verifycode" size="30" value="" tabindex="1" class="p_fre"  disabled="disabled"   placeholder="{lang zhanmishu_sms:verifycode}">
+
+				</li>
+
+				{/if}
+				<li>
+					<button class="pn pnc" type="submit" id="send_verify_Button" name="send_verify_Button" value="true" tabindex="100">
+					<span>{lang zhanmishu_sms:submit}</span></button>
+				</li>
+						
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+function mobileblur(){
+    if(!checkmobile()) 
+    { 
+        return false; 
+    } 
+}
+
+function new_mobileblur(){
+    if(!new_checkmobile()) 
+    { 
+        return false; 
+    } 
+}
+
+
+
+/*-------------------------------------------*/  
+var InterValObj; 
+var new_InterValObj; 
+var count = {$config['waittime']};   
+var curCount;
+var code = ""; 
+var codeLength = 6;
+function checkmobile(){
+	var myreg = {$config['mobilerule']};
+	if(myreg.test(jQuery("#mobileverify_mobile").val())) 
+	{ 
+	    return true; 
+	}else{
+
+		return false;
+	}
+}
+function new_checkmobile(){
+    var myreg = {$config['mobilerule']};
+    if(myreg.test(jQuery("#new_mobileverify_mobile").val())) 
+    { 
+        return true; 
+    }else{
+
+        return false;
+    }
+}
+function sendMessage() {
+	if (!checkmobile()) {
+		return false;
+	};
+    curCount = count;  
+    var phone=jQuery("#mobileverify_mobile").val();
+    if(phone != ""){  
+        code = 0;
+        for (var i = 0; i < codeLength; i++) {  
+            code += parseInt(Math.random() * 10).toString();
+        }
+        jQuery("#code").val(code);
+        jQuery("#send").attr("disabled", "true");  
+        jQuery("#send").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+        InterValObj = window.setInterval(SetRemainTime, 1000); 
+        jQuery.ajax({  
+            type: "POST", 
+            dataType: "json", 
+            url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method={if $_GET["act"]=="edit"}editsend{else}send{/if}',   
+            data: "phone=" + phone + "&code=" + code +"&formhash={FORMHASH}",  
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+            	window.clearInterval(InterValObj);
+
+            	jQuery("#send").removeAttr("disabled");
+            },  
+            success: function (msg){
+            	if (msg.code < 1) {
+                    popup.open(msg.msg, 'alert');
+                    jQuery("#send").removeAttr("disabled");
+                    window.clearInterval(InterValObj);
+                    jQuery("#send").val("{lang zhanmishu_sms:resend}"); 
+                }else{
+                    jQuery("#zhanmishu_sms_err").attr('style','display:none');
+                    jQuery("#div_sms_verify").attr('style','display:block');
+                }
+            }  
+        });
+    }else{  
+        jQuery("#zhanmishu_sms_err").html("{lang zhanmishu_sms:input_tips}");
+        jQuery("#zhanmishu_sms_err").attr('style','display:block');
+    }  
+}
+
+function new_sendMessage() {
+    if (!new_checkmobile()) {
+        return false;
+    };
+    curCount = count;  
+    var phone=jQuery("#new_mobileverify_mobile").val();
+    var verify = jQuery("#verifycode").val();
+    var oldcode = jQuery("#code").val();
+    if(phone != ""){  
+        
+        code = 0;
+        for (var i = 0; i < codeLength; i++) {  
+            code += parseInt(Math.random() * 10).toString();
+        }
+        jQuery("#new_code").val(code);
+       
+        jQuery("#new_send").attr("disabled", "true");  
+        jQuery("#new_send").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+
+        new_InterValObj = window.setInterval(new_SetRemainTime, 1000); 
+        jQuery.ajax({  
+            type: "POST", 
+            dataType: "json", 
+            url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=new_send',   
+            data: "phone=" + phone + "&verify="+ verify + "&oldcode=" + oldcode +  "&code=" + code +"&formhash={FORMHASH}",  
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                window.clearInterval(new_InterValObj);
+                jQuery("#new_send").val(msg.msg);
+                jQuery("#new_send").removeAttr("disabled");
+            },  
+            success: function (msg){
+                if (msg.code  < 1) {
+                    popup.open(msg.msg, 'alert');
+                    jQuery("#new_send").removeAttr("disabled");
+                    jQuery("#new_send").val("{lang zhanmishu_sms:resend}");
+                    window.clearInterval(new_InterValObj);
+                }else{
+                    jQuery("#new_zhanmishu_sms_err").attr('style','display:none');
+                    jQuery("#new_div_sms_verify").attr('style','display:block');
+                }
+            }  
+        });
+    }else{  
+        jQuery("#new_zhanmishu_sms_err").html("{lang zhanmishu_sms:input_tips}");
+        jQuery("#new_zhanmishu_sms_err").attr('style','display:block');
+    }  
+}  
+function SetRemainTime() {  
+    if (curCount == 0) {                  
+        window.clearInterval(InterValObj);
+        jQuery("#send").removeAttr("disabled");
+        jQuery("#send").val("{lang zhanmishu_sms:resend}");  
+        code = "";      
+    }  
+    else {  
+        curCount--;  
+        jQuery("#send").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+    }  
+}
+
+function new_SetRemainTime() {  
+    if (curCount == 0) {                  
+        window.clearInterval(new_InterValObj);  
+        jQuery("#new_send").removeAttr("disabled");
+        jQuery("#new_send").val("{lang zhanmishu_sms:resend}");  
+        code = "";     
+    }  
+    else {  
+        curCount--;  
+        jQuery("#new_send").val("{lang zhanmishu_sms:mobile_input_tips_sec}");  
+    }  
+}
+
+
+function verifysms(){
+	var verify = jQuery("#verifycode").val();
+	var code = jQuery("#code").val();
+	jQuery.ajax({  
+        type: "POST", 
+        dataType: "json", 
+        url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=verify', //Ä¿±êµØÖ·  
+        data: "verify=" + verify + "&code="+code+"&formhash={FORMHASH}",  
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        	//window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+
+        	if (msg.code < 0) {
+                popup.open(msg.msg, 'alert');
+                return false;
+        	}
+
+        	if (msg.code == 1) {
+	            jQuery("#new_mobileverify_mobile").removeAttr("disabled");
+	            jQuery("#new_send").removeAttr("disabled");
+	            jQuery("#new_send").attr("style","padding:0 5px;");
+	            jQuery("#new_zhanmishu_sms_tip").removeAttr("disabled");
+	            jQuery("#new_verifycode").removeAttr("disabled");
+                return true;
+        	}
+
+        }  
+    }); 
+	return false;
+}
+
+function new_verifysms(){
+    var verify = jQuery("#new_verifycode").val();
+    var oldverify = jQuery("#verifycode").val();
+    var code = jQuery("#new_code").val();
+    var oldcode = jQuery("#code").val();
+    var oldmobile = jQuery("#mobileverify_mobile").val();
+    var mobile = jQuery("#new_mobileverify_mobile").val();
+    jQuery.ajax({  
+        type: "POST",
+        dataType: "json",
+        url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=new_verify',
+        data: "verify=" + verify + "&oldmobile="+oldmobile+"&mobile="+mobile+"&oldverify="+oldverify+"&oldcode="+oldcode+"&code="+code+"&formhash={FORMHASH}",  
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            //window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+            if (msg.code < 0) {
+                if (msg.code=='-5') {
+                    popup.open(msg.msg, 'alert');
+                };
+                jQuery("#new_sms_verify_tip_wrong").css('display', 'block');
+                jQuery("#new_sms_verify_tip").removeClass("p_right");
+                return false;
+            }
+            if (msg.code == 1) {
+                jQuery("#new_sms_verify_tip").addClass("p_right");
+                jQuery("#new_sms_verify_tip_wrong").css('display', 'none');
+                return true;
+            }
+
+        }  
+    }); 
+    return false;
+}
+
+
+</script>
+
+<!--{template common/footer}-->

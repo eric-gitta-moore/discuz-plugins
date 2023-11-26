@@ -1,0 +1,27 @@
+<!--{template common/header}-->
+<style>.ainuo_foot_nav{ display:none;}</style>
+<style id="diy_style" type="text/css"></style>
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+
+
+<script>
+var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	loop : true,
+	autoplay : 3000,
+});
+</script>
+
+<!--{if check_diy_perm($topic)}--><a href="javascript:;" onclick="openDiy()" class="ascrolldiy">DIY</a><!--{/if}-->
+<!--{if $topic['allowcomment']==1}--> 
+  {eval
+  $data = &$topic;
+  $common_url = "portal.php?mod=comment&id=$topicid&idtype=topicid";
+  $form_url = "portal.php?mod=portalcp&ac=comment";
+  $commentlist = portaltopicgetcomment($topicid);	} 
+  <!--{template portal/portal_comment}--> 
+  <!--{/if}--> 
+
+
+<!--{template common/footer}-->

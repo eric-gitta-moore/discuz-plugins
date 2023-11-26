@@ -1,0 +1,48 @@
+<!--{template milu_pick:pick_header}-->
+
+<form id="cpform" action="?{PICK_GO}fast_pick&myac=fastpick_evo_log_del" autocomplete="off" method="post" name="cpform">
+<input type="hidden" value="4e816df0" name="formhash"><input type="hidden" value="" name="scrolltop" id="formscrolltop">
+   </p>
+    <table width="50" class="tb tb2 ">
+	<tr>
+	  <th colspan="17" class="partition">{lang milu_pick:evo_log_list}</th>
+	</tr>
+<tbody><tr class="header">
+  <th></th>
+<th width="280">{lang milu_pick:err_url}</th>
+  <th width="120">{lang milu_pick:err_why}</th>
+  <th width="120">{lang milu_pick:rules_name}</th>
+  <th width="120">{lang milu_pick:rules_type}</th>
+  <th width="120">{lang milu_pick:evo_dateline}</th>
+  <th width="160">{lang milu_pick:op}</th>
+</tr></tbody>
+  <tbody id="">
+  <!--{if $info['rs']}-->
+   <!--{loop $info['rs'] $key $rs}-->
+<tr class="hover">
+  <td class="td25"><input type="checkbox" name="id[]" value="{$rs['id']}" class="checkbox"></td>
+  <td width="280"><a href="{$rs['url']}" target="_blank">{$rs['show_url']}</a></td>
+  <td width="120">{$rs['show_why']}</td>
+  <td width="120">{$rs['rules_name']}</td>
+  <td width="120">{$rs['show_type']}</td>
+   <td width="120">{$rs['dateline']}</td>
+  <td width="160">
+ {if $rs['type'] !=3} &nbsp;<a href="{$rs['go_url']}">{lang milu_pick:edit_rules}</a>{/if}
+  &nbsp;<a href="?{PICK_GO}fast_pick&myac=fastpick_evo_log_del&id={$rs[id]}&tpl=1">{lang milu_pick:del_log}</a>  </td>
+</tr>
+   <!--{/loop}-->
+   <!--{else}-->
+  <tr class="hover"><td colspan="6" align="center" class="td25">{lang milu_pick:no_data}</td></tr>
+  <!--{/if}-->
+  </tbody><tbody style="display: none" id="subnav_6"></tbody>
+<tbody></tbody><tbody><tr><td colspan="17">
+<div class="fixsel"><input type="checkbox" name="chkall" id="chkall" class="checkbox" onclick="checkAll('prefix', this.form, 'id')"><label for="chkall">{lang milu_pick:all_select}</label>&nbsp;
+      
+  <input style="float:none" type="submit" class="btn" name="articlesubmit" value="{lang milu_pick:del}"><div class="cuspages right">{$info['multipage']}</div></div>
+
+  </td></tr>
+  <tr>
+    <td colspan="17">{lang milu_pick:err_log_notice}</td>
+  </tr>
+  <script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'submit'); });</script></tbody></table>
+</form>

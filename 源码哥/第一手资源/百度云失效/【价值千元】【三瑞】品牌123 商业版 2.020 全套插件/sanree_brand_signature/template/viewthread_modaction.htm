@@ -1,0 +1,62 @@
+<!--{block sreturn}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/sanree_brand_signature/template/sanree_brand_signature.css" />
+<script language="javascript">
+var pluginimgpath = 'source/plugin/sanree_brand_signature/template/images/';
+function copytel(tel) {
+	setCopy(tel,'{lang sanree_brand_signature:copytel}');
+}
+function viewonmouseover() {
+	$('signaturebody').style.background ='#FFF8F4';
+	$('viewbar').style.background="url('"+ pluginimgpath +"viewbar2.jpg') no-repeat";
+	$('logoshow').style.background="url('"+ pluginimgpath +"logoshow2.jpg') no-repeat";
+	$('telline').style.background="url('"+ pluginimgpath +"tel2.jpg') no-repeat";		
+}
+function viewonmouseout() {
+	$('signaturebody').style.background ='#F0F0F0';
+	$('viewbar').style.background="url('"+ pluginimgpath +"viewbar.jpg') no-repeat";
+	$('logoshow').style.background="url('"+ pluginimgpath +"logoshow.jpg') no-repeat";	
+	$('telline').style.background="url('"+ pluginimgpath +"tel.jpg') no-repeat";	
+}
+</script>
+<div class="sanree_brand_signature">
+  <div class="hd"><!--{if $managethis}--><a href="plugin.php?id=sanree_brand_signature&mod=mysignature" target="_blank" title="{lang sanree_brand_signature:signaturemanage}"></a><!--{/if}--></div>
+  <div class="bd">
+    <div class="signaturebody" onmouseover="viewonmouseover();" onmouseout="viewonmouseout();" id="signaturebody">
+      <div class="logoshow" id="logoshow">
+        <div class="brandlogo">
+			<A href="{$brandresult['brand_url']}" target=_blank title="{$brandresult['brand_name']}"><IMG alt="{$brandresult['brand_name']}" src="{$brandresult['brand_poster']}"></A>
+			<!--{if $brandresult['brand_isrecommend']==1}--><div class="tuijian"></div><!--{/if}-->
+		</div>
+      </div>
+      <div class="viewbar" id="viewbar">
+        <div class="copyright" id="srcopyright">
+		<!--{if $copyrightshow}-->
+			Power by <a href="http://www.fx8.cc/" target="_blank">Sanree.com</a>
+		<!--{else}-->
+		    <label>{lang sanree_brand_signature:add_date}{$brandresult['brand_addtime']}</label>
+		<!--{/if}-->
+		</div>
+        <div class="viewbtn"><a href="{$brandresult['brand_url']}" target="_blank"></a></div>
+      </div>
+      <div class="brandinfo">
+        <h2><A href="{$brandresult['brand_url']}" target=_blank title="{$brandresult['brand_name']}">{$brandresult['brand_name']}</A></h2>
+        <div class="nline">
+          <div class="catename">{lang sanree_brand:cateh}<A href="{$brandresult['brand_cateurl']}" title="{$brandresult['brand_catename']}"><SPAN>{$brandresult['brand_catename']}</SPAN></A></div>
+          <div class="discount">{lang sanree_brand:pub_discount}<SPAN>{$brandresult['brand_discount']}&nbsp;&nbsp;<img align="absmiddle" src="source/plugin/sanree_brand_signature/template/images/zhe.gif" /></SPAN></div>
+        </div>
+        <div class="mline">
+          <div class="brandgroup">{lang sanree_brand:brandgroup}<SPAN><img src="{$brandresult['brand_groupimg']}" /></SPAN></div>
+          <div class="brandqq">
+			  <!--{if $ismultiple==1&&$brandresult[allowmultiple]==1}-->
+			  {lang sanree_brand:oqq}{$brandresult['brand_icq']}
+			  <!--{else}-->
+			  {lang sanree_brand:oqq}{$brandresult['brand_qq']}
+			  <!--{/if}-->
+		  </div>
+        </div>
+        <div class="telline" id="telline"> <a href="javascript:void(0)" title="{lang sanree_brand_signature:copyteltip}" onclick="copytel('{$brandresult['brand_tel']}')">{$brandresult['brand_tel']}</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--{/block}-->

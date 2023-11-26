@@ -1,0 +1,77 @@
+在数据调用页面的模块分类处选择【静态模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-滑动图标
+
+数据来源：自定义HTML
+
+HTML代码：
+
+<div id="n5jj_hdtb" class="n5jj_hdtb cl">
+<div class="bd">
+<ul>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_01.png" /><p>去旅游</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_02.png" /><p>美食控</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_03.png" /><p>微头条</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_04.png" /><p>家装帮</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_05.png" /><p>车生活</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_06.png" /><p>谈婚嫁</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_07.png" /><p>亲子秀</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_09.png" /><p>爱交友</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_08.png" /><p>看视频</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_10.png" /><p>听音乐</p></a></li>
+
+</ul>
+<ul>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+<li><a href="#"><img src="template/zhikai_n5app/images/hddh_11.png" /><p>自定义</p></a></li>
+
+</ul>
+</div>
+<div class="hd">
+
+<ul>
+</ul>
+
+</div>
+</div>
+
+<script type="text/javascript">
+TouchSlide({ 
+slideCell:"#n5jj_hdtb",
+titCell:".hd ul", 
+autoPage:true, 
+pnLoop:"false",
+switchLoad:"_src" 
+});
+</script>
+
+
+修改后选择确定，这个模块添加完成。

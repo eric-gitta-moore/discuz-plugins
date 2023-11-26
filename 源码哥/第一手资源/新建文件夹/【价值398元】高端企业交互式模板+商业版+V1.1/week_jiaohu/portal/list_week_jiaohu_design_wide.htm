@@ -1,0 +1,88 @@
+<!--{template common/header}-->
+<!--[name]{Week_Design_list_design_wide}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<style>
+.wp { width:1190px; margin:0 auto; } 
+</style>
+
+</div>
+<div class="wk_list_box wk_list_box17">
+    <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+    <div class="bm_h">
+        <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]">{lang article_publish}</a>
+    </div>
+    <!--{/if}-->
+</div>
+<div class="wk_blog_tab">
+	<ul>
+    <!--{if $wk_menu}-->
+        <!--{if $cat[others]}-->
+            <!--{loop $cat[others] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{/if}-->
+    <!--{else}-->
+        <!--{if $cat[subs]}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[others] $value}-->
+                <!--{if $value['catid'] == $cat['catid']}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" class="a">$week_lang[58]</a></li>
+                <!--{/if}-->
+                <!--{/loop}-->
+            <!--{/if}-->
+            <!--{loop $cat[subs] $value}-->
+                <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+            <!--{/loop}-->
+        <!--{else}-->
+            <!--{if $cat[others]}-->
+                <!--{loop $cat[ups] $value}--><!--{if $value['catid'] == $cat['upid']}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]">$week_lang[58]</a></li><!--{/if}--><!--{/loop}-->
+                <!--{loop $cat[others] $value}-->
+                    <li><a href="{$portalcategory[$value['catid']]['caturl']}" title="$value[catname]" {if $value['catid'] == $cat['catid']}class="a"{/if}>$value[catname]</a></li>
+                <!--{/loop}-->
+            <!--{/if}-->
+        <!--{/if}-->
+    <!--{/if}-->
+    </ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="wk_ymbg">
+<div id="wp" class="wp">
+
+    <div class="wp">
+        <!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+    </div>
+
+	<div class="week-case">	
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+        <div class="week-case_con">
+            <!--{loop $list['list'] $value}-->
+            <!--{eval $highlight = article_title_style($value);}-->
+            <!--{eval $article_url = fetch_article_url($value);}-->	
+                <dl>
+                    <dd style="background:url({if $value[pic]}$value[pic]{else}$_G['style']['imgdir']/nophoto.gif{/if}) no-repeat center center;background-size:cover"><a href="$article_url" title="$value[title]" target="_blank"></a></dd>
+                    <dt><h3><a href="$article_url" title="$value[title]" target="_blank">$value[title]</a></h3></dt>
+                    <dt><a href="{$portalcategory[$value['catid']]['caturl']}" target="_blank" class="xi2">$value[catname]</a><span class="pipe"></span>$value[dateline]</dt>
+                    <dt class="dt3">$value[summary]</dt>
+                </dl>
+            <!--{/loop}-->
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}-->
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+	</div>
+</div>
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

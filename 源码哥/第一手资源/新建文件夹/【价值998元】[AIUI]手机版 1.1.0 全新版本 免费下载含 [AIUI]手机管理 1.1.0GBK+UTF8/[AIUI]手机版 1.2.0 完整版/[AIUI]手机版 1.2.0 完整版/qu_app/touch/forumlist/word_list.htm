@@ -1,0 +1,29 @@
+<!--{eval $mysiteBM = currentlang()}-->
+<!--{eval require_once(DISCUZ_ROOT."./template/qu_app/touch/ainuo/lang/$mysiteBM.php");}-->
+<!--{loop $_G['forum_threadlist'] $key $thread}-->
+                    <!--{if !$_G['setting']['mobile']['mobiledisplayorder3'] && $thread['displayorder'] > 0}-->
+                        {eval continue;}
+                    <!--{/if}-->
+                    <!--{if $thread['displayorder'] > 0 && !$displayorder_thread}-->
+                        {eval $displayorder_thread = 1;}
+                    <!--{/if}-->
+                    <!--{if $thread['moved']}-->
+                        <!--{eval $thread[tid]=$thread[closed];}-->
+                    <!--{/if}-->
+                    <li id="$thread[id]">
+                    <!--{hook/forumdisplay_thread_mobile $key}-->
+                    <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra"><span $thread[highlight]>{$thread[subject]}</span>
+                    <p class="cl">
+                        <span class="by">$thread[author]</span>
+                        <span class="reply">{$thread[replies]}{$alang_reply}</span>
+                        <span class="reply">{$thread[views]}{$alang_view}</span>
+                    </p>
+                    </a>
+                    
+                    <!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+                        <span class="icon_top"><img src="template/qu_app/touch/style/css/images/icon_top.png" width="25"></span>
+                    <!--{elseif $thread['digest'] > 0}-->
+                        <span class="icon_top"><img src="template/qu_app/touch/style/css/images/icon_digest.png" width="25"></span>
+                    <!--{/if}-->
+                    </li>
+                <!--{/loop}-->

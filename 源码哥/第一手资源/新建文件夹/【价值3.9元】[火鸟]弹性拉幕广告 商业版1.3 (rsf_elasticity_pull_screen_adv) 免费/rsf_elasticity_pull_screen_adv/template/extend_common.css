@@ -1,0 +1,33 @@
+.rsf_pull_screen_adv{
+	width:auto;
+	height:auto;
+	margin:0 auto;
+	text-align:center;
+}
+.rsf_width{
+	width:960px;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;
+}
+.rsf_width img{
+		width:960px;
+		height:auto;
+}
+.rsf_default{
+	position:relative;
+}
+.rsf_show_btn{
+	width:40px;
+	height:18px;
+	line-height:18px;
+	text-align:center;
+	font-size:12px;
+	font-family:"宋体";
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	bottom:0px;
+	background:#f2f2f2;
+	border-radius:5px 0 0 0;
+}

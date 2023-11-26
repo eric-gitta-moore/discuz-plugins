@@ -1,0 +1,190 @@
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.validation.min.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/admincp.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.cookie.js"></script>
+<link href="{HEJIN_PATH}public/admin/css/skin_0.css" rel="stylesheet" type="text/css" id="cssfile2" />
+<link href="{HEJIN_PATH}public/admin/css/style.css" rel="stylesheet" type="text/css"/>
+
+
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title">
+<div class="h3" style="width:auto">{lang hejin_box:addreply}</div>
+      <ul class="tab-base">
+        <li><a href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=reply&model=img" class="current"><span>{lang hejin_box:reply}</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <form id="add_form" method="post" enctype="multipart/form-data" action="">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="type" value="1" />
+    <table class="table tb-type2">
+      <tbody>
+        <tr class="noborder">
+          <td colspan="2" class="required"><label class="validation" for="test_keywords">{lang hejin_box:keyword}</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input type="text" value="" name="keywords" id="class_name" class="txt"></td>
+          <td class="vatop tips">{lang hejin_box:keywordts}</td>
+        </tr>
+
+        <tr class="noborder">
+          <td colspan="2" class="required"><label class="validation" for="test_title">{lang hejin_box:title}</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input type="text" value="" name="title" id="class_name" class="txt"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        
+        <tr class="noborder">
+          <td colspan="2"><label for="test_pic">{lang hejin_box:picurl}</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input type="text" value="" name="pic" id="class_name" class="txt"></td>
+          <td class="vatop tips">{lang hejin_box:picurlts} 640px * 355px</td>
+        </tr>
+
+
+        <tr class="noborder">
+          <td colspan="2"><label for="test_content">{lang hejin_box:content}</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><textarea name="content" rows="6" class="tarea" id="statistics_code"></textarea>
+         </td>
+          <td class="vatop tips">{lang hejin_box:contentts}</td>
+        </tr>
+
+        <tr class="noborder">
+          <td colspan="2" class="required"><label class="validation" for="replyurl">{lang hejin_box:replyurl}</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input type="text" value="" name="url" id="replyurl" class="txt"></td>
+          <td class="vatop tips"></td>
+        </tr>
+
+
+
+        <tr class="noborder">
+          <td colspan="2" class="required"><label class="validation" for="test_state">{lang hejin_box:state}</label></td>
+        </tr>
+
+<tr style="background: none repeat scroll 0% 0% rgb(255, 255, 255);" class="noborder">
+          <td class="vatop rowform onoff"><label for="state1" class="cb-enable selected"><span>{lang hejin_box:qiyong}</span></label>
+            <label for="state0" class="cb-disable "><span>{lang hejin_box:jinyong}</span></label>
+            <input id="state1" name="state" checked="checked" value="1" type="radio">
+            <input id="state0" name="state" value="0" type="radio"></td>
+          <td class="vatop tips"></td>
+        </tr>
+
+ 
+         <tr>
+          <td colspan="2" class="required"><label class="validation" for="sort">{lang hejin_box:paixu}</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input id="sort" name="sort" type="text" class="txt" value="0" /></td>
+          <td class="vatop tips">{lang hejin_box:paixuts}</td>
+        </tr>
+ 
+ 
+        <tr class="noborder" style="display:none">
+          <td colspan="2" class="required"><label class="validation" for="test_openid">{lang hejin_box:openid}</label></td>
+        </tr>
+
+<tr style="background: none repeat scroll 0% 0% rgb(255, 255, 255);display:none" class="noborder">
+          <td class="vatop rowform onoff"><label for="openid1" class="cb-enable"><span>{lang hejin_box:shi}</span></label>
+            <label for="openid0" class="cb-disable selected"><span>{lang hejin_box:fou}</span></label>
+            <input id="openid1" name="is_openid" value="1" type="radio">
+            <input id="openid0" name="is_openid" checked="checked" value="0" type="radio"></td>
+          <td class="vatop tips"></td>
+        </tr>
+ 
+ 
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><input name="add_reply" class="btn" type="submit" value="{lang hejin_box:baocun}" /></td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+
+
+    $("#submit").click(function(){
+        $("#add_form").submit();
+    });
+
+    $("input[nc_type='microshop_goods_class_image']").live("change", function(){
+		var src = getFullPath($(this)[0]);
+		$(this).parent().prev().find('.low_source').attr('src',src);
+		$(this).parent().find('input[class="type-file-text"]').val($(this).val());
+	});
+
+
+    $('#add_form').validate({
+        errorPlacement: function(error, element){
+            error.appendTo(element.parent().parent().prev().find('td:first'));
+        },
+        success: function(label){
+            label.addClass('valid');
+        },
+        rules : {
+            keywords: {
+                required : true,
+                maxlength : 255
+            },
+            title: {
+                required : true,
+                maxlength : 255
+            },
+            url: {
+                required : true,
+                maxlength : 1000
+            },
+            sort: {
+                required : true,
+                digits: true,
+			 },
+            state: {
+                required : true,
+                digits: true,
+			 },
+            is_openid: {
+                required : true,
+                digits: true,
+			 },
+        },
+        messages : {
+            keywords: {
+                required : "{lang hejin_box:addmsga}",
+                maxlength : jQuery.validator.format("{lang hejin_box:addmsgb}255{lang hejin_box:addmsgc}")
+            },
+            title: {
+                required : "{lang hejin_box:addmsga}",
+                maxlength : jQuery.validator.format("{lang hejin_box:addmsgb}255{lang hejin_box:addmsgc}")
+            },
+            url: {
+                required : "{lang hejin_box:addmsga}",
+                maxlength : jQuery.validator.format("{lang hejin_box:addmsgb}1000{lang hejin_box:addmsgc}")
+            },
+            sort: {
+                required : "{lang hejin_box:addmsga}",
+				digits: "{lang hejin_box:addmsgd}",
+				},
+            state: {
+                required : "{lang hejin_box:addmsga}",
+				digits: "{lang hejin_box:addmsgd}",
+				},
+            is_openid: {
+                required : "{lang hejin_box:addmsga}",
+				digits: "{lang hejin_box:addmsgd}",
+				},
+        }
+    });
+});
+</script> 

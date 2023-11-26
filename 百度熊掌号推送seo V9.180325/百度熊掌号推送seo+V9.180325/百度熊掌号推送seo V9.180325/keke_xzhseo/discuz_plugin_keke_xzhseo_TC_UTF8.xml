@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2017-12-12 02:54]]></item>
+	<item id="From"><![CDATA[M12社区]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[百度熊掌號推送seo]]></item>
+			<item id="identifier"><![CDATA[keke_xzhseo]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[keke_xzhseo/]]></item>
+			<item id="copyright"><![CDATA[M12社区]]></item>
+			<item id="version"><![CDATA[V9.180325]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[keke_xzhseo]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[keke_xzhseo]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[內容推送記錄]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admin_p]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[新增內容批量推送]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[admin_l]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[歷史內容批量推送]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[app]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<span style="color:red">更多可可精品插件</span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[10]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[appid]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[appid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1559548725146061]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[token]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[token]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[nWjvbSdjDqpM1QAT]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[內容摘要截取長度]]></item>
+				<item id="description"><![CDATA[結構化內容摘要截取長度，最大為120，請根據需要設置]]></item>
+				<item id="variable"><![CDATA[cd]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[120]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[開啟【手動推送】用戶組]]></item>
+				<item id="description"><![CDATA[允許在前台使用手動推送功能的用戶組]]></item>
+				<item id="variable"><![CDATA[sd]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[是否開啟【自動推送】]]></item>
+				<item id="description"><![CDATA[開啟後將按照下方自動推送規則，在發布新內容時自動進行推送。對于水帖較多且不好利用規則控制的站點建議關閉此項僅使用手動推送，以保證推送內容質量]]></item>
+				<item id="variable"><![CDATA[zd]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[論壇自動推送的版 ...]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[bk]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[55]]></item>
+					<item id="1"><![CDATA[56]]></item>
+					<item id="2"><![CDATA[57]]></item>
+					<item id="3"><![CDATA[58]]></item>
+					<item id="4"><![CDATA[36]]></item>
+					<item id="5"><![CDATA[2]]></item>
+					<item id="6"><![CDATA[50]]></item>
+					<item id="7"><![CDATA[49]]></item>
+					<item id="8"><![CDATA[45]]></item>
+					<item id="9"><![CDATA[46]]></item>
+					<item id="10"><![CDATA[47]]></item>
+					<item id="11"><![CDATA[48]]></item>
+					<item id="12"><![CDATA[44]]></item>
+					<item id="13"><![CDATA[43]]></item>
+					<item id="14"><![CDATA[38]]></item>
+					<item id="15"><![CDATA[39]]></item>
+					<item id="16"><![CDATA[40]]></item>
+					<item id="17"><![CDATA[41]]></item>
+					<item id="18"><![CDATA[42]]></item>
+					<item id="19"><![CDATA[54]]></item>
+				</item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[門戶是否自動推送]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[群組是否自動推送]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[自動推送的用戶組]]></item>
+				<item id="description"><![CDATA[選中的用戶組用戶發布的帖子或者文章才進行推送。建議根據自己網站情況選擇內容質量較高的用戶組。為空則全部用戶組內容都推送]]></item>
+				<item id="variable"><![CDATA[yhz]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[是否開啟歷史內容推送]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ls]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[是否添加關注功能]]></item>
+				<item id="description"><![CDATA[開啟後，將在手機內容頁內容上方顯示關注熊掌號關注功能。]]></item>
+				<item id="variable"><![CDATA[gz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="001"><![CDATA[推送記錄]]></item>
+				<item id="002"><![CDATA[推送URL]]></item>
+				<item id="003"><![CDATA[推送類型]]></item>
+				<item id="004"><![CDATA[推送結果]]></item>
+				<item id="005"><![CDATA[推送時間]]></item>
+				<item id="006"><![CDATA[新帖推送]]></item>
+				<item id="007"><![CDATA[歷史內容推送]]></item>
+				<item id="008"><![CDATA[刪除推送]]></item>
+				<item id="009"><![CDATA[<font color="#390">推送成功\</font>]]></item>
+				<item id="010"><![CDATA[當前站點URL與熊掌號不匹配]]></item>
+				<item id="011"><![CDATA[不合法的url]]></item>
+				<item id="012"><![CDATA[<font color="#CC3300">推送失敗</font> / 錯誤碼:]]></item>
+				<item id="013"><![CDATA[操作成功\]]></item>
+				<item id="014"><![CDATA[全選]]></item>
+				<item id="015"><![CDATA[推送內容]]></item>
+				<item id="016"><![CDATA[推送URL]]></item>
+				<item id="017"><![CDATA[推送類型]]></item>
+				<item id="018"><![CDATA[原創推送]]></item>
+				<item id="019"><![CDATA[推送結果]]></item>
+				<item id="020"><![CDATA[推送時間]]></item>
+				<item id="021"><![CDATA[文章推送]]></item>
+				<item id="023"><![CDATA[原創]]></item>
+				<item id="024"><![CDATA[推送結果]]></item>
+				<item id="025"><![CDATA[<ul id="tipslis"><li>請將需要批量推送的鏈接填入下方文本框，每一行一條鏈接。</li><li>批量推送結果以返回信息為準。受推送接口限制，在推送記錄中無法查看。</li></ul>]]></item>
+				<item id="026"><![CDATA[新增內容批量推送]]></item>
+				<item id="027"><![CDATA[此內容已成功\推送,請勿重復推送]]></item>
+				<item id="028"><![CDATA[<ul id="tipslis"><li>推送url以起始ID為起始點，按照推送數量計算依次自增ID順序提交。</li><li>例如︰起始ID設為1，推送數量設為100，則本次批量推送的url為 http://www.xxx.com/thread-1-1-1.html ~ http://www.xxx.com/thread-100-1-1.html 的內容。</li><li>批量推送結果以返回信息為準。受推送接口限制，在推送記錄中無法查看。</li></ul>]]></item>
+				<item id="029"><![CDATA[歷史內容批量推送]]></item>
+				<item id="030"><![CDATA[請輸入推送網址]]></item>
+				<item id="031"><![CDATA[請輸入起始ID]]></item>
+				<item id="032"><![CDATA[請輸入推送數量]]></item>
+				<item id="033"><![CDATA[推送內容]]></item>
+				<item id="034"><![CDATA[論壇/群組]]></item>
+				<item id="035"><![CDATA[文章]]></item>
+				<item id="036"><![CDATA[起始ID]]></item>
+				<item id="037"><![CDATA[當選擇【論壇/群組】時填入tid，選擇【文章】時填入aid]]></item>
+				<item id="038"><![CDATA[推送數量]]></item>
+				<item id="039"><![CDATA[從起始ID計算，推送的數量。]]></item>
+				<item id="040"><![CDATA[成功\推送]]></item>
+				<item id="041"><![CDATA[條內容]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="t001"><![CDATA[推送成功\]]></item>
+				<item id="t002"><![CDATA[推送失敗]]></item>
+				<item id="t003"><![CDATA[將此內容推送到熊掌號]]></item>
+				<item id="t005"><![CDATA[此內容已成功\推至熊掌號]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="enablefile"><![CDATA[enable.php]]></item>
+	</item>
+</root>

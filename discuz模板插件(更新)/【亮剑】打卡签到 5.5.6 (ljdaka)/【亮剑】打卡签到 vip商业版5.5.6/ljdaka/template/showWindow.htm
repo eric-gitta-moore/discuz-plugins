@@ -1,0 +1,153 @@
+{template common/header}
+
+<div id="evy_chk" class="checkin_popup">
+<h3 class="chk_title">{lang ljdaka:daka1}</h3>
+<div class="chk_con">
+<span class="ckc_title"></span>
+<iframe name="msg" style="display:none;"></iframe> 
+<form action="plugin.php?id=ljdaka:daka&action=msg" method="post" id="msg" target="msg">
+<input type="hidden" value="{FORMHASH}" name="formhash">
+<div class="chk_mood">
+{loop $arr1 $key $data}
+<a href="javascript:;" {if $a1first==$data}class="sel"{/if}><img alt="" src="{$arr3[$key]}"><span>$data</span></a>
+{/loop}
+</div>
+<textarea class="chk_text" id="cont2" name="cont2">{eval echo current($arr2);}</textarea>
+<input type="hidden" value="$a1first" id="cont1" name="cont1">
+<div class="chk_sub">
+<a class="chk_sub_btn ulib-r3" id="rn_checkout" onclick="qiandao()" href="javascript:;">{lang ljdaka:daka32}</a>
+</div>
+</form>
+</div>
+<a id="checkin_btn_close" onclick="hideWindow('$_GET['handlekey']');" href="javascript:;">{lang close}</a>
+</div>
+
+<script type="text/javascript"  reload="1">
+function qiandao(){
+	jq("#msg").submit();
+}
+var moods1 = [$a1];
+var moods2 = [$a2];
+jq('.chk_mood a').click(function(){
+var i = jq(this).index();
+jq('.chk_mood a').removeClass('sel');
+jq(this).addClass('sel');
+document.getElementById("cont2").value=moods2[i];
+document.getElementById("cont1").value=moods1[i];
+document.getElementById("cont3").value=i;
+});
+</script>
+<style type="text/css">
+	.checkin_popup {
+  background: none repeat scroll 0 0 #FFFFFF;
+  color: #333333;
+  position: relative;
+  width: 390px;
+}
+.chk_title {
+  background: none repeat scroll 0 0 #EBEBEB;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  text-indent: 15px;
+}
+.chk_con {
+  overflow: hidden;
+  padding: 15px;
+}
+.ckc_title {
+  background: url("source/plugin/ljdaka/images/checkin_title.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  display: block;
+  height: 23px;
+  width: 213px;
+}
+.chk_mood {
+  margin: 15px 0;
+}
+.chk_mood a:hover, .chk_mood .sel {
+  background: none repeat scroll 0 0 #EAF6FF;
+  border: 1px solid #99D0FF;
+}
+.chk_mood a {
+  border: 1px solid #FFFFFF;
+  display: inline;
+  float: left;
+  height: 68px;
+  line-height: 60px;
+  margin: 0 3px 4px;
+  position: relative;
+  text-align: center;
+  width: 64px;
+}
+.chk_text {
+  border: 1px solid #B9B9B9;
+  height: 40px;
+  margin: 5px 0 10px;
+  padding: 8px;
+  resize: none;
+  width: 340px;
+}
+textarea {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #999999 #E1E1E1 #E1E1E1 #999999;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px;
+  line-height: 1.5;
+  padding: 3px;
+}
+.chk_sub {
+  height: 30px;
+  margin-bottom: 5px;
+  width: 360px;
+}
+.chk_sub .chk_sub_btn {
+  float: right;
+}
+.chk_sub_btn {
+font-weight: normal; padding: 5px 12px; font-size: 14px; font-weight: normal; border: 1px solid #2365b9; cursor: pointer; color: #fff; font-size: 14px; font-weight: bold; margin-right: 5px;
+background: #3289ec;
+background:-moz-linear-gradient(top, #3697ff, #2970c8);
+background:-webkit-gradient(linear,top, from(#3697ff),color-stop(#2970c8));
+background:-webkit-linear-gradient(top, #3697ff, #2970c8);
+background:-ms-linear-gradient(top, #3697ff, #2970c8);
+background:-o-linear-gradient(top, #3697ff, #2970c8);
+background:linear-gradient(top, #3697ff, #2970c8);
+} 
+#checkin_btn_close {
+  background-image: url("source/plugin/ljdaka/images/btn.close.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: block;
+  height: 15px;
+  overflow: hidden;
+  position: absolute;
+  right: 12px;
+  text-indent: -9999px;
+  top: 8px;
+  width: 15px;
+}
+.chk_mood img {
+  height: 48px;
+  width: 48px;
+}
+.chk_mood span {
+  display: block;
+  height: 18px;
+  left: 13px;
+  position: absolute;
+  top: 25px;
+  width: 40px;
+}
+img {
+  border: 0 none;
+}
+</style>
+{template common/footer}

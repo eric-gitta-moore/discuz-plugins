@@ -1,0 +1,184 @@
+<!--{template common/header}-->
+<!--[name][迪恩uidisplay频道列表页][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+<div class="clear"></div>
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl" style="width:1180px; margin:20px auto;">
+	<div class="mn">
+    	<div class="deantools deantools_lists">
+                	
+            <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+            <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]" class="deanaddnew deanactions bounceInLeft" title="发布文章">发布文章</a>
+            <!--{/if}-->
+        
+            <!--{if $_G[setting][rssstatus] && !$_GET['archiveid']}--><a href="portal.php?mod=rss&catid=$cat[catid]" class="deanrssartice deanactions bounceInRight" target="_blank" title="RSS">RSS</a><!--{/if}-->
+            
+        </div>
+        <div class="clear"></div>
+        <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+        <div class="clear"></div>
+        <div class="deanartice">
+        	<ul>
+            	<!--{loop $list['list'] $value}-->
+				<!--{eval $highlight = article_title_style($value);}-->
+				<!--{eval $article_url = fetch_article_url($value);}-->
+        		<li class="deanactions bounceInUp">
+                    <div class="deanarticec">
+                        <div class="deanarticel">
+                            <!--{if $value[pic]}--><a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" width="250" height="150"/></a><em></em><!--{else}--><a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/nopic.jpg" width="250" height="150" /></a><em></em><!--{/if}-->
+                        </div>
+                        <div class="deanarticer">
+                        	
+                            
+                            <div class="deanarticername"><a href="$article_url" target="_blank" class="xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></div>
+                            
+                            <div class="deanarticerinfo">
+                            	<span class="deanarticerforum">
+                                	<!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="xi2" target="_blank">$value[catname]</a>&nbsp;&nbsp;<!--{/if}-->
+                                </span>
+                            	<span class="deanzhuozhenm">$value[username]</span>
+                                <span class="deanyuedushu">{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}</span>
+                                <span class="deanhuifushu">{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                                <span class="deanfabushijian"> $value[dateline]</span>
+                            </div>
+                            
+                            <div class="clear"></div>
+                            
+                            <div class="deanarticersummary">$value[summary]&hellip;&hellip;</div>
+                            
+                            
+                        </div>
+                        <div class="clear"></div>
+                        <!--<div class="deanarticecomment"><a href="{url}" target="_blank">$value[view]</a></div>-->
+                    </div>
+				</li>	
+                <!--{/loop}-->
+        	</ul>
+        </div>
+		<div class="clear"></div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl" id="deanpage">{$list['multi']}</div><!--{/if}-->
+
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+	</div>
+	<div class="sd pph">
+		<!--{if $cat[subs]}-->
+        <div class="deannextnav deanactions bounceInUp">
+            <div class="deantitle"><h3>{lang sub_category}</h3></div>
+            <ul>
+            <!--{eval $i = 1;}-->
+            <!--{loop $cat[subs] $value}-->
+            <!--{if $i != 1}--><!--{/if}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" >$value[catname]</a></li><!--{eval $i--;}-->
+            <!--{/loop}-->
+            <div class="clear"></div>
+            </ul>
+        </div>
+        <!--{/if}-->
+        <script type="text/javascript">
+        	jq(".deannextnav ul li:last-child").css({"border-bottom":"0"});
+        </script>
+        <div class="clear"></div>
+        
+        <!-- 精彩阅读 -->
+		<div class="deansidebox deanactions bounceInUp">
+        	<div class="deanpubtitle">
+                <h3>精彩阅读</h3>
+                <a href="#" target="_blank"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="focusBox">
+            	<!--[diy=focusBox]--><div id="focusBox" class="area"></div><!--[/diy]-->
+                    
+                    <a class="prev" href="javascript:void(0)"><</a>
+                    <a class="next" href="javascript:void(0)">></a>
+                    <ul class="hd">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+            </div>
+        
+            <script type="text/javascript">
+                jQuery(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:300});
+            </script>
+            
+            
+        </div>
+		
+        <!-- 精选资讯 -->
+		<div class="deansidebox deanactions bounceInUp">
+        	<div class="deanpubtitle">
+                <h3>精选资讯</h3>
+                <a href="#" target="_blank"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="deansdbox">
+                <div class="deanjxzxtop">
+                    <ul>
+                        <!--[diy=deanjxzxtop]--><div id="deanjxzxtop" class="area"></div><!--[/diy]-->
+                        
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="deanjxzxbottom">
+                    <ul>
+                        <!--[diy=deanjxzxbottom]--><div id="deanjxzxbottom" class="area"></div><!--[/diy]-->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 资讯排行 -->
+		<div class="deansidebox deanactions bounceInUp">
+        	<div class="deanpubtitle" style="margin-bottom:0;">
+                <h3>资讯排行</h3>
+                <a href="#" target="_blank"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="deanjczxbox">
+            	<ul>
+                	<!--[diy=deanjczxbox]--><div id="deanjczxbox" class="area"></div><!--[/diy]-->
+                	
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            
+        </div>
+		
+        <!-- 广告位 -->
+		<div class="deansidebox deanactions bounceInUp">
+        	<div class="deanpubtitle">
+                <h3>广告位</h3>
+                <div class="clear"></div>
+            </div>
+            <div class="deanewm_c">
+            	<!--[diy=deanewm_c]--><div id="deanewm_c" class="area"></div><!--[/diy]-->
+            </div>
+            
+        </div>
+	</div>
+</div>
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

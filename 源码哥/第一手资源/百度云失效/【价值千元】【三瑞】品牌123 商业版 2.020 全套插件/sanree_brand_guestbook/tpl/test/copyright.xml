@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Sanree Style]]></item>
+	<item id="Version"><![CDATA[X2.5]]></item>	
+	<item id="Data">
+		<item id="name"><![CDATA[Ä¬ÈÏ·ç¸ñ]]></item>
+		<item id="templateid"><![CDATA[1]]></item>
+		<item id="tplname"><![CDATA[Ä¬ÈÏÄ£°åÌ×Ïµ]]></item>
+		<item id="directory"><![CDATA[./source/plugin/sanree_brand_goods/tpl/default]]></item>
+		<item id="copyright"><![CDATA[Ô´Âë¸ç]]></item>
+		<item id="style">
+			<item id="smfont"><![CDATA[Arial]]></item>
+		</item>
+		<item id="version"><![CDATA[X2.5]]></item>
+	</item>
+</root>

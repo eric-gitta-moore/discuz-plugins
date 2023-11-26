@@ -1,0 +1,62 @@
+<!--{block return}-->
+<link href="source/plugin/rsf_elasticity_pull_screen_adv/template/extend_common.css" type="text/css" rel="stylesheet" />
+<SCRIPT type=text/javascript src="source/plugin/rsf_elasticity_pull_screen_adv/template/js/jquery.min.js"> </SCRIPT>
+<SCRIPT type="text/javascript">
+<!--
+var start_btn  = '{$this->rsf_epsa_start}';
+var delay_time = '{$this->rsf_epsa_delay_time}';
+var show_speed = '{$this->rsf_epsa_show_speed}';
+var show_time  = '{$this->rsf_epsa_show_time}';
+var show_frequency = ('{$this->rsf_epsa_show_frequency}' == '')?1:'{$this->rsf_epsa_show_frequency}';
+
+var cookieString = new String(document.cookie);
+var cookieHeader = 'rsflyer=';  
+var beginPosition = cookieString.indexOf(cookieHeader);
+var rsfhd = jQuery('#hd');
+var rsfhtml = '<div class="rsf_pull_screen_adv"><!--{if $this->rsf_epsa_banner_start == 1}--><DIV class="rsf_default" style="DISPLAY: block;" id=js_ads_banner_top><A href="{$this->rsf_epsa_banner_link}" target=_blank><IMG src="<!--{if !empty($this->rsf_epsa_banner_url)}-->{$this->rsf_epsa_banner_url}<!--{else}-->source/plugin/rsf_elasticity_pull_screen_adv/template/images/banner.jpg<!--{/if}-->"></A><!--{if $this->rsf_epsa_start == 1}--><span class="rsf_show_btn" onclick="rsfShow();">{lang rsf_elasticity_pull_screen_adv:rsf_replay_btn}</span><!--{/if}--></DIV><!--{/if}--><DIV class="rsf_default" style="DISPLAY: none" id=js_ads_banner_top_slide><A href="{$this->rsf_epsa_big_link}" target=_blank><img src="<!--{if !empty($this->rsf_epsa_link)}-->{$this->rsf_epsa_big_url}<!--{else}-->source/plugin/rsf_elasticity_pull_screen_adv/template/images/big_pic.jpg<!--{/if}-->" /></A> </DIV></div>';
+
+if (beginPosition <0){
+	rsfhd.before(rsfhtml);
+	var fsr_imgW = jQuery('.wp').width();
+	if('{$this->rsf_epsa_width}' == 2){
+		jQuery('.rsf_default').addClass('rsf_width');
+		jQuery('.rsf_show_btn').css("left",920);
+	}else{
+		jQuery('.rsf_pull_screen_adv').css("width",fsr_imgW);
+		jQuery('.rsf_pull_screen_adv img').css("width",fsr_imgW);
+		jQuery('.rsf_show_btn').css("left",fsr_imgW-40);
+	}
+	rsfShow();
+
+	var Then = new Date();
+	Then.setTime(Then.getTime() + show_frequency*60000 );
+	document.cookie = 'rsflyer=yes;expires='+ Then.toGMTString();
+}else{
+	rsfhd.before(rsfhtml);
+	var fsr_imgW = jQuery('.wp').width();
+	if('{$this->rsf_epsa_width}' == 2){
+		jQuery('.rsf_default').addClass('rsf_width');
+		jQuery('.rsf_show_btn').css("left",920);
+	}else{
+		jQuery('.rsf_pull_screen_adv').css("width",fsr_imgW);
+		jQuery('.rsf_pull_screen_adv img').css("width",fsr_imgW);
+		jQuery('.rsf_show_btn').css("left",fsr_imgW-40);
+	}
+}
+
+function rsfShow(){
+	if (jQuery("#js_ads_banner_top_slide").length){
+		var slidebannertop = jQuery("#js_ads_banner_top_slide"),bannertop = jQuery("#js_ads_banner_top");
+		if(start_btn == 1){
+		setTimeout(function(){bannertop.slideUp(1000);},delay_time*1000);
+		setTimeout(function(){slidebannertop.slideDown(show_speed*1000);},delay_time*1000+1000);
+		setTimeout(function(){slidebannertop.slideUp(1000,function (){bannertop.slideDown(1000);});},show_time*1000+delay_time*1000+1000);
+		}else{
+			false;	
+		}
+	}
+}
+-->
+
+</script>
+<!--{/block}-->

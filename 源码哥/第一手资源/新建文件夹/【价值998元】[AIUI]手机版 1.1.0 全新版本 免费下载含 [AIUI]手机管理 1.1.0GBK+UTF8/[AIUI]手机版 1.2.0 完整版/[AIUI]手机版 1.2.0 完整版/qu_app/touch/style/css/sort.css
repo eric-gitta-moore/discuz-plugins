@@ -1,0 +1,278 @@
+.ainuo_forumtop{ display:none;}
+
+.ainuo_sort_zplist{}
+.ainuo_sort_zplist input{ display:none;}
+.ainuo_sort_zplist li {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+	display:block;
+	padding:10px;
+}
+.ainuo_sort_zplist li .item-content {
+    display: block;
+}
+.ainuo_sort_zplist li .item-content-up {
+    width: 80%;
+}
+.ainuo_sort_zplist li .item-type {
+    font-size:12px;
+    position: absolute;
+    top:10px;
+    right:10px;
+    color: #b0b0b0;
+}
+.ainuo_sort_zplist li .item-title {
+    overflow: hidden;
+    -webkit-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:16px;
+    line-height:1.5;
+    color: #333;
+    margin-bottom:5px;
+}
+.ainuo_sort_zplist li .item-title strong {
+    font-weight: 400;
+}
+.ainuo_sort_zplist li .item-desc {
+    margin-bottom:5px;
+}
+.ainuo_sort_zplist li .item-desc .item-salary {
+    font-size:16px;
+    color: #ff552e;
+}
+.ainuo_sort_zplist li .item-desc .item-unit {
+    font-size:14px;
+    color: #ff552e;
+}
+.ainuo_sort_zplist li .item-desc .item-cate {
+    font-size:13px;
+    color: gray;
+    margin-left:15px;
+}
+.ainuo_sort_zplist li .item-shenqing-style {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 75px;
+    z-index: 10;
+}
+.ainuo_sort_zplist li .item-shenqing-style .shenqing-btn {
+    font-size: 12px;
+    position: absolute;
+    top: 30px;
+    right:10px;
+    color: #fff;
+    width: 48px;
+    height: 27px;
+    line-height:27px;
+    text-align: center;
+    background-color: #f86747;
+    border-radius:2px;
+}
+.ainuo_sort_zplist li .item-shenqing-style .shenqing-btn a{ color:#fff;}
+.ainuo_sort_zplist li .item-welfare {
+    overflow: hidden;
+    -webkit-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:12px;
+    color: #15b4e9;
+    margin-bottom:10px;
+}
+.ainuo_sort_zplist li .item-welfare .tag {
+    display: inline-block;
+    padding: 0 1px;
+    border: 1px solid #15b4e9;
+	margin-right:5px;
+    border-radius:2px;
+	height:17px; line-height:16px;
+}
+
+.ainuo_sort_zplist li .item-content-down {
+	font-size:12px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: gray;
+	padding-top:7px;
+    border-top: 1px dashed #cacaca;
+}
+.ainuo_sort_zplist li .item-content-down .item-company {
+    overflow: hidden;
+    -webkit-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-box-flex: 6;
+    -webkit-flex: 6;
+    -ms-flex: 6;
+    flex: 6;
+    max-width: 58%;
+}
+.ainuo_sort_zplist li .item-content-down .item-addr {
+    overflow: hidden;
+    -webkit-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-box-flex: 4;
+    -webkit-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+    text-align: right;
+	color:#999;
+}
+
+.ainuo_sort_zpview{}
+.ainuo_sort_zpview .inner0{ color:#ff552e; font-size:18px; margin-bottom:6px;}
+.ainuo_sort_zpview .inner0 em{ font-size:14px;}
+.ainuo_sort_zpview .inner1{ background:#fff; padding:10px;}
+.ainuo_sort_zpview .inner2{ background:#fff; padding:10px;}
+.ainuo_sort_zpview .inner1 li{ font-size:14px; line-height:1.8; color:#666;}
+.ainuo_sort_zpview .inner1 .fuli em{ color:ff552e;}
+
+.ainuo_sort_zpview .inner2 li{ font-size:14px; line-height:1.8; color:#666;}
+.ainuo_sort_zpview .inner2 h2{ padding:0; margin:0; color:#333;}
+.ainuo_sort_zpview .inner3{background:#fff; padding:10px;}
+.ainuo_sort_zpview .inner3 .atit{ border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px;}
+.ainuo_sort_zpview .inner3 .acon{ font-size:14px; color:#444; line-height:1.8;}
+
+.ainuo_bot_zp{ position:fixed; height:50px; width:100%; left:0; bottom:0; z-index:999; color:#fff; font-size:12px;}
+.ainuo_bot_zp li{ float:left; width:20%;background: #fcad30;}
+.ainuo_bot_zp li span{ font-size:14px;}
+.ainuo_bot_zp li.aleft{ width:60%; float:left;background: #ff552e;}
+.ainuo_bot_zp li a{ text-align:center; color:#fff; display:block; height:100%; padding-top:6px;}
+.ainuo_bot_zp li a i{ font-size:24px;}
+.ainuo_bot_zp li.aleft a{ padding-left:10px; text-align:left;}
+
+.ainuo_sort_qzlist{ font-size:14px; }
+.ainuo_sort_qzlist input{ display:none;}
+.ainuo_sort_qzlist li{ padding:10px; background:#fff;}
+.ainuo_sort_qzlist .qzlist{ position:relative; display:block; padding:0 0 0 110px; height:110px;border-bottom: 1px dashed #ddd; margin-bottom:10px;}
+.ainuo_sort_qzlist .qzlist .aleft{ width:100px; height:100px; overflow:hidden; position:absolute; left:0; top:0;}
+.ainuo_sort_qzlist .qzlist .aleft img{ width:100%;}
+.ainuo_sort_qzlist .qzlist .aright{}
+.ainuo_sort_qzlist .qzlist .aright h2{ font-size:16px; margin-bottom:8px;}
+.ainuo_sort_qzlist .qzlist .aright span{ font-size:14px; color:#666; font-weight:400; margin-left:5px;}
+.ainuo_sort_qzlist .qzlist .aright .pip{ color:#ccc; margin:0 0 0 6px;}
+.ainuo_sort_qzlist .qzlist .aright .js{ color:#999; margin-top:3px;}
+.ainuo_sort_qzlist .qzlist .aright p{ color:#53BCF5; font-size:12px; max-height:42px; overflow:hidden;}
+.ainuo_sort_qzlist .qzlist2{ font-size:12px; color:#999;}
+
+.ainuo_sort_czlist{ font-size:14px; }
+.ainuo_sort_czlist input{ display:none;}
+.ainuo_sort_czlist li{ padding:10px; background:#fff;}
+.ainuo_sort_czlist .czlist{ position:relative; display:block; padding:0 0 0 110px; height:110px;border-bottom: 1px dashed #ddd; margin-bottom:10px;}
+.ainuo_sort_czlist .czlist .aleft{ width:100px; height:100px; overflow:hidden; position:absolute; left:0; top:0;}
+.ainuo_sort_czlist .czlist .aleft img{ width:100%;}
+.ainuo_sort_czlist .czlist .aright{}
+.ainuo_sort_czlist .czlist .aright h2{ font-size:16px; margin-bottom:8px; max-height:44px; overflow:hidden;}
+.ainuo_sort_czlist .czlist .aright span{ font-size:14px; color:#666; font-weight:400; margin-right:5px;}
+.ainuo_sort_czlist .czlist .aright .pip{ color:#ccc; margin:0 0 0 6px;}
+.ainuo_sort_czlist .czlist .aright .js{ color:#999; margin-top:3px;}
+.ainuo_sort_czlist .czlist .aright p.fz{ color:#ff7201; font-size:16px; font-weight:700; margin-top:5px; overflow:hidden;}
+.ainuo_sort_czlist .czlist .aright p.fz em{ margin-left:5px; font-weight:400; font-size:14px;}
+.ainuo_sort_czlist .czlist2{ font-size:12px; color:#999;}
+
+
+.ainuo_sort_eslist{ font-size:14px; }
+.ainuo_sort_eslist input{ display:none;}
+.ainuo_sort_eslist li{ padding:10px; background:#fff;}
+.ainuo_sort_eslist .eslist{ position:relative; display:block; padding:0 0 0 110px; height:110px;}
+.ainuo_sort_eslist .eslist .aleft{ width:100px; height:100px; overflow:hidden; position:absolute; left:0; top:0;}
+.ainuo_sort_eslist .eslist .aleft img{ width:100%;}
+.ainuo_sort_eslist .eslist .aright{}
+.ainuo_sort_eslist .eslist .aright h2{ font-size:16px; margin-bottom:8px; color:#111; font-weight:400; height:48px; line-height:24px; overflow:hidden;}
+.ainuo_sort_eslist .eslist .aright span{ font-size:14px;}
+.ainuo_sort_eslist .eslist .aright p .jg{ color:#ff552e; font-size:17px;}
+.ainuo_sort_eslist .eslist .aright p .qy{ float:right; color:#888; font-size:12px;}
+.ainuo_sort_eslist .eslist .aright .ll{ color:#999; margin-top:5px;}
+.ainuo_sort_eslist .eslist .aright .ll span{font-size:12px; }
+
+
+.ainuo_sort_wxlist{ font-size:14px; }
+.ainuo_sort_wxlist input{ display:none;}
+.ainuo_sort_wxlist li{ background:#fff; width:50%; float:left; text-align:center;}
+.ainuo_sort_wxlist li a{ display:block; padding:10px; border-left:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2; margin-left:-1px;}
+.ainuo_sort_wxlist li a img{width:100%;}
+.ainuo_sort_wxlist li a p{ height:30px; line-height:30px; overflow:hidden;}
+
+.ainuo_sort_wxview{ text-align:center; padding:15px;}
+.ainuo_sort_wxview img{ max-width:100%;}
+
+
+.ainuo_sort_qzview{}
+.ainuo_sort_qzview .acon1{ background:#fff; padding:10px 10px 10px 150px; position:relative;}
+.ainuo_sort_qzview .acon1 .aleft{ position:absolute; top:10px; left:10px; width:130px; height:150px; overflow:hidden;}
+.ainuo_sort_qzview .acon1 .aleft img{ width:100%; height:auto;}
+.ainuo_sort_qzview .acon1 .aright{ font-size:14px; color:#666;}
+.ainuo_sort_qzview .acon1 .aright li{ line-height:26px;}
+.ainuo_sort_qzview .acon1 .aright h2{ margin:0;}
+.ainuo_sort_qzview .acon1 .aright h2 span{ margin-left:10px; font-size:14px; font-weight:400;}
+.ainuo_sort_qzview .acon2,.ainuo_sort_qzview .acon3{ padding:10px; background:#fff;}
+.ainuo_sort_qzview .acon4{ padding:10px 10px 0 10px;}
+.ainuo_sort_qzview .atit{ padding:5px 0 8px 0; border-bottom:1px solid #e2e2e2; margin-bottom:10px;}
+.ainuo_sort_qzview .acon{ font-size:14px;}
+.ainuo_sort_qzview .acon li{ line-height:30px; color:#666;}
+.ainuo_sort_qzview .acon li em{ color:#f86747; font-size:16px;}
+
+.ainuo_sort_czview{}
+.ainuo_sort_czview .acon0{ position:relative; height:300px; overflow:hidden; background-size:cover !important;}
+.ainuo_sort_czview .acon0 img{ width:100%;}
+.ainuo_sort_czview .acon1{ background:#fff; padding:10px; position:relative; border-bottom:1px solid #eee;}
+.ainuo_sort_czview .acon1 li{ width:33.333%; text-align:center; float:left; color:#888; font-size:12px;}
+.ainuo_sort_czview .acon1 li p{ color:#333; font-size:14px;}
+.ainuo_sort_czview .acon1 .zj p{ font-weight:700; color:#ff552e;}
+.ainuo_sort_czview .acon2{ padding:10px; background:#fff;}
+.ainuo_sort_czview .acon2 ul{ width:100%; display:block; clear:both;}
+.ainuo_sort_czview .acon2 li{ width:50%; float:left; font-size:14px; color:#666; line-height:30px;}
+.ainuo_sort_czview .acon2 .dizhi{ display:block; width:100%; font-size:14px; line-height:30px; color:#666;}
+.ainuo_sort_czview .acon3{ padding:10px; background:#fff;}
+.ainuo_sort_czview .acon3 .xiangqing{ font-size:14px; color:#ff552e;}
+.ainuo_sort_czview .acon3 .miaoshu{ font-size:14px; line-height:1.6; margin-top:10px;}
+.ainuo_sort_czview .acon4,.ainuo_sort_czview .acon5{ padding:10px 10px 0 10px;}
+.ainuo_sort_czview .acon4 .zkyq{ font-size:14px; padding-bottom:10px; line-height:1.6;}
+.ainuo_sort_czview .atit{ padding:5px 0 8px 0; border-bottom:1px solid #e2e2e2; margin-bottom:10px;}
+.ainuo_sort_czview .acon{ font-size:14px;}
+.ainuo_sort_czview .acon li{ line-height:30px; color:#666;}
+.ainuo_sort_czview .acon li em{ color:#f86747; font-size:16px;}
+.ainuo_sort_czview .acon5 .atit{ margin-bottom:0;}
+
+.ainuo_sort_esview{}
+.ainuo_sort_esview .acon0{ position:relative; height:300px; overflow:hidden; background-size:cover !important;}
+.ainuo_sort_esview .acon0 img{ width:100%;}
+.ainuo_sort_esview .acon1{ background:#fff; padding:10px; position:relative; border-bottom:1px solid #eee;}
+.ainuo_sort_esview .acon1 .jg{ color:#ff552e; font-size:18px; font-weight:700; margin:10px 0;}
+.ainuo_sort_esview .acon1 .jg span{ font-size:12px; color:#888;font-weight:400; margin-left:20px;}
+.ainuo_sort_esview .acon1 .qy{ font-size:14px; color:#999;}
+.ainuo_sort_esview .acon2{ padding:10px; background:#fff;}
+.ainuo_sort_esview .acon2 .acon{ font-size:14px;}
+.ainuo_sort_esview .acon3{ padding:10px 10px 0 10px; background:#fff;}
+.ainuo_sort_esview .atit{ padding:5px 0 8px 0; border-bottom:1px solid #e2e2e2; margin-bottom:10px;}
+.ainuo_sort_esview .acon3 .atit{ margin-bottom:0;}
+
+.ainuo_sorttip{ padding:15px; font-size:14px;background: #FFF8DE;}
+.ainuo_sorttip span{ color:#ff552e;}
+
+/* 约会交友分类信息 */
+.ainuo_sort_main li {float: left;padding:15px !important;width: 100% !important; height:145px !important}
+.ainuo_sort_main input{ display:none !important}
+.ainuo_sort_main .info_left{ width:120px; height: auto !important; float:left; margin-right:10px;}
+.ainuo_sort_main .info_left img{ width:100% !important; height:115px !important;}
+.ainuo_sort_main .info_right { font-size:14px !important;}
+.ainuo_sort_main .info_right .info_list1{ height:22px !important; line-height:22px !important;}
+.ainuo_sort_main .info_right h2 a{ font-size:16px !important;}
+.ainuo_sort_main .info_right .more_info{  position:static !important; margin-top:5px !important;}
+.ainuo_sort_main .info_right .more_info a{color:#f60;}
+.postlist .ainuo_sort_main .info_left img{ border:none !important; width:100% !important; padding:0 !important; box-shadow:none !important; height:auto !important;}
+.postlist .ainuo_sort_main{ padding:0 !important;}
+.postlist .ainuo_sort_main .info_left{ width:100% !important; position:static !important; margin-bottom:15px;}
+.postlist .ainuo_sort_main .info_right{ margin:0 !important;}
+.postlist .ainuo_sort_main .w1{ width:75px !important;}
+.postlist .ainuo_sort_main .info_left p{ margin-top:5px !important;}
+.postlist .ainuo_sort_main .info_right td,.postlist .ainuo_sort_main .info_right th{ font-size:14px !important;}

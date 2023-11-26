@@ -1,0 +1,66 @@
+<!--{block returns}-->
+<script type="text/javascript" src="./source/plugin/mxi_aplay/jplayer/jquery.jplayer.min.js"></script> 
+<script type="text/javascript" src="./source/plugin/mxi_aplay/jplayer/threadplayer.js?{VERHASH}"></script>
+<div style="position: fixed; bottom: -9999px;">
+    <div id="m2pic" style="display: none;"></div>
+</div>
+<div id="line">
+    <div id="mx_audution">
+        <div id="jquery_jplayer"></div>
+        <div class="jp_container" id="jp_container">
+            <div class="jp-infos" id="jp-infos">
+                <div class="mp3Box">
+                    <div class="mp3author">
+                        <a href="home.php?mod=space&uid=$_G[forum_thread][authorid]" title="" target="_blank">
+                            {$author}
+                        </a>
+                    </div>
+                    <div class="mp3Inner">
+                        <h4 class="mp3Title">$_G[forum_thread][subject]</h4>
+                        <div class="metadata">
+                            <span class="mp3date"></span>&nbsp;|&nbsp;<span class="jp-duration">00:00</span>/<span class="jp-current-time">00:00</span><span class="mp3Category">{$_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jp-mute" style="margin-right: 5px;"></div>
+            <div class="jp-unmute" style="display: none; margin-right: 5px;"></div>
+			<div class="jp-volume-bar">
+                <div class="jp-volume-bar-value"></div>
+            </div>
+              <div id="player_volume" class="border-radius-5px" title="Volume">
+              <div id="player_volume_icon" class="volume-icon"></div>
+              <div id="player_volume_slider" class="volume-slider"></div>
+            </div>
+            <div class="mp3List" title="{lang mxi_aplay:playlist}">
+                <div class="mp3ListBox">
+                    <h3>{lang mxi_aplay:playlist}<span class="icon_close"></span></h3>
+                    <div class="mp3ListItems">
+                        <table cellpadding="0" cellspacing="0" border="0">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transport-controls">
+                <a href="javascript:void(0);" id="jplay_puase" class="jp-pause bp-pause" tabindex="1" style="display: none; " title="pause"></a>
+                <a href="javascript:void(0);" id="jplay_play" class="jp-play bp-play" title="play" style="display: block; "></a>
+            </div>
+
+            <div id="jp-progress" class="jp-progress">
+                <div class="jp-seek-bar" id="jp-seek-bar">
+                    <div class="jp-play-bar" id="jp-play-bar"></div>
+                </div>
+            </div>
+            <div class="mp3Icons">
+                <a id="k_download" class="mp3Down" href="" title="{lang mxi_aplay:download}" target="_blank"></a>
+                <a class="mp3Collect" href="javascript:void(0)" title="{lang favorite}"></a>
+                <a class="mp3Share" href="javascript:void(0)" title="{lang share}"></a>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+</div>
+<!--{/block}-->

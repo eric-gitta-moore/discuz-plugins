@@ -1,0 +1,52 @@
+<!--{block returns}-->
+<link rel="canonical" href="{$this->urla}"/>
+<script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "{$this->urla}",
+        "appid": "{$this->keke_xzhseo['appid']}",
+        "title": "{if CURSCRIPT=='forum'}{$_G['thread']['subject']}{else}{$article[title]}{/if}",
+        "images": [$piclist],
+        "description": "{$messages}",
+        "pubDate": "{$datetime}"
+    }
+</script>
+<script src="//msite.baidu.com/sdk/c.js?appid={$this->keke_xzhseo['appid']}"></script>
+{if $this->keke_xzhseo['gz']}
+<div style="padding-left: 17px; padding-right: 17px; background:#FFF;">
+    <script>cambrian.render('head')</script>
+</div>
+{/if}
+<script type="text/javascript" src="source/plugin/keke_xzhseo/js/jquery.js"></script>
+<script>kekexzjq=jQuery.noConflict();</script><!--{/block}-->
+<!--{block tsbtn}-->
+<div class="keke_warning"></div>
+<div class="xzhbox">
+	{if $this->postdata && $this->postdata['state']==1}
+	<a href="javascript:;" class="updatadbtn">{lang keke_xzhseo:t005}</a>
+    {else}
+    <a href="javascript:;" class="updatabtn">{lang keke_xzhseo:t003}</a>
+    {/if}
+</div>
+<style>
+	.xzhbox{width:100%; float:left; margin:10px auto}
+	.xzhbox a{padding:5px 10px 5px 30px; color:#FFF !important; text-decoration:none; font-size:14px; border-radius:2px; background:url(source/plugin/keke_xzhseo/template/img/baidu.png)7px no-repeat #C6C;}
+	.xzhbox a.updatadbtn{ background:url(source/plugin/keke_xzhseo/template/img/baidu.png)7px no-repeat #999 !important;}
+	.keke_warning{ display:none;position: fixed;left:0; width:200px; right:0;margin: 0 auto;z-index: 9999; top:300px;padding: 10px;color: #FFFFFF;background: rgba(0, 0, 0, 0.6);font-size: 14px;text-align: center;border-radius: 4px;}
+</style>
+<script>
+kekexzjq(".updatabtn").click(function(){
+	kekexzjq.get('plugin.php?id=keke_xzhseo:postdata', {formhash:'{FORMHASH}',type:'1',mods:'{$this->moda}',atid:'{$this->atid}',sd:'1',},function (data){	
+		if(data.state==1){
+			warning("{lang keke_xzhseo:t001}");
+		}else{
+			warning("{lang keke_xzhseo:t002}£º"+ data.msg);
+		};
+	},'json');
+});
+function warning(text){
+	kekexzjq('.keke_warning').show().html(text);
+	setTimeout(function() {kekexzjq('.keke_warning').fadeOut();}, 2000);
+}
+</script>
+<!--{/block}-->

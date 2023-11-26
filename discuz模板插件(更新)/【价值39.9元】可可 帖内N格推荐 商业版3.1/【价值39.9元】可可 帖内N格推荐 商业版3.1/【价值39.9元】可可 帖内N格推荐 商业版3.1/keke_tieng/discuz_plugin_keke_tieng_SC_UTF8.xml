@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-06-30 03:11]]></item>
+	<item id="From"><![CDATA[m12.name]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[帖内N格推荐]]></item>
+			<item id="identifier"><![CDATA[keke_tieng]]></item>
+			<item id="description"><![CDATA[帖内N格推荐]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[keke_tieng/]]></item>
+			<item id="copyright"><![CDATA[m12.name]]></item>
+			<item id="version"><![CDATA[3.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[cache]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更新缓存]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[keke_tieng]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[显示的版块]]></item>
+				<item id="description"><![CDATA[允许显示本插件的版块，为空时全站帖子内容页均显示]]></item>
+				<item id="variable"><![CDATA[xsbk]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[内容来源版块]]></item>
+				<item id="description"><![CDATA[内容来源版块，为空则调用全站数据]]></item>
+				<item id="variable"><![CDATA[ly]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[版块名称颜色]]></item>
+				<item id="description"><![CDATA[版块名称颜色]]></item>
+				<item id="variable"><![CDATA[bkcl]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#ec7e3f]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[帖子标题颜色]]></item>
+				<item id="description"><![CDATA[帖子标题颜色]]></item>
+				<item id="variable"><![CDATA[btcl]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#333333]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[每栏显示条数]]></item>
+				<item id="description"><![CDATA[每栏显示条数]]></item>
+				<item id="variable"><![CDATA[nb]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[是否启用伪静态地址]]></item>
+				<item id="description"><![CDATA[是否启用伪静态地址]]></item>
+				<item id="variable"><![CDATA[wjt]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[是否显示作者名称]]></item>
+				<item id="description"><![CDATA[是否显示作者名称]]></item>
+				<item id="variable"><![CDATA[zz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[是否显示版块名称]]></item>
+				<item id="description"><![CDATA[是否显示版块名称]]></item>
+				<item id="variable"><![CDATA[bkmc]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[字体大小]]></item>
+				<item id="description"><![CDATA[字体大小，单位为像素]]></item>
+				<item id="variable"><![CDATA[ztdx]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[14]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[内容时间范围]]></item>
+				<item id="description"><![CDATA[内容时间范围]]></item>
+				<item id="variable"><![CDATA[sjfw]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 不限
+2 = 一周内
+3 = 一月内
+5 = 半年内]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[缓存时间]]></item>
+				<item id="description"><![CDATA[缓存时间，单位为秒。1小时=3600秒，1天=86400秒。请根据实际需要设置。【0为关闭缓存】]]></item>
+				<item id="variable"><![CDATA[hcsj]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[60]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[第一栏标题]]></item>
+				<item id="description"><![CDATA[第一栏标题]]></item>
+				<item id="variable"><![CDATA[tita]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[热门]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[第一栏内容属性]]></item>
+				<item id="description"><![CDATA[第一栏内容属性]]></item>
+				<item id="variable"><![CDATA[sxa]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[1 = 最新帖
+2 = 最新回复
+3 = 精华帖
+4 = 置顶帖
+5 = 查看最多
+6 = 回复最多]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[第一栏指定内容]]></item>
+				<item id="description"><![CDATA[请输入指定帖子的ID，以 | 间隔， 例如 2|3|4。留空按照数据来源以及属性展示。]]></item>
+				<item id="variable"><![CDATA[zdnra]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[第二栏标题]]></item>
+				<item id="description"><![CDATA[第二栏标题]]></item>
+				<item id="variable"><![CDATA[titb]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[最新]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[第二栏内容属性]]></item>
+				<item id="description"><![CDATA[第二栏内容属性]]></item>
+				<item id="variable"><![CDATA[sxb]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 最新帖
+2 = 最新回复
+3 = 精华帖
+4 = 置顶帖
+5 = 查看最多
+6 = 回复最多]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[第二栏指定内容]]></item>
+				<item id="description"><![CDATA[请输入指定帖子的ID，以 | 间隔， 例如 2|3|4。留空按照数据来源以及属性展示。]]></item>
+				<item id="variable"><![CDATA[zdnrb]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="ok"><![CDATA[更新缓存成功！]]></item>
+			</item>
+		</item>
+	</item>
+</root>

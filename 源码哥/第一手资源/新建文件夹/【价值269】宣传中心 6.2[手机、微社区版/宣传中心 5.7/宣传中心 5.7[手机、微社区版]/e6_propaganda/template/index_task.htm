@@ -1,0 +1,79 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<!--{if intval($_GET['taskid'])}-->
+<table cellpadding="0" cellspacing="0" class="tfm">
+	<tbody>
+	<tr>
+		<td width="80">
+			<img src="source/plugin/e6_propaganda/task/{$task['icon']}" width="64" height="64">
+		</td>
+		<td class="bbda">
+			<h1 class="xs2 ptm pbm">{$task[name]}</h1>
+			<div>{lang e6_propaganda:start_date}: {$task['starttime']} &nbsp;----&nbsp; {lang e6_propaganda:end_date}: {$task['endtime']}</div>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<table cellpadding="0" cellspacing="0" class="tfm">
+				<tbody>
+				<tr>
+					<th class="bbda">{lang e6_propaganda:task_claim}: </th>
+					<td class="bbda xi1">{$task['claim_text']}</td>
+				</tr>
+				<tr>
+					<th class="bbda">{lang e6_propaganda:task_reward}: </th>
+					<td class="bbda xi1">{$task['reward_text']}</td>
+				</tr>
+				<tr>
+					<th class="bbda">{lang e6_propaganda:task_group}: </th>
+					<td class="bbda">
+						<p>$group_limit</p>
+					</td>
+				</tr>
+				<!--{if $task_ok}-->
+				<tr>
+					<th class="bbda">{lang e6_propaganda:task_state}</th>
+					<td class="bbda xi1">
+						<p>$task_ok</p>
+					</td>
+				</tr>
+				<!--{/if}-->
+				</tbody>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>{$taskimg}</td>
+	</tr>
+	</tbody>
+</table>
+<!--{else}-->
+<table cellspacing="0" cellpadding="0" width="100%">
+	<tbody>
+	<!--{loop $task_list $v}-->
+	<tr>
+		<td width="80" class="bbda">
+			<img src="source/plugin/e6_propaganda/task/{$v['icon']}" width="64" height="64" alt="{$v['name']}">
+		</td>
+		<td class="bbda ptm pbm">
+			<h3 class="xs2 xi2"><a href="{$nav_url}&taskid={$v['id']}">{$v['name']}</a></h3>
+			<p class="xg2"><span class="e6_yellow">{lang e6_propaganda:task_claim}</span>: {$v['claim_text']}</p>
+			<div class=" mtm mbm">
+				{lang e6_propaganda:start_date}: {$v['starttime']} &nbsp;----&nbsp; {lang e6_propaganda:end_date}: {$v['endtime']}
+			</div>
+		</td>
+		<td class="xi1 bbda" width="200" align="center">
+			<span class="e6_yellow">{lang e6_propaganda:reward}{$v['reward_text']}</span>
+		</td>
+		<td width="120" class="bbda">
+			<p>{$v['taskimg']}</p>
+		</td>
+	</tr>
+	<!--{/loop}-->
+	</tbody>
+</table>
+<!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

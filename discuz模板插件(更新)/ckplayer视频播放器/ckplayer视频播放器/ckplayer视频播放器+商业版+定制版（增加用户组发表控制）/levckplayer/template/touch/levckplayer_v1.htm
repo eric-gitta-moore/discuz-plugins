@@ -1,0 +1,212 @@
+{if !$_GET[hook] && !$i}
+{subtemplate common/header}
+{template levckplayer:js}
+
+<title>{$video[title]}</title>
+
+<div style="width:100%;margin:auto;">{$lev_lang[vurl]}|{$lev_lang[jiexiurl]} <br>{$lev_lang[vurl1]}<br>
+<input type=text id=jiexiurl name=jiexiurl value="http://www.hunantv.com/v/1/18/f/1851841.html" style="width:88%;">
+<input type="button" onclick="isjiexi()" value="{$lev_lang[subt]}"></div>
+<script>function isjiexi(){window.location='{$PLURL}&url='+ encodeURI(jQuery('#jiexiurl').val());}</script>
+
+<div id="threadlevckplayerbox0" style="width:100%;margin:auto;">{/if}
+<style type="text/css">
+#playerbox{position:relative;z-index: 100;width:100%;min-height:100px;}
+.t_f a {text-decoration: none;}
+</style>
+{$video[title]} 
+
+{if !$video['isfile'] && $video[high][1]}
+{if !$s}<a href="javascript:;" onclick=playtype(2) title='{$lev_lang[allplay1]}'>{$lev_lang[allplay]}</a>{else}<a href="javascript:;" onclick=playtype(0)>{$lev_lang[blockplay]}</a>{/if}
+{/if}
+<div id="playerbox"></div>
+
+<script type="text/javascript" src="{$PLSTATIC}ckplayer67/js/offlights.js" charset="utf-8"></script>
+<script type="text/javascript" src="{$PLSTATIC}ckplayer67/ckplayer/ckplayer.js" charset="utf-8"></script>
+
+
+{if $vnum >1}
+{if ($i +=1) <$vnum}
+{eval $_PLG[e] = 4;}
+{/if}
+{eval $_PLG[l] = $i ==1 ? $_PLG[l] : '';}
+
+<table><tr class='pg'>
+{loop $video[high] $v}
+{eval $j++; $color = $j ==$i ? 'color:red;background:#e5edf2;' : '';}
+<td><a href="javascript:;" style="$color" onclick="playerstop({$j})">{$j}</a></td>
+{/loop}
+</tr></table>
+
+<script type="text/javascript">
+function playerstop(i) {
+	var i = i >=1 ? (i-1) : '{$i}';
+	if (parseInt(i) <parseInt('{$vnum}')) {
+		//window.location = window.location.href +'&i={$i}&hook={$hook}';
+		jQuery.post("{$PLURL}&i="+ i +"&hook={$hook}", {url:"{$_GET[url]}"}, function(data){jQuery("#threadlevckplayerbox{$hook}").html(data)});
+	}
+}
+</script>
+{/if}
+
+
+<script type="text/javascript">
+
+function ckcpt() {
+    var cpt = '';
+    cpt += 'right.swf,2,1,0,0,2,0|'; //右边开关灯，调整，分享按钮的插件
+    {if $_PLG[isshare]}cpt += 'share.swf,1,1,-180,-100,3,0|'; //分享插件{/if}
+    cpt += 'adjustment.swf,1,1,-180,-100,3,0|'; //调整大小和颜色的插件
+    return cpt;
+}
+function ckstyle() { //定义总的风格
+    var ck = {
+        cpath: 'source/plugin/levckplayer/statics/ckplayer67/ckplayer/style.swf',
+        language: '',
+        flashvars: '',
+        //                                  1 1 1 1   1 1 1 1 1 1 2 2 2  2 2 2 2 2    2 2 3 3 3 3 3 3 3 3 3   3 4  4 4 4
+		//	    1 2 3 4 5 6 7           8 9 0 1 2 3   4 5 6 7 8 9 0 1 2  3 4 5 6 7    8 9 0 1 2 3 4 5 6 7 8   9 0  1 2 3
+        setup: '1,1,1,1,1,2,{$_PLG[s7]},1,2,0,0,1,200,0,2,1,0,1,1,1,2,10,3,0,1,2,3000,0,0,0,0,1,1,1,1,1,1,250,0,90,0,0,0',
+        pm_bg: '0x000000,100,230,180',
+        mylogo: '{$_PLG[mylogo]}',//logo.swf
+        pm_mylogo: '1,1,-100,-55',
+        logo: '{$_PLG[logo]}',
+        pm_logo: '2,0,-100,20',
+        control_rel: 'related.swf,source/plugin/levckplayer/statics/ckplayer67/ckplayer/related.xml,0',
+        control_pv: 'Preview.swf,105,2000',
+        pm_repc: '',
+        pm_spac: '|',
+        pm_fpac: 'file->f',
+        pm_advtime: '2,0,-110,10,0,300,0',
+        pm_advstatus: '1,2,2,-200,-40',
+        pm_advjp: '1,1,2,2,-100,-40',
+        pm_padvc: '2,0,-10,-10',
+        pm_advms: '2,2,-46,-56',
+        pm_zip: '1,1,-20,-8,1,0,0',
+        //pm_advmarquee: '1,2,50,-60,50,18,0,0x000000,50,0,20,1,15,2000',
+		pm_advmarquee: '1,2,50,-60,50,20,0,0x000000,50,0,20,1,30,2000',
+		pm_glowfilter:'0,0x01485d, 100, 6, 3, 10, 1, 0, 0',
+        advmarquee: escape(''),//function ckmarqueeadv(){return '{$advmar}';}
+		mainfuntion:'',
+		flashplayer:'',
+		calljs:'ckplayer_status,ckadjump,playerstop,ckmarqueeadv',
+        myweb: escape(''),
+        cpt_lights: '{$_PLG[lights]}',
+        cpt_share: '{if $_PLG[isshare]}source/plugin/levckplayer/statics/ckplayer67/ckplayer/share.xml{/if}',
+        cpt_list: ckcpt()
+    }
+    return ck;
+}
+function ckmarqueeadv(){return '{$advmar}';}
+</script>
+
+<script type="text/javascript">
+
+var flashvars={
+{if $s==4}
+	f:'{$_G[siteurl]}{$PLSTATIC}ckplayer67/m3u8-v2.0/m3u8.swf',//视频地址
+	a:encodeURIComponent('{$videourl}'),//调用时的参数，只有当s>0的时候有效
+{else}
+	f:'{$videourl}',
+{/if}
+	s:'{$s}',//调用方式，0=普通方法（f=视频地址），1=网址形式,2=xml形式，3=swf形式(s>0时f=网址，配合a来完成对地址的组装)
+	c:'0',//是否读取文本配置,0不是，1是
+//	x:'',//调用配置文件路径，只有在c=1时使用。默认为空调用的是ckplayer.xml
+	i:'{eval echo $video[img] ? $video[img] : $_PLG[i]}',//初始图片地址
+	d:'{$_PLG[d]}',//暂停时播放的广告，swf/图片,多个用竖线隔开，图片要加链接地址，没有的时候留空就行
+	u:'{$_PLG[u]}',//暂停时如果是图片的话，加个链接地址
+	l:'{$_PLG[l]}',//前置广告，swf/图片/视频，多个用竖线隔开，图片和视频要加链接地址
+	r:'{$_PLG[r]}',//前置广告的链接地址，多个用竖线隔开，没有的留空
+	t:'{$_PLG[t]}',//视频开始前播放swf/图片时的时间，多个用竖线隔开
+//	y:'',//这里是使用网址形式调用广告地址时使用，前提是要设置l的值为空
+	z:'{$_PLG[z]}',//缓冲广告，只能放一个，swf格式
+	e:'{$_PLG[e]}',//视频结束后的动作，0是调用js函数，1是循环播放，2是暂停播放并且不调用广告，3是调用视频推荐列表的插件，4是清除视频流并调用js功能和1差不多，5是暂停播放并且调用暂停广告
+	v:'{$_PLG[v]}',//默认音量，0-100之间
+	p:'{$_PLG[p]}',//视频默认0是暂停，1是播放，2是不加载视频
+	h:'2',//播放http视频流时采用何种拖动方法，=0不使用任意拖动，=1是使用按关键帧，=2是按时间点，=3是自动判断按什么(如果视频格式是.mp4就按关键帧，.flv就按关键时间)，=4也是自动判断(只要包含字符mp4就按mp4来，只要包含字符flv就按flv来)
+//	q:'',//视频流拖动时参考函数，默认是start
+	m:'{$_PLG[m]}',//让该参数为一个链接地址时，单击播放器将跳转到该地址
+	o:'{$video[seconds]}',//当p=2时，可以设置视频的时间，单位，秒
+//	w:'',//当p=2时，可以设置视频的总字节数
+//	g:'',//视频直接g秒开始播放
+//	j:'60',//跳过片尾功能，j>0则从播放多少时间后跳到结束，<0则总总时间-该值的绝对值时跳到结束
+	k:'{$_PLG[k]}',//提示点时间，如 30|60鼠标经过进度栏30秒，60秒会提示n指定的相应的文字
+	n:'{$_PLG[n]}',//提示点文字，跟k配合使用，如 提示点1|提示点2
+	wh:'{$_PLG[wh]}',//宽高比，可以自己定义视频的宽高或宽高比如：wh:'4:3',或wh:'1080:720'
+	loaded:'loadedHandler',//当播放器加载完成后发送该js函数loaded
+	//调用播放器的所有参数列表结束
+	//以下为自定义的播放器参数用来在插件里引用的
+    my_title:encodeURIComponent(document.title),
+   // my_pic:'',
+	my_url:encodeURIComponent(window.location.href),//本页面地址
+	lv:'0'//是否是直播流，=1则锁定进度栏
+	//调用自定义播放器参数结束
+	};
+var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};//这里定义播放器的其它参数如背景色（跟flashvars中的b不同），是否支持全屏，是否支持交互
+
+var video=['{$video[high][0]}->video/mp4'];
+
+{if $_PLG[html5] && $_PLG[flash] ==2 && lev_class::html5ext($videourl) || checkmobile()}
+var isckchtml5 = true;
+{else}
+var isckchtml5 = false;
+{/if}
+
+CKobject.embed('{$PLSTATIC}ckplayer67/ckplayer/ckplayer.swf','playerbox','ckplayer_playerbox', '{$w}', '{$h}', isckchtml5, flashvars, video, params);
+
+//开关灯
+var box = new LightBox('playerbox');
+function closelights(){//关灯
+	box.Show();
+	//CKobject._K_('playerbox').style.width='940px';
+	//CKobject._K_('playerbox').style.height='550px';
+	//CKobject.getObjectById('ckplayer_playerbox').width=940;
+	//CKobject.getObjectById('ckplayer_playerbox').height=550;
+}
+function openlights(){//开灯
+	box.Close();
+	//CKobject._K_('playerbox').style.width='600px';
+	///CKobject._K_('playerbox').style.height='400px';
+	///CKobject.getObjectById('ckplayer_playerbox').width=600;
+	//CKobject.getObjectById('ckplayer_playerbox').height=400;
+}
+
+function loadedHandler(){
+	//CKobject.getObjectById('ckplayer_playerbox').videoPlay();
+	//ckadjump();
+};
+
+function playtype(s) {
+	window.location = window.location.href +'&s='+ s;
+}
+</script>
+{if $_G[uid] <1}
+<script type="text/javascript">
+function ckadjump() {
+	art.dialog.tips('{$lev_lang[noad]}', 3);
+}
+</script>
+{else}
+<script type="text/javascript">
+function ckadjump() {
+	CKobject.getObjectById('ckplayer_playerbox').frontAdUnload();
+}
+</script>
+{/if}
+{if !$_GET[url] && $lev_lang[nourltip]}
+<script type="text/javascript">
+art.dialog.tips('<b>{$lev_lang[nourltip]}</b><br>{$lev_lang[vurl]}<br>{$lev_lang[vurl1]}', 10);
+</script>
+{elseif $video =='-1' && $lev_lang[nourltip]}
+<script type="text/javascript">
+alert('{$lev_lang[pinstal]}');
+</script>
+{/if}
+
+{if !$_GET[hook] && $i <2}
+</div>
+	{eval //echo '<pre>';print_r($video);}
+{subtemplate common/footer}
+	
+{/if}
+

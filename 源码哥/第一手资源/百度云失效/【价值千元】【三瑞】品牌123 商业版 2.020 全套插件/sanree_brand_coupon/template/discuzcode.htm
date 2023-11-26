@@ -1,0 +1,86 @@
+<!--{block sreturn}-->
+<style type="text/css">
+.ninfos {
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:12px;
+	width:100px;
+	height:30px;
+	background:#FF6600;
+	line-height:30px;
+	text-align:center;
+}
+.enddatem {
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:14px;
+	text-align:center;
+}
+</style>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30" align="left" valign="top" bgcolor="#F2F2F2">
+	<div class="ninfos">{lang sanree_brand_coupon:ninfos}</div>
+      </td>
+  </tr>
+  <tr>
+    <td height="623" align="center" valign="middle"><p><img id='aimg_{$couponresult[homeaid]}' src="{$couponresult[gpicture]}" width="500" height="565" onclick="zoom(this, this.src)"></p></td>
+  </tr>
+  <tr>
+    <td height="66" align="center" valign="top">
+      <table width="700" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="386" height="45" align="center" valign="middle" bgcolor="#F2F2F2">{$hookhtml} &nbsp;&nbsp;<a href="plugin.php?id=sanree_brand_coupon&mod=print&color=1&tid={$couponresult[cid]}" target="_blank">{lang sanree_brand_coupon:colorprint}</a> &nbsp;&nbsp;<a href="plugin.php?id=sanree_brand_coupon&mod=print&color=0&tid={$couponresult[cid]}" target="_blank">{lang sanree_brand_coupon:blackprint}</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="24" align="left" valign="top"><table width="700" height="30" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="700" align="center" valign="middle" bgcolor="#FF6600"><div class="enddatem">{lang sanree_brand_coupon:enddatestr1}{$couponresult['dateline']}</div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="99" align="center" valign="middle"><table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="69" align="left" valign="top">
+		###srcouponcontent###<br />
+		{lang sanree_brand_coupon:condition}###srcouponcondition###</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="24" align="left" valign="top" bgcolor="#F2F2F2">
+	<div class="ninfos">{lang sanree_brand_coupon:con}</div></td>
+  </tr>
+  <tr>
+    <td height="130" align="center" valign="middle"><table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="96">
+		<div style="text-align:left; line-height:25px; padding:20px;">
+          <label><strong>{lang sanree_brand_coupon:hookstr4}</strong></label>
+          {$couponresult['tel']}<br>
+          <label><strong>{lang sanree_brand_coupon:hookstr5}</strong></label>
+		  <!--{if $ismultiple==1&&$couponresult[allowmultiple]==1}-->
+		  {$couponresult['icq']}
+		  <!--{else}-->
+		  {$couponresult['qq']}
+		  <!--{/if}-->
+		  <br>
+          <label><strong>{lang sanree_brand_coupon:hookstr1}</strong></label> 
+          {$couponresult['address']}<br>
+          <label><strong>{lang sanree_brand_coupon:hookstr2}</strong></label> 
+          <a href="{$couponresult['url']}" target="_blank">{$couponresult['brandname']}</a><br>
+          <label><strong>{lang sanree_brand_coupon:hookstr3}</strong></label>
+          {$couponresult['catename']}
+		  </div>
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="59" align="left" valign="middle" bgcolor="#F2F2F2" style="padding:10px;">{lang sanree_brand_coupon:disclaimer}</td>
+  </tr>
+</table>
+<!--{/block}-->

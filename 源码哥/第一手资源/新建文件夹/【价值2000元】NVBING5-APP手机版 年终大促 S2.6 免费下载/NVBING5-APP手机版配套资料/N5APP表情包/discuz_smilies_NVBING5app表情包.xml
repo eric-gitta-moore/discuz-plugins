@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Smilies]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2017-03-21 13:38]]></item>
+	<item id="From"><![CDATA[Ñ¶»ÃÍøwww.xhkj5.com]]></item>
+	<item id="Data">
+		<item id="typeid"><![CDATA[4]]></item>
+		<item id="available"><![CDATA[1]]></item>
+		<item id="name"><![CDATA[NVBING5app±íÇé°ü]]></item>
+		<item id="type"><![CDATA[smiley]]></item>
+		<item id="displayorder"><![CDATA[0]]></item>
+		<item id="directory"><![CDATA[n5appbq]]></item>
+		<item id="smilies">
+			<item id="0">
+				<item id="id"><![CDATA[110]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:kaixin:]]></item>
+				<item id="url"><![CDATA[1.gif]]></item>
+			</item>
+			<item id="1">
+				<item id="id"><![CDATA[121]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:daxiao:]]></item>
+				<item id="url"><![CDATA[2.gif]]></item>
+			</item>
+			<item id="2">
+				<item id="id"><![CDATA[127]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:qinzui:]]></item>
+				<item id="url"><![CDATA[3.gif]]></item>
+			</item>
+			<item id="3">
+				<item id="id"><![CDATA[128]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:fengnu:]]></item>
+				<item id="url"><![CDATA[4.gif]]></item>
+			</item>
+			<item id="4">
+				<item id="id"><![CDATA[129]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:huaxin:]]></item>
+				<item id="url"><![CDATA[5.gif]]></item>
+			</item>
+			<item id="5">
+				<item id="id"><![CDATA[130]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:ku:]]></item>
+				<item id="url"><![CDATA[6.gif]]></item>
+			</item>
+			<item id="6">
+				<item id="id"><![CDATA[131]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:kuqi:]]></item>
+				<item id="url"><![CDATA[7.gif]]></item>
+			</item>
+			<item id="7">
+				<item id="id"><![CDATA[132]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:jingya:]]></item>
+				<item id="url"><![CDATA[8.gif]]></item>
+			</item>
+			<item id="8">
+				<item id="id"><![CDATA[133]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:bukaixin:]]></item>
+				<item id="url"><![CDATA[9.gif]]></item>
+			</item>
+			<item id="9">
+				<item id="id"><![CDATA[111]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:liuhan:]]></item>
+				<item id="url"><![CDATA[10.gif]]></item>
+			</item>
+			<item id="10">
+				<item id="id"><![CDATA[112]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:shuijiao:]]></item>
+				<item id="url"><![CDATA[11.gif]]></item>
+			</item>
+			<item id="11">
+				<item id="id"><![CDATA[113]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:shengqi:]]></item>
+				<item id="url"><![CDATA[12.gif]]></item>
+			</item>
+			<item id="12">
+				<item id="id"><![CDATA[114]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:bizui:]]></item>
+				<item id="url"><![CDATA[13.gif]]></item>
+			</item>
+			<item id="13">
+				<item id="id"><![CDATA[115]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:daizhi:]]></item>
+				<item id="url"><![CDATA[14.gif]]></item>
+			</item>
+			<item id="14">
+				<item id="id"><![CDATA[116]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:gaoao:]]></item>
+				<item id="url"><![CDATA[15.gif]]></item>
+			</item>
+			<item id="15">
+				<item id="id"><![CDATA[117]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:tiaopi:]]></item>
+				<item id="url"><![CDATA[16.gif]]></item>
+			</item>
+			<item id="16">
+				<item id="id"><![CDATA[118]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:wuyu:]]></item>
+				<item id="url"><![CDATA[17.gif]]></item>
+			</item>
+			<item id="17">
+				<item id="id"><![CDATA[119]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:ciya:]]></item>
+				<item id="url"><![CDATA[18.gif]]></item>
+			</item>
+			<item id="18">
+				<item id="id"><![CDATA[120]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:exin:]]></item>
+				<item id="url"><![CDATA[19.gif]]></item>
+			</item>
+			<item id="19">
+				<item id="id"><![CDATA[122]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:aiqian:]]></item>
+				<item id="url"><![CDATA[20.gif]]></item>
+			</item>
+			<item id="20">
+				<item id="id"><![CDATA[123]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:weiqu:]]></item>
+				<item id="url"><![CDATA[21.gif]]></item>
+			</item>
+			<item id="21">
+				<item id="id"><![CDATA[124]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:keai:]]></item>
+				<item id="url"><![CDATA[22.gif]]></item>
+			</item>
+			<item id="22">
+				<item id="id"><![CDATA[125]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:jingxia:]]></item>
+				<item id="url"><![CDATA[23.gif]]></item>
+			</item>
+			<item id="23">
+				<item id="id"><![CDATA[126]]></item>
+				<item id="typeid"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="type"><![CDATA[smiley]]></item>
+				<item id="code"><![CDATA[:zaogao:]]></item>
+				<item id="url"><![CDATA[24.gif]]></item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3.2]]></item>
+	</item>
+</root>

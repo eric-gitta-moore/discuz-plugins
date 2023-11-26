@@ -1,0 +1,29 @@
+在数据调用页面的模块分类处选择【静态模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-群组广告幻灯
+
+数据来源：自定义HTML
+
+HTML代码：
+
+<div class="n5jj_hdysq cl">
+	<div id="slider" class="hdys_tpdyq">
+		<div class="hdys_tpdzq">
+			<div class="wrapq"><a href="#" class="n5jj_hdys_img"><img src="template/zhikai_n5app/images/qz1.jpg"  width="900"></a></div>
+			<div class="wrapq"><a href="#" class="n5jj_hdys_img"><img src="template/zhikai_n5app/images/qz2.jpg"  width="900"></a></div>
+			<div class="wrapq"><a href="#" class="n5jj_hdys_img"><img src="template/zhikai_n5app/images/qz3.jpg"  width="900"></a></div>
+			<div class="wrapq"><a href="#" class="n5jj_hdys_img"><img src="template/zhikai_n5app/images/qz4.jpg"  width="900"></a></div>
+		</div>
+	</div>
+	<div class="hdys_sxq y">
+		<div class="dot on"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+</div>
+
+
+选择确定，这个模块添加完成。

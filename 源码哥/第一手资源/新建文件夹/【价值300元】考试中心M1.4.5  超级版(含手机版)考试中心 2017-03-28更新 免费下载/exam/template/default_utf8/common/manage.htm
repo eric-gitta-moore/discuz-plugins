@@ -1,0 +1,138 @@
+<!--{template common/header}-->
+<link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/exam/image/common.css?{VERHASH}" />
+<script type="text/javascript">var formhash = '$_G[formhash]';</script>
+<div id="ajaxwaitid"></div>
+<div id="wp" class="wp"> 
+	<div id="pt" class="bm cl">
+		<div class="z"><a target="_blank" href="./" class="nvhm" title="首页"></a><em>?</em>
+		<a href="$listurl$navs[0][cid].html" target="_blank">$navs[0][name]</a><em>?</em>
+		<a href="$listurl$navs[1][cid].html" target="_blank">$navs[1][name]</a><em>?</em>
+		<a href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=pe">管理: $paper[title]</a></div>
+		<div style="float:right"><!--{template exam:'.$template.'/common/nav}--></div>
+	</div>
+<div id="ct" class="ct2 wp cl" <!--{if $tab[1]=='e' || $tab[1]=='g'}-->style="margin-right:0"<!--{/if}-->>
+	<div class="y"><a href="plugin.php?id=exam:help" class="xi1" target="_blank">使用帮助</a> | 
+	<a href="$paperurl$pid.html" class="xi1" target="_blank">预览该试卷</a></div>
+	<ul class="tb cl">
+		<li <!--{if $tab[0]=='p'}-->class="a"<!--{/if}-->><a href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=pe" id="tab_paper">$paper[title]</a></li>
+		<li <!--{if $tab[0]=='c' || $tab[0]=='g' || $tab>0 || $tab=='in'}-->class="a"<!--{/if}-->><a href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=cg" onmouseover="showMenu('newspaper')" initialized="true">题组管理<!--{if $gid}--> :: $groups[$gid][name]<!--{/if}--></a>
+			<div id="newspaper_menu" style="display: none;">
+				<!--{loop $groups $v}-->
+					<a class="a" href="plugin.php?id=exam:manage&pid=$v[pid]&gid=$v[gid]&tab=g$tab[1]" <!--{if $gid==$v[gid] && $gid}-->style="color:#F26C4F"<!--{/if}-->>$v[name]</a>
+				<!--{/loop}-->
+			</div>
+		</li>
+	</ul>
+
+	<div class="mtm mbn">
+		<a <!--{if $tab=='ps'}-->class="xi1"<!--{/if}--> href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=ps">试卷设置</a> <span class="pipe">|</span>
+		<a <!--{if $tab[1]=='g'}-->class="xi1"<!--{/if}--> href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=cg">题组管理</a> <span class="pipe">|</span>
+		<a <!--{if $tab[1]=='e' || $tab=='p'|| $tab=='g'}-->class="xi1"<!--{/if}--> href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab[0]e">题目管理</a> 
+		<!--{if $tab[0]>0 || $gid>0}--> <span class="pipe">|</span> <a <!--{if $tab=='gs'}-->class="xi1"<!--{/if}--> href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=gs">题组设置</a> <!--{/if}-->
+		<!--{if $tab=='in' || $tab[0]=='g' || $tab[0]>0}--> 
+			<span class="pipe" style="color:#333">|</span>
+			<a <!--{if $tab[0]=='1' && !$tab[1]}-->class="xi1"<!--{/if}-->href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&eid=$eid&tab=1"><!--{if !$eid}-->添加<!--{else}-->编辑<!--{/if}-->判断题</a> &nbsp;
+			<a <!--{if $tab[0]=='2'}-->class="xi1"<!--{/if}-->href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&eid=$eid&tab=2"><!--{if !$eid}-->添加<!--{else}-->编辑<!--{/if}-->单选题</a> &nbsp;
+			<a <!--{if $tab[0]=='3'}-->class="xi1"<!--{/if}-->href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&eid=$eid&tab=3"><!--{if !$eid}-->添加<!--{else}-->编辑<!--{/if}-->多选题</a> &nbsp;
+			<a <!--{if $tab[0]=='4'}-->class="xi1"<!--{/if}-->href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&eid=$eid&tab=4"><!--{if !$eid}-->添加<!--{else}-->编辑<!--{/if}-->填空题</a> &nbsp;
+			<a <!--{if $tab[0]=='5'}-->class="xi1"<!--{/if}-->href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&eid=$eid&tab=5"><!--{if !$eid}-->添加<!--{else}-->编辑<!--{/if}-->问答题</a> <span class="pipe" style="color:#333">|</span>
+			<a <!--{if $tab  =='in'}-->class="xi1"<!--{/if}-->href="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=in">导入试题</a>
+		<!--{/if}-->
+	</div>
+	<div class="mn" <!--{if $tab[1]=='e' || $tab[1]=='g' || $tab=='in'}-->style="width:100%"<!--{/if}-->>
+		<!--{if $tab=='1'}--><!--添加判断题-->
+			<!--{template exam:'.$template.'/common/manage_exam_add_check}-->	
+		<!--{elseif $tab=='2'}--><!--添加单选题-->
+			<!--{template exam:'.$template.'/common/manage_exam_add_option}-->	
+		<!--{elseif $tab=='3'}--><!--添加多选题-->
+			<!--{template exam:'.$template.'/common/manage_exam_add_moption}-->	
+		<!--{elseif $tab=='4'}--><!--添加填空题-->
+			<!--{template exam:'.$template.'/common/manage_exam_add_blank}-->	
+		<!--{elseif $tab=='5'}--><!--添加问答题-->
+			<!--{template exam:'.$template.'/common/manage_exam_add_ask}-->	
+		<!--{elseif $tab=='ps'}--><!--单个试卷设置-->
+			<!--{template exam:'.$template.'/common/manage_setting}-->
+		<!--{elseif $tab=='gs'}--><!--单个题组设置-->
+			<!--{template exam:'.$template.'/common/manage_group_setting}-->				
+		<!--{elseif $tab=='in'}--><!--导入试卷-->
+			<!--{if !empty($_POST) && !$in_submit_ok}--><center><em class="xi1 xs3">你没有安装“试卷导入”功能, <a class="xi1 xs3" href="http://www.ymg6.com/gg/addon.php?/?@exam.plugin" target="_blank">查看</a>。</em></center><!--{/if}-->
+			<!--{template exam:'.$template.'/common/manage_exam_in}-->	
+		<!--{elseif $tab[1]=='g' || $tab=='p'}--><!--题组列表管理-->
+			<!--{template exam:'.$template.'/common/manage_group_list}-->
+		<!--{elseif $tab[1]=='e' || $tab=='p'}--><!--试卷列表-->
+			<!--{template exam:'.$template.'/common/manage_exam_list}-->	
+		<!--{/if}-->
+	</div>
+	<script type="text/javascript">
+		function saveData(){}
+		function loadData(){}
+	</script>
+	
+<!--{if $tab[1]!='e' && $tab[1]!='g' && $tab!='in'}-->
+<div class="sd">
+	<div class="bm">
+		<div class="bm_h cl">
+			<!--{if $tab>=1 && $tab<=5}-->
+				<span class="y">
+					<form id="uploadform" name="uploadform" action="plugin.php?id=exam:upload&formhash=$_G[formhash]" method="post" enctype="multipart/form-data" autocomplete="off">
+							<input value="$_G[formhash]" name="formhash" type="hidden">
+							<a href="javascript:;" class="pn pnc pp file"><input type="file" name="upload" id="upload" value="" hidefocus onchange="imgUpload(this)">上传图片</a>
+					</form>
+				</span>
+				<h2>未使用图片</h2>
+			<!--{else}-->
+				图片管理
+			<!--{/if}-->
+		</div>
+		<div class="bm_c">
+			<div class="gmenu upimg">
+				<!--{if $tab>=1 && $tab<=5}-->
+					<div id="imgprev" class="imgprev">
+						<!--{loop $images $v}--><li><a href="javascript:;" onclick="imagedel(this)">×</a><img title="单击应用" src="{$_G[setting][attachurl]}exam/$v[src]" onclick="imageclk(this)"></li><!--{/loop}-->
+					</div>
+				<!--{/if}-->
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function imgUpload(fobj){
+		if(!fobj.value.match(/^.*(.gif|.jpg)$/i)){
+			showError("只允许图片上传格式为: gif 和 jpg");
+			return false;
+		}
+		if(fobj && fobj.value!=''){
+				$('uploadform').action = 'plugin.php?id=exam:upload&'+Math.random();
+				ajaxpost('uploadform', 'append_parent', '', '', '', function(){
+					$('append_parent').style.display='none';
+					var li = document.createElement('li');
+					var src = $('append_parent').innerHTML;
+					li.innerHTML = '<a href="javascript:;" onclick="imagedel(this)">×</a><img title="单击应用" src="'+src+'" onclick="imageclk(this)">';
+					$('imgprev').appendChild(li);
+					$('append_parent').style.display='block';
+					$('append_parent').innerHTML='';
+				})
+		}
+	}
+	function imageclk(obj){
+		var src = obj.parentNode.getElementsByTagName('img')[0].getAttribute('src');
+		$('image').value = src
+	}
+	function imagedel(obj){
+		var src = obj.parentNode.getElementsByTagName('img')[0].getAttribute('src');
+		ajaxget('plugin.php?id=exam:upload&formhash='+formhash+'&src='+src, 'append_parent','','','',function(){
+			$('append_parent').style.display='none';
+			var rt = $('append_parent').innerHTML;
+			if(rt==1){
+				obj.parentNode.outerHTML = ''
+			}
+			$('append_parent').style.display='block';
+			$('append_parent').innerHTML='';
+		});
+	}
+</script>
+<!--{/if}-->
+</div>
+
+<!--{template common/footer}-->

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+<title>乐视视频</title>	
+<script>						   
+Object.defineProperty(navigator,'platform',{get:function(){return 'Win32';}});
+Object.defineProperty(navigator,'userAgent',{get:function(){return 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';}});
+</script>
+<!--<link rel="stylesheet" href="//css.letvcdn.com/lc06_css/201709/06/17/58/mcss/m_play_v5.css" />-->	 
+<script type="text/javascript">	 
+        function getParams(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return decodeURIComponent(r[2]);
+            }
+            return null;
+        }
+var info = {
+    "pageid": "play",
+    "isDanmaku": 0,
+    "cid": 2,
+    "ptvcid": 2,
+    "pid": 10001493,
+    "vid": getParams('vid'),
+    "mmscid": 86,
+    "mmsid": "60062464,",
+    "recVid": "25979618",
+    "title": "",
+    "authtype": 1,
+    "trylook": 0,
+    "appGuideTime": 0,
+    "chargetype": 0,
+    "drmFlag": null,
+    "duration": 91,
+    "isUnicom": false,
+    "isautoloadplay": 0,
+    "openapp": 0,
+    "trueVV": 10735,
+    "showVV": 10735,
+    "albumType": "pic",
+    "total_episode": 0,
+    "episode": "20160710",
+    "now_episode": 20161098,
+    "is_end": 0,
+    "is_pay": false,
+    "is_home_made": false,
+    "share": {
+        "img": "",
+        "url": "",
+        "title": "",
+        "desc": ""
+    },
+    "videoType": {
+        "isPositive": 0,
+        "isColumn": 0,
+        "isShort": 1,
+        "isPart": 0,
+        "isHasPositive": 0,
+        "isPre": 0,
+        "isShowPositive": 0
+    },
+    "count": {
+        "vdm_count": 0,
+        "is_comm": 1,
+        "plist_count": 0,
+        "plist_score": 0,
+        "vcomm_count": 1,
+        "is_dm": 1,
+        "pcomm_count": 12482,
+        "preply": 1212,
+        "vreply": 0,
+        "vnpcomm": 1,
+        "pdm_count": 1282,
+        "media_play_count": 10735,
+        "down": 17,
+        "up": 40,
+        "pnpcomm": 12252,
+        "plist_play_count": 657812741
+    },
+    "lang": "zh_cn",
+    "uc_ua": false,
+    "region": "CN"
+};
+/*
+//jstatic.letvcdn.com/sdk/player.js
+*/
+</script>
+<script>var __ADINFO__ = {arkId: '124'};</script>
+<script src="player.js"></script>
+<style>
+*{ margin:0; padding:0;}
+body { background-color:#000;}
+#j-player, .hv_box, .hv_play { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="j-player"></div>  
+<script type="text/javascript" src="//js.letvcdn.com/lc07_js/201709/19/13/29/lem/base-base.js"></script>
+<script type="text/javascript" src="//js.letvcdn.com/lc03_js/201709/28/18/52/lem/play-ms_play_v2.js"></script>
+<script>	  
+function getHeight() {
+	return window.innerHeight ? window.innerHeight : document.body && document.body.clientHeight ? document.body.clientHeight : document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth ? document.documentElement.clientHeight : document.body.clientHeight
+}
+window.onload = window.onpageshow = window.onresize = function () {
+	var a = document.getElementById("j-player");
+	a.style.height = getHeight() + "px"
+};
+</script>
+</body>
+</html>

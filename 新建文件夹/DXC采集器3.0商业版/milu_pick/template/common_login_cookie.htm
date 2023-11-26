@@ -1,0 +1,39 @@
+<!--登录cookie-->
+<tbody id="need_login" {if (($_GET['pmod'] != 'fast_pick') &&  ($info[rules_type] == 3 || !$info[rules_type]))}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:is_need_login}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_login] == 1} class="checked" {/if}><input {if $info[is_login] == 1} checked="checked" {/if} name="set[is_login]" type="radio" onclick="show_hide('show_login','',1);"  class="is_login" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_login] != 1} class="checked" {/if}><input  type="radio" {if $info[is_login] != 1} checked="checked" {/if}  value="2" name="set[is_login]" onclick="show_hide('show_login','',2);" class="is_login">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+</tbody>
+
+<tbody id="show_login" {if $info[is_login] != 1}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">cookie:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td class="vtop rowform">
+<textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[login_cookie]" id="login_cookie" cols="50" class="tarea w_area" >{$info['login_cookie']}</textarea></td>
+<td class="vtop tips2" s="1">{lang milu_pick:login_cookie_notice}</td>
+</tr>
+{if $_GET['pmod'] != 'fast_pick'}
+{eval echo pickOutput::show_tr(array('name' => milu_lang('cookie_test_no_hava'),'desc' => milu_lang('no_must_hava').milu_lang('cookie_test_no_hava_notice'), 'arr' => array('name' => 'cookie_test_no_hava', 'info' => $info) ), 'textarea');}
+{eval echo pickOutput::show_tr(array('name' => milu_lang('cookie_test_hava'),'desc' =>milu_lang('no_must_hava'). milu_lang('cookie_test_hava_notice'), 'arr' => array('name' => 'cookie_test_hava', 'info' => $info) ), 'textarea');}
+
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform">{lang milu_pick:test_url}:</span></td>
+</tr>
+<tr ><td width="600" class="vtop rowform"><input name="set[login_test_url]" type="text" class="longtxt" id="login_test_url" value="{$info['login_test_url']}"></td>
+<td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+{/if}
+<tr >
+  <td s="1" class="td27" colspan="2"><span class="vtop rowform"><a onclick="login_test()" href="javascript:void(0);">{lang milu_pick:hit_view_result}</a></span></td>
+</tr>
+</tbody>
+
+<!--登录cookie end-->

@@ -1,0 +1,55 @@
+		<form id="group_list" method="post" autocomplete="off" action="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab&formhash=$_G[formhash]">
+		<input value="$_G[formhash]" name="formhash" type="hidden">
+			<table cellpadding="0" cellspacing="0" class="egroup" border=0>
+				<tr class="alt h" style="border-bottom:1px solid #DEDEDE;"><th width=40><center>排序</center></th><td>分组名称</td><th width=60>每题分值</th><th width=80>最多显示数量</th><th width=150>操作</th></tr>
+				<!--{if empty($groups)}-->
+					<tr height=30><td colspan=6  class="ptw pbw">
+					<p class="xi1">暂无题组,请添加!</p>
+					<p>
+					1.题组用于管理和规划试卷; <br>
+					2.题组可以用作试卷中题目的分隔符;<br>
+					3.题组中"可用最大数量"的值:若为0,则不启用该组;若大于该值,则随机显示;若实际题量小于或等于该值,则按顺序显示.
+					</p>
+					</td></tr>
+				<!--{else}-->
+					<!--{loop $groups $v}-->
+					<tr height=36>
+						<th><input maxLength=3 name="sort[{$v[gid]}]" value="$v[sort]"></a></th>
+						<td <!--{if $gid==$v[gid]}-->style="font-weight:bold"<!--{/if}-->>[GID: $v[gid]<!--{if $v[assoc]}-->&rArr;$v[assoc]<!--{/if}-->]<a href="plugin.php?id=exam:manage&pid=$v[pid]&gid=$v[gid]&tab=ge">$v[name]</a></td>
+						<th>$v[score]</th>
+						<th>$v[num_max]</th>
+						<th>
+							<a href="plugin.php?id=exam:manage&pid=$v[pid]&gid=$v[gid]&tab=ge">管理</a> &nbsp; 
+							<a href="plugin.php?id=exam:manage&pid=$v[pid]&gid=$v[gid]&tab=gs">设置</a> &nbsp; 
+							<a href="plugin.php?id=exam:manage&pid=$v[pid]&gid=$v[gid]&tab=in">导入</a> &nbsp; 
+							<a href="javascript:;" onclick="group_delete('$v[gid]')">删除</a>
+						</th>
+					</tr>
+					<!--{/loop}-->
+				<!--{/if}-->
+				<tr class="alt h"><td colspan=5><button type="submit" class="pn pnc" >确定</button><button class="pn" onclick="showDialog($('layer_group').innerHTML, 'info', '添加题组',0,1);return false;">添加题组</button></td></tr>
+				<tr height=36><td colspan=5 style="border-bottom:0"><span class="xi1">小提示: 题组的排序为负数的时候,该组不启用,不显示在考卷中!</span></td></tr>
+			</table>
+		</form>
+ 
+		<div id="layer_group" style="display:none">
+			<form method="post" id="paperNameForm" action="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab&action=group_new&formhash=$_G[formhash]" autocomplete="off" onsubmit="if($('groupname').value.match(/^\s*$/)){showError('&#x8BF7;&#x8F93;&#x5165;&#x9898;&#x7EC4;&#x540D;&#x79F0;');return false;}">
+				<input value="$_G[formhash]" name="formhash" type="hidden">
+				<div class="c altw" style="padding:20px 0 30px 10px;border-top:1px solid #CCC">
+					题组名称: <input id="groupname" name="groupname" class="px" style="width:250px">
+				</div>
+				<p class="o pns">
+					<button value="true" class="pn pnc" type="submit"><strong>确定</strong></button>
+					<button value="true" class="pn" onclick="hideMenu('fwin_dialog', 'dialog')"><strong>取消</strong></button>
+				</p>
+			</form>
+		</div> 
+		
+		
+		<script type="text/javascript">
+ 
+		function group_delete(gid){
+			var url = 'plugin.php?id=exam:manage&formhash='+formhash+'&pid=$pid&gid=$gid&tab=$tab&action=group_delete&delgid='+gid;
+			showDialog('删除题组将删除该题组下的所有试卷!', 'confirm', '删除题组',function(){window.location=url},0)
+		}
+		</script>

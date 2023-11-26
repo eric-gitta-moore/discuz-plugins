@@ -1,0 +1,57 @@
+<!--{template zhuzhu_taobao:header}-->
+<link type="text/css" rel="stylesheet" href="./source/plugin/zhuzhu_taobao/static/css/style_touch.css">
+<link rel="stylesheet" type="text/css" href="./source/plugin/zhuzhu_taobao/static/css/style_m_uatm.css">
+
+<!--{subtemplate zhuzhu_taobao:t_header}-->
+
+<!--{if $_GET[favorites_id]}-->
+<style type="text/css">
+.uatmlimit-list>ul>li {width: 50%}
+</style>
+	<div class="uatmlimit-list wp cl">
+		<ul>
+		<!--{loop $list $v}-->
+		<li>
+		<a href="{$jump_url}$v[num_iid]" class="uatmitem">
+			<div class="uatmimg"><img src="$v[pict_url]" /></div>
+			<h2>$v[title]</h2>
+			<div class="uatmdetail">
+				$v[zk_final_price]<del>$v[reserve_price]</del>
+			</div>
+		</a>
+		</li>
+		<!--{/loop}-->
+		</ul>
+	</div>
+
+<!--{else}-->
+
+	<!--{loop $uatmlist $v}-->
+	<!--{if $v[list]}-->
+	<div class="uatmlimit-list wp cl">
+		<h1><span>{lang zhuzhu_taobao:1t_uatm_htm_1}</span></h1>
+		<h2>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=uatm&favorites_id=$v[favorites_id]">$v[favorites_title]</a>
+		</h2>
+		<ul>
+		<!--{loop $v[list] $vv}-->
+		<li>
+		<a href="{$jump_url}$vv[num_iid]" class="uatmitem">
+			<div class="uatmimg"><img src="$vv[pict_url]" /></div>
+			<h2>$vv[title]</h2>
+			<div class="uatmdetail">
+				$vv[zk_final_price]<del>$vv[reserve_price]</del>
+			</div>
+		</a>
+		</li>
+		<!--{/loop}-->
+		</ul>
+		<div style="clear:both;"></div>
+		<p><a href="plugin.php?id=zhuzhu_taobao&mod=uatm&favorites_id=$v[favorites_id]">{lang zhuzhu_taobao:1t_uatm_htm_2}</a></p>
+	</div>
+	<!--{/if}-->
+	<!--{/loop}-->
+
+<!--{/if}-->
+<!--{subtemplate zhuzhu_taobao:t_footer}-->
+<!--{subtemplate zhuzhu_taobao:footer}-->

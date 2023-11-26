@@ -1,0 +1,293 @@
+.danmu-container {
+	background: #383838;
+	color: #999;
+	font-size: 12px;
+	position: absolute;
+	z-index: 1;
+	text-align: left;
+	font-family: Tahoma, sans-serif
+}
+
+.danmu-container .danmu-wrapper {
+	min-height: 50px;
+	max-height: 180px;
+	_height: 180px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	line-height: 29px;
+	position: relative
+}
+
+.danmu-container .danmu-wrapper table {
+	width: 100%;
+	table-layout: fixed
+}
+
+.danmu-container .danmu-wrapper table tr {
+	cursor: pointer
+}
+
+.danmu-container td {
+	border-top: 1px solid #444
+}
+
+.danmu-container .danmu-table-row1 {
+	width: 60px
+}
+
+.danmu-container .danmu-table-row2 {
+	position: relative; *
+	top: -1px;
+	_top: 0
+}
+
+.danmu-container .danmu-table-row3 {
+	width: 100px
+}
+
+.danmu-container .danmu-play-time {
+	padding-left: 10px
+}
+
+.danmu-container .danmu-content {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: transparent
+}
+
+.danmu-container .danmu-submit-time {
+	float: right;
+	padding-right: 10px
+}
+
+.danmu-container .danmu-toogle-handler {
+	height: 3px;
+	background: #999;
+	width: 100%;
+	text-align: center;
+	_overflow: hidden;
+	line-height: 18px;
+	display: none
+}
+
+.danmu-container .danmu-toogle-handler span {
+	display: block;
+	width: 30px;
+	height: 15px;
+	background: #999;
+	margin: 0 auto !important;
+	position: relative;
+	zoom: 1;
+	overflow: hidden;
+	cursor: pointer
+}
+
+.danmu-container .danmu-toogle-handler span em {
+	display: inline-block;
+	border: 5px solid;
+	border-color: #999 #999 #000 #999;
+	border-width: 0 5px 5px;
+	height: 0;
+	margin-bottom: 3px; *
+	margin-top: 3px
+}
+
+.danmu-container .danmu-toogle-handler .collapse {
+	top: -12px
+}
+
+.danmu-container .danmu-toogle-handler .collapse em {
+	border-width: 5px 5px 0;
+	border-color: #000 #999 #999 #999
+}
+
+.danmu-container .danmu-container-none td {
+	text-align: center
+}
+
+.danmu-container .danmu-container-loading td {
+	text-align: center
+}
+
+.danmu-container .danmu-content-report {
+	position: absolute;
+	background-color: #383838;
+	border: 1px solid #444;
+	line-height: 14px;
+	padding: 4px;
+	top: 2px;
+	right: 0
+}
+
+.danmu-container .danmu-content-report a {
+	color: #999 !important;
+	outline: 0
+}
+
+.danmu-container .danmu-content-report.disable a {
+	color: #666 !important;
+	text-decoration: none;
+	cursor: default
+}
+
+.danmu-bar {
+	background: #383838;
+	color: #999;
+	font-size: 12px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 12px;
+	padding-right: 12px; +
+	padding-top: 2px; +
+	height: 38px;
+	_padding-top: 10px;
+	_height: 30px;
+	_overflow: hidden;
+	border-bottom: 1px solid #444
+}
+
+.danmu-bar a {
+	outline: 0;
+	text-decoration: none !important
+}
+
+.danmu-bar span {
+	margin: 0 !important
+}
+
+.danmu-bar a:visited {
+	color: #999 !important
+}
+
+.danmu-bar .danmu-bar-btn {
+	text-decoration: none;
+	background-image: url("../img/danmu-btns-1.png");
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	overflow: hidden
+}
+
+.danmu-bar .danmu-bar-btn.danmu-bar-enable {
+	background-position: -22px 0;
+	width: 65px;
+	height: 25px;
+	top: 8px
+}
+
+.danmu-bar .danmu-bar-btn.danmu-bar-disable {
+	background-position: -91px 0;
+	width: 65px;
+	height: 25px;
+	top: 8px
+}
+
+.danmu-bar .danmu-bar-btn.danmu-bar-setting {
+	background-position: 0 0;
+	left: 85px
+}
+
+.danmu-bar .danmu-bar-input {
+	background-color: #494949;
+	padding: 6px 1px;
+	position: relative;
+	left: 105px; +
+	padding: 1px 1px
+}
+
+.danmu-bar .danmu-bar-input .danmu-bar-input-wrapper {
+	padding: 5px 1px;
+	background-color: #212121; +
+	padding: 3px 1px
+}
+
+.danmu-bar .danmu-bar-input .danmu-bar-input-text {
+	background-color: #212121;
+	border: 0;
+	color: #5b5b5b;
+	vertical-align: baseline
+}
+
+.danmu-bar .danmu-bar-input .danmu-bar-input-text:focus {
+	outline: 0
+}
+
+.danmu-bar .danmu-bar-input .danmu-bar-input-submit {
+	padding: 0 12px;
+	text-decoration: none;
+	color: #999 !important; +
+	padding-right: 6px
+}
+
+.danmu-bar .danmu-bar-input .danmu-bar-input-submit.danmu-bar-input-submit-disabled
+	{
+	color: #666 !important
+}
+
+.danmu-bar .danmu-bar-counter {
+	display: none;
+	float: right; +
+	margin-top: -2px !important;
+	_margin-top: -10px !important
+}
+
+.danmu-setting {
+	background: #5c5c5c;
+	position: absolute;
+	font-size: 12px;
+	padding: 10px;
+	line-height: 22px;
+	color: #999
+}
+
+.danmu-setting input {
+	vertical-align: middle
+}
+
+.danmu-setting td {
+	border: 1px solid black;
+	width: 12px;
+	height: 12px;
+	cursor: pointer
+}
+
+.danmu-setting .danmu-setting-color-selected {
+	border: 1px solid #494949;
+	padding: 0 20px;
+	font-size: 18px;
+	vertical-align: middle
+}
+
+.danmu-setting .danmu-setting-color-text {
+	border: 1px solid #494949;
+	background-color: #6d6d6d;
+	color: #ccc;
+	width: 55px;
+	height: 22px
+}
+
+.danmu-setting .danmu-setting-color-pannel {
+	margin-top: 10px
+}
+
+.danmu-setting em {
+	display: inline-block;
+	border: 5px solid;
+	border-width: 5px 5px 0;
+	border-color: #5c5c5c transparent transparent transparent;
+	height: 0;
+	position: absolute;
+	margin-top: 10px;
+	_display: none
+}
+/* ----------------------------------
+CSS file for Discuz! x3.3 By moqu8.com
+(C) moqu8.com
+http://www.moqu8.com
+Design QQ  2575.163.778
+update:2017-01-01 20:06
+---------------------------------- */

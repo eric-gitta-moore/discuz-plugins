@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin Validator]]></item>
+	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Data">
+		<item id="0"><![CDATA[source/plugin/sanree_brand_maps/check.php]]></item>
+		<item id="1"><![CDATA[source/plugin/sanree_brand_maps/class/class_sanree_brand_maps_category.php]]></item>
+		<item id="2"><![CDATA[source/plugin/sanree_brand_maps/class/index.htm]]></item>
+		<item id="3"><![CDATA[source/plugin/sanree_brand_maps/discuz_plugin_sanree_brand_maps_SC_GBK.xml]]></item>
+		<item id="4"><![CDATA[source/plugin/sanree_brand_maps/discuz_plugin_sanree_brand_maps_SC_UTF8.xml]]></item>
+		<item id="5"><![CDATA[source/plugin/sanree_brand_maps/discuz_plugin_sanree_brand_maps_TC_BIG5.xml]]></item>
+		<item id="6"><![CDATA[source/plugin/sanree_brand_maps/discuz_plugin_sanree_brand_maps_TC_UTF8.xml]]></item>
+		<item id="7"><![CDATA[source/plugin/sanree_brand_maps/function/function_core.php]]></item>
+		<item id="8"><![CDATA[source/plugin/sanree_brand_maps/function/index.htm]]></item>
+		<item id="9"><![CDATA[source/plugin/sanree_brand_maps/index.htm]]></item>
+		<item id="10"><![CDATA[source/plugin/sanree_brand_maps/install.php]]></item>
+		<item id="11"><![CDATA[source/plugin/sanree_brand_maps/module/index.htm]]></item>
+		<item id="12"><![CDATA[source/plugin/sanree_brand_maps/module/sanree_brand_maps/index.htm]]></item>
+		<item id="13"><![CDATA[source/plugin/sanree_brand_maps/module/sanree_brand_maps/sanree_brand_maps_index.php]]></item>
+		<item id="14"><![CDATA[source/plugin/sanree_brand_maps/sanree_brand_maps.inc.php]]></item>
+		<item id="15"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/copyright.xml]]></item>
+		<item id="16"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/images/copyright.jpg]]></item>
+		<item id="17"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/images/hiden.jpg]]></item>
+		<item id="18"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/images/icon3.gif]]></item>
+		<item id="19"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/images/index.htm]]></item>
+		<item id="20"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/images/searbtn.jpg]]></item>
+		<item id="21"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/images/show.jpg]]></item>
+		<item id="22"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/index.htm]]></item>
+		<item id="23"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/index_baidu.tpl.php]]></item>
+		<item id="24"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/index_google.tpl.php]]></item>
+		<item id="25"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/js/index.htm]]></item>
+		<item id="26"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/js/jquery-1.4.2.min.js]]></item>
+		<item id="27"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/js/msg.js]]></item>
+		<item id="28"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/js/msg_utf8.js]]></item>
+		<item id="29"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/js/sanree_brand_maps.js]]></item>
+		<item id="30"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/preview.jpg]]></item>
+		<item id="31"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/preview_large.jpg]]></item>
+		<item id="32"><![CDATA[source/plugin/sanree_brand_maps/tpl/default/sanree_brand_maps.css]]></item>
+		<item id="33"><![CDATA[source/plugin/sanree_brand_maps/tpl/index.htm]]></item>
+		<item id="34"><![CDATA[source/plugin/sanree_brand_maps/uninstall.php]]></item>
+		<item id="35"><![CDATA[source/plugin/sanree_brand_maps/validator.xml]]></item>
+	</item>
+</root>

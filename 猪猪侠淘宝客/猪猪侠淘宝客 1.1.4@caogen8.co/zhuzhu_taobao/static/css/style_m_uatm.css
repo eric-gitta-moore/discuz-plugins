@@ -1,0 +1,19 @@
+.uatmlimit-list {background: #FFF;padding: 5px;margin-bottom: 15px;text-align: center;}
+.uatmlimit-list>h1>span {background: url('../image/hot.png') right center no-repeat;position: relative;background-size: 17px auto;line-height: 20px;height: 20px;padding-right: 22px;margin: 15px 0 8px;display: inline-block;color: #000;font-size: 14px;}
+.uatmlimit-list>h1>span:before, .uatmlimit-list>h1>span:after {content: '';width: 70px;height: 1px;display: block;background: #CCC;position: absolute;left: -85px;top: 9px;}
+.uatmlimit-list>h1>span:after {right: -85px;left: inherit;}
+.uatmlimit-list>h2>a {border-radius: 20px;color: rgb(255, 255, 255);background-color: rgb(0, 0, 0);padding: 0 10px;font-weight: 300;display: inline-block;margin-bottom: 25px;}
+.uatmlimit-list>ul>li {width: 33.33333%;float: left}
+.uatmlimit-list>ul>li>a {display: block;padding: 5px;}
+.uatmlimit-list>ul>li>a>.uatmimg>img {width: 100%!important}
+.uatmlimit-list>ul>li>a>h2 {display: block;word-wrap: normal;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;font-weight: 300;color: #000}
+.uatmlimit-list>ul>li>a>.uatmdetail {color: #000;font-weight: 700;}
+.uatmlimit-list>ul>li>a>.uatmdetail>del {color: #999;font-weight: 300;margin-left: 4px;}
+.uatmlimit-list>p {display: block}
+.uatmlimit-list>p>a {margin-top: 10px;margin-bottom: 15px;line-height: 30px;padding: 0 35px;-webkit-box-orient: horizontal;flex-direction: row;-webkit-box-align: center;align-items: center;-webkit-box-pack: center;justify-content: center;border: 1px solid rgb(208, 208, 208);display: inline-block;border-radius: 30px;}
+
+
+
+
+
+

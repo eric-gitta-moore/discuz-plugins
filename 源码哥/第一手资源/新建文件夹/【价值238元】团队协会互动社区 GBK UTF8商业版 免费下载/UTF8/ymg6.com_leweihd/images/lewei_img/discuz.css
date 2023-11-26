@@ -1,0 +1,36 @@
+.fl .lewei_forumlist {
+	padding: 0 0 5px;
+	background: none;
+}
+.fl .lewei_forumlist .o img {
+	margin-top: 8px;
+}
+.fl .lewei_forumlist a {
+	color: #525252;
+	font-size: 16px;
+	height: 36px;
+	border-bottom: solid 1px #3DA3BF;
+}
+
+.lewei_forumlist a {
+	float: left;
+}
+.ct2 .mn {
+	overflow: visible;
+}
+.lewei_forumlng_r3 {
+	width: 250px;
+	height: 260px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+}
+.fl_tb td {
+	padding: 25px 0;
+}
+.lewei_mm {
+	overflow: visible;
+}
+.lewei_forumlng_r3, .tb a {
+	border: none!important;
+}

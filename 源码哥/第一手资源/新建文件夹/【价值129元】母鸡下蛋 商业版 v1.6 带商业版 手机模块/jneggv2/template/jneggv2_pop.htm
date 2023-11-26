@@ -1,0 +1,95 @@
+{subtemplate common/header}
+<style type="text/css">
+.com_pop {width:400px; padding-left:20px; padding-right:20px; padding-bottom:20px;}
+</style>
+<!--{if $_GET['do'] == 'buychic' && $_G['uid'] > '0'}-->
+	<h3 class="flb">
+    <em id="return_sign">{lang jneggv2:jnegg28}</em>
+    <span><a href="javascript:;" onclick="hideWindow('changeout');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+    <form method="post" id="buychicsubmit" action="plugin.php?id=jneggv2:jneggv2" onsubmit="ajaxpost(this.id, 'buychicsubmit','','onerror');return false;">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="buychicsubmit" value="yes" />
+    <input type="hidden" name="handlekey" value="editmine" />
+    <input type="hidden" name="referer" value="{echo dreferer();}" />
+    <div class="com_pop">
+    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td width="80px">{lang jneggv2:jnegg29}: {$g_costbuy}{$g_costbuyext}</td>
+      </tr>
+      <tr>
+        <td>{lang jneggv2:jnegg30}: <input name="paymount" type="text" id="paymount" /> {lang jneggv2:jnegg31}</td>
+      </tr>
+    </table>
+    </div>
+    <p class="o pns">
+    <button type="submit" name="signpn" value="true" class="pn pnc"><strong>{lang jneggv2:jnegg32}</strong></button>
+    </p>
+    </form>
+<!--{/if}-->
+<!--{if $_GET['do'] == 'changeout' && $_G['uid'] > '0'}-->
+	<h3 class="flb">
+    <em id="return_sign">{lang jneggv2:jnegg33}</em>
+    <span><a href="javascript:;" onclick="hideWindow('changeout');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+    <form method="post" id="changeoutsubmit" action="plugin.php?id=jneggv2:jneggv2" onsubmit="ajaxpost(this.id, 'changeoutsubmit','','onerror');return false;">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="changeoutsubmit" value="yes" />
+    <input type="hidden" name="handlekey" value="changeoutsubmit" />
+    <input type="hidden" name="referer" value="{echo dreferer();}" />
+    <div class="com_pop">
+    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td width="80px">{lang jneggv2:jnegg34}: {$g_goldeggprice}{$g_goldcreditext}</td>
+      </tr>
+      <tr>
+        <td>{lang jneggv2:jnegg56}: <input name="paymount" type="text" id="paymount" /> {lang jneggv2:jnegg35}<br/><br/>**{lang jneggv2:jnegg36}{$g_goldeggmin}</td>
+      </tr>
+    </table>
+    </div>
+    <p class="o pns">
+    <button type="submit" name="signpn" value="true" class="pn pnc"><strong>{lang goldwar:confirm}</strong></button>
+    </p>
+    </form>
+<!--{/if}-->
+<!--{if $_GET['do'] == 'changeegg' && $_G['uid'] > '0'}-->
+	<h3 class="flb">
+    <em id="return_sign">{lang jneggv2:jnegg37}</em>
+    <span><a href="javascript:;" onclick="hideWindow('changeout');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+    <form method="post" id="changeeggsubmit" action="plugin.php?id=jneggv2:jneggv2" onsubmit="ajaxpost(this.id, 'changeeggsubmit','','onerror');return false;">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="changeeggsubmit" value="yes" />
+    <input type="hidden" name="handlekey" value="changeeggsubmit" />
+    <input type="hidden" name="referer" value="{echo dreferer();}" />
+    <div class="com_pop">
+    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td width="80px">{lang jneggv2:jnegg38}: {$g_eggextratio}{lang jneggv2:jnegg2} = 1{$g_eggcreditext}</td>
+      </tr>
+      <tr>
+        <td>{lang jneggv2:jnegg56}: <input name="paymount" type="text" id="paymount" /> {lang jneggv2:jnegg35}<br/><br/>**{lang jneggv2:jnegg36}{$g_eggout}{lang jneggv2:jnegg39}{$g_eggcreditext}{lang jneggv2:jnegg40}</td>
+      </tr>
+    </table>
+    </div>
+    <p class="o pns">
+    <button type="submit" name="signpn" value="true" class="pn pnc"><strong>{lang jneggv2:jnegg32}</strong></button>
+    </p>
+    </form>
+<!--{/if}-->
+<!--{if $_GET['do'] == 'viewchic' && $_G['uid'] > '0'}-->
+	<h3 class="flb">
+    <em id="return_sign">{lang jneggv2:jnegg65}</em>
+    <span><a href="javascript:;" onclick="hideWindow('changeout');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+    <div class="com_pop">
+    <table width="100%" border="1" cellspacing="0" cellpadding="5">
+      <tr><td>ID</td><td>{lang jneggv2:jnegg66}</td><td>{lang jneggv2:jnegg67}</td>{if $g_chicdie == '1'}<td>{lang jneggv2:jnegg68}</td>{/if}<td>{lang jneggv2:jnegg69}</td></tr>
+      {loop $chiclist $value}
+      <tr><td>$value[id]</td><td>$value[chickenqty]</td><td>$value[buytime]</td>{if $g_chicdie == '1'}<td>$value[dietime]</td>{/if}<td>{if $g_chicdie == '1'}{if $value[status] == '1'}{lang jneggv2:jnegg71}{else}{lang jneggv2:jnegg70}{/if}{else}{lang jneggv2:jnegg70}{/if}</td></tr>
+      {/loop}
+      <tr><td colspan="5">$multipage</td></tr>
+    </table>
+    </div>
+<!--{/if}-->
+{subtemplate common/footer}

@@ -1,0 +1,298 @@
+<!--{template common/header}-->
+<link href="source/plugin/keke_group/template/css/pcstyle.css?version=201803011029" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="source/plugin/keke_group/js/jquery.js"></script>
+<script>jQuery.noConflict();</script>
+<div class="keke_warning"></div>
+<div class="wp guclearfix keke_group" >
+        <div class="side">
+            <ul class="sidebar">
+            	<div class="kkbuygro">
+                    <li {if !$_GET['p']}class="active"{/if}>
+                        <a href="plugin.php?id=keke_group">{lang keke_group:langt01}</a>
+                    </li>
+                    <li {if $_GET['p']=='my' && $_GET['id']=='keke_group'}class="active"{/if}>
+                        <a href="plugin.php?id=keke_group&p=my">{lang keke_group:langt02}</a>
+                    </li>
+                    <li {if $_GET['p']=='sw' && $_GET['id']=='keke_group'}class="active"{/if} style="border-bottom:5px solid #F5F5F5">
+                        <a href="plugin.php?id=keke_group&p=sw">{lang keke_group:langt03}</a>
+                    </li>
+                </div>
+                
+               
+                {if file_exists('source/plugin/keke_chongzhi/keke_chongzhi.inc.php')}
+                <div class="kkbuycz">
+                    <li {if (!$_GET['p']) && $_GET['id']=='keke_chongzhi'}class="active"{/if}>
+                        <a href="plugin.php?id=keke_chongzhi">{lang keke_chongzhi:langt18}</a>
+                    </li>
+                    <li {if $_GET['p'] && $_GET['id']=='keke_chongzhi'}class="active"{/if} style="border-bottom:5px solid #F5F5F5">
+                        <a href="plugin.php?id=keke_chongzhi&p=my">{lang keke_chongzhi:langt19}</a>
+                    </li>
+                </div>
+                {/if}
+                {if file_exists('source/plugin/keke_tixian/keke_tixian.inc.php')}
+                 <div class="kkbuytx">
+                    <li {if (!$_GET['p']) && $_GET['id']==keke_tixian}class="active"{/if}>
+                        <a href="plugin.php?id=keke_tixian">{lang keke_tixian:langt36}</a>
+                    </li>
+                    <li {if $_GET['p'] && $_GET['id']==keke_tixian}class="active"{/if} style="border-bottom:5px solid #F5F5F5">
+                        <a href="plugin.php?id=keke_tixian&p=my">{lang keke_tixian:langt39}</a>
+                    </li>
+                </div>
+                {/if}
+                {if file_exists('source/plugin/keke_buyinvitecode/keke_buyinvitecode.inc.php')}
+                 <div class="kkbuytx">
+                    <li {if (!$_GET['p']) && $_GET['id']==keke_buyinvitecode}class="active"{/if}>
+                        <a href="plugin.php?id=keke_buyinvitecode">{lang keke_group:langt38}</a>
+                    </li>
+                </div>
+                {/if}
+                
+            </ul>
+        </div>
+        <div class="czmain guclearfix" >
+        
+        
+        
+        {if $_GET['p']}
+         <div class="header fix">
+            <span class="uhead">
+                <a href="home.php?mod=space&uid={$_G['uid']}">
+                    <b class="relative">
+                        <img class="head" src="uc_server/avatar.php?uid={$_G['uid']}&size=big">
+                    </b>
+                    <img class="hi" src="source/plugin/keke_group/template/images/hi.png">
+                </a>
+            </span>
+            <a href="javascript:;" class="usnmae">{$_G['username']}</a>
+            <div>
+                <ul class="flexBox">
+                    <li><a href="home.php?mod=spacecp&ac=usergroup"><span class="current">{lang keke_group:langt05} [ <span style="color:#d36f16">{$nowgroup['title']}</span> ]{if $nowgroup['overdue']}<b style="font-weight:500; margin:0 10px; color:#CCC">&</b><span style="color:#C30;">{lang keke_group:langt39}</span>{/if}</span></a></li>
+                     <li style="margin-top:7px"><span class="currents">{lang keke_group:langt06} / {$nowgroup['time']} </span></li>
+                </ul>
+            </div>
+        </div>
+        {/if} 
+        
+        
+        	{if $_GET['p']==my}
+            <div class="keke_mylist fix">
+                <ul>
+                    {if $list}{$list}{else}<div class="noorder">{lang keke_group:langt07}</div>{/if}
+                </ul>
+                {$multipage}
+            </div>
+            {elseif $_GET['p']=='sw'}
+           
+              <div class="swgroup">
+                  <ul class="mygro">
+                        {if $expirylist}
+                        {loop $expirylist $keys $vals}
+                        <li {if $n%2==0}class="sele"{/if}>
+                        <span class="rsw">{if $vals['type']=='ext'}<a href="plugin.php?id=keke_group" class="hightline">{lang keke_group:langt08}</a>{/if}{if !($_G['groupid']==$keys)}{if !$vals[noswitch]}<a href="javascript:" onclick="_group_switch('{$keys}')">{lang keke_group:langt09}</a>{/if}{/if}</span>
+                        <em class="groico"><img src="{if $vals['ico']}$vals['ico']{else}source/plugin/keke_group/template/images/ico7.png{/if}" alt=""></em>
+                        <div class="pup"> {$vals['grouptitle']} </div>
+                        <div class="dow"> {if $vals['type']=='ext'}{lang keke_group:langt17} / {$vals['time']}{else}{lang keke_group:langt18}{/if}</div>
+                        </li>
+                        {eval $n++;}
+                        {/loop}
+                        {else}
+                            <li class="noorder">{lang keke_group:langt19}<p style="margin-top:15px;"><a href="plugin.php?id=keke_group" class="btns">{lang keke_group:langt20}</a></p></li>
+                        {/if}
+                    </ul>
+              </div>
+            <script>
+			function _group_switch(groupid){
+				var formhash='{FORMHASH}';
+				jQuery.get('{$_G[siteurl]}plugin.php?id=keke_group:swgro', {groupid:groupid,formhash:formhash},function (datas){
+					if(datas.state==1){
+						warning('{lang keke_group:langt21}',1);setTimeout(function() {window.location.reload();}, 2000);return false;
+					}else{
+						warning(datas.msg,2);
+						return false;
+					}
+				}, "json");
+			}
+           
+			</script>
+			{else}
+            
+            <form name="alipayment" action="plugin.php" method="get"  id="alipayment">
+            <input type="hidden" name="id" value="keke_group:payapi" >
+            <input type="hidden" name="formhash" value="{FORMHASH}" >
+            <ul class="chargebox guclearfix" >
+               
+            {loop $gorupdata $key $val}
+            <div class="service-list mr_35 {if $key==0}actives{/if}"  data-money="{$val['money']}" data-time="{$val['time']}" data-buygroupid="{$val['id']}">
+                <em><img src="{$val['ico']}" alt=""></em>
+                <div class="kekecent">
+                <b>{$val['groupname']}</b>
+                <p class="ms">&yen;{$val['money']}{lang keke_group:langt22} / {lang keke_group:langt06} {$val['time']}{lang keke_group:langt23}</p>
+                </div>
+               	<div class="quanxian" style="display:none">{loop $val[tequan] $tq}<span class="keketq">{$tq}</span>{/loop}</div>
+           </div>
+           {/loop}
+           
+           <input type="hidden" name="buygroupid" id="buygroupid" value="{$gorupdata[0]['id']}" >
+          
+          
+              <div class="boxs">
+              	
+                	<div class="gurow charge-source guclearfix" style=" border-bottom:1px dashed #eee; ">
+                		<div class="subboxs">
+                            <div class="label hg"> {lang keke_group:langt25}</div>
+                            <div class="czcontents line-height50">
+                               <div class="quanxian" id="viewtq">
+                                   {loop $gorupdata[0][tequan] $tq}<span class="keketq">{$tq}</span>{/loop}
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+               		<div class="gurow charge-source guclearfix" style=" border-bottom:1px dashed #eee; ">
+                
+                		<div class="subboxs">
+                            <div class="label jine"> {lang keke_group:langt26}</div>
+                            <div class="czcontent line-height50">
+                                <span id="countNum">{$gorupdata[0][money]}</span>
+                                {lang keke_group:langt22} <b class="kkccc">/</b> {lang keke_group:langt06} <span id="validity">$gorupdata[0][time]</span>{lang keke_group:langt23}
+                            </div>
+                        </div>
+                    </div>
+              		<div class="gurow charge-source guclearfix" style=" border-bottom:1px dashed #eee">
+                        <div class="label zffs">
+                            {lang keke_group:langt27}
+                        </div>
+                        <div class="czcontent">
+                            <ul id="charge-source-list" class="charge-source-list clearfix" style="margin-bottom:15px;">
+                            	{if $alipayoff}
+                                <li class="item alipay active" source="1">
+                                    <a href="javascript:void(0);">
+                                        <img src="source/plugin/keke_group/template/images/pay_02.jpg">
+                                    </a>
+                                </li>
+                                {/if}{if $wxpayoff}
+                                <li class="item weixin" source="2">
+                                    <a href="javascript:void(0);">
+                                        <img src="source/plugin/keke_group/template/images/pay_01.jpg">
+                                    </a>
+                                </li>
+                                {/if}{if !$alipayoff && !$wxpayoff}
+                                <div class="remind">
+                                    {lang keke_group:langt15}
+                                </div>
+                                {/if}
+                               
+                            </ul>
+                            <div id="ewm"></div>
+                        </div>
+                        <input type="hidden" name="zftype" id="zftype" {if $alipayoff}value="1"{elseif $wxpayoff}value="2"{/if}>
+                    </div>
+                    <div class="gurow charge-submit guclearfix">
+                        <div class="czcontent">
+                            <a class="btns btn-submit" id="Submit" href="javascript:;">{lang keke_group:langt16}</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="czsmbox">
+                    	<div class="czsm">{$keke_group['sm']}</div>
+                    </div>
+              </div>
+            </ul>
+            
+            </form>
+            <script>
+            jQuery(function() {
+					jQuery(".service-list").on("click", function() {
+							var that=jQuery(this);
+                            that.siblings().removeClass("actives");
+                            that.addClass("actives");
+							var money=that.attr("data-money"),
+							validity=that.attr("data-time"),
+							buygroupid=that.attr("data-buygroupid"),
+							tqs=that.children(".quanxian").html();
+							jQuery("#countNum").html(money);
+							jQuery("#validity").html(validity);
+							jQuery("#buygroupid").val(buygroupid);
+							jQuery("#viewtq").html(tqs);
+							
+                               
+                        });
+						
+					jQuery("#charge-source-list li").on("click", function() {
+                            jQuery(this).siblings().removeClass("active");
+                            jQuery(this).addClass("active");
+                               
+                                var source=jQuery(this).attr("source");
+                                if(source==1){
+                                    jQuery("#ewm").css("height","0px").hide().html('');
+									jQuery("#Submit").html('{lang keke_group:langt16}');
+									
+                                }else{
+                                    jQuery("#ewm").show();
+                                }
+                                jQuery("#zftype").attr("value",source);
+                                cost.html(money);
+                        });		
+						
+					jQuery("#Submit").on("click", function() {
+						if(jQuery("#ewm").html()!=''){
+							return false;
+						}
+						var uids='{$_G[uid]}';
+						if(uids<1){
+							warning('{lang keke_group:langt37}',2);
+							 setTimeout(function() {window.location.href='member.php?mod=logging&action=login';}, 4000);
+							return false;
+						}
+						
+                        var zftype=jQuery('#zftype').val();
+                        if(!zftype){
+                            return false;
+                        }
+                        
+                        if(zftype==1){
+                            jQuery('#alipayment').submit();
+                        }else{
+							jQuery('#ewm').css("height","258px").html('<img src="source/plugin/keke_group/template/images/loading.gif" />');
+                            jQuery.get('{$_G[siteurl]}plugin.php?id=keke_group:payapi', {
+                                 zftype:zftype,buygroupid:jQuery("#buygroupid").val()
+                            },function (data){
+                                if(data.err){
+									jQuery('#ewm').css("height","0px").hide();
+                                    warning(data.err,2);
+                                }else if(data.ewmurl){
+                                    jQuery('#ewm').html(data.ewmurl);
+									var orderid=data.orderid;
+									setInterval(function(){
+										jQuery.get('{$_G[siteurl]}plugin.php?id=keke_group:checkorder', {orderid:orderid},function (datas){
+											if(datas.state==1){window.location.href = 'plugin.php?id=keke_group&p=my&orderid='+orderid;return false;}else{return false;}
+										}, "json");
+									},2000); 
+									jQuery("#Submit").html('{lang keke_group:langt28}');
+                                }
+                            }, "json");
+                        }
+                        });
+			});
+			</script>
+         {/if}
+         <script>
+            function warning(text,type){
+				var ico='ld.gif';
+                if(type==1){
+                    ico='ok.png';
+                }else if(type==2){
+                    ico='no.png';
+                }
+				text='<img src="source/plugin/keke_group/template/images/'+ico+'"><br>'+text;
+                jQuery('.keke_warning').show().html(text);
+                if(type!=3){
+                    setTimeout(function() {jQuery('.keke_warning').fadeOut();}, 3000);
+                }
+            }
+			</script>
+        </div>
+</div>
+    
+    
+<!--{template common/footer}-->

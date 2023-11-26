@@ -1,0 +1,24 @@
+body{background:url(images/bg.jpg) no-repeat fixed center 0 #f4e4ef;}
+.top_control{background:url(images/btn_top_control.gif) no-repeat; display:block; height:36px; width:36px; cursor:pointer;}
+.topNav .user .info a.nickname {color: #ffffff;font-weight: bold;}
+.nav .spaceInfo .box .viewNum {color: #000000;}
+.nav ul li a {color: #ffffff;}
+.nav ul li a:visited{color:#ffffff;}
+.nav ul li a:hover{ color:#ffffff; text-decoration:none;}
+.spaceBottom .sB_content {color: #333;}
+.spaceUserInfo .info_list li span {color: #e10000;font-weight: 600;}
+#indexm .mindex, #feedm .mfeed, #miniblogm .mminiblog, #dancem .mdance, #favoritesm .mfavorites, #lastlistenm .mlastlisten, #albumnm .malbum, #followingm .mfollowing,#fansm .mfans, #wallm .mwall  , #skinm .mskin, #danceDownm .mdanceDown{background: url("images/spacesNav.png") no-repeat scroll 100% -100px;_background: url("images/spacesNav.gif") no-repeat scroll 100% -100px;}
+#indexm .mindex span, #feedm .mfeed span, #miniblogm .mminiblog span, #dancem .mdance span, #favoritesm .mfavorites span, #lastlistenm .mlastlisten span, #albumnm .malbum span, #followingm .mfollowing span, #followingm .mfollowing span, #fansm .mfans span, #wallm .mwall span , #skinm .mskin span , #danceDownm .mdanceDown span , #danceDownm .mdanceDown span {background: url("images/spacesNav.png") no-repeat scroll 0 -100px;_background: url("images/spacesNav.gif") no-repeat scroll 0 -100px;}
+.spaceMain .mainTop {background: url("images/spaceMain.png") no-repeat;_background: url("images/spaceMain.gif") no-repeat;display: inline;float: left;font-size: 0;height: 10px;width: 960px;}
+.spaceMain .mainCenter{background:url("images/spaceMain_bg.png");display:inline;float:left;height:auto !important;min-height:500px;height:500px;overflow:visible;width: 959px;}
+.spaceMain .mainBottom {background: url("images/spaceMain.png") no-repeat scroll 0 -10px;_background: url("images/spaceMain.gif") no-repeat scroll 0 -10px;}
+.nav ul li {background: url("images/spacesNav.png") no-repeat scroll 100% 0;_background: url("images/spacesNav.gif") no-repeat scroll 100% 0;}
+.nav ul li span {background: url("images/spacesNav.png") no-repeat;_background: url("images/spacesNav.gif") no-repeat;}
+.spaceUserInfo .info_list li {border-right: 1px dotted #666666;}
+.publicRight .nickname span.vip {color: #FFEFF4;}
+.actions {border-bottom: 1px solid #cdcdcd;}
+.sFriendTitle {border-top: 1px solid #fec2d6;}
+.sFriendTitle span {color: #666666;}
+.SA em{color: #fec2d6;z-index: 99;}
+.SA span {color: #ffe5ee;left: 0;top: 1px;z-index: 999;}
+.middle{background-color: #ffe5ee;border: 1px solid #fec2d6;padding:8px;}

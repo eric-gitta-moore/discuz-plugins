@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Threadtypes]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2017-01-18 06:53]]></item>
+	<item id="From"><![CDATA[Ñ¶»ÃÍøwww.xhkj5.com]]></item>
+	<item id="Data">
+		<item id="0">
+			<item id="optionid"><![CDATA[7]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[1]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[Ãû³Æ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hymc]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[1]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÂ¼ÈëÃû³Æ]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[20]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="1">
+			<item id="optionid"><![CDATA[8]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[2]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[Í¼±ê]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hytb]]></item>
+			<item id="type"><![CDATA[image]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="2">
+			<item id="optionid"><![CDATA[9]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[3]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[·ÖÀà]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hyfl]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = Éú»î·þÎñ
+2 = Î¬ÐÞ×°ÐÞ
+3 = ÂÃÓÎ×¡ËÞ
+4 = ½ÌÓýÅàÑµ
+5 = »éÇì·þÎñ
+6 = °ì¹«ÉÌÎñ
+7 = ×â³µ´ú¼Ý]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="3">
+			<item id="optionid"><![CDATA[10]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[4]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[µç»°]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hydh]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[1]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈë1¸öµç»°ºÅÂë]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="4">
+			<item id="optionid"><![CDATA[11]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[6]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÇøÓò]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hyqy]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = ³¯ÑôÇø
+2 = º£µíÇø
+3 = ·áÌ¨Çø
+4 = Î÷³ÇÇø
+5 = Í¨ÖÝÇø
+6 = ¶«³ÇÇø
+7 = ²ýÆ½Çø
+8 = ÐûÎäÇø
+9 = ³çÎÄÇø]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="5">
+			<item id="optionid"><![CDATA[12]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[7]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[µØÖ·]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hydz]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëµØÖ·]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="6">
+			<item id="optionid"><![CDATA[13]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[9]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[¹ØÓÚÎÒÃÇ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hygywm]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="7">
+			<item id="optionid"><![CDATA[14]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[10]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[·þÎñÏîÄ¿]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hyfwxm]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="8">
+			<item id="optionid"><![CDATA[15]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[5]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÓÊÏä]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hyyx]]></item>
+			<item id="type"><![CDATA[email]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[N;]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÓÊÏä]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="9">
+			<item id="optionid"><![CDATA[16]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[8]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÍÆ¼öÖ¸Êý]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hyzs]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÍÆ¼öÖ¸Êý]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[100]]></item>
+				<item id="minnum"><![CDATA[1]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="10">
+			<item id="optionid"><![CDATA[17]]></item>
+			<item id="classid"><![CDATA[1]]></item>
+			<item id="displayorder"><![CDATA[11]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÍÆ¼öÑÕÉ«]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[hytjys]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[±¾µØ114]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5-bbsnr .authi,.n5_nrnrxz,.n5_nrqsf,.n5_qjywys,.n5_ztdsys,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display:none;} {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+</style>
+
+<div class="n5_hynrdb cl">
+    <dl>
+	    <dt><img src="{hytb_value}"></dt>
+		<dd>
+		    <h3>{hymc_value}</h3>
+			<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+			<p>{hyfl} : {hyfl_value}</p>
+		</dd>
+	</dl>
+</div>
+<div class="n5_hynrkb cl">
+    <div class="nrkbxx cl">
+	    <h4>{hymc_value}</h4>
+		<p>{hydh_value}</p>
+    </div>
+	<div class="phone"><a href="tel:{hydh_value}">{hydh_value}</a></div>
+	<div class="dianping"><a onClick="nryhf()"></a></div>
+	<div class="fenxiang"><a class="n5_nrdbfh" onClick="nrywfx()"></a></div>
+</div>
+<div class="n5_hynrjg cl"></div>
+<div class="n5_hynrxx cl">
+<dl class="n5_hylxdhpb"><dt>{hydh}</dt><dd>{hydh_value}</dd></dl>
+    <dl><dt>{hyyx}</dt><dd>{hyyx_value}</dd></dl>
+	<dl><dt>{hydz}</dt><dd>{hyqy_value}-{hydz_value}</dd></dl>
+</div>
+<div class="n5_hynrjg cl"></div>
+<script src="template/zhikai_n5app/fenlei/TouchSlide.1.1.js"></script>
+<div id="n5_hynrqh" class="n5_hynrqh cl">
+    <div class="hd">
+	    <ul>
+			<li><a>{hygywm}</a></li>
+			<li><a>{hyfwxm}</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+	    <ul>
+		{hygywm_value}
+		</ul>
+		<ul>
+		{hyfwxm_value}
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#n5_hynrqh" });</script>
+<div class="n5_hynrjg cl" style="margin-bottom: 20px;"></div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_hyztys cl">
+    <ul>
+    [loop]
+	    <li>
+		    <a href="{subject_url}">
+			    <div class="hypic cl"><img src="{hytb_value}"></div>
+				<div class="hyjtxx cl">
+					<h3><i>[{hyfl_value}]</i>{hymc_value}{modcheck}</h3>
+					<p class="n5_kdtjx"><i class="n5_kdtjs" style="width:{hyzs_value}%"></i></p>
+					<p>{hydz}:{hyqy_value}-{hydz_value}</p>
+				</div>
+			</a>
+			<a href="tel:{hydh_value}" class="hytel">{hydh_value}</a>
+		</li>
+    [/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[<ul class="bmdhwz cl">
+[loop]
+<li style="background-color:{hytjys_value}"><a href="{subject_url}" target="_blank">{hymc_value}<p class="bmtel">{hydh_value}</p></a></li>
+[/loop]
+<ul>]]></item>
+			<item id="sortid"><![CDATA[1]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[0]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÑÕÉ«´úÂëÈç:#ffffff]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

@@ -1,0 +1,299 @@
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+        <title>{$title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <style>
+		body,div,ul,li,h1,h2,h3,h4,h5,h6,p,form,input,textarea,select,label,aside,footer,header,menu,nav,dl,dt,dd,article,section{margin:0;padding:0;border:none}
+		body{font-family:Helvetica;line-height:1;font-family:Microsoft YaHei,Helvetica,sans-serif; font-size:14px}
+		ol,ul{list-style:none}
+		textarea{resize:none}
+		button,input,select,textarea{outline:0;font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif}
+		button,input[type=button]{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+		input[type=number]::-webkit-outer-spin-button{display:none}
+		input[type=number]::-webkit-inner-spin-button{display:none}
+		a{ text-decoration:none;  color:#FFF}
+		input[type=radio] { -webkit-appearance: radio;}
+		img, input, textarea {vertical-align: middle;}
+		
+		.header{ background:{$ys};padding: 16px 0 12px;color: #fff; position:relative; text-align:center}
+		.prove {position: absolute;top: 5px;left: 0;}
+		a.back {position: absolute;height: 30px;width: 30px;left: 0;top: 0;background: url(source/plugin/keke_chongzhi/template/images/back.png) center center no-repeat;background-size: 10px auto;}
+		.myrec{ position:absolute; right:10px; top:5px;}
+		.myrec a{ border:1px solid #fce8e8; display:block; padding:3px 5px; margin-top:7px; color:#fce8e8; border-radius:5px; font-size:13px}
+		.fix{*zoom:1;}
+		.fix:after{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+		.header span.uhead{ position:relative;height:51px; display:block; width:51px; margin:0 auto}
+		.header span.uhead b {display: inline-block;border-radius: 55px;overflow: auto;z-index: 1;border: 2px solid #f9dada;background-color: #f1f1f1;}
+		.header span.uhead b img {width: 51px;height: 51px;border-radius: 50%;vertical-align: middle;position:relative}
+		.header span.uhead img.hi {position: absolute;right: -10px;top: 0;width: 16px;z-index: 999;}
+		.header a.usnmae {display: block;line-height: 37px; font-size:17px; color:#FFF;}
+		.flexBox{box-sizing: border-box; margin:10px 0;}
+		.header nav ul li:not(:last-child) {border-right: 1px solid #e76a6b;}
+		.header nav ul li { width: 50%;display: block; float:left; box-sizing:border-box; line-height:20px;}
+		.header nav ul li p{ font-size:13px}
+		.mylist nav ul{ padding:10px}
+		.mylist nav ul li{ width:100%;  line-height:20px; margin:0px auto; padding:10px 0px;  border-bottom:1px solid #EEE}
+		.mylist nav ul li .pup{ font-size:16px;}
+		.mylist nav ul li .dow{ font-size:12px; color:#999}
+		.mylist nav ul li span{ float:right}
+		.mylist .pg{ float:left; margin:10px 5px;}
+		.mylist .pg label{ display:none}
+		.mylist .pg a,.mylist .pg strong{ color:#333;  display:block; border:1px solid #e14546; padding:3px 6px; border-radius:3px; float:left; margin:0px 5px;}
+		.mylist .pg strong{ color:#FFF; background:#e14546}
+		.moneylist nav ul li:nth-child(3n-1),.moneylist nav ul li:nth-child(3n-2){border-right: 1px solid #f4f4f4;}
+		.moneylist nav ul li {box-sizing: border-box;float: left;width: 33.33%;text-align: center;font-size: 12px;height: 83px;
+background-color: #fff;padding: 10px 0;border-bottom: 1px solid #f4f4f4;}
+		.moneylist li a {display: block;color: #666;}
+		.moneylist nav ul li h4 {font-size: 13px;}
+		.moneylist nav ul li span{ font-size:16px; display:block; margin-top:15px; margin-bottom:10px;}
+		.moneylist nav ul li.on{  background: url(source/plugin/keke_chongzhi/template/images/jb.png) right bottom no-repeat; border-radius:0px;color:#e14546}
+		.moneylist nav ul li.on a{ color:#fe7c6e}
+		.moneylist nav ul li.zdy{ width:100%; line-height:59px; font-size:18px; border-bottom:10px solid #f4f4f4;}
+		.moneylist nav ul li .recharge{ text-align:left; padding:0px 20px;}
+		.moneylist nav ul li .recharge input {font-size: 16px;text-align: left;height: 20px; vertical-align: 2px;margin-left: 20px;-webkit-tap-highlight-color: rgba(0,0,0,0);border: none;outline: none;-webkit-appearance: none;}
+		.moneylist nav ul li .recharge b{ color:#CCC; font-weight:500; margin:0px 10px}
+		.pay-menu { position: relative; float:left; width:100%; margin-bottom:10px; border-bottom:1px solid #f4f4f4; padding-bottom:10px}
+		.pays {padding: 20px 14px 0 20px;}
+		.pay-menu input[type="radio"] {opacity: 0;position: absolute;width: 20px;height: 20px;top: 50%;right: 0;margin-top: -8px;z-index: 9;}
+		.pay-menu .flol {margin-right: 22px;float: left;}
+		.pay-menu .flol img {width: 44px;height: 44px;}
+		.pay-menu .info p {color: #0c0d0e;font-size: 16px;line-height: 20px;}
+		.pay-menu .info span {display: block;font-size: 12px;color: #b3b6be;line-height: 20px;padding-top: 4px;}
+		.pay-menu input[type="radio"]:checked + label i {background-position: -16px 0;}
+		.pay-menu i {position: absolute;display: block;width: 16px;height: 16px;top: 50%;right: 0;margin-top: -8px;background: url(source/plugin/keke_chongzhi/template/images/icon-iptr.png) 0 0 no-repeat;background-size: 32px auto;}
+		
+		.mm-btn a {display: block;height: 36px;line-height: 36px;max-width: 90%;margin: 15px auto 0;text-align: center;border-radius: 3px;background-color: #df3031;color: #fff;font-size: 14px;}
+		.mm-btn{ margin-bottom:50px}
+		.pays #ewm{ width:250px; margin:0 auto}
+		.remind{ line-height:40px; text-align:center; color:#999}
+		
+		
+		.creditselect{ width:100%; float:left; border-bottom:10px solid #f4f4f4; padding:20px 15px; box-sizing:border-box}
+		.credittype{ position:relative;float:left; padding-left:20px; }
+		.credittype input[type="radio"] {opacity: 0;width: 40px;height: 40px;z-index: 9; position:absolute; left:0px; margin:0px;}	
+		.credittype input[type="radio"]:checked + label i {background-position: -16px 0;}
+		.credittype label{float:left; margin-right:15px;}
+		.credittype i{display: block;width: 16px;height: 16px; margin-right:5px;background: url(source/plugin/keke_chongzhi/template/images/icon-iptr.png) 0 0 no-repeat;background-size: 32px auto;position:absolute; left:0px;}
+		.cztitles{ float:left; margin-right:15px;}
+		.rsta{float:right; display:block; width:15px; height:17px; background:url(source/plugin/keke_chongzhi/template/images/rsta.png) no-repeat; background-size:15px auto}
+        </style>
+        
+	</head>
+<body>
+ <form name="alipayment" action="plugin.php" method="get"  id="alipayment">
+        <input type="hidden" name="id" value="keke_chongzhi:payapi" >
+        <input type="hidden" name="formhash" value="{FORMHASH}" >
+<div class="header fix">
+    <a href="/user.d?m=chat&amp;city=nn" class="chat" id="wapmysf_B01_05">
+        <span class="replay-ico active"></span>
+    </a>
+    <span class="prove">
+        <a href="javascript:history.back(-1);" class="back"></a>
+    </span>
+    <span class="myrec">
+   		{if $_GET['p']==my}<a href="plugin.php?id=keke_chongzhi">{lang keke_chongzhi:langt01}</a>{else}<a href="plugin.php?id=keke_chongzhi&p=my">{lang keke_chongzhi:langt02}</a>{/if}
+    </span>
+    <span class="uhead">
+        <a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#119;&#119;&#119;&#46;&#109;&#111;&#113;&#117;&#56;&#46;&#99;&#111;&#109;">
+            <b class="relative">
+                <img class="head" src="uc_server/avatar.php?uid={$_G['uid']}&size=small">
+            </b>
+            <img class="hi" src="source/plugin/keke_chongzhi/template/images/hi.png">
+        </a>
+    </span>
+    
+    <a href="javascript:;" class="usnmae">{$_G['username']}</a>
+    <nav>
+        <ul class="flexBox">
+            <li><a href="plugin.php?id=keke_chongzhi"><span>{lang keke_chongzhi:langt03}(<span class="creditnames">{$firstcreditname}</span>)</span><p class="nowcredit">{$firstnowcredit}</p></a></li>
+            <li><a href="plugin.php?id=keke_chongzhi&p=my"><span>{lang keke_chongzhi:langt05}</span><p>{$allmoney}</p></a></li>
+        </ul>
+    </nav>
+</div>
+{if $_GET['p']==my}
+<section class="mylist fix">
+	<nav>
+    	<ul>
+        	{$list}
+		</ul>
+        {$multipage}
+    </nav>
+</section>
+{else}
+<section class="moneylist fix">
+	<nav {if !$n || $n==1}style="display:none"{/if}>
+        <div class="creditselect fix">
+            <div class="rsta"></div><span class="cztitles">{lang keke_chongzhi:langt31}</span>{$credittype}
+        </div>
+    </nav>
+	<nav>
+    	<ul>
+        	{$preval}
+          <li class="zdy">
+            	<div id="zjdtis">{lang keke_chongzhi:langt06}</div>
+            	<div class="recharge" id="recharge" style="display:none"> {lang keke_chongzhi:langt07}<input type="number" placeholder="{lang keke_chongzhi:langt08}{$bl}{$firstcreditname}" name="moneyQuantity" id="moneyQuantity" value="{$preset[0]}"><span style="margin:0px; float:right">{lang keke_chongzhi:langt09}</span></div>
+           </li>
+		</ul>
+	</nav>
+</section>
+
+<section class="pays fix">
+	{if $alipayoff && $zfbonwx}
+	<div class="pay-menu">
+    	<input type="radio" name="zftype" value="1" {if !$iswx}checked="true"{/if} id="zftype"><label>
+        <div class="flol">
+        	<img src="source/plugin/keke_chongzhi/template/images/pay_04.png">
+        </div>
+        <div class="info">
+        	<p>{lang keke_chongzhi:langt10}</p>
+            <span>{lang keke_chongzhi:langt11}</span>
+        </div>
+        <i></i>
+		</label>
+    </div>
+    {/if}
+    {if $wxpayoff}
+    <div class="pay-menu">
+    	<input type="radio" name="zftype" value="2" {if $iswx}checked="true"{/if} id="zftype"><label>
+        <div class="flol">
+        	<img src="source/plugin/keke_chongzhi/template/images/pay_05.png">
+        </div>
+        <div class="info">
+        	<p>{lang keke_chongzhi:langt12}</p>
+            <span>{lang keke_chongzhi:langt13}</span>
+        </div>
+        <i></i>
+		</label>
+    </div>
+    <div id="ewm"></div>
+ 	{/if}
+    {if !$alipayoff && !$wxpayoff}
+    <div class="remind">
+    	{lang keke_chongzhi:langt15}
+    </div>
+    {/if}
+</section>
+
+<div class="mm-btn" id="btn"><a href="javascript:void(0);" id="Submit">{lang keke_chongzhi:langt16}</a></div>
+</form>
+
+<script type="text/javascript" src="source/plugin/keke_chongzhi/js/jquery.js"></script>
+<script>jQuery.noConflict();</script>
+<script>
+jQuery(function() {
+	var zjdtis=jQuery("#zjdtis");
+	var recharge=jQuery("#recharge");
+	var moneyQuantity=jQuery("#moneyQuantity");
+	
+	
+	jQuery("input[name=credittype]").on("click", function() {
+		var credittype=jQuery('input:radio[name="credittype"]:checked').val();
+		var creditname=jQuery(this).attr("data-creditname");
+		var bili=jQuery(this).attr("data-bili");
+		var nowcredits=jQuery(this).attr("data-now");
+		jQuery('.nowcredit').html(nowcredits);
+		jQuery('.creditnames').html(creditname);
+		jQuery(".moneylist li").each(function() {
+			var money=jQuery(this).attr("money");
+			var text=(parseFloat(money)*bili) + creditname;
+			var nn=jQuery(this).hasClass("zdy");
+			if(nn){
+				jQuery("#moneyQuantity").attr("placeholder",'{lang keke_chongzhi:langt08}'+ bili + creditname);
+			}else{
+				jQuery(this).children('span').html(text);
+			}
+			
+		});
+	 });
+	
+	jQuery(".moneylist li").on("click", function() {
+				jQuery(this).siblings().removeClass("on");
+				jQuery(this).addClass("on");
+				var nn=jQuery(this).hasClass("zdy");
+				if(nn){
+					zjdtis.hide();
+					recharge.show();
+					moneyQuantity.attr("value","");
+				}else{
+					zjdtis.show();
+					recharge.hide();
+					var money=jQuery(this).attr("money");
+					moneyQuantity.attr("value",money);
+				};
+				
+			});
+				
+	jQuery("#Submit").on("click", function() {
+		
+			var zftype=jQuery('input:radio[name="zftype"]:checked').val();
+			if(!zftype){
+				return false;
+			}
+			if(parseFloat($keke_chongzhi['zuidi'])>jQuery("#moneyQuantity").val()){
+				alert('{lang keke_chongzhi:langt17}'+ parseFloat($keke_chongzhi['zuidi']) +'{lang keke_chongzhi:langt09}');
+				return false;
+			}
+			
+			var credittypea=jQuery('input:radio[name="credittype"]:checked').val();
+			if(!credittypea){
+				alert('{lang keke_chongzhi:langt32}');
+				return false;
+			}
+			
+			if(zftype==1){
+				jQuery('#alipayment').submit();
+			}else{
+				jQuery.get('{$_G[siteurl]}plugin.php?id=keke_chongzhi:payapi', {
+					 zftype:zftype,moneyQuantity:jQuery("#moneyQuantity").val(),credittype:credittypea
+				},function (data){
+					if(data.err){
+						alert(data.err);
+					}else if(data.ewmurl){
+						jQuery('#ewm').html(data.ewmurl);
+					}else{
+						callpay(data);
+					}
+				}, "json");
+			}	
+	
+			});
+			
+});
+	
+	//JS api 支付
+	function jsApiCall(appis)
+	{
+		WeixinJSBridge.invoke(
+			'getBrandWCPayRequest',
+			appis,
+			function(res){
+			/*	WeixinJSBridge.log(res.err_msg);
+				alert(res.err_code+res.err_desc+res.err_msg);*/
+				if(res.err_msg == 'get_brand_wcpay_request:ok'){
+					window.location.href = '{$returnurl}';
+				}
+			}
+		);
+	}
+
+	function callpay(appi)
+	{
+		if (typeof WeixinJSBridge == "undefined"){
+		    if( document.addEventListener ){
+		        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+		    }else if (document.attachEvent){
+		        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+		        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+		    }
+		}else{
+		    jsApiCall(appi);
+		}
+	}
+
+	
+</script>
+{/if}
+</body></html>

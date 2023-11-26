@@ -1,0 +1,125 @@
+<!--{block return}-->
+<script src="<!--{$_G['siteurl']}-->source/plugin/x520_loading/template/js/pace.min.js"></script>
+<link href="<!--{$_G['siteurl']}-->source/plugin/x520_loading/template/css/<!--{if $qinqin['x520_fg'] ==1}-->black<!--{elseif $qinqin['x520_fg'] ==2}-->blue<!--{elseif $qinqin['x520_fg'] ==3}-->green<!--{elseif $qinqin['x520_fg'] ==4}-->orange<!--{elseif $qinqin['x520_fg'] ==5}-->pink<!--{elseif $qinqin['x520_fg'] ==6}-->purple<!--{elseif $qinqin['x520_fg'] ==7}-->red<!--{elseif $qinqin['x520_fg'] ==8}-->silver<!--{elseif $qinqin['x520_fg'] ==9}-->white<!--{elseif $qinqin['x520_fg'] ==10}-->yellow<!--{/if}-->/<!--{if $qinqin['x520_theme'] ==1}-->pace-theme-minimal<!--{elseif $qinqin['x520_theme'] ==2}-->pace-theme-bounce<!--{elseif $qinqin['x520_theme'] ==3}-->pace-theme-center-simple<!--{elseif $qinqin['x520_theme'] ==4}-->pace-theme-corner-indicator<!--{elseif $qinqin['x520_theme'] ==5}-->pace-theme-big-counter<!--{elseif $qinqin['x520_theme'] ==6}-->pace-theme-fill-left<!--{elseif $qinqin['x520_theme'] ==7}-->pace-theme-barber-shop<!--{elseif $qinqin['x520_theme'] ==8}-->pace-theme-center-atom<!--{elseif $qinqin['x520_theme'] ==9}-->pace-theme-center-circle<!--{elseif $qinqin['x520_theme'] ==10}-->pace-theme-center-radar<!--{elseif $qinqin['x520_theme'] ==11}-->pace-theme-flash<!--{elseif $qinqin['x520_theme'] ==12}-->pace-theme-flat-top<!--{elseif $qinqin['x520_theme'] ==13}-->pace-theme-loading-bar<!--{elseif $qinqin['x520_theme'] ==14}-->pace-theme-mac-osx<!--{/if}-->.css" rel="stylesheet" />
+<!--{if $qinqin['x520_onoffs'] ==1}--><!--{if $qinqin['x520_theme'] ==1}-->
+<style type="text/css">
+.pace .pace-progress {
+	background: <!--{$qinqin['x520_fgs']}-->;
+	height: <!--{$qinqin['x520_size1']}-->px;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==2}-->
+<style type="text/css">
+.pace .pace-activity {
+	background: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==3}-->
+<style type="text/css">
+.pace { 
+	border: 1px solid <!--{$qinqin['x520_fgs']}-->;
+}
+.pace .pace-progress {
+	background: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==4}-->
+<style type="text/css">
+.pace .pace-activity {
+	background: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==5}-->
+<style type="text/css">
+.pace .pace-progress:after {
+	color: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==6}-->
+<style type="text/css">
+.pace .pace-progress {
+	background-color: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==7}-->
+<style type="text/css">
+.pace {
+	height: <!--{$qinqin['x520_size2']}-->px;
+}
+.pace .pace-progress {
+	background-color: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==8}-->
+<style type="text/css">
+.pace .pace-progress:before {
+	background: <!--{$qinqin['x520_fgs']}-->;
+}
+.pace .pace-activity {
+	border: 5px solid <!--{$qinqin['x520_fgs']}-->;
+}
+.pace .pace-activity:after {
+	border: 5px solid <!--{$qinqin['x520_fgs']}-->;
+}
+.pace .pace-activity:before {
+	border: 5px solid <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==9}-->
+<style type="text/css">
+.pace .pace-progress {
+	background: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==10}-->
+<style type="text/css">
+.pace .pace-activity {
+	border-color: <!--{$qinqin['x520_fgs']}--> transparent transparent;
+}
+.pace .pace-activity:before {
+	border-color: <!--{$qinqin['x520_fgs']}--> transparent transparent;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==11}-->
+<style type="text/css">
+.pace .pace-progress {
+	background: <!--{$qinqin['x520_fgs']}-->;
+	height: <!--{$qinqin['x520_size1']}-->px;
+}
+.pace .pace-progress-inner {
+	box-shadow: 0 0 10px <!--{$qinqin['x520_fgs']}-->, 0 0 5px <!--{$qinqin['x520_fgs']}-->;
+}
+.pace .pace-activity {
+	border-top-color: <!--{$qinqin['x520_fgs']}-->;
+	border-left-color: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==12}-->
+<style type="text/css">
+.pace .pace-progress {
+	height: <!--{$qinqin['x520_size3']}-->px;
+	background: <!--{$qinqin['x520_fgs']}-->;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==13}-->
+<style type="text/css">
+.pace .pace-progress {
+	background: <!--{$qinqin['x520_fgs']}-->;
+	color: <!--{$qinqin['x520_fgs']}-->;
+}
+.pace .pace-activity {
+	box-shadow: inset 0 0 0 2px <!--{$qinqin['x520_fgs']}-->, inset 0 0 0 7px #FFF;
+}
+</style>
+<!--{elseif $qinqin['x520_theme'] ==14}-->
+<style type="text/css">
+.pace {
+	height: <!--{$qinqin['x520_size2']}-->px;
+}
+.pace .pace-progress {
+	background-color: <!--{$qinqin['x520_fgs']}-->;
+	height: <!--{$qinqin['x520_size2']}-->px;
+}
+</style>
+<!--{/if}--><!--{/if}-->
+<!--{/block}-->

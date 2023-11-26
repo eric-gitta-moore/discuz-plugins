@@ -1,0 +1,48 @@
+<b>试卷</b>:  <a href='plugin.php?id=exam&paper=$exam[pid].html' target='_blank'>$exam[title]</a><br>
+<b>
+<!--{if $exam[type]==1}-->
+	[判断题]
+<!--{elseif $exam[type]==2}-->
+	[单选题]
+<!--{elseif $exam[type]==2}-->
+	[多选题]
+<!--{elseif $exam[type]==4}-->
+	[填空题]
+<!--{elseif $exam[type]==4}-->
+	[问答题]
+<!--{/if}-->
+
+$exam[subject]</b><br><br><br>
+
+<!--{if $paycheck===true}-->
+	<!--{if $exam[uid]==$_G[uid] || $_G['groupid']==1 || empty($config[groupuse]) || ($_G[groupid] && in_array($_G[groupid], $config[groupuse]))}-->
+		<!--{if $exam[image]}--><img align="absmiddle" src="$exam[image]" zoomfile="$exam[image]" file="$exam[image]" class="zoom" onclick="zoom(this, this.src, 0, 0, 0)" border=0 style="max-width:600px"><!--{/if}-->
+	<br><br>
+		<!--{if $exam[type]==1}-->
+				<br><b>参考答案</b>: <!--{if $exam[result]==1}--><img align="absmiddle" src="source/plugin/exam/image/right.gif" border=0><!--{elseif $exam[result]==2}--><img  align="absmiddle" src="source/plugin/exam/image/wrong.gif" border=0><!--{elseif $exam[result]==0}-->无<!--{/if}-->
+		<!--{elseif ($exam[type]==2 || $exam[type]==3)}-->
+				<!--{loop $exam[data] $o}-->
+					{eval $c = chr(65+$i++);}
+					$c. $o <br>
+				<!--{/loop}-->
+				<br><b>参考答案</b>: $exam[result]
+		<!--{else}-->
+				<br><b>参考答案</b>: 
+				$exam[data]
+		<!--{/if}-->
+
+
+		<!--{if trim($exam[note])}-->
+		<br><br><br><b>本题解释</b>:<br> $exam[note]
+		<!--{/if}-->
+	<!--{else}-->
+		<div class="locked"><em>你没有权限查看更多信息! <!--{if !$_G[uid]}--><a href="member.php?mod=logging&action=login&referer=forum.php?mod=viewthread%26tid=$exam[tid]">登陆</a><!--{/if}-->	</em></div>
+	<!--{/if}-->	
+<!--{else}-->
+	<div class="locked"><em>您无权查看完整选项和答案! <!--{if $paper[price]>0}-->该试题属于付费试卷,   <a href="plugin.php?id=exam&paper=$exam[pid].html" target="_blank" title="">马上去购买...</a><!--{/if}--> </em></div>
+<!--{/if}-->
+
+
+
+
+

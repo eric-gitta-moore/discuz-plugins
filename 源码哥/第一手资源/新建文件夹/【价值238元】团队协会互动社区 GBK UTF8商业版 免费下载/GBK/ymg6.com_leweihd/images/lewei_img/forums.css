@@ -1,0 +1,117 @@
+.fa_fav {
+	font-weight: 500;
+	font-size: 12px;
+	background: none;
+	padding: 0 2px;
+	margin-left: 20px;
+}
+.lewei_h2 {
+	padding: 3px 6px;
+	margin: 10px 0 0 5px;
+	border-bottom: 2px solid #3DA3Bf;
+	font-size: 18px;
+	font-weight: 500;
+}
+.lewei_title1 h2 {
+	position: relative;
+	margin: 0 0 5px 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+}
+.lewei_mr_bbslist .lewei_hot1 .lewei_aks1 {
+	line-height: 19px;
+	height: auto;
+	color: #212121;
+	overflow: hidden;
+	float: left;
+	width: 138px;
+}
+.bml .bm_h {
+	padding-top: 0px;
+	border: none;
+	background: transparent;
+}
+
+.lewei_kz a {
+	float: left;
+	margin-left: 0;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	-moz-border-radius: 3px;
+	background: none;
+	-webkit-border-radius: 3px;
+	line-height: 20px;
+	padding: 2px 5px;
+	border-radius: 3px;
+	font-weight: 500;
+	font-size: 12px;
+	display: block;
+}
+.lewei_rm .bm_h {
+	background: #fff;
+	border-top: none;
+}
+.lewei_bbsimg {
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.lewei_o {
+	width: 15px;
+	position: absolute;
+	top: -5px;
+	right: -8px;
+}
+.lewei_bighd1 {
+	margin-bottom: 10px;
+}
+
+.lewei_ip {
+	margin-left: 315px;
+	background-color: #F1F1F1;
+	padding: 10px 15px 36px;
+	border-left: 2px solid #0085AB;
+}
+.lewei_ip dl dt {
+	float: left;
+	padding: 2px 0;
+	width: 90px;
+	color: #0085AB;
+	font-size: 15px;
+}
+.lewei_spg a img {
+	min-height: 220px;
+	max-width: 300px;
+}
+.lewei_ip .pn {
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 0;
+    height: 25px;
+    border: 1px solid #2A97B5;
+    background: #2595B5;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 3px;
+    border-bottom: 3px solid #1B6B82;
+    box-shadow: inset 0px 0px 3px #019CC6;
+    *width:70px;
+}
+.lewei_zsw {
+	color: #FF1B29;
+	font-weight: 600
+}
+.pls {
+  background: #FAFAFA;
+}
+.tl .th {
+    margin-top: 1px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ECECEC;
+    background: #FFFFFF;
+}

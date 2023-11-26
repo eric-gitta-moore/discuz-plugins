@@ -1,0 +1,21 @@
+在数据调用页面的模块分类处选择【静态模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-图标导航
+
+数据来源：自定义HTML
+
+HTML代码：
+
+<div class="n5jj_fldh cl" style="margin:0">
+	<ul class="cl">
+		<li><a href="#"><img src="template/zhikai_n5app/images/fldh_lp.png"><p>车辆买卖</p></a></li>
+		<li><a href="#"><img src="template/zhikai_n5app/images/fldh_cl.png"><p>本地114</p></a></li>
+		<li><a href="#"><img src="template/zhikai_n5app/images/fldh_hy.png"><p>拼车出行</p></a></li>
+		<li><a href="#"><img src="template/zhikai_n5app/images/fldh_hd.png"><p>同城交友</p></a></li>
+	</ul>
+</div>
+
+
+选择确定，这个模块添加完成。

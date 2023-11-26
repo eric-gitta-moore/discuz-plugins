@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin Validator]]></item>
+	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Data">
+		<item id="0"><![CDATA[source/plugin/sanree_brand_forumname/check.php]]></item>
+		<item id="1"><![CDATA[source/plugin/sanree_brand_forumname/discuz_plugin_sanree_brand_forumname_SC_GBK.xml]]></item>
+		<item id="2"><![CDATA[source/plugin/sanree_brand_forumname/discuz_plugin_sanree_brand_forumname_SC_UTF8.xml]]></item>
+		<item id="3"><![CDATA[source/plugin/sanree_brand_forumname/discuz_plugin_sanree_brand_forumname_TC_BIG5.xml]]></item>
+		<item id="4"><![CDATA[source/plugin/sanree_brand_forumname/discuz_plugin_sanree_brand_forumname_TC_UTF8.xml]]></item>
+		<item id="5"><![CDATA[source/plugin/sanree_brand_forumname/function/function_core.php]]></item>
+		<item id="6"><![CDATA[source/plugin/sanree_brand_forumname/function/index.htm]]></item>
+		<item id="7"><![CDATA[source/plugin/sanree_brand_forumname/hook/index.htm]]></item>
+		<item id="8"><![CDATA[source/plugin/sanree_brand_forumname/hook/index.php]]></item>
+		<item id="9"><![CDATA[source/plugin/sanree_brand_forumname/hook/X2.5/hook.class.php]]></item>
+		<item id="10"><![CDATA[source/plugin/sanree_brand_forumname/hook/X2.5/index.htm]]></item>
+		<item id="11"><![CDATA[source/plugin/sanree_brand_forumname/hook.class.php]]></item>
+		<item id="12"><![CDATA[source/plugin/sanree_brand_forumname/index.htm]]></item>
+		<item id="13"><![CDATA[source/plugin/sanree_brand_forumname/install.php]]></item>
+		<item id="14"><![CDATA[source/plugin/sanree_brand_forumname/template/images/brand.gif]]></item>
+		<item id="15"><![CDATA[source/plugin/sanree_brand_forumname/template/images/index.htm]]></item>
+		<item id="16"><![CDATA[source/plugin/sanree_brand_forumname/template/index.htm]]></item>
+		<item id="17"><![CDATA[source/plugin/sanree_brand_forumname/template/js/index.htm]]></item>
+		<item id="18"><![CDATA[source/plugin/sanree_brand_forumname/template/js/sanree_brand_forumname.js]]></item>
+		<item id="19"><![CDATA[source/plugin/sanree_brand_forumname/template/sanree_brand_forumname.css]]></item>
+		<item id="20"><![CDATA[source/plugin/sanree_brand_forumname/template/viewthread_sidetop.htm]]></item>
+		<item id="21"><![CDATA[source/plugin/sanree_brand_forumname/uninstall.php]]></item>
+		<item id="22"><![CDATA[source/plugin/sanree_brand_forumname/validator.xml]]></item>
+	</item>
+</root>

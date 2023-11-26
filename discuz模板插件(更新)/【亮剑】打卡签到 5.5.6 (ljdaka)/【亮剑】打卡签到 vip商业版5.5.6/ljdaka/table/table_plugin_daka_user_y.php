@@ -1,0 +1,29 @@
+<?php
+
+/*
+ * CopyRight  : [www.moqu8.com!] (C)2014-2015
+ * Document   : Ä§È¤°É£ºwww.moqu8.com
+ * Created on : 2015-01-17,21:45:40
+ * Author     : Ä§È¤°É(QQ£º10373458)  $
+ * Description: This is NOT a freeware, use is subject to license terms.
+ *              Ä§È¤°É³öÆ· ±ØÊô¾«Æ·¡£
+ *              Ä§È¤°ÉÔ´ÂëÂÛÌ³ È«ÍøÊ×·¢ http://www.moqu8.com£»
+ */
+if (!defined('IN_DISCUZ')) {
+    exit('Access Denied');
+}
+
+class table_plugin_daka_user_y extends discuz_table {
+
+    public function __construct() {
+
+        $this->_table = 'plugin_daka_user_y';
+        $this->_pk = 'uid';
+        parent::__construct();
+    }
+
+   
+
+}
+
+?>

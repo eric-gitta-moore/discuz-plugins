@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Threadtypes]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2017-01-18 06:54]]></item>
+	<item id="From"><![CDATA[Ñ¶»ÃÍøwww.xhkj5.com]]></item>
+	<item id="Data">
+		<item id="0">
+			<item id="optionid"><![CDATA[195]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[1]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[¸öÈËÕÕÆ¬]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jygrzp_28]]></item>
+			<item id="type"><![CDATA[image]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="1">
+			<item id="optionid"><![CDATA[196]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[2]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÐÕÃû/êÇ³Æ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jyxmnc_28]]></item>
+			<item id="type"><![CDATA[text]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[1]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÐÕÃû/êÇ³Æ]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxlength"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="profile"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="2">
+			<item id="optionid"><![CDATA[197]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[3]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÄêÁä]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jyyhnl_28]]></item>
+			<item id="type"><![CDATA[range]]></item>
+			<item id="unit"><![CDATA[Ëê]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÄêÁä]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="searchtxt"><![CDATA[18,20,25,30,35,40,50]]></item>
+			</item>
+		</item>
+		<item id="3">
+			<item id="optionid"><![CDATA[198]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[4]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÐÇ×ù]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jyxzng_28]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = °×Ñò×ù
+2 = ½ðÅ£×ù
+3 = Ë«×Ó×ù
+4 = ¾ÞÐ·×ù
+5 = Ê¨×Ó×ù
+6 = ´¦Å®×ù
+7 = Ìì³Ó×ù
+8 = ÌìÐ«×ù
+9 = ÉäÊÖ×ù
+10 = Ä¦ôÉ×ù
+11 = Ë®Æ¿×ù
+12 = Ë«Óã×ù]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="4">
+			<item id="optionid"><![CDATA[199]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[5]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[Éí¸ß]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jysgzs_28]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[CM]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÉí¸ßÊýÖµ]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="5">
+			<item id="optionid"><![CDATA[200]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[6]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ÌåÖØ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jytzsj_28]]></item>
+			<item id="type"><![CDATA[number]]></item>
+			<item id="unit"><![CDATA[KG]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[ÇëÊäÈëÌåÖØÊýÖµ]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="status"><![CDATA[0]]></item>
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="maxnum"><![CDATA[]]></item>
+				<item id="minnum"><![CDATA[]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+				<item id="defaultvalue"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="6">
+			<item id="optionid"><![CDATA[201]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[7]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[Ñ§Àú]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jyxlwb_28]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = ³õÖÐÒÔÏÂ
+2 = ¸ßÖÐ
+3 = ¼¼Ð£
+4 = ÖÐ×¨
+5 = ´ó×¨
+6 = ±¾¿Æ
+7 = Ë¶Ê¿
+8 = ²©Ê¿]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="7">
+			<item id="optionid"><![CDATA[202]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[8]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="title"><![CDATA[ËùÔÚÇøÓò]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jyszqy_28]]></item>
+			<item id="type"><![CDATA[select]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[2]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+			<item id="__protect">
+				<item id="usergroup"><![CDATA[]]></item>
+				<item id="verify"><![CDATA[]]></item>
+			</item>
+			<item id="__rules">
+				<item id="choices"><![CDATA[1 = ³¯ÑôÇø
+2 = º£µíÇø
+3 = ·áÌ¨Çø
+4 = Î÷³ÇÇø
+5 = Í¨ÖÝÇø
+6 = ¶«³ÇÇø
+7 = ²ýÆ½Çø
+8 = ÐûÎäÇø
+9 = ³çÎÄÇø]]></item>
+				<item id="inputsize"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="8">
+			<item id="optionid"><![CDATA[203]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[9]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[¶Ô×Ô¼ºµÄ½éÉÜ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jyzjjs_28]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+		<item id="9">
+			<item id="optionid"><![CDATA[204]]></item>
+			<item id="classid"><![CDATA[4]]></item>
+			<item id="displayorder"><![CDATA[10]]></item>
+			<item id="expiration"><![CDATA[0]]></item>
+			<item id="protect"><![CDATA[]]></item>
+			<item id="title"><![CDATA[¶ÔÎ´À´µÄTaËµ]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="identifier"><![CDATA[jywlts_28]]></item>
+			<item id="type"><![CDATA[textarea]]></item>
+			<item id="unit"><![CDATA[]]></item>
+			<item id="rules"><![CDATA[]]></item>
+			<item id="permprompt"><![CDATA[]]></item>
+			<item id="typeid"><![CDATA[12]]></item>
+			<item id="name"><![CDATA[ÕÒÅ®ÅóÓÑ]]></item>
+			<item id="icon"><![CDATA[]]></item>
+			<item id="special"><![CDATA[1]]></item>
+			<item id="modelid"><![CDATA[0]]></item>
+			<item id="template"><![CDATA[<style type="text/css">
+.n5-bbsnr {margin-bottom: 50px;}
+.n5_bbsnrbt,.n5_qjywys,.n5_jyxxyclz,.n5_nrnrxz,.n5sq_ztnr h2,.n5sq_ztnr .lzys_hyqy {display: none;}
+.n5-bbsnr .plc .pi .message a {color: #333;}
+.n5-bbsnr .plc .pi .message .n5_hynrqh .hd li.on a {color: #ff9933;}
+.n5-bbsnr .plc .pi .message img {margin-top:0;}
+</style>
+
+<div class="n5_fljyzt n5_fljyztn cl">
+	<div class="n5_fljytb cl">
+		<div class="n5_jytbtx cl"><img src="{jygrzp_28_value}"></div>
+	    <div class="n5_jytbxx cl"><h2>{jyxmnc_28_value}</h2><p><i>{jyyhnl_28_value}{jyyhnl_28_unit}</i><i>{jyxzng_28_value}</i><i>{jysgzs_28_value}{jysgzs_28_unit}</i><i>{jytzsj_28_value}{jytzsj_28_unit}</i><i>{jyxlwb_28_value}</i><i>{jyszqy_28_value}</i></p></div>
+	</div>
+</div>
+<div class="n5_fljyqt n5_fljyqtn cl">
+    <div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jyzjjs_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jyzjjs_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">{jywlts_28}</div>
+		</div>
+		<div class="xxxxnr cl">
+			{jywlts_28_value}
+		</div>
+	</div>
+	<div class="n5_flxxxx cl">
+		<div class="xxxxbt cl">
+			<div class="xxbtnr cl">¸ü¶àÐÅÏ¢</div>
+		</div>
+	</div>
+</div>]]></item>
+			<item id="stemplate"><![CDATA[<div class="n5_qzjllb cl">
+    <ul>
+[loop]
+	    <li>
+		    <div class="qzjllbtp"><a href="{subject_url}"><img src="{jygrzp_28_value}"></a></div>
+			<div class="qzjllbxx">
+			    <p class="lbxxdy"><a href="{subject_url}">{jyxmnc_28_value}</a>{modcheck}</p>
+				<p class="lbxxde">{jyyhnl_28_value}{jyyhnl_28_unit}<span class="pipe">|</span>{jyxzng_28_value}</p>
+				<p class="lbxxds">{jysgzs_28}: {jysgzs_28_value}{jysgzs_28_unit}<span class="pipe">|</span>{jytzsj_28}: {jytzsj_28_value}{jytzsj_28_unit}<span class="pipe">|</span>{jyxlwb_28}: {jyxlwb_28_value}</p>
+			</div>
+		</li>
+[/loop]
+    </ul>
+</div>]]></item>
+			<item id="ptemplate"><![CDATA[]]></item>
+			<item id="btemplate"><![CDATA[]]></item>
+			<item id="sortid"><![CDATA[12]]></item>
+			<item id="available"><![CDATA[1]]></item>
+			<item id="required"><![CDATA[1]]></item>
+			<item id="unchangeable"><![CDATA[0]]></item>
+			<item id="search"><![CDATA[0]]></item>
+			<item id="subjectshow"><![CDATA[1]]></item>
+			<item id="tpdescription"><![CDATA[]]></item>
+			<item id="ttdescription"><![CDATA[]]></item>
+			<item id="tpexpiration"><![CDATA[0]]></item>
+			<item id="ttexpiration"><![CDATA[0]]></item>
+		</item>
+	</item>
+</root>

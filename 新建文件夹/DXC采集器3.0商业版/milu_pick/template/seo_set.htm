@@ -1,0 +1,94 @@
+<!--{template milu_pick:pick_header}-->
+
+<form id="form12" name="form12" action="?{PICK_GO}seo&myac=seo_set" method="post"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+ 
+<table class="tb tb2 ">
+<tbody>
+<tr class="noborder" >
+  <td class="vtop rowform">{lang milu_pick:open_seo}</td>
+  <td class="vtop tips2" s="1">&nbsp;</td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+{echo radio_output(array('name' => 'open_seo', 'js' => array('show_hide(\'show_open_seo_mod\',\'\',1);', 'show_hide(\'show_open_seo_mod\',\'\',2);'),  'int_val' => 1, 'lang' => array('yes', 'no')), $info);}</td>
+  <td class="vtop tips2" s="1"><p>{lang milu_pick:show_open_seo_mod}</p>
+    </td>
+</tr>
+
+<tr class="noborder"  id="show_open_seo_mod" {if $info['open_seo'] == 2}style="display:none"{/if}>
+  <td class="vtop rowform"><input value="1" {if $info['open_seo_mod_show'][0]}checked="checked"{/if}  name="set[open_seo_mod][]" type="checkbox" id="open_seo_mod" />{lang milu_pick:protal}  <input {if $info['open_seo_mod_show'][1]}checked="checked"{/if}  name="set[open_seo_mod][]" type="checkbox" value="2" id="open_seo_mod2" />{lang milu_pick:bbs}  <input value="3"  {if $info['open_seo_mod_show'][2]}checked="checked"{/if} name="set[open_seo_mod][]" type="checkbox" id="open_seo_mod3" />{lang milu_pick:blog}</td>
+  <td class="vtop tips2" s="1"><p>{lang milu_pick:show_open_seo_mod_notice}</p></td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_title_header}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_title_header]" id="push_title_header" cols="50" class="tarea w_area" '..'="">{$info['push_title_header']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:push_title_footer_notice}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_title_footer}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_title_footer]" id="push_title_footer" cols="50" class="tarea w_area" '..'="">{$info['push_title_footer']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:push_title_footer_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_content_header}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_content_header]" id="push_content_header" cols="50" class="tarea w_area" '..'="">{$info['push_content_header']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_content_body}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_content_body]" id="push_content_body" cols="50" class="tarea w_area" '..'="">{$info['push_content_body']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_content_footer}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_content_footer]" id="push_content_footer" cols="50" class="tarea w_area" '..'="">{$info['push_content_footer']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_reply_header}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_reply_header]" id="push_reply_header" cols="50" class="tarea w_area" '..'="">{$info['push_reply_header']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_reply_body}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_reply_body]" id="push_reply_body" cols="50" class="tarea w_area" '..'="">{$info['push_reply_body']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_reply_footer}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_reply_footer]" id="push_reply_footer" cols="50" class="tarea w_area" '..'="">{$info['push_reply_footer']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+
+
+<tr  class="noborder"><td class="vtop rowform"><div class="fixsel">
+<button type="submit" value="1" name="submit" class="button">{lang milu_pick:submit}</button>
+</div></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<td colspan="15"></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

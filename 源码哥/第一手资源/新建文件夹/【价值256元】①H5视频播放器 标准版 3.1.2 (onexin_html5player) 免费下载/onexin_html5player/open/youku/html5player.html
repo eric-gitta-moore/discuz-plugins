@@ -1,0 +1,58 @@
+<html>
+<head>																
+<meta charset="utf-8" />
+<title>Youku Universal Player</title>
+<script>
+//Object.defineProperty(navigator,'platform',{get:function(){return 'Win32';}});
+if(navigator.userAgent.indexOf("Mac") > -1){
+	Object.defineProperty(navigator,'userAgent',{get:function(){return 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Mobile Safari/537.36';}});
+}
+</script>
+	<style>
+        html, body { height:100%; }
+        body { margin:0; padding:0;}
+		html { overflow-x:hidden; overflow-y:hidden;}
+    </style>
+</head>
+<body>
+<div id="youku-playerBox" style="width:100%;height:100%;"></div>
+<script id='_youkujs_' type="text/javascript"></script>
+<script type="text/javascript" src="//player.youku.com/iframeapi"></script>
+<script language="javascript">
+	var _QS = QS();
+
+
+        function getParams(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return decodeURIComponent(r[2]);
+            }
+            return null;
+        }
+        var _vid  = getParams('vid') || 0;
+
+	/*
+	var arr = window.location.pathname.split('/');
+	var _vid = 0;
+	if(arr.length == 3 && arr[1] == 'embed' && arr[2].charAt(0) == 'X' ){
+		_vid = arr[2];
+	}*/
+	if(_QS.target == null ) _QS.target = "youku-playerBox";
+	if(_QS.client_id == null) _QS.client_id = "0edbfd2e4fc91b72";//"youkuind_";
+	if(_QS.autoplay != true) _QS.autoplay = false;
+             
+	 var player = new YKU.Player('youku-playerBox',{
+		  styleid: '0', 
+		  client_id: _QS.client_id,
+		  vid: _vid,
+		  autoplay:_QS.autoplay,
+		  password:_QS.password,
+		//  newPlayer: true
+		//  events:_QS.events,
+		  onPlayStart:_QS.onPlayStart,
+		  onPlayEnd:_QS.onPlayEnd
+	  });   
+</script>
+</body>      
+</html>

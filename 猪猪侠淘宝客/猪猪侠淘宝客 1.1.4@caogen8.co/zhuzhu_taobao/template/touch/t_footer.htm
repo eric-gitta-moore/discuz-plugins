@@ -1,0 +1,114 @@
+<div class="cl" style="height: 65px;display: block;width: 100%"></div>
+<a href="javascript:;" id="gotop" class="go_top"><img src="./source/plugin/zhuzhu_taobao/static/image/gotop.png" /></a>
+<div class="t_footer">
+	<ul>
+		<li{if $mod == 'index'} class="a"{/if}>
+			<a href="plugin.php?id=zhuzhu_taobao">
+				<i class="iconfont">&#xe64b;</i>
+				<h2>{lang zhuzhu_taobao:1jump_url_htm_6}</h2>
+			</a>
+		</li>
+		<li{if $mod == 'tqg'} class="a"{/if}>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=tqg">
+				<i class="iconfont">&#xe757;</i>
+				<h2>{lang zhuzhu_taobao:1t_footer_htm_2}</h2>
+			</a>
+		</li>
+		<li{if $mod == 'tbk' && empty($ac)} class="a"{/if}>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=tbk">
+				<i class="iconfont">&#xe60b;</i>
+				<h2>{lang zhuzhu_taobao:1t_footer_htm_3}</h2>
+			</a>
+		</li>
+		<li{if $mod == 'tbrand'} class="a"{/if}>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=tbrand">
+				<i class="iconfont">&#xe605;</i>
+				<h2>{lang zhuzhu_taobao:1t_footer_htm_4}</h2>
+			</a>
+		</li>
+		<li{if $mod == 'quan'} class="a"{/if}>
+			<a href="plugin.php?id=zhuzhu_taobao&mod=quan">
+				<i class="iconfont">&#xe623;</i>
+				<h2>{lang zhuzhu_taobao:1t_footer_htm_5}</h2>
+			</a>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	gotop.onclick = function(){
+		document.body.scrollTop = document.documentElement.scrollTop = 0; 
+	}
+	var page = 1;
+
+	window.onscroll = function(){
+		var scrollT = document.documentElement.scrollTop||document.body.scrollTop;
+		var scrollH = document.documentElement.scrollHeight||document.body.scrollHeight;
+		var clientH = document.documentElement.clientHeight||document.body.clientHeight;
+
+		if(scrollT == scrollH - clientH){
+			load_more();
+		}
+		if(scrollT > 300){
+			document.getElementById("gotop").setAttribute("style", "display: block");
+		}
+		if(scrollT < 300){
+			document.getElementById("gotop").setAttribute("style", "");	
+		}
+		
+	}
+
+	function ajax(){ 
+	  var ajaxData = { 
+		type:arguments[0].type || "GET", 
+		url:arguments[0].url || "", 
+		async:arguments[0].async || "true", 
+		data:arguments[0].data || null, 
+		dataType:arguments[0].dataType || "text", 
+		contentType:arguments[0].contentType || "application/x-www-form-urlencoded", 
+		beforeSend:arguments[0].beforeSend || function(){}, 
+		success:arguments[0].success || function(){}
+	  } 
+	  ajaxData.beforeSend() 
+	  var xhr = createxmlHttpRequest();  
+	  xhr.responseType=ajaxData.dataType; 
+	  xhr.open(ajaxData.type,ajaxData.url,ajaxData.async);  
+	  xhr.setRequestHeader("Content-Type",ajaxData.contentType);  
+	  xhr.send(convertData(ajaxData.data));  
+	  xhr.onreadystatechange = function() {  
+		if (xhr.readyState == 4) {  
+		  if(xhr.status == 200){ 
+			ajaxData.success(xhr.response) 
+		  }else{ 
+			ajaxData.error() 
+		  }  
+		} 
+	  }  
+	} 
+	 
+	function createxmlHttpRequest() {  
+	  if (window.ActiveXObject) {  
+		return new ActiveXObject("Microsoft.XMLHTTP");  
+	  } else if (window.XMLHttpRequest) {  
+		return new XMLHttpRequest();  
+	  }  
+	} 
+	 
+	function convertData(data){ 
+	  if( typeof data === 'object' ){ 
+		var convertResult = "" ;  
+		for(var c in data){  
+		  convertResult+= c + "=" + data[c] + "&";  
+		}  
+		convertResult=convertResult.substring(0,convertResult.length-1) 
+		return convertResult; 
+	  }else{ 
+		return data; 
+	  } 
+	}
+
+	$(function() {
+		$("img.lazy").lazyload({effect: "fadeIn"});
+	});
+</script>
+
+<div class="pullrefresh" style="display:none;"></div>

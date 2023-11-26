@@ -1,0 +1,100 @@
+<style type="text/css">
+	.deanlogin .pipe{ display:none;} 
+	.deanlogin dl a{ padding:0;}
+</style>
+<div class="deanlogin">                 
+        <!--{if $_G['uid']}-->
+        <div class="allmember" style="float:right; position:relative;">
+        	<!--{if check_diy_perm($topic)}-->$diynav<!--{/if}-->
+          <div class="deanmemberinfo">
+                <a class="deanvwmy" href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}"><!--{avatar($_G[uid],small)}--></a>
+                <a class="deanadmin" href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}<i></i></a>
+                <a class="deanquit_top" href="member.php?mod=logging&action=logout&formhash={FORMHASH}">退出</a>
+                <div class="clear"></div>
+                <div class="deanmembercontent">
+            	<i></i>
+                <div class="deanmc_top">
+                	<div class="deanmc_tavator"><a class="deanvwmy1" href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}"><!--{avatar($_G[uid],small)}--></a></div>
+                    <div class="deanmc_username">
+                    	<div class="deanmc_welcome">welcome！欢迎您来本站</div>
+                        <div class="deanmc_un"><span>会员：</span><a class="deanhyname" href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="home.php?mod=spacecp&ac=avatar" target="_blank">个人设置</a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="deanmc_middle">
+                	<ul>
+                    	<li>
+                        	<a class="deanmypost" href="forum.php?mod=guide&view=my" target="_blank">我的帖子</a>								
+                        </li>
+                        <li style="border-left: #F5F5F5 1px dashed; padding-left:5px;">
+                        	<a class="deanmycollection" href="home.php?mod=space&do=favorite&view=me" target="_blank">我的收藏</a>
+                        </li>
+                        <li style="border-left: #F5F5F5 1px dashed; padding-left:5px;">
+                        	<a class="deanfriend" href="home.php?mod=space&do=friend" target="_blank">我的好友</a>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="deanmc_bottom">
+                	<div class="deanmc_bottom_c">
+                    	<a class="deannewinfo" href="home.php?mod=space&do=pm&filter=newpm" target="_blank">
+                        	<span class="dean_icon1"></span>
+                            <p>消息<!--{if $_G[member][newpm]}-->({$_G[member][newpm]})<!--{elseif $_G[member][newprompt]}-->({$_G[member][newprompt]})<!--{/if}--></p>
+                        </a>
+                        <a class="deanatme" href="home.php?mod=space&do=notice" target="_blank">
+                        	<span class="dean_icon2"></span>
+                        	<p>通知<!--{if $_G[member][newprompt]}-->($_G[member][newprompt])<!--{/if}--></p>
+                        </a>
+                        <a class="deanhuifume" href="home.php?mod=space&amp;do=notice&amp;type=post&amp;isread=$_G[uid]" target="_blank">
+                        	<span class="dean_icon3"></span>
+                        	<p>回复</p>
+                        </a>
+                        <!--{if $_G['uid'] && getstatus($_G['member']['allowadmincp'], 1)}-->
+                        <a class="deanguanli" href="admin.php" target="_blank">
+                        	<span class="dean_icon4"></span>
+                        	<p>管理</p>
+                        </a>
+                        <!--{/if}-->
+                        <a class="deanquit" href="member.php?mod=logging&action=logout&formhash={FORMHASH}">
+                        	<span class="dean_icon5"></span>
+                        	<p>退出</p>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+            
+            
+        </div>
+   <ul>
+     <!--{elseif !empty($_G['cookie']['loginuser'])}-->
+        <li><a id="loginuser" class="noborder"><!--{echo dhtmlspecialchars($_G['cookie']['loginuser'])}--></a></li>
+        <li><a href="member.php?mod=logging&action=login" onClick="showWindow('login', this.href)">{lang activation}</a></li>
+        <li><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a></li>
+    <!--{elseif !$_G[connectguest]}-->
+    <style tpye="text/css">
+    	
+    </style>
+    	 
+        <div class="deandl_before">
+        	<a class="deanqqs" href="connect.php?mod=login&amp;op=init&amp;referer=index.php&amp;statfrom=login_simple" title="QQ登录"></a>
+            <a class="deandengluanniu" href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)">登陆</a>
+            <a class="deanzhuceanniu" href="member.php?mod={$_G[setting][regname]}">注册</a>
+            <div class="clear"></div>
+        </div>
+        
+                    
+     <!--{else}-->
+        <div id="um">
+        	<dl>
+                <dd class="vwmy qq">{$_G[member][username]}</dd>
+                <dd><!--{hook/global_usernav_extra1}--></dd>
+                <dd><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a></dd>
+                <dd><a href="home.php?mod=spacecp&ac=credit&showcredit=1">{lang credits}: 0</a></dd>
+                <dd>{lang usergroup}: $_G[group][grouptitle]</li>
+            </dl>
+        </div>
+        <!--{/if}-->
+    </ul>
+</div>

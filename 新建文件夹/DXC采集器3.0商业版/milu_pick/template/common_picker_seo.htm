@@ -1,0 +1,78 @@
+
+<table  class="tab_content tb tb2" {if $step == 5}style="display:block"{else}style="display:none"{/if}>
+
+<tr >
+  <td s="1" class="td27" colspan="2">{lang milu_pick:is_word_replace}:<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+<ul onMouseOver="altStyle(this);"><li {if $info[is_word_replace] == 1} class="checked" {/if}><input {if $info[is_word_replace] == 1} checked="checked" {/if} name="set[is_word_replace]" type="radio" show="" class="radio" value="1">
+&nbsp;{lang milu_pick:yes}</li><li {if $info[is_word_replace] != 1} class="checked" {/if}><input  type="radio" {if $info[is_word_replace] != 1} checked="checked" {/if}  value="2" name="set[is_word_replace]" class="radio">
+&nbsp;{lang milu_pick:no}</li></ul></td>
+<td s="1" class="vtop tips2">{lang milu_pick:word_replace_notice}</td>
+</tr>
+
+<tr class="noborder" >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:open_seo}</td>
+  <td class="vtop tips2" s="1"></td>
+</tr>
+<tr class="noborder" >
+  <td class="vtop rowform">
+{echo pickOutput::radio(array('name' => 'open_seo', 'js' => array('show_hide(\'show_open_seo\',\'\',1);', 'show_hide(\'show_open_seo\',\'\',2);'),  'int_val' => 2, 'lang_arr' => array(milu_lang('yes'), milu_lang('no'))), $info);}</td>
+  <td class="vtop tips2" s="1"><p>{lang milu_pick:open_seo_picker_notice}</p>
+    </td>
+</tr>
+
+
+<tbody id="show_open_seo" {if $info['open_seo'] != 1}style="display:none"{/if}>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_title_header}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_title_header]" id="push_title_header" cols="50" class="tarea w_area" '..'="">{$info['push_title_header']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:push_title_footer_notice}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_title_footer}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_title_footer]" id="push_title_footer" cols="50" class="tarea w_area" '..'="">{$info['push_title_footer']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:push_title_footer_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_content_header}</td>
+</tr>
+
+
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_content_header]" id="push_content_header" cols="50" class="tarea w_area" '..'="">{$info['push_content_header']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_content_footer}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_content_footer]" id="push_content_footer" cols="50" class="tarea w_area" '..'="">{$info['push_content_footer']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_reply_header}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_reply_header]" id="push_reply_header" cols="50" class="tarea w_area" '..'="">{$info['push_reply_header']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:push_reply_footer}</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[push_reply_footer]" id="push_reply_footer" cols="50" class="tarea w_area" '..'="">{$info['push_reply_footer']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:row_class}</td>
+</tr>
+
+
+</tbody></table>

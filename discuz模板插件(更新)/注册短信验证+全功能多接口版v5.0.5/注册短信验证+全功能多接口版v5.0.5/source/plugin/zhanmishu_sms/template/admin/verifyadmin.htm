@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type = "text/javascript" src ="source/plugin/zhanmishu_sms/template/static/jQuery.min.js"><\/script>');
+</script>
+<script type="text/javascript">
+	var jQuery=jQuery.noConflict();
+	function setverify(uid){
+		mobile = jQuery('input[name=\'mobile['+uid+']\']').val();
+		this.location.href='admin.php?action=plugins&operation=config&do=60&identifier=zhanmishu_sms&pmod=verifyadmin&act=setverify&uid='+uid+'&mobile='+encodeURIComponent(mobile);
+		//ajaxget('admin.php?action=plugins&operation=config&do=60&identifier=zhanmishu_sms&pmod=verifyadmin&act=setverify&uid='+uid+'&mobile='+mobile, 'setverify', 'setverify');
+	}
+	function clearverify(uid){
+		mobile = jQuery('input[name=\'mobile['+uid+']\']').val();
+		this.location.href='admin.php?action=plugins&operation=config&do=60&identifier=zhanmishu_sms&pmod=verifyadmin&act=clearverify&uid='+uid+'&mobile='+encodeURIComponent(mobile);
+		//ajaxget('admin.php?action=plugins&operation=config&do=60&identifier=zhanmishu_sms&pmod=verifyadmin&act=setverify&uid='+uid+'&mobile='+mobile, 'setverify', 'setverify');
+	}
+</script>
+
+<span style="display: none;" id="setverify"></span>

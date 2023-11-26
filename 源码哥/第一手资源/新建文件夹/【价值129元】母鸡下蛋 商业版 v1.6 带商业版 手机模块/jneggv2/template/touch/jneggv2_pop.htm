@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=gb2312"http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no" />
+<title><!--{if !empty($navtitle)}-->$navtitle - <!--{/if}--> $_G['setting']['bbname']</title>
+<style type="text/css">
+.btn {
+	margin-top:10px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.btn_orange{
+    background:#fecc5f;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#feda71', endColorstr='#febb4a'); /*  IE */
+    background:-webkit-gradient(linear, left top, left bottom, from(#feda71), to(#febb4a)); /*  WebKit */
+    background:-moz-linear-gradient(top,  #feda71, #febb4a);
+    border-color:#f5b74e #e5a73e #d6982f;
+    color:#996633;
+    text-shadow:0 1px 0 #fedd9b;
+    -webkit-box-shadow:0 1px 1px #d3d3d3, inset 0 1px 0 #fee395;
+    -moz-box-shadow:0 1px 1px #d3d3d3, inset 0 1px 0 #fee395;
+    box-shadow:0 1px 1px #d3d3d3, inset 0 1px 0 #fee395;    
+}
+</style>
+{$_G['style']['boardlogo']}
+<div style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding:5px;"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="forum.php">{$_G[setting][navs][2][navname]}</a>
+		<em>&rsaquo;</em><a href="plugin.php?id=jneggv2">{lang jneggv2:MJXD}</a> 
+</div>
+<div><a href="plugin.php?id=jneggv2"><img src="source/plugin/jneggv2/template/images/bg.jpg" width="100%" /></a></div>
+<div style="padding:10px; font-family:Arial, Helvetica, sans-serif;"><div style="border:#CCCCCC 1px solid; padding:10px"><font style="font-size:12px"><u><font size="+1"><b>{lang jneggv2:jnegg17}</b></font></u><br/>
+{if $nJoin == '0'}<div align="center"><a href="plugin.php?id=jneggv2:jneggv2&do=openaccount&formhash=$_G[formhash]"><span class="button_jneggv2">{lang jneggv2:jnegg16}</span></a></div>{else}{loop $usermat $value}{lang jneggv2:jnegg2} : {$g_eggext}{lang jneggv2:jnegg18} <a href="plugin.php?id=jneggv2:jneggv2&do=changeegg"><font color="#FF0000"><u>{lang jneggv2:jnegg19}</u></font></a><br/> {lang jneggv2:jnegg20} : {$g_goldext}{lang jneggv2:jnegg18} <a href="plugin.php?id=jneggv2:jneggv2&do=changeout"><font color="#FF0000"><u>{lang jneggv2:jnegg19}</u></font></a><br/> {if $g_luck == '1'}{lang jneggv2:jnegg21} : {$g_luckext}/2000<br/>{/if}{lang jneggv2:jnegg22} <a href="plugin.php?id=jneggv2:jneggv2&do=viewchic">{if !$chicext}0{else}{$chicext}{/if}</a> {lang jneggv2:jnegg23}.<br/>{lang jneggv2:jnegg24}: {$productnow} {if $g_bonusof == '1'}(+{$extrabonus}){/if}{lang jneggv2:jnegg2}.<br/>{lang jneggv2:jnegg25} {$estimate} {lang jneggv2:jnegg18}{lang jneggv2:jnegg2}{/loop}{/if}</font></div>
+<!--{if $_GET['do'] == 'buychic' && $_G['uid'] > '0'}-->
+<div style="border:#CCCCCC 1px solid; padding:10px; margin-top:10px;">
+    <form method="post" id="buychicsubmit" action="plugin.php?id=jneggv2:jneggv2" onsubmit="ajaxpost(this.id, 'buychicsubmit','','onerror');return false;">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="buychicsubmit" value="yes" />
+    <input type="hidden" name="handlekey" value="editmine" />
+    <input type="hidden" name="referer" value="{echo dreferer();}" />
+    <font style="font-size:12px">{lang jneggv2:jnegg29}: {$g_costbuy}{$g_costbuyext}<br/>
+    {lang jneggv2:jnegg30}: <input name="paymount" type="text" id="paymount" /> {lang jneggv2:jnegg31}
+    </font>
+    <button type="submit" value="true" class="btn btn_orange" style="width:100%"><strong>{lang jneggv2:jnegg32}</strong></button>
+    </form>
+</div>
+<!--{/if}-->
+<!--{if $_GET['do'] == 'changeout' && $_G['uid'] > '0'}-->
+<div style="border:#CCCCCC 1px solid; padding:10px; margin-top:10px;">
+    <form method="post" id="changeoutsubmit" action="plugin.php?id=jneggv2:jneggv2" onsubmit="ajaxpost(this.id, 'changeoutsubmit','','onerror');return false;">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="changeoutsubmit" value="yes" />
+    <input type="hidden" name="handlekey" value="changeoutsubmit" />
+    <input type="hidden" name="referer" value="{echo dreferer();}" />
+    <font style="font-size:12px">{lang jneggv2:jnegg34}: {$g_goldeggprice}{$g_goldcreditext}<br/>
+    {lang jneggv2:jnegg56}: <input name="paymount" type="text" id="paymount" /> {lang jneggv2:jnegg35}<br/><br/>**{lang jneggv2:jnegg36}{$g_goldeggmin}
+    </font>
+    <button type="submit" value="true" class="btn btn_orange" style="width:100%"><strong>{lang jneggv2:jnegg32}</strong></button>
+    </form>
+</div>
+<!--{/if}-->
+<!--{if $_GET['do'] == 'changeegg' && $_G['uid'] > '0'}-->
+<div style="border:#CCCCCC 1px solid; padding:10px; margin-top:10px;">
+    <form method="post" id="changeeggsubmit" action="plugin.php?id=jneggv2:jneggv2" onsubmit="ajaxpost(this.id, 'changeeggsubmit','','onerror');return false;">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="changeeggsubmit" value="yes" />
+    <input type="hidden" name="handlekey" value="changeeggsubmit" />
+    <input type="hidden" name="referer" value="{echo dreferer();}" />
+    <font style="font-size:12px">{lang jneggv2:jnegg38}: {$g_eggextratio}{lang jneggv2:jnegg2} = 1{$g_eggcreditext}<br/>
+    {lang jneggv2:jnegg56}: <input name="paymount" type="text" id="paymount" /> {lang jneggv2:jnegg35}<br/><br/>**{lang jneggv2:jnegg36}{$g_eggout}{lang jneggv2:jnegg39}{$g_eggcreditext}{lang jneggv2:jnegg40}
+    </font>
+    <button type="submit" value="true" class="btn btn_orange" style="width:100%"><strong>{lang jneggv2:jnegg19}</strong></button>
+    </form>
+</div>
+<!--{/if}-->
+<!--{if $_GET['do'] == 'viewchic' && $_G['uid'] > '0'}-->
+<table width="100%" border="1" cellspacing="0" cellpadding="5" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; margin-top:10px;">
+	<tr><td>ID</td><td>{lang jneggv2:jnegg66}</td><td>{lang jneggv2:jnegg67}</td>{if $g_chicdie == '1'}<td>{lang jneggv2:jnegg68}</td>{/if}<td>{lang jneggv2:jnegg69}</td></tr>
+      {loop $chiclist $value}
+      <tr><td>$value[id]</td><td>$value[chickenqty]</td><td>$value[buytime]</td>{if $g_chicdie == '1'}<td>$value[dietime]</td>{/if}<td>{if $g_chicdie == '1'}{if $value[status] == '1'}{lang jneggv2:jnegg71}{else}{lang jneggv2:jnegg70}{/if}{else}{lang jneggv2:jnegg70}{/if}</td></tr>
+      {/loop}
+	<tr><td colspan="5">$multipage</td></tr>
+</table>
+<!--{/if}-->
+<div style="margin-top:20px; font-family:Arial, Helvetica, sans-serif; font-size:12px" align="center"><a href="plugin.php?id=jneggv2">{lang jneggv2:MJXD}</a> | <a href="plugin.php?id=jneggv2&mobile=no">{lang jneggv2:jnegg73}</a></div>
+</body>
+</html>

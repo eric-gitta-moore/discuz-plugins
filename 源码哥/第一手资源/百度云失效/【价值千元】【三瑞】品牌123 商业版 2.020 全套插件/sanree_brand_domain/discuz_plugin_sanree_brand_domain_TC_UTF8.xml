@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+	<item id="Time"><![CDATA[2017-01-06 16:57]]></item>
+	<item id="From"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[源碼哥_【三瑞】123域名模塊]]></item>
+			<item id="identifier"><![CDATA[sanree_brand_domain]]></item>
+			<item id="description"><![CDATA[用于【三瑞品牌123】的域名模塊，此模塊不能單獨使用，必須先安裝【三瑞品牌123】方能正常使用。品牌123的域名插件。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[sanree_brand_domain/]]></item>
+			<item id="copyright"><![CDATA[源碼哥（www.ymg6.com）]]></item>
+			<item id="version"><![CDATA[1.003]]></item>
+			<item id="__modules">
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addonymg]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>免費資源</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="menu"><![CDATA[域名管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否開啟]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[隱含模式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ishidden]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[新域名需要審核]]></item>
+				<item id="description"><![CDATA[不支持泛解析的主機，請設置為“是”。]]></item>
+				<item id="variable"><![CDATA[isshen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[主域名]]></item>
+				<item id="description"><![CDATA[例如：
+ymg6.Com]]></item>
+				<item id="variable"><![CDATA[mdomain]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[保留域名]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[filterdomainlist]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[www
+bbs
+brand]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[允許使用的會員組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[allowgroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[模版路徑]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[template]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[default]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[購買新域名價格]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[domainprice]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[默認有效期]]></item>
+				<item id="description"><![CDATA[域名購買后使用天數。
+只能是大于1的數字
+默認為365]]></item>
+				<item id="variable"><![CDATA[overday]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[365]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[余額不足提醒內容]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[nonepricetip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[余額不足，請充值。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推薦一個dz商</span><span style="color:#4C33E5;">業插件模版下載的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">網站給大家</span><a href="http://www.ymg6.com" target="_blank"><span style="color:#4C33E5;">源碼哥分享吧</span></a><span style="color:#4C33E5;">（www.ymg6.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">這</span><span style="color:#E53333;">是一個</span><span style="color:#E53333;">dz商業</span><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">資源破解分享的網站，而且還有很多精品的網站源碼下載</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他們資源每天更新，并且很多都是他們自己出錢在應用中心購買后破解分享出來的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不過還是替他們說一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他們站下載的資源只限于自己學習研究內含的設計思想和原理 請勿有任何商業盈利行為</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介紹也介紹完了，給大家做個小導航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=2" target="_blank">dz商業破解插件下載</a> &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=36" target="_blank">dz商業風格模版下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=50" target="_blank">精品網站源碼下載</a> &nbsp; &nbsp;<a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=51" target="_blank">工具素材下載</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.ymg6.com/forum.php?mod=forumdisplay&fid=41" target="_blank">精選教程區</a></span> 
+</h3> ]]></item>
+				<item id="domainmanage"><![CDATA[域名管理]]></item>
+				<item id="isbusiness"><![CDATA[您的當前版本無此功能,需要此功能請商業購買！]]></item>
+				<item id="succeed"><![CDATA[操作成功]]></item>
+				<item id="domain"><![CDATA[域名管理]]></item>
+				<item id="adddomain"><![CDATA[添加新域名]]></item>
+				<item id="editdomain"><![CDATA[編輯域名]]></item>
+				<item id="domainname"><![CDATA[域名]]></item>
+				<item id="error_domaintitle"><![CDATA[請輸入域名]]></item>
+				<item id="sanree"><![CDATA[三瑞出品]]></item>
+				<item id="searchbar"><![CDATA[搜索]]></item>
+				<item id="skeyword"><![CDATA[關鍵字：]]></item>
+				<item id="search"><![CDATA[搜索]]></item>
+				<item id="status"><![CDATA[狀態]]></item>
+				<item id="dateline"><![CDATA[發布時間]]></item>
+				<item id="startdate"><![CDATA[開始日期]]></item>
+				<item id="enddate"><![CDATA[過期日期]]></item>
+				<item id="brandname"><![CDATA[所屬商家]]></item>
+				<item id="selectbrand"><![CDATA[選擇商家]]></item>
+				<item id="error_brandnametip"><![CDATA[請輸入正確的商家名稱]]></item>
+				<item id="error_bid"><![CDATA[沒有此商家]]></item>
+				<item id="businesses_domain"><![CDATA[域名]]></item>
+				<item id="bybusinesses"><![CDATA[所屬商家]]></item>
+				<item id="enddatetip"><![CDATA[0或者為空，不限制]]></item>
+				<item id="bdomaintip"><![CDATA[<font color="red">必填項</font>，請輸入指定給商家的域名，只能是[a-z0-9._-]，<br>不區分大小寫<br>不能以“.”結尾<br>必須以字母開頭]]></item>
+				<item id="error_bdomain"><![CDATA[請填寫域名]]></item>
+				<item id="error_bdomain_a_z"><![CDATA[商家的域名，只能是[a-z0-9._-]，不區分大小寫,必須以字母開頭]]></item>
+				<item id="error_bdomain_have"><![CDATA[此域名已經綁定，請換一個]]></item>
+				<item id="error_bdomain_dian"><![CDATA[域名不能是“.”，也不能以“.”結尾]]></item>
+				<item id="bdomain_tip"><![CDATA[<table class="tb tb2 " id="tips">
+<tr><th  class="partition">技巧提示</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis">
+<li>域名緩存路徑：data\cachedomain</li>
+</ul>
+</td></tr>
+</table>]]></item>
+				<item id="error_same_mdomain"><![CDATA[不能和主域名相同或包含]]></item>
+				<item id="isallowdomain"><![CDATA[啟用域名]]></item>
+				<item id="error_bdomain_sys"><![CDATA[該域名已經被系統保留]]></item>
+				<item id="bdomain"><![CDATA[域名]]></item>
+				<item id="brand2domain"><![CDATA[域名綁定]]></item>
+				<item id="yes"><![CDATA[√]]></item>
+				<item id="no"><![CDATA[×]]></item>
+				<item id="passdomain"><![CDATA[通過]]></item>
+				<item id="refusedomain"><![CDATA[拒絕]]></item>
+				<item id="mydomain"><![CDATA[域名管理]]></item>
+				<item id="itemdomain"><![CDATA[域名管理]]></item>
+				<item id="stopallowtip"><![CDATA[您所在的用戶組無法訪問]]></item>
+				<item id="addbrand"><![CDATA[添加綁定]]></item>
+				<item id="selectdomain"><![CDATA[選擇域名]]></item>
+				<item id="editbrand2domain"><![CDATA[修改綁定]]></item>
+				<item id="addbrand2domain"><![CDATA[增加綁定]]></item>
+				<item id="error_domainid"><![CDATA[沒有這個域名]]></item>
+				<item id="domainnew"><![CDATA[待審]]></item>
+				<item id="batchshen"><![CDATA[批量審核]]></item>
+				<item id="batchdel"><![CDATA[批量刪除]]></item>
+				<item id="delorhen"><![CDATA[審/刪?]]></item>
+				<item id="confirmationdel"><![CDATA[此操作無法撤銷，您確定要刪除嗎?]]></item>
+				<item id="refusereason"><![CDATA[原因]]></item>
+				<item id="error_mdomain"><![CDATA[請先設置主域名]]></item>
+				<item id="no_related_domain"><![CDATA[暫無任何域名]]></item>
+				<item id="passok"><![CDATA[已通過]]></item>
+				<item id="pending"><![CDATA[<font color="red">待審核</font>]]></item>
+				<item id="isshow"><![CDATA[使用]]></item>
+				<item id="post_yew"><![CDATA[是]]></item>
+				<item id="post_no"><![CDATA[否]]></item>
+				<item id="tmp_yew"><![CDATA[√]]></item>
+				<item id="tmp_no"><![CDATA[<font color="red">×</font>]]></item>
+				<item id="nodomainid"><![CDATA[沒有此域名]]></item>
+				<item id="pleaseaddbrand"><![CDATA[請選擇一個商家]]></item>
+				<item id="okmessage"><![CDATA[購買成功，感謝您的支持。]]></item>
+				<item id="yesmessage"><![CDATA[域名購買已申請，感謝您的支持，請耐心等待站長審核。]]></item>
+				<item id="user"><![CDATA[用戶]]></item>
+				<item id="price"><![CDATA[價格]]></item>
+				<item id="error_nouser"><![CDATA[沒有這個用戶]]></item>
+				<item id="memo"><![CDATA[備注]]></item>
+				<item id="base"><![CDATA[基本設置]]></item>
+				<item id="fiximport"><![CDATA[校正域名入口]]></item>
+				<item id="fiximportsucceed"><![CDATA[成功校正域名入口文件]]></item>
+				<item id="cotitle"><![CDATA[校正域名]]></item>
+				<item id="adminwork"><![CDATA[基本信息]]></item>
+				<item id="ge"><![CDATA[個]]></item>
+				<item id="adminwork_str0"><![CDATA[已經綁定的域名：]]></item>
+				<item id="adminwork_str3"><![CDATA[未經綁定的域名：]]></item>
+				<item id="adminwork_str1"><![CDATA[等待審核的域名：]]></item>
+				<item id="adminwork_str2"><![CDATA[已經審核的域名：]]></item>
+				<item id="sanreeinfo"><![CDATA[官方動態]]></item>
+				<item id="domain_pass"><![CDATA[用戶: {user} 申請了域名【{domain}】,已經上線。 花費您{price}的 {unit}。 時間:{time}]]></item>
+				<item id="domain_adminpass"><![CDATA[用戶: {user} 申請了域名【{domain}】,已經審核通過。審核操作人：{adminuser}。 時間:{time}]]></item>
+				<item id="domain_pending"><![CDATA[用戶: {user} 申請了域名【{domain}】，正在審核。 花費您{price}的 {unit} 。時間:{time}]]></item>
+				<item id="domain_refuse"><![CDATA[用戶: {user} 申請了域名【{domain}】被拒絕。審核操作人：{adminuser}。<br>原因：{reason}。 時間:{time}]]></item>
+				<item id="error_useruid"><![CDATA[此用戶不能綁定給這個商家。UID不同。]]></item>
+				<item id="nostatus"><![CDATA[此域名正在審核，不能進行綁定商家操作]]></item>
+				<item id="pselectdomain"><![CDATA[請先選擇域名]]></item>
+				<item id="DMN"><![CDATA[購買域名]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="showdomainid"><![CDATA[ID]]></item>
+				<item id="domainname"><![CDATA[當前域名]]></item>
+				<item id="chulist"><![CDATA[狀態]]></item>
+				<item id="time"><![CDATA[時間]]></item>
+				<item id="operation"><![CDATA[操作]]></item>
+				<item id="brandname"><![CDATA[綁定商家]]></item>
+				<item id="edit"><![CDATA[綁定商家]]></item>
+				<item id="isshow"><![CDATA[是否使用：]]></item>
+				<item id="isshowstr"><![CDATA[是否使用]]></item>
+				<item id="post_yew"><![CDATA[是]]></item>
+				<item id="post_no"><![CDATA[否]]></item>
+				<item id="submit"><![CDATA[提交]]></item>
+				<item id="editdomaintitle"><![CDATA[綁定域名]]></item>
+				<item id="post_domainname"><![CDATA[當前域名：]]></item>
+				<item id="pleaseaddbrand"><![CDATA[請選擇一個商家]]></item>
+				<item id="buydomain"><![CDATA[申請新域名]]></item>
+				<item id="error_domaintitle"><![CDATA[請輸入域名]]></item>
+				<item id="buydomaintitle"><![CDATA[申請新域名]]></item>
+				<item id="no_related_domain"><![CDATA[暫無任何域名]]></item>
+				<item id="endtime"><![CDATA[過期日期]]></item>
+				<item id="tpl_str1"><![CDATA[請輸入域名：]]></item>
+				<item id="tpl_str2"><![CDATA[當前購買域名的價格為：]]></item>
+				<item id="tpl_str3"><![CDATA[友情提醒：<strong>域名只能是[a-z0-9._-]，不區分大小寫,必須以字母開頭,<br /> 域名不能是“.”，也不能以“.”結尾</strong>]]></item>
+			</item>
+			<item id="installlang">
+				<item id="error_install"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123，正在跳轉請稍后...]]></item>
+				<item id="Error_Install_brand"><![CDATA[此插件不能單獨使用，必須安裝【三瑞】品牌123.]]></item>
+				<item id="plugin_error_version"><![CDATA[您需安裝【三瑞】品牌123 v1.442及以上版本方可安裝.]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件不能單獨安裝使用，必須安裝【三瑞】品牌123主程序，方能安裝使用。
+[*]下載安裝【三瑞】品牌123主程序：[url=http://www.fx8.cc/?@sanree_brand.plugin]下載[/url]
+[*]本插件版權歸屬插件作者所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發布/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]淮南市三瑞網絡科技有限公司 www.ymg6.Com
+[*][b]作品簡介:[/b]本插件將在系統中安裝品牌123的域名功能。
+[*][b]發布地址:[/b][url]http://www.fx8.cc/forum-64-1.html[/url]
+[*]如有任何關于使用上的疑問,請至[url]http://www.fx8.cc/forum-64-1.html[/url]提出.
+[*][color=Red]請您在安裝前閱讀三瑞科技軟件產品最終用戶通用授權協議[/color]，地址：[url]http://www.ymg6.Com/xieyi.html[/url].
+[*][color=Red]如果您愿意資助我們,請至[url]http://www.ymg6.Com/tel114/Donation.aspx[/url]對我們進行贊助.[/color]
+[*]最后,感謝您使用我們的插件,也希望您能夠給我們提供更好的意見([url=http://www.ymg6.Com/]請點擊這里進入三瑞科技官方站點[/url]).
+[/list]]]></item>
+	</item>
+</root>

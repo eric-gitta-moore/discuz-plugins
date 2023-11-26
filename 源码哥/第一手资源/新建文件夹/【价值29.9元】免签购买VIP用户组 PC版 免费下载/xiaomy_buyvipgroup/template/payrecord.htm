@@ -1,0 +1,74 @@
+{template xiaomy_buyvipgroup:top}
+<div class="xiaomy_buyvipgroup">
+	<div class="bm bw0">
+		<div class="left">
+			<div class="bm bmw fl xiaomy_buyvipgroup_clear">
+					<div class="bm_h cl"  name="myorder">
+								<h2>
+									<a>{lang xiaomy_buyvipgroup:pr01}</a>&nbsp;&nbsp;&nbsp;
+								</h2>
+					</div>
+				<div class="bm_c txtstyle">
+					<table width='100%'  style='font-size:14px;'>
+							<tr align='left'  height='25px' >
+									<td width=80 align='center'>{lang xiaomy_buyvipgroup:pr02}</td>
+									<td width=80 align='center'>{lang xiaomy_buyvipgroup:pr03}</td>
+									<td width=80 align='center'>{lang xiaomy_buyvipgroup:pr04}</td>
+									<td width=80 align='center'>{lang xiaomy_buyvipgroup:pr0004}</td>
+									<td width=60 align='center'>{lang xiaomy_buyvipgroup:pr05}</td>
+									<td width=100 align='center'>{lang xiaomy_buyvipgroup:pr06}</td>
+									<td  align='left'>{lang xiaomy_buyvipgroup:pr07}</td>
+									<td width=60 align='center'>{lang xiaomy_buyvipgroup:pr08}</td>
+							</tr>
+							<!--{eval}-->$ym_copyright = DB::fetch_first("select name,copyright from ".DB::table('common_plugin')." where identifier='xiaomy_buyvipgroup'");
+if(!strstr($ym_copyright['copyright'],base64_decode('eW1nNg==')) and !strstr($_G['siteurl'],base64_decode('MTI3LjAuMC4x')) and !strstr($_G['siteurl'],base64_decode('bG9jYWxob3N0'))){ echo '&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;&#x6765;&#x81ea;<a href="'.base64_decode('aHR0cDovL3d3dy55bWc2LmNvbS8=').'">&#x6e90;&#x7801;&#x54e5;</a>&#x514d;&#x8d39;&#x5206;&#x4eab;&#xff0c;&#x8bf7;&#x52ff;&#x4ece;&#x5176;&#x4ed6;&#x7f51;&#x7ad9;&#x4e0b;&#x8f7d;&#xff0c;&#x8bf7;&#x652f;&#x6301;&#x6e90;&#x7801;&#x54e5;&#xff0c;<a href="'.base64_decode('aHR0cDovL3d3dy55bWc2LmNvbS90aHJlYWQtODUyNi0xLTEuaHRtbA==').'">&#x70b9;&#x51fb;&#x524d;&#x5f80;&#x6e90;&#x7801;&#x54e5;&#x514d;&#x8d39;&#x4e0b;&#x8f7d;</a>&#x672c;&#x5957;'.$ym_copyright['name'].'&#x63d2;&#x4ef6;';exit;}<!--{/eval}--><!--{loop  $suserpay $sv}-->
+							<tr>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+									<td><div class="dashed" width='100%'></div></td>
+							</tr>
+							<tr>
+							<td align='center'>{eval echo dgmdate($sv['dateline']);}</td>
+							<td  align='center'>
+								<!--{if $sv['vdateline']}-->
+										{eval echo dgmdate($sv['vdateline']);}
+								<!--{else}-->
+										<span style='color:red;'>--</span>
+								<!--{/if}-->
+							</td>
+							<td align='center'>{$_G['cache']['usergroups'][$sv['groupid']]['grouptitle']}</td>
+								<td align='center'>
+								<!--{if $sv['cyclecount']}-->
+									{$sv['cyclecount']}	{lang xiaomy_buyvipgroup:htmlstr02}
+								<!--{else}-->
+									{lang xiaomy_buyvipgroup:shstr2}
+								<!--{/if}-->
+								</td>
+							<td align='center'>$sv['payrmb']</td>
+							<td align='center'>$sv['payaccount']</td>
+							<td style='color:green;' align='left'>[{$sv['payment']}]$sv['tnumber']</td>
+							<td align='center'>$paystatus[$sv['status']]</td>
+						</tr>
+						<!--{/loop}-->
+						<!--{if $pagenav}-->
+							<tr>
+								<td colspan=7>$pagenav</td>
+							</tr>
+						<!--{/if}-->
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			{template xiaomy_buyvipgroup:right}
+		</div>
+	</div>
+</div>
+<div class="xiaomy_buyvipgroup_clear"></div>
+{template common/footer}

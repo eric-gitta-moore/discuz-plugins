@@ -1,0 +1,132 @@
+<!--{if $_GET[loadmore]}-->
+	<!--{loop $list $v}-->
+	<li>
+		<a href="{$jump_url}$v[num_iid]">
+			<img data-original="$v[pict_url]" src="{$img}nopic.png" class="lazy" />
+			<div class="cl">
+				<h2 class="wrap2"><img src="./source/plugin/zhuzhu_taobao/static/image/{if $v[user_type]}tmall{else}taobao{/if}.png">$v[title]</h2>
+				<p>
+					<span class="y">$v[provcity]</span>
+					<span class="q_price">&yen; <i>$v[zk_final_price]</i></span>
+				</p>
+			</div>
+		</a>
+	</li>
+	<!--{/loop}-->
+<!--{else}-->
+<!--{template zhuzhu_taobao:header}-->
+<link type="text/css" rel="stylesheet" href="./source/plugin/zhuzhu_taobao/static/css/style_touch.css">
+<!--{subtemplate zhuzhu_taobao:t_header}-->
+
+<div id="top-Nav" class="swiper-container top_flex">
+  <div class="swiper-wrapper">  
+		<div class="swiper-slide{if !$_GET[cat]} active{/if}" cat-id="">{lang zhuzhu_taobao:1t_quan_htm_7}</div>
+		<!--{loop $_G[cache][zhuzhu_taobao_cat] $value}-->
+		<div class="swiper-slide{if $_GET[cat] == $value[tb_cat]} active{/if}" cat-id="$value[tb_cat]">$value[name]</div>
+	<!--{/loop}-->
+	</div>
+</div>
+
+<div class="cl tbk_banner">
+	<ul class="cl">
+		<!--{eval $get[ac] = 0;$get[start_price] = 0;$get[end_price] = 0;$theurl = 'plugin.php?'.page_url($get);}-->
+		<li><a href="$theurl&ac=9k9"><img src="./source/plugin/zhuzhu_taobao/static/image/m_9k9.jpg" /></a></li>
+		<!--{eval $get[ac] = $_GET[ac];$get[start_price] = $_GET[start_price];$get[end_price] = $_GET[end_price];}-->
+		<li><a href="$theurl&ac=39k9"><img src="./source/plugin/zhuzhu_taobao/static/image/m_39k9.jpg" /></a></li>
+	</ul>
+</div>
+
+<div class="tbk_sort cl">
+	<div class="sort_desc">
+		<ul>
+			<li{if empty($_GET[sort])} class="cur"{/if}><a href="$url">{lang zhuzhu_taobao:1t_tbk_htm_2}</a></li>
+			<!--{eval $get[sort] = 0;$theurl = 'plugin.php?'.page_url($get);}-->
+			<li{if $_GET[sort] == "total_sales_asc" ||  $_GET[sort] == "total_sales_des"} class="cur"{/if}><a href="$theurl&sort=total_sales{if $_GET[sort] == 'total_sales_asc'}_des{else}_asc{/if}">{lang zhuzhu_taobao:1t_tbk_htm_3}<em{if $_GET[sort] == 'total_sales_asc'} class="asc"{elseif $_GET[sort] == 'total_sales_des'} class="des"{/if}></em></a></li>
+
+			<li{if $_GET[sort] == "tk_total_sales_asc" ||  $_GET[sort] == "tk_total_sales_des"} class="cur"{/if}><a href="$theurl&sort=tk_total_sales{if $_GET[sort] == 'tk_total_sales_asc'}_des{else}_asc{/if}">{lang zhuzhu_taobao:1t_tbk_htm_4}<em{if $_GET[sort] == 'tk_total_sales_asc'} class="asc"{elseif $_GET[sort] == 'tk_total_sales_des'} class="des"{/if}></em></a></li>
+
+			<!--li{if $_GET[sort] == "tk_rate_asc" ||  $_GET[sort] == "tk_rate_des"} class="cur"{/if}><a href="$theurl&sort=tk_rate{if $_GET[sort] == 'tk_rate_asc'}_des{else}_asc{/if}">{lang zhuzhu_taobao:1t_tbk_htm_5}<em{if $_GET[sort] == 'tk_rate_asc'} class="asc"{elseif $_GET[sort] == 'tk_rate_des'} class="des"{/if}></em></a></li-->
+			<!--{eval $get[sort] = $_GET[sort];}-->
+
+			<!--{eval $get[is_tmall] = 0;$theurl = 'plugin.php?'.page_url($get);}-->
+			<li><a href="$theurl{if !$_GET[is_tmall]}&is_tmall=1{/if}"{if $_GET[is_tmall]} class="cur"{/if}><i></i>{lang zhuzhu_taobao:1t_quan_htm_3}</a></li>
+			<!--{eval $get[is_tmall] = $_GET[is_tmall];}-->
+
+			<!--{eval $get[is_overseas] = 0;$theurl = 'plugin.php?'.page_url($get);}--> 
+			<li><a href="$theurl{if !$_GET[is_overseas]}&is_overseas=1{/if}"{if $_GET[is_overseas]} class="cur"{/if}><i></i>{lang zhuzhu_taobao:1t_tbk_htm_7}</a></li>
+			<!--{eval $get[is_overseas] = $_GET[is_overseas];}-->
+		</ul>
+	</div>
+</div>
+
+<div class="tbk_item">
+	<ul class="cl" id="tk-limit-list"></ul>
+</div>
+
+<input type="hidden" id="catid" value="" />
+
+<script type="text/javascript">
+	window.onload = function() {
+		load_more();
+	}
+	var mySwiper2 = new Swiper('#top-Nav', {
+		freeMode: true,
+		freeModeMomentumRatio: 0.5,
+		slidesPerView: 'auto',
+		onClick: function(swiper){
+		  document.getElementById("catid").value=$('.active').attr('cat-id');
+		  page = 1;
+		  document.getElementById('tk-limit-list').innerHTML = "";
+		  load_more($('.active').attr('cat-id'));
+		}
+	});
+
+	swiperWidth = mySwiper2.container[0].clientWidth
+	maxTranslate = mySwiper2.maxTranslate();
+	maxWidth = -maxTranslate + swiperWidth / 2
+
+	$("#top-Nav").on('touchstart', function(e) {
+		e.preventDefault()
+	})
+
+	mySwiper2.on('tap', function(swiper, e) {
+		slide = swiper.slides[swiper.clickedIndex]
+		slideLeft = slide.offsetLeft
+		slideWidth = slide.clientWidth
+		slideCenter = slideLeft + slideWidth / 2
+		mySwiper2.setWrapperTransition(300)
+
+		if (slideCenter < swiperWidth / 2) {		
+			mySwiper2.setWrapperTranslate(0)
+		} else if (slideCenter > maxWidth) {		
+			mySwiper2.setWrapperTranslate(maxTranslate)
+		} else {
+			nowTlanslate = slideCenter - swiperWidth / 2
+			mySwiper2.setWrapperTranslate(-nowTlanslate)
+		}
+		$("#top-Nav .active").removeClass('active')
+		$("#top-Nav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+	})
+
+	function load_more() {
+		popup.open('<img src="' + IMGDIR + '/imageloading.gif">');
+		var cat_id = document.getElementById("catid").value;
+
+		ajax({ 
+			type:'get',
+			url: '$theurl&loadmore=1&page=' + page + '&cat=' + cat_id,
+			dataType:'text',
+			success:function(msg){
+				$('#tk-limit-list').append(msg);
+				popup.close();
+				page ++;
+				$("img.lazy").lazyload({effect: "fadeIn"});
+			}
+		}) 
+		
+	}
+</script>
+<!--{subtemplate zhuzhu_taobao:t_footer}-->
+<script src="source/plugin/zhuzhu_taobao/static/js/common.js"></script>
+<!--{subtemplate zhuzhu_taobao:footer}-->
+<!--{/if}-->

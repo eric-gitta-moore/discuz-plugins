@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="spacecss"><![CDATA[#frameOf2cj6 { border:0px !important;margin:0px !important;}#portal_block_23 { border:0px !important;margin:0px !important;}#portal_block_23 .dxb_bc { margin:0px !important;}]]></item>
+	<item id="layoutdata">
+		<item id="diy1"><![CDATA[]]></item>
+		<item id="listcontenttop"><![CDATA[]]></item>
+		<item id="wk_about">
+			<item id="frame`frameOf2cj6">
+				<item id="attr">
+					<item id="name"><![CDATA[frameOf2cj6]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`frameOf2cj6_left">
+					<item id="attr">
+						<item id="name"><![CDATA[frameOf2cj6_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_23">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_23]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="diycontentbottom"><![CDATA[]]></item>
+		<item id="diy3"><![CDATA[]]></item>
+	</item>
+	<item id="blockdata">
+		<item id="block">
+			<item id="23">
+				<item id="bid"><![CDATA[23]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[·¢Õ¹Àú³Ì]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<span><p>weekdesign £¨Ô´Âë¸ç³öÆ·£©³ÉÁ¢ÓÚ2012Äê£¬ÎÒÃÇÊÇÒ»¼Ò×¨×¢ÓÃ»§ÌåÑéÉè¼Æ¿ª·¢Óë»¥ÁªÍøÆ·ÅÆ½¨ÉèµÄÉè¼Æ¹«Ë¾£¬´´Á¢ÖÁ½ñÎª200¶àÎ»¿Í»§Ìá¹©ÁË´´ÐÂÓë×¨ÒµµÄÉè¼Æ·½°¸¡£Éè¼Æ·þÎñ·¶Î§°üÀ¨£º½»»¥Ô­ÐÍÉè¼Æ¡¢²úÆ·ÊÓ¾õÉè¼Æ¡¢ÍøÕ¾Éè¼ÆÓë¿ª·¢½¨Éè¡¢ÒÆ¶¯¼°Èí¼þ²úÆ·½çÃæÉè¼Æ¡¢Í¼±êÉè¼Æ¡¢Æ·ÅÆ¼°Æ½ÃæÉè¼ÆµÈ¡£ÎÒÃÇµÄ¼ÛÖµÓë×ÚÖ¼ÊÇÎªÓÃ»§ºÍ¿Í»§´òÔì×îºÃµÄÉè¼Æ£¬ÓÃÉè¼ÆÌáÉý²úÆ·ºÍÆóÒµ¼ÛÖµ¡£</p></span>
+<div class="wk_about_hty-box">
+	<div class="slogan"><p>2016ÄêÎÒÃÇ½«²»¶ÏÇ°ÐÐ</p></div>
+	<div class="wk_about_hty">
+        <div class="line"></div>
+        <div class="item odd">
+            <div class="date">2015Äê12ÔÂ</div>
+            <div class="desc"><span class="arrow"></span>Ô´Âë¸ç³öÆ·»ñµÃ¹ã¶«Ê¡´´ÒµÖ®ÐÇÆóÒµ³É³¤½±</div>
+        </div>
+        <div class="item">
+            <div class="date">2015Äê11ÔÂ</div>
+            <div class="desc"><span class="arrow"></span>Ô´Âë¸ç³öÆ·ÈÙ»ñ¹ã¶«Ê¡¸ßÐÂ¼¼ÊõÆóÒµºÍÉîÛÚÊÐ¸ßÐÂ¼¼ÊõÆóÒµ<br>¹ã¶«Ê¡¸ßÐÂ¼¼ÊõÅàÓýÆóÒµ</div>
+        </div>
+        <div class="item odd">
+            <div class="date">2015Äê6ÔÂ</div>
+            <div class="desc"><span class="arrow"></span>ÊÕ¹ºÉîÛÚÄ³Ä³ÉÌÎñ×ÉÑ¯ÓÐÏÞ¹«Ë¾²¢¸üÃû£º<br>Ä³Ä³»¥¶¯ÓªÏú²ß»®£¨ÉîÛÚ£©ÓÐÏÞ¹«Ë¾</div>
+        </div>
+        <div class="item">
+            <div class="date">2015Äê6ÔÂ</div>
+            <div class="desc"><span class="arrow"></span>Ô´Âë¸ç³öÆ·¹ÒÅÆÉîÛÚ´´Òµ°å½»Ò×ÍÐ¹ÜÖÐÐÄ£¬¹É·Ý´úÂë£ºxxxx</div>
+        </div>
+        <div class="item odd">
+            <div class="date">2014Äê6ÔÂ</div>
+            <div class="desc"><span class="arrow"></span>Ô´Âë¸ç³öÆ·ºÍÉîÛÚÖ°ÒµÑ§ÔºÇ©Êð²úÑ§ÑÐºÏ×÷Ð­Òé</div>
+        </div>
+        <div class="item">
+            <div class="date">2013Äê5ÔÂ</div>
+            <div class="desc"><span class="arrow"></span>¹¤×÷ÊÒÕýÊ½¸ÄÃû¹ã¶«Ô´Âë¸ç³öÆ·ÍøÂçÓÐÏÞ¹«Ë¾</div>
+        </div>
+        <div class="item odd">
+            <div class="date">2013Äê2ÔÂ</div>
+            <div class="desc"><span class="arrow"></span>ÓÚ¹ã¶«Öéº£³ÉÁ¢¹ã¶«Ô´Âë¸ç³öÆ·¹¤×÷ÊÒ</div>
+        </div>
+    </div>
+</div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<span><p>weekdesign £¨Ô´Âë¸ç³öÆ·£©³ÉÁ¢ÓÚ2012Äê£¬ÎÒÃÇÊÇÒ»¼Ò×¨×¢ÓÃ»§ÌåÑéÉè¼Æ¿ª·¢Óë»¥ÁªÍøÆ·ÅÆ½¨ÉèµÄÉè¼Æ¹«Ë¾£¬´´Á¢ÖÁ½ñÎª200¶àÎ»¿Í»§Ìá¹©ÁË´´ÐÂÓë×¨ÒµµÄÉè¼Æ·½°¸¡£Éè¼Æ·þÎñ·¶Î§°üÀ¨£º½»»¥Ô­ÐÍÉè¼Æ¡¢²úÆ·ÊÓ¾õÉè¼Æ¡¢ÍøÕ¾Éè¼ÆÓë¿ª·¢½¨Éè¡¢ÒÆ¶¯¼°Èí¼þ²úÆ·½çÃæÉè¼Æ¡¢Í¼±êÉè¼Æ¡¢Æ·ÅÆ¼°Æ½ÃæÉè¼ÆµÈ¡£ÎÒÃÇµÄ¼ÛÖµÓë×ÚÖ¼ÊÇÎªÓÃ»§ºÍ¿Í»§´òÔì×îºÃµÄÉè¼Æ£¬ÓÃÉè¼ÆÌáÉý²úÆ·ºÍÆóÒµ¼ÛÖµ¡£</p></span>
+<div class=\"wk_about_hty-box\">
+	<div class=\"slogan\"><p>2016ÄêÎÒÃÇ½«²»¶ÏÇ°ÐÐ</p></div>
+	<div class=\"wk_about_hty\">
+        <div class=\"line\"></div>
+        <div class=\"item odd\">
+            <div class=\"date\">2015Äê12ÔÂ</div>
+            <div class=\"desc\"><span class=\"arrow\"></span>Ô´Âë¸ç³öÆ·»ñµÃ¹ã¶«Ê¡´´ÒµÖ®ÐÇÆóÒµ³É³¤½±</div>
+        </div>
+        <div class=\"item\">
+            <div class=\"date\">2015Äê11ÔÂ</div>
+            <div class=\"desc\"><span class=\"arrow\"></span>Ô´Âë¸ç³öÆ·ÈÙ»ñ¹ã¶«Ê¡¸ßÐÂ¼¼ÊõÆóÒµºÍÉîÛÚÊÐ¸ßÐÂ¼¼ÊõÆóÒµ<br>¹ã¶«Ê¡¸ßÐÂ¼¼ÊõÅàÓýÆóÒµ</div>
+        </div>
+        <div class=\"item odd\">
+            <div class=\"date\">2015Äê6ÔÂ</div>
+            <div class=\"desc\"><span class=\"arrow\"></span>ÊÕ¹ºÉîÛÚÄ³Ä³ÉÌÎñ×ÉÑ¯ÓÐÏÞ¹«Ë¾²¢¸üÃû£º<br>Ä³Ä³»¥¶¯ÓªÏú²ß»®£¨ÉîÛÚ£©ÓÐÏÞ¹«Ë¾</div>
+        </div>
+        <div class=\"item\">
+            <div class=\"date\">2015Äê6ÔÂ</div>
+            <div class=\"desc\"><span class=\"arrow\"></span>Ô´Âë¸ç³öÆ·¹ÒÅÆÉîÛÚ´´Òµ°å½»Ò×ÍÐ¹ÜÖÐÐÄ£¬¹É·Ý´úÂë£ºxxxx</div>
+        </div>
+        <div class=\"item odd\">
+            <div class=\"date\">2014Äê6ÔÂ</div>
+            <div class=\"desc\"><span class=\"arrow\"></span>Ô´Âë¸ç³öÆ·ºÍÉîÛÚÖ°ÒµÑ§ÔºÇ©Êð²úÑ§ÑÐºÏ×÷Ð­Òé</div>
+        </div>
+        <div class=\"item\">
+            <div class=\"date\">2013Äê5ÔÂ</div>
+            <div class=\"desc\"><span class=\"arrow\"></span>¹¤×÷ÊÒÕýÊ½¸ÄÃû¹ã¶«Ô´Âë¸ç³öÆ·ÍøÂçÓÐÏÞ¹«Ë¾</div>
+        </div>
+        <div class=\"item odd\">
+            <div class=\"date\">2013Äê2ÔÂ</div>
+            <div class=\"desc\"><span class=\"arrow\"></span>ÓÚ¹ã¶«Öéº£³ÉÁ¢¹ã¶«Ô´Âë¸ç³öÆ·¹¤×÷ÊÒ</div>
+        </div>
+    </div>
+</div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1461205032]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+		</item>
+		<item id="style">
+		</item>
+	</item>
+</root>

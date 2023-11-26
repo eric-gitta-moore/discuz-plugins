@@ -1,0 +1,80 @@
+<!--{template e6_propaganda:header}-->
+<div data-role="page" id="pageone">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home" data-ajax="false">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:top_nav}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true">
+			<li data-role="list-divider" data-theme="c" class="center blue">{lang e6_propaganda:top_register}</li>
+			<li class="e6_li top_title"><span>{lang e6_propaganda:top}</span><span>{lang e6_propaganda:number}</span><span>{lang e6_propaganda:username}</span></li>
+			<!--{loop $register_list $v}-->
+			<li class="e6_li">
+				<span class="n">{$v['n']}</span><span>{$v['register']} {lang e6_propaganda:people}</span><span>{$v['username']}</span>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#" class="ui-btn-active ui-state-persist">{lang e6_propaganda:register_top}</a></li>
+				<li><a href="#pagetwo">{lang e6_propaganda:money_top}</a></li>
+				<li><a href="#pagethird">{lang e6_propaganda:user_top}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div data-role="page" id="pagetwo">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:top_nav}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true">
+			<li data-role="list-divider" data-theme="c" class="center blue">{lang e6_propaganda:top_money}</li> 
+			<li class="e6_li top_title"><span>{lang e6_propaganda:top}</span><span>{lang e6_propaganda:money}</span><span>{lang e6_propaganda:username}</span></li>
+			<!--{loop $allmoney_list $v}-->
+			<li class="e6_li">
+				<span class="n">{$v['n']}</span><span>{$v['money']}</span><span>{$v['username']}</span>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#pageone">{lang e6_propaganda:register_top}</a></li>
+				<li><a href="#" class="ui-btn-active ui-state-persist">{lang e6_propaganda:money_top}</a></li>
+				<li><a href="#pagethird">{lang e6_propaganda:user_top}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div data-role="page" id="pagethird">
+	<div data-role="header" data-theme="b">
+		<a href="plugin.php?id=e6_propaganda" data-role="button" data-icon="home">{lang e6_propaganda:index}</a>
+		<h1>{lang e6_propaganda:top_nav}</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true">
+			<li data-role="list-divider" data-theme="c" class="center blue">{lang e6_propaganda:top_user}</li> 
+			<li class="e6_li top_title"><span>{lang e6_propaganda:order}</span><span>{lang e6_propaganda:username}</span><span>{lang e6_propaganda:recommend}</span></li>
+			<!--{loop $new_list $v}-->
+			<li class="e6_li">
+				<span class="n">{$v['n']}</span><span>{$v['username']}</span><span><!--{if $v[fuid1]>0}-->{$v['fusername']}<!--{else}-->{lang e6_propaganda:no}<!--{/if}--></span>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#pageone">{lang e6_propaganda:register_top}</a></li>
+				<li><a href="#pagetwo">{lang e6_propaganda:money_top}</a></li>
+				<li><a href="#" class="ui-btn-active ui-state-persist">{lang e6_propaganda:user_top}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

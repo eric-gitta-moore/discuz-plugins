@@ -1,0 +1,59 @@
+<!--{template milu_pick:pick_header}-->
+<script>
+function cron_today_clear(){
+	jq.post(PICK_URL+'picker_manage&myfunc=ajax_func&inajax=1&af=cron_today_clear&tpl=no&xml=0', null,function (msg) {
+		showDialog("{lang milu_pick:clear_finsh}", 'right');
+	});
+}
+</script>
+
+<table class="tb tb2 " style="width:650px;">
+<tbody><tr><th colspan="13" class="partition">{lang milu_pick:cron_now_list} <span style="font-weight:normal">{eval echo milu_lang('_total', array('n' => $info['now_list_count']));}</span></th></tr></tbody>
+<tr class="header"><th class="td30">{eval echo milu_lang('order_num');}</th>
+  <th width="50">{lang milu_pick:picker_name}</th>
+  <th width="50">{lang milu_pick:cron_type}</th>
+  <th width="50"> {lang milu_pick:start_dateline} </th>
+  <!--{if $info['now_list']}-->
+  {eval $n = 0;}
+   <!--{loop $info['now_list'] $key $rs}-->
+   {eval $n++;}
+<tr class="hover"><td class="td30">{$n}</td>
+  <td><a href="?{PICK_GO}picker_manage&myaction=edit_pick&pid={$rs[pid]}&step=6" target="_blank"> {$rs['name']}</a></td>
+  <td >{$rs['type_name']}</td>
+   <td >{$rs['show_start_dateline']}</td>
+  <!--{/loop}-->
+   <!--{else}-->
+  <tr class="hover"><td colspan="12" align="center" class="td25">{lang milu_pick:no_data}</td></tr>
+  <!--{/if}-->
+
+</table>
+
+<table class="tb tb2 " style="width:75%;">
+<tbody><tr><th colspan="16" class="partition">{lang milu_pick:cron_today_list} <span style="font-weight:normal">{eval echo milu_lang('_total', array('n' => $info['today_cron_list_count']));}</span><span style="float:right; margin-right:15px;"><a onClick="cron_today_clear();" href="javascript:void(0);">{lang milu_pick:_clear}</a></span></th></tr></tbody>
+<tr class="header"><th class="td30">{eval echo milu_lang('order_num');}</th>
+  <th width="50">{lang milu_pick:picker_name}</th>
+  <th width="50">{lang milu_pick:cron_type}</th>
+  <th width="50"> {lang milu_pick:start_dateline} </th>
+  <th width="50"> {lang milu_pick:dur_time} </th>
+  <th width="50"> {lang milu_pick:article_num} </th>
+  <th width="50">{lang milu_pick:log}</th>
+  <!--{if $info['today_cron_list']}-->
+  {eval $n = 0;}
+   <!--{loop $info['today_cron_list'] $key $rs}-->
+   {eval $n++;}
+<tr class="hover"><td class="td30">{$n}</td>
+  <td><a href="?{PICK_GO}picker_manage&myaction=edit_pick&pid={$rs[pid]}&step=6" target="_blank"> {$rs['name']}</a></td>
+  <td >{$rs['type_name']}</td>
+   <td >{$rs['show_start_dateline']}</td>
+   <td >{$rs['time']}</td>
+   <td ><a href="?{PICK_GO}picker_manage&myac=article_manage&pid={$rs[pid]}&p=1">{$rs['article_num']}</a></td>
+   <td ><a target="_blank" href="{$rs['log_url']}">{lang milu_pick:view}</a></td>
+   <!--{/loop}-->
+   <!--{else}-->
+  <tr class="hover"><td colspan="15" align="center" class="td25">{lang milu_pick:no_data}</td></tr>
+  <!--{/if}-->
+
+</table>
+{if intval($_GET['show']) > 0}
+<div class="tipsblock"><ul><li>auto_pick:{eval echo dgmdate($info['cron_info']['auto_pick'], 'u');}</li><li>auto_timing:{eval echo dgmdate($info['cron_info']['auto_timing'], 'u');}</li><li>timing_public:{eval echo dgmdate($info['cron_info']['auto_timing'], 'u');}</li></ul></div>
+{/if}

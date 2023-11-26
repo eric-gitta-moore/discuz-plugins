@@ -1,0 +1,97 @@
+<style>
+.ainuo_piclist{}
+.ainuo_piclist li{ border-bottom:1px solid #eee; background:#fff;}
+.ainuo_piclist li a{ display:block;}
+.ainuo_piclist li a.lione{ padding:12px 10px 6px 10px;}
+.ainuo_piclist li a.litwo{ padding:6px 10px 12px 10px;}
+.ainuo_piclist li .author{ height:30px; line-height:30px; font-size:12px; color:#999;}
+.ainuo_piclist li .author .aleft{ float:left;}
+.ainuo_piclist li .author .aleft .ava{ float:left; margin-right:8px;}
+.ainuo_piclist li .author .aleft .ava img{ width:30px; height:30px;border-radius:50%;}
+.ainuo_piclist li .author .aright{ float:right;}
+.ainuo_piclist li .author .aright .pip{ margin:0 3px;}
+.ainuo_piclist li .author .aleft .abadge{color: white;background-color: #fe7c51;font-size:12px;padding: 2px 5px; border-radius:2px;}
+.ainuo_piclist li .author .aleft .leixing{background-color:#A8C500;}
+.ainuo_piclist li .asub{ display:flex; position:relative;}
+.ainuo_piclist li .asub .atitle{ font-size:17px; line-height:1.5;-webkit-flex-shrink: 1;-ms-flex: 0 1 auto;-webkit-flex-shrink: 1;flex-shrink: 1;position: relative;width: 100%;}
+.ainuo_piclist li .asub .apic1{-webkit-flex-shrink: 0;flex-shrink: 0;margin-left: 1%;width: 32.3%;height: auto;overflow: hidden;}
+.ainuo_piclist li .asub img{ width:100%;}
+.ainuo_piclist li .apic2{ margin-top:5px;}
+.ainuo_piclist li .apic2 .apic{ width:49.5%; margin-left:1%; float:left;}
+.ainuo_piclist li .apic2 img{width: 100%;height: auto;}
+.ainuo_piclist li .apic2 .apic:first-child {margin-left: 0;}
+.ainuo_piclist li .apic3{ margin-top:5px;}
+.ainuo_piclist li .apic3 .apic{ width:32.666%; margin-left:1%; float:left;}
+.ainuo_piclist li .apic3 img{width: 100%;height: auto;}
+.ainuo_piclist li .apic3 .apic:first-child {margin-left: 0;}
+.ainuo_piclist li .afenlei{  padding:0 10px; height:30px;}
+.ainuo_piclist li .afenlei em{font-size:0;}
+.ainuo_piclist li .afenlei em a{font-size: 12px;display: inline;background: #eee;padding: 3px 10px;border-radius: 20px;color: #666;}
+
+.ainuo_piclist .mod-lv {display: inline-block;height: 16px;-webkit-border-radius: 10px;background: #ffc11b;color: #fff;text-align: center;margin: 0 3px;vertical-align: middle;white-space: nowrap;padding: 0 4px;font-size: 0;position:relative;top:-1px;}
+.ainuo_piclist .mod-lv .mod-lv-icon {line-height: 16px;width: 16px;height: 16px;margin-left: -4px;margin-right: 2px;border: 1px solid rgba(255,181,36,.8);color: #ed850a;background: #ffe970;-webkit-border-radius: 100%;display: inline-block;vertical-align: top;position: relative;font-size: 11px;}
+.ainuo_piclist .mod-lv .mod-lv-icon i {position: absolute;width: 100%;height: 100%;left: 0;top: 0;font-size:12px;}
+.ainuo_piclist .mod-lv span:not(.mod-lv-icon) {font-size: 11px;line-height: 17px;display: inline-block;vertical-align: top;position: relative;}
+</style>
+
+<header class="header" id="page-header">
+	<div class="nav">
+        <a class="back z" href="#"><i class="iconfont icon-back_light"></i></a>		
+        <span class="name">$_G['forum'][name]</span>
+        <a href="javascript:;" class="ashare y"><i class="iconfont icon-fenxiang"></i></a>
+    </div>
+</header>
+<!--{template common/top_fix}-->
+
+<div class="cl">
+<ul class="ainuo_forumtop cl">
+    <li>
+    	<!--{if $_G['forum'][icon]}--><img src="data/attachment/common/$_G['forum'][icon]"><!--{/if}-->
+        <div class="abody">
+            <!--{eval $isfav = DB::result_first("SELECT favid FROM ".DB::table('home_favorite')." where id=".$_G[fid]." and idtype='fid' and uid='$_G[uid]'");}-->
+            <!--{if !$isfav || !$_G[uid]}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum" id="a_favorite" class="afa_fav">+ $alang_gz</a>
+            <!--{else}-->
+            <a href="javascript:;" ainuoto="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum&formhash={FORMHASH}" class="afa_fav gy">$alang_yiguanzhu</a>
+            <!--{/if}-->
+            <h4 style="font-weight:400;">$_G['forum'][name]</h4>
+            <p>
+            $alang_today: <em>$_G[forum][todayposts]</em>
+            $alang_uzhuti: <em>$_G[forum][threads]</em>
+            </p>
+            
+        </div>
+    </li>
+</ul>
+</div>
+<!--{hook/forumdisplay_top_mobile}-->
+<!--{if $quicksearchlist && !$_GET['archiveid']}-->
+	<!--{subtemplate forum/search_sortoption}-->
+<!--{else}-->
+	<!--{subtemplate forum/type}-->
+<!--{/if}-->
+<!--{subtemplate forum/zd}-->
+
+
+<!--{if empty($_G['forum']['sortmode'])}-->
+    
+    <!--{if $_G['forum_threadcount']}-->
+    <div class="ainuo_piclist cl">
+        <ul id="ainuoloadmore" class="ainuoloadmore">
+			<!--{subtemplate forumlist/tuwen_list}-->
+        </ul>
+    </div>
+    <!--{else}-->
+    <div class="ainuoemp">{lang forum_nothreads}</div>
+    <!--{/if}-->
+
+<!--{else}-->
+    <!--{subtemplate forum/forumdisplay_sort}-->
+<!--{/if}-->
+<div id="ainuoloadempty"></div>
+
+<!--{if $_G[forum][threads] && ($_G[forum][threads] > $_G[tpp])}-->
+<div id="loading" class="loading G-animate-load-wrap">
+	<div class="load-loading"><span class="loading02"></span> <span class="load-word">$alang_loading</span></div>
+</div>
+<!--{/if}-->

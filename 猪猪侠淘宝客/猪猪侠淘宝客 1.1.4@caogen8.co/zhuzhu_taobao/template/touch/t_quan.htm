@@ -1,0 +1,126 @@
+<!--{if $_GET[loadmore]}-->
+	<!--{loop $list $v}-->
+		<li>
+			<i class="q_new"></i>
+			<a href="{$jump_url}$v[num_iid]&e=$v[e]&zk_final_price=$v[zk_final_price]&q_price=$v[q_price]">
+				<img data-original="$v[pict_url]" src="{$img}nopic.png" class="lazy" />
+			</a>
+			<div class="cl">
+				<p class="wrap">$v[title]</p>
+				<span class="f14"><cite>&yen;</cite> <i>$v[q_price]</i><img src="{$img}quanhoujia.png"></span>
+				<span class="y"><em>{lang zhuzhu_taobao:1t_index_htm_6}{eval echo $v[zk_final_price]-$v[q_price]}{lang zhuzhu_taobao:1jump_url_htm_2}</em></span>
+			</div>
+			<!--{if $_G['adminid'] == 1 }--><span class="fan">{lang zhuzhu_taobao:jump_url_htm_31} $v[commission_rate]%</span><!--{/if}-->
+		</li>
+	<!--{/loop}-->
+<!--{else}-->
+<!--{template zhuzhu_taobao:header}-->
+<link type="text/css" rel="stylesheet" href="./source/plugin/zhuzhu_taobao/static/css/style_touch.css">
+<!--{subtemplate zhuzhu_taobao:t_header}-->
+<div id="top-Nav" class="swiper-container top_cate">
+	<div class="swiper-wrapper">  
+	<!--{eval $i = 1;}-->
+	<!--{loop $category $v}-->
+		<div class="swiper-slide{if $_GET[category_id]} active{else}{if $i == 1} active{/if}{/if}" category-id='$v[category_id]'>$v[name]</div>
+	<!--{eval $i ++;}-->
+	<!--{/loop}-->
+	</div>
+</div>
+
+<div class="sideslip">
+	<!--{eval $i = 1;}-->
+	<!--{loop $category $v}-->
+	<div class="sub_cate" id="cate_$v[category_id]"{if $i == 1} style="display:block"{/if}>
+		<ul>
+		<!--{loop $v[child] $vv}-->
+		<li class="sub_cate_item">
+			<a href="javascript:;" onclick="get_cate('$vv[category_id]')">
+				<img src="$vv[pic]">
+				<h2>$vv[name]</h2>
+			</a>
+		</li>
+		<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{eval $i ++;}-->
+	<!--{/loop}-->
+</div>
+<div class="index_quan">
+	<ul class="cl" id="quan_item">
+	</ul>
+</div>
+
+<input type="hidden" id="categoryid" value="" />
+
+<script type="text/javascript">
+	window.onload = function() {
+		load_more();
+	}
+	var mySwiper2 = new Swiper('#top-Nav', {
+		autoplay: false,
+		speed: 300,
+		slidesPerView: 'auto',
+		onClick: function(swiper){
+		  page = 1;
+		  category = 'cate_'+$('.active').attr('category-id');
+		  $('.sub_cate').removeAttr("style");
+		  document.getElementById(category).setAttribute("style", "display: block;");
+		}
+	});
+
+	swiperWidth = mySwiper2.container[0].clientWidth
+	maxTranslate = mySwiper2.maxTranslate();
+	maxWidth = -maxTranslate + swiperWidth / 2
+
+	$("#top-Nav").on('touchstart', function(e) {
+		e.preventDefault()
+	})
+
+	mySwiper2.on('tap', function(swiper, e) {
+		slide = swiper.slides[swiper.clickedIndex]
+		slideLeft = slide.offsetLeft
+		slideWidth = slide.clientWidth
+		slideCenter = slideLeft + slideWidth / 2
+		mySwiper2.setWrapperTransition(300)
+
+		if (slideCenter < swiperWidth / 2) {		
+			mySwiper2.setWrapperTranslate(0)
+		} else if (slideCenter > maxWidth) {		
+			mySwiper2.setWrapperTranslate(maxTranslate)
+		} else {
+			nowTlanslate = slideCenter - swiperWidth / 2
+			mySwiper2.setWrapperTranslate(-nowTlanslate)
+		}
+		$("#top-Nav .active").removeClass('active')
+		$("#top-Nav .swiper-slide").eq(swiper.clickedIndex).addClass('active');
+		//$("#top-Nav").addClass('q_cate_top');
+	})
+
+	function get_cate(id){
+		document.getElementById("categoryid").value=id;
+		document.getElementById('quan_item').innerHTML = "";
+		load_more();
+	}
+
+	function load_more() {
+		popup.open('<img src="' + IMGDIR + '/imageloading.gif">');
+		var categoryid = document.getElementById("categoryid").value;
+		theurl = 'plugin.php?id=zhuzhu_taobao&mod=quan&loadmore=1&category_id=' + categoryid + '&page=' + page + '&keyword={$keywords}';
+		ajax({ 
+			type:'get',
+			url: theurl,
+			dataType:'text',
+			success:function(msg){
+				$('#quan_item').append(msg);
+				popup.close();
+				page ++;
+				$("img.lazy").lazyload({effect: "fadeIn"});
+			}
+		});	
+	}	
+
+</script>
+
+<!--{subtemplate zhuzhu_taobao:t_footer}-->
+<!--{subtemplate zhuzhu_taobao:footer}-->
+<!--{/if}-->

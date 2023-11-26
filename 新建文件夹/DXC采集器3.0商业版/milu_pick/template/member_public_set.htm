@@ -1,0 +1,144 @@
+<!--{template milu_pick:pick_header}-->
+<script src="static/js/calendar.js?v={PICK_VERSION}" type="text/javascript" type="text/javascript"></script>
+<style>
+#member_field_ul li{ width:120px;}
+#tipslis li{ height:auto;}
+#show_public_time{ float:left; width:550px;}
+</style>
+<form id="form12" name="form12" action="?{PICK_GO}member&myac=member_public_set" method="post"> 
+ <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+ <table class="tb tb2 " id="tips">
+<tbody><tr>
+  <th class="partition">{lang milu_pick:use_must_know}</th>
+</tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis">
+  <li>{lang milu_pick:use_must_know1}</li>
+  <li id="list_tips_more" style="border: none; background: none; margin-bottom: 6px;"><a href="#" onclick="var tiplis = $('tipslis').getElementsByTagName('li');for(var i = 0; i < tiplis.length; i++){tiplis[i].style.display=''}$('list_tips_more').style.display='none';">{lang milu_pick:show_all}</a></li>
+  <li style="display:none">{lang milu_pick:use_must_know2}</li>
+  <li style="border-bottom:0; display:none">{lang milu_pick:use_must_know3}</li>
+</ul></td></tr></tbody></table>
+<table class="tb tb2 ">
+<tbody>
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:base_set}</th>
+</tr>
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:reg_pwd}:</td>
+</tr>
+<tr class="noborder" ><td width="495" class="vtop rowform">
+<input name="set[reg_pwd]" type="text" class="txt" id="url" value="{$info['reg_pwd']}" > 
+
+</td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:reg_pwd_notice}</td>
+</tr>
+
+
+
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:reg_num}:</td>
+</tr>
+<tr class="noborder" ><td width="495" class="vtop rowform">
+<input name="set[reg_num]" type="text" class="txt" id="url" value="{$info['reg_num']}" > 
+
+</td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:reg_num_notice}</td>
+</tr>
+
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:reg_jump_num}:</td>
+</tr>
+<tr class="noborder" ><td width="495" class="vtop rowform">
+<input name="set[reg_jump_num]" type="text" class="txt" id="url" value="{$info['reg_jump_num']}" > 
+
+</td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:reg_jump_notice}</td>
+</tr>
+
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:info_set}</th>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:reg_dateline} :<span class="vtop rowform"></span></td>
+</tr>
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'regdate_type', 'lang' => array('beiyong', 'qiangzhi')), $info);}</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+
+<tr  class="noborder"><td class="vtop rowform">
+<span id="show_public_time" style="">
+   <input style="float:left; width:140px;" name="set[regdate_start_time]" type="text" class="txt" onclick="showcalendar(event, this, 1)" id="regdate_start_time" value="{$info['regdate_start_time']}">
+<span style="float:left; margin-right:10px;">-</span>
+<input style="float:left; width:140px;" name="set[regdate_end_time]" type="text" class="txt" onclick="showcalendar(event, this, 2)" id="regdate_end_time" value="{$info[regdate_end_time]}">
+</span>
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:reg_dateline_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:ip_type}:</td>
+</tr>
+
+<tr  class="noborder">
+<td class="vtop rowform">
+{echo radio_output(array('name' => 'ip_type', 'lang' => array('beiyong', 'qiangzhi')), $info);}</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform"><textarea rows="6" ondblclick="textareasize(this, 1)" onkeyup="textareasize(this, 0)" name="set[rand_ip]" id="rand_ip" cols="50" class="tarea w_area" '..'="">{$info['rand_ip']}</textarea></td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:rand_ip_notice}</td>
+</tr>
+<tr >
+  <td colspan="2" class="td27" s="1">{lang milu_pick:oltime}:</td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'oltime_type', 'lang' => array('beiyong', 'qiangzhi')), $info);}
+</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+
+<tr class="noborder" ><td width="495" class="vtop rowform">
+<input name="set[oltime]" type="text" class="txt" id="oltime" value="{$info['oltime']}" > 
+
+</td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:money_set_notice}</td>
+</tr>
+<!--{loop $info['credits_list'] $key $rs}-->
+<tr >
+  <td colspan="2" class="td27" s="1">{$rs['title']}:</td>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => $rs['name'].'_type', 'lang' => array('beiyong', 'qiangzhi')), $info);}
+</td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<tr class="noborder" ><td width="495" class="vtop rowform">
+<input name="set[{$rs['name']}]" type="text" class="txt" id="{$rs['name']}" value="{$info[$rs['name']]}" > 
+
+</td>
+  <td width="455" class="vtop tips2" s="1">{lang milu_pick:like_up}</td>
+</tr>
+<!--{/loop}-->
+
+
+
+<tr>
+  <th colspan="15" class="partition">{lang milu_pick:apliy_type}</th>
+</tr>
+<tr  class="noborder"><td class="vtop rowform">
+{echo radio_output(array('name' => 'set_type','int_val' => 2, 'lang' => array('save_set', 'apliy_set')), $info);}
+</td>
+<td s="1" class="vtop tips2">{lang milu_pick:apliy_type_notice}</td>
+</tr>
+
+
+<tr  class="noborder"><td class="vtop rowform"><div class="fixsel">
+<button type="submit" value="1" name="submit" class="button">{lang milu_pick:submit}</button>
+</div></td>
+<td s="1" class="vtop tips2">&nbsp;</td>
+</tr>
+<td colspan="15"></td></tr><script type="text/JavaScript">_attachEvent(document.documentElement, 'keydown', function (e) { entersubmit(e, 'addsubmit'); });</script></tbody></table>
+</form>

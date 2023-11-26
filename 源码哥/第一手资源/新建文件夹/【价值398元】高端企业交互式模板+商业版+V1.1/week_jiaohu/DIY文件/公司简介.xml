@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="spacecss"><![CDATA[#frameyd1cLA { border:0px !important;margin:0px !important;}#portal_block_18 { border:0px !important;margin:0px !important;}#portal_block_18 .dxb_bc { margin:0px !important;}#framep2n1bg { border:0px !important;margin:0px !important;}#portal_block_19 { border:0px !important;margin:0px !important;}#portal_block_19 .dxb_bc { margin:0px !important;}#frameHCV83Y { border:0px !important;margin:0px !important;}#portal_block_20 { border:0px !important;margin:0px !important;}#portal_block_20 .dxb_bc { margin:0px !important;}#framelo3Fmy { border:0px !important;margin:0px !important;}#portal_block_21 { border:0px !important;margin:0px !important;}#portal_block_21 .dxb_bc { margin:0px !important;}]]></item>
+	<item id="layoutdata">
+		<item id="wk_about_diy1">
+			<item id="frame`frameyd1cLA">
+				<item id="attr">
+					<item id="name"><![CDATA[frameyd1cLA]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`frameyd1cLA_left">
+					<item id="attr">
+						<item id="name"><![CDATA[frameyd1cLA_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_18">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_18]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="wk_about_diy2">
+			<item id="frame`framep2n1bg">
+				<item id="attr">
+					<item id="name"><![CDATA[framep2n1bg]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`framep2n1bg_left">
+					<item id="attr">
+						<item id="name"><![CDATA[framep2n1bg_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_19">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_19]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="wk_about_diy3">
+			<item id="frame`frameHCV83Y">
+				<item id="attr">
+					<item id="name"><![CDATA[frameHCV83Y]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`frameHCV83Y_left">
+					<item id="attr">
+						<item id="name"><![CDATA[frameHCV83Y_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_20">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_20]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="wk_about_diy4">
+			<item id="frame`framelo3Fmy">
+				<item id="attr">
+					<item id="name"><![CDATA[framelo3Fmy]]></item>
+					<item id="moveable"><![CDATA[true]]></item>
+					<item id="className"><![CDATA[ frame move-span cl frame-1]]></item>
+					<item id="titles"><![CDATA[]]></item>
+				</item>
+				<item id="column`framelo3Fmy_left">
+					<item id="attr">
+						<item id="name"><![CDATA[framelo3Fmy_left]]></item>
+						<item id="className"><![CDATA[column frame-1-c]]></item>
+					</item>
+					<item id="block`portal_block_21">
+						<item id="attr">
+							<item id="name"><![CDATA[portal_block_21]]></item>
+							<item id="className"><![CDATA[block move-span]]></item>
+							<item id="titles"><![CDATA[]]></item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item id="diy1"><![CDATA[]]></item>
+		<item id="listcontenttop"><![CDATA[]]></item>
+		<item id="diycontentbottom"><![CDATA[]]></item>
+		<item id="diy3"><![CDATA[]]></item>
+	</item>
+	<item id="blockdata">
+		<item id="block">
+			<item id="18">
+				<item id="bid"><![CDATA[18]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[¹ØÓÚÎÒÃÇ1]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="about_title or">
+			<h1>ÎÒÃÇÊÇË­</h1>
+		</div>
+		<p>
+			weekdesign £¨Ô´Âë¸ç³öÆ·£©³ÉÁ¢ÓÚ2012Äê£¬ÎÒÃÇÊÇÒ»¼Ò×¨×¢ÓÃ»§ÌåÑéÉè¼Æ¿ª·¢Óë»¥ÁªÍøÆ·ÅÆ½¨ÉèµÄÉè¼Æ¹«Ë¾£¬´´Á¢ÖÁ½ñÎª200¶àÎ»¿Í»§Ìá¹©ÁË´´ÐÂÓë×¨ÒµµÄÉè¼Æ·½°¸¡£Éè¼Æ·þÎñ·¶Î§°üÀ¨£º½»»¥Ô­ÐÍÉè¼Æ¡¢²úÆ·ÊÓ¾õÉè¼Æ¡¢ÍøÕ¾Éè¼ÆÓë¿ª·¢½¨Éè¡¢ÒÆ¶¯¼°Èí¼þ²úÆ·½çÃæÉè¼Æ¡¢Í¼±êÉè¼Æ¡¢Æ·ÅÆ¼°Æ½ÃæÉè¼ÆµÈ¡£ÎÒÃÇµÄ¼ÛÖµÓë×ÚÖ¼ÊÇÎªÓÃ»§ºÍ¿Í»§´òÔì×îºÃµÄÉè¼Æ£¬ÓÃÉè¼ÆÌáÉý²úÆ·ºÍÆóÒµ¼ÛÖµ¡£
+		</p>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"about_title or\">
+			<h1>ÎÒÃÇÊÇË­</h1>
+		</div>
+		<p>
+			weekdesign £¨Ô´Âë¸ç³öÆ·£©³ÉÁ¢ÓÚ2012Äê£¬ÎÒÃÇÊÇÒ»¼Ò×¨×¢ÓÃ»§ÌåÑéÉè¼Æ¿ª·¢Óë»¥ÁªÍøÆ·ÅÆ½¨ÉèµÄÉè¼Æ¹«Ë¾£¬´´Á¢ÖÁ½ñÎª200¶àÎ»¿Í»§Ìá¹©ÁË´´ÐÂÓë×¨ÒµµÄÉè¼Æ·½°¸¡£Éè¼Æ·þÎñ·¶Î§°üÀ¨£º½»»¥Ô­ÐÍÉè¼Æ¡¢²úÆ·ÊÓ¾õÉè¼Æ¡¢ÍøÕ¾Éè¼ÆÓë¿ª·¢½¨Éè¡¢ÒÆ¶¯¼°Èí¼þ²úÆ·½çÃæÉè¼Æ¡¢Í¼±êÉè¼Æ¡¢Æ·ÅÆ¼°Æ½ÃæÉè¼ÆµÈ¡£ÎÒÃÇµÄ¼ÛÖµÓë×ÚÖ¼ÊÇÎªÓÃ»§ºÍ¿Í»§´òÔì×îºÃµÄÉè¼Æ£¬ÓÃÉè¼ÆÌáÉý²úÆ·ºÍÆóÒµ¼ÛÖµ¡£
+		</p>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1461205021]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="19">
+				<item id="bid"><![CDATA[19]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[¹ØÓÚÎÒÃÇ2]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<dl>
+			<dd><img src="template/week_jiaohu/images/about/guanyu_04.png"></dd>
+			<dt>
+			<h2>ÎÒÃÇ³Á½þÓÚÓÃ»§ÌåÑé</h2>
+			</dt>
+			<dt>
+			<h2>°ïÄúÍÚ¾òºÍ´´ÐÂ¸ü´óÉÌ»úµÄ¿ÉÄÜ</h2>
+			</dt>
+		</dl>
+		<dl>
+			<dd><img src="template/week_jiaohu/images/about/guanyu_06.png"></dd>
+			<dt>
+			<h2>·þÎñË¼Î¬ÏÂµÄÉÌÒµÉè¼Æ</h2>
+			</dt>
+			<dt>
+			<h2>Æ²Æú¸¡¿äÈ¥Ö±´ï¹²Í¬µÄÄ¿±ê</h2>
+			</dt>
+		</dl>
+		<dl>
+			<dd><img src="template/week_jiaohu/images/about/guanyu_08.png"></dd>
+			<dt>
+			<h2>¾«ÒæºÏ×÷ºÍ·ÖÏíµÄÌ¬¶È</h2>
+			</dt>
+			<dt>
+			<h2>ÈÃÎÒÃÇ¶¦Á¦ÏàÖúÄãµÄÃÎÏë</h2>
+			</dt>
+		</dl>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<dl>
+			<dd><img src=\"template/week_jiaohu/images/about/guanyu_04.png\"></dd>
+			<dt>
+			<h2>ÎÒÃÇ³Á½þÓÚÓÃ»§ÌåÑé</h2>
+			</dt>
+			<dt>
+			<h2>°ïÄúÍÚ¾òºÍ´´ÐÂ¸ü´óÉÌ»úµÄ¿ÉÄÜ</h2>
+			</dt>
+		</dl>
+		<dl>
+			<dd><img src=\"template/week_jiaohu/images/about/guanyu_06.png\"></dd>
+			<dt>
+			<h2>·þÎñË¼Î¬ÏÂµÄÉÌÒµÉè¼Æ</h2>
+			</dt>
+			<dt>
+			<h2>Æ²Æú¸¡¿äÈ¥Ö±´ï¹²Í¬µÄÄ¿±ê</h2>
+			</dt>
+		</dl>
+		<dl>
+			<dd><img src=\"template/week_jiaohu/images/about/guanyu_08.png\"></dd>
+			<dt>
+			<h2>¾«ÒæºÏ×÷ºÍ·ÖÏíµÄÌ¬¶È</h2>
+			</dt>
+			<dt>
+			<h2>ÈÃÎÒÃÇ¶¦Á¦ÏàÖúÄãµÄÃÎÏë</h2>
+			</dt>
+		</dl>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1461205021]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="20">
+				<item id="bid"><![CDATA[20]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[¹ØÓÚÎÒÃÇ3]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="about_title">
+			<h1>·þÎñÓÅÊÆ</h1>
+			<span>´´Òâ¡¢Á÷³Ì¡¢Ö´ÐÐÈ±Ò»²»¿É</span>
+		</div>
+		<div class="project_con">
+			<dl>
+				<dd style="background:url(template/week_jiaohu/images/about/xiangmu_03.jpg) no-repeat center center;background-size:cover"><a href="#"></a></dd>
+				<dt>´Ó´´Ê¼ÖÁ½ñ£¬ÎÒÃÇµÄÒµÎñ·½ÏòÊ¼ÖÕ²»±ä£¬×¨×¢×öºÃÒ»¼þÊÂ²ÅÄÜ¸üºÃµÄ×·Çó¸ßÆ·ÖÊ£¬ÕâÒ²ÊÇweekdesign´æÔÚµÄ¼ÛÖµ¡£ÔÚÎ´À´ÎÒÃÇÒ²ÊÇ»ùÓÚ´ËÐÅÄî¶ø¼ÌÐø´´Ôì¡£</dt>
+			</dl>
+			<dl>
+				<dd style="background:url(template/week_jiaohu/images/about/xiangmu_05.jpg) no-repeat center center;background-size:cover"><a href="#"></a></dd>
+				<dt>ÔÚ²»¶ÏµÄ´´ÐÂºÍÊµ¼ùÖÐ×Ü½á³ö¿É³ÖÐøºÍ¿ÉÐÅÀµµÄÉè¼ÆÁ÷³Ì£¬¼á³ÖÓëÓÃ»§Ò»ÆðË¼¿¼£¬ÓÃÉè¼ÆµÄ·½·¨·¢ÏÖÎÊÌâ¡¢½â¾öÎÊÌâ¡¢Êä³öÉè¼Æ·½°¸£¬²¢ÊµÏÖ¿Í»§²úÆ·ºÍÆóÒµ¼ÛÖµµÄÌáÉý¡£</dt>
+			</dl>
+			<dl>
+				<dd style="background:url(template/week_jiaohu/images/about/xiangmu_07.jpg) no-repeat center center;background-size:cover"><a href="#"></a></dd>
+				<dt>weekdesign5ÄêÀ´»ýÀÛÁË´óÁ¿ÓÅÐãµÄÏîÄ¿°¸Àý£¬²¢ÑéÖ¤ÁËÉè¼ÆµÄ¼ÛÖµ¡£ÔÚ²»¶ÏµÄÌ½Ë÷ÖÐ×Ü½á¾­Ñé£¬ÒÔ½á¹ûÎªµ¼Ïò£¬¼ÌÐøÎª¸ü¶à¿Í»§Ìá¹©ÓÅÐãµÄÉè¼Æ¡£</dt>
+			</dl>
+		</div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"about_title\">
+			<h1>·þÎñÓÅÊÆ</h1>
+			<span>´´Òâ¡¢Á÷³Ì¡¢Ö´ÐÐÈ±Ò»²»¿É</span>
+		</div>
+		<div class=\"project_con\">
+			<dl>
+				<dd style=\"background:url(template/week_jiaohu/images/about/xiangmu_03.jpg) no-repeat center center;background-size:cover\"><a href=\"#\"></a></dd>
+				<dt>´Ó´´Ê¼ÖÁ½ñ£¬ÎÒÃÇµÄÒµÎñ·½ÏòÊ¼ÖÕ²»±ä£¬×¨×¢×öºÃÒ»¼þÊÂ²ÅÄÜ¸üºÃµÄ×·Çó¸ßÆ·ÖÊ£¬ÕâÒ²ÊÇweekdesign´æÔÚµÄ¼ÛÖµ¡£ÔÚÎ´À´ÎÒÃÇÒ²ÊÇ»ùÓÚ´ËÐÅÄî¶ø¼ÌÐø´´Ôì¡£</dt>
+			</dl>
+			<dl>
+				<dd style=\"background:url(template/week_jiaohu/images/about/xiangmu_05.jpg) no-repeat center center;background-size:cover\"><a href=\"#\"></a></dd>
+				<dt>ÔÚ²»¶ÏµÄ´´ÐÂºÍÊµ¼ùÖÐ×Ü½á³ö¿É³ÖÐøºÍ¿ÉÐÅÀµµÄÉè¼ÆÁ÷³Ì£¬¼á³ÖÓëÓÃ»§Ò»ÆðË¼¿¼£¬ÓÃÉè¼ÆµÄ·½·¨·¢ÏÖÎÊÌâ¡¢½â¾öÎÊÌâ¡¢Êä³öÉè¼Æ·½°¸£¬²¢ÊµÏÖ¿Í»§²úÆ·ºÍÆóÒµ¼ÛÖµµÄÌáÉý¡£</dt>
+			</dl>
+			<dl>
+				<dd style=\"background:url(template/week_jiaohu/images/about/xiangmu_07.jpg) no-repeat center center;background-size:cover\"><a href=\"#\"></a></dd>
+				<dt>weekdesign5ÄêÀ´»ýÀÛÁË´óÁ¿ÓÅÐãµÄÏîÄ¿°¸Àý£¬²¢ÑéÖ¤ÁËÉè¼ÆµÄ¼ÛÖµ¡£ÔÚ²»¶ÏµÄÌ½Ë÷ÖÐ×Ü½á¾­Ñé£¬ÒÔ½á¹ûÎªµ¼Ïò£¬¼ÌÐøÎª¸ü¶à¿Í»§Ìá¹©ÓÅÐãµÄÉè¼Æ¡£</dt>
+			</dl>
+		</div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1461205021]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+			<item id="21">
+				<item id="bid"><![CDATA[21]]></item>
+				<item id="blockclass"><![CDATA[html_html]]></item>
+				<item id="blocktype"><![CDATA[0]]></item>
+				<item id="name"><![CDATA[¹ØÓÚÎÒÃÇ4]]></item>
+				<item id="title"><![CDATA[]]></item>
+				<item id="classname"><![CDATA[]]></item>
+				<item id="summary"><![CDATA[<div class="about_title">
+			<h1>ÎÒÃÇµÄÍÅ¶Ó</h1>
+		</div>
+		<div class="top">
+			<p>		ÎÒÃÇÊÇ×·ÇóÆ·ÖÊÓëÁ¦Çó²»¶Ï³¬Ô½×Ô¼ºµÄÍÅ¶Ó£¬Ã¿Ò»Î»³ÉÔ±Ò²ÊÇÇ×ÃÜµÄ»ï°é£¬Óë¹«Ë¾Ò»Æð³É³¤Óë·¢Õ¹¡£ÎÒÃÇ×ðÖØÃ¿´ÎºÏ×÷µÄ»ú»áÓëÌôÕ½£¬²»¶Ï¾«½ø£¬Á¦ÇóÍêÃÀ¡£ÍÅ¶Ó±ü³Ð×¨×¢¡¢×¨ÒµµÄÉè¼Æ·þÎñË¼Î¬£¬ÈÃ¿Í»§Í¨¹ýÉè¼Æ·¢»Ó²úÆ·µÄ×î´ó¼ÛÖµ£¬²¢·¢¾òÎÞÏÞµÄ¿ÉÄÜ¡£ÈÈ°®Éè¼Æ²¢¼áÐÅÉè¼ÆµÄÁ¦Á¿ÈÃÎÒÃÇ²»¶ÏÇ°½ø¡­
+			</p>
+		</div>
+		<div class="team_con">
+			<div class="left_cor">
+				<div class="boxgrid" style="background:url(template/week_jiaohu/images/about/team_2.jpg) no-repeat;background-size:cover">
+					<div class="cover">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+				<div class="boxgrid" style="background:url(template/week_jiaohu/images/about/team_3.jpg) no-repeat;background-size:cover">
+					<div class="cover">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+				<div class="boxgrid" style="background:url(template/week_jiaohu/images/about/team_4.jpg) no-repeat;background-size:cover">
+					<div class="cover">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+				<div class="boxgrid" style="background:url(template/week_jiaohu/images/about/team_5.jpg) no-repeat;background-size:cover">
+					<div class="cover">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+			</div>
+			<div class="right_cor">
+				<div class="boxgrid" style="background:url(template/week_jiaohu/images/about/team_6.jpg) no-repeat;background-size:cover">
+					<div class="cover1">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+			</div>
+		</div>]]></item>
+				<item id="uid"><![CDATA[1]]></item>
+				<item id="username"><![CDATA[admin]]></item>
+				<item id="styleid"><![CDATA[0]]></item>
+				<item id="blockstyle"><![CDATA[]]></item>
+				<item id="picwidth"><![CDATA[0]]></item>
+				<item id="picheight"><![CDATA[0]]></item>
+				<item id="target"><![CDATA[blank]]></item>
+				<item id="dateformat"><![CDATA[Y-m-d]]></item>
+				<item id="dateuformat"><![CDATA[0]]></item>
+				<item id="script"><![CDATA[blank]]></item>
+				<item id="param">
+					<item id="content"><![CDATA[<div class=\"about_title\">
+			<h1>ÎÒÃÇµÄÍÅ¶Ó</h1>
+		</div>
+		<div class=\"top\">
+			<p>		ÎÒÃÇÊÇ×·ÇóÆ·ÖÊÓëÁ¦Çó²»¶Ï³¬Ô½×Ô¼ºµÄÍÅ¶Ó£¬Ã¿Ò»Î»³ÉÔ±Ò²ÊÇÇ×ÃÜµÄ»ï°é£¬Óë¹«Ë¾Ò»Æð³É³¤Óë·¢Õ¹¡£ÎÒÃÇ×ðÖØÃ¿´ÎºÏ×÷µÄ»ú»áÓëÌôÕ½£¬²»¶Ï¾«½ø£¬Á¦ÇóÍêÃÀ¡£ÍÅ¶Ó±ü³Ð×¨×¢¡¢×¨ÒµµÄÉè¼Æ·þÎñË¼Î¬£¬ÈÃ¿Í»§Í¨¹ýÉè¼Æ·¢»Ó²úÆ·µÄ×î´ó¼ÛÖµ£¬²¢·¢¾òÎÞÏÞµÄ¿ÉÄÜ¡£ÈÈ°®Éè¼Æ²¢¼áÐÅÉè¼ÆµÄÁ¦Á¿ÈÃÎÒÃÇ²»¶ÏÇ°½ø¡­
+			</p>
+		</div>
+		<div class=\"team_con\">
+			<div class=\"left_cor\">
+				<div class=\"boxgrid\" style=\"background:url(template/week_jiaohu/images/about/team_2.jpg) no-repeat;background-size:cover\">
+					<div class=\"cover\">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+				<div class=\"boxgrid\" style=\"background:url(template/week_jiaohu/images/about/team_3.jpg) no-repeat;background-size:cover\">
+					<div class=\"cover\">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+				<div class=\"boxgrid\" style=\"background:url(template/week_jiaohu/images/about/team_4.jpg) no-repeat;background-size:cover\">
+					<div class=\"cover\">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+				<div class=\"boxgrid\" style=\"background:url(template/week_jiaohu/images/about/team_5.jpg) no-repeat;background-size:cover\">
+					<div class=\"cover\">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+			</div>
+			<div class=\"right_cor\">
+				<div class=\"boxgrid\" style=\"background:url(template/week_jiaohu/images/about/team_6.jpg) no-repeat;background-size:cover\">
+					<div class=\"cover1\">
+						<h3>ÍÅ¶Ó½¨Éè»î¶¯ÉãÓ°</h3>
+					</div>
+				</div>
+			</div>
+		</div>]]></item>
+					<item id="items"><![CDATA[10]]></item>
+				</item>
+				<item id="shownum"><![CDATA[10]]></item>
+				<item id="cachetime"><![CDATA[0]]></item>
+				<item id="cachetimerange"><![CDATA[0,0]]></item>
+				<item id="punctualupdate"><![CDATA[0]]></item>
+				<item id="hidedisplay"><![CDATA[0]]></item>
+				<item id="dateline"><![CDATA[1461205020]]></item>
+				<item id="notinherited"><![CDATA[0]]></item>
+				<item id="isblank"><![CDATA[0]]></item>
+			</item>
+		</item>
+		<item id="style">
+		</item>
+	</item>
+</root>

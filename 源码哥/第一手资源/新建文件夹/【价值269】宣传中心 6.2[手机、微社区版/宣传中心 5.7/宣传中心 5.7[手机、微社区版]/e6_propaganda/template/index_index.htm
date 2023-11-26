@@ -1,0 +1,61 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+		<table style="width:100%">
+			<tr> 
+				<td>{lang e6_propaganda:count_money}{$e6_user_count['money']}</td>
+				<td>{lang e6_propaganda:count_user}{$e6_user_count['register']}</td>
+				<td>{lang e6_propaganda:count_ip}{$e6_user_count['ip']}</td>
+				<td>{lang e6_propaganda:count_task}{$e6_user_count['task']}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="bm">
+	<div class="bm_h cl">
+		<h2>{lang e6_propaganda:spread_url}</h2>
+	</div>
+	<div class="bm_c bid no_padding">
+		<table cellspacing="0" cellpadding="0" class="tfm">
+			<caption>
+				<p>{lang e6_propaganda:prompt_p1}</p>
+				<p>{lang e6_propaganda:prompt_p2}</p>
+			</caption>
+			<tr>
+				<th>{lang e6_propaganda:spread_url}</th>
+				<td class="pns">
+					<input type="text" class="px vm" onclick="this.select();setCopy('{$e6_extra_text}'+this.value, '{lang e6_propaganda:copy_prompt}');" value="{$spread_url}" size="50" /> 
+					<button type="submit" class="pn vm" onclick="setCopy('{$e6_extra_text}'+'{$spread_url}', '{lang e6_propaganda:copy_prompt}');" type="submit"><em>{lang e6_propaganda:copy}</em></button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="bm">
+	<div class="bm_h cl">
+		<h2>{lang e6_propaganda:index_comment}</h2>
+	</div>
+	<div class="bm_c bid">
+		<ul class="e6_ul">
+			<li>1. {$prompt_1}</li>
+			<li>2. {$prompt_2}
+				<div>
+					<!--{loop $prompt_2_list $v}-->
+						<span>{$v}</span>
+					<!--{/loop}-->
+				</div>
+			</li>
+			<li>3. {$prompt_3}</li>
+			<li>4. {$prompt_4}
+				<table>
+					<!--{loop $prompt_4_list $v}-->
+						<tr>
+							<td class="e6_td1" nowrap="nowrap">{$v['name']}</td>
+							<td class="e6_td2" nowrap="nowrap">{$v['comment']}</td>
+							<td class="e6_td3">{$v['reward']}</td>
+						</tr>
+					<!--{/loop}-->
+				</table>
+			</li>
+		</ul>	
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

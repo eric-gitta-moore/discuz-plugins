@@ -1,0 +1,41 @@
+在数据调用页面的模块分类处选择【帖子模块】添加调用
+
+下面涉及的必须设置，没涉及的可以根据自身情况选择或者不改动保持默认
+
+模块标识：NVBING5APP-幻灯片
+
+必须含图片附件：是
+
+显示条数：5
+
+显示样式：帖子图片幻灯片
+
+缩略图宽度：600
+
+缩略图高度：380
+
+【确定】
+
+
+点击确定后，选择刚才添加的模块的“属性”→“模块模板”，将代码修改为（默认代码删除）：
+
+<div class="n5jj_hdys cl">
+	<div id="slider" class="hdys_tpdy">
+		<div class="hdys_tpdz">
+			[loop]
+			<div class="wrap"><a href="{url}" class="n5jj_hdys_img"><img src="{pic}"  width="{picwidth}" alt="{title}"></a></div>
+			[/loop]
+		</div>
+	</div>
+	<div class="hdys_sx y">
+		[loop1]
+		<div class="dot on"></div>
+		[/loop1]
+	</div>
+	<div class="n5jj_hdhd">
+		<div class="n5jj_hdhd_1"></div>
+		<div class="n5jj_hdhd_2"></div>
+	</div>
+</div>
+
+修改后选择更新，这个模块添加完成。

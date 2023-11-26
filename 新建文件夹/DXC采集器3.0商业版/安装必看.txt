@@ -1,0 +1,16 @@
+安装说明：
+
+把milu_pick文件夹上传到插件目录source\plugin 
+
+然后在：应用--插件中，安装插件，清理缓存即可。
+
+DZ3.0以上的（3.1，3.2），另外要上传这个文件discuz_application.php，到source\class\discuz目录下替换
+
+
+如果出现不是正版提示，解决方法：http://discuz.61wuba.com/read-31
+
+
+淘宝店铺：http://shop112740329.taobao.com
+
+旺旺：v2015v
+

@@ -1,0 +1,410 @@
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+        <title>{$title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="format-detection" content="telephone=no, email=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <style>
+		body,div,ul,li,h1,h2,h3,h4,h5,h6,p,form,input,textarea,select,label,aside,footer,header,menu,nav,dl,dt,dd,article,section{margin:0;padding:0;border:#FFF}
+		body{font-family:Helvetica;line-height:1;font-family:Microsoft YaHei,Helvetica,sans-serif; font-size:14px}
+		ol,ul{list-style:none}
+		textarea{resize:none}
+		button,input,select,textarea{outline:0;font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif}
+		button,input[type=button]{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+		input[type=number]::-webkit-outer-spin-button{display:none}
+		input[type=number]::-webkit-inner-spin-button{display:none}
+		a{ text-decoration:none;  color:#FFF}
+		input[type=radio] { -webkit-appearance: radio;}
+		img, input, textarea {vertical-align: middle;}
+		.header{ background:{if $keke_tixian['wapcl']}{$keke_tixian['wapcl']}{else}#e14546{/if};padding: 16px 0 12px;color: #fff; position:relative; text-align:center}
+		.prove {position: absolute;top: 5px;left: 0;}
+		a.back {position: absolute;height: 30px;width: 30px;left: 0;top: 0;background: url(source/plugin/keke_tixian/template/images/back.png) center center no-repeat;background-size: 10px auto;}
+		.myrec{ position:absolute; right:10px; top:5px;}
+		.myrec a{ border:1px dotted #fce8e8; display:block; padding:3px 5px; margin-top:7px; color:#fce8e8; border-radius:5px; font-size:13px}
+		.fix{*zoom:1;}
+		.fix:after{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+		.header span.uhead{ position:relative;height:51px; display:block; width:51px; margin:0 auto}
+		.header span.uhead b {display: inline-block;border-radius: 55px;overflow: auto;z-index: 1;border: 2px solid #f9dada;background-color: #f1f1f1;}
+		.header span.uhead b img {width: 51px;height: 51px;border-radius: 50%;vertical-align: middle;position:relative}
+		.header span.uhead img.hi {position: absolute;right: -10px;top: 0;width: 16px;z-index: 999;}
+		.header a.usnmae {display: block;line-height: 37px; font-size:17px; color:#FFF;}
+		.flexBox{box-sizing: border-box; margin:10px 0;}
+		.flexBox .dq{background: url(source/plugin/keke_tixian/template/images/downico.png) right center no-repeat; padding-right:16px;background-size: 11px auto;}
+		.header nav ul li:not(:last-child) {border-right: 1px solid #e76a6b;}
+		.header nav ul li { width: 50%;display: block; float:left; box-sizing:border-box; line-height:20px;}
+		.header nav ul li p{ font-size:13px}
+		
+		.mylist nav ul{ padding:10px}
+		.mylist nav ul li{ width:100%;  line-height:20px; margin:0px auto; padding:10px 0px;  border-bottom:10px solid #EEE}
+		.mylist nav ul li .pup{ font-size:16px;}
+		.mylist nav ul li .pup i{ font-style:normal; font-size:12px; margin-left:10px;color:#999; background:#F6F6F6; padding:0 2px 0px 0px}
+		.mylist nav ul li .dow{ font-size:13px; color:#999; margin-top:3px;}
+		.mylist nav ul li .rred{ font-weight:500; color:#C30}
+		.mylist nav ul li span{ float:right; font-size:14px}
+		.mylist nav ul li .dow span{ font-size:13px}
+		.mylist nav ul li b{margin-right:5px;}
+		.mylist .gl{ font-weight:500;color:#0C3; }
+		.mylist .yl{ font-weight:500;color:#F93;}
+		.mylist .sep{ margin:0px 7px; color:#ccc; font-weight:500}
+		.mylist .pg{ float:left; margin:10px 5px;}
+		.mylist .pg label{ display:none}
+		.mylist .pg a,.mylist .pg strong{ color:#333;  display:block; border:1px solid #e14546; padding:3px 6px; border-radius:3px; float:left; margin:0px 5px;}
+		.mylist .pg strong{ color:#FFF; background:#e14546}
+		.moneylist{ border-top:10px solid #f4f4f4}
+		.moneylist nav ul li {box-sizing: border-box;float: left;text-align: center;font-size: 12px;height: 83px;background-color: #fff;padding: 7px 0 10px 0;border-bottom: 1px solid #f4f4f4; width:100%;text-align:left;padding-left:20px;}
+		.moneylist li a {display: block;color: #666;}
+		.moneylist nav ul li h4 {font-size: 13px;}
+		.moneylist nav ul li span{ font-size:16px; display:block; margin-top:15px; margin-bottom:10px;}
+		.moneylist nav ul li.zhanghu{ position:relative;line-height:59px; font-size:18px; border-bottom:10px solid #f4f4f4;height:130px;}
+		.moneylist nav ul li .icos{ font-style:normal; position:absolute;width: 10px;height: 15px; right:20px; top:75px;background: url(source/plugin/keke_tixian/template/images/icons_c.png) 0 0 no-repeat;background-size: 25px auto;}
+		.moneylist nav ul li.zhanghu .txzh{line-height:23px; font-size:16px; color:#333; margin-top:10px; }
+		.moneylist nav ul li.zhanghu .txzh p.cardon{ font-size:13px; color:#999; }
+		.moneylist nav ul li.setjiner{ height:120px;border-bottom:10px solid #f4f4f4; position:relative;}
+		.moneylist nav ul li.setjiner .titles,.zhanghu .titles{ border-bottom:1px dotted #ccc; line-height:38px; height:38px; margin-right:20px; line-height:40px; font-size:14px; color:#333;background:url(source/plugin/keke_tixian/template/images/mm-icon-02.png) left center no-repeat; padding-left:25px; background-size:15px;}
+		.titles cite.des{ float:right; font-style:normal; text-align:right; color:#ccc }
+		.moneylist nav ul li.setjiner .icos{ width:40px; position:absolute; right:20px; top:68px; background-position:40px top; font-size:16px; padding-right:10px;}
+		.moneylist nav ul li.setjiner .titles{ color:#333; background:url(source/plugin/keke_tixian/template/images/mm-icon-01.png) left no-repeat; padding-left:25px; background-size:15px;}
+		.moneylist nav ul li .recharge{ text-align:left; padding:3px 0px 0px 0px; margin:10px 15px 0px 0px;}
+		.moneylist nav ul li .recharge input {font-size: 16px;text-align: left;height: 30px; color:#000; vertical-align: 2px;-webkit-tap-highlight-color: rgba(0,0,0,0);border: none;outline: none;-webkit-appearance: none;}
+		.cardlist ul li.zhanghu{  line-height:59px; font-size:18px; border-bottom:10px solid #f4f4f4; padding:10px 0px 10px 20px;}
+		.cardlist nav ul li .icos{ font-style:normal; margin:18px 20px 0px 0px; width: 10px;height: 15px; float:right;background: url(source/plugin/keke_tixian/template/images/icons_c.png) 0 0 no-repeat;background-size: 25px auto;}
+		.cardlist nav ul li .delicos{ font-style:normal; margin:18px 20px 0px 0px; width: 20px;height:20px; float:right;background: url(source/plugin/keke_tixian/template/images/del.png) 0 0 no-repeat;background-size: 20px auto;}
+		.cardlist nav ul li.zhanghu .txzh{line-height:23px; font-size:16px; color:#666; }
+		.cardlist nav ul li.zhanghu .txzh p.cardon{ font-size:14px; color:#999; }
+		.cardlist .adddel{ border-top:13px solid #f4f4f4;}
+		.cardlist .adddel li{ box-sizing:border-box; width:50%; float:left; text-align:center; height:50px; line-height:40px; font-size:15px; font-size: line-height:35px; border-bottom:10px solid #f4f4f4}
+		.cardlist .adddel li.add{ border-right:2px solid #f4f4f4}
+		.cardlist .adddel li img{ margin-right:10px;}
+		.moneylist nav ul li .recharge b{ color:#CCC; font-weight:500; margin:0px 10px}
+		.pay-menu { position: relative; float:left; width:100%; margin-bottom:10px; border-bottom:1px solid #f4f4f4; padding-bottom:10px}
+		.pays { width:90%; margin:20px auto 0; border-radius:10px; background:#FFF}
+		.pay-menu input[type="radio"] {opacity: 0;position: absolute;width: 20px;height: 20px;top: 50%;right: 0;margin-top: -8px;z-index: 9;}
+		.pay-menu .flol {margin-right: 22px;float: left;}
+		.pay-menu .flol img {width: 44px;height: 44px;}
+		.pay-menu .info p {color: #0c0d0e;font-size: 16px;line-height: 20px;}
+		.pay-menu .info span {display: block;font-size: 12px;color: #b3b6be;line-height: 20px;padding-top: 4px;}
+		.pay-menu input[type="radio"]:checked + label i {background-position: -16px 0;}
+		.pay-menu i {position: absolute;display: block;width: 16px;height: 16px;top: 50%;right: 0;margin-top: -8px;background: url(source/plugin/keke_tixian/template/images/icon-iptr.png) 0 0 no-repeat;background-size: 32px auto;}
+		
+		.mm-btn a {display: block;height: 36px;line-height: 36px;max-width: 90%;margin: 15px auto 0;text-align: center;border-radius: 3px;background-color:{if $keke_tixian['wapcl']}{$keke_tixian['wapcl']}{else}#e14546{/if};color: #fff;font-size: 14px;}
+		.mm-btn{ margin-bottom:50px}
+		.remind{ line-height:25px; padding:5px 0px; border-radius:5px; text-align:center; color:#999; background:#F7F7F7}
+		
+		.mask {position: fixed;z-index:999;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;opacity: .6; display:none}
+		.selecredit{position: fixed; padding:20px 10px;left: 0; bottom:-150px; display:none;width:100%; background:#FFF; z-index:9999}
+		.selecredit li{ text-align:center; height:35px; line-height:35px; border-bottom:1px solid #EEE; margin-right:20px; font-size:16px;letter-spacing:2px;}
+		.keke_warning{ display:none;position: fixed;left:0; right:0;margin: 0 20%;z-index: 9999; top:200px;padding: 10px;color: #FFFFFF;background: rgba(0, 0, 0, 0.6);font-size: 14px;text-align: center;border-radius: 4px;}
+        </style>
+        <script type="text/javascript" src="source/plugin/keke_tixian/js/jquery.js"></script>
+		<script>jQuery.noConflict();</script>
+	</head>
+<body style="background:#fff">
+ <form name="ment" action="plugin.php" method="get"  id="ment">
+        <input type="hidden" name="id" value="keke_tixian" >
+        <input type="hidden" name="formhash" value="{FORMHASH}" >
+<div class="header fix">
+    <a href="/user.d?m=chat&amp;city=nn" class="chat" id="wapmysf_B01_05">
+        <span class="replay-ico active"></span>
+    </a>
+    <span class="prove">
+        <a href="javascript:history.back(-1);" class="back"></a>
+    </span>
+    <span class="myrec">
+   		{if $_GET['p']==my}<a href="plugin.php?id=keke_tixian">{lang keke_tixian:langt01}</a>{else}<a href="plugin.php?id=keke_tixian&p=my">{lang keke_tixian:langt02}</a>{/if}
+    </span>
+    <span class="uhead">
+        <a href="#">
+            <b class="relative">
+                <img class="head" src="uc_server/avatar.php?uid={$_G['uid']}&size=small">
+            </b>
+            <img class="hi" src="source/plugin/keke_tixian/template/images/hi.png">
+        </a>
+    </span>
+    
+    <a href="javascript:;" class="usnmae">{$_G['username']}</a>
+    
+    {if !$_GET['p']}
+    <nav>
+        <ul class="flexBox">
+            <li><a href="javascript:;" id="viewcredit"><span class="dq">{lang keke_tixian:langt03}(<span id="nowcredits">{$firstcarditname}</span>)</span><p id="nowcredit">{$nowcredits}</p></a></li>
+            <li><a href="plugin.php?id=keke_tixian&p=my"><span>{lang keke_tixian:langt05}</span><p>{$totaltx}</p></a></li>
+        </ul>
+    </nav>
+    {/if}
+</div>
+<div class="mask" id="mask"></div>
+<div class="isok">
+	
+</div>
+{if $_GET['p']==my}
+<section class="mylist fix">
+	<nav>
+    	<ul>
+        	{$mylist}
+		</ul>
+        {$multipage}
+    </nav>
+</section>
+{elseif $_GET['p']==card}
+<section class="cardlist fix">
+	<nav>
+    	<ul class="adddel fix">
+        	<li class="add"><img src="source/plugin/keke_tixian/template/images/add.png" width="15" height="15">{lang keke_tixian:langt06}</li>
+            <li class="del"><img src="source/plugin/keke_tixian/template/images/del.png" width="15" height="15"><span id="deltext">{lang keke_tixian:langt07}</span></li>
+        </ul>
+    </nav>
+	<nav>
+    	<ul class="mycardlist">
+        {loop $carddata $val}
+        	<li class="zhanghu" cardid="{$val['id']}" ctype="{$val['type']}">
+            	<i class="icos"></i>
+                <div class="txzh">
+                	<p>{if $val['type']==1}{lang keke_tixian:langt08}{elseif $val['type']==2}{lang keke_tixian:langt09}{else}{$bank[$val['bank']]}{/if}</p>
+                    <p class="cardon">{$val['cardon']} / {$val['usname']}</p>
+                </div>
+           	</li>
+        {/loop}
+		</ul>
+    </nav>
+</section>
+<input type="hidden" id="isdel" name="isdel" value="0" >
+<style>
+.addcard{position: fixed; padding:20px 10px;left: 0; top:-150px; display:none; width:100%; background:#FFF; z-index:9999}
+.addcard p{ margin: 0 20px 0px 0px;border-bottom: 1px solid #eee; padding: 8px 0 8px 0;font-size:16px;-webkit-box-sizing: border-box;display: block;position: relative;padding-left:90px;}
+.addcard input,.addcard select{ background:none; font-size:16px; width:100%;border: 0 none;outline: none;box-sizing: border-box;-webkit-appearance: none;}
+.btnul{ margin:20px 20px 0px 0px;}
+.btnul li{ font-size:16px; width:50%; box-sizing:border-box; float:left; text-align:center; color:#FFF; line-height:45px; height:45px; background:#CCC}
+.btnul li.tj{ background:#fc4e53}
+.btnul li.qx{ background:#515151}
+.box .form_label {vertical-align: top;color: #888;width: 80px;text-align:left;display: block;position: absolute;left: 0;top: 10px; }
+.box .form_control {color: #888;display: block;word-break: break-all;}
+</style>
+<div class="addcard">
+	<p class="box"><span class="form_label">{lang keke_tixian:langt10}</span><span class="form_control">
+    <select name="cardtype" id="cardtype" style="-webkit-appearance:none;" onChange="gradeChange()">
+	  <option value="0" selected>{lang keke_tixian:langt47}</option>
+      {if $keke_tixian['wxtx']}<option value="1">{lang keke_tixian:langt11}</option>{/if}
+      {if $keke_tixian['zfbtx']}<option value="2">{lang keke_tixian:langt12}</option>{/if}
+      {if $keke_tixian['yhtx']}<option value="3">{lang keke_tixian:langt13}</option>{/if}
+	</select></span></p>
+    <p class="box" id="kh" style="display:none"><span class="form_label">{lang keke_tixian:langt15}</span><span class="form_control">
+    <select name="bank" id="bank" style="-webkit-appearance:none;">
+    	<!--{loop $bank $k $v}-->
+        	<option value="{$k}">{$v}</option>
+        <!--{/loop}-->
+	</select></span></p>
+    <p class="box"><span class="form_label">{lang keke_tixian:langt16}</span><span class="form_control"><input type="text" placeholder="{lang keke_tixian:langt17}" name="truename" id="truename" value=""></span></p>
+    <p class="box"><span class="form_label">{lang keke_tixian:langt18}</span><span class="form_control"><input type="text" placeholder="{lang keke_tixian:langt17}" name="cardon" id="cardon"></span></p>
+    <ul class="btnul fix">
+        <li class="tj" id="tj">{lang keke_tixian:langt19}</li>
+        <li class="qx">{lang keke_tixian:langt20}</li>
+    </ul>
+</div>
+<script>
+jQuery(function() {
+	var mask=jQuery("#mask");
+	jQuery(".mycardlist li").on("click", function() {
+				var isdel=jQuery("#isdel").val();
+				var cardid=jQuery(this).attr("cardid");
+				var ctype=jQuery(this).attr("ctype");
+				if(isdel==1){
+					if(confirm("{lang keke_tixian:langt21}")){
+						jQuery.get('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+						 formhash:"{FORMHASH}",ac:"del",cardid:cardid
+						},function (data){
+							if(data.err){
+								alert(data.err);
+							}else{
+								 location.reload();
+							}
+						}, "json");
+					}
+				}else{
+					var wxtx="{$keke_tixian['wxtx']}";
+					var zfbtx="{$keke_tixian['zfbtx']}";
+					var yhtx="{$keke_tixian['yhtx']}";
+					if((wxtx==0 && ctype==1) || (zfbtx==0 && ctype==2) || (yhtx==0 && ctype==3)){
+						alert("{lang keke_tixian:langt48}");
+						return false;
+					}
+					window.location.href = 'plugin.php?id=keke_tixian&c='+cardid;
+				}
+				
+			});
+	
+	jQuery(".add").on("click", function() {
+				mask.show();
+				jQuery('.addcard').show();
+				jQuery(".addcard").animate({'top':'0px'},100,function(){});
+			});
+	jQuery(".del").on("click", function() {
+				var isdel=jQuery("#isdel").val();
+				if(isdel==0){
+					jQuery(".mycardlist i").removeClass("icos").addClass("delicos");
+					jQuery("#isdel").val("1");
+					jQuery("#deltext").text("{lang keke_tixian:langt22}");
+				}else{
+					jQuery(".mycardlist i").removeClass("delicos").addClass("icos");
+					jQuery("#isdel").val("0");
+					jQuery("#deltext").text("{lang keke_tixian:langt23}");
+				}
+			});
+	jQuery(".qx").on("click", function() {
+				jQuery(".addcard").animate({'top':'-250px'},100,function(){
+					jQuery('#mask').hide();
+					jQuery('.addcard').hide();
+				});
+			});
+	jQuery("#tj").on("click", function() {
+				jQuery.post('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+					 formhash:"{FORMHASH}",ac:"addcard",cardtype:jQuery("#cardtype").val(),bank:jQuery("#bank").val(),truename:jQuery("#truename").val(),cardon:jQuery("#cardon").val(),
+				},function (data){
+					if(data.err){
+						alert(data.err);
+					}else{
+						jQuery(".addcard").animate({'top':'-250px'},100,function(){
+						 location.reload();
+						
+				});
+					}
+				}, "json");
+				
+			});
+	
+	
+});
+
+	function gradeChange(){
+		var type=jQuery('#cardtype').val();
+		if(type!=3){
+			jQuery('#kh').hide();
+		}else{
+			jQuery('#kh').show();
+		}
+	}
+</script>			
+{else}
+<section class="moneylist fix">
+	<nav>
+    	<ul>
+            <li class="zhanghu">
+            	<a href="plugin.php?id=keke_tixian&p=card">
+            	<p class="titles"><cite class="des">Account</cite>{lang keke_tixian:langt24}</p>
+            	{if $cardid && $cardata}
+                <i class="icos"></i>
+                <div class="txzh">
+                	<p>{$cardtype}</p>
+                    <p class="cardon">{$cardata['cardon']} / {$cardata['usname']}</p>
+                </div>
+                {else}
+                <i class="icos"></i>
+                <div id="zjdtis">{lang keke_tixian:langt25}</div>
+                {/if}
+                </a>
+           	</li>
+            
+            <li class="setjiner">
+                    <p class="titles"><cite class="des">Amount</cite>{lang keke_tixian:langt26}</p>
+                    <i class="icos" id="credit">{$firstcarditname}</i>
+                    <p class="cardon">
+                        <div class="recharge" id="recharge" >
+                            <input type="number" placeholder="{lang keke_tixian:langt27}" name="moneyQuantity" id="moneyQuantity" value="{$preset[0]}">
+                        </div>
+                    </p>
+           	</li>
+		</ul>
+	</nav>
+</section>
+<input type="hidden" name="credittype" id="credittype" value="{$firstcarditid}">
+<section class="pays fix">
+    <div class="remind">
+    	 {lang keke_tixian:langt28}{$creditdata[$firstcarditid]['bili']}{lang keke_tixian:langt29}{$creditdata[$firstcarditid]['min']}{$_G['setting']['extcredits'][$firstcarditid]['title']} / {lang keke_tixian:langt30}{$creditdata[$firstcarditid]['sxf']}% 
+    </div>
+    <div class="keke_warning"></div>
+</section>
+<div class="mm-btn" id="btn"><a href="javascript:void(0);" id="Submit">{lang keke_tixian:langt31}</a></div>
+<div class="selecredit">
+	<ul>
+    	{$craditlist}
+    </ul>
+</div>
+
+<script>
+jQuery(function() {
+	var mask=jQuery("#mask");
+	var selecredit=jQuery(".selecredit");
+	<!--{if $d>1}-->
+	jQuery("#credit,#viewcredit").on("click", function() {
+				mask.show();
+				selecredit.show().animate({'bottom':'0px'},400,function(){});
+			});
+	jQuery(".selecredit li").on("click", function() {
+				var creditname=jQuery(this).html();
+				var creditid=jQuery(this).attr("creditid");
+				jQuery('#credit').html(jQuery(this).html());
+				jQuery('#nowcredits').html(jQuery(this).html());
+				jQuery('#nowcredit').html(jQuery(this).attr("data-nowcredit"));
+				jQuery('#credittype').attr("value",creditid);
+				var sxf='';
+				if(jQuery(this).attr("data-sxf")){
+					sxf=" / {lang keke_tixian:langt30}"+ jQuery(this).attr("data-sxf") +"%";
+				}
+				jQuery('.remind').html("{lang keke_tixian:langt28}"+ jQuery(this).attr("data-bili") +"{lang keke_tixian:langt29}"+ jQuery(this).attr("data-min") + creditname +sxf);
+				selecredit.animate({'bottom':'-150px'},100,function(){
+					jQuery('#mask').hide();
+				});
+				
+			});
+	<!--{/if}-->
+	var text=jQuery('.remind').html();
+	jQuery('#moneyQuantity').bind('input propertychange', function(){
+			if(jQuery('#moneyQuantity').val()==''){
+				jQuery('.remind').html(text);
+			}else{
+				jQuery.get('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+					 formhash:"{FORMHASH}",ac:"check",moneyQuantity:jQuery("#moneyQuantity").val(),credittype:jQuery("#credittype").val(),
+				},function (data){
+					if(data.err){
+						jQuery('.remind').html(data.msg);
+					}
+				}, "json");
+			}
+	}); 
+	
+	jQuery("#Submit").on("click", function() {
+		var cardid="{$cardid}";
+		if(cardid==0){
+			warning("{lang keke_tixian:langt32}");
+			return false;
+		}
+		if((jQuery('#moneyQuantity').val())==0){
+			warning("{lang keke_tixian:langt33}");
+			return false;
+		}
+		
+	jQuery.post('{$_G[siteurl]}plugin.php?id=keke_tixian:ajax', {
+					 formhash:"{FORMHASH}",ac:"add",cardtype:"{$cardtype}",cardon:"{$cardata['cardon']}",cardname:"{$cardata['usname']}",moneyQuantity:jQuery("#moneyQuantity").val(),credittype:jQuery("#credittype").val(),
+				},function (data){
+					if(data.err){
+						warning(data.msg);
+						return false;
+					}else{
+						warning("{lang keke_tixian:langt35}");
+						setTimeout(function() {window.location.href = 'plugin.php?id=keke_tixian&p=my';}, 2000);
+					}
+				}, "json");
+	});
+			
+});
+
+
+function warning(text){
+	jQuery('.keke_warning').show().html(text);
+	setTimeout(function() {jQuery('.keke_warning').fadeOut();}, 2000);
+}
+</script>
+{/if}
+</form>
+</body></html>

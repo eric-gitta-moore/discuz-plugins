@@ -1,0 +1,16 @@
+		<form id="testform" method="post" autocomplete="off" action="plugin.php?id=exam:manage&pid=$pid&gid=$gid&tab=$tab&eid=$eid&formhash=$_G[formhash]">
+		<input value="$_G[formhash]" name="formhash" type="hidden">
+		<table cellpadding="0" cellspacing="0" border=0 class="table-add">
+			<tr><th colspan=2>试题列表: (<a href="plugin.php?id=exam:help&tab=31" target="_blank" class="xi1">如何导入?</a>)</th></tr>
+			<tr><td colspan=2><textarea class="px in_data" id="data" name="data" style="word-wrap:normal;" oninput="adjustObjHeight(this, 200);"></textarea></td></tr>
+		</table>
+		</table>
+		<input type="submit" id="testsubmit" class="pn pnc pp" style="margin-top:15px" value="确定" onclick="validate_editor_simple(this);if($('uchome-ttHtmlEditor').value.trim()==''){showError('标题不能为空');return false;}">
+		</form>
+ 
+		<script type="text/javascript">
+			function adjustObjHeight(obj, defaultHeight) { 
+				obj.style.height = obj.scrollHeight > defaultHeight ? obj.scrollHeight - 10 + 'px' : defaultHeight + 'px'; 
+			}
+		</script> 
+ 

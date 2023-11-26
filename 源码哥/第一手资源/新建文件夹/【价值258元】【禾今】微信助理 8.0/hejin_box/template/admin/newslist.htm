@@ -1,0 +1,67 @@
+<link href="{HEJIN_PATH}public/admin/css/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.validation.min.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/admincp.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="{HEJIN_PATH}public/admin/js/jquery.cookie.js"></script>
+<link href="{HEJIN_PATH}public/admin/css/skin_0.css" rel="stylesheet" type="text/css" id="cssfile2" />
+
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+      <div class="h3" style="width:auto;"><!--{eval echo stripslashes($flinfo['title']);}--> -- {lang hejin_box:wzgllist}</div>
+      <ul class="tab-base">
+        <li><a href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex" class="current"><span>{lang hejin_box:wfenlei}</span></a></li>
+      </ul>
+    </div>
+  </div>
+ 
+
+  
+  <form id="list_form" method='post'>
+    <input id="class_id" name="class_id" type="hidden" />
+    <table class="table tb-type2">
+      <thead>
+        
+        <tr class="thead">
+           <th style="width:2%"></th>
+         <th style="width:16%">{lang hejin_box:title}</th>
+          <th style="width:16%">{lang hejin_box:pic}</th>
+		  <th style="width:16%">{lang hejin_box:caidanlx}</th>
+		  <th style="width:8%">{lang hejin_box:tjhdzt}</th>
+		  <th style="width:8%">{lang hejin_box:paixu}</th>
+		  <th style="width:20%; text-align:center">{lang hejin_box:caozuo}</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <!--{loop $newses $news}-->
+                        <tr class="hover edit">
+           <td></td>
+		  <td><!--{eval echo stripslashes($news['title']);}--></td>
+		  <td>{if $news['pic']}<span class="type-file-show"> <img class="show_image" src="{HEJIN_PATH}public/admin/images/preview.png">
+            <div style="display: none;" class="type-file-preview">
+                            <img src="<!--{eval echo stripslashes($news['pic']);}-->" width="200">
+                          </div>
+            </span>{else}<font color="#FF0000">{lang hejin_box:nopic}</font>{/if}</td>
+		  <td>{if $news['url']}<a href="<!--{eval echo stripslashes($news['url']);}-->" target="_blank">{lang hejin_box:wfla}</a>{else}{lang hejin_box:wenzhang}{/if}</td>
+		  <td>{if $news['istj']}<font color="#FF0000">{lang hejin_box:shi}</font>{else}{lang hejin_box:fou}{/if}</td>
+		  <td>$news['sort']</td>
+		  <td class='align-center'>
+		  	<a href="{HEJIN_URL}:index&model=show&nid=$news['id']">{lang hejin_box:url}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=editnews&nid=$news['id']">{lang hejin_box:xiugai}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="$SELF?action=plugins&operation=config&do={$_GET['do']}&identifier=hejin_box&pmod=windex&model=delnews&nid=$news['id']&fid=$news['fid']&formhash={FORMHASH}" onclick="return confirm(&quot;{lang hejin_box:shanchuts}&quot;);">{lang hejin_box:shanchu}</a>
+		  </td>
+        </tr>
+         <!--{/loop}-->                   
+                
+                      </tbody>
+            <tfoot>
+        <tr class="tfoot">
+          <td>
+          </td>
+          <td id="batchAction" colspan="15">
+            <div class="pagination"><ul>$page_string</ul></div></td>
+        </tr>
+      </tfoot>
+          </table>
+  </form>
+</div>

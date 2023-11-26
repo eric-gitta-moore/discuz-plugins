@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin Validator]]></item>
+	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Data">
+		<item id="0"><![CDATA[source/plugin/sanree_weixin/admincp/index.htm]]></item>
+		<item id="1"><![CDATA[source/plugin/sanree_weixin/admincp/sanree_weixin/index.htm]]></item>
+		<item id="2"><![CDATA[source/plugin/sanree_weixin/admincp/sanree_weixin/sanree_weixin_base.php]]></item>
+		<item id="3"><![CDATA[source/plugin/sanree_weixin/admincp/sanree_weixin/sanree_weixin_list.php]]></item>
+		<item id="4"><![CDATA[source/plugin/sanree_weixin/admincp.inc.php]]></item>
+		<item id="5"><![CDATA[source/plugin/sanree_weixin/check.php]]></item>
+		<item id="6"><![CDATA[source/plugin/sanree_weixin/class/class_sanree_weixin.php]]></item>
+		<item id="7"><![CDATA[source/plugin/sanree_weixin/class/index.html]]></item>
+		<item id="8"><![CDATA[source/plugin/sanree_weixin/config.inc.php]]></item>
+		<item id="9"><![CDATA[source/plugin/sanree_weixin/discuz_plugin_sanree_weixin_SC_GBK.xml]]></item>
+		<item id="10"><![CDATA[source/plugin/sanree_weixin/discuz_plugin_sanree_weixin_SC_UTF8.xml]]></item>
+		<item id="11"><![CDATA[source/plugin/sanree_weixin/discuz_plugin_sanree_weixin_TC_BIG5.xml]]></item>
+		<item id="12"><![CDATA[source/plugin/sanree_weixin/discuz_plugin_sanree_weixin_TC_UTF8.xml]]></item>
+		<item id="13"><![CDATA[source/plugin/sanree_weixin/function/function_core.php]]></item>
+		<item id="14"><![CDATA[source/plugin/sanree_weixin/function/function_module.php]]></item>
+		<item id="15"><![CDATA[source/plugin/sanree_weixin/function/index.htm]]></item>
+		<item id="16"><![CDATA[source/plugin/sanree_weixin/index.html]]></item>
+		<item id="17"><![CDATA[source/plugin/sanree_weixin/install.php]]></item>
+		<item id="18"><![CDATA[source/plugin/sanree_weixin/module/index.htm]]></item>
+		<item id="19"><![CDATA[source/plugin/sanree_weixin/module/sanree_weixin/index.htm]]></item>
+		<item id="20"><![CDATA[source/plugin/sanree_weixin/module/sanree_weixin/sanree_weixin_server.php]]></item>
+		<item id="21"><![CDATA[source/plugin/sanree_weixin/sanree_weixin.inc.php]]></item>
+		<item id="22"><![CDATA[source/plugin/sanree_weixin/table/index.htm]]></item>
+		<item id="23"><![CDATA[source/plugin/sanree_weixin/table/table_sanree_weixin.php]]></item>
+		<item id="24"><![CDATA[source/plugin/sanree_weixin/uninstall.php]]></item>
+		<item id="25"><![CDATA[source/plugin/sanree_weixin/validator.xml]]></item>
+	</item>
+</root>
